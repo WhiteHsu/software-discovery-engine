@@ -4,27 +4,27 @@
 
 ## Current Phase
 
-**Phase 6 — Build Preparation / PR0**
+**Phase 6 — Validation MVP Build**
 
 ## Current Work
 
-**PR0 — Product, Architecture, and Validation Foundation**
+**Issue #1 — Foundation & Core Infrastructure: implementation complete; ready to close**
 
-The repository is being initialized with the product and engineering contracts required before implementation begins.
+Issue #1 established the application, runtime, database boundary, CI, and production deployment foundation.
 
 ## Next Issue
 
-**#1 — Foundation & Core Infrastructure**
+**#2 — Discovery Graph Data Model**
 
-Do not initialize product functionality before PR0 is committed.
+The next implementation work is the relational graph schema and its evidence-aware data model. Database connectivity, grants, and RLS should be verified against the first real `software_discovery` tables created in Issue #2.
 
 ## Completed Issues
 
-None.
+- [x] #1 Foundation & Core Infrastructure
 
 ## Open Roadmap
 
-- [ ] #1 Foundation & Core Infrastructure
+- [x] #1 Foundation & Core Infrastructure
 - [ ] #2 Discovery Graph Data Model
 - [ ] #3 Seed Data & Evidence Pipeline
 - [ ] #4 Product Discovery Pages
@@ -35,6 +35,18 @@ None.
 - [ ] #9 SEO & GEO Infrastructure
 - [ ] #10 Evidence & Quality Audit
 - [ ] #11 Production Validation Launch
+
+## Foundation State
+
+- **Application:** Next.js 16.3.8 / React 19.3.0 / TypeScript
+- **Runtime:** Node.js 24
+- **Database:** shared Supabase project with isolated `software_discovery` schema
+- **Supabase clients:** browser and server clients scoped to `software_discovery`
+- **CI:** GitHub Actions runs install, lint, typecheck, and production build
+- **Deployment:** Vercel production deployment passing
+- **Production health:** configuration valid; database probe intentionally deferred to Issue #2
+- **Environment:** Supabase public URL and publishable key configured in Vercel Production and Preview
+- **Security audit:** five high-severity findings currently originate from the ESLint development-tooling transitive dependency chain (`eslint-config-next` → `@next/eslint-plugin-next` → `fast-glob` → `micromatch`). No forced breaking remediation was applied; revisit when a non-breaking upstream remediation is available.
 
 ## Product Thesis
 
@@ -64,7 +76,7 @@ Lesser-known Software
 
 - 5 anchor ecosystems
 - 30–40 verified products
-- ≥10 core attributes
+- evidence-backed core attributes
 - 10 launch Escape Routes
 - natural-language discovery
 - discovery analytics
@@ -77,7 +89,7 @@ Lesser-known Software
 
 **Validation Start Date:** N/A
 
-Issue #11 marks Day 0 of the validation window.
+Issue #11 marks Day 0 of the validation window. Foundation deployment does not start validation.
 
 ## Growth Diagnostic Status
 
@@ -99,8 +111,9 @@ When resuming development:
 
 1. Read `STATUS.md`.
 2. Read `PRODUCT_SPEC.md`.
-3. Read `ARCHITECTURE_GUARDRAILS.md`.
-4. Confirm the active GitHub Issue.
-5. Inspect current code before changing architecture.
-6. Keep implementation scoped to the active Issue.
-7. Update this file when an Issue closes or validation state changes.
+3. Read `ARCHITECTURE.md`.
+4. Read `ARCHITECTURE_GUARDRAILS.md`.
+5. Confirm the active GitHub Issue.
+6. Inspect current code before changing architecture.
+7. Keep implementation scoped to the active Issue.
+8. Update this file when an Issue closes or validation state changes.
