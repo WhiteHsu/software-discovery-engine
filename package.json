@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "seed:validate": "node scripts/seed/validate.mjs",
+    "seed:compile": "node scripts/seed/compile.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.7.0",

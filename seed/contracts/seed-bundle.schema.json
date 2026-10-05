@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://software-discovery-engine.local/seed-bundle.schema.json",
+  "title": "Software Discovery Engine Seed Bundle",
+  "type": "object",
+  "required": ["version", "sources", "anchors", "attributes", "problems", "audiences", "products", "escapeRoutes"],
+  "properties": {
+    "version": { "const": 1 },
+    "sources": { "type": "array" },
+    "anchors": { "type": "array" },
+    "attributes": { "type": "array" },
+    "problems": { "type": "array" },
+    "audiences": { "type": "array" },
+    "products": { "type": "array" },
+    "escapeRoutes": { "type": "array" }
+  },
+  "additionalProperties": false,
+  "$comment": "Executable semantic validation lives in scripts/seed/validate.mjs. This schema fixes the top-level interchange contract without adding a runtime dependency."
+}

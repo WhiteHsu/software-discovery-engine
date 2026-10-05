@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "key": "example-official",
+      "sourceType": "official",
+      "title": "Example product website",
+      "url": "https://example.com/product",
+      "publisher": "Example",
+      "retrievedAt": "2026-10-05T00:00:00Z"
+    }
+  ],
+  "anchors": [
+    { "slug": "example-anchor", "name": "Example Anchor" }
+  ],
+  "attributes": [
+    { "slug": "works-offline", "name": "Works Offline", "category": "offline", "valueType": "boolean" }
+  ],
+  "problems": [
+    { "slug": "cloud-dependency", "name": "Cloud Dependency" }
+  ],
+  "audiences": [
+    { "slug": "privacy-conscious-users", "name": "Privacy-Conscious Users" }
+  ],
+  "products": [
+    {
+      "slug": "example-product",
+      "name": "Example Product",
+      "websiteUrl": "https://example.com/product",
+      "status": "draft",
+      "anchors": [
+        {
+          "slug": "example-anchor",
+          "relationshipType": "alternative",
+          "verificationStatus": "verified",
+          "confidence": 0.9,
+          "lastVerifiedAt": "2026-10-05T00:00:00Z",
+          "evidence": ["example-official"]
+        }
+      ],
+      "attributes": [
+        {
+          "slug": "works-offline",
+          "value": true,
+          "verificationStatus": "verified",
+          "confidence": 0.9,
+          "lastVerifiedAt": "2026-10-05T00:00:00Z",
+          "evidence": ["example-official"]
+        }
+      ],
+      "problems": [],
+      "audiences": []
+    }
+  ],
+  "escapeRoutes": []
+}
