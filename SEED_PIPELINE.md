@@ -31,3 +31,13 @@ node scripts/seed/compile.mjs seed/data/<bundle>.json
 The current database has canonical `evidence_sources` and `claim_evidence` primitives. PR3.1 preserves evidence references in the seed contract rather than discarding them. A later Issue #3 increment must map those references into durable database claim/evidence associations before evidence-backed production seed data is considered complete.
 
 This is intentional: the pipeline must not pretend provenance is durable until the database representation can actually preserve the relationship.
+
+## PR3.2B review-only database mapping
+
+The compiler now also emits `databasePlan`, while preserving the version-1 bundle and existing import-plan fields. It maps all four product claim types to typed evidence associations with stable seed identities and explicit reconciliation scopes. It performs no database writes.
+
+See [seed/DATABASE_IMPORT_PLAN.md](seed/DATABASE_IMPORT_PLAN.md) for the additive migration, mapping contract, ownership requirements, and future transactional importer protocol. The PostgreSQL migration and import have not yet been verified against a staging database.
+
+```bash
+node --test scripts/seed/database-plan.test.mjs
+```

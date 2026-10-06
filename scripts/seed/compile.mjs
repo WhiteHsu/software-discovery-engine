@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { validateSeedBundle } from "./validate.mjs";
+import { createDatabasePlan } from "./database-plan.mjs";
 
 const input = process.argv[2] ?? "seed/fixtures/minimal-valid.json";
 const output = process.argv[3] ?? ".seed-output/import-plan.json";
@@ -15,7 +16,8 @@ const plan = {
   contractVersion: bundle.version,
   generatedAt: new Date().toISOString(),
   counts: Object.fromEntries(["sources", "anchors", "attributes", "problems", "audiences", "products", "escapeRoutes"].map((key) => [key, bundle[key].length])),
-  bundle
+  bundle,
+  databasePlan: createDatabasePlan(bundle)
 };
 fs.mkdirSync(path.dirname(output), { recursive: true });
 fs.writeFileSync(output, `${JSON.stringify(plan, null, 2)}\n`);
