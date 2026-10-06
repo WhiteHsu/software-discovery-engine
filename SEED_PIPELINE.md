@@ -36,8 +36,17 @@ This is intentional: the pipeline must not pretend provenance is durable until t
 
 The compiler now also emits `databasePlan`, while preserving the version-1 bundle and existing import-plan fields. It maps all four product claim types to typed evidence associations with stable seed identities and explicit reconciliation scopes. It performs no database writes.
 
-See [seed/DATABASE_IMPORT_PLAN.md](seed/DATABASE_IMPORT_PLAN.md) for the additive migration, mapping contract, ownership requirements, and future transactional importer protocol. The PostgreSQL migration and import have not yet been verified against a staging database.
+See [seed/DATABASE_IMPORT_PLAN.md](seed/DATABASE_IMPORT_PLAN.md) for the additive migration, mapping contract, and ownership requirements.
 
 ```bash
 node --test scripts/seed/database-plan.test.mjs
+```
+
+## PR3.2C transactional SQL generator
+
+[seed/IMPORT_SQL.md](seed/IMPORT_SQL.md) documents the production precheck and transactional SQL workflow. The generator performs no database writes and defaults to a ROLLBACK rehearsal. `--commit` explicitly generates a committing import. The migrations and SQL were executed in a local PGlite PostgreSQL runtime; the remote production schema and data must still be checked before use.
+
+```bash
+node --test scripts/seed/database-plan.test.mjs scripts/seed/import-sql.test.mjs
+node scripts/seed/import-sql.mjs seed/data/notion-vertical-slice.json seed/import-ownership.example.json .seed-output/notion.import.sql --commit
 ```

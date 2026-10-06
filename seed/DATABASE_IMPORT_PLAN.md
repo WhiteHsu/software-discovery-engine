@@ -1,6 +1,6 @@
 # PR3.2B — Evidence mapping and repeatable import plan
 
-This increment emits a review-only relational plan. It does not connect to Supabase, import seed data, or commit/push. Apply neither the migration nor seed data to production as part of this increment.
+PR3.2B emits a review-only relational plan. PR3.2C adds a separately invoked transactional SQL generator; see [IMPORT_SQL.md](IMPORT_SQL.md) for the production workflow approved by the user. Neither generator connects to Supabase, executes the SQL, or commits/pushes code.
 
 ## Existing contract and the missing association
 
@@ -34,9 +34,9 @@ The compiler preserves `contractVersion`, `generatedAt`, `counts`, and the uncha
 
 The seed contains source references, not excerpts. Generated fragments therefore use `excerpt: null` and an explicitly labelled source-pointer note. This preserves provenance without pretending we captured a quotation. Verification state remains on the claim, not on the fragment.
 
-## Future importer protocol (not implemented here)
+## Importer protocol
 
-1. Apply and verify the additive migration separately in a staging database first.
+1. Check the target database and apply/verify the additive migration separately. The current approved target is the existing production project; save the production precheck first.
 2. Review a live-state diff and establish an explicit ownership manifest for claims, editorial fields, and whole routes. Existing published/manual curation must not be silently overwritten by draft seed values. A matching slug alone does not prove ownership.
 3. Use a privileged database role, open one transaction, and acquire a transaction-scoped advisory lock to serialize imports. Never expose write credentials or an importer to clients.
 4. Upsert tables in plan order. Resolve every `$ref` to exactly one UUID. Fail and roll back on missing/ambiguous references or ownership conflicts. Preserve existing UUIDs and created_at. Update updated_at only when data actually changes.
@@ -50,4 +50,4 @@ Omitted products, claims, sources, and fragments are retained. This increment do
 
 Six Node tests cover all relationship types, source-pointer association counts, deterministic ordering, stable identities, unknown/false handling, evidence removals, supported attribute types, and rejection of malformed mapping inputs. A local in-memory model exercises repeated upserts against existing IDs, stale-link removal, manual evidence preservation, and route replacement.
 
-These tests verify the plan protocol, not PostgreSQL transaction behavior, foreign-key enforcement, or RLS at runtime. PostgreSQL/psql is unavailable locally and Docker's daemon is not running. The migration has not been applied to any database. `supabase/verification/PR3.2B_VERIFY.sql` supplies post-migration checks for a future staging run. Actual staging migration/import verification remains required before production import. No seed application CLI is provided yet.
+PR3.2C additionally executes the migrations and generated SQL in a local PGlite PostgreSQL runtime, including transaction behavior, foreign keys and role privileges. The migration has not been applied to the user's remote database by Codex. `supabase/verification/PR3.2B_VERIFY.sql` supplies post-migration checks, and `PR3.2C_PRECHECK.sql` checks existing production data. The SQL CLI generates files only; execution through a privileged SQL session is separate.
