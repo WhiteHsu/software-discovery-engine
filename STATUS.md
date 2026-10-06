@@ -8,26 +8,26 @@
 
 ## Current Work
 
-**Issue #3 — Seed Data & Evidence Pipeline: accepted; ready for GitHub closure**
+**Issue #4 — Product Discovery Pages: in progress (PR4.1)**
 
-PR3.5 (operator commit 63959f7) is pushed and deployed. The operator confirmed 22 tests, lint, typecheck, build, production deployment, the foundation homepage, and all 17 production counts. There are 30 draft products across five ecosystems and 50 added likely editorial relationships. On 2026-10-06, the project owner explicitly accepted the official-source-reviewed draft dataset, retained unknowns, and likely editorial fits. See seed/DATASET_ACCEPTANCE.md for the dataset hash, scope, and publication boundary. GitHub issue closure has not been performed by this delivery.
+Issue #3 is closed; the operator pushed the acceptance documents as commit 0e40405 and supplied the closed GitHub issue screenshot. PR4.1 implements /software/[slug] using a narrow published-only Supabase RPC with linked source metadata, claim states/dates, positioning, audience/problem fits, platforms, verified pricing, tradeoffs, anchors, and approved related route names. A development-only draft fixture permits local review of all 30 accepted products without publishing them. See PRODUCT_PAGES.md. PR4.1 migration and remote deployment are pending operator execution.
 
 ## Next Work
 
-Close GitHub Issue #3 using seed/ISSUE_3_CLOSEOUT.md, then begin Issue #4 — Product Discovery Pages. Products and routes remain draft. Public product release still requires product-level human review; this acceptance records neither hands-on testing nor publication approval.
+Apply the PR4.1 migration, run its read-only verification, and review local product previews. Products/routes remain draft; public URLs return 404 until a product is intentionally approved and published. Publication review is not granted by this implementation. Keep #4 open for operator validation and public-content acceptance. Escape Route navigation belongs to #5; analytics instrumentation belongs to #8.
 
 ## Completed Issues
 
 - [x] #1 Foundation & Core Infrastructure
 
 - [x] #2 Discovery Graph Data Model
-- [x] #3 Seed Data & Evidence Pipeline — draft dataset accepted; GitHub closure pending
+- [x] #3 Seed Data & Evidence Pipeline — draft dataset accepted; GitHub closed
 
 ## Open Roadmap
 
 - [x] #1 Foundation & Core Infrastructure
 - [x] #2 Discovery Graph Data Model
-- [x] #3 Seed Data & Evidence Pipeline — draft dataset accepted; GitHub closure pending
+- [x] #3 Seed Data & Evidence Pipeline — draft dataset accepted; GitHub closed
 - [ ] #4 Product Discovery Pages
 - [ ] #5 Escape Route Engine
 - [ ] #6 Homepage & Discovery Navigation

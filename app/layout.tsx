@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -21,7 +22,7 @@ export default function RootLayout({
         <div className="app-shell">
           <header className="site-header">
             <div className="site-header__inner">
-              <span className="wordmark">Software Discovery Engine</span>
+              <Link href="/" className="wordmark">Software Discovery Engine</Link>
             </div>
           </header>
           <main className="site-main">{children}</main>
