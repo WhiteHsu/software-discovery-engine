@@ -56,4 +56,8 @@ node scripts/seed/import-sql.mjs seed/data/notion-vertical-slice.json seed/impor
 See [seed/EXPANSION_REVIEW.md](seed/EXPANSION_REVIEW.md) for the 30-product research draft, human review checklist, and five atomic SQL batches. Generate with `node scripts/seed/build-expansion.mjs`. Research and import success do not establish editorial approval.
 # PR3.4 official-source review
 
+## PR3.5 editorial fit completion
+
+After applying PR3.4, run `node scripts/seed/build-editorial-fit.mjs`. Outputs go to `.seed-output/editorial-fit`: a reviewed dataset, likely-fit rationale, pending human-review packet with dataset hash, guarded rehearsal/apply SQL, and 17-table verification. This adds only previously absent problems/audiences for the 24 expansion products and four audience definitions. It uses existing evidence references and does not overwrite product facts or source-review changes. Read `seed/EDITORIAL_FIT_REVIEW.md` before using the SQL.
+
 After the PR3.3 production import, use `node scripts/seed/build-source-review.mjs` to generate `.seed-output/source-review`. Read `seed/SOURCE_REVIEW.md` for the findings and execution order. This overlay preserves the original PR3.3 research baseline. It replaces only listed claims and their seed-managed evidence links, requires the stored row and evidence to match the baseline or the reviewed result, and retains source/fragment history. Products and routes remain draft; AI review does not set human approval.

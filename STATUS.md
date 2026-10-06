@@ -10,11 +10,11 @@
 
 **Issue #3 — Seed Data & Evidence Pipeline: in progress**
 
-PR3.3 (operator commit fa401f1) is deployed. The operator imported 30 draft products across five ecosystems and verified the expanded counts, build, deployment, and foundation homepage. PR3.4 adds an AI official-source desk review, 43 claim corrections on 12 products, and a guarded delta importer. The review delta has passed local tests but has not yet been applied to production. Human publishing review remains pending.
+PR3.4 (operator commit 9083c16) is deployed and its review delta is applied in production. The operator verified all 17 counts, 19 tests, build, deployment, and the foundation homepage. There are 30 draft products across five ecosystems. PR3.5 prepares 50 likely editorial relationships for the 24 expansion products, four audience definitions, and a compact human-review packet. PR3.5 import and human acceptance remain pending.
 
 ## Next Work
 
-Apply the reviewed delta using seed/SOURCE_REVIEW.md, then confirm the corrected values and 17 counts. Resolve the listed unknowns and editorial decisions before closing #3 or publishing products. AI source review does not grant human approval.
+Apply the PR3.5 delta using seed/EDITORIAL_FIT_REVIEW.md, verify 17 counts, then record an explicit human decision against the generated dataset hash. Unknown facts may stay unknown; do not invent evidence to fill every field. Issue #3 remains open until its dataset acceptance is recorded. Product publication and hands-on verification are separate scopes.
 
 ## Completed Issues
 
