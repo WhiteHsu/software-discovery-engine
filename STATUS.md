@@ -8,23 +8,26 @@
 
 ## Current Work
 
-**Issue #3 — Seed Data & Evidence Pipeline: in progress**
+**Issue #3 — Seed Data & Evidence Pipeline: accepted; ready for GitHub closure**
 
-PR3.4 (operator commit 9083c16) is deployed and its review delta is applied in production. The operator verified all 17 counts, 19 tests, build, deployment, and the foundation homepage. There are 30 draft products across five ecosystems. PR3.5 prepares 50 likely editorial relationships for the 24 expansion products, four audience definitions, and a compact human-review packet. PR3.5 import and human acceptance remain pending.
+PR3.5 (operator commit 63959f7) is pushed and deployed. The operator confirmed 22 tests, lint, typecheck, build, production deployment, the foundation homepage, and all 17 production counts. There are 30 draft products across five ecosystems and 50 added likely editorial relationships. On 2026-10-06, the project owner explicitly accepted the official-source-reviewed draft dataset, retained unknowns, and likely editorial fits. See seed/DATASET_ACCEPTANCE.md for the dataset hash, scope, and publication boundary. GitHub issue closure has not been performed by this delivery.
 
 ## Next Work
 
-Apply the PR3.5 delta using seed/EDITORIAL_FIT_REVIEW.md, verify 17 counts, then record an explicit human decision against the generated dataset hash. Unknown facts may stay unknown; do not invent evidence to fill every field. Issue #3 remains open until its dataset acceptance is recorded. Product publication and hands-on verification are separate scopes.
+Close GitHub Issue #3 using seed/ISSUE_3_CLOSEOUT.md, then begin Issue #4 — Product Discovery Pages. Products and routes remain draft. Public product release still requires product-level human review; this acceptance records neither hands-on testing nor publication approval.
 
 ## Completed Issues
 
 - [x] #1 Foundation & Core Infrastructure
 
+- [x] #2 Discovery Graph Data Model
+- [x] #3 Seed Data & Evidence Pipeline — draft dataset accepted; GitHub closure pending
+
 ## Open Roadmap
 
 - [x] #1 Foundation & Core Infrastructure
 - [x] #2 Discovery Graph Data Model
-- [ ] #3 Seed Data & Evidence Pipeline
+- [x] #3 Seed Data & Evidence Pipeline — draft dataset accepted; GitHub closure pending
 - [ ] #4 Product Discovery Pages
 - [ ] #5 Escape Route Engine
 - [ ] #6 Homepage & Discovery Navigation

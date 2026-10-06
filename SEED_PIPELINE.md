@@ -2,6 +2,8 @@
 
 Issue #3 turns researched software facts into deterministic, reviewable seed inputs.
 
+The project owner accepted the PR3.5 draft dataset on 2026-10-06 after confirming production import, checks, and deployment. The durable decision and exact dataset hash are recorded in [seed/DATASET_ACCEPTANCE.md](seed/DATASET_ACCEPTANCE.md). Generated review packets continue to default to pending: generation must never fabricate human approval. This acceptance does not authorize publication or attest hands-on testing.
+
 ## PR3.1 contract
 
 1. Research creates a JSON seed bundle.
