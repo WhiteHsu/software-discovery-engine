@@ -1,0 +1,410 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "key": "obsidian-security-2026-10-05",
+      "sourceType": "official",
+      "title": "Security - Obsidian",
+      "url": "https://obsidian.md/security",
+      "publisher": "Obsidian",
+      "retrievedAt": "2026-10-05T00:00:00Z"
+    },
+    {
+      "key": "obsidian-license-2026-10-05",
+      "sourceType": "official",
+      "title": "License overview - Obsidian",
+      "url": "https://obsidian.md/license",
+      "publisher": "Obsidian",
+      "retrievedAt": "2026-10-05T00:00:00Z"
+    },
+    {
+      "key": "obsidian-sync-help-2026-10-05",
+      "sourceType": "documentation",
+      "title": "Sync your notes across devices - Obsidian Help",
+      "url": "https://obsidian.md/help/Getting%20started/Sync%20your%20notes%20across%20devices",
+      "publisher": "Obsidian",
+      "retrievedAt": "2026-10-05T00:00:00Z"
+    },
+    {
+      "key": "anytype-home-2026-10-05",
+      "sourceType": "official",
+      "title": "Anytype — A safe haven for digital collaboration",
+      "url": "https://anytype.io/",
+      "publisher": "Anytype",
+      "retrievedAt": "2026-10-05T00:00:00Z"
+    },
+    {
+      "key": "anytype-networked-era-2026-10-05",
+      "sourceType": "official",
+      "title": "A New, Networked Era for Anytype",
+      "url": "https://blog.anytype.io/a-new-networked-era-for-anytype/",
+      "publisher": "Anytype",
+      "retrievedAt": "2026-10-05T00:00:00Z"
+    },
+    {
+      "key": "appflowy-start-2026-10-05",
+      "sourceType": "documentation",
+      "title": "Start here - AppFlowy Docs",
+      "url": "https://docs.appflowy.io/docs",
+      "publisher": "AppFlowy",
+      "retrievedAt": "2026-10-05T00:00:00Z"
+    },
+    {
+      "key": "appflowy-welcome-2026-10-05",
+      "sourceType": "documentation",
+      "title": "Welcome to AppFlowy Docs",
+      "url": "https://docs.appflowy.io/docs/appflowy/readme/welcome-to-appflowy",
+      "publisher": "AppFlowy",
+      "retrievedAt": "2026-10-05T00:00:00Z"
+    },
+    {
+      "key": "appflowy-deployment-2026-10-05",
+      "sourceType": "documentation",
+      "title": "Deployment - AppFlowy Docs",
+      "url": "https://docs.appflowy.io/docs/documentation/appflowy-cloud/deployment",
+      "publisher": "AppFlowy",
+      "retrievedAt": "2026-10-05T00:00:00Z"
+    },
+    {
+      "key": "affine-home-2026-10-05",
+      "sourceType": "official",
+      "title": "AFFiNE — Open-Source Knowledge Base Software",
+      "url": "https://affine.pro/",
+      "publisher": "AFFiNE",
+      "retrievedAt": "2026-10-05T00:00:00Z"
+    },
+    {
+      "key": "affine-download-2026-10-05",
+      "sourceType": "official",
+      "title": "Download for Offline Notes and Whiteboards - AFFiNE",
+      "url": "https://affine.pro/download",
+      "publisher": "AFFiNE",
+      "retrievedAt": "2026-10-05T00:00:00Z"
+    },
+    {
+      "key": "affine-pricing-2026-10-05",
+      "sourceType": "pricing",
+      "title": "AFFiNE Pricing 2026",
+      "url": "https://affine.pro/pricing?type=cloud",
+      "publisher": "AFFiNE",
+      "retrievedAt": "2026-10-05T00:00:00Z"
+    },
+    {
+      "key": "joplin-help-2026-10-05",
+      "sourceType": "documentation",
+      "title": "What is Joplin?",
+      "url": "https://joplinapp.org/help/",
+      "publisher": "Joplin",
+      "retrievedAt": "2026-10-05T00:00:00Z"
+    },
+    {
+      "key": "joplin-plans-2026-10-05",
+      "sourceType": "pricing",
+      "title": "Joplin Cloud Plans",
+      "url": "https://joplinapp.org/plans/",
+      "publisher": "Joplin",
+      "retrievedAt": "2026-10-05T00:00:00Z"
+    },
+    {
+      "key": "logseq-home-2026-10-05",
+      "sourceType": "official",
+      "title": "Logseq: A privacy-first, open-source knowledge base",
+      "url": "https://logseq.com/",
+      "publisher": "Logseq",
+      "retrievedAt": "2026-10-05T00:00:00Z"
+    },
+    {
+      "key": "affine-notion-alternatives-2026-10-05",
+      "sourceType": "third_party",
+      "title": "8 Best Notion Alternatives for Privacy, Offline Work, and Teams",
+      "url": "https://affine.pro/blog/notion-alternative",
+      "publisher": "AFFiNE",
+      "retrievedAt": "2026-10-05T00:00:00Z"
+    }
+  ],
+  "anchors": [
+    {
+      "slug": "notion",
+      "name": "Notion",
+      "description": "Mainstream all-in-one workspace anchor for users seeking more local, offline, private, open, or focused alternatives."
+    }
+  ],
+  "attributes": [
+    { "slug": "works-offline", "name": "Works Offline", "description": "Core work remains available without an internet connection.", "category": "offline", "valueType": "boolean" },
+    { "slug": "local-first", "name": "Local First", "description": "Primary data or application workflow is designed around local device storage or local-first operation.", "category": "data_control", "valueType": "boolean" },
+    { "slug": "no-account-required", "name": "No Account Required", "description": "A meaningful local/core workflow can be started without creating a vendor account.", "category": "account", "valueType": "boolean" },
+    { "slug": "self-hostable", "name": "Self Hostable", "description": "The vendor documents a supported path to operate relevant server or sync infrastructure yourself.", "category": "deployment", "valueType": "boolean" },
+    { "slug": "open-source", "name": "Open Source", "description": "The product or its core editor is distributed under an open-source license according to current official materials.", "category": "licensing", "valueType": "boolean" },
+    { "slug": "ai-optional", "name": "AI Optional", "description": "Core product workflows remain usable without enabling, purchasing, or depending on AI functionality. Integrated AI or optional AI plugins do not disqualify a product; evidence must support the non-AI core workflow.", "category": "ai", "valueType": "boolean" },
+    { "slug": "free-core-use", "name": "Free Core Use", "description": "A meaningful core product workflow is available without a recurring software fee.", "category": "pricing", "valueType": "boolean" },
+    { "slug": "markdown-files", "name": "Markdown Files", "description": "The product uses or exposes Markdown files as a primary or supported note format.", "category": "portability", "valueType": "boolean" },
+    {"slug":"focused-note-taking","name":"Focused Note Taking","description":"The primary product workflow is capturing, editing, and organizing notes rather than an all-in-one workspace for databases, projects, and multiple work modes. Offering notes alone does not establish this claim.","category":"workflow","valueType":"boolean"},
+    {"slug":"no-database-required","name":"No Database Required","description":"Users can capture, edit, and organize core notes without creating or configuring a structured database, schema, or database views. This concerns user workflow, not internal storage or optional database features.","category":"workflow","valueType":"boolean"},
+    {"slug":"minimal-setup","name":"Minimal Setup","description":"A documented first-use path reaches core note capture and editing without mandatory server deployment, integrations, plugins, or custom workspace/database configuration. Account-free or offline use alone does not prove minimal setup.","category":"complexity","valueType":"boolean"}
+  ],
+  "problems": [
+    { "slug": "cloud-dependency", "name": "Cloud Dependency", "description": "The user wants important work to remain available without depending on a vendor cloud connection." },
+    { "slug": "vendor-lock-in", "name": "Vendor Lock-In", "description": "The user wants stronger ownership, portability, or control over where data lives." },
+    { "slug": "unwanted-ai", "name": "Unwanted AI", "description": "The user wants a workflow where AI is not required for core use." },
+    { "slug": "subscription-fatigue", "name": "Subscription Fatigue", "description": "The user wants useful core functionality without another mandatory recurring subscription." },
+    { "slug": "workspace-complexity", "name": "Workspace Complexity", "description": "The user wants a more focused or less all-in-one knowledge workflow." }
+  ],
+  "audiences": [
+    { "slug": "privacy-conscious-users", "name": "Privacy-Conscious Users" },
+    { "slug": "offline-first-users", "name": "Offline-First Users" },
+    { "slug": "data-ownership-seekers", "name": "Data Ownership Seekers" },
+    { "slug": "individual-knowledge-workers", "name": "Individual Knowledge Workers" }
+  ],
+  "products": [
+    {
+      "slug": "obsidian",
+      "name": "Obsidian",
+      "shortDescription": "A local Markdown-based knowledge app with optional paid sync and publishing services.",
+      "websiteUrl": "https://obsidian.md/",
+      "status": "draft",
+      "anchors": [
+        { "slug": "notion", "relationshipType": "alternative", "verificationStatus": "likely", "confidence": 0.8, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["affine-notion-alternatives-2026-10-05"] }
+      ],
+      "attributes": [
+        { "slug": "works-offline", "value": true, "verificationStatus": "verified", "confidence": 0.99, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["obsidian-sync-help-2026-10-05"] },
+        { "slug": "local-first", "value": true, "verificationStatus": "verified", "confidence": 0.99, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["obsidian-security-2026-10-05", "obsidian-license-2026-10-05"] },
+        { "slug": "no-account-required", "value": true, "verificationStatus": "verified", "confidence": 0.99, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["obsidian-security-2026-10-05", "obsidian-license-2026-10-05"] },
+        { "slug": "self-hostable", "value": null, "verificationStatus": "unknown", "confidence": null, "lastVerifiedAt": null, "evidence": [] },
+        { "slug": "open-source", "value": null, "verificationStatus": "unknown", "confidence": null, "lastVerifiedAt": null, "evidence": [] },
+        { "slug": "ai-optional", "value": null, "verificationStatus": "unknown", "confidence": null, "lastVerifiedAt": null, "evidence": [] },
+        { "slug": "free-core-use", "value": true, "verificationStatus": "verified", "confidence": 0.99, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["obsidian-license-2026-10-05"] },
+        { "slug": "markdown-files", "value": true, "verificationStatus": "verified", "confidence": 0.99, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["obsidian-license-2026-10-05"] },
+        {"slug":"focused-note-taking","value":null,"verificationStatus":"unknown","confidence":null,"lastVerifiedAt":null,"evidence":[]},
+        {"slug":"no-database-required","value":null,"verificationStatus":"unknown","confidence":null,"lastVerifiedAt":null,"evidence":[]},
+        {"slug":"minimal-setup","value":null,"verificationStatus":"unknown","confidence":null,"lastVerifiedAt":null,"evidence":[]}
+      ],
+      "problems": [
+        { "slug": "cloud-dependency", "verificationStatus": "verified", "confidence": 0.95, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["obsidian-sync-help-2026-10-05"] },
+        { "slug": "vendor-lock-in", "verificationStatus": "likely", "confidence": 0.9, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["obsidian-license-2026-10-05"] },
+        { "slug": "subscription-fatigue", "verificationStatus": "likely", "confidence": 0.85, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["obsidian-license-2026-10-05"] }
+      ],
+      "audiences": [
+        { "slug": "privacy-conscious-users", "verificationStatus": "verified", "confidence": 0.95, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["obsidian-security-2026-10-05"] },
+        { "slug": "offline-first-users", "verificationStatus": "verified", "confidence": 0.95, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["obsidian-sync-help-2026-10-05"] },
+        { "slug": "data-ownership-seekers", "verificationStatus": "likely", "confidence": 0.9, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["obsidian-license-2026-10-05"] }
+      ]
+    },
+    {
+      "slug": "anytype",
+      "name": "Anytype",
+      "shortDescription": "A local-first, offline-first workspace built around device-owned data and peer-to-peer sync.",
+      "websiteUrl": "https://anytype.io/",
+      "status": "draft",
+      "anchors": [],
+      "attributes": [
+        { "slug": "works-offline", "value": true, "verificationStatus": "verified", "confidence": 0.99, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["anytype-home-2026-10-05", "anytype-networked-era-2026-10-05"] },
+        { "slug": "local-first", "value": true, "verificationStatus": "verified", "confidence": 0.99, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["anytype-home-2026-10-05", "anytype-networked-era-2026-10-05"] },
+        { "slug": "no-account-required", "value": null, "verificationStatus": "unknown", "confidence": null, "lastVerifiedAt": null, "evidence": [] },
+        { "slug": "self-hostable", "value": true, "verificationStatus": "verified", "confidence": 0.95, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["anytype-home-2026-10-05"] },
+        { "slug": "open-source", "value": null, "verificationStatus": "unknown", "confidence": null, "lastVerifiedAt": null, "evidence": [] },
+        { "slug": "ai-optional", "value": null, "verificationStatus": "unknown", "confidence": null, "lastVerifiedAt": null, "evidence": [] },
+        { "slug": "free-core-use", "value": true, "verificationStatus": "verified", "confidence": 0.9, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["anytype-home-2026-10-05"] },
+        { "slug": "markdown-files", "value": null, "verificationStatus": "unknown", "confidence": null, "lastVerifiedAt": null, "evidence": [] },
+        {"slug":"focused-note-taking","value":null,"verificationStatus":"unknown","confidence":null,"lastVerifiedAt":null,"evidence":[]},
+        {"slug":"no-database-required","value":null,"verificationStatus":"unknown","confidence":null,"lastVerifiedAt":null,"evidence":[]},
+        {"slug":"minimal-setup","value":null,"verificationStatus":"unknown","confidence":null,"lastVerifiedAt":null,"evidence":[]}
+      ],
+      "problems": [
+        { "slug": "cloud-dependency", "verificationStatus": "verified", "confidence": 0.95, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["anytype-home-2026-10-05"] },
+        { "slug": "vendor-lock-in", "verificationStatus": "likely", "confidence": 0.9, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["anytype-home-2026-10-05"] }
+      ],
+      "audiences": [
+        { "slug": "privacy-conscious-users", "verificationStatus": "verified", "confidence": 0.95, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["anytype-home-2026-10-05"] },
+        { "slug": "offline-first-users", "verificationStatus": "verified", "confidence": 0.95, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["anytype-home-2026-10-05"] },
+        { "slug": "data-ownership-seekers", "verificationStatus": "verified", "confidence": 0.95, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["anytype-home-2026-10-05"] }
+      ]
+    },
+    {
+      "slug": "appflowy",
+      "name": "AppFlowy",
+      "shortDescription": "An open-source Notion alternative with local desktop use, offline mode, and self-hostable cloud infrastructure.",
+      "websiteUrl": "https://appflowy.io/",
+      "status": "draft",
+      "anchors": [
+        { "slug": "notion", "relationshipType": "alternative", "verificationStatus": "verified", "confidence": 0.99, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["appflowy-start-2026-10-05", "appflowy-welcome-2026-10-05"] }
+      ],
+      "attributes": [
+        { "slug": "works-offline", "value": true, "verificationStatus": "verified", "confidence": 0.99, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["appflowy-start-2026-10-05"] },
+        { "slug": "local-first", "value": true, "verificationStatus": "likely", "confidence": 0.9, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["appflowy-start-2026-10-05"] },
+        { "slug": "no-account-required", "value": null, "verificationStatus": "unknown", "confidence": null, "lastVerifiedAt": null, "evidence": [] },
+        { "slug": "self-hostable", "value": true, "verificationStatus": "verified", "confidence": 0.99, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["appflowy-deployment-2026-10-05"] },
+        { "slug": "open-source", "value": true, "verificationStatus": "verified", "confidence": 0.99, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["appflowy-start-2026-10-05", "appflowy-welcome-2026-10-05"] },
+        { "slug": "ai-optional", "value": true, "verificationStatus": "verified", "confidence": 0.9, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["appflowy-welcome-2026-10-05"] },
+        { "slug": "free-core-use", "value": true, "verificationStatus": "likely", "confidence": 0.85, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["appflowy-start-2026-10-05"] },
+        { "slug": "markdown-files", "value": null, "verificationStatus": "unknown", "confidence": null, "lastVerifiedAt": null, "evidence": [] },
+        {"slug":"focused-note-taking","value":false,"verificationStatus":"verified","confidence":0.95,"lastVerifiedAt":"2026-10-06T00:00:00Z","evidence":["appflowy-welcome-2026-10-05"]},
+        {"slug":"no-database-required","value":null,"verificationStatus":"unknown","confidence":null,"lastVerifiedAt":null,"evidence":[]},
+        {"slug":"minimal-setup","value":null,"verificationStatus":"unknown","confidence":null,"lastVerifiedAt":null,"evidence":[]}
+      ],
+      "problems": [
+        { "slug": "cloud-dependency", "verificationStatus": "verified", "confidence": 0.95, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["appflowy-start-2026-10-05"] },
+        { "slug": "vendor-lock-in", "verificationStatus": "verified", "confidence": 0.95, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["appflowy-start-2026-10-05"] },
+        { "slug": "unwanted-ai", "verificationStatus": "likely", "confidence": 0.8, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["appflowy-welcome-2026-10-05"] }
+      ],
+      "audiences": [
+        { "slug": "privacy-conscious-users", "verificationStatus": "likely", "confidence": 0.9, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["appflowy-start-2026-10-05"] },
+        { "slug": "offline-first-users", "verificationStatus": "verified", "confidence": 0.95, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["appflowy-start-2026-10-05"] },
+        { "slug": "data-ownership-seekers", "verificationStatus": "verified", "confidence": 0.95, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["appflowy-start-2026-10-05"] }
+      ]
+    },
+    {
+      "slug": "affine",
+      "name": "AFFiNE",
+      "shortDescription": "An open-source, local-first workspace combining documents, databases, whiteboards, and optional cloud and AI services.",
+      "websiteUrl": "https://affine.pro/",
+      "status": "draft",
+      "anchors": [
+        { "slug": "notion", "relationshipType": "alternative", "verificationStatus": "verified", "confidence": 0.99, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["affine-home-2026-10-05"] }
+      ],
+      "attributes": [
+        { "slug": "works-offline", "value": true, "verificationStatus": "verified", "confidence": 0.99, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["affine-download-2026-10-05"] },
+        { "slug": "local-first", "value": true, "verificationStatus": "verified", "confidence": 0.99, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["affine-home-2026-10-05", "affine-download-2026-10-05"] },
+        { "slug": "no-account-required", "value": true, "verificationStatus": "verified", "confidence": 0.99, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["affine-download-2026-10-05"] },
+        { "slug": "self-hostable", "value": true, "verificationStatus": "verified", "confidence": 0.95, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["affine-pricing-2026-10-05"] },
+        { "slug": "open-source", "value": true, "verificationStatus": "verified", "confidence": 0.95, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["affine-home-2026-10-05", "affine-pricing-2026-10-05"] },
+        { "slug": "ai-optional", "value": true, "verificationStatus": "verified", "confidence": 0.95, "lastVerifiedAt": "2026-10-06T00:00:00Z", "evidence": ["affine-pricing-2026-10-05"] },
+        { "slug": "free-core-use", "value": true, "verificationStatus": "verified", "confidence": 0.95, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["affine-pricing-2026-10-05"] },
+        { "slug": "markdown-files", "value": null, "verificationStatus": "unknown", "confidence": null, "lastVerifiedAt": null, "evidence": [] },
+        {"slug":"focused-note-taking","value":false,"verificationStatus":"verified","confidence":0.95,"lastVerifiedAt":"2026-10-06T00:00:00Z","evidence":["affine-home-2026-10-05"]},
+        {"slug":"no-database-required","value":null,"verificationStatus":"unknown","confidence":null,"lastVerifiedAt":null,"evidence":[]},
+        {"slug":"minimal-setup","value":null,"verificationStatus":"unknown","confidence":null,"lastVerifiedAt":null,"evidence":[]}
+      ],
+      "problems": [
+        { "slug": "cloud-dependency", "verificationStatus": "verified", "confidence": 0.95, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["affine-download-2026-10-05"] },
+        { "slug": "vendor-lock-in", "verificationStatus": "likely", "confidence": 0.9, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["affine-pricing-2026-10-05"] },
+        { "slug": "subscription-fatigue", "verificationStatus": "likely", "confidence": 0.8, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["affine-pricing-2026-10-05"] }
+      ],
+      "audiences": [
+        { "slug": "privacy-conscious-users", "verificationStatus": "likely", "confidence": 0.9, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["affine-download-2026-10-05"] },
+        { "slug": "offline-first-users", "verificationStatus": "verified", "confidence": 0.95, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["affine-download-2026-10-05"] },
+        { "slug": "data-ownership-seekers", "verificationStatus": "likely", "confidence": 0.9, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["affine-home-2026-10-05"] }
+      ]
+    },
+    {
+      "slug": "joplin",
+      "name": "Joplin",
+      "shortDescription": "A free, open-source, offline-first note-taking and to-do application with Markdown and optional sync services.",
+      "websiteUrl": "https://joplinapp.org/",
+      "status": "draft",
+      "anchors": [],
+      "attributes": [
+        { "slug": "works-offline", "value": true, "verificationStatus": "verified", "confidence": 0.99, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["joplin-help-2026-10-05"] },
+        { "slug": "local-first", "value": true, "verificationStatus": "verified", "confidence": 0.95, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["joplin-help-2026-10-05"] },
+        { "slug": "no-account-required", "value": null, "verificationStatus": "unknown", "confidence": null, "lastVerifiedAt": null, "evidence": [] },
+        { "slug": "self-hostable", "value": true, "verificationStatus": "verified", "confidence": 0.95, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["joplin-plans-2026-10-05"] },
+        { "slug": "open-source", "value": true, "verificationStatus": "verified", "confidence": 0.99, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["joplin-help-2026-10-05"] },
+        { "slug": "ai-optional", "value": null, "verificationStatus": "unknown", "confidence": null, "lastVerifiedAt": null, "evidence": [] },
+        { "slug": "free-core-use", "value": true, "verificationStatus": "verified", "confidence": 0.95, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["joplin-help-2026-10-05"] },
+        { "slug": "markdown-files", "value": true, "verificationStatus": "verified", "confidence": 0.99, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["joplin-help-2026-10-05"] },
+        {"slug":"focused-note-taking","value":true,"verificationStatus":"verified","confidence":0.95,"lastVerifiedAt":"2026-10-06T00:00:00Z","evidence":["joplin-help-2026-10-05"]},
+        {"slug":"no-database-required","value":true,"verificationStatus":"verified","confidence":0.95,"lastVerifiedAt":"2026-10-06T00:00:00Z","evidence":["joplin-help-2026-10-05"]},
+        {"slug":"minimal-setup","value":null,"verificationStatus":"unknown","confidence":null,"lastVerifiedAt":null,"evidence":[]}
+      ],
+      "problems": [
+        { "slug": "cloud-dependency", "verificationStatus": "verified", "confidence": 0.95, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["joplin-help-2026-10-05"] },
+        { "slug": "vendor-lock-in", "verificationStatus": "likely", "confidence": 0.85, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["joplin-help-2026-10-05"] },
+        { "slug": "subscription-fatigue", "verificationStatus": "likely", "confidence": 0.85, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["joplin-help-2026-10-05"] }
+      ],
+      "audiences": [
+        { "slug": "privacy-conscious-users", "verificationStatus": "likely", "confidence": 0.85, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["joplin-help-2026-10-05"] },
+        { "slug": "offline-first-users", "verificationStatus": "verified", "confidence": 0.99, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["joplin-help-2026-10-05"] },
+        { "slug": "data-ownership-seekers", "verificationStatus": "likely", "confidence": 0.85, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["joplin-help-2026-10-05"] }
+      ]
+    },
+    {
+      "slug": "logseq",
+      "name": "Logseq",
+      "shortDescription": "A privacy-first, open-source knowledge base that keeps personal data locally and supports Markdown files.",
+      "websiteUrl": "https://logseq.com/",
+      "status": "draft",
+      "anchors": [],
+      "attributes": [
+        { "slug": "works-offline", "value": true, "verificationStatus": "likely", "confidence": 0.9, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["logseq-home-2026-10-05"] },
+        { "slug": "local-first", "value": true, "verificationStatus": "verified", "confidence": 0.95, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["logseq-home-2026-10-05"] },
+        { "slug": "no-account-required", "value": null, "verificationStatus": "unknown", "confidence": null, "lastVerifiedAt": null, "evidence": [] },
+        { "slug": "self-hostable", "value": null, "verificationStatus": "unknown", "confidence": null, "lastVerifiedAt": null, "evidence": [] },
+        { "slug": "open-source", "value": true, "verificationStatus": "verified", "confidence": 0.99, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["logseq-home-2026-10-05"] },
+        { "slug": "ai-optional", "value": null, "verificationStatus": "unknown", "confidence": null, "lastVerifiedAt": null, "evidence": [] },
+        { "slug": "free-core-use", "value": true, "verificationStatus": "verified", "confidence": 0.95, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["logseq-home-2026-10-05"] },
+        { "slug": "markdown-files", "value": true, "verificationStatus": "verified", "confidence": 0.95, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["logseq-home-2026-10-05"] },
+        {"slug":"focused-note-taking","value":null,"verificationStatus":"unknown","confidence":null,"lastVerifiedAt":null,"evidence":[]},
+        {"slug":"no-database-required","value":null,"verificationStatus":"unknown","confidence":null,"lastVerifiedAt":null,"evidence":[]},
+        {"slug":"minimal-setup","value":null,"verificationStatus":"unknown","confidence":null,"lastVerifiedAt":null,"evidence":[]}
+      ],
+      "problems": [
+        { "slug": "cloud-dependency", "verificationStatus": "likely", "confidence": 0.9, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["logseq-home-2026-10-05"] },
+        { "slug": "vendor-lock-in", "verificationStatus": "likely", "confidence": 0.85, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["logseq-home-2026-10-05"] },
+        { "slug": "subscription-fatigue", "verificationStatus": "likely", "confidence": 0.85, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["logseq-home-2026-10-05"] }
+      ],
+      "audiences": [
+        { "slug": "privacy-conscious-users", "verificationStatus": "verified", "confidence": 0.95, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["logseq-home-2026-10-05"] },
+        { "slug": "offline-first-users", "verificationStatus": "likely", "confidence": 0.9, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["logseq-home-2026-10-05"] },
+        { "slug": "data-ownership-seekers", "verificationStatus": "verified", "confidence": 0.95, "lastVerifiedAt": "2026-10-05T00:00:00Z", "evidence": ["logseq-home-2026-10-05"] }
+      ]
+    }
+  ],
+  "escapeRoutes": [
+    {
+      "slug": "offline-notion-alternatives",
+      "name": "Offline Notion Alternatives",
+      "description": "Qualification: an evidence-backed Notion alternative relationship AND works-offline=true with verified evidence. A likely anchor relationship remains an explicitly provisional draft candidate. Missing anchor evidence or only likely offline evidence means unknown, not false.",
+      "anchorSlug": "notion",
+      "status": "draft",
+      "editoriallyApproved": false,
+      "lastVerifiedAt": "2026-10-06T00:00:00Z",
+      "products": [
+        {
+          "productSlug": "obsidian",
+          "position": 1,
+          "editorialNote": "Verified offline support; Notion alternative relationship remains likely from existing third-party evidence. Provisional draft candidate only."
+        },
+        {
+          "productSlug": "affine",
+          "position": 2,
+          "editorialNote": "Official download page explicitly says the desktop app works fully offline."
+        },
+        {
+          "productSlug": "appflowy",
+          "position": 3,
+          "editorialNote": "Official docs explicitly support offline mode."
+        }
+      ]
+    },
+    {
+      "slug": "notion-alternatives-without-ai",
+      "name": "Notion Alternatives Without AI",
+      "description": "Qualification: an evidence-backed Notion alternative relationship AND ai-optional=true with verified evidence. Core workflows must remain usable without enabling or depending on AI. Integrated AI, optional AI add-ons, and AI plugins do not themselves disqualify a product. Missing evidence means unknown.",
+      "anchorSlug": "notion",
+      "status": "draft",
+      "editoriallyApproved": false,
+      "lastVerifiedAt": "2026-10-06T00:00:00Z",
+      "products": [
+        {
+          "productSlug": "appflowy",
+          "position": 1,
+          "editorialNote": "Verified Notion alternative; existing official welcome docs explicitly identify AI writing and editing as opt-in."
+        },
+        {
+          "productSlug": "affine",
+          "position": 2,
+          "editorialNote": "Verified Notion alternative; existing pricing evidence separates unlimited core Doc/Edgeless editing from the optional AI add-on."
+        }
+      ]
+    },
+    {
+      "slug": "simple-notion-alternatives",
+      "name": "Simple Notion Alternatives",
+      "description": "Derived/editorial qualification, never a simple=true product attribute: an evidence-backed Notion alternative relationship AND verified focused-note-taking=true AND verified no-database-required=true. minimal-setup must be positively supported: verified true permits qualification, likely true permits only a provisional editorial candidate, unknown leaves qualification unknown, and an evidence-backed false signal fails the rubric. Unknown is never treated as passing. Editorial approval is separately required before publication.",
+      "anchorSlug": "notion",
+      "status": "draft",
+      "editoriallyApproved": false,
+      "lastVerifiedAt": "2026-10-06T00:00:00Z",
+      "products": []
+    }
+  ]
+}
