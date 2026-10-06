@@ -54,3 +54,6 @@ node scripts/seed/import-sql.mjs seed/data/notion-vertical-slice.json seed/impor
 ## PR3.3 five-ecosystem draft
 
 See [seed/EXPANSION_REVIEW.md](seed/EXPANSION_REVIEW.md) for the 30-product research draft, human review checklist, and five atomic SQL batches. Generate with `node scripts/seed/build-expansion.mjs`. Research and import success do not establish editorial approval.
+# PR3.4 official-source review
+
+After the PR3.3 production import, use `node scripts/seed/build-source-review.mjs` to generate `.seed-output/source-review`. Read `seed/SOURCE_REVIEW.md` for the findings and execution order. This overlay preserves the original PR3.3 research baseline. It replaces only listed claims and their seed-managed evidence links, requires the stored row and evidence to match the baseline or the reviewed result, and retains source/fragment history. Products and routes remain draft; AI review does not set human approval.

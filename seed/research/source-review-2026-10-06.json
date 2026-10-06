@@ -1,0 +1,411 @@
+{
+  "version": 1,
+  "reviewedOn": "2026-10-06",
+  "reviewType": "ai-official-source-review",
+  "humanReviewStatus": "pending",
+  "scope": "30 candidate products: official-source desk review of platform/pricing/trade-off summaries plus evidence-sensitive original Notion claims. No hands-on tests, medical efficacy assessment, legal opinion, or human publishing approval.",
+  "patches": [
+    {
+      "product": "prowritingaid",
+      "collection": "attributes",
+      "slug": "pricing-model",
+      "value": "Free tier; paid Premium and Premium Pro with monthly, annual, or one-time lifetime options. Story Credits are purchased separately.",
+      "status": "verified",
+      "urls": [
+        "https://prowritingaid.com/pricing"
+      ],
+      "reason": "Original summary omitted the lifetime option and Premium Pro."
+    },
+    {
+      "product": "prowritingaid",
+      "collection": "attributes",
+      "slug": "trade-off-summary",
+      "value": "English only. Free checking is limited to 500 words at a time and two runs per line-editing report per day; advanced manuscript analyses use separate Story Credits.",
+      "status": "verified",
+      "urls": [
+        "https://prowritingaid.com/pricing"
+      ],
+      "reason": "Record material language and free-use limitations."
+    },
+    {
+      "product": "smiling-mind",
+      "collection": "attributes",
+      "slug": "supported-platforms",
+      "value": "iOS, Android, and Web browser access",
+      "status": "verified",
+      "urls": [
+        "https://www.smilingmind.com.au/app-product-information-statement"
+      ],
+      "reason": "Official product statement explicitly includes browser access."
+    },
+    {
+      "product": "antidote",
+      "collection": "attributes",
+      "slug": "supported-platforms",
+      "value": "Windows and macOS (Antidote 12); browser-based Antidote Web; iPhone/iPad (Antidote Mobile dictionaries and guides). Mobile correction uses Antidote Web.",
+      "status": "verified",
+      "urls": [
+        "https://www.antidote.info/en/antidote-12/compatibility/windows",
+        "https://www.antidote.info/en/antidote-12/compatibility/mac",
+        "https://www.antidote.info/en/antidote-mobile"
+      ],
+      "reason": "Original summary omitted Mac and conflated product-line platforms with corrector availability."
+    },
+    {
+      "product": "antidote",
+      "collection": "attributes",
+      "slug": "trade-off-summary",
+      "value": "Antidote Mobile provides dictionaries and guides, without the corrector; correction on iPhone/iPad uses Antidote Web. Antidote 12 generative reformulation requires an eligible subscription.",
+      "status": "verified",
+      "urls": [
+        "https://www.antidote.info/en/antidote-mobile",
+        "https://www.antidote.info/en/antidote-12"
+      ],
+      "reason": "Mobile app support does not imply native mobile grammar correction."
+    },
+    {
+      "product": "vikunja",
+      "collection": "attributes",
+      "slug": "pricing-model",
+      "value": "Free AGPL-licensed core for self-hosting; optional paid managed Cloud hosting and paid self-hosted Pro features. Infrastructure costs are separate.",
+      "status": "verified",
+      "urls": [
+        "https://vikunja.io/pricing/"
+      ],
+      "reason": "Original summary omitted separately paid Pro features."
+    },
+    {
+      "product": "vikunja",
+      "collection": "attributes",
+      "slug": "trade-off-summary",
+      "value": "Self-hosting requires server operation; Cloud hosting is paid, and Pro features such as administration and audit logging require a separate paid offer.",
+      "status": "verified",
+      "urls": [
+        "https://vikunja.io/pricing/"
+      ],
+      "reason": "Do not generalize free core to all self-hosted features."
+    },
+    {
+      "product": "vikunja",
+      "collection": "attributes",
+      "slug": "open-source",
+      "value": true,
+      "status": "verified",
+      "urls": [
+        "https://vikunja.io/pricing/"
+      ],
+      "reason": "Use the source that explicitly states AGPL core licensing; paid Pro is separate."
+    },
+    {
+      "product": "stirling-pdf",
+      "collection": "attributes",
+      "slug": "supported-platforms",
+      "value": "Web; Windows, macOS, and Linux desktop applications; self-hosted deployments",
+      "status": "verified",
+      "urls": [
+        "https://www.stirling.com/download"
+      ],
+      "reason": "Replace unreviewed desktop OS coverage with official download listing."
+    },
+    {
+      "product": "stirling-pdf",
+      "collection": "attributes",
+      "slug": "trade-off-summary",
+      "value": "Paid tiers cover team administration and enterprise features; processing automation uses credits. The repository has MIT-covered code and excluded separately licensed components; check the component license before modification or redistribution.",
+      "status": "verified",
+      "urls": [
+        "https://www.stirling.com/pricing",
+        "https://github.com/Stirling-Tools/Stirling-PDF/blob/main/LICENSE"
+      ],
+      "reason": "Mixed licensing makes a blanket MIT or wholly-open-source description inaccurate."
+    },
+    {
+      "product": "affine",
+      "collection": "attributes",
+      "slug": "pricing-model",
+      "value": "Free Cloud tier; paid Cloud plans and a one-time Believer offer. The EE backend has separate authorization requirements for modification, compilation, or redistribution.",
+      "status": "verified",
+      "urls": [
+        "https://affine.pro/pricing"
+      ],
+      "reason": "Pricing page states compilation restrictions and offers a one-time plan."
+    },
+    {
+      "product": "affine",
+      "collection": "attributes",
+      "slug": "trade-off-summary",
+      "value": "The core editor is MIT-licensed; the EE backend is separately licensed, with authorization required for modification, compilation, or redistribution. Desktop and mobile feature coverage differs.",
+      "status": "verified",
+      "urls": [
+        "https://affine.pro/pricing",
+        "https://affine.pro/download"
+      ],
+      "reason": "Keep core-editor open-source=true under the existing attribute definition, while exposing backend and platform scope."
+    },
+    {
+      "product": "joplin",
+      "collection": "attributes",
+      "slug": "trade-off-summary",
+      "value": "Joplin uses Markdown note content and supports Markdown import/export, but its local profile stores notes and metadata in SQLite. It is not a vault of directly edited Markdown files. Paid Cloud storage and collaboration limits depend on plan.",
+      "status": "verified",
+      "urls": [
+        "https://joplinapp.org/help/",
+        "https://joplinapp.org/help/dev/spec/user_profile/",
+        "https://joplinapp.org/plans/"
+      ],
+      "reason": "Current markdown-files definition includes a supported note format, so true remains valid; explain storage rather than mislabeling the boolean false."
+    },
+    {
+      "product": "obsidian",
+      "collection": "attributes",
+      "slug": "markdown-files",
+      "value": true,
+      "status": "verified",
+      "urls": [
+        "https://obsidian.md/help/Files%2Band%2Bfolders/How%2BObsidian%2Bstores%2Bdata"
+      ],
+      "reason": "License page was attached to a Markdown-storage claim without proving that claim."
+    },
+    {
+      "product": "anytype",
+      "collection": "attributes",
+      "slug": "supported-platforms",
+      "value": "Official documentation lists macOS, Windows, Linux, iOS, and Android. Detailed feature parity is version-dependent; the retrieved comparison describes older releases.",
+      "status": "likely",
+      "urls": [
+        "https://doc.anytype.io/anytype/documentation_cn/za-xiang/feature-list-by-platform"
+      ],
+      "reason": "Documentation supports wider OS coverage but its feature table is explicitly versioned and old."
+    },
+    {
+      "product": "anytype",
+      "collection": "attributes",
+      "slug": "pricing-model",
+      "value": null,
+      "status": "unknown",
+      "urls": [],
+      "reason": "Current pricing and membership limits were not retrievable; search snippets are insufficient."
+    },
+    {
+      "product": "anytype",
+      "collection": "attributes",
+      "slug": "free-core-use",
+      "value": null,
+      "status": "unknown",
+      "urls": [],
+      "reason": "Cannot establish current free-use terms from an inaccessible homepage/pricing page or a historical blog."
+    },
+    {
+      "product": "anytype",
+      "collection": "attributes",
+      "slug": "works-offline",
+      "value": true,
+      "status": "verified",
+      "urls": [
+        "https://doc.anytype.io/anytype"
+      ],
+      "reason": "Current documentation directly describes offline, local-first, and self-hosted data workflows."
+    },
+    {
+      "product": "anytype",
+      "collection": "attributes",
+      "slug": "local-first",
+      "value": true,
+      "status": "verified",
+      "urls": [
+        "https://doc.anytype.io/anytype"
+      ],
+      "reason": "Current documentation directly describes offline, local-first, and self-hosted data workflows."
+    },
+    {
+      "product": "anytype",
+      "collection": "attributes",
+      "slug": "self-hostable",
+      "value": true,
+      "status": "verified",
+      "urls": [
+        "https://doc.anytype.io/anytype"
+      ],
+      "reason": "Current documentation directly describes offline, local-first, and self-hosted data workflows."
+    },
+    {
+      "product": "logseq",
+      "collection": "attributes",
+      "slug": "markdown-files",
+      "value": null,
+      "status": "unknown",
+      "urls": [],
+      "reason": "File graphs and SQLite DB graphs are different editions; a product-wide Markdown-files boolean cannot reliably select the intended edition."
+    },
+    {
+      "product": "logseq",
+      "collection": "attributes",
+      "slug": "free-core-use",
+      "value": null,
+      "status": "unknown",
+      "urls": [],
+      "reason": "Download instructions and donation links do not establish complete current core/Sync/RTC pricing terms."
+    },
+    {
+      "product": "logseq",
+      "collection": "attributes",
+      "slug": "open-source",
+      "value": true,
+      "status": "verified",
+      "urls": [
+        "https://github.com/logseq/logseq"
+      ],
+      "reason": "Official repository identifies the AGPL license; replaces unextractable homepage pointer."
+    },
+    {
+      "product": "logseq",
+      "collection": "attributes",
+      "slug": "local-first",
+      "value": true,
+      "status": "likely",
+      "urls": [
+        "https://github.com/logseq/logseq"
+      ],
+      "reason": "Repository describes graph formats and local SQLite backups, but does not establish every hosted workflow as local-first."
+    },
+    {
+      "product": "logseq",
+      "collection": "attributes",
+      "slug": "trade-off-summary",
+      "value": "File graphs support Markdown/Org workflows; DB graphs use SQLite and are beta. The new DB mobile app and RTC are alpha, with iOS available and Android described as upcoming. The maintainers advise backups and noncritical test graphs.",
+      "status": "verified",
+      "urls": [
+        "https://github.com/logseq/logseq"
+      ],
+      "reason": "Explicit edition and maturity scope prevents recommending the beta DB workflow as the established file workflow."
+    },
+    {
+      "product": "balance",
+      "collection": "attributes",
+      "slug": "supported-platforms",
+      "value": null,
+      "status": "unknown",
+      "urls": [],
+      "reason": "The billing-category pointer did not substantiate OS support during this audit; omission is unknown, not a verified negative."
+    },
+    {
+      "product": "obsidian",
+      "collection": "problems",
+      "slug": "cloud-dependency",
+      "status": "likely",
+      "reason": "Editorial fit inferred from documented features is not an independently verified user outcome; retain the underlying feature evidence."
+    },
+    {
+      "product": "obsidian",
+      "collection": "audiences",
+      "slug": "privacy-conscious-users",
+      "status": "likely",
+      "reason": "Editorial fit inferred from documented features is not an independently verified user outcome; retain the underlying feature evidence."
+    },
+    {
+      "product": "obsidian",
+      "collection": "audiences",
+      "slug": "offline-first-users",
+      "status": "likely",
+      "reason": "Editorial fit inferred from documented features is not an independently verified user outcome; retain the underlying feature evidence."
+    },
+    {
+      "product": "anytype",
+      "collection": "problems",
+      "slug": "cloud-dependency",
+      "status": "likely",
+      "reason": "Editorial fit inferred from documented features is not an independently verified user outcome; retain the underlying feature evidence."
+    },
+    {
+      "product": "anytype",
+      "collection": "audiences",
+      "slug": "privacy-conscious-users",
+      "status": "likely",
+      "reason": "Editorial fit inferred from documented features is not an independently verified user outcome; retain the underlying feature evidence."
+    },
+    {
+      "product": "anytype",
+      "collection": "audiences",
+      "slug": "offline-first-users",
+      "status": "likely",
+      "reason": "Editorial fit inferred from documented features is not an independently verified user outcome; retain the underlying feature evidence."
+    },
+    {
+      "product": "anytype",
+      "collection": "audiences",
+      "slug": "data-ownership-seekers",
+      "status": "likely",
+      "reason": "Editorial fit inferred from documented features is not an independently verified user outcome; retain the underlying feature evidence."
+    },
+    {
+      "product": "appflowy",
+      "collection": "problems",
+      "slug": "cloud-dependency",
+      "status": "likely",
+      "reason": "Editorial fit inferred from documented features is not an independently verified user outcome; retain the underlying feature evidence."
+    },
+    {
+      "product": "appflowy",
+      "collection": "problems",
+      "slug": "vendor-lock-in",
+      "status": "likely",
+      "reason": "Editorial fit inferred from documented features is not an independently verified user outcome; retain the underlying feature evidence."
+    },
+    {
+      "product": "appflowy",
+      "collection": "audiences",
+      "slug": "offline-first-users",
+      "status": "likely",
+      "reason": "Editorial fit inferred from documented features is not an independently verified user outcome; retain the underlying feature evidence."
+    },
+    {
+      "product": "appflowy",
+      "collection": "audiences",
+      "slug": "data-ownership-seekers",
+      "status": "likely",
+      "reason": "Editorial fit inferred from documented features is not an independently verified user outcome; retain the underlying feature evidence."
+    },
+    {
+      "product": "affine",
+      "collection": "problems",
+      "slug": "cloud-dependency",
+      "status": "likely",
+      "reason": "Editorial fit inferred from documented features is not an independently verified user outcome; retain the underlying feature evidence."
+    },
+    {
+      "product": "affine",
+      "collection": "audiences",
+      "slug": "offline-first-users",
+      "status": "likely",
+      "reason": "Editorial fit inferred from documented features is not an independently verified user outcome; retain the underlying feature evidence."
+    },
+    {
+      "product": "joplin",
+      "collection": "problems",
+      "slug": "cloud-dependency",
+      "status": "likely",
+      "reason": "Editorial fit inferred from documented features is not an independently verified user outcome; retain the underlying feature evidence."
+    },
+    {
+      "product": "joplin",
+      "collection": "audiences",
+      "slug": "offline-first-users",
+      "status": "likely",
+      "reason": "Editorial fit inferred from documented features is not an independently verified user outcome; retain the underlying feature evidence."
+    },
+    {
+      "product": "logseq",
+      "collection": "audiences",
+      "slug": "privacy-conscious-users",
+      "status": "likely",
+      "reason": "Editorial fit inferred from documented features is not an independently verified user outcome; retain the underlying feature evidence."
+    },
+    {
+      "product": "logseq",
+      "collection": "audiences",
+      "slug": "data-ownership-seekers",
+      "status": "likely",
+      "reason": "Editorial fit inferred from documented features is not an independently verified user outcome; retain the underlying feature evidence."
+    }
+  ]
+}

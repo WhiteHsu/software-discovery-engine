@@ -10,11 +10,11 @@
 
 **Issue #3 — Seed Data & Evidence Pipeline: in progress**
 
-PR3.2C is deployed. The initial six Notion products, 83 evidence fragments, and three draft routes are imported in production; all 17 counts were verified by the operator. PR3.3 prepares 30 draft products across five ecosystems. Human review and the expansion production import remain pending.
+PR3.3 (operator commit fa401f1) is deployed. The operator imported 30 draft products across five ecosystems and verified the expanded counts, build, deployment, and foundation homepage. PR3.4 adds an AI official-source desk review, 43 claim corrections on 12 products, and a guarded delta importer. The review delta has passed local tests but has not yet been applied to production. Human publishing review remains pending.
 
 ## Next Work
 
-Review the expansion records, import the five ecosystem batches, and verify the resulting graph. Resolve remaining dataset gaps before closing #3 or publishing products.
+Apply the reviewed delta using seed/SOURCE_REVIEW.md, then confirm the corrected values and 17 counts. Resolve the listed unknowns and editorial decisions before closing #3 or publishing products. AI source review does not grant human approval.
 
 ## Completed Issues
 
