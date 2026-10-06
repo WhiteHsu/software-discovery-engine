@@ -51,4 +51,6 @@ HTTP smoke checks passed for all 30 draft previews with correct H1 and noindex; 
 
 ## Issue #4 status
 
+PR4.1 is deployed as operator commit b7568d1. The operator confirmed all four public-read SQL checks and the expected difference between local draft preview and the unavailable production Obsidian page. PR4.2 prepares the first single-product publication review; see seed/OBSIDIAN_PUBLICATION_REVIEW.md. The owner approved only Obsidian publication and indexing on 2026-10-06; see seed/OBSIDIAN_PUBLICATION_APPROVAL.md. Production application and public-page validation remain pending. PR4.1_VERIFY.sql now returns all four checks in one result and uses the still-draft Logseq slug, so it remains valid after a separately approved Obsidian release.
+
 The requested page sections are implemented, including honest empty states and structured data rendering. Related Escape Route names are shown when approved; route navigation awaits the route pages in #5. Homepage discovery navigation (#6), click analytics (#8), and full SEO infrastructure (#9) remain their own scopes. Keep #4 open until the operator validates this increment and the intended public products receive their publication review.

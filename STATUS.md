@@ -8,13 +8,13 @@
 
 ## Current Work
 
-**Issue #4 — Product Discovery Pages: in progress (PR4.1)**
+**Issue #4 — Product Discovery Pages: in progress (PR4.2 publication review)**
 
-Issue #3 is closed; the operator pushed the acceptance documents as commit 0e40405 and supplied the closed GitHub issue screenshot. PR4.1 implements /software/[slug] using a narrow published-only Supabase RPC with linked source metadata, claim states/dates, positioning, audience/problem fits, platforms, verified pricing, tradeoffs, anchors, and approved related route names. A development-only draft fixture permits local review of all 30 accepted products without publishing them. See PRODUCT_PAGES.md. PR4.1 migration and remote deployment are pending operator execution.
+Issue #3 is closed (acceptance commit 0e40405). PR4.1 is pushed and deployed as b7568d1; the operator confirmed migration, all four public-read checks, 25 tests, lint/typecheck/build, local draft display and the expected unpublished production page. PR4.2 prepares a guarded Obsidian publication packet with explicit retained unknowns/likely fits and no route publication. Source desk-review and local transactional tests are complete; the owner approved only Obsidian publication and indexing on 2026-10-06. See seed/OBSIDIAN_PUBLICATION_REVIEW.md. No remote publication has been performed.
 
 ## Next Work
 
-Apply the PR4.1 migration, run its read-only verification, and review local product previews. Products/routes remain draft; public URLs return 404 until a product is intentionally approved and published. Publication review is not granted by this implementation. Keep #4 open for operator validation and public-content acceptance. Escape Route navigation belongs to #5; analytics instrumentation belongs to #8.
+Owner approval is recorded in seed/OBSIDIAN_PUBLICATION_APPROVAL.md against the PR4.2 review hash. Apply the guarded rehearsal/publication SQL, run PR4.2_VERIFY.sql and confirm the public page. Production application remains pending operator confirmation. Do not treat the prior draft acceptance or successful tests as publication approval. Other products/routes remain draft. Keep #4 open while public-page validation and remaining product review proceed. Escape Route navigation belongs to #5; analytics instrumentation belongs to #8.
 
 ## Completed Issues
 
