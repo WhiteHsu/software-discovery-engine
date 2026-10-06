@@ -50,3 +50,7 @@ node --test scripts/seed/database-plan.test.mjs
 node --test scripts/seed/database-plan.test.mjs scripts/seed/import-sql.test.mjs
 node scripts/seed/import-sql.mjs seed/data/notion-vertical-slice.json seed/import-ownership.example.json .seed-output/notion.import.sql --commit
 ```
+
+## PR3.3 five-ecosystem draft
+
+See [seed/EXPANSION_REVIEW.md](seed/EXPANSION_REVIEW.md) for the 30-product research draft, human review checklist, and five atomic SQL batches. Generate with `node scripts/seed/build-expansion.mjs`. Research and import success do not establish editorial approval.

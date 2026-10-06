@@ -1,6 +1,6 @@
 # Project Status
 
-**Last Updated:** 2026-10-05
+**Last Updated:** 2026-10-06
 
 ## Current Phase
 
@@ -8,15 +8,13 @@
 
 ## Current Work
 
-**Issue #1 — Foundation & Core Infrastructure: implementation complete; ready to close**
+**Issue #3 — Seed Data & Evidence Pipeline: in progress**
 
-Issue #1 established the application, runtime, database boundary, CI, and production deployment foundation.
+PR3.2C is deployed. The initial six Notion products, 83 evidence fragments, and three draft routes are imported in production; all 17 counts were verified by the operator. PR3.3 prepares 30 draft products across five ecosystems. Human review and the expansion production import remain pending.
 
-## Next Issue
+## Next Work
 
-**#2 — Discovery Graph Data Model**
-
-The next implementation work is the relational graph schema and its evidence-aware data model. Database connectivity, grants, and RLS should be verified against the first real `software_discovery` tables created in Issue #2.
+Review the expansion records, import the five ecosystem batches, and verify the resulting graph. Resolve remaining dataset gaps before closing #3 or publishing products.
 
 ## Completed Issues
 
@@ -25,7 +23,7 @@ The next implementation work is the relational graph schema and its evidence-awa
 ## Open Roadmap
 
 - [x] #1 Foundation & Core Infrastructure
-- [ ] #2 Discovery Graph Data Model
+- [x] #2 Discovery Graph Data Model
 - [ ] #3 Seed Data & Evidence Pipeline
 - [ ] #4 Product Discovery Pages
 - [ ] #5 Escape Route Engine
@@ -44,7 +42,7 @@ The next implementation work is the relational graph schema and its evidence-awa
 - **Supabase clients:** browser and server clients scoped to `software_discovery`
 - **CI:** GitHub Actions runs install, lint, typecheck, and production build
 - **Deployment:** Vercel production deployment passing
-- **Production health:** configuration valid; database probe intentionally deferred to Issue #2
+- **Production health:** configuration valid; initial graph imports and counts verified by the operator
 - **Environment:** Supabase public URL and publishable key configured in Vercel Production and Preview
 - **Security audit:** five high-severity findings currently originate from the ESLint development-tooling transitive dependency chain (`eslint-config-next` → `@next/eslint-plugin-next` → `fast-glob` → `micromatch`). No forced breaking remediation was applied; revisit when a non-breaking upstream remediation is available.
 
