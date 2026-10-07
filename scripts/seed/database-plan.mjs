@@ -67,6 +67,10 @@ export function createDatabasePlan(bundle) {
           ...(collection === "anchors" ? { relationship_type: claim.relationshipType } : {}),
         };
         const row = { ...where, ...metadata(claim) };
+        if (collection === "anchors") {
+          row.relationship_scope = claim.scope ?? null;
+          row.scope_description = claim.scopeDescription ?? null;
+        }
         if (collection === "attributes") {
           Object.assign(row, { value_boolean: null, value_text: null, value_number: null, value_enum: null });
           row[`value_${definitions.get(claim.slug).valueType === "boolean" ? "boolean" : definitions.get(claim.slug).valueType}`] = claim.value;

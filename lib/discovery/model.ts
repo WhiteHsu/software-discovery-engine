@@ -1,5 +1,5 @@
 export type Source = { title: string; url: string | null; retrievedAt: string | null };
-export type Claim = { slug: string; name: string; description: string | null; scope?: string; value?: string | number | boolean | null; relationshipType?: string; verificationStatus: "verified" | "likely" | "unknown"; confidence: number | null; lastVerifiedAt: string | null; sources: Source[] };
+export type Claim = { slug: string; name: string; description: string | null; scope?: string | null; value?: string | number | boolean | null; relationshipType?: string; verificationStatus: "verified" | "likely" | "unknown"; confidence: number | null; lastVerifiedAt: string | null; sources: Source[] };
 export type ProductPage = { slug: string; name: string; description: string | null; websiteUrl: string | null; status: string; attributes: Claim[]; anchors: Claim[]; audiences: Claim[]; problems: Claim[]; routes: { slug: string; name: string; description: string | null }[] };
 export function safeUrl(value: string | null | undefined) {
   try { const url = new URL(value ?? ""); return ["https:", "http:"].includes(url.protocol) && !url.username && !url.password ? url.href : null; } catch { return null; }

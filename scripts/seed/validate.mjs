@@ -508,7 +508,12 @@ export function validateSeedBundle(
        * Product → Anchor
        */
       product.anchors.forEach(
-        (claim, claimIndex) => {
+          (claim, claimIndex) => {
+            const hasScope = claim.scope != null;
+            const hasDescription = claim.scopeDescription != null;
+            if (hasScope !== hasDescription || (hasScope && (typeof claim.scope !== "string" || !slugPattern.test(claim.scope) || !nonEmpty(claim.scopeDescription)))) {
+              errors.push(`products[${productIndex}].anchors[${claimIndex}] scope and scopeDescription must be a valid paired slug/text or both absent`);
+            }
           if (
             !anchorMap.has(
               claim.slug,
