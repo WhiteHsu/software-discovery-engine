@@ -8,13 +8,13 @@
 
 ## Current Work
 
-**Issue #4 — Product Discovery Pages: in progress (PR4.2 publication review)**
+**Issue #4 — Product Discovery Pages: in progress (PR4.2 deployed; acceptance review)**
 
-Issue #3 is closed (acceptance commit 0e40405). PR4.1 is pushed and deployed as b7568d1; the operator confirmed migration, all four public-read checks, 25 tests, lint/typecheck/build, local draft display and the expected unpublished production page. PR4.2 prepares a guarded Obsidian publication packet with explicit retained unknowns/likely fits and no route publication. Source desk-review and local transactional tests are complete; the owner approved only Obsidian publication and indexing on 2026-10-06. See seed/OBSIDIAN_PUBLICATION_REVIEW.md. No remote publication has been performed.
+Issue #3 is closed (acceptance commit 0e40405). PR4.1 is deployed as b7568d1. PR4.2 is pushed and deployed as c9dad66. On 2026-10-06 the operator confirmed rehearsal/apply success, all seven PR4.2 production SQL checks, the public Obsidian page without a preview banner, and unavailable Logseq/missing-product pages. The operator also confirmed 5 publication/model tests, lint, typecheck, build and diff checks. Only Obsidian is published; 29 other products and all three routes remain draft. See PRODUCT_PAGES_ACCEPTANCE.md for evidence and remaining acceptance checks.
 
 ## Next Work
 
-Owner approval is recorded in seed/OBSIDIAN_PUBLICATION_APPROVAL.md against the PR4.2 review hash. Apply the guarded rehearsal/publication SQL, run PR4.2_VERIFY.sql and confirm the public page. Production application remains pending operator confirmation. Do not treat the prior draft acceptance or successful tests as publication approval. Other products/routes remain draft. Keep #4 open while public-page validation and remaining product review proceed. Escape Route navigation belongs to #5; analytics instrumentation belongs to #8.
+Complete the remaining production acceptance checks for the shared product-page template: inspect the full page, outbound CTA/source links, mobile layout and public metadata. Do not require publication of all 29 drafts merely to close the page implementation issue; each future product retains its separate review requirement. Keep #4 open until its acceptance is confirmed. Escape Route navigation belongs to #5, homepage discovery navigation to #6, and analytics to #8.
 
 ## Completed Issues
 
