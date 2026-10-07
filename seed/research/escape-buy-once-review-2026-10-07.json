@@ -1,0 +1,84 @@
+{
+  "reviewType": "buy-once-documentary-review",
+  "date": "2026-10-07T00:00:00Z",
+  "humanPublicationApproval": false,
+  "reviewMethod": "Direct official purchasing/support statements; native licensed editions only. No audience or alternative relationship is promoted and no publication is approved.",
+  "claims": [
+    {
+      "product": "things",
+      "slug": "one-time-purchase",
+      "value": true,
+      "scope": "Things 3 App Store platform purchases",
+      "url": "https://culturedcode.com/things/support/articles/2803552/",
+      "before": null
+    },
+    {
+      "product": "things",
+      "slug": "no-subscription",
+      "value": true,
+      "scope": "Things 3 App Store platform purchases",
+      "url": "https://culturedcode.com/things/support/articles/2803552/",
+      "before": null
+    },
+    {
+      "product": "things",
+      "slug": "pricing-model",
+      "value": "Things 3 is bought once per platform: Mac, iPad, iPhone and Vision are separate purchases; Watch is included with iPhone. Things Cloud sync has no extra charge. Regional prices are set by the App Store.",
+      "scope": "Things 3 App Store platform purchases",
+      "url": "https://culturedcode.com/things/support/articles/2803552/",
+      "before": {
+        "value": "Paid App Store applications; regional prices must be checked in the App Store.",
+        "verificationStatus": "verified"
+      }
+    },
+    {
+      "product": "things",
+      "slug": "trade-off-summary",
+      "value": "Apple platforms only; Windows, Android, Linux and browser use are unsupported. Platforms are sold separately. Real-time shared to-do lists are unsupported. This review does not promise free future major versions.",
+      "scope": "Things 3 App Store platform purchases",
+      "url": "https://culturedcode.com/things/support/articles/2803552/",
+      "before": {
+        "value": "The listed applications cover Apple devices; Windows and Android support is not established by this source.",
+        "verificationStatus": "likely"
+      }
+    },
+    {
+      "product": "omnifocus",
+      "slug": "one-time-purchase",
+      "value": true,
+      "scope": "OmniFocus 4 native perpetual Standard/Pro license",
+      "url": "https://www.omnigroup.com/omnifocus/buy/",
+      "before": null
+    },
+    {
+      "product": "omnifocus",
+      "slug": "no-subscription",
+      "value": true,
+      "scope": "OmniFocus 4 native perpetual Standard/Pro license",
+      "url": "https://www.omnigroup.com/omnifocus/buy/",
+      "before": null
+    },
+    {
+      "product": "omnifocus",
+      "slug": "pricing-model",
+      "value": "OmniFocus 4 Standard or Pro perpetual license covers this major version and all 4.x updates across the listed Apple platforms. Future major upgrades are separate discounted purchases. Web access is a separate recurring subscription; an all-access subscription is also offered.",
+      "scope": "OmniFocus 4 native perpetual Standard/Pro license",
+      "url": "https://www.omnigroup.com/omnifocus/buy/",
+      "before": {
+        "value": "Paid purchase or subscription, following a 14-day trial; Web access should be checked against the selected plan.",
+        "verificationStatus": "verified"
+      }
+    },
+    {
+      "product": "omnifocus",
+      "slug": "trade-off-summary",
+      "value": "Scope is the native OmniFocus 4 perpetual edition, not its subscription plan. Web access needs a separate subscription, an existing native setup and an active connection. Future major versions are not included.",
+      "scope": "OmniFocus 4 native perpetual Standard/Pro license",
+      "url": "https://www.omnigroup.com/omnifocus/buy/",
+      "before": {
+        "value": "The Web edition requires an active connection; native applications listed here are for Apple devices.",
+        "verificationStatus": "verified"
+      }
+    }
+  ]
+}
