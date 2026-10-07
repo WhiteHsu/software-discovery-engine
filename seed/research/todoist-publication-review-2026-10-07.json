@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-10-07",
+  "publicationDecision": "pending",
+  "reviewType": "scoped-todoist-publication",
+  "bundleSha256": "d911219c4a42cdc48d5cde32f9ee3a49568fcd8b327a4303777f558056a74fdd",
+  "liveImportConfirmation": "Owner applied PR5.8 (877744f); all eight live verification checks true.",
+  "scope": "personal-task-project-organization",
+  "method": "Use the accepted PR5.6/PR5.8 evidence and recheck official purchasing terms. This is a bounded editorial classification, not hands-on testing or complete replacement.",
+  "sourceRecheckUrls": [
+    "https://culturedcode.com/things/support/articles/2803552/",
+    "https://www.omnigroup.com/omnifocus/buy/",
+    "https://www.2doapp.com/store/",
+    "https://www.todoist.com/features",
+    "https://culturedcode.com/things/",
+    "https://www.omnigroup.com/omnifocus/features/",
+    "https://www.2doapp.com/"
+  ],
+  "route": {
+    "slug": "todoist-alternatives-with-a-one-time-purchase",
+    "name": "Todoist Alternatives With a One-Time Purchase",
+    "description": "Personal task capture and project organization with paid native editions that can be bought once. Compare Things 3 platform purchases, OmniFocus 4 native perpetual licenses and the 2Do Mac direct-purchase license. Platforms, mobile purchases, optional Web subscriptions and future update entitlements differ. This is a bounded personal-workflow comparison; it does not guarantee team, platform or complete Todoist parity.",
+    "anchorSlug": "todoist",
+    "status": "draft",
+    "editoriallyApproved": false,
+    "lastVerifiedAt": "2026-10-07T00:00:00Z",
+    "products": [
+      {
+        "productSlug": "2do",
+        "position": 1,
+        "noveltyScore": 0,
+        "editorialNote": "Personal task capture and project organization only. Edition: 2Do Mac direct-purchase license. Mobile purchases and future update entitlement are separate; Todoist sync is not proof of independent replacement. No guarantee of team, platform or complete Todoist parity."
+      },
+      {
+        "productSlug": "omnifocus",
+        "position": 2,
+        "noveltyScore": 0,
+        "editorialNote": "Personal task capture and project organization only. Edition: OmniFocus 4 native Standard/Pro perpetual license. Native Apple edition only; Web subscription and future major upgrades are separate. No guarantee of team, platform or complete Todoist parity."
+      },
+      {
+        "productSlug": "things",
+        "position": 3,
+        "noveltyScore": 0,
+        "editorialNote": "Personal task capture and project organization only. Edition: Things 3 platform purchases. Apple-only applications; platforms sold separately; real-time shared lists unsupported. No guarantee of team, platform or complete Todoist parity."
+      }
+    ]
+  }
+}
