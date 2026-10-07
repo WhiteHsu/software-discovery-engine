@@ -8,7 +8,7 @@
 
 ## Current Work
 
-**Issue #5 — Escape Route Engine: in progress (PR5.5 scoped buy-once edition evidence)**
+**Issue #5 — Escape Route Engine: in progress (PR5.6 scoped Todoist draft alternatives)**
 
 Issue #4 was closed by the owner on 2026-10-07 after production acceptance. Application/publication commits b7568d1 and c9dad66; acceptance commits 80a8828 and 80e537e. The owner confirmed official CTA and pricing-source clicks in Chrome. Only Obsidian is published; other products and all routes retain their existing draft status.
 
@@ -22,9 +22,11 @@ Owner pushed PR5.3 as 1181e3f. PR5.4 adds an explicit dated source review and se
 
 Owner pushed PR5.4 as fdda4e6. PR5.5 adds eight official purchasing/edition facts for Things and OmniFocus to the separate local draft graph. Native perpetual licenses are distinguished from optional Web/subscription offers and future major upgrades. Alternative and audience judgments are unchanged; qualification counts do not increase. Twenty-one tests, lint and two local HTTP page checks passed. No SQL or publication. See ESCAPE_BUY_ONCE_REVIEW.md.
 
+Owner pushed PR5.5 as 077cd9c. After confirming the personal task/project scope, PR5.6 records dated two-sided official workflow evidence for Things, OmniFocus and 2Do. Exactly three bounded draft alternatives qualify; zero are published and the route is not approved. The engine rejects missing/widened scope, and the preview publication block remains visible with three drafts. Twenty-five tests, lint, typecheck, build and four local HTTP page checks passed. Scope persistence/public RPC projection must be handled before any future database/publication packet; no SQL or writes are included. See TODOIST_WORKFLOW_REVIEW.md.
+
 ## Next Work
 
-Review and complete route-specific taxonomy, candidate membership and evidence. Offline Notion and no-AI Notion each currently have only two qualified draft candidates; no route meets the three-published-candidate launch threshold. Then prepare separately reviewed route/product publication packets and validate production route behavior. #5 remains open; ten configured preview intents do not equal ten launch-ready published routes.
+Review and complete route-specific taxonomy, candidate membership and evidence. Offline Notion and no-AI Notion each currently have two qualified draft candidates; scoped Todoist buy-once has three qualified drafts. No route meets the three-published-candidate launch threshold. Then prepare separately reviewed route/product publication packets and validate production route behavior. #5 remains open; ten configured preview intents do not equal ten launch-ready published routes.
 
 ## Completed Issues
 

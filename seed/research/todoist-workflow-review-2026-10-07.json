@@ -1,0 +1,37 @@
+{
+  "reviewType": "scoped-todoist-workflow-review",
+  "date": "2026-10-07T00:00:00Z",
+  "scope": "personal-task-project-organization",
+  "publicationApproved": false,
+  "method": "Compare documented task capture and project organization on both official sites. Classify only this bounded workflow alternative; exclude team/platform/full replacement guarantees. The user confirmed this comparison scope, not publication or hands-on testing.",
+  "anchorSource": {
+    "url": "https://www.todoist.com/features",
+    "statement": "Official features document task capture and grouping tasks into projects; collaboration is separately described."
+  },
+  "candidates": [
+    {
+      "product": "things",
+      "url": "https://culturedcode.com/things/",
+      "edition": "Things 3 platform purchases",
+      "statement": "Official overview describes personal tasks, day planning and projects.",
+      "limits": "Apple-only applications; platforms sold separately; real-time shared lists unsupported.",
+      "beforeSha256": "536102cb7974237e5826bebe9b83c1af118ae5e6df5014608fca3d6d2809ff33"
+    },
+    {
+      "product": "omnifocus",
+      "url": "https://www.omnigroup.com/omnifocus/features/",
+      "edition": "OmniFocus 4 native Standard/Pro perpetual license",
+      "statement": "Official features describe capturing actions in Inbox and organizing them into projects.",
+      "limits": "Native Apple edition only; Web subscription and future major upgrades are separate.",
+      "beforeSha256": "ac19b248b146f1621234c47289f7f9f85ecf3a72072511a0407c4b3b9a26893d"
+    },
+    {
+      "product": "2do",
+      "url": "https://www.2doapp.com/",
+      "edition": "2Do Mac direct-purchase license",
+      "statement": "Official site documents native tasks, lists, checklists and projects with sub-tasks.",
+      "limits": "Mobile purchases and future update entitlement are separate; Todoist sync is not proof of independent replacement.",
+      "beforeSha256": "a060af040c1851392041d3958c1a089493e028d52517ba7726282cd7b0375271"
+    }
+  ]
+}

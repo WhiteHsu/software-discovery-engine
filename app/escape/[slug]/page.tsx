@@ -23,9 +23,9 @@ export default async function Escape({params}:Props){
         return <tr key={c.product.slug}><th scope="row"><Link href={`/software/${c.product.slug}`}>{c.product.name}</Link></th><td>{c.fit.filter(f=>typeof f.value==="boolean").map(f=>f.name).join(", ")}</td><td>{claimValue(attr("pricing-model")!)}</td><td>{claimValue(attr("trade-off-summary")!)}</td><td>{date(latestVerification(c.product))}</td></tr>;
       })}</tbody></table></div>:<p>No candidates currently meet the evidence requirements.</p>}
     </section>
-    {preview&&qualified.length<3&&<aside className={styles.notice}>Publication blocked: at least three qualified, published products are required.</aside>}
+    {preview&&(!p.published||qualified.filter(c=>c.product.status==="published").length<3)&&<aside className={styles.notice}>Publication blocked: editorial approval and at least three qualified, published products are required.</aside>}
     <section><h2>Why these products fit</h2>{(preview?p.candidates:qualified).map(c=><section className={styles.card} key={c.product.slug}><h3><Link href={`/software/${c.product.slug}`}>{c.product.name}</Link></h3><p>{c.product.description}</p>{c.eligible?<ul>{c.reasons.map(r=><li key={r}>{r}</li>)}</ul>:<><p>Not qualified for this route:</p><ul>{c.blockers.map(b=><li key={b}>{b}</li>)}</ul></>}
-      {c.fit.map(f=><div key={f.slug}><strong>{f.name}</strong><p>{f.value===undefined?f.relationshipType:claimValue(f)} · Checked {date(f.lastVerifiedAt)}</p>{f.sources.map((s,i)=>safeUrl(s.url)?<a key={i} href={safeUrl(s.url)!} target="_blank" rel="noopener noreferrer">{s.title} ↗ </a>:null)}</div>)}
+      {c.fit.map(f=><div key={f.slug}><strong>{f.name}</strong>{f.relationshipType&&f.description&&<p>{f.description}</p>}<p>{f.value===undefined?f.relationshipType:claimValue(f)} · Checked {date(f.lastVerifiedAt)}</p>{f.sources.map((s,i)=>safeUrl(s.url)?<a key={i} href={safeUrl(s.url)!} target="_blank" rel="noopener noreferrer">{s.title} ↗ </a>:null)}</div>)}
     </section>)}{!p.candidates.length&&<p>No curated candidates are available. Missing evidence is not treated as a passing constraint.</p>}</section>
     <footer>Source checks describe individual claims, not hands-on testing or complete replacement guarantees.</footer>
   </article>;

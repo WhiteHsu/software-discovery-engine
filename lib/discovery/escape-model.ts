@@ -4,7 +4,7 @@ export const escapeDefinitions = [
   {slug:"offline-notion-alternatives",name:"Offline Notion Alternatives",anchor:"notion",constraints:["works-offline"]},
   {slug:"notion-alternatives-without-ai",name:"Notion Alternatives Without AI",anchor:"notion",constraints:["ai-optional"]},
   {slug:"simple-notion-alternatives",name:"Simple Notion Alternatives",anchor:"notion",constraints:["focused-note-taking","no-database-required","minimal-setup"]},
-  {slug:"todoist-alternatives-with-a-one-time-purchase",name:"Todoist Alternatives With a One-Time Purchase",anchor:"todoist",constraints:["one-time-purchase"]},
+  {slug:"todoist-alternatives-with-a-one-time-purchase",name:"Todoist Alternatives With a One-Time Purchase",anchor:"todoist",relationshipScope:"personal-task-project-organization",constraints:["one-time-purchase"]},
   {slug:"privacy-friendly-grammarly-alternatives",name:"Privacy-Friendly Grammarly Alternatives",anchor:"grammarly",constraints:["privacy-friendly"]},
   {slug:"grammarly-alternatives-without-a-subscription",name:"Grammarly Alternatives Without a Subscription",anchor:"grammarly",constraints:["no-subscription"]},
   {slug:"photoshop-alternatives-without-a-subscription",name:"Photoshop Alternatives Without a Subscription",anchor:"photoshop",constraints:["no-subscription"]},
@@ -22,7 +22,9 @@ export function evaluateCandidate(def:EscapeDefinition,candidate:Candidate):Eval
   const p=candidate.product, blockers:string[]=[], fit:Claim[]=[];
   if(!safeUrl(p.websiteUrl))blockers.push("Official website is unavailable.");
   if(def.anchor){const a=p.anchors.find(c=>c.slug===def.anchor && c.relationshipType==="alternative");
-    if(!verified(a))blockers.push("The anchor alternative relationship is not verified with dated evidence.");else fit.push(a);}
+    if(!verified(a))blockers.push("The anchor alternative relationship is not verified with dated evidence.");
+    else if("relationshipScope" in def && a.scope!==def.relationshipScope)blockers.push("The alternative relationship must be reviewed for personal task and project organization.");
+    else fit.push(a);}
   if("audience" in def){const a=p.audiences.find(c=>c.slug===def.audience);if(!verified(a))blockers.push("The productivity audience fit is unconfirmed.");else fit.push(a);}
   for(const slug of def.constraints){const c=p.attributes.find(c=>c.slug===slug);if(!verified(c)||c.value!==true)blockers.push(`${slug}: verified positive evidence is required.`);else fit.push(c);}
   for(const slug of ["pricing-model","trade-off-summary"]){const c=p.attributes.find(c=>c.slug===slug);if(!verified(c)||typeof c.value!=="string"||!c.value.trim())blockers.push(`${slug}: meaningful sourced information is required.`);else fit.push(c);}
