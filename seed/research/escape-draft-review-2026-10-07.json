@@ -1,0 +1,39 @@
+{
+  "reviewType":"official-source-draft-review",
+  "date":"2026-10-07T00:00:00Z",
+  "proposalSha256":"edb8e018d57f4b8a443bdf6182887a7867fa47e778e439315fe3fe6abb47c1dd",
+  "humanPublicationApproval":false,
+  "reviewMethod":"Read the linked official licensing, workflow and FAQ pages. Direct source statements may become verified documentary claims. Editorial alternative/audience interpretations remain likely. These confidence labels describe evidence class, not hands-on product quality or human publication approval.",
+  "descriptions":{
+    "2do":"A task and project planner with a perpetual direct-purchase Mac edition; mobile applications and future updates have separate purchase terms.",
+    "gimp":"A free desktop image editor for photo retouching and composition, with workflow and interchange limits to check before replacing an existing tool.",
+    "krita":"A free digital painting application for illustration and related art workflows, with specific Photoshop interchange differences.",
+    "paint-net":"A Windows image editor with layers, adjustments and effects; the free Classic release and paid Store release use a proprietary license."
+  },
+  "decisions":[
+    {"product":"2do","kind":"attributes","slug":"one-time-purchase","status":"verified","reason":"Store FAQ explicitly states perpetual Mac use, 18-month update period and optional renewal."},
+    {"product":"2do","kind":"attributes","slug":"no-subscription","status":"verified","reason":"Direct-purchase channel explicitly requires no subscription; Setapp is outside this scope."},
+    {"product":"2do","kind":"attributes","slug":"pricing-model","status":"verified","reason":"Store lists separate Mac/iPhone/iPad purchases and continuing use after update entitlement ends."},
+    {"product":"2do","kind":"attributes","slug":"trade-off-summary","status":"verified","reason":"Store FAQ explicitly separates permanent usage rights from future updates and mobile purchases."},
+    {"product":"2do","kind":"audiences","slug":"productivity-users","status":"likely","reason":"Task/planning functions are documented; audience fit is an editorial interpretation, not an official factual taxonomy classification."},
+    {"product":"2do","kind":"anchors","slug":"todoist","status":"likely","reason":"Overlapping task workflows support provisional fit. Todoist integration does not prove a replacement relationship."},
+    {"product":"gimp","kind":"attributes","slug":"no-subscription","status":"verified","urls":["https://www.gimp.org/","https://www.gimp.org/about/"],"reason":"Official project describes its free desktop image editor and GPL distribution."},
+    {"product":"gimp","kind":"attributes","slug":"pricing-model","status":"verified","urls":["https://www.gimp.org/","https://www.gimp.org/about/"],"reason":"Official free distribution is documented; no paid-purchase classification is inferred."},
+    {"product":"gimp","kind":"attributes","slug":"trade-off-summary","status":"verified","reason":"FAQ describes external RAW plug-ins and CMYK import/export via RGB storage rather than a CMYK core image format."},
+    {"product":"gimp","kind":"anchors","slug":"photoshop","status":"likely","reason":"Official FAQ discusses Photoshop comparisons; exact retouching/composition replacement fit remains editorial and scoped."},
+    {"product":"krita","kind":"attributes","slug":"no-subscription","status":"verified","urls":["https://krita.org/en/download/","https://krita.org/en/about/license/"],"reason":"Official download/license pages distinguish the free GPL application from optional paid store distribution."},
+    {"product":"krita","kind":"attributes","slug":"pricing-model","status":"verified","value":"Free official GPL application; optional paid store distributions support development and automatic updates.","urls":["https://krita.org/en/download/","https://krita.org/en/about/license/"],"reason":"Current download page includes additional paid store channels, so avoid an exhaustive two-store list."},
+    {"product":"krita","kind":"attributes","slug":"trade-off-summary","status":"verified","value":"Krita 5.3 can load PSD text as editable text or as a paint layer after a prompt. Clipping uses inherit alpha; indexed-color image editing is not supported, although some indexed formats can be exported.","urls":["https://docs.krita.org/en/KritaFAQ.html"],"reason":"Replace version-sensitive historical migration-guide claims with the current FAQ's concrete limitations. Do not claim PSD text is universally uneditable."},
+    {"product":"krita","kind":"anchors","slug":"photoshop","status":"likely","urls":["https://docs.krita.org/en/KritaFAQ.html","https://docs.krita.org/en/user_manual/introduction_from_other_software/introduction_from_photoshop.html"],"reason":"Painting fit remains provisional. Migration introduction cites old product versions and cannot prove all current differences."},
+    {"product":"paint-net","kind":"attributes","slug":"no-subscription","status":"verified","urls":["https://paint.net/license.html","https://paint.net/download.html"],"reason":"Official Classic license and download page establish free use, distinct from paid Store distribution."},
+    {"product":"paint-net","kind":"attributes","slug":"pricing-model","status":"verified","urls":["https://paint.net/license.html"],"reason":"License defines free Classic and paid Store channels and prohibits modifying the application."},
+    {"product":"paint-net","kind":"attributes","slug":"trade-off-summary","status":"verified","value":"Current download requirements are Windows 11, Windows 10 21H2 or newer, or Windows Server 2022, plus specified 64-bit CPU/GPU requirements. The proprietary application license prohibits modification; additional formats may require plugins.","urls":["https://paint.net/download.html","https://paint.net/license.html","https://paint.net/features.html"],"reason":"Add documented platform and plugin scope instead of presenting only licensing restrictions as a user trade-off."},
+    {"product":"paint-net","kind":"anchors","slug":"photoshop","status":"likely","urls":["https://paint.net/features.html"],"reason":"Layers and adjustments establish workflow overlap; full Photoshop replacement or built-in PSD support is not asserted."}
+  ],
+  "platformClaims":[
+    {"product":"2do","value":"Mac direct-purchase edition; iPhone and iPad apps are sold separately. Store lists macOS 13+, iOS 18.6+ and iPadOS 18.6+ for these offers.","urls":["https://www.2doapp.com/store/"]},
+    {"product":"gimp","value":"GNU/Linux, macOS and Windows official desktop application.","urls":["https://www.gimp.org/"]},
+    {"product":"krita","value":"Windows, macOS and Linux desktop downloads; Android builds are listed separately. Official download page says Apple iPhone and iPad are unsupported.","urls":["https://krita.org/en/download/"]},
+    {"product":"paint-net","value":"Windows 11; Windows 10 21H2 or newer; Windows Server 2022. Check official 64-bit CPU and graphics requirements.","urls":["https://paint.net/download.html"]}
+  ]
+}

@@ -4,13 +4,15 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import {createClient} from "@/lib/supabase/server";
 import type {ProductPage} from "./model";
+import {previewFiles} from "./preview-files";
 import {escapeDefinitions,rankCandidates,publishable,type EscapePage,type Candidate} from "./escape-model";
 export const escapePreview=()=>process.env.NODE_ENV==="development"&&process.env.PRODUCT_LOCAL_PREVIEW==="true";
 export const getEscape=cache(async(slug:string):Promise<EscapePage|null>=>{
   const def=escapeDefinitions.find(d=>d.slug===slug);if(!def)return null;
   if(escapePreview()){
-    const pages:ProductPage[]=JSON.parse(await fs.readFile(path.join(process.cwd(),".seed-output/product-preview.json"),"utf8"));
-    const bundle=JSON.parse(await fs.readFile(path.join(process.cwd(),".seed-output/editorial-fit/reviewed-five-ecosystems.json"),"utf8"));
+    const files=previewFiles(process.env)!;
+    const pages:ProductPage[]=JSON.parse(await fs.readFile(path.join(process.cwd(),files.products),"utf8"));
+    const bundle=JSON.parse(await fs.readFile(path.join(process.cwd(),files.bundle),"utf8"));
     const route=bundle.escapeRoutes.find((r:{slug:string})=>r.slug===slug);
     const members: {productSlug:string;noveltyScore?:number}[]=route?.products??[];
     const candidates=members.flatMap(m=>{const p=pages.find(p=>p.slug===m.productSlug);return p?[{product:p,noveltyScore:m.noveltyScore}]:[];});
