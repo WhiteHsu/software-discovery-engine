@@ -1,6 +1,6 @@
 # Project Status
 
-**Last Updated:** 2026-10-06
+**Last Updated:** 2026-10-07
 
 ## Current Phase
 
@@ -8,15 +8,19 @@
 
 ## Current Work
 
-**Issue #4 — Product Discovery Pages: in progress (PR4.2 deployed; acceptance review)**
+**Issue #5 — Escape Route Engine: in progress (PR5.1 engine and local preview)**
 
-Issue #3 is closed (acceptance commit 0e40405). PR4.1 is deployed as b7568d1. PR4.2 is pushed and deployed as c9dad66. On 2026-10-06 the operator confirmed rehearsal/apply success, all seven PR4.2 production SQL checks, the public Obsidian page without a preview banner, and unavailable Logseq/missing-product pages. The operator also confirmed 5 publication/model tests, lint, typecheck, build and diff checks. Only Obsidian is published; 29 other products and all three routes remain draft. See PRODUCT_PAGES_ACCEPTANCE.md for evidence and remaining acceptance checks.
+Issue #4 was closed by the owner on 2026-10-07 after production acceptance. Application/publication commits b7568d1 and c9dad66; acceptance commits 80a8828 and 80e537e. The owner confirmed official CTA and pricing-source clicks in Chrome. Only Obsidian is published; other products and all routes retain their existing draft status.
+
+PR5.1 implements ten validation intent definitions, structured evidence qualification, bounded novelty ranking, route comparison pages and canonical product navigation. Local previews expose explicit qualification blockers. No database writes or publication are included. See ESCAPE_ROUTES.md and the generated readiness report.
 
 ## Next Work
 
-Complete the remaining production acceptance checks for the shared product-page template: inspect the full page, outbound CTA/source links, mobile layout and public metadata. Do not require publication of all 29 drafts merely to close the page implementation issue; each future product retains its separate review requirement. Keep #4 open until its acceptance is confirmed. Escape Route navigation belongs to #5, homepage discovery navigation to #6, and analytics to #8.
+Review and complete route-specific taxonomy, candidate membership and evidence. Offline Notion and no-AI Notion each currently have only two qualified draft candidates; no route meets the three-published-candidate launch threshold. Then prepare separately reviewed route/product publication packets and validate production route behavior. #5 remains open; ten configured preview intents do not equal ten launch-ready published routes.
 
 ## Completed Issues
+
+- [x] #4 Product Discovery Pages — owner closed; production accepted
 
 - [x] #1 Foundation & Core Infrastructure
 
@@ -28,7 +32,7 @@ Complete the remaining production acceptance checks for the shared product-page 
 - [x] #1 Foundation & Core Infrastructure
 - [x] #2 Discovery Graph Data Model
 - [x] #3 Seed Data & Evidence Pipeline — draft dataset accepted; GitHub closed
-- [ ] #4 Product Discovery Pages
+- [x] #4 Product Discovery Pages
 - [ ] #5 Escape Route Engine
 - [ ] #6 Homepage & Discovery Navigation
 - [ ] #7 Natural-Language Discovery
