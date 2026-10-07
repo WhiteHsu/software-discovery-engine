@@ -1,0 +1,58 @@
+{
+  "version":1,
+  "date":"2026-10-07",
+  "status":"research-only",
+  "publicationApproved":false,
+  "products":[
+    {
+      "slug":"2do","name":"2Do","websiteUrl":"https://www.2doapp.com/","status":"draft","reviewStatus":"pending",
+      "scope":"Direct-purchase 2Do Mac; iPhone and iPad are separate purchases. Setapp is a different subscription channel.",
+      "routeSlugs":["todoist-alternatives-with-a-one-time-purchase","productivity-apps-you-can-buy-once"],
+      "claims":[
+        {"kind":"attributes","slug":"one-time-purchase","proposedValue":true,"basis":"direct-source","sourceUrl":"https://www.2doapp.com/store/","summary":"Mac purchase is perpetual; updates are included for 18 months. The last covered version remains usable without renewal.","reviewStatus":"pending"},
+        {"kind":"attributes","slug":"no-subscription","proposedValue":true,"basis":"direct-source","sourceUrl":"https://www.2doapp.com/store/","summary":"Direct purchase does not require subscription; future updates after the included period require optional renewal.","reviewStatus":"pending"},
+        {"kind":"attributes","slug":"pricing-model","proposedValue":"Perpetual Mac purchase with 18 months of updates; optional renewal for later updates. iPhone and iPad applications are sold separately.","basis":"direct-source","sourceUrl":"https://www.2doapp.com/store/","summary":"Store license FAQ distinguishes continuing use from the update entitlement and separate mobile applications.","reviewStatus":"pending"},
+        {"kind":"attributes","slug":"trade-off-summary","proposedValue":"Mac license and mobile apps are separate; after the included update period, later features, fixes and compatibility updates require renewal.","basis":"direct-source","sourceUrl":"https://www.2doapp.com/store/","summary":"Perpetual use does not include all future updates or every platform under one purchase.","reviewStatus":"pending"},
+        {"kind":"audiences","slug":"productivity-users","proposedValue":true,"basis":"editorial-inference","sourceUrl":"https://www.2doapp.com/","summary":"Documented tasks, projects and planning support a productivity-workflow fit; reviewer must approve the audience classification.","reviewStatus":"pending"},
+        {"kind":"anchors","slug":"todoist","proposedValue":true,"basis":"editorial-inference","sourceUrl":"https://www.2doapp.com/","summary":"Task capture, lists and projects overlap with personal task planning. Todoist sync is documented but is not itself evidence of complete replacement.","reviewStatus":"pending"}
+      ],
+      "unresolved":["Approve a scoped Todoist alternative relationship independently of its integration.","Confirm purchase-channel and platform scope against the exact edition selected for publication.","Check supported current workflows rather than promising free future compatibility updates."]
+    },
+    {
+      "slug":"gimp","name":"GIMP","websiteUrl":"https://www.gimp.org/","status":"draft","reviewStatus":"pending",
+      "scope":"Official desktop GIMP; unrelated similarly named mobile apps and third-party bundles are excluded.",
+      "routeSlugs":["photoshop-alternatives-without-a-subscription"],
+      "claims":[
+        {"kind":"attributes","slug":"no-subscription","proposedValue":true,"basis":"direct-source","sourceUrl":"https://www.gimp.org/about/","summary":"Official GIMP is freely distributed GNU GPL software for image manipulation.","reviewStatus":"pending"},
+        {"kind":"attributes","slug":"pricing-model","proposedValue":"Free official desktop software under GNU GPL; not a paid one-time license.","basis":"direct-source","sourceUrl":"https://www.gimp.org/about/","summary":"The official project distributes free software for retouching and image composition.","reviewStatus":"pending"},
+        {"kind":"attributes","slug":"trade-off-summary","proposedValue":"Camera RAW processing uses external plug-ins; CMYK handling is not a full native CMYK editing workflow according to the FAQ.","basis":"direct-source","sourceUrl":"https://www.gimp.org/docs/userfaq.html","summary":"FAQ describes RAW plug-ins and CMYK import/export through RGB storage, without a timeline for CMYK as a core image format.","reviewStatus":"pending"},
+        {"kind":"anchors","slug":"photoshop","proposedValue":true,"basis":"editorial-inference","sourceUrl":"https://www.gimp.org/docs/userfaq.html","summary":"FAQ explicitly discusses Photoshop replacement/comparison, but scoped photo-retouching and composition fit still needs editorial review; no feature-parity guarantee.","reviewStatus":"pending"}
+      ],
+      "unresolved":["Confirm supported platforms/version from official download documentation.","Approve scoped retouching/composition alternative relationship.","Recheck PSD interchange and print-workflow limits for the chosen release."]
+    },
+    {
+      "slug":"krita","name":"Krita","websiteUrl":"https://krita.org/","status":"draft","reviewStatus":"pending",
+      "scope":"Official GPL application for digital painting; store distribution can be paid, while artwork belongs to its creator.",
+      "routeSlugs":["photoshop-alternatives-without-a-subscription"],
+      "claims":[
+        {"kind":"attributes","slug":"no-subscription","proposedValue":true,"basis":"direct-source","sourceUrl":"https://krita.org/en/about/license/","summary":"GPL permits use for any purpose, including commercial artwork; official free distribution is distinct from paid store builds.","reviewStatus":"pending"},
+        {"kind":"attributes","slug":"pricing-model","proposedValue":"Free GPL application; optional paid Microsoft Store and Steam distribution supports development.","basis":"direct-source","sourceUrl":"https://krita.org/en/about/license/","summary":"License page distinguishes free software rights from paid store distribution.","reviewStatus":"pending"},
+        {"kind":"attributes","slug":"trade-off-summary","proposedValue":"Photoshop workflows do not map directly: group compositing, masks and smart-layer equivalents use different mechanisms; not all layer-style functionality is supported.","basis":"direct-source","sourceUrl":"https://docs.krita.org/en/user_manual/introduction_from_other_software/introduction_from_photoshop.html","summary":"Official migration manual documents specific layer and tool differences. It does not establish complete PSD fidelity or general Photoshop parity.","reviewStatus":"pending"},
+        {"kind":"anchors","slug":"photoshop","proposedValue":true,"basis":"editorial-inference","sourceUrl":"https://docs.krita.org/en/user_manual/introduction_from_other_software/introduction_from_photoshop.html","summary":"Official Photoshop migration guide supports a painting-oriented comparison; reviewer must approve the route's stated editing scope.","reviewStatus":"pending"}
+      ],
+      "unresolved":["Keep digital painting positioning explicit rather than presenting universal photo-editing replacement.","Confirm current official download platforms and exact version.","Review PSD interchange and workflow limitations for the route."]
+    },
+    {
+      "slug":"paint-net","name":"Paint.NET","websiteUrl":"https://paint.net/","status":"draft","reviewStatus":"pending",
+      "scope":"Classic desktop release; proprietary freeware. Paid Microsoft Store distribution is a separate channel.",
+      "routeSlugs":["photoshop-alternatives-without-a-subscription"],
+      "claims":[
+        {"kind":"attributes","slug":"no-subscription","proposedValue":true,"basis":"direct-source","sourceUrl":"https://www.getpaint.net/license.html","summary":"Classic release is free for personal and organizational use; paid Store release has the same functionality with automatic updating.","reviewStatus":"pending"},
+        {"kind":"attributes","slug":"pricing-model","proposedValue":"Classic release is free; Microsoft Store release is paid. This freeware license is not open source.","basis":"direct-source","sourceUrl":"https://www.getpaint.net/license.html","summary":"License permits use but prohibits modifying the application; do not infer GPL rights from free pricing.","reviewStatus":"pending"},
+        {"kind":"attributes","slug":"trade-off-summary","proposedValue":"The application cannot be modified under its license; redistribution of plugins requires their authors' permission.","basis":"direct-source","sourceUrl":"https://www.getpaint.net/license.html","summary":"Official license distinguishes application redistribution and plugin permissions.","reviewStatus":"pending"},
+        {"kind":"anchors","slug":"photoshop","proposedValue":true,"basis":"editorial-inference","sourceUrl":"https://paint.net/features.html","summary":"Official layers, adjustments and effects support overlap with basic image/photo editing. Scope is narrower than complete Photoshop replacement.","reviewStatus":"pending"}
+      ],
+      "unresolved":["Confirm supported Windows versions from current official requirements.","Review native format/PSD and plugin dependencies before promising interchange.","Approve basic layered-editing fit and add a user-facing workflow limitation beyond licensing restrictions."]
+    }
+  ]
+}
