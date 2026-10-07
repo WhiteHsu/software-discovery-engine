@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-10-07",
+  "reviewType": "selective-draft-import",
+  "humanPublicationApproval": false,
+  "baselineSha256": "97d08790bcdecd078c0d45c1be9daddfb3a7363de5f32341a840536313b64195",
+  "selectedSha256": "9fb68d4a52c5c9987cdc09a914a2db9547f124ed6f222d89938170483bf0e532",
+  "productSlugs": [
+    "things",
+    "omnifocus",
+    "2do"
+  ],
+  "scope": "personal-task-project-organization",
+  "requiredMigration": "202610070001_anchor_relationship_scope.sql",
+  "routeImport": false,
+  "evidencePolicy": "Add reviewed links; retain all prior/manual evidence links.",
+  "liveMigrationConfirmation": "Owner screenshots: PR5.7 migration success and seven read-only checks true.",
+  "publicationPolicy": "All three targets remain draft; Obsidian and all routes are untouched."
+}

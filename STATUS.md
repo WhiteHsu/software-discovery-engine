@@ -8,7 +8,7 @@
 
 ## Current Work
 
-**Issue #5 — Escape Route Engine: in progress (PR5.7 prepared scope persistence/RPC support)**
+**Issue #5 — Escape Route Engine: in progress (PR5.7 live; PR5.8 selective draft import prepared)**
 
 Issue #4 was closed by the owner on 2026-10-07 after production acceptance. Application/publication commits b7568d1 and c9dad66; acceptance commits 80a8828 and 80e537e. The owner confirmed official CTA and pricing-source clicks in Chrome. Only Obsidian is published; other products and all routes retain their existing draft status.
 
@@ -24,7 +24,9 @@ Owner pushed PR5.4 as fdda4e6. PR5.5 adds eight official purchasing/edition fact
 
 Owner pushed PR5.5 as 077cd9c. After confirming the personal task/project scope, PR5.6 records dated two-sided official workflow evidence for Things, OmniFocus and 2Do. Exactly three bounded draft alternatives qualify; zero are published and the route is not approved. The engine rejects missing/widened scope, and the preview publication block remains visible with three drafts. Twenty-five tests, lint, typecheck, build and four local HTTP page checks passed. Scope persistence/public RPC projection must be handled before any future database/publication packet; no SQL or writes are included. See TODOIST_WORKFLOW_REVIEW.md.
 
-Owner pushed PR5.6 as 1e1632c. PR5.7 prepares paired relationship scope columns, seed validation/import projection and the published-product RPC projection. Existing unscoped data uses nulls and the prior description fallback. All 52 tests, lint/typecheck and isolated PostgreSQL-compatible migration/import/RPC checks passed. The migration has NOT been applied to live Supabase; no graph import or publication occurred. See ANCHOR_SCOPE_STORAGE.md and the read-only PR5.7 verification SQL.
+Owner pushed PR5.6 as 1e1632c and PR5.7 as f4702be. PR5.7 adds paired relationship scope columns, seed validation/import projection and the published-product RPC projection. Existing unscoped data uses nulls and the prior description fallback. All 52 tests, lint/typecheck and isolated PostgreSQL-compatible migration/import/RPC checks passed. The owner applied the live Supabase migration on 2026-10-07 and supplied screenshots showing success and all seven PR5.7 read-only checks true. No graph import or publication occurred in PR5.7. See ANCHOR_SCOPE_STORAGE.md.
+
+PR5.8 prepares a fingerprint-pinned selective draft import: eight purchase/limit attribute claims and two scoped Todoist anchors for Things/OmniFocus, plus new draft 2Do with seven claims. No routes are imported. Omitted relationships, prior evidence links, existing IDs and published Obsidian are preserved. Database guards reject baseline drift and refuse to reset a later published product to draft. All 55 tests, lint/typecheck and seven isolated PostgreSQL-compatible checks passed, including rehearsal rollback, atomic rejection, repeat idempotency, eight read-only verification checks and anonymous RPC isolation. The PR5.8 data SQL has NOT been applied to live Supabase. See TODOIST_DRAFT_IMPORT.md.
 
 ## Next Work
 
