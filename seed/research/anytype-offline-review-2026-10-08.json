@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "reviewType": "anytype-offline-documentary-review",
+  "date": "2026-10-08T00:00:00Z",
+  "publicationApproved": false,
+  "scope": "personal-offline-note-object-organization",
+  "beforeSha256": "2dbc9da2da63e3590b6035b4634e30536a68c068f4595352fda5846352ab3a3c",
+  "method": "Compare official Anytype personal spaces/offline documentation with Notion page editing, and read vendor migration limitations. Documentary attributes are distinct from the bounded editorial alternative judgment. No hands-on test or publication approval.",
+  "sources": [
+    {
+      "id": "overview",
+      "url": "https://doc.anytype.io/anytype/getting-started/readme",
+      "title": "Anytype documentation — local-first personal spaces",
+      "statement": "Vendor describes device-first creation, fully offline work and personal spaces for diaries, tasks and documents.",
+      "limitations": "This does not establish complete Notion feature parity, no-account operation or privacy certification."
+    },
+    {
+      "id": "localOnly",
+      "url": "https://doc.anytype.io/anytype/data/sync-and-backup/local-only",
+      "title": "Anytype documentation — local-first versus local-only",
+      "statement": "Standard local-first data works offline and reconnects for encrypted sync; optional local-only disables backup-node sync.",
+      "limitations": "Local-only is experimental; backup/export is manual and cross-device sync is limited to the local network."
+    },
+    {
+      "id": "membership",
+      "url": "https://raw.githubusercontent.com/anyproto/docs/main/resources/memberships/README.md",
+      "title": "Anytype official documentation repository — memberships",
+      "statement": "The official repository documents a Free tier and paid plans expanding storage, shared channels and ANY ID entitlements.",
+      "limitations": "Exact prices/limits must be checked live; self-hosted limits and paid membership renewal consequences are separate."
+    },
+    {
+      "id": "migration",
+      "url": "https://raw.githubusercontent.com/anyproto/docs/main/data/import-and-export/migrate-from-notion.md",
+      "title": "Anytype official documentation repository — Notion migration limits",
+      "statement": "The vendor documents a Notion import, while stating not all Notion features/data are supported.",
+      "limitations": "Mentions and date ranges can become text; formulas/summary results import as values, and some links/files may need repair. Import requires internet/API access; it is not an offline migration promise."
+    },
+    {
+      "id": "notion",
+      "url": "https://www.notion.com/en-gb/help/use-pages-offline",
+      "title": "Notion documentation — offline page use",
+      "statement": "All plans support creating pages and editing downloaded pages in desktop/mobile apps; offline availability is prepared per device/page.",
+      "limitations": "Browser access is excluded, subpages need separate preparation and some network-dependent blocks do not work offline. Do not describe Notion as lacking offline support."
+    }
+  ],
+  "claims": [
+    {
+      "slug": "works-offline",
+      "value": true,
+      "sources": [
+        "overview",
+        "localOnly"
+      ]
+    },
+    {
+      "slug": "pricing-model",
+      "value": "A Free tier and paid membership plans are available. Paid plans expand remote storage, shared-channel and ANY ID entitlements. Check current plan prices and limits; self-hosted configurations and renewals have separate terms.",
+      "sources": [
+        "membership"
+      ]
+    },
+    {
+      "slug": "trade-off-summary",
+      "value": "Scope is personal notes and objects stored on the device, not full Notion parity. Normal local-first mode works offline and syncs when connected. Optional local-only mode is experimental and requires manual backups, with multi-device sync limited to the local network. Notion imports can lose feature semantics, links or files and need review.",
+      "sources": [
+        "localOnly",
+        "migration"
+      ]
+    }
+  ],
+  "alternativeStatement": "Both products document personal content creation/organization. Anytype personal spaces and local objects provide a bounded offline note/document workflow; vendor migration guidance explicitly excludes full feature parity.",
+  "scopeDescription": "Personal offline note and object organization only. Anytype local-first personal spaces after initial setup; synchronization and Notion import need connectivity. No guarantee of full Notion feature, team or migration parity. Local-only is a separate experimental mode with manual backup responsibility.",
+  "routeDescription": "Compare offline-capable alternatives for personal notes and locally stored content. Notion also supports offline pages in desktop/mobile apps, with per-page and per-device preparation and feature limits. This comparison concerns different offline workflows, not a claim that Notion cannot work offline. Sync, collaboration, initial setup and migration have separate requirements. Draft route; publication is not approved."
+}

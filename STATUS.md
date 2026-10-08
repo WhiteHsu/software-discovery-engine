@@ -1,6 +1,6 @@
 # Project Status
 
-**Last Updated:** 2026-10-07
+**Last Updated:** 2026-10-08
 
 ## Current Phase
 
@@ -8,9 +8,9 @@
 
 ## Current Work
 
-**Issue #5 — Escape Route Engine: in progress (PR5.8 live; PR5.9 scoped publication review prepared)**
+**Issue #5 — Escape Route Engine: in progress (PR5.9 live; PR5.10 Anytype offline draft review prepared)**
 
-Issue #4 was closed by the owner on 2026-10-07 after production acceptance. Application/publication commits b7568d1 and c9dad66; acceptance commits 80a8828 and 80e537e. The owner confirmed official CTA and pricing-source clicks in Chrome. Only Obsidian is published; other products and all routes retain their existing draft status.
+Issue #4 was closed by the owner on 2026-10-07 after production acceptance. Application/publication commits b7568d1 and c9dad66; acceptance commits 80a8828 and 80e537e. The owner confirmed official CTA and pricing-source clicks in Chrome. At that acceptance milestone only Obsidian was published. PR5.9 subsequently published three additional products and one route, as recorded below.
 
 PR5.1 implements ten validation intent definitions, structured evidence qualification, bounded novelty ranking, route comparison pages and canonical product navigation. Local previews expose explicit qualification blockers. No database writes or publication are included. See ESCAPE_ROUTES.md and the generated readiness report.
 
@@ -28,11 +28,13 @@ Owner pushed PR5.6 as 1e1632c and PR5.7 as f4702be. PR5.7 adds paired relationsh
 
 Owner pushed PR5.8 as 877744f. The selective import applies eight purchase/limit attribute claims and two scoped Todoist anchors for Things/OmniFocus, plus new draft 2Do with seven claims. No routes were imported. Omitted relationships, prior evidence links, existing IDs and published Obsidian are preserved. Database guards reject baseline drift and refuse to reset a later published product to draft. All 55 tests, lint/typecheck and isolated PostgreSQL-compatible checks passed. On 2026-10-07 the owner supplied live rehearsal/apply success screenshots and confirmed all eight PR5.8 verification checks true. The three products remain draft and all routes remain unpublished. See TODOIST_DRAFT_IMPORT.md.
 
-PR5.9 prepares publication review for Things, OmniFocus, 2Do and exactly one Todoist buy-once route, bounded to personal task capture/project organization. Official purchasing and workflow sources were rechecked on 2026-10-07. The complete product graph and retained historical evidence sets are guarded; lifecycle, relationship/evidence drift and unrelated approved-route exposure abort atomically. Ranking uses zero novelty boost. All 58 tests, lint/typecheck and seven isolated PostgreSQL-compatible checks passed, including ten shipped verification checks and anonymous route/RPC/engine qualification. Owner publication approval is PENDING; no live publication SQL has been run. See TODOIST_PUBLICATION_REVIEW.md and TODOIST_PUBLICATION_CONTENT.md. After publication acceptance this would be one of ten required routes; #5 stays open.
+PR5.9 prepares publication review for Things, OmniFocus, 2Do and exactly one Todoist buy-once route, bounded to personal task capture/project organization. Official purchasing and workflow sources were rechecked on 2026-10-07. The complete product graph and retained historical evidence sets are guarded; lifecycle, relationship/evidence drift and unrelated approved-route exposure abort atomically. Ranking uses zero novelty boost. All 58 tests, lint/typecheck and seven isolated PostgreSQL-compatible checks passed, including ten shipped verification checks and anonymous route/RPC/engine qualification. Owner pushed f222131, explicitly approved publication, and executed rehearsal/apply on 2026-10-07. All ten live verification checks passed. On 2026-10-08 the owner confirmed all four product/route pages open; CTA/source clicks and bidirectional navigation for these new pages have not been separately confirmed. See TODOIST_PUBLICATION_REVIEW.md and TODOIST_PUBLICATION_CONTENT.md. Production now has four published products and one of ten required published routes; #5 stays open.
 
 ## Next Work
 
-Review and complete route-specific taxonomy, candidate membership and evidence. Offline Notion and no-AI Notion each currently have two qualified draft candidates; scoped Todoist buy-once has three qualified drafts. No route meets the three-published-candidate launch threshold. Then prepare separately reviewed route/product publication packets and validate production route behavior. #5 remains open; ten configured preview intents do not equal ten launch-ready published routes.
+PR5.10 adds five dated primary sources, three Anytype attribute updates and one bounded Notion alternative claim to the separate local draft graph. Offline Notion reaches three qualified draft candidates; no SQL or publication is included. Notion itself supports offline pages, so the comparison describes workflow and feature limits. All 61 tests, lint and typecheck passed. See ANYTYPE_OFFLINE_REVIEW.md.
+
+Refresh AFFiNE/AppFlowy edition-specific evidence and align all three offline comparison scopes before preparing a selective import/publication packet. Preserve the four live products and the approved Todoist route. One published route does not complete Issue #5.
 
 ## Completed Issues
 
