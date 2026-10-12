@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-10-12T00:00:00Z",
+  "publicationDecision": "pending",
+  "bundleSha256": "a674eaa00bc8e668f77f3adc6c4577418bd76e52b7f6aacbaa62c6cfac898e8e",
+  "liveConfirmation": {
+    "commit": "ee1c621",
+    "checks": 10,
+    "passed": true
+  },
+  "scope": "desktop-raster-layers-painting-basic-adjustment",
+  "method": "Dated primary-source documentary review; alternative fit is editorial inference, without hands-on PSD, RAW or print testing.",
+  "recheckedSourceUrls": [
+    "https://www.gimp.org/docs/userfaq.html",
+    "https://krita.org/en/download/",
+    "https://paint.net/license.html"
+  ],
+  "route": {
+    "slug": "photoshop-alternatives-without-a-subscription",
+    "name": "Photoshop Alternatives Without a Subscription",
+    "description": "Desktop raster layers, painting and basic image adjustment without a required software subscription. Compare free official GIMP and Krita desktop releases and Paint.NET Classic; optional paid store distributions have separate terms. PSD exchange, camera RAW processing, print workflows and complete Photoshop feature parity are not guaranteed.",
+    "anchorSlug": "photoshop",
+    "status": "draft",
+    "editoriallyApproved": false,
+    "lastVerifiedAt": "2026-10-12T00:00:00Z",
+    "products": [
+      {
+        "productSlug": "gimp",
+        "position": 1,
+        "noveltyScore": 0,
+        "editorialNote": "Desktop raster layers, painting and basic image adjustment only. GIMP is reviewed for retouching and layered composition; RAW processing uses external plug-ins and native CMYK editing is outside the reviewed scope. No guarantee of full Photoshop, PSD, print-production, automation, AI or team-workflow parity."
+      },
+      {
+        "productSlug": "krita",
+        "position": 2,
+        "noveltyScore": 0,
+        "editorialNote": "Desktop raster layers, painting and basic image adjustment only. Krita is reviewed primarily for illustration and digital painting, not comprehensive photographic retouching. PSD and text/layer semantics need review. No guarantee of full Photoshop, print-production, automation, AI or team-workflow parity."
+      },
+      {
+        "productSlug": "paint-net",
+        "position": 3,
+        "noveltyScore": 0,
+        "editorialNote": "Desktop raster layers, painting and basic image adjustment only. Paint.NET is reviewed for Windows layers, selections, drawing and color adjustments. PDN is its native layered format; plugin formats do not prove PSD compatibility. No guarantee of full Photoshop, print-production, RAW, automation, AI or team-workflow parity."
+      }
+    ]
+  }
+}

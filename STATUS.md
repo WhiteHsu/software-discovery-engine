@@ -8,7 +8,7 @@
 
 ## Current Work
 
-**Issue #5 — Escape Route Engine: in progress (PR5.14 deployed and locally accepted; PR5.15 raster draft import prepared)**
+**Issue #5 — Escape Route Engine: in progress (PR5.15 live draft import accepted; PR5.16 raster publication review prepared)**
 
 Issue #4 was closed by the owner on 2026-10-07 after production acceptance. Application/publication commits b7568d1 and c9dad66; acceptance commits 80a8828 and 80e537e. The owner confirmed official CTA and pricing-source clicks in Chrome. At that acceptance milestone only Obsidian was published. PR5.9 subsequently published three additional products and one route, as recorded below.
 
@@ -50,9 +50,9 @@ PR5.14 reviews GIMP, Krita and Paint.NET for desktop raster layers, painting and
 
 Owner pushed PR5.14 as 189bef9 on 2026-10-12 after 75 tests, lint/typecheck/build and diff checks passed. Screenshots confirm the local route and three draft product pages, comparison candidates, three official Visit destinations, and one source-link sample per product (GIMP official homepage, Krita download, Paint.NET requirements). Vercel Ready/Production and GitHub Production now were confirmed. These samples validate access, not exhaustive source content.
 
-PR5.15 prepares a guarded selective import of three new draft products (GIMP, Krita, Paint.NET), twelve reviewed attributes and three bounded Photoshop anchors. No routes, publication, audience/problem claims or evidence deletion. Unexpected existing identities, changed scoped claims and later published targets abort atomically. Seven published products and both accepted routes are prerequisites and preserved. All 78 tests, lint/typecheck/build and seven isolated database scenario groups passed, including all ten shipped verification checks. No live database execution has occurred. See RASTER_DRAFT_IMPORT.md.
+PR5.15 prepares a guarded selective import of three new draft products (GIMP, Krita, Paint.NET), twelve reviewed attributes and three bounded Photoshop anchors. No routes, publication, audience/problem claims or evidence deletion. Unexpected existing identities, changed scoped claims and later published targets abort atomically. Seven published products and both accepted routes are prerequisites and preserved. All 78 tests, lint/typecheck/build and seven isolated database scenario groups passed, including all ten shipped verification checks. Owner pushed ee1c621 and completed live rehearsal/apply/verification on 2026-10-12: all ten checks true. Three raster products remain draft; prior seven published products and two approved routes are intact. See RASTER_DRAFT_IMPORT.md.
 
-Next run PR5.15 rehearsal, apply and read-only verification in sequence. Products remain drafts. Publication requires a separate reviewed publication packet and owner decision. Two published routes do not complete Issue #5.
+PR5.16 prepares a pinned complete graph/evidence publication review for GIMP, Krita, Paint.NET and exactly one bounded Photoshop route, with zero novelty boost. 81 tests, lint/typecheck/build and seven isolated database scenario groups passed, including ten publication verification checks. Owner decision is pending; no live publication has occurred. Next review RASTER_PUBLICATION_CONTENT.md and run PR5.16 rehearsal, then obtain explicit publication approval before applying. See RASTER_PUBLICATION_REVIEW.md. Two published routes do not complete Issue #5.
 
 ## Completed Issues
 
