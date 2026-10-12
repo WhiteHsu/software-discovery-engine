@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-10-12",
+  "publicationDecision": "pending",
+  "scope": "personal-offline-note-object-organization",
+  "bundleSha256": "e9b7e8dcf6285b7d9e44a8ef65dfa7d0defae7f1fb1f85f7e5cc8db59166152d",
+  "liveImportConfirmation": "Owner pushed PR5.19 6769f2c and supplied rehearsal/apply success, all ten verification checks true, production product/route screens and one source click per product on 2026-10-12.",
+  "method": "Reuses accepted PR5.18 documentary evidence and PR5.19 live claim import; source click samples confirm access, not exhaustive content verification or hands-on/network testing.",
+  "route": {
+    "slug": "notion-alternatives-without-ai",
+    "name": "Notion Alternatives Without AI",
+    "status": "draft",
+    "editoriallyApproved": false,
+    "lastVerifiedAt": "2026-10-12T00:00:00Z",
+    "description": "Personal offline notes and locally available organized content in installed native apps, without activating optional AI tools. AFFiNE, AppFlowy and Anytype offer overlapping personal workflows; this is not full Notion parity, an AI-free interface promise, or a privacy/processing guarantee. Optional AI and agent integrations have separate setup and data-handling terms.",
+    "products": [
+      {
+        "productSlug": "affine",
+        "position": 1,
+        "editorialNote": "Native personal local documents and organization without invoking AI. AFFiNE AI is a separate Cloud/sign-in feature; optional AI UI and services remain available. No promise that all AI controls disappear.",
+        "noveltyScore": 0
+      },
+      {
+        "productSlug": "appflowy",
+        "position": 2,
+        "editorialNote": "Native personal notes and workspace organization using documented opt-in Smart Write/Edit. Opt-in AI does not establish an AI-free interface, no AI indexing in every mode, or no third-party processing when AI is enabled.",
+        "noveltyScore": 0
+      },
+      {
+        "productSlug": "anytype",
+        "position": 3,
+        "editorialNote": "Native personal notes/object organization without installing or authorizing an AI agent. Official policy allows no AI; the agent toolkit requires separate setup and an API key. Experimental plans are not shipped feature guarantees; optional integrations can expose data to the chosen agent.",
+        "noveltyScore": 0
+      }
+    ],
+    "anchorSlug": "notion"
+  }
+}
