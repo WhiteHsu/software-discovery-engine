@@ -8,7 +8,7 @@
 
 ## Current Work
 
-**Issue #5 — Escape Route Engine: in progress (PR5.9 live; PR5.10 Anytype offline draft review prepared)**
+**Issue #5 — Escape Route Engine: in progress (PR5.9 live; PR5.10 pushed; PR5.11 bounded offline workflow prepared)**
 
 Issue #4 was closed by the owner on 2026-10-07 after production acceptance. Application/publication commits b7568d1 and c9dad66; acceptance commits 80a8828 and 80e537e. The owner confirmed official CTA and pricing-source clicks in Chrome. At that acceptance milestone only Obsidian was published. PR5.9 subsequently published three additional products and one route, as recorded below.
 
@@ -34,7 +34,11 @@ PR5.9 prepares publication review for Things, OmniFocus, 2Do and exactly one Tod
 
 PR5.10 adds five dated primary sources, three Anytype attribute updates and one bounded Notion alternative claim to the separate local draft graph. Offline Notion reaches three qualified draft candidates; no SQL or publication is included. Notion itself supports offline pages, so the comparison describes workflow and feature limits. All 61 tests, lint and typecheck passed. See ANYTYPE_OFFLINE_REVIEW.md.
 
-Refresh AFFiNE/AppFlowy edition-specific evidence and align all three offline comparison scopes before preparing a selective import/publication packet. Preserve the four live products and the approved Todoist route. One published route does not complete Issue #5.
+Owner pushed PR5.10 as 0cb6c33 on 2026-10-08 after 61 tests, lint/typecheck and diff checks passed. Production deployment was green. Owner supplied local route and Anytype page screenshots with draft banners; source/CTA click acceptance is not separately recorded.
+
+PR5.11 refreshes six AFFiNE/AppFlowy attributes and two bounded Notion alternative claims with eight primary sources, preserving historical evidence and all other products/memberships. The offline engine now requires the exact personal offline note/object scope and a description. Three local offline drafts qualify; no route/product publication or SQL. A single deterministic workflow command rebuilds from versioned research and can be safely repeated. All 65 tests, lint/typecheck, build and four local HTTP preview checks passed. See OFFLINE_WORKFLOW_REVIEW.md.
+
+Next prepare a separately guarded selective draft import for the reviewed offline claims, preserving the four published products and approved Todoist route. One published route does not complete Issue #5.
 
 ## Completed Issues
 

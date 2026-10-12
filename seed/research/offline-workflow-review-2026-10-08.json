@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "reviewType": "offline-workflow-documentary-review",
+  "date": "2026-10-08T00:00:00Z",
+  "publicationApproved": false,
+  "scope": "personal-offline-note-object-organization",
+  "method": "Two-sided primary-source desk review. Verified documentary facts and bounded editorial comparison; no hands-on offline/cache/migration test or full replacement guarantee.",
+  "sources": [
+    {
+      "limitations": "Desktop evidence is not a guarantee for mobile or browser offline parity.",
+      "id": "affine-download",
+      "statement": "Desktop documents, databases and whiteboards run locally; Cloud sync is optional. Mobile focuses on capture and review.",
+      "publisher": "AFFiNE",
+      "title": "AFFiNE native local-first download",
+      "url": "https://affine.pro/download"
+    },
+    {
+      "limitations": "Do not freeze current amounts or imply every Cloud entitlement is free or perpetual.",
+      "id": "affine-pricing",
+      "statement": "Free local editing and Cloud Basic coexist with paid Cloud plans, an AI add-on and a Believer offer. Editor and backend licensing differ.",
+      "publisher": "AFFiNE",
+      "title": "AFFiNE local and Cloud plans",
+      "url": "https://affine.pro/pricing"
+    },
+    {
+      "limitations": "Documentary import support is not hands-on validation or full feature parity.",
+      "id": "affine-import",
+      "statement": "HTML zip and Markdown import paths are documented. The guide explicitly warns that not all features map one-to-one.",
+      "publisher": "AFFiNE",
+      "title": "AFFiNE Notion import guide",
+      "url": "https://affine.pro/blog/import-your-data-from-notion-into-affine"
+    },
+    {
+      "limitations": "Does not enumerate cache completeness, disconnected cloud attachments or offline sync conflict handling.",
+      "id": "appflowy-start",
+      "statement": "The documentation describes a locally installed native workspace with offline mode, and a Notion alternative.",
+      "publisher": "AppFlowy",
+      "title": "AppFlowy native offline overview",
+      "url": "https://docs.appflowy.io/docs"
+    },
+    {
+      "limitations": "Cloud entitlements are distinct from local workspace capability and self-hosted terms.",
+      "id": "appflowy-pricing",
+      "statement": "Personal Cloud is free with storage/upload/history limits; Pro is a renewing subscription billed per workspace member.",
+      "publisher": "AppFlowy",
+      "title": "AppFlowy Cloud plans",
+      "url": "https://appflowy.com/pricing"
+    },
+    {
+      "limitations": "The documented hosted import needs connectivity. Omitting files/images during export omits that content. Complete Notion feature parity is not established.",
+      "id": "appflowy-import",
+      "statement": "A Notion export zip is uploaded for import; completion is notified by email and creates a new workspace.",
+      "publisher": "AppFlowy",
+      "title": "AppFlowy Notion import guide",
+      "url": "https://docs.appflowy.io/docs/guides/import-from-notion"
+    },
+    {
+      "limitations": "Vendor comparison claims are bounded by Notion primary documentation, not treated as proof Notion lacks offline support.",
+      "id": "appflowy-compare",
+      "statement": "Native offline workspaces are described; advanced Notion ecosystem integrations or specific views can remain limited.",
+      "publisher": "AppFlowy",
+      "title": "AppFlowy native offline comparison",
+      "url": "https://appflowy.com/compare/notion-vs-appflowy"
+    },
+    {
+      "limitations": "Browser offline is not supported; downloaded pages are device-specific. This route does not assert Notion cannot work offline.",
+      "id": "notion-offline",
+      "statement": "Desktop/mobile apps support offline pages with page/device preparation and network-dependent feature limits.",
+      "publisher": "Notion",
+      "title": "Notion offline pages",
+      "url": "https://www.notion.com/en-gb/help/use-pages-offline"
+    }
+  ],
+  "candidates": [
+    {
+      "scopeDescription": "Personal offline note and object organization only. Native desktop local documents, databases and whiteboards after installation. Cloud synchronization needs connectivity; mobile and browser parity are not established. No guarantee of full Notion feature, team or migration parity.",
+      "pricing": "Free local editor and Cloud Basic; paid Cloud plans, an AI add-on and a one-time Believer offer have separate terms. The editor is MIT-licensed; the EE backend has separate authorization requirements for modification, compilation or redistribution. Check current plan prices and limits.",
+      "tradeoff": "Native desktop local content is the offline comparison scope. Desktop and mobile feature coverage differs; Cloud sync and collaboration require connectivity. Notion HTML/Markdown import is supported but not all features map one-to-one; review converted content. Editor and EE backend licensing differ.",
+      "slug": "affine"
+    },
+    {
+      "scopeDescription": "Personal offline note and object organization only. Locally available content in the installed native workspace after setup. Cloud synchronization and the documented hosted Notion import need connectivity; complete offline caching of Cloud pages and attachments is not established. No guarantee of full Notion feature, team or migration parity.",
+      "pricing": "Free Personal Cloud plan with storage, upload and history limits; Pro is a renewing subscription billed per workspace member. Cloud plans and self-hosted terms need separate review; do not equate Cloud allowances with local workspace limits.",
+      "tradeoff": "Compare locally available notes and organized content in the installed native workspace. Complete offline availability of all Cloud pages and attachments is not established by this review. Hosted Notion zip import needs connectivity and post-import review; advanced ecosystem integrations and view parity are not guaranteed. Personal Cloud has storage/upload/history limits; Pro is per workspace member.",
+      "slug": "appflowy"
+    }
+  ],
+  "beforeSha256": {
+    "affine": "58a9caea92913506f55ea9c6662bcc90f2ddad1500367d60922591dedf94b1b3",
+    "appflowy": "bc30d490f442a5da12d36a7077ee1326af352db4364779e36890707fdc4f9912",
+    "anytype": "bfbd6c9de75e36e6d3ec254375994af5bdd2e214a76cd14249c026dc2abf8785"
+  },
+  "routeBeforeSha256": "7a55dada857c5fe1bd5d4eab7cdaf809d3641fc3f1b6ebb0d38794ef71ca374d"
+}
