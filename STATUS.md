@@ -8,7 +8,7 @@
 
 ## Current Work
 
-**Issue #5 — Escape Route Engine: in progress (PR5.15 live draft import accepted; PR5.16 raster publication review prepared)**
+**Issue #5 — Escape Route Engine: in progress (PR5.16 publication/browser acceptance complete; PR5.17 remaining-route audit prepared)**
 
 Issue #4 was closed by the owner on 2026-10-07 after production acceptance. Application/publication commits b7568d1 and c9dad66; acceptance commits 80a8828 and 80e537e. The owner confirmed official CTA and pricing-source clicks in Chrome. At that acceptance milestone only Obsidian was published. PR5.9 subsequently published three additional products and one route, as recorded below.
 
@@ -52,7 +52,9 @@ Owner pushed PR5.14 as 189bef9 on 2026-10-12 after 75 tests, lint/typecheck/buil
 
 PR5.15 prepares a guarded selective import of three new draft products (GIMP, Krita, Paint.NET), twelve reviewed attributes and three bounded Photoshop anchors. No routes, publication, audience/problem claims or evidence deletion. Unexpected existing identities, changed scoped claims and later published targets abort atomically. Seven published products and both accepted routes are prerequisites and preserved. All 78 tests, lint/typecheck/build and seven isolated database scenario groups passed, including all ten shipped verification checks. Owner pushed ee1c621 and completed live rehearsal/apply/verification on 2026-10-12: all ten checks true. Three raster products remain draft; prior seven published products and two approved routes are intact. See RASTER_DRAFT_IMPORT.md.
 
-PR5.16 prepares a pinned complete graph/evidence publication review for GIMP, Krita, Paint.NET and exactly one bounded Photoshop route, with zero novelty boost. 81 tests, lint/typecheck/build and seven isolated database scenario groups passed, including ten publication verification checks. Owner decision is pending; no live publication has occurred. Next review RASTER_PUBLICATION_CONTENT.md and run PR5.16 rehearsal, then obtain explicit publication approval before applying. See RASTER_PUBLICATION_REVIEW.md. Two published routes do not complete Issue #5.
+PR5.16 prepares a pinned complete graph/evidence publication review for GIMP, Krita, Paint.NET and exactly one bounded Photoshop route, with zero novelty boost. 81 tests, lint/typecheck/build and seven isolated database scenario groups passed, including ten publication verification checks. Owner pushed b658009, completed live rehearsal and personally executed apply on 2026-10-12; all ten live verification checks true. No separate textual approval message is recorded. Incognito screenshots confirm route/comparison, three product pages without draft banners and three Visit official destinations; this batch does not demonstrate separate source-link clicks. Production now has ten published products and three of ten approved routes. See RASTER_PUBLICATION_REVIEW.md. Issue #5 remains open.
+
+PR5.17 records this owner-evidence checkpoint separately from reconstructed draft-graph qualification and audits seven remaining routes. No claims, previews, SQL or publication changes. All 84 tests, lint and typecheck passed. Next review the Notion no-forced-AI route: AFFiNE/AppFlowy currently qualify, Anytype ai-optional remains unknown, and offline relationship scope cannot be silently widened or overwritten. See ESCAPE_REMAINING_REVIEW.md.
 
 ## Completed Issues
 
