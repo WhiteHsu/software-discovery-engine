@@ -8,7 +8,7 @@
 
 ## Current Work
 
-**Issue #5 — Escape Route Engine: in progress (PR5.16 publication/browser acceptance complete; PR5.17 remaining-route audit prepared)**
+**Issue #5 — Escape Route Engine: in progress (PR5.17 audit deployed; PR5.18 bounded optional-AI draft review prepared)**
 
 Issue #4 was closed by the owner on 2026-10-07 after production acceptance. Application/publication commits b7568d1 and c9dad66; acceptance commits 80a8828 and 80e537e. The owner confirmed official CTA and pricing-source clicks in Chrome. At that acceptance milestone only Obsidian was published. PR5.9 subsequently published three additional products and one route, as recorded below.
 
@@ -54,7 +54,9 @@ PR5.15 prepares a guarded selective import of three new draft products (GIMP, Kr
 
 PR5.16 prepares a pinned complete graph/evidence publication review for GIMP, Krita, Paint.NET and exactly one bounded Photoshop route, with zero novelty boost. 81 tests, lint/typecheck/build and seven isolated database scenario groups passed, including ten publication verification checks. Owner pushed b658009, completed live rehearsal and personally executed apply on 2026-10-12; all ten live verification checks true. No separate textual approval message is recorded. Incognito screenshots confirm route/comparison, three product pages without draft banners and three Visit official destinations; this batch does not demonstrate separate source-link clicks. Production now has ten published products and three of ten approved routes. See RASTER_PUBLICATION_REVIEW.md. Issue #5 remains open.
 
-PR5.17 records this owner-evidence checkpoint separately from reconstructed draft-graph qualification and audits seven remaining routes. No claims, previews, SQL or publication changes. All 84 tests, lint and typecheck passed. Next review the Notion no-forced-AI route: AFFiNE/AppFlowy currently qualify, Anytype ai-optional remains unknown, and offline relationship scope cannot be silently widened or overwritten. See ESCAPE_REMAINING_REVIEW.md.
+PR5.17 records this owner-evidence checkpoint separately from reconstructed draft-graph qualification and audits seven remaining routes. No claims, previews, SQL or publication changes. All 84 tests, lint and typecheck passed. Next review the Notion no-forced-AI route: AFFiNE/AppFlowy currently qualify, Anytype ai-optional remains unknown, and offline relationship scope cannot be silently widened or overwritten. See ESCAPE_REMAINING_REVIEW.md. Owner pushed c3389a3 after 84 tests/lint/typecheck/diff checks passed; Production green.
+
+PR5.18 reviews six dated primary sources for installed native personal note/object organization without activating optional AI. Exactly three ai-optional attributes are refreshed in a separate draft graph; Anytype now has positive policy/setup evidence rather than an inference from missing AI mentions. All existing anchors, lifecycle, pricing/trade-off values and other routes are preserved. The no-AI route requires the accepted exact personal offline scope and description, with zero novelty boost. Three drafts qualify; publishable=false. All 87 tests, lint/typecheck/build and four local HTTP draft-page checks passed. Owner visual/source-click review pending. No SQL or live publication changes. See NOTION_AI_WORKFLOW_REVIEW.md.
 
 ## Completed Issues
 

@@ -2,7 +2,7 @@ import { supported, safeUrl, type Claim, type ProductPage } from "./model.ts";
 
 export const escapeDefinitions = [
   {slug:"offline-notion-alternatives",name:"Offline Notion Alternatives",anchor:"notion",relationshipScope:"personal-offline-note-object-organization",constraints:["works-offline"]},
-  {slug:"notion-alternatives-without-ai",name:"Notion Alternatives Without AI",anchor:"notion",constraints:["ai-optional"]},
+  {slug:"notion-alternatives-without-ai",name:"Notion Alternatives Without AI",anchor:"notion",relationshipScope:"personal-offline-note-object-organization",constraints:["ai-optional"]},
   {slug:"simple-notion-alternatives",name:"Simple Notion Alternatives",anchor:"notion",constraints:["focused-note-taking","no-database-required","minimal-setup"]},
   {slug:"todoist-alternatives-with-a-one-time-purchase",name:"Todoist Alternatives With a One-Time Purchase",anchor:"todoist",relationshipScope:"personal-task-project-organization",constraints:["one-time-purchase"]},
   {slug:"privacy-friendly-grammarly-alternatives",name:"Privacy-Friendly Grammarly Alternatives",anchor:"grammarly",constraints:["privacy-friendly"]},

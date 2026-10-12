@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "date": "2026-10-12T00:00:00Z",
+  "publicationApproved": false,
+  "inputSha256": "d2148587e1905fa9683757bdf6ada04f73682d61a8b03204c6823c8fde018683",
+  "relationshipScope": "personal-offline-note-object-organization",
+  "method": "Documentary editorial inference for installed native personal notes/object organization without activating AI. No hands-on AI/network audit, AI-free interface claim or processing/privacy guarantee.",
+  "sources": [
+    {
+      "id": "affine-guide",
+      "url": "https://affine.pro/blog/getting-started-with-affine",
+      "title": "AFFiNE getting started: local editing and optional AI",
+      "publisher": "AFFiNE"
+    },
+    {
+      "id": "affine-ai",
+      "url": "https://affine.pro/ai",
+      "title": "AFFiNE AI activation and Cloud requirements",
+      "publisher": "AFFiNE"
+    },
+    {
+      "id": "appflowy-docs",
+      "url": "https://docs.appflowy.io/docs/appflowy/readme/welcome-to-appflowy",
+      "title": "AppFlowy documented notes, databases and opt-in Smart Write",
+      "publisher": "AppFlowy"
+    },
+    {
+      "id": "anytype-welcome",
+      "url": "https://doc.anytype.io/anytype",
+      "title": "Anytype personal spaces and local-first workflow",
+      "publisher": "Anytype"
+    },
+    {
+      "id": "anytype-choice",
+      "url": "https://blog.anytype.io/february-community-update-2026/",
+      "title": "Anytype February 2026 update: AI choice and experimental agents",
+      "publisher": "Anytype"
+    },
+    {
+      "id": "anytype-agents",
+      "url": "https://doc.anytype.io/anytype/features/integrations/anytype-agents-skill.md",
+      "title": "Anytype Agents Skill: separate setup and API key prerequisites",
+      "publisher": "Anytype"
+    }
+  ],
+  "candidates": [
+    {
+      "slug": "affine",
+      "sources": [
+        "affine-guide",
+        "affine-ai"
+      ],
+      "confidence": 0.9,
+      "scopeNote": "Native personal local documents and organization without invoking AI. AFFiNE AI is a separate Cloud/sign-in feature; optional AI UI and services remain available. No promise that all AI controls disappear."
+    },
+    {
+      "slug": "appflowy",
+      "sources": [
+        "appflowy-docs"
+      ],
+      "confidence": 0.85,
+      "scopeNote": "Native personal notes and workspace organization using documented opt-in Smart Write/Edit. Opt-in AI does not establish an AI-free interface, no AI indexing in every mode, or no third-party processing when AI is enabled."
+    },
+    {
+      "slug": "anytype",
+      "sources": [
+        "anytype-welcome",
+        "anytype-choice",
+        "anytype-agents"
+      ],
+      "confidence": 0.85,
+      "scopeNote": "Native personal notes/object organization without installing or authorizing an AI agent. Official policy allows no AI; the agent toolkit requires separate setup and an API key. Experimental plans are not shipped feature guarantees; optional integrations can expose data to the chosen agent."
+    }
+  ]
+}
