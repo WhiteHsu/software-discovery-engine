@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-10-12",
+  "evidenceReviewedAt": "2026-10-08",
+  "publicationDecision": "pending",
+  "reviewType": "bounded-offline-publication",
+  "bundleSha256": "0b9004ac163ab47c5dc46a817230b5fbc2669dd702e87ea292aaf4c84730755f",
+  "liveImportConfirmation": "Owner pushed ab904d3 and supplied PR5.12 rehearsal/apply success and all ten live verification checks true on 2026-10-12.",
+  "scope": "personal-offline-note-object-organization",
+  "method": "Documentary editorial review, not hands-on offline testing. Claim timestamps remain 2026-10-08. Three current official overview pages were rechecked on 2026-10-12; other sources retain their earlier review date.",
+  "sourceRecheckUrls": [
+    "https://affine.pro/download",
+    "https://docs.appflowy.io/docs",
+    "https://doc.anytype.io/"
+  ],
+  "route": {
+    "slug": "offline-notion-alternatives",
+    "name": "Offline Notion Alternatives",
+    "description": "Personal offline notes and locally available organized content in installed native workspaces. Compare AFFiNE desktop documents and whiteboards, Anytype local objects, and AppFlowy native offline mode. Notion also supports prepared offline pages in desktop/mobile apps. Cloud sync, hosted imports, remote attachments and collaboration have separate requirements. This does not guarantee complete Notion parity or full cloud-content availability offline.",
+    "anchorSlug": "notion",
+    "status": "draft",
+    "editoriallyApproved": false,
+    "lastVerifiedAt": "2026-10-08T00:00:00Z",
+    "products": [
+      {
+        "productSlug": "affine",
+        "position": 1,
+        "noveltyScore": 0,
+        "editorialNote": "Personal offline note and object organization only. Native desktop local documents, databases and whiteboards after installation. Cloud synchronization needs connectivity; mobile and browser parity are not established. No guarantee of full Notion feature, team or migration parity."
+      },
+      {
+        "productSlug": "anytype",
+        "position": 2,
+        "noveltyScore": 0,
+        "editorialNote": "Personal offline note and object organization only. Anytype local-first personal spaces after initial setup; synchronization and Notion import need connectivity. No guarantee of full Notion feature, team or migration parity. Local-only is a separate experimental mode with manual backup responsibility."
+      },
+      {
+        "productSlug": "appflowy",
+        "position": 3,
+        "noveltyScore": 0,
+        "editorialNote": "Personal offline note and object organization only. Locally available content in the installed native workspace after setup. Cloud synchronization and the documented hosted Notion import need connectivity; complete offline caching of Cloud pages and attachments is not established. No guarantee of full Notion feature, team or migration parity."
+      }
+    ]
+  }
+}

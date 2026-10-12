@@ -1,0 +1,10 @@
+import fs from 'node:fs';import test from 'node:test';import assert from 'node:assert/strict';
+import {offlineWorkflowBaseline,buildOfflineWorkflow} from './build-offline-workflow.mjs';
+import {buildOfflinePublication} from './build-offline-publication.mjs';
+const read=p=>JSON.parse(fs.readFileSync(new URL('../../'+p,import.meta.url),'utf8'));
+const {baseline,bundle}=offlineWorkflowBaseline(),reviewed=buildOfflineWorkflow(bundle,read('seed/research/offline-workflow-review-2026-10-08.json')).bundle;
+const args=[baseline,reviewed,read('seed/research/offline-draft-import-2026-10-12.json'),read('seed/research/offline-publication-review-2026-10-12.json')];
+test('offline publication requires exactly three bounded candidates and keeps owner decision pending',()=>{const r=buildOfflinePublication(...args);assert.equal(r.report.qualifiedCandidates,3);assert.deepEqual(r.report.candidateSlugs,['affine','anytype','appflowy']);assert.equal(r.report.publicationDecision,'pending');assert.match(r.sql,/RAISE SQLSTATE 'ZP513'/);assert.equal(r.bundle.products.every(p=>p.status==='draft'),true);});
+test('review manifest and complete target graph drift are rejected',()=>{for(const mutate of [a=>a[3].route.description+=' widen',a=>a[3].publicationDecision='approved',a=>a[1].products.find(p=>p.slug==='affine').anchors[0].scope='wider',a=>a[0].products.find(p=>p.slug==='anytype').shortDescription='changed']){const a=structuredClone(args);mutate(a);assert.throws(()=>buildOfflinePublication(...a));}});
+test('shipped rehearsal and apply match generated guarded SQL',()=>{for(const commit of [false,true]){const r=buildOfflinePublication(...args,{commit});const name=commit?'PR5.13_APPLY_AFTER_APPROVAL':'PR5.13_REHEARSE';assert.equal(fs.readFileSync(new URL('../../supabase/data/'+name+'.sql',import.meta.url),'utf8').replace(/\r\n/g,'\n'),r.sql.replace(/\r\n/g,'\n'));assert.match(r.sql,/baseline member drift/);assert.match(r.sql,/relationship.evidence set changed/);assert.match(r.sql,/other approved route exposure/);}});
+
