@@ -1,6 +1,6 @@
 # Project Status
 
-**Last Updated:** 2026-10-08
+**Last Updated:** 2026-10-12
 
 ## Current Phase
 
@@ -8,7 +8,7 @@
 
 ## Current Work
 
-**Issue #5 — Escape Route Engine: in progress (PR5.9 live; PR5.10 pushed; PR5.11 bounded offline workflow prepared)**
+**Issue #5 — Escape Route Engine: in progress (PR5.9 live; PR5.11 pushed; PR5.12 selective offline draft import prepared)**
 
 Issue #4 was closed by the owner on 2026-10-07 after production acceptance. Application/publication commits b7568d1 and c9dad66; acceptance commits 80a8828 and 80e537e. The owner confirmed official CTA and pricing-source clicks in Chrome. At that acceptance milestone only Obsidian was published. PR5.9 subsequently published three additional products and one route, as recorded below.
 
@@ -38,7 +38,11 @@ Owner pushed PR5.10 as 0cb6c33 on 2026-10-08 after 61 tests, lint/typecheck and 
 
 PR5.11 refreshes six AFFiNE/AppFlowy attributes and two bounded Notion alternative claims with eight primary sources, preserving historical evidence and all other products/memberships. The offline engine now requires the exact personal offline note/object scope and a description. Three local offline drafts qualify; no route/product publication or SQL. A single deterministic workflow command rebuilds from versioned research and can be safely repeated. All 65 tests, lint/typecheck, build and four local HTTP preview checks passed. See OFFLINE_WORKFLOW_REVIEW.md.
 
-Next prepare a separately guarded selective draft import for the reviewed offline claims, preserving the four published products and approved Todoist route. One published route does not complete Issue #5.
+Owner pushed PR5.11 as a7d04cc on 2026-10-12 after 65 tests, lint/typecheck, build and diff checks passed. The owner supplied screenshots of the route and three native offline product pages with draft banners; production deployment was green.
+
+PR5.12 prepares an atomic selective import of nine attributes and three bounded Notion relationships for existing draft AFFiNE/AppFlowy/Anytype. No new products, routes, publication or evidence deletion. Exact before/after guards refuse baseline drift and later published targets; four published products and the Todoist route are preserved. Evidence remains dated 2026-10-08; packet preparation is 2026-10-12. All 68 tests, lint/typecheck, build and nine isolated PostgreSQL-compatible test groups passed, including ten shipped read-only checks. Live rehearsal/apply/verification are pending operator execution. See OFFLINE_DRAFT_IMPORT.md.
+
+Next execute the selective rehearsal/apply and verify ten true checks, then prepare a separate concrete offline publication review. One published route does not complete Issue #5.
 
 ## Completed Issues
 

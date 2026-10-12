@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "reviewType": "selective-offline-draft-import",
+  "date": "2026-10-12T00:00:00Z",
+  "evidenceReviewedAt": "2026-10-08T00:00:00Z",
+  "publicationApproved": false,
+  "baselineSha256": "f5934cc0fe721571b659aa80809c95f4a82df22a7d5cd091c8cedd65aa3b145e",
+  "selectedSha256": "89382f1135e7f79b87c902aa1e363fb488e5a008b34cba2a402829185655f7c5",
+  "products": [
+    "affine",
+    "appflowy",
+    "anytype"
+  ],
+  "attributeClaims": 9,
+  "scopedAnchors": 3,
+  "routes": 0,
+  "newProducts": 0,
+  "preservedPublishedProducts": [
+    "obsidian",
+    "things",
+    "omnifocus",
+    "2do"
+  ],
+  "preservedPublishedRoute": "todoist-alternatives-with-a-one-time-purchase",
+  "policy": "Exact selected claim before/after guards; retain all historical/manual evidence pointers. No publication, route import, full bundle import or omitted-claim changes."
+}
