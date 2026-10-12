@@ -7,7 +7,7 @@ export const escapeDefinitions = [
   {slug:"todoist-alternatives-with-a-one-time-purchase",name:"Todoist Alternatives With a One-Time Purchase",anchor:"todoist",relationshipScope:"personal-task-project-organization",constraints:["one-time-purchase"]},
   {slug:"privacy-friendly-grammarly-alternatives",name:"Privacy-Friendly Grammarly Alternatives",anchor:"grammarly",constraints:["privacy-friendly"]},
   {slug:"grammarly-alternatives-without-a-subscription",name:"Grammarly Alternatives Without a Subscription",anchor:"grammarly",constraints:["no-subscription"]},
-  {slug:"photoshop-alternatives-without-a-subscription",name:"Photoshop Alternatives Without a Subscription",anchor:"photoshop",constraints:["no-subscription"]},
+  {slug:"photoshop-alternatives-without-a-subscription",name:"Photoshop Alternatives Without a Subscription",anchor:"photoshop",relationshipScope:"desktop-raster-layers-painting-basic-adjustment",constraints:["no-subscription"]},
   {slug:"pdf-editors-without-a-subscription",name:"PDF Editors Without a Subscription",anchor:"adobe-pdf",constraints:["no-subscription"]},
   {slug:"meditation-apps-without-a-subscription",name:"Meditation Apps Without a Subscription",anchor:"calm",constraints:["no-subscription"]},
   {slug:"productivity-apps-you-can-buy-once",name:"Productivity Apps You Can Buy Once",anchor:null,constraints:["one-time-purchase"],audience:"productivity-users"},
@@ -23,7 +23,7 @@ export function evaluateCandidate(def:EscapeDefinition,candidate:Candidate):Eval
   if(!safeUrl(p.websiteUrl))blockers.push("Official website is unavailable.");
   if(def.anchor){const a=p.anchors.find(c=>c.slug===def.anchor && c.relationshipType==="alternative");
     if(!verified(a))blockers.push("The anchor alternative relationship is not verified with dated evidence.");
-    else if("relationshipScope" in def && (a.scope!==def.relationshipScope || (def.relationshipScope==="personal-offline-note-object-organization" && (typeof a.description!=="string" || !a.description.trim()))))blockers.push(def.relationshipScope==="personal-offline-note-object-organization" ? "The alternative relationship must be reviewed for personal offline note and object organization." : "The alternative relationship must be reviewed for personal task and project organization.");
+    else if("relationshipScope" in def && (a.scope!==def.relationshipScope || ((def.relationshipScope==="personal-offline-note-object-organization" || def.relationshipScope==="desktop-raster-layers-painting-basic-adjustment") && (typeof a.description!=="string" || !a.description.trim()))))blockers.push(def.relationshipScope==="personal-offline-note-object-organization" ? "The alternative relationship must be reviewed for personal offline note and object organization." : def.relationshipScope==="desktop-raster-layers-painting-basic-adjustment" ? "The alternative relationship must be reviewed for desktop raster layers, painting and basic image adjustment." : "The alternative relationship must be reviewed for personal task and project organization.");
     else fit.push(a);}
   if("audience" in def){const a=p.audiences.find(c=>c.slug===def.audience);if(!verified(a))blockers.push("The productivity audience fit is unconfirmed.");else fit.push(a);}
   for(const slug of def.constraints){const c=p.attributes.find(c=>c.slug===slug);if(!verified(c)||c.value!==true)blockers.push(`${slug}: verified positive evidence is required.`);else fit.push(c);}

@@ -8,7 +8,7 @@
 
 ## Current Work
 
-**Issue #5 — Escape Route Engine: in progress (PR5.12 live; PR5.13 offline publication review prepared)**
+**Issue #5 — Escape Route Engine: in progress (PR5.13 live and accepted; PR5.14 raster workflow draft review prepared)**
 
 Issue #4 was closed by the owner on 2026-10-07 after production acceptance. Application/publication commits b7568d1 and c9dad66; acceptance commits 80a8828 and 80e537e. The owner confirmed official CTA and pricing-source clicks in Chrome. At that acceptance milestone only Obsidian was published. PR5.9 subsequently published three additional products and one route, as recorded below.
 
@@ -32,7 +32,7 @@ PR5.9 prepares publication review for Things, OmniFocus, 2Do and exactly one Tod
 
 Owner pushed PR5.12 as ab904d3 on 2026-10-12 and supplied live rehearsal/apply success screenshots and all ten verification checks true. AFFiNE, AppFlowy and Anytype remain draft, with nine reviewed attributes and three bounded Notion anchors imported. Existing four published products and the Todoist route remain intact; anonymous drafts/private evidence remain hidden.
 
-PR5.13 prepares complete graph/evidence and baseline route membership guards for publication of these three products and one offline route. All 71 tests, lint/typecheck/build and seven isolated database scenario groups passed. Owner publication approval is pending; no live publication has occurred. See OFFLINE_PUBLICATION_REVIEW.md and OFFLINE_PUBLICATION_CONTENT.md. Current live progress remains one of ten routes.
+PR5.13 adds complete graph/evidence and baseline route membership guards for publication of these three products and one offline route. All 71 tests, lint/typecheck/build and seven isolated database scenario groups passed. Owner pushed 43f8929 on 2026-10-12, completed rehearsal, explicitly approved publication, and ran apply plus verification: all ten checks true. Incognito production screenshots confirm the route and all three product pages, comparison navigation, all three official Visit destinations, and one source-link sample per product. These samples confirm link access, not exhaustive source-content validation. Production now has seven published products and two of ten required published routes; Issue #5 stays open. See OFFLINE_PUBLICATION_REVIEW.md and OFFLINE_PUBLICATION_CONTENT.md.
 
 ## Next Work
 
@@ -46,7 +46,9 @@ Owner pushed PR5.11 as a7d04cc on 2026-10-12 after 65 tests, lint/typecheck, bui
 
 PR5.12 prepares an atomic selective import of nine attributes and three bounded Notion relationships for existing draft AFFiNE/AppFlowy/Anytype. No new products, routes, publication or evidence deletion. Exact before/after guards refuse baseline drift and later published targets; four published products and the Todoist route are preserved. Evidence remains dated 2026-10-08; packet preparation is 2026-10-12. All 68 tests, lint/typecheck, build and nine isolated PostgreSQL-compatible test groups passed, including ten shipped read-only checks. Owner completed live rehearsal/apply/verification on 2026-10-12, as recorded above. See OFFLINE_DRAFT_IMPORT.md.
 
-Next run the PR5.13 publication rehearsal and review its content; apply only after explicit owner publication approval. One published route does not complete Issue #5.
+PR5.14 reviews GIMP, Krita and Paint.NET for desktop raster layers, painting and basic image adjustment, using twelve dated primary sources. Twelve attributes and three bounded Photoshop alternative judgments are updated in a separate local draft graph; historical evidence and other products/routes are preserved. Alternative fit is an editorial inference, not a hands-on compatibility test. Exactly three drafts qualify with zero novelty boost; none is published. All 75 tests, lint/typecheck/build and four local HTTP draft-preview checks passed. The generator reconstructs versioned research and is safe to rerun. The extra EOF blank line reported in the owner's PR5.13 staged diff is removed. No SQL or remote writes. See RASTER_WORKFLOW_REVIEW.md.
+
+Next accept the PR5.14 local draft previews, then prepare a guarded selective draft import for the three raster products. Publication requires a separate reviewed publication packet and owner decision. Two published routes do not complete Issue #5.
 
 ## Completed Issues
 

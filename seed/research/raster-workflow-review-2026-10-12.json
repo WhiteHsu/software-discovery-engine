@@ -1,0 +1,160 @@
+{
+  "version": 1,
+  "date": "2026-10-12T00:00:00Z",
+  "reviewType": "bounded-raster-workflow-draft",
+  "publicationApproved": false,
+  "scope": "desktop-raster-layers-painting-basic-adjustment",
+  "method": "Primary official documentation reviewed on 2026-10-12; alternative fit is a bounded editorial inference. No hands-on editing, PSD round-trip or printing tests performed.",
+  "beforeSha256": {
+    "gimp": "1bc5a78bb9fe8d2eb3387c48b92e81a3d7dfe7d9fde62d739eba05b22446bfca",
+    "krita": "62d22a67ad0699a7b91b85a3e86981a36058633dcef24ba3d76cc6ad95f39ccf",
+    "paint-net": "f2707a276b22433fd55854f0246b9045f40f3ad247c25ff300038b1d1f440e87"
+  },
+  "routeBeforeSha256": "2cfe07b6c1b1a5a8731052a24ab3e34e6d8dbb7a39d153d03dca449a527b51e1",
+  "sources": [
+    {
+      "id": "adobe-workflow",
+      "title": "Adobe Photoshop editing and compositing",
+      "url": "https://www.adobe.com/products/photoshop.html",
+      "publisher": "Adobe"
+    },
+    {
+      "id": "gimp-about",
+      "title": "GIMP official image manipulation overview",
+      "url": "https://www.gimp.org/about/",
+      "publisher": "GIMP"
+    },
+    {
+      "id": "gimp-faq",
+      "title": "GIMP RAW, CMYK and licensing FAQ",
+      "url": "https://www.gimp.org/docs/userfaq.html",
+      "publisher": "GIMP"
+    },
+    {
+      "id": "gimp-layers",
+      "title": "GIMP manual: combining images and layers",
+      "url": "https://docs.gimp.org/3.0/en/gimp-image-combining.html",
+      "publisher": "GIMP"
+    },
+    {
+      "id": "gimp-download",
+      "title": "GIMP desktop downloads",
+      "url": "https://www.gimp.org/downloads/",
+      "publisher": "GIMP"
+    },
+    {
+      "id": "krita-download",
+      "title": "Krita desktop downloads and paid store options",
+      "url": "https://krita.org/en/download/",
+      "publisher": "Krita"
+    },
+    {
+      "id": "krita-license",
+      "title": "Krita license",
+      "url": "https://krita.org/en/about/license/",
+      "publisher": "Krita"
+    },
+    {
+      "id": "krita-workflow",
+      "title": "Krita manual for Photoshop users",
+      "url": "https://docs.krita.org/en/user_manual/introduction_from_other_software/introduction_from_photoshop.html",
+      "publisher": "Krita"
+    },
+    {
+      "id": "krita-psd",
+      "title": "Krita PSD support and interchange limits",
+      "url": "https://docs.krita.org/en/general_concepts/file_formats/file_psd.html",
+      "publisher": "Krita"
+    },
+    {
+      "id": "paint-features",
+      "title": "Paint.NET layers, drawing and adjustments",
+      "url": "https://paint.net/features.html",
+      "publisher": "Paint.NET"
+    },
+    {
+      "id": "paint-download",
+      "title": "Paint.NET Windows requirements",
+      "url": "https://paint.net/download.html",
+      "publisher": "Paint.NET"
+    },
+    {
+      "id": "paint-license",
+      "title": "Paint.NET Classic and Store licensing",
+      "url": "https://paint.net/license.html",
+      "publisher": "Paint.NET"
+    }
+  ],
+  "candidates": [
+    {
+      "slug": "gimp",
+      "pricing": "Free official desktop application under GNU GPL; no recurring software fee is required. This is free software, not evidence of a paid perpetual license.",
+      "tradeoff": "GIMP supports photo retouching and layered composition. Camera RAW processing uses external plug-ins. CMYK import/export uses RGB storage; a native CMYK editing workflow is not established by this review. PSD fidelity and Photoshop feature parity are not guaranteed.",
+      "platforms": "Official GNU/Linux, macOS and Windows desktop downloads; check current OS and hardware requirements.",
+      "scopeDescription": "Desktop raster layers, painting and basic image adjustment only. GIMP is reviewed for retouching and layered composition; RAW processing uses external plug-ins and native CMYK editing is outside the reviewed scope. No guarantee of full Photoshop, PSD, print-production, automation, AI or team-workflow parity.",
+      "pricingSources": [
+        "gimp-about",
+        "gimp-faq"
+      ],
+      "tradeoffSources": [
+        "gimp-about",
+        "gimp-faq",
+        "gimp-layers"
+      ],
+      "platformSources": [
+        "gimp-download"
+      ],
+      "anchorSources": [
+        "adobe-workflow",
+        "gimp-about",
+        "gimp-layers",
+        "gimp-faq"
+      ]
+    },
+    {
+      "slug": "krita",
+      "pricing": "Free official GPL desktop application without a recurring software fee. Optional paid store distributions support development and automatic updates; store terms are separate.",
+      "tradeoff": "Krita specializes in digital painting rather than complete Photoshop image manipulation. Layer compositing, text and filters can differ. Its manual documents PSD loading/saving with supported elements but warns against assuming complete compatibility; review exchanged files.",
+      "platforms": "Official Windows, macOS and Linux desktop downloads. Android builds are separate; iPhone and iPad are not supported according to the download page.",
+      "scopeDescription": "Desktop raster layers, painting and basic image adjustment only. Krita is reviewed primarily for illustration and digital painting, not comprehensive photographic retouching. PSD and text/layer semantics need review. No guarantee of full Photoshop, print-production, automation, AI or team-workflow parity.",
+      "pricingSources": [
+        "krita-download",
+        "krita-license"
+      ],
+      "tradeoffSources": [
+        "krita-workflow",
+        "krita-psd"
+      ],
+      "platformSources": [
+        "krita-download"
+      ],
+      "anchorSources": [
+        "adobe-workflow",
+        "krita-workflow",
+        "krita-psd"
+      ]
+    },
+    {
+      "slug": "paint-net",
+      "pricing": "Free Classic desktop release with no recurring software fee. The Microsoft Store release is paid; the official license describes the same functionality except automatic updating. This is proprietary freeware, not open source.",
+      "tradeoff": "Windows-only desktop editor with layers, drawing, selections, effects and color adjustments. PDN is its native layered format; extra file formats may require plugins. This review does not establish native PSD round-trip or professional print/RAW parity. Check current CPU/GPU requirements.",
+      "platforms": "Windows 11, Windows 10 21H2 or newer, or Windows Server 2022; check official 64-bit CPU and Direct3D 11 requirements.",
+      "scopeDescription": "Desktop raster layers, painting and basic image adjustment only. Paint.NET is reviewed for Windows layers, selections, drawing and color adjustments. PDN is its native layered format; plugin formats do not prove PSD compatibility. No guarantee of full Photoshop, print-production, RAW, automation, AI or team-workflow parity.",
+      "pricingSources": [
+        "paint-license"
+      ],
+      "tradeoffSources": [
+        "paint-features",
+        "paint-download"
+      ],
+      "platformSources": [
+        "paint-download"
+      ],
+      "anchorSources": [
+        "adobe-workflow",
+        "paint-features",
+        "paint-download"
+      ]
+    }
+  ]
+}
