@@ -8,7 +8,7 @@
 
 ## Current Work
 
-**Issue #5 — Escape Route Engine: in progress (PR5.26 accepted; PR5.28 accepted; PR5.29 bounded PDF drafts prepared)**
+**Issue #5 — Escape Route Engine: in progress (PR5.26 accepted; PR5.29 accepted; PR5.30 PDF database preflight prepared)**
 
 Issue #4 was closed by the owner on 2026-10-07 after production acceptance. Application/publication commits b7568d1 and c9dad66; acceptance commits 80a8828 and 80e537e. The owner confirmed official CTA and pricing-source clicks in Chrome. At that acceptance milestone only Obsidian was published. PR5.9 subsequently published three additional products and one route, as recorded below.
 
@@ -167,6 +167,8 @@ Evaluation gate:
 PR5.27 was pushed by the owner as 8854c88 with a clean working tree and green Production. PR5.28 adds an edition-specific documentary operation matrix and a read-only checker. No draft qualification, graph, SQL or publication changes; twelve accepted products/five routes remain. See PDF_PAGE_OPERATIONS_REVIEW.md.
 
 PR5.28 owner commit 66a276a was pushed with clean working tree and green Production. PR5.29 pins nine documentary attributes and three Windows page-organization relationships in separate draft fixtures; PDF qualification is 3/3, publication remains unapproved. 109 tests, lint/typecheck/build passed locally. No native or browser test performed. See PDF_WORKFLOW_REVIEW.md.
+
+PR5.29 owner commit 4b5f9bd accepted with local route/product/Visit checks, 109 tests and lint/typecheck/build. Owner restored next-env.d.ts and confirmed clean working tree. PR5.30 supplies a SELECT-only production baseline snapshot before selective PDF draft import; no database writes or publication. See PDF_IMPORT_PREFLIGHT_REVIEW.md.
 
 ## Current Blockers
 

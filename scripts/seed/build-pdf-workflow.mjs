@@ -42,4 +42,3 @@ export function buildPdfWorkflow(input,review){
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
  try{if(process.argv.length!==2)throw Error('No arguments supported');const {baseline,review}=pdfWorkflowInputs(),r=buildPdfWorkflow(baseline,review),out=path.join(root,'.seed-output/escape-draft');fs.mkdirSync(out,{recursive:true});for(const [name,data]of Object.entries({bundle:r.bundle,'product-preview':r.pages,'pdf-workflow-review':r.report}))fs.writeFileSync(path.join(out,name+'.json'),JSON.stringify(data,null,2)+'\n');console.log('PR5.29: three bounded draft candidates; zero new products; zero publication or remote writes.');}catch(e){console.error(e.message);process.exitCode=1;}
 }
-
