@@ -1,0 +1,1785 @@
+{
+  "route": [
+    {
+      "id": "4b64f6fe-e76a-44a4-8f5a-684ab9b2b717",
+      "name": "PDF Editors Without a Subscription",
+      "slug": "pdf-editors-without-a-subscription",
+      "status": "draft",
+      "anchor_id": "4e54b828-4645-4d33-91db-d0bb743fcc76",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "description": "Compare Windows personal PDF page reordering, permanent rotation, removal and extraction, with PDF output, in licensed PDF-XChange Editor, PDF24 Creator and the current free PDFgear offer. This covers page organization, not complete Acrobat text editing, signatures or secure redaction. Edition, maintenance and AI/cloud limits differ. Draft review; publication is not approved.",
+      "last_verified_at": "2026-10-13T00:00:00+00:00",
+      "editorially_approved": false
+    }
+  ],
+  "packet": "PR5.32",
+  "products": [
+    {
+      "id": "ea5f6f15-62e7-465d-a9a8-90d788a4fe00",
+      "name": "PDF-XChange Editor",
+      "slug": "pdf-xchange-editor",
+      "status": "draft",
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "website_url": "https://www.pdf-xchange.com/product/pdf-xchange-editor",
+      "short_description": "Windows PDF editing with annotation and optional advanced features."
+    },
+    {
+      "id": "f17d436b-6419-40bc-88ab-d9e68432970d",
+      "name": "PDF24 Creator",
+      "slug": "pdf24-creator",
+      "status": "draft",
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "website_url": "https://tools.pdf24.org/en/creator",
+      "short_description": "Windows PDF tools and a virtual PDF printer that process files locally."
+    },
+    {
+      "id": "fa72cfe7-2276-43ff-b352-8d4d26c90d65",
+      "name": "PDFgear",
+      "slug": "pdfgear",
+      "status": "draft",
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "website_url": "https://www.pdfgear.com/",
+      "short_description": "PDF editing, annotation, conversion, and OCR tools across desktop and mobile."
+    }
+  ],
+  "read_only": true,
+  "captured_at": "2026-10-13T08:44:19.631898+00:00",
+  "route_members": [
+    {
+      "position": 1,
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "product_id": "ea5f6f15-62e7-465d-a9a8-90d788a4fe00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "product_slug": "pdf-xchange-editor",
+      "novelty_score": null,
+      "quality_score": null,
+      "editorial_note": "Licensed Windows page organization only. Plus-only features and unlicensed demo output are excluded. Updates and prior-installer access have maintenance/version limits; no complete Acrobat parity or export fidelity test.",
+      "escape_route_id": "4b64f6fe-e76a-44a4-8f5a-684ab9b2b717",
+      "relevance_score": null,
+      "constraint_fit_score": null
+    },
+    {
+      "position": 2,
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "product_id": "f17d436b-6419-40bc-88ab-d9e68432970d",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "product_slug": "pdf24-creator",
+      "novelty_score": null,
+      "quality_score": null,
+      "editorial_note": "Compare desktop page sorting, rotation, deletion and extraction. Existing-text editing parity is unverified; no full Acrobat, signature, redaction or export-fidelity guarantee.",
+      "escape_route_id": "4b64f6fe-e76a-44a4-8f5a-684ab9b2b717",
+      "relevance_score": null,
+      "constraint_fit_score": null
+    },
+    {
+      "position": 3,
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "product_id": "fa72cfe7-2276-43ff-b352-8d4d26c90d65",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "product_slug": "pdfgear",
+      "novelty_score": null,
+      "quality_score": null,
+      "editorial_note": "Compare native page organization and PDF extraction. Reordering is documented as not undoable. AI/cloud privacy is separate; no full Acrobat or tested export-fidelity guarantee.",
+      "escape_route_id": "4b64f6fe-e76a-44a4-8f5a-684ab9b2b717",
+      "relevance_score": null,
+      "constraint_fit_score": null
+    }
+  ],
+  "claim_evidence": [
+    {
+      "id": "9bdbf00e-07a8-4cc8-8755-5c0cd35189a5",
+      "notes": "Seed source reference for [\"pdf-xchange-editor\",\"attributes\",\"trade-off-summary\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:03b739531103021af1dc2d20f4bc18c319c680a3ebfdc072e774770acd170877",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "evidence_source_id": "ec44e67a-edbb-4840-94d1-b973483577df"
+    },
+    {
+      "id": "eea98109-bd51-4212-a3a9-a9a9de9022f7",
+      "notes": "Seed source reference for [\"pdf-xchange-editor\",\"attributes\",\"trade-off-summary\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:04d8e8d4f88f759b17e10216ea46366a9cc08d68940a1e46c7423304de336e69",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "evidence_source_id": "29c0e8da-dead-40d2-89c6-bc905f01979d"
+    },
+    {
+      "id": "3e4e6808-4ae3-464f-8809-27ca50cd519a",
+      "notes": "Seed source reference for [\"pdfgear\",\"attributes\",\"pricing-model\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:0f715350560a298dde727e8c53e35df4a0ffe5e5fb7cc5b5f25ad4b00b5facea",
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "evidence_source_id": "f8eab55b-f554-438a-9b70-858c20ff311f"
+    },
+    {
+      "id": "9d7d5322-9360-450d-94f6-7cb7ab390c8f",
+      "notes": "Seed source reference for [\"pdfgear\",\"attributes\",\"trade-off-summary\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:1100c9adf214edb6c87d6429735fbb6f893cdf9a109cafac2cd9a04fbae21c24",
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "evidence_source_id": "053fd124-8afe-4da6-8fa0-b066a0efe90a"
+    },
+    {
+      "id": "038c2db9-61e3-46c6-a176-5e038fa2317e",
+      "notes": "Seed source reference for [\"pdf-xchange-editor\",\"anchors\",\"adobe-pdf\",\"alternative\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:1a63c49d478c8e94bc6b80b6220b9edb0ff3d58dbb50fb8b08dcb8337bc72492",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "evidence_source_id": "ae39412a-0cb5-4244-8ba0-81d995cad80a"
+    },
+    {
+      "id": "da8731aa-a222-41bb-b157-9ff42cc0308a",
+      "notes": "Seed source reference for [\"pdf-xchange-editor\",\"anchors\",\"adobe-pdf\",\"alternative\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:20b1e3bf2e7676d8de8e15a5c256668ce68a9788a12957b0aa0e7503a8c6e73f",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "evidence_source_id": "555ed2ed-2003-40fc-9cc7-5dec90b20bea"
+    },
+    {
+      "id": "0f705ab8-da97-41a6-bb11-087ea6e7d57a",
+      "notes": "Seed source reference for [\"pdf24-creator\",\"attributes\",\"pricing-model\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:21fd97cca93b13c66d4a300358ba44ba102b0881cb548c752690e649a18bc3c7",
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "evidence_source_id": "48382302-349e-47a7-855a-270074100d02"
+    },
+    {
+      "id": "ae35358f-bcc7-4afd-af84-d01466ae5254",
+      "notes": "Seed source reference for [\"pdf24-creator\",\"anchors\",\"adobe-pdf\",\"alternative\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:23321481ab8d8aea85cb1a2e8a26d2f415deb45a291eb02f1fa977e449f9137a",
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "evidence_source_id": "567e1777-21b7-4e8a-9821-7af82d7913df"
+    },
+    {
+      "id": "2d0a2986-7f06-4d95-8837-a966145e9a11",
+      "notes": "Seed source reference for [\"pdfgear\",\"attributes\",\"trade-off-summary\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:242c13d76c0bf25a088614383a660ddf1d3658dcfcbd54f3e3ac5dfeecc0f3be",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "evidence_source_id": "672efe14-6a02-4ed9-811b-f29b62c8bde9"
+    },
+    {
+      "id": "601f94c1-6594-44f3-9a9b-d45d03e03187",
+      "notes": "Seed source reference for [\"pdf24-creator\",\"attributes\",\"free-core-use\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:2a5c30c99334eefc34bbc24f18b2a2d98f723e4dcd3df01e21dc42c98d1b56f1",
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "evidence_source_id": "48382302-349e-47a7-855a-270074100d02"
+    },
+    {
+      "id": "c12ef8b6-e218-420c-9aea-ffdd480c0175",
+      "notes": "Seed source reference for [\"pdf-xchange-editor\",\"audiences\",\"pdf-document-users\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:2dff94d83834bbb9d36ee0be2b5b4852b35be8591349f850d2832d66ae1ac26a",
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "updated_at": "2026-10-06T04:14:23.31324+00:00",
+      "evidence_source_id": "162fffd7-3ca2-4aff-9cf6-166dff5b0a79"
+    },
+    {
+      "id": "3921072b-ade1-4f9a-a4d8-d1cbdaae05a4",
+      "notes": "Seed source reference for [\"pdfgear\",\"attributes\",\"pricing-model\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:32a86bca6803d070e63b6285a2dfeb11cb6c8990d3162c953276af5a49ea9323",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "evidence_source_id": "67b814b1-df43-4442-a7e6-b965f5228a43"
+    },
+    {
+      "id": "fbe81f29-2bd7-4f9e-b1b5-c464f2003db4",
+      "notes": "Seed source reference for [\"pdf-xchange-editor\",\"attributes\",\"trade-off-summary\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:3df1a78a2cd4c539230a76340bced5d25ac46dd8c7c2f110b204838ad25798e3",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "evidence_source_id": "defd8e4e-929d-4a44-8c75-c8484829a83d"
+    },
+    {
+      "id": "60529898-533d-4e29-9d23-dee8dcaf0d21",
+      "notes": "Seed source reference for [\"pdf-xchange-editor\",\"attributes\",\"ai-optional\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:3e60660e50f829f55b0e80fa7e8287588f2dd0792d5c59b8153091b335655add",
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "evidence_source_id": "162fffd7-3ca2-4aff-9cf6-166dff5b0a79"
+    },
+    {
+      "id": "8cdc4ea5-f0ef-4cab-9e22-639ba1712456",
+      "notes": "Seed source reference for [\"pdf24-creator\",\"anchors\",\"adobe-pdf\",\"alternative\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:46b455c60030b91af91f48c2a2cb31783467a93092102e0203374cb1f27cbcdc",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "evidence_source_id": "555ed2ed-2003-40fc-9cc7-5dec90b20bea"
+    },
+    {
+      "id": "3b799dd7-f9f7-4bd8-b6ef-8ff03ae8b02a",
+      "notes": "Seed source reference for [\"pdfgear\",\"anchors\",\"adobe-pdf\",\"alternative\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:4ace60069b96260c7376b513965fbc33673dfd72ffc08da6aa77925acfa690bc",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "evidence_source_id": "1ca9b3fc-9291-4d2d-aa51-ce612c34dc7f"
+    },
+    {
+      "id": "46692b4b-81b9-46d5-87e7-f4202f3ca2f6",
+      "notes": "Seed source reference for [\"pdf24-creator\",\"attributes\",\"pricing-model\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:53d4278954ceacd0a6cbbd282f4245d749beb2185ad8f9f878f43cea1caf2a00",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "evidence_source_id": "54d9ab45-3134-4000-a397-a7a4a1500dc2"
+    },
+    {
+      "id": "bcf078fb-26b3-4a35-816a-bd147a781b62",
+      "notes": "Seed source reference for [\"pdfgear\",\"attributes\",\"no-subscription\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:57b8b16c02578f5cd2966044d013cad138dc007989c8c11254c25ce291b08d1b",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "evidence_source_id": "67b814b1-df43-4442-a7e6-b965f5228a43"
+    },
+    {
+      "id": "c2829f77-14ad-4536-99d6-f5599d820c29",
+      "notes": "Seed source reference for [\"pdf24-creator\",\"attributes\",\"no-subscription\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:5a0ae203d5d8db8e8aa58d66e0dd7791a8ef475c7e69dd0c8ec6653e9ad020c7",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "evidence_source_id": "54d9ab45-3134-4000-a397-a7a4a1500dc2"
+    },
+    {
+      "id": "d0a01e01-af3d-4ac8-bf29-259359501d53",
+      "notes": "Seed source reference for [\"pdfgear\",\"audiences\",\"pdf-document-users\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:5d6439f44f8a8c3843dcc8af1f3f158aa5d63bb10c44f0bae3cf4bd1fe9b18db",
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "updated_at": "2026-10-06T04:14:23.31324+00:00",
+      "evidence_source_id": "0bee7d1f-758b-4221-ab99-49aaee90119a"
+    },
+    {
+      "id": "04a64058-3dda-485e-bacb-b2ef22138739",
+      "notes": "Seed source reference for [\"pdf-xchange-editor\",\"attributes\",\"pricing-model\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:610dbf4e8bef7138f984b89461893f13d37d5370e91575fd11af2f3da98b8471",
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "evidence_source_id": "649d9518-7e30-4316-a7f9-878de319cf0f"
+    },
+    {
+      "id": "9ac2a59e-21e6-4fa3-9995-9d87d08b3d2b",
+      "notes": "Seed source reference for [\"pdf24-creator\",\"attributes\",\"trade-off-summary\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:6a1e5692e65fae239773b4e288a0413f430fef05440fdcae91aeaef90e4bd0d9",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "evidence_source_id": "54d9ab45-3134-4000-a397-a7a4a1500dc2"
+    },
+    {
+      "id": "702dfc15-3249-4d8c-afbd-447aa52a9ba8",
+      "notes": "Seed source reference for [\"pdf-xchange-editor\",\"attributes\",\"supported-platforms\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:6bd3792fce3700cfced4bb4125821b783f61929ad67e0ecbe5d41cc964b77cd0",
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "evidence_source_id": "41a62aa0-a87b-46ec-b210-5a7622e2b786"
+    },
+    {
+      "id": "3f402fc0-546c-4a4a-8f4d-aeacf2f25e5e",
+      "notes": "Seed source reference for [\"pdf-xchange-editor\",\"attributes\",\"trade-off-summary\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:736f2b8c423620f603f0a4cae17101fce1390782b8e8a777e8a21d6c48084b1d",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "evidence_source_id": "e5fa408f-d721-4799-aa15-858390ce961e"
+    },
+    {
+      "id": "f777a097-d755-4460-9ee0-bba83f0ebc5b",
+      "notes": "Seed source reference for [\"pdf-xchange-editor\",\"attributes\",\"no-subscription\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:7f6acb6210e5af562422a21e0e6b57c51ce7a31fed81f010737bcdb8dd57e44a",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "evidence_source_id": "defd8e4e-929d-4a44-8c75-c8484829a83d"
+    },
+    {
+      "id": "9519f9a9-992a-49fd-923f-41460d9ed451",
+      "notes": "Seed source reference for [\"pdf-xchange-editor\",\"attributes\",\"pricing-model\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:834cadceba27ed81c31434a4999384d662cd9507d8fa2e3e9acac42d4fc3e98c",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "evidence_source_id": "55ed27b7-fa32-43b6-aca5-c96a631a68d3"
+    },
+    {
+      "id": "8b8a890b-66a2-431b-bd75-d15af092da74",
+      "notes": "Seed source reference for [\"pdf-xchange-editor\",\"anchors\",\"adobe-pdf\",\"alternative\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:8750ae2b1a632fe040c11a6fc6935d66baea81c2e9801a9989853274faedd435",
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "evidence_source_id": "162fffd7-3ca2-4aff-9cf6-166dff5b0a79"
+    },
+    {
+      "id": "6534eea4-73f7-49eb-8d90-6901349826c0",
+      "notes": "Seed source reference for [\"pdfgear\",\"anchors\",\"adobe-pdf\",\"alternative\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:8b3f6e58cc64e560e1a94d9dfefa1898b81a97a9540a457b3f4cf0a93fce5441",
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "evidence_source_id": "0bee7d1f-758b-4221-ab99-49aaee90119a"
+    },
+    {
+      "id": "d625aaf2-e623-4929-b62e-a8faef837f31",
+      "notes": "Seed source reference for [\"pdf24-creator\",\"audiences\",\"pdf-document-users\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:91f5f4b42aa05050ef62179fb23b195387e2b2d5909ec4bfa507dc2bf7b04d06",
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "updated_at": "2026-10-06T04:14:23.31324+00:00",
+      "evidence_source_id": "567e1777-21b7-4e8a-9821-7af82d7913df"
+    },
+    {
+      "id": "8cb2a657-cb01-481e-8cc2-17d0f584e40b",
+      "notes": "Seed source reference for [\"pdf-xchange-editor\",\"attributes\",\"no-subscription\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:98e3e1a1476fb2dc7c80c70500c6eae6dd767c6baa662fb645add736c059f52c",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "evidence_source_id": "55ed27b7-fa32-43b6-aca5-c96a631a68d3"
+    },
+    {
+      "id": "39921e9e-ed95-4358-902c-3ac8312ce90b",
+      "notes": "Seed source reference for [\"pdf24-creator\",\"anchors\",\"adobe-pdf\",\"alternative\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:9d0ad66d766436ed7f9a469eb66428a25611e4b85b5ef7ee0fc57f7d729c96f0",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "evidence_source_id": "54d9ab45-3134-4000-a397-a7a4a1500dc2"
+    },
+    {
+      "id": "db31f606-ccf7-4ead-b6da-37f22a6d6458",
+      "notes": "Seed source reference for [\"pdf24-creator\",\"problems\",\"cloud-dependency\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:9f74137e54e5c7564ba58a87acd7a168ccb2415284909410c12de9a80ae51bde",
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "updated_at": "2026-10-06T04:14:23.31324+00:00",
+      "evidence_source_id": "567e1777-21b7-4e8a-9821-7af82d7913df"
+    },
+    {
+      "id": "fd98e8e2-3ab0-4204-867c-2e26b7988256",
+      "notes": "Seed source reference for [\"pdf-xchange-editor\",\"anchors\",\"adobe-pdf\",\"alternative\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:a2592d3f75136d2b2c8474055f760ddbf08e5d359f192a58dd6abd70737c52f3",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "evidence_source_id": "29c0e8da-dead-40d2-89c6-bc905f01979d"
+    },
+    {
+      "id": "74c8f944-f51e-4268-8274-2d93f73e90d3",
+      "notes": "Seed source reference for [\"pdf-xchange-editor\",\"attributes\",\"trade-off-summary\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:a5b753a6a24adf0f0e3d2a70f788f5de6215b585ad99417d75776c7f01ecd065",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "evidence_source_id": "55ed27b7-fa32-43b6-aca5-c96a631a68d3"
+    },
+    {
+      "id": "6f8e2d0e-5f03-491e-a43a-21aee97896f3",
+      "notes": "Seed source reference for [\"pdf-xchange-editor\",\"attributes\",\"pricing-model\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:a6ac47c01fca435fe19b4133edd3ad0ddc2b5181335c20d595de7a921212add5",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "evidence_source_id": "defd8e4e-929d-4a44-8c75-c8484829a83d"
+    },
+    {
+      "id": "3ef1efa2-6ec6-470c-a507-1fea45dca3a6",
+      "notes": "Seed source reference for [\"pdfgear\",\"anchors\",\"adobe-pdf\",\"alternative\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:ad02e03a195595413e5e307e88df4f27d192f95fabcdee26fbfd77b2912e1430",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "evidence_source_id": "67b814b1-df43-4442-a7e6-b965f5228a43"
+    },
+    {
+      "id": "4761af18-4d30-4a45-acd2-6b8f3e9e627e",
+      "notes": "Seed source reference for [\"pdf24-creator\",\"attributes\",\"supported-platforms\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:b0c26fc833c5afc96105c8488085cd7e1c5f339a6432612699258bd1809d1488",
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "evidence_source_id": "d69a5e3e-0eb2-4a08-84a1-d0a5f4257f4c"
+    },
+    {
+      "id": "ccffa1e5-e746-4e24-8fe5-bad739a18614",
+      "notes": "Seed source reference for [\"pdf-xchange-editor\",\"anchors\",\"adobe-pdf\",\"alternative\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:b32f7f75865d7a7afac79228c35312516edb9bd200ef647a03d827e4bb48506f",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "evidence_source_id": "ec44e67a-edbb-4840-94d1-b973483577df"
+    },
+    {
+      "id": "872183b6-68be-4e17-887f-9dd3fa8cb436",
+      "notes": "Seed source reference for [\"pdfgear\",\"problems\",\"subscription-fatigue\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:b34a443399f35c3ae79796149553e50a48dc8262e27b460e2d6e099b4a1cc395",
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "updated_at": "2026-10-06T04:14:23.31324+00:00",
+      "evidence_source_id": "f8eab55b-f554-438a-9b70-858c20ff311f"
+    },
+    {
+      "id": "42520c41-f9de-4c1a-b2cb-6e773cfe8b60",
+      "notes": "Seed source reference for [\"pdf24-creator\",\"attributes\",\"trade-off-summary\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:b4ae53fcc37858e40f1fb93d59868d5513d5e70138b0c01c4a1cfc554f86672c",
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "evidence_source_id": "02a56dfe-d5b2-4854-9d32-8b00225ff887"
+    },
+    {
+      "id": "55840286-e0de-4f64-9b3c-b22e5dc3c5df",
+      "notes": "Seed source reference for [\"pdfgear\",\"anchors\",\"adobe-pdf\",\"alternative\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:b51b0c881f81f865431fc41a36b45ee23373c6a04a8fd6549b730d4b5cf72732",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "evidence_source_id": "555ed2ed-2003-40fc-9cc7-5dec90b20bea"
+    },
+    {
+      "id": "2a148c5e-07ba-4e94-b2eb-a762098924d4",
+      "notes": "Seed source reference for [\"pdfgear\",\"attributes\",\"trade-off-summary\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:b832c0f635e4aa4713d787feaf62bf0a2609bd16842d73833be28753daa4896d",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "evidence_source_id": "1ca9b3fc-9291-4d2d-aa51-ce612c34dc7f"
+    },
+    {
+      "id": "1d2999a3-1b7e-4cb2-b21d-5c8ee12e4f5b",
+      "notes": "Seed source reference for [\"pdfgear\",\"attributes\",\"supported-platforms\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:ba5a81f7228338ae229e692361cd00c76c893fd18007119fba0bc2fcb27be208",
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "evidence_source_id": "d9d16104-17fb-4c32-84fa-11fd909cb56e"
+    },
+    {
+      "id": "ed9f6f8a-8b58-4c97-84d7-dc86038902eb",
+      "notes": "Seed source reference for [\"pdf-xchange-editor\",\"anchors\",\"adobe-pdf\",\"alternative\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:ba8224f68974e6a46ad24db5f168999d3327a3b2965d321633d7a468c12f1979",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "evidence_source_id": "e5fa408f-d721-4799-aa15-858390ce961e"
+    },
+    {
+      "id": "87bdc0e3-b057-44f1-a064-dd8aa0609ba5",
+      "notes": "Seed source reference for [\"pdfgear\",\"attributes\",\"trade-off-summary\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:bad7b277e275108412e44e6cba8e26baa5bd56a3288141cf90e786f244c4b679",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "evidence_source_id": "e338a127-f05c-4dc1-80ea-2869f5f61a48"
+    },
+    {
+      "id": "4ceab00e-e9af-4d0e-a171-1457da4cee85",
+      "notes": "Seed source reference for [\"pdf-xchange-editor\",\"problems\",\"unwanted-ai\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:bbfd9ac98965302d44583e54fafbbe47c7269611d019b172209b93b9c94bfac2",
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "updated_at": "2026-10-06T04:14:23.31324+00:00",
+      "evidence_source_id": "162fffd7-3ca2-4aff-9cf6-166dff5b0a79"
+    },
+    {
+      "id": "bcd2454d-f085-43b1-b786-6fa2d784ed4e",
+      "notes": "Seed source reference for [\"pdfgear\",\"attributes\",\"free-core-use\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:c2b648c8c0acd158af6077d342640324e874eff3b9593ba7a86ff074bb3545c3",
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "evidence_source_id": "f8eab55b-f554-438a-9b70-858c20ff311f"
+    },
+    {
+      "id": "a8a73f99-fc5c-4646-9b90-1e4c17d3f164",
+      "notes": "Seed source reference for [\"pdfgear\",\"anchors\",\"adobe-pdf\",\"alternative\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:c404cbebedc5e7bde694462acd16d4bbd2b91c7872dc8be56934f9a9599c937a",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "evidence_source_id": "672efe14-6a02-4ed9-811b-f29b62c8bde9"
+    },
+    {
+      "id": "6745c38e-2a03-4507-b2f4-ec68162127f6",
+      "notes": "Seed source reference for [\"pdf-xchange-editor\",\"anchors\",\"adobe-pdf\",\"alternative\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:c46a9f202710866602fa836260a849be1778e49785dee49bebd083c03d48d992",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "evidence_source_id": "55ed27b7-fa32-43b6-aca5-c96a631a68d3"
+    },
+    {
+      "id": "9154bff0-a17a-4df6-9769-9b8be06a1bc0",
+      "notes": "Seed source reference for [\"pdf-xchange-editor\",\"anchors\",\"adobe-pdf\",\"alternative\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:c935e056851d2c7931cc609f0eda11103b05b54806986445c6c6e794b0d8201b",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "evidence_source_id": "defd8e4e-929d-4a44-8c75-c8484829a83d"
+    },
+    {
+      "id": "7fc78c24-8bc2-48fc-b4c8-3d9f6648e190",
+      "notes": "Seed source reference for [\"pdf24-creator\",\"attributes\",\"local-first\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:c9ee25f6df8b636ec87b05abd4b5ebe937f6520d8e62c230f3e6ab294591f527",
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "evidence_source_id": "567e1777-21b7-4e8a-9821-7af82d7913df"
+    },
+    {
+      "id": "079968de-a49f-413b-b338-b7be90614262",
+      "notes": "Seed source reference for [\"pdfgear\",\"attributes\",\"trade-off-summary\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:ca151a6b7d4565cbd500c8c011d553788529a8f09185107a7a9fef48e23adca7",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "evidence_source_id": "67b814b1-df43-4442-a7e6-b965f5228a43"
+    },
+    {
+      "id": "b781a70a-1baf-4617-8afd-2c2fd9720a74",
+      "notes": "Seed source reference for [\"pdf-xchange-editor\",\"attributes\",\"trade-off-summary\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:d1192b4606ed449f4ef3d4751dc98b4e021e5a1fd70f2a45cc6dd2bd70c7abaa",
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "evidence_source_id": "ebc93783-0930-4051-a321-8d02d91de68a"
+    },
+    {
+      "id": "5a8c0ceb-9ca5-4766-8fa1-d0f653c04f31",
+      "notes": "Seed source reference for [\"pdf24-creator\",\"problems\",\"subscription-fatigue\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:d4d9472fc0c2bd4502794454f001ed33ca8ff07c0c2ea91c6c3af54a8eeeb8bf",
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "updated_at": "2026-10-06T04:14:23.31324+00:00",
+      "evidence_source_id": "48382302-349e-47a7-855a-270074100d02"
+    },
+    {
+      "id": "0c2f7c8a-1fc8-44fd-9737-82a58719a269",
+      "notes": "Seed source reference for [\"pdf24-creator\",\"audiences\",\"offline-first-users\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:efb59cd359102beaddb618263bbfcca5de92e7ebb1171880d85df04f13ccba14",
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "updated_at": "2026-10-06T04:14:23.31324+00:00",
+      "evidence_source_id": "567e1777-21b7-4e8a-9821-7af82d7913df"
+    },
+    {
+      "id": "23d92ec8-5a50-4ddc-9bf4-ac8c16f7707d",
+      "notes": "Seed source reference for [\"pdfgear\",\"anchors\",\"adobe-pdf\",\"alternative\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:f0227ff1d6b2ee282d99c1d361c2d9541f678ee02f39deb6b5fd27261077b03f",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "evidence_source_id": "e338a127-f05c-4dc1-80ea-2869f5f61a48"
+    },
+    {
+      "id": "7b55759b-c71a-4ae7-ab1e-d7f54b58959c",
+      "notes": "Seed source reference for [\"pdf24-creator\",\"attributes\",\"works-offline\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:faf9f92414cbbd77be83a91fea9713cca13583472b3a2f559bb92e798d445ebe",
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "evidence_source_id": "567e1777-21b7-4e8a-9821-7af82d7913df"
+    },
+    {
+      "id": "b45a420e-72d1-4be7-abb4-e5456e36971d",
+      "notes": "Seed source reference for [\"pdf-xchange-editor\",\"attributes\",\"trade-off-summary\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:fe8166b2f7a1e7547ba86a4355f0a9167cfa387e376fabb21f99e8b78b389a1d",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "evidence_source_id": "ae39412a-0cb5-4244-8ba0-81d995cad80a"
+    }
+  ],
+  "product_anchors": [
+    {
+      "anchor_id": "4e54b828-4645-4d33-91db-d0bb743fcc76",
+      "confidence": 0.85,
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "product_id": "ea5f6f15-62e7-465d-a9a8-90d788a4fe00",
+      "last_verified_at": "2026-10-13T00:00:00+00:00",
+      "relationship_type": "alternative",
+      "scope_description": "Licensed Windows page organization only. Plus-only features and unlicensed demo output are excluded. Updates and prior-installer access have maintenance/version limits; no complete Acrobat parity or export fidelity test.",
+      "relationship_scope": "windows-personal-pdf-page-organization",
+      "verification_status": "verified"
+    },
+    {
+      "anchor_id": "4e54b828-4645-4d33-91db-d0bb743fcc76",
+      "confidence": 0.85,
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "product_id": "f17d436b-6419-40bc-88ab-d9e68432970d",
+      "last_verified_at": "2026-10-13T00:00:00+00:00",
+      "relationship_type": "alternative",
+      "scope_description": "Compare desktop page sorting, rotation, deletion and extraction. Existing-text editing parity is unverified; no full Acrobat, signature, redaction or export-fidelity guarantee.",
+      "relationship_scope": "windows-personal-pdf-page-organization",
+      "verification_status": "verified"
+    },
+    {
+      "anchor_id": "4e54b828-4645-4d33-91db-d0bb743fcc76",
+      "confidence": 0.85,
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "product_id": "fa72cfe7-2276-43ff-b352-8d4d26c90d65",
+      "last_verified_at": "2026-10-13T00:00:00+00:00",
+      "relationship_type": "alternative",
+      "scope_description": "Compare native page organization and PDF extraction. Reordering is documented as not undoable. AI/cloud privacy is separate; no full Acrobat or tested export-fidelity guarantee.",
+      "relationship_scope": "windows-personal-pdf-page-organization",
+      "verification_status": "verified"
+    }
+  ],
+  "evidence_sources": [
+    {
+      "id": "555ed2ed-2003-40fc-9cc7-5dec90b20bea",
+      "url": "https://helpx.adobe.com/acrobat/desktop/edit-documents/organize-pages/extract-pages.html",
+      "title": "Acrobat desktop page extraction",
+      "seed_key": "pdf-workflow-adobe-pages-2026-10-13",
+      "publisher": "Adobe",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "source_type": "documentation",
+      "retrieved_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "id": "54d9ab45-3134-4000-a397-a7a4a1500dc2",
+      "url": "https://tools.pdf24.org/en/creator",
+      "title": "creator",
+      "seed_key": "pdf-workflow-creator-2026-10-13",
+      "publisher": "tools.pdf24.org",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "source_type": "documentation",
+      "retrieved_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "id": "1ca9b3fc-9291-4d2d-aa51-ce612c34dc7f",
+      "url": "https://www.pdfgear.com/windows-user-guide/extract-pages-from-pdf.htm",
+      "title": "gear-extract",
+      "seed_key": "pdf-workflow-gear-extract-2026-10-13",
+      "publisher": "www.pdfgear.com",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "source_type": "documentation",
+      "retrieved_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "id": "67b814b1-df43-4442-a7e6-b965f5228a43",
+      "url": "https://www.pdfgear.com/pdfgear-for-windows/",
+      "title": "gear-offer",
+      "seed_key": "pdf-workflow-gear-offer-2026-10-13",
+      "publisher": "www.pdfgear.com",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "source_type": "documentation",
+      "retrieved_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "id": "672efe14-6a02-4ed9-811b-f29b62c8bde9",
+      "url": "https://www.pdfgear.com/windows-user-guide/introduction-pdfgear.htm",
+      "title": "gear-organizer",
+      "seed_key": "pdf-workflow-gear-organizer-2026-10-13",
+      "publisher": "www.pdfgear.com",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "source_type": "documentation",
+      "retrieved_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "id": "e338a127-f05c-4dc1-80ea-2869f5f61a48",
+      "url": "https://www.pdfgear.com/windows-user-guide/reorder-pdf-pages.htm",
+      "title": "gear-reorder",
+      "seed_key": "pdf-workflow-gear-reorder-2026-10-13",
+      "publisher": "www.pdfgear.com",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "source_type": "documentation",
+      "retrieved_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "id": "ec44e67a-edbb-4840-94d1-b973483577df",
+      "url": "https://help.pdf-xchange.com/pdfxe11/deleting-pages.html",
+      "title": "x-delete",
+      "seed_key": "pdf-workflow-x-delete-2026-10-13",
+      "publisher": "help.pdf-xchange.com",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "source_type": "documentation",
+      "retrieved_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "id": "29c0e8da-dead-40d2-89c6-bc905f01979d",
+      "url": "https://help.pdf-xchange.com/pdfxe11/extracting-pages.html",
+      "title": "x-extract",
+      "seed_key": "pdf-workflow-x-extract-2026-10-13",
+      "publisher": "help.pdf-xchange.com",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "source_type": "documentation",
+      "retrieved_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "id": "55ed27b7-fa32-43b6-aca5-c96a631a68d3",
+      "url": "https://www.pdf-xchange.com/licensing",
+      "title": "x-license",
+      "seed_key": "pdf-workflow-x-license-2026-10-13",
+      "publisher": "www.pdf-xchange.com",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "source_type": "documentation",
+      "retrieved_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "id": "e5fa408f-d721-4799-aa15-858390ce961e",
+      "url": "https://help.pdf-xchange.com/pdfxe11/moving-pages_ed.html",
+      "title": "x-move",
+      "seed_key": "pdf-workflow-x-move-2026-10-13",
+      "publisher": "help.pdf-xchange.com",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "source_type": "documentation",
+      "retrieved_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "id": "defd8e4e-929d-4a44-8c75-c8484829a83d",
+      "url": "https://www.pdf-xchange.com/product/pdf-xchange-editor",
+      "title": "Editor licensing and edition features",
+      "seed_key": "pdf-workflow-x-product-2026-10-13",
+      "publisher": "PDF-XChange",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "source_type": "documentation",
+      "retrieved_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "id": "ae39412a-0cb5-4244-8ba0-81d995cad80a",
+      "url": "https://help.pdf-xchange.com/pdfxe11/rotate-move-copy-delete-and-renumber-pdf-pages.html",
+      "title": "Standard Editor V11 permanent rotation",
+      "seed_key": "pdf-workflow-x-rotate-2026-10-13",
+      "publisher": "PDF-XChange",
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "source_type": "documentation",
+      "retrieved_at": "2026-10-13T00:00:00+00:00"
+    },
+    {
+      "id": "162fffd7-3ca2-4aff-9cf6-166dff5b0a79",
+      "url": "https://www.pdf-xchange.com/product/pdf-xchange-editor",
+      "title": "PDF-XChange Editor — overview reference",
+      "seed_key": "pdf-xchange-editor-overview-2026-10-06",
+      "publisher": "PDF-XChange Editor",
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "source_type": "official",
+      "retrieved_at": "2026-10-06T00:00:00+00:00"
+    },
+    {
+      "id": "41a62aa0-a87b-46ec-b210-5a7622e2b786",
+      "url": "https://www.pdf-xchange.com/product/pdf-xchange-editor",
+      "title": "PDF-XChange Editor — platform reference",
+      "seed_key": "pdf-xchange-editor-platform-2026-10-06",
+      "publisher": "PDF-XChange Editor",
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "source_type": "official",
+      "retrieved_at": "2026-10-06T00:00:00+00:00"
+    },
+    {
+      "id": "649d9518-7e30-4316-a7f9-878de319cf0f",
+      "url": "https://www.pdf-xchange.com/product/pdf-xchange-editor",
+      "title": "PDF-XChange Editor — pricing reference",
+      "seed_key": "pdf-xchange-editor-pricing-2026-10-06",
+      "publisher": "PDF-XChange Editor",
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "source_type": "pricing",
+      "retrieved_at": "2026-10-06T00:00:00+00:00"
+    },
+    {
+      "id": "ebc93783-0930-4051-a321-8d02d91de68a",
+      "url": "https://www.pdf-xchange.com/product/pdf-xchange-editor",
+      "title": "PDF-XChange Editor — tradeoff reference",
+      "seed_key": "pdf-xchange-editor-tradeoff-2026-10-06",
+      "publisher": "PDF-XChange Editor",
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "source_type": "official",
+      "retrieved_at": "2026-10-06T00:00:00+00:00"
+    },
+    {
+      "id": "567e1777-21b7-4e8a-9821-7af82d7913df",
+      "url": "https://tools.pdf24.org/en/creator",
+      "title": "PDF24 Creator — overview reference",
+      "seed_key": "pdf24-creator-overview-2026-10-06",
+      "publisher": "PDF24 Creator",
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "source_type": "official",
+      "retrieved_at": "2026-10-06T00:00:00+00:00"
+    },
+    {
+      "id": "d69a5e3e-0eb2-4a08-84a1-d0a5f4257f4c",
+      "url": "https://tools.pdf24.org/en/creator",
+      "title": "PDF24 Creator — platform reference",
+      "seed_key": "pdf24-creator-platform-2026-10-06",
+      "publisher": "PDF24 Creator",
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "source_type": "official",
+      "retrieved_at": "2026-10-06T00:00:00+00:00"
+    },
+    {
+      "id": "48382302-349e-47a7-855a-270074100d02",
+      "url": "https://tools.pdf24.org/en/creator",
+      "title": "PDF24 Creator — pricing reference",
+      "seed_key": "pdf24-creator-pricing-2026-10-06",
+      "publisher": "PDF24 Creator",
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "source_type": "pricing",
+      "retrieved_at": "2026-10-06T00:00:00+00:00"
+    },
+    {
+      "id": "02a56dfe-d5b2-4854-9d32-8b00225ff887",
+      "url": "https://tools.pdf24.org/en/creator",
+      "title": "PDF24 Creator — tradeoff reference",
+      "seed_key": "pdf24-creator-tradeoff-2026-10-06",
+      "publisher": "PDF24 Creator",
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "source_type": "official",
+      "retrieved_at": "2026-10-06T00:00:00+00:00"
+    },
+    {
+      "id": "0bee7d1f-758b-4221-ab99-49aaee90119a",
+      "url": "https://www.pdfgear.com/",
+      "title": "PDFgear — overview reference",
+      "seed_key": "pdfgear-overview-2026-10-06",
+      "publisher": "PDFgear",
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "source_type": "official",
+      "retrieved_at": "2026-10-06T00:00:00+00:00"
+    },
+    {
+      "id": "d9d16104-17fb-4c32-84fa-11fd909cb56e",
+      "url": "https://www.pdfgear.com/",
+      "title": "PDFgear — platform reference",
+      "seed_key": "pdfgear-platform-2026-10-06",
+      "publisher": "PDFgear",
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "source_type": "official",
+      "retrieved_at": "2026-10-06T00:00:00+00:00"
+    },
+    {
+      "id": "f8eab55b-f554-438a-9b70-858c20ff311f",
+      "url": "https://www.pdfgear.com/",
+      "title": "PDFgear — pricing reference",
+      "seed_key": "pdfgear-pricing-2026-10-06",
+      "publisher": "PDFgear",
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "source_type": "pricing",
+      "retrieved_at": "2026-10-06T00:00:00+00:00"
+    },
+    {
+      "id": "053fd124-8afe-4da6-8fa0-b066a0efe90a",
+      "url": "https://www.pdfgear.com/",
+      "title": "PDFgear — tradeoff reference",
+      "seed_key": "pdfgear-tradeoff-2026-10-06",
+      "publisher": "PDFgear",
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "source_type": "official",
+      "retrieved_at": "2026-10-06T00:00:00+00:00"
+    }
+  ],
+  "product_problems": [
+    {
+      "confidence": 0.75,
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "problem_id": "969ac1b9-21ca-433f-8365-e3d8554b1271",
+      "product_id": "ea5f6f15-62e7-465d-a9a8-90d788a4fe00",
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "likely"
+    },
+    {
+      "confidence": 0.75,
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "problem_id": "58231e35-9b9b-46bb-add8-21417ed2c6d1",
+      "product_id": "f17d436b-6419-40bc-88ab-d9e68432970d",
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "likely"
+    },
+    {
+      "confidence": 0.75,
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "problem_id": "ea051229-179e-4714-a1a3-a1304070bf70",
+      "product_id": "f17d436b-6419-40bc-88ab-d9e68432970d",
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "likely"
+    },
+    {
+      "confidence": 0.75,
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "problem_id": "58231e35-9b9b-46bb-add8-21417ed2c6d1",
+      "product_id": "fa72cfe7-2276-43ff-b352-8d4d26c90d65",
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "likely"
+    }
+  ],
+  "taxonomy_anchors": [
+    {
+      "id": "4e54b828-4645-4d33-91db-d0bb743fcc76",
+      "name": "Adobe / PDF",
+      "slug": "adobe-pdf",
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "description": "Acrobat-style PDF reading, editing, conversion, and document-tool ecosystem; feature parity is not implied."
+    }
+  ],
+  "product_audiences": [
+    {
+      "confidence": 0.75,
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "product_id": "ea5f6f15-62e7-465d-a9a8-90d788a4fe00",
+      "audience_id": "bcae81ff-f9f7-47e6-8d38-ebc5debf75d2",
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "likely"
+    },
+    {
+      "confidence": 0.75,
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "product_id": "f17d436b-6419-40bc-88ab-d9e68432970d",
+      "audience_id": "a109e976-6346-458d-b1aa-dac8c190b8c0",
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "likely"
+    },
+    {
+      "confidence": 0.75,
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "product_id": "f17d436b-6419-40bc-88ab-d9e68432970d",
+      "audience_id": "bcae81ff-f9f7-47e6-8d38-ebc5debf75d2",
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "likely"
+    },
+    {
+      "confidence": 0.75,
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "product_id": "fa72cfe7-2276-43ff-b352-8d4d26c90d65",
+      "audience_id": "bcae81ff-f9f7-47e6-8d38-ebc5debf75d2",
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "likely"
+    }
+  ],
+  "product_attributes": [
+    {
+      "confidence": 0.85,
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "product_id": "ea5f6f15-62e7-465d-a9a8-90d788a4fe00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "value_enum": null,
+      "value_text": "Licensed Windows page organization only. Plus-only features and unlicensed demo output are excluded. Updates and prior-installer access have maintenance/version limits; no complete Acrobat parity or export fidelity test.",
+      "attribute_id": "18dee1eb-8a8a-45fa-b463-8487065642d9",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": "2026-10-13T00:00:00+00:00",
+      "verification_status": "verified"
+    },
+    {
+      "confidence": null,
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "product_id": "ea5f6f15-62e7-465d-a9a8-90d788a4fe00",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "value_enum": null,
+      "value_text": null,
+      "attribute_id": "2d9835d9-4aa0-4fb3-93fa-2c98d4f890c4",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": null,
+      "verification_status": "unknown"
+    },
+    {
+      "confidence": 0.95,
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "product_id": "ea5f6f15-62e7-465d-a9a8-90d788a4fe00",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "value_enum": null,
+      "value_text": "Windows 10 and later",
+      "attribute_id": "2e5f8446-3bb6-4e92-990e-d6c253d2417c",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "verified"
+    },
+    {
+      "confidence": 0.9,
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "product_id": "ea5f6f15-62e7-465d-a9a8-90d788a4fe00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "value_enum": null,
+      "value_text": null,
+      "attribute_id": "496d6370-cf03-4842-b0e3-22c307613b97",
+      "value_number": null,
+      "value_boolean": true,
+      "last_verified_at": "2026-10-13T00:00:00+00:00",
+      "verification_status": "verified"
+    },
+    {
+      "confidence": 0.9,
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "product_id": "ea5f6f15-62e7-465d-a9a8-90d788a4fe00",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "value_enum": null,
+      "value_text": "Licensed standard Editor V11; perpetual license for covered versions, with optional maintenance.",
+      "attribute_id": "83353c3f-3cd2-4505-8311-f722e720867c",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": "2026-10-13T00:00:00+00:00",
+      "verification_status": "verified"
+    },
+    {
+      "confidence": null,
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "product_id": "ea5f6f15-62e7-465d-a9a8-90d788a4fe00",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "value_enum": null,
+      "value_text": null,
+      "attribute_id": "cf8b0015-81e0-440b-b7d6-281ae28c43d4",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": null,
+      "verification_status": "unknown"
+    },
+    {
+      "confidence": 0.95,
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "product_id": "ea5f6f15-62e7-465d-a9a8-90d788a4fe00",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "value_enum": null,
+      "value_text": null,
+      "attribute_id": "f540baaf-959c-485b-a65b-68c2b072841e",
+      "value_number": null,
+      "value_boolean": true,
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "verified"
+    },
+    {
+      "confidence": 0.85,
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "product_id": "f17d436b-6419-40bc-88ab-d9e68432970d",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "value_enum": null,
+      "value_text": "Compare desktop page sorting, rotation, deletion and extraction. Existing-text editing parity is unverified; no full Acrobat, signature, redaction or export-fidelity guarantee.",
+      "attribute_id": "18dee1eb-8a8a-45fa-b463-8487065642d9",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": "2026-10-13T00:00:00+00:00",
+      "verification_status": "verified"
+    },
+    {
+      "confidence": 0.95,
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "product_id": "f17d436b-6419-40bc-88ab-d9e68432970d",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "value_enum": null,
+      "value_text": null,
+      "attribute_id": "2d9835d9-4aa0-4fb3-93fa-2c98d4f890c4",
+      "value_number": null,
+      "value_boolean": true,
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "verified"
+    },
+    {
+      "confidence": 0.95,
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "product_id": "f17d436b-6419-40bc-88ab-d9e68432970d",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "value_enum": null,
+      "value_text": "Windows",
+      "attribute_id": "2e5f8446-3bb6-4e92-990e-d6c253d2417c",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "verified"
+    },
+    {
+      "confidence": 0.9,
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "product_id": "f17d436b-6419-40bc-88ab-d9e68432970d",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "value_enum": null,
+      "value_text": null,
+      "attribute_id": "496d6370-cf03-4842-b0e3-22c307613b97",
+      "value_number": null,
+      "value_boolean": true,
+      "last_verified_at": "2026-10-13T00:00:00+00:00",
+      "verification_status": "verified"
+    },
+    {
+      "confidence": 0.95,
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "product_id": "f17d436b-6419-40bc-88ab-d9e68432970d",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "value_enum": null,
+      "value_text": null,
+      "attribute_id": "7f2af8c8-8aee-4d54-a93a-46d77a3ead17",
+      "value_number": null,
+      "value_boolean": true,
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "verified"
+    },
+    {
+      "confidence": 0.9,
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "product_id": "f17d436b-6419-40bc-88ab-d9e68432970d",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "value_enum": null,
+      "value_text": "Free Windows desktop Creator for private and commercial use.",
+      "attribute_id": "83353c3f-3cd2-4505-8311-f722e720867c",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": "2026-10-13T00:00:00+00:00",
+      "verification_status": "verified"
+    },
+    {
+      "confidence": 0.95,
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "product_id": "f17d436b-6419-40bc-88ab-d9e68432970d",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "value_enum": null,
+      "value_text": null,
+      "attribute_id": "b4f5b4a4-87fe-4df9-86de-fd65fae5092d",
+      "value_number": null,
+      "value_boolean": true,
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "verified"
+    },
+    {
+      "confidence": null,
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "product_id": "f17d436b-6419-40bc-88ab-d9e68432970d",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "value_enum": null,
+      "value_text": null,
+      "attribute_id": "cf8b0015-81e0-440b-b7d6-281ae28c43d4",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": null,
+      "verification_status": "unknown"
+    },
+    {
+      "confidence": null,
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "product_id": "f17d436b-6419-40bc-88ab-d9e68432970d",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "value_enum": null,
+      "value_text": null,
+      "attribute_id": "f540baaf-959c-485b-a65b-68c2b072841e",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": null,
+      "verification_status": "unknown"
+    },
+    {
+      "confidence": 0.85,
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "product_id": "fa72cfe7-2276-43ff-b352-8d4d26c90d65",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "value_enum": null,
+      "value_text": "Compare native page organization and PDF extraction. Reordering is documented as not undoable. AI/cloud privacy is separate; no full Acrobat or tested export-fidelity guarantee.",
+      "attribute_id": "18dee1eb-8a8a-45fa-b463-8487065642d9",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": "2026-10-13T00:00:00+00:00",
+      "verification_status": "verified"
+    },
+    {
+      "confidence": null,
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "product_id": "fa72cfe7-2276-43ff-b352-8d4d26c90d65",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "value_enum": null,
+      "value_text": null,
+      "attribute_id": "2d9835d9-4aa0-4fb3-93fa-2c98d4f890c4",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": null,
+      "verification_status": "unknown"
+    },
+    {
+      "confidence": 0.95,
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "product_id": "fa72cfe7-2276-43ff-b352-8d4d26c90d65",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "value_enum": null,
+      "value_text": "Windows, macOS, iOS/iPadOS, Android; Web tools",
+      "attribute_id": "2e5f8446-3bb6-4e92-990e-d6c253d2417c",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "verified"
+    },
+    {
+      "confidence": 0.9,
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "product_id": "fa72cfe7-2276-43ff-b352-8d4d26c90d65",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "value_enum": null,
+      "value_text": null,
+      "attribute_id": "496d6370-cf03-4842-b0e3-22c307613b97",
+      "value_number": null,
+      "value_boolean": true,
+      "last_verified_at": "2026-10-13T00:00:00+00:00",
+      "verification_status": "verified"
+    },
+    {
+      "confidence": 0.95,
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "product_id": "fa72cfe7-2276-43ff-b352-8d4d26c90d65",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "value_enum": null,
+      "value_text": null,
+      "attribute_id": "7f2af8c8-8aee-4d54-a93a-46d77a3ead17",
+      "value_number": null,
+      "value_boolean": true,
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "verified"
+    },
+    {
+      "confidence": 0.9,
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "product_id": "fa72cfe7-2276-43ff-b352-8d4d26c90d65",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "value_enum": null,
+      "value_text": "Current free Windows desktop offer; future pricing is not guaranteed.",
+      "attribute_id": "83353c3f-3cd2-4505-8311-f722e720867c",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": "2026-10-13T00:00:00+00:00",
+      "verification_status": "verified"
+    },
+    {
+      "confidence": null,
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "product_id": "fa72cfe7-2276-43ff-b352-8d4d26c90d65",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "value_enum": null,
+      "value_text": null,
+      "attribute_id": "cf8b0015-81e0-440b-b7d6-281ae28c43d4",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": null,
+      "verification_status": "unknown"
+    },
+    {
+      "confidence": null,
+      "created_at": "2026-10-06T03:23:43.673301+00:00",
+      "product_id": "fa72cfe7-2276-43ff-b352-8d4d26c90d65",
+      "updated_at": "2026-10-06T03:23:43.673301+00:00",
+      "value_enum": null,
+      "value_text": null,
+      "attribute_id": "f540baaf-959c-485b-a65b-68c2b072841e",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": null,
+      "verification_status": "unknown"
+    }
+  ],
+  "published_products": [
+    "2do",
+    "affine",
+    "anytype",
+    "appflowy",
+    "gimp",
+    "joplin",
+    "krita",
+    "obsidian",
+    "omnifocus",
+    "paint-net",
+    "simplenote",
+    "things"
+  ],
+  "taxonomy_attributes": [
+    {
+      "id": "f540baaf-959c-485b-a65b-68c2b072841e",
+      "name": "AI Optional",
+      "slug": "ai-optional",
+      "category": "ai",
+      "created_at": "2026-10-06T02:49:38.03521+00:00",
+      "updated_at": "2026-10-06T02:49:38.03521+00:00",
+      "value_type": "boolean",
+      "description": "Core product workflows remain usable without enabling, purchasing, or depending on AI functionality. Integrated AI or optional AI plugins do not disqualify a product; evidence must support the non-AI core workflow."
+    },
+    {
+      "id": "7f2af8c8-8aee-4d54-a93a-46d77a3ead17",
+      "name": "Free Core Use",
+      "slug": "free-core-use",
+      "category": "pricing",
+      "created_at": "2026-10-06T02:49:38.03521+00:00",
+      "updated_at": "2026-10-06T02:49:38.03521+00:00",
+      "value_type": "boolean",
+      "description": "A meaningful core product workflow is available without a recurring software fee."
+    },
+    {
+      "id": "b4f5b4a4-87fe-4df9-86de-fd65fae5092d",
+      "name": "Local First",
+      "slug": "local-first",
+      "category": "data_control",
+      "created_at": "2026-10-06T02:49:38.03521+00:00",
+      "updated_at": "2026-10-06T02:49:38.03521+00:00",
+      "value_type": "boolean",
+      "description": "Primary data or application workflow is designed around local device storage or local-first operation."
+    },
+    {
+      "id": "496d6370-cf03-4842-b0e3-22c307613b97",
+      "name": "No Subscription",
+      "slug": "no-subscription",
+      "category": "pricing",
+      "created_at": "2026-10-07T09:58:41.404192+00:00",
+      "updated_at": "2026-10-07T09:58:41.404192+00:00",
+      "value_type": "boolean",
+      "description": "The named edition supports the stated meaningful core workflow without a mandatory recurring software payment. Free and perpetual paid editions may qualify; trials do not. Optional sync, AI, cloud, maintenance and paid upgrades must be disclosed."
+    },
+    {
+      "id": "cf8b0015-81e0-440b-b7d6-281ae28c43d4",
+      "name": "Open Source",
+      "slug": "open-source",
+      "category": "licensing",
+      "created_at": "2026-10-06T02:49:38.03521+00:00",
+      "updated_at": "2026-10-06T02:49:38.03521+00:00",
+      "value_type": "boolean",
+      "description": "The product or its core editor is distributed under an open-source license according to current official materials."
+    },
+    {
+      "id": "83353c3f-3cd2-4505-8311-f722e720867c",
+      "name": "Pricing Model",
+      "slug": "pricing-model",
+      "category": "pricing",
+      "created_at": "2026-10-06T03:22:38.833862+00:00",
+      "updated_at": "2026-10-06T03:22:38.833862+00:00",
+      "value_type": "text",
+      "description": "Source-backed pricing model and relevant edition scope; excludes transient numeric prices."
+    },
+    {
+      "id": "2e5f8446-3bb6-4e92-990e-d6c253d2417c",
+      "name": "Supported Platforms",
+      "slug": "supported-platforms",
+      "category": "platform",
+      "created_at": "2026-10-06T03:22:38.833862+00:00",
+      "updated_at": "2026-10-06T03:22:38.833862+00:00",
+      "value_type": "text",
+      "description": "Source-listed platforms and edition scope; an omitted platform is not a verified negative."
+    },
+    {
+      "id": "18dee1eb-8a8a-45fa-b463-8487065642d9",
+      "name": "Trade-Off Summary",
+      "slug": "trade-off-summary",
+      "category": "workflow",
+      "created_at": "2026-10-06T03:22:38.833862+00:00",
+      "updated_at": "2026-10-06T03:22:38.833862+00:00",
+      "value_type": "text",
+      "description": "Evidence-backed restrictions or explicitly provisional editorial interpretation, with confidence status."
+    },
+    {
+      "id": "2d9835d9-4aa0-4fb3-93fa-2c98d4f890c4",
+      "name": "Works Offline",
+      "slug": "works-offline",
+      "category": "offline",
+      "created_at": "2026-10-06T02:49:38.03521+00:00",
+      "updated_at": "2026-10-06T02:49:38.03521+00:00",
+      "value_type": "boolean",
+      "description": "Core work remains available without an internet connection."
+    }
+  ],
+  "product_anchor_evidence": [
+    {
+      "anchor_id": "4e54b828-4645-4d33-91db-d0bb743fcc76",
+      "product_id": "ea5f6f15-62e7-465d-a9a8-90d788a4fe00",
+      "claim_evidence_id": "038c2db9-61e3-46c6-a176-5e038fa2317e",
+      "relationship_type": "alternative"
+    },
+    {
+      "anchor_id": "4e54b828-4645-4d33-91db-d0bb743fcc76",
+      "product_id": "ea5f6f15-62e7-465d-a9a8-90d788a4fe00",
+      "claim_evidence_id": "6745c38e-2a03-4507-b2f4-ec68162127f6",
+      "relationship_type": "alternative"
+    },
+    {
+      "anchor_id": "4e54b828-4645-4d33-91db-d0bb743fcc76",
+      "product_id": "ea5f6f15-62e7-465d-a9a8-90d788a4fe00",
+      "claim_evidence_id": "8b8a890b-66a2-431b-bd75-d15af092da74",
+      "relationship_type": "alternative"
+    },
+    {
+      "anchor_id": "4e54b828-4645-4d33-91db-d0bb743fcc76",
+      "product_id": "ea5f6f15-62e7-465d-a9a8-90d788a4fe00",
+      "claim_evidence_id": "9154bff0-a17a-4df6-9769-9b8be06a1bc0",
+      "relationship_type": "alternative"
+    },
+    {
+      "anchor_id": "4e54b828-4645-4d33-91db-d0bb743fcc76",
+      "product_id": "ea5f6f15-62e7-465d-a9a8-90d788a4fe00",
+      "claim_evidence_id": "ccffa1e5-e746-4e24-8fe5-bad739a18614",
+      "relationship_type": "alternative"
+    },
+    {
+      "anchor_id": "4e54b828-4645-4d33-91db-d0bb743fcc76",
+      "product_id": "ea5f6f15-62e7-465d-a9a8-90d788a4fe00",
+      "claim_evidence_id": "da8731aa-a222-41bb-b157-9ff42cc0308a",
+      "relationship_type": "alternative"
+    },
+    {
+      "anchor_id": "4e54b828-4645-4d33-91db-d0bb743fcc76",
+      "product_id": "ea5f6f15-62e7-465d-a9a8-90d788a4fe00",
+      "claim_evidence_id": "ed9f6f8a-8b58-4c97-84d7-dc86038902eb",
+      "relationship_type": "alternative"
+    },
+    {
+      "anchor_id": "4e54b828-4645-4d33-91db-d0bb743fcc76",
+      "product_id": "ea5f6f15-62e7-465d-a9a8-90d788a4fe00",
+      "claim_evidence_id": "fd98e8e2-3ab0-4204-867c-2e26b7988256",
+      "relationship_type": "alternative"
+    },
+    {
+      "anchor_id": "4e54b828-4645-4d33-91db-d0bb743fcc76",
+      "product_id": "f17d436b-6419-40bc-88ab-d9e68432970d",
+      "claim_evidence_id": "39921e9e-ed95-4358-902c-3ac8312ce90b",
+      "relationship_type": "alternative"
+    },
+    {
+      "anchor_id": "4e54b828-4645-4d33-91db-d0bb743fcc76",
+      "product_id": "f17d436b-6419-40bc-88ab-d9e68432970d",
+      "claim_evidence_id": "8cdc4ea5-f0ef-4cab-9e22-639ba1712456",
+      "relationship_type": "alternative"
+    },
+    {
+      "anchor_id": "4e54b828-4645-4d33-91db-d0bb743fcc76",
+      "product_id": "f17d436b-6419-40bc-88ab-d9e68432970d",
+      "claim_evidence_id": "ae35358f-bcc7-4afd-af84-d01466ae5254",
+      "relationship_type": "alternative"
+    },
+    {
+      "anchor_id": "4e54b828-4645-4d33-91db-d0bb743fcc76",
+      "product_id": "fa72cfe7-2276-43ff-b352-8d4d26c90d65",
+      "claim_evidence_id": "23d92ec8-5a50-4ddc-9bf4-ac8c16f7707d",
+      "relationship_type": "alternative"
+    },
+    {
+      "anchor_id": "4e54b828-4645-4d33-91db-d0bb743fcc76",
+      "product_id": "fa72cfe7-2276-43ff-b352-8d4d26c90d65",
+      "claim_evidence_id": "3b799dd7-f9f7-4bd8-b6ef-8ff03ae8b02a",
+      "relationship_type": "alternative"
+    },
+    {
+      "anchor_id": "4e54b828-4645-4d33-91db-d0bb743fcc76",
+      "product_id": "fa72cfe7-2276-43ff-b352-8d4d26c90d65",
+      "claim_evidence_id": "3ef1efa2-6ec6-470c-a507-1fea45dca3a6",
+      "relationship_type": "alternative"
+    },
+    {
+      "anchor_id": "4e54b828-4645-4d33-91db-d0bb743fcc76",
+      "product_id": "fa72cfe7-2276-43ff-b352-8d4d26c90d65",
+      "claim_evidence_id": "55840286-e0de-4f64-9b3c-b22e5dc3c5df",
+      "relationship_type": "alternative"
+    },
+    {
+      "anchor_id": "4e54b828-4645-4d33-91db-d0bb743fcc76",
+      "product_id": "fa72cfe7-2276-43ff-b352-8d4d26c90d65",
+      "claim_evidence_id": "6534eea4-73f7-49eb-8d90-6901349826c0",
+      "relationship_type": "alternative"
+    },
+    {
+      "anchor_id": "4e54b828-4645-4d33-91db-d0bb743fcc76",
+      "product_id": "fa72cfe7-2276-43ff-b352-8d4d26c90d65",
+      "claim_evidence_id": "a8a73f99-fc5c-4646-9b90-1e4c17d3f164",
+      "relationship_type": "alternative"
+    }
+  ],
+  "product_problem_evidence": [
+    {
+      "problem_id": "969ac1b9-21ca-433f-8365-e3d8554b1271",
+      "product_id": "ea5f6f15-62e7-465d-a9a8-90d788a4fe00",
+      "claim_evidence_id": "4ceab00e-e9af-4d0e-a171-1457da4cee85"
+    },
+    {
+      "problem_id": "58231e35-9b9b-46bb-add8-21417ed2c6d1",
+      "product_id": "f17d436b-6419-40bc-88ab-d9e68432970d",
+      "claim_evidence_id": "5a8c0ceb-9ca5-4766-8fa1-d0f653c04f31"
+    },
+    {
+      "problem_id": "ea051229-179e-4714-a1a3-a1304070bf70",
+      "product_id": "f17d436b-6419-40bc-88ab-d9e68432970d",
+      "claim_evidence_id": "db31f606-ccf7-4ead-b6da-37f22a6d6458"
+    },
+    {
+      "problem_id": "58231e35-9b9b-46bb-add8-21417ed2c6d1",
+      "product_id": "fa72cfe7-2276-43ff-b352-8d4d26c90d65",
+      "claim_evidence_id": "872183b6-68be-4e17-887f-9dd3fa8cb436"
+    }
+  ],
+  "target_route_memberships": [
+    {
+      "position": 1,
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "product_id": "ea5f6f15-62e7-465d-a9a8-90d788a4fe00",
+      "route_slug": "pdf-editors-without-a-subscription",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "route_status": "draft",
+      "novelty_score": null,
+      "quality_score": null,
+      "editorial_note": "Licensed Windows page organization only. Plus-only features and unlicensed demo output are excluded. Updates and prior-installer access have maintenance/version limits; no complete Acrobat parity or export fidelity test.",
+      "escape_route_id": "4b64f6fe-e76a-44a4-8f5a-684ab9b2b717",
+      "relevance_score": null,
+      "constraint_fit_score": null,
+      "editorially_approved": false
+    },
+    {
+      "position": 2,
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "product_id": "f17d436b-6419-40bc-88ab-d9e68432970d",
+      "route_slug": "pdf-editors-without-a-subscription",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "route_status": "draft",
+      "novelty_score": null,
+      "quality_score": null,
+      "editorial_note": "Compare desktop page sorting, rotation, deletion and extraction. Existing-text editing parity is unverified; no full Acrobat, signature, redaction or export-fidelity guarantee.",
+      "escape_route_id": "4b64f6fe-e76a-44a4-8f5a-684ab9b2b717",
+      "relevance_score": null,
+      "constraint_fit_score": null,
+      "editorially_approved": false
+    },
+    {
+      "position": 3,
+      "created_at": "2026-10-13T07:56:41.31234+00:00",
+      "product_id": "fa72cfe7-2276-43ff-b352-8d4d26c90d65",
+      "route_slug": "pdf-editors-without-a-subscription",
+      "updated_at": "2026-10-13T07:56:41.31234+00:00",
+      "route_status": "draft",
+      "novelty_score": null,
+      "quality_score": null,
+      "editorial_note": "Compare native page organization and PDF extraction. Reordering is documented as not undoable. AI/cloud privacy is separate; no full Acrobat or tested export-fidelity guarantee.",
+      "escape_route_id": "4b64f6fe-e76a-44a4-8f5a-684ab9b2b717",
+      "relevance_score": null,
+      "constraint_fit_score": null,
+      "editorially_approved": false
+    }
+  ],
+  "approved_published_routes": [
+    "notion-alternatives-without-ai",
+    "offline-notion-alternatives",
+    "photoshop-alternatives-without-a-subscription",
+    "simple-notion-alternatives",
+    "todoist-alternatives-with-a-one-time-purchase"
+  ],
+  "product_audience_evidence": [
+    {
+      "product_id": "ea5f6f15-62e7-465d-a9a8-90d788a4fe00",
+      "audience_id": "bcae81ff-f9f7-47e6-8d38-ebc5debf75d2",
+      "claim_evidence_id": "c12ef8b6-e218-420c-9aea-ffdd480c0175"
+    },
+    {
+      "product_id": "f17d436b-6419-40bc-88ab-d9e68432970d",
+      "audience_id": "a109e976-6346-458d-b1aa-dac8c190b8c0",
+      "claim_evidence_id": "0c2f7c8a-1fc8-44fd-9737-82a58719a269"
+    },
+    {
+      "product_id": "f17d436b-6419-40bc-88ab-d9e68432970d",
+      "audience_id": "bcae81ff-f9f7-47e6-8d38-ebc5debf75d2",
+      "claim_evidence_id": "d625aaf2-e623-4929-b62e-a8faef837f31"
+    },
+    {
+      "product_id": "fa72cfe7-2276-43ff-b352-8d4d26c90d65",
+      "audience_id": "bcae81ff-f9f7-47e6-8d38-ebc5debf75d2",
+      "claim_evidence_id": "d0a01e01-af3d-4ac8-bf29-259359501d53"
+    }
+  ],
+  "product_attribute_evidence": [
+    {
+      "product_id": "ea5f6f15-62e7-465d-a9a8-90d788a4fe00",
+      "attribute_id": "18dee1eb-8a8a-45fa-b463-8487065642d9",
+      "claim_evidence_id": "3f402fc0-546c-4a4a-8f4d-aeacf2f25e5e"
+    },
+    {
+      "product_id": "ea5f6f15-62e7-465d-a9a8-90d788a4fe00",
+      "attribute_id": "18dee1eb-8a8a-45fa-b463-8487065642d9",
+      "claim_evidence_id": "74c8f944-f51e-4268-8274-2d93f73e90d3"
+    },
+    {
+      "product_id": "ea5f6f15-62e7-465d-a9a8-90d788a4fe00",
+      "attribute_id": "18dee1eb-8a8a-45fa-b463-8487065642d9",
+      "claim_evidence_id": "9bdbf00e-07a8-4cc8-8755-5c0cd35189a5"
+    },
+    {
+      "product_id": "ea5f6f15-62e7-465d-a9a8-90d788a4fe00",
+      "attribute_id": "18dee1eb-8a8a-45fa-b463-8487065642d9",
+      "claim_evidence_id": "b45a420e-72d1-4be7-abb4-e5456e36971d"
+    },
+    {
+      "product_id": "ea5f6f15-62e7-465d-a9a8-90d788a4fe00",
+      "attribute_id": "18dee1eb-8a8a-45fa-b463-8487065642d9",
+      "claim_evidence_id": "b781a70a-1baf-4617-8afd-2c2fd9720a74"
+    },
+    {
+      "product_id": "ea5f6f15-62e7-465d-a9a8-90d788a4fe00",
+      "attribute_id": "18dee1eb-8a8a-45fa-b463-8487065642d9",
+      "claim_evidence_id": "eea98109-bd51-4212-a3a9-a9a9de9022f7"
+    },
+    {
+      "product_id": "ea5f6f15-62e7-465d-a9a8-90d788a4fe00",
+      "attribute_id": "18dee1eb-8a8a-45fa-b463-8487065642d9",
+      "claim_evidence_id": "fbe81f29-2bd7-4f9e-b1b5-c464f2003db4"
+    },
+    {
+      "product_id": "ea5f6f15-62e7-465d-a9a8-90d788a4fe00",
+      "attribute_id": "2e5f8446-3bb6-4e92-990e-d6c253d2417c",
+      "claim_evidence_id": "702dfc15-3249-4d8c-afbd-447aa52a9ba8"
+    },
+    {
+      "product_id": "ea5f6f15-62e7-465d-a9a8-90d788a4fe00",
+      "attribute_id": "496d6370-cf03-4842-b0e3-22c307613b97",
+      "claim_evidence_id": "8cb2a657-cb01-481e-8cc2-17d0f584e40b"
+    },
+    {
+      "product_id": "ea5f6f15-62e7-465d-a9a8-90d788a4fe00",
+      "attribute_id": "496d6370-cf03-4842-b0e3-22c307613b97",
+      "claim_evidence_id": "f777a097-d755-4460-9ee0-bba83f0ebc5b"
+    },
+    {
+      "product_id": "ea5f6f15-62e7-465d-a9a8-90d788a4fe00",
+      "attribute_id": "83353c3f-3cd2-4505-8311-f722e720867c",
+      "claim_evidence_id": "04a64058-3dda-485e-bacb-b2ef22138739"
+    },
+    {
+      "product_id": "ea5f6f15-62e7-465d-a9a8-90d788a4fe00",
+      "attribute_id": "83353c3f-3cd2-4505-8311-f722e720867c",
+      "claim_evidence_id": "6f8e2d0e-5f03-491e-a43a-21aee97896f3"
+    },
+    {
+      "product_id": "ea5f6f15-62e7-465d-a9a8-90d788a4fe00",
+      "attribute_id": "83353c3f-3cd2-4505-8311-f722e720867c",
+      "claim_evidence_id": "9519f9a9-992a-49fd-923f-41460d9ed451"
+    },
+    {
+      "product_id": "ea5f6f15-62e7-465d-a9a8-90d788a4fe00",
+      "attribute_id": "f540baaf-959c-485b-a65b-68c2b072841e",
+      "claim_evidence_id": "60529898-533d-4e29-9d23-dee8dcaf0d21"
+    },
+    {
+      "product_id": "f17d436b-6419-40bc-88ab-d9e68432970d",
+      "attribute_id": "18dee1eb-8a8a-45fa-b463-8487065642d9",
+      "claim_evidence_id": "42520c41-f9de-4c1a-b2cb-6e773cfe8b60"
+    },
+    {
+      "product_id": "f17d436b-6419-40bc-88ab-d9e68432970d",
+      "attribute_id": "18dee1eb-8a8a-45fa-b463-8487065642d9",
+      "claim_evidence_id": "9ac2a59e-21e6-4fa3-9995-9d87d08b3d2b"
+    },
+    {
+      "product_id": "f17d436b-6419-40bc-88ab-d9e68432970d",
+      "attribute_id": "2d9835d9-4aa0-4fb3-93fa-2c98d4f890c4",
+      "claim_evidence_id": "7b55759b-c71a-4ae7-ab1e-d7f54b58959c"
+    },
+    {
+      "product_id": "f17d436b-6419-40bc-88ab-d9e68432970d",
+      "attribute_id": "2e5f8446-3bb6-4e92-990e-d6c253d2417c",
+      "claim_evidence_id": "4761af18-4d30-4a45-acd2-6b8f3e9e627e"
+    },
+    {
+      "product_id": "f17d436b-6419-40bc-88ab-d9e68432970d",
+      "attribute_id": "496d6370-cf03-4842-b0e3-22c307613b97",
+      "claim_evidence_id": "c2829f77-14ad-4536-99d6-f5599d820c29"
+    },
+    {
+      "product_id": "f17d436b-6419-40bc-88ab-d9e68432970d",
+      "attribute_id": "7f2af8c8-8aee-4d54-a93a-46d77a3ead17",
+      "claim_evidence_id": "601f94c1-6594-44f3-9a9b-d45d03e03187"
+    },
+    {
+      "product_id": "f17d436b-6419-40bc-88ab-d9e68432970d",
+      "attribute_id": "83353c3f-3cd2-4505-8311-f722e720867c",
+      "claim_evidence_id": "0f705ab8-da97-41a6-bb11-087ea6e7d57a"
+    },
+    {
+      "product_id": "f17d436b-6419-40bc-88ab-d9e68432970d",
+      "attribute_id": "83353c3f-3cd2-4505-8311-f722e720867c",
+      "claim_evidence_id": "46692b4b-81b9-46d5-87e7-f4202f3ca2f6"
+    },
+    {
+      "product_id": "f17d436b-6419-40bc-88ab-d9e68432970d",
+      "attribute_id": "b4f5b4a4-87fe-4df9-86de-fd65fae5092d",
+      "claim_evidence_id": "7fc78c24-8bc2-48fc-b4c8-3d9f6648e190"
+    },
+    {
+      "product_id": "fa72cfe7-2276-43ff-b352-8d4d26c90d65",
+      "attribute_id": "18dee1eb-8a8a-45fa-b463-8487065642d9",
+      "claim_evidence_id": "079968de-a49f-413b-b338-b7be90614262"
+    },
+    {
+      "product_id": "fa72cfe7-2276-43ff-b352-8d4d26c90d65",
+      "attribute_id": "18dee1eb-8a8a-45fa-b463-8487065642d9",
+      "claim_evidence_id": "2a148c5e-07ba-4e94-b2eb-a762098924d4"
+    },
+    {
+      "product_id": "fa72cfe7-2276-43ff-b352-8d4d26c90d65",
+      "attribute_id": "18dee1eb-8a8a-45fa-b463-8487065642d9",
+      "claim_evidence_id": "2d0a2986-7f06-4d95-8837-a966145e9a11"
+    },
+    {
+      "product_id": "fa72cfe7-2276-43ff-b352-8d4d26c90d65",
+      "attribute_id": "18dee1eb-8a8a-45fa-b463-8487065642d9",
+      "claim_evidence_id": "87bdc0e3-b057-44f1-a064-dd8aa0609ba5"
+    },
+    {
+      "product_id": "fa72cfe7-2276-43ff-b352-8d4d26c90d65",
+      "attribute_id": "18dee1eb-8a8a-45fa-b463-8487065642d9",
+      "claim_evidence_id": "9d7d5322-9360-450d-94f6-7cb7ab390c8f"
+    },
+    {
+      "product_id": "fa72cfe7-2276-43ff-b352-8d4d26c90d65",
+      "attribute_id": "2e5f8446-3bb6-4e92-990e-d6c253d2417c",
+      "claim_evidence_id": "1d2999a3-1b7e-4cb2-b21d-5c8ee12e4f5b"
+    },
+    {
+      "product_id": "fa72cfe7-2276-43ff-b352-8d4d26c90d65",
+      "attribute_id": "496d6370-cf03-4842-b0e3-22c307613b97",
+      "claim_evidence_id": "bcf078fb-26b3-4a35-816a-bd147a781b62"
+    },
+    {
+      "product_id": "fa72cfe7-2276-43ff-b352-8d4d26c90d65",
+      "attribute_id": "7f2af8c8-8aee-4d54-a93a-46d77a3ead17",
+      "claim_evidence_id": "bcd2454d-f085-43b1-b786-6fa2d784ed4e"
+    },
+    {
+      "product_id": "fa72cfe7-2276-43ff-b352-8d4d26c90d65",
+      "attribute_id": "83353c3f-3cd2-4505-8311-f722e720867c",
+      "claim_evidence_id": "3921072b-ade1-4f9a-a4d8-d1cbdaae05a4"
+    },
+    {
+      "product_id": "fa72cfe7-2276-43ff-b352-8d4d26c90d65",
+      "attribute_id": "83353c3f-3cd2-4505-8311-f722e720867c",
+      "claim_evidence_id": "3e4e6808-4ae3-464f-8809-27ca50cd519a"
+    }
+  ],
+  "anon_private_evidence_boundary": true
+}

@@ -1,0 +1,11 @@
+# PR5.32 — PDF publication preflight
+
+PR5.31 was accepted by the owner as 7f6f158: 113 tests, lint/typecheck, rehearsal and unchanged-baseline comparison, selective production draft import, all ten live verification checks true, clean working tree and green Production. Three PDF products remain draft. Their nine reviewed attributes and three bounded Adobe alternatives are stored; the PDF route is draft, unapproved and has exactly three members. Twelve published products and five approved published routes remain.
+
+The next publication packet needs the exact post-import production checkpoint. PR5.30's pinned pre-import snapshot remains historical input to PR5.31 and must not be edited. PR5.32_PREFLIGHT.sql is SELECT-only and captures current target identities, all four relationship sets, all four evidence-link sets, claim evidence, sources, used taxonomy, route metadata and members, other target route exposures, accepted publication lists and anonymous evidence boundary.
+
+Owner runs the query and returns the complete snapshot. Expected: three draft PDF products; three verified Adobe alternatives scoped windows-personal-pdf-page-organization; the PDF route remains draft/editorially_approved=false with exactly three members; target memberships expose no other approved routes; public lists remain 12/5; anonymous evidence boundary true. Compare full metadata with the reviewed workflow before preparing publication guards. Documentary page-organization qualification does not assert full Acrobat parity or tested export fidelity.
+
+No publication decision is recorded by this packet. A later publication proposal would publish the three products and one PDF route, reaching 15 products/six approved published routes. Owner approval and public route/product/source/Visit acceptance are subsequent steps. Issue #5 remains open and Issue #11 Day 0 has not started.
+
+Validation: query shape is reused from the previously owner-executed PR5.30 SELECT snapshot, with only packet/comment changes. No application code or dependencies change. Local isolated PostgreSQL execution checks post-import shape; remote execution remains the owner's step. No new browser test or broad application test suite is required for this read-only/documentation packet.
