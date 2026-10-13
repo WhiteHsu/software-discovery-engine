@@ -1,0 +1,235 @@
+{
+  "version": 1,
+  "date": "2026-10-13",
+  "publicationApproved": false,
+  "scope": "windows-personal-pdf-page-organization",
+  "inputSha256": "126c402b4d9d9626b2c951e4dca9b83d0e7353caac157f460a384bbc63e86810",
+  "method": "Primary-document review; bounded editorial relationship, not native application or fidelity testing.",
+  "description": "Compare Windows personal PDF page reordering, permanent rotation, removal and extraction, with PDF output, in licensed PDF-XChange Editor, PDF24 Creator and the current free PDFgear offer. This covers page organization, not complete Acrobat text editing, signatures or secure redaction. Edition, maintenance and AI/cloud limits differ. Draft review; publication is not approved.",
+  "sources": [
+    {
+      "id": "x-move",
+      "url": "https://help.pdf-xchange.com/pdfxe11/moving-pages_ed.html",
+      "reviewedAt": "2026-10-13",
+      "observation": "Standard Editor V11 documents moving a selected page range within a document.",
+      "title": "x-move",
+      "publisher": "help.pdf-xchange.com",
+      "type": "documentation"
+    },
+    {
+      "id": "x-delete",
+      "url": "https://help.pdf-xchange.com/pdfxe11/deleting-pages.html",
+      "reviewedAt": "2026-10-13",
+      "observation": "Standard Editor V11 documents deleting selected pages.",
+      "title": "x-delete",
+      "publisher": "help.pdf-xchange.com",
+      "type": "documentation"
+    },
+    {
+      "id": "x-extract",
+      "url": "https://help.pdf-xchange.com/pdfxe11/extracting-pages.html",
+      "reviewedAt": "2026-10-13",
+      "observation": "Standard Editor V11 documents extraction with output file names and destination folders.",
+      "title": "x-extract",
+      "publisher": "help.pdf-xchange.com",
+      "type": "documentation"
+    },
+    {
+      "id": "x-license",
+      "url": "https://www.pdf-xchange.com/licensing",
+      "reviewedAt": "2026-10-13",
+      "observation": "Perpetual licensing and optional maintenance; exact selected-license feature entitlement remains pending.",
+      "title": "x-license",
+      "publisher": "www.pdf-xchange.com",
+      "type": "documentation"
+    },
+    {
+      "id": "creator",
+      "url": "https://tools.pdf24.org/en/creator",
+      "reviewedAt": "2026-10-13",
+      "observation": "Windows Creator lists sort/move, rotate, remove, extract and PDF save controls; free desktop edition.",
+      "title": "creator",
+      "publisher": "tools.pdf24.org",
+      "type": "documentation"
+    },
+    {
+      "id": "gear-reorder",
+      "url": "https://www.pdfgear.com/windows-user-guide/reorder-pdf-pages.htm",
+      "reviewedAt": "2026-10-13",
+      "observation": "Windows thumbnails support drag reordering; documentation warns this operation cannot be undone.",
+      "title": "gear-reorder",
+      "publisher": "www.pdfgear.com",
+      "type": "documentation"
+    },
+    {
+      "id": "gear-extract",
+      "url": "https://www.pdfgear.com/windows-user-guide/extract-pages-from-pdf.htm",
+      "reviewedAt": "2026-10-13",
+      "observation": "Windows extraction saves selected pages to one PDF or separate PDFs, with optional deletion.",
+      "title": "gear-extract",
+      "publisher": "www.pdfgear.com",
+      "type": "documentation"
+    },
+    {
+      "id": "gear-organizer",
+      "url": "https://www.pdfgear.com/windows-user-guide/introduction-pdfgear.htm",
+      "reviewedAt": "2026-10-13",
+      "observation": "Windows guide lists native page rotate and delete controls.",
+      "title": "gear-organizer",
+      "publisher": "www.pdfgear.com",
+      "type": "documentation"
+    },
+    {
+      "id": "gear-offer",
+      "url": "https://www.pdfgear.com/pdfgear-for-windows/",
+      "reviewedAt": "2026-10-13",
+      "observation": "Current free Windows offer; no guaranteed lifetime pricing inference.",
+      "title": "gear-offer",
+      "publisher": "www.pdfgear.com",
+      "type": "documentation"
+    },
+    {
+      "id": "x-rotate",
+      "title": "Standard Editor V11 permanent rotation",
+      "url": "https://help.pdf-xchange.com/pdfxe11/rotate-move-copy-delete-and-renumber-pdf-pages.html",
+      "publisher": "PDF-XChange",
+      "type": "documentation"
+    },
+    {
+      "id": "x-product",
+      "title": "Editor licensing and edition features",
+      "url": "https://www.pdf-xchange.com/product/pdf-xchange-editor",
+      "publisher": "PDF-XChange",
+      "type": "documentation"
+    },
+    {
+      "id": "adobe-pages",
+      "title": "Acrobat desktop page extraction",
+      "url": "https://helpx.adobe.com/acrobat/desktop/edit-documents/organize-pages/extract-pages.html",
+      "publisher": "Adobe",
+      "type": "documentation"
+    }
+  ],
+  "candidates": [
+    {
+      "slug": "pdf-xchange-editor",
+      "scopeDescription": "Licensed Windows page organization only. Plus-only features and unlicensed demo output are excluded. Updates and prior-installer access have maintenance/version limits; no complete Acrobat parity or export fidelity test.",
+      "anchorSources": [
+        "x-product",
+        "x-license",
+        "x-move",
+        "x-delete",
+        "x-extract",
+        "x-rotate",
+        "adobe-pages"
+      ],
+      "attributes": [
+        {
+          "slug": "no-subscription",
+          "value": true,
+          "confidence": 0.9,
+          "sources": [
+            "x-product",
+            "x-license"
+          ]
+        },
+        {
+          "slug": "pricing-model",
+          "value": "Licensed standard Editor V11; perpetual license for covered versions, with optional maintenance.",
+          "confidence": 0.9,
+          "sources": [
+            "x-product",
+            "x-license"
+          ]
+        },
+        {
+          "slug": "trade-off-summary",
+          "value": "Licensed Windows page organization only. Plus-only features and unlicensed demo output are excluded. Updates and prior-installer access have maintenance/version limits; no complete Acrobat parity or export fidelity test.",
+          "confidence": 0.85,
+          "sources": [
+            "x-product",
+            "x-license",
+            "x-move",
+            "x-delete",
+            "x-extract",
+            "x-rotate"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "pdf24-creator",
+      "scopeDescription": "Compare desktop page sorting, rotation, deletion and extraction. Existing-text editing parity is unverified; no full Acrobat, signature, redaction or export-fidelity guarantee.",
+      "anchorSources": [
+        "creator",
+        "adobe-pages"
+      ],
+      "attributes": [
+        {
+          "slug": "no-subscription",
+          "value": true,
+          "confidence": 0.9,
+          "sources": [
+            "creator"
+          ]
+        },
+        {
+          "slug": "pricing-model",
+          "value": "Free Windows desktop Creator for private and commercial use.",
+          "confidence": 0.9,
+          "sources": [
+            "creator"
+          ]
+        },
+        {
+          "slug": "trade-off-summary",
+          "value": "Compare desktop page sorting, rotation, deletion and extraction. Existing-text editing parity is unverified; no full Acrobat, signature, redaction or export-fidelity guarantee.",
+          "confidence": 0.85,
+          "sources": [
+            "creator"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "pdfgear",
+      "scopeDescription": "Compare native page organization and PDF extraction. Reordering is documented as not undoable. AI/cloud privacy is separate; no full Acrobat or tested export-fidelity guarantee.",
+      "anchorSources": [
+        "gear-offer",
+        "gear-reorder",
+        "gear-extract",
+        "gear-organizer",
+        "adobe-pages"
+      ],
+      "attributes": [
+        {
+          "slug": "no-subscription",
+          "value": true,
+          "confidence": 0.9,
+          "sources": [
+            "gear-offer"
+          ]
+        },
+        {
+          "slug": "pricing-model",
+          "value": "Current free Windows desktop offer; future pricing is not guaranteed.",
+          "confidence": 0.9,
+          "sources": [
+            "gear-offer"
+          ]
+        },
+        {
+          "slug": "trade-off-summary",
+          "value": "Compare native page organization and PDF extraction. Reordering is documented as not undoable. AI/cloud privacy is separate; no full Acrobat or tested export-fidelity guarantee.",
+          "confidence": 0.85,
+          "sources": [
+            "gear-offer",
+            "gear-reorder",
+            "gear-extract",
+            "gear-organizer"
+          ]
+        }
+      ]
+    }
+  ]
+}
