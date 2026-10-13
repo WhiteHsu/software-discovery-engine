@@ -1,0 +1,283 @@
+{
+  "version": 1,
+  "date": "2026-10-13",
+  "publicationApproved": false,
+  "scope": "personal-basic-note-capture-edit-organization",
+  "inputSha256": "92eae54fe75efb811d6900ac3f0803b34162321a7c42665dc255471d1f20b495",
+  "method": "Dated primary-document review; fit/minimal-setup are bounded editorial inferences, not installed-app, migration or comparative usability tests.",
+  "selectionChange": {
+    "removedRouteMember": "logseq",
+    "addedRouteMember": "simplenote",
+    "retainedProduct": "logseq",
+    "reason": "Logseq remains held: current generic identity spans file/DB versions and multi-workflow positioning; insufficient edition-specific evidence for this strict note-focus review. Simplenote documents a note/tag workflow. No false Logseq claim is inferred."
+  },
+  "description": "Compare basic personal note capture, editing and organization in Joplin, Obsidian and Simplenote without configuring structured databases or plugins. Notion itself also supports ordinary pages; simplicity is a workflow fit, not a measured speed advantage or complete feature replacement. Local notebooks, Markdown vaults and account-based sync have different setup and data-handling limits. Draft review; publication is not approved.",
+  "sources": [
+    {
+      "id": "notion-page",
+      "title": "Notion: create a page",
+      "url": "https://www.notion.com/help/create-your-first-page",
+      "publisher": "Notion",
+      "type": "documentation"
+    },
+    {
+      "id": "joplin-overview",
+      "title": "Joplin note and notebook overview",
+      "url": "https://joplinapp.org/help/",
+      "publisher": "Joplin",
+      "type": "documentation"
+    },
+    {
+      "id": "joplin-use",
+      "title": "Joplin local notebooks and note workflow",
+      "url": "https://joplinapp.org/help/apps/",
+      "publisher": "Joplin",
+      "type": "documentation"
+    },
+    {
+      "id": "joplin-install",
+      "title": "Joplin desktop installation",
+      "url": "https://joplinapp.org/help/install/",
+      "publisher": "Joplin",
+      "type": "documentation"
+    },
+    {
+      "id": "joplin-plans",
+      "title": "Joplin Cloud synchronization plans",
+      "url": "https://joplinapp.org/plans/",
+      "publisher": "Joplin",
+      "type": "pricing"
+    },
+    {
+      "id": "obsidian-vault",
+      "title": "Obsidian local vault creation",
+      "url": "https://obsidian.md/help/Files+and+folders/Manage+vaults",
+      "publisher": "Obsidian",
+      "type": "documentation"
+    },
+    {
+      "id": "obsidian-note",
+      "title": "Obsidian first text note",
+      "url": "https://obsidian.md/help/Getting+started/Create+your+first+note",
+      "publisher": "Obsidian",
+      "type": "documentation"
+    },
+    {
+      "id": "obsidian-pricing",
+      "title": "Obsidian core and optional services",
+      "url": "https://obsidian.md/pricing",
+      "publisher": "Obsidian",
+      "type": "pricing"
+    },
+    {
+      "id": "simplenote-home",
+      "title": "Simplenote notes and free services",
+      "url": "https://simplenote.com/",
+      "publisher": "Automattic",
+      "type": "official"
+    },
+    {
+      "id": "simplenote-help",
+      "title": "Simplenote setup, notes, tags and limitations",
+      "url": "https://simplenote.com/help/",
+      "publisher": "Automattic",
+      "type": "documentation"
+    },
+    {
+      "id": "logseq-current",
+      "title": "Logseq edition and multi-workflow overview",
+      "url": "https://github.com/logseq/logseq",
+      "publisher": "Logseq",
+      "type": "repository"
+    }
+  ],
+  "newProduct": {
+    "slug": "simplenote",
+    "name": "Simplenote",
+    "shortDescription": "Text notes with tags and automatic account-based synchronization; no file attachments.",
+    "websiteUrl": "https://simplenote.com/"
+  },
+  "candidates": [
+    {
+      "slug": "joplin",
+      "scopeDescription": "Native desktop personal notebook and note capture/editing. No custom database, plugin or server is needed for this documented local flow. Markdown and optional sync require separate learning/setup; this is not Notion database, team-workspace or migration parity.",
+      "anchorSources": [
+        "notion-page",
+        "joplin-overview",
+        "joplin-use"
+      ],
+      "attributes": [
+        {
+          "slug": "focused-note-taking",
+          "value": true,
+          "sources": [
+            "joplin-overview"
+          ],
+          "confidence": 0.9
+        },
+        {
+          "slug": "no-database-required",
+          "value": true,
+          "sources": [
+            "joplin-use"
+          ],
+          "confidence": 0.9
+        },
+        {
+          "slug": "minimal-setup",
+          "value": true,
+          "sources": [
+            "joplin-install",
+            "joplin-use"
+          ],
+          "confidence": 0.85
+        },
+        {
+          "slug": "pricing-model",
+          "value": "Free core desktop notes; optional paid Joplin Cloud synchronization and sharing plans have separate limits.",
+          "sources": [
+            "joplin-overview",
+            "joplin-plans"
+          ],
+          "confidence": 0.9
+        },
+        {
+          "slug": "trade-off-summary",
+          "value": "Compare personal notebook/Markdown notes. Migration and multi-device synchronization need separate setup; paid Cloud services have plan limits. No complete Notion database or team-workspace parity is established.",
+          "sources": [
+            "joplin-use",
+            "joplin-plans",
+            "notion-page"
+          ],
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "slug": "obsidian",
+      "scopeDescription": "Native desktop personal text notes in a named local vault, without community plugins or custom database configuration. Vault/Markdown concepts need learning; optional extensions, Sync and Publish add separate complexity or cost. No full Notion parity or tested migration is implied.",
+      "anchorSources": [
+        "notion-page",
+        "obsidian-vault",
+        "obsidian-note"
+      ],
+      "attributes": [
+        {
+          "slug": "focused-note-taking",
+          "value": true,
+          "sources": [
+            "obsidian-vault",
+            "obsidian-note"
+          ],
+          "confidence": 0.85
+        },
+        {
+          "slug": "no-database-required",
+          "value": true,
+          "sources": [
+            "obsidian-vault",
+            "obsidian-note"
+          ],
+          "confidence": 0.9
+        },
+        {
+          "slug": "minimal-setup",
+          "value": true,
+          "sources": [
+            "obsidian-vault",
+            "obsidian-note"
+          ],
+          "confidence": 0.85
+        },
+        {
+          "slug": "pricing-model",
+          "value": "Free core application with no sign-up; Sync and Publish are optional paid services.",
+          "sources": [
+            "obsidian-pricing"
+          ],
+          "confidence": 0.9
+        },
+        {
+          "slug": "trade-off-summary",
+          "value": "Local vault and Markdown note concepts require learning. Optional Sync and Publish are paid services; community extensions may add complexity. This compares basic personal notes, not full Notion databases or tested migration.",
+          "sources": [
+            "obsidian-vault",
+            "obsidian-note",
+            "obsidian-pricing",
+            "notion-page"
+          ],
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "slug": "simplenote",
+      "scopeDescription": "Personal text-note editing and tag organization in the official desktop app after account signup. No custom database, plugin or server deployment is required for this documented flow. Signup/email verification and service connectivity are setup prerequisites; this does not promise local-only operation or Notion parity.",
+      "anchorSources": [
+        "notion-page",
+        "simplenote-home",
+        "simplenote-help"
+      ],
+      "attributes": [
+        {
+          "slug": "focused-note-taking",
+          "value": true,
+          "sources": [
+            "simplenote-home"
+          ],
+          "confidence": 0.9
+        },
+        {
+          "slug": "no-database-required",
+          "value": true,
+          "sources": [
+            "simplenote-home",
+            "simplenote-help"
+          ],
+          "confidence": 0.9
+        },
+        {
+          "slug": "minimal-setup",
+          "value": true,
+          "sources": [
+            "simplenote-help"
+          ],
+          "confidence": 0.85
+        },
+        {
+          "slug": "pricing-model",
+          "value": "Free note application and synchronization service.",
+          "sources": [
+            "simplenote-home"
+          ],
+          "confidence": 0.9
+        },
+        {
+          "slug": "trade-off-summary",
+          "value": "Account and email verification required. Notes sync to the service and are not encrypted at rest; attachments are unsupported. Offline editing requires prior sign-in/download. No full Notion parity.",
+          "sources": [
+            "simplenote-help",
+            "notion-page"
+          ],
+          "confidence": 0.9
+        },
+        {
+          "slug": "no-account-required",
+          "value": false,
+          "sources": [
+            "simplenote-help"
+          ],
+          "confidence": 0.9
+        },
+        {
+          "slug": "free-core-use",
+          "value": true,
+          "sources": [
+            "simplenote-home"
+          ],
+          "confidence": 0.9
+        }
+      ]
+    }
+  ]
+}

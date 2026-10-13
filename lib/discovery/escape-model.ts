@@ -3,7 +3,7 @@ import { supported, safeUrl, type Claim, type ProductPage } from "./model.ts";
 export const escapeDefinitions = [
   {slug:"offline-notion-alternatives",name:"Offline Notion Alternatives",anchor:"notion",relationshipScope:"personal-offline-note-object-organization",constraints:["works-offline"]},
   {slug:"notion-alternatives-without-ai",name:"Notion Alternatives Without AI",anchor:"notion",relationshipScope:"personal-offline-note-object-organization",constraints:["ai-optional"]},
-  {slug:"simple-notion-alternatives",name:"Simple Notion Alternatives",anchor:"notion",constraints:["focused-note-taking","no-database-required","minimal-setup"]},
+  {slug:"simple-notion-alternatives",name:"Simple Notion Alternatives",anchor:"notion",relationshipScope:"personal-basic-note-capture-edit-organization",constraints:["focused-note-taking","no-database-required","minimal-setup"]},
   {slug:"todoist-alternatives-with-a-one-time-purchase",name:"Todoist Alternatives With a One-Time Purchase",anchor:"todoist",relationshipScope:"personal-task-project-organization",constraints:["one-time-purchase"]},
   {slug:"privacy-friendly-grammarly-alternatives",name:"Privacy-Friendly Grammarly Alternatives",anchor:"grammarly",constraints:["privacy-friendly"]},
   {slug:"grammarly-alternatives-without-a-subscription",name:"Grammarly Alternatives Without a Subscription",anchor:"grammarly",constraints:["no-subscription"]},
@@ -23,7 +23,9 @@ export function evaluateCandidate(def:EscapeDefinition,candidate:Candidate):Eval
   if(!safeUrl(p.websiteUrl))blockers.push("Official website is unavailable.");
   if(def.anchor){const a=p.anchors.find(c=>c.slug===def.anchor && c.relationshipType==="alternative");
     if(!verified(a))blockers.push("The anchor alternative relationship is not verified with dated evidence.");
+    else if("relationshipScope" in def && def.relationshipScope==="personal-basic-note-capture-edit-organization" && a.scope!==def.relationshipScope)blockers.push("The alternative relationship must be reviewed for basic personal note capture, editing and organization.");
     else if("relationshipScope" in def && (a.scope!==def.relationshipScope || ((def.relationshipScope==="personal-offline-note-object-organization" || def.relationshipScope==="desktop-raster-layers-painting-basic-adjustment") && (typeof a.description!=="string" || !a.description.trim()))))blockers.push(def.relationshipScope==="personal-offline-note-object-organization" ? "The alternative relationship must be reviewed for personal offline note and object organization." : def.relationshipScope==="desktop-raster-layers-painting-basic-adjustment" ? "The alternative relationship must be reviewed for desktop raster layers, painting and basic image adjustment." : "The alternative relationship must be reviewed for personal task and project organization.");
+    else if("relationshipScope" in def && def.relationshipScope==="personal-basic-note-capture-edit-organization" && (typeof a.description!=="string" || !a.description.trim()))blockers.push("The alternative relationship needs a description of basic personal note capture, editing and organization.");
     else fit.push(a);}
   if("audience" in def){const a=p.audiences.find(c=>c.slug===def.audience);if(!verified(a))blockers.push("The productivity audience fit is unconfirmed.");else fit.push(a);}
   for(const slug of def.constraints){const c=p.attributes.find(c=>c.slug===slug);if(!verified(c)||c.value!==true)blockers.push(`${slug}: verified positive evidence is required.`);else fit.push(c);}
