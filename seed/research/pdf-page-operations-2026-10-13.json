@@ -1,0 +1,220 @@
+{
+  "version": 1,
+  "packet": "PR5.28",
+  "date": "2026-10-13",
+  "applied": false,
+  "publicationApproved": false,
+  "qualifiedCandidatesAdded": 0,
+  "scope": "windows-personal-pdf-page-organization",
+  "sources": [
+    {
+      "id": "x-move",
+      "url": "https://help.pdf-xchange.com/pdfxe11/moving-pages_ed.html",
+      "reviewedAt": "2026-10-13",
+      "observation": "Standard Editor V11 documents moving a selected page range within a document."
+    },
+    {
+      "id": "x-delete",
+      "url": "https://help.pdf-xchange.com/pdfxe11/deleting-pages.html",
+      "reviewedAt": "2026-10-13",
+      "observation": "Standard Editor V11 documents deleting selected pages."
+    },
+    {
+      "id": "x-extract",
+      "url": "https://help.pdf-xchange.com/pdfxe11/extracting-pages.html",
+      "reviewedAt": "2026-10-13",
+      "observation": "Standard Editor V11 documents extraction with output file names and destination folders."
+    },
+    {
+      "id": "x-license",
+      "url": "https://www.pdf-xchange.com/licensing",
+      "reviewedAt": "2026-10-13",
+      "observation": "Perpetual licensing and optional maintenance; exact selected-license feature entitlement remains pending."
+    },
+    {
+      "id": "creator",
+      "url": "https://tools.pdf24.org/en/creator",
+      "reviewedAt": "2026-10-13",
+      "observation": "Windows Creator lists sort/move, rotate, remove, extract and PDF save controls; free desktop edition."
+    },
+    {
+      "id": "gear-reorder",
+      "url": "https://www.pdfgear.com/windows-user-guide/reorder-pdf-pages.htm",
+      "reviewedAt": "2026-10-13",
+      "observation": "Windows thumbnails support drag reordering; documentation warns this operation cannot be undone."
+    },
+    {
+      "id": "gear-extract",
+      "url": "https://www.pdfgear.com/windows-user-guide/extract-pages-from-pdf.htm",
+      "reviewedAt": "2026-10-13",
+      "observation": "Windows extraction saves selected pages to one PDF or separate PDFs, with optional deletion."
+    },
+    {
+      "id": "gear-organizer",
+      "url": "https://www.pdfgear.com/windows-user-guide/introduction-pdfgear.htm",
+      "reviewedAt": "2026-10-13",
+      "observation": "Windows guide lists native page rotate and delete controls."
+    },
+    {
+      "id": "gear-offer",
+      "url": "https://www.pdfgear.com/pdfgear-for-windows/",
+      "reviewedAt": "2026-10-13",
+      "observation": "Current free Windows offer; no guaranteed lifetime pricing inference."
+    }
+  ],
+  "candidates": [
+    {
+      "slug": "pdf-xchange-editor",
+      "edition": "Licensed standard Editor V11",
+      "operations": [
+        {
+          "operation": "reorder-pages",
+          "documentaryStatus": "supported",
+          "sources": [
+            "x-move"
+          ]
+        },
+        {
+          "operation": "rotate-pages",
+          "documentaryStatus": "pending",
+          "sources": []
+        },
+        {
+          "operation": "remove-pages",
+          "documentaryStatus": "supported",
+          "sources": [
+            "x-delete"
+          ]
+        },
+        {
+          "operation": "extract-pages",
+          "documentaryStatus": "supported",
+          "sources": [
+            "x-extract"
+          ]
+        },
+        {
+          "operation": "save-pdf",
+          "documentaryStatus": "supported",
+          "sources": [
+            "x-extract"
+          ]
+        }
+      ],
+      "holds": [
+        "Pin permanent rotation evidence and save/reopen workflow for the same edition.",
+        "Pin exact purchased-license entitlement; a manual entry does not prove free or unlicensed output is unrestricted."
+      ],
+      "nativeTestStatus": "not-run",
+      "qualified": false
+    },
+    {
+      "slug": "pdf24-creator",
+      "edition": "Windows desktop Creator",
+      "operations": [
+        {
+          "operation": "reorder-pages",
+          "documentaryStatus": "supported",
+          "sources": [
+            "creator"
+          ]
+        },
+        {
+          "operation": "rotate-pages",
+          "documentaryStatus": "supported",
+          "sources": [
+            "creator"
+          ]
+        },
+        {
+          "operation": "remove-pages",
+          "documentaryStatus": "supported",
+          "sources": [
+            "creator"
+          ]
+        },
+        {
+          "operation": "extract-pages",
+          "documentaryStatus": "supported",
+          "sources": [
+            "creator"
+          ]
+        },
+        {
+          "operation": "save-pdf",
+          "documentaryStatus": "supported",
+          "sources": [
+            "creator"
+          ]
+        }
+      ],
+      "holds": [
+        "Complete pinned editorial relationship, pricing/trade-off review before any graph qualification."
+      ],
+      "nativeTestStatus": "not-run",
+      "qualified": false
+    },
+    {
+      "slug": "pdfgear",
+      "edition": "Current Windows desktop offer",
+      "operations": [
+        {
+          "operation": "reorder-pages",
+          "documentaryStatus": "supported",
+          "sources": [
+            "gear-reorder"
+          ]
+        },
+        {
+          "operation": "rotate-pages",
+          "documentaryStatus": "supported",
+          "sources": [
+            "gear-organizer"
+          ]
+        },
+        {
+          "operation": "remove-pages",
+          "documentaryStatus": "supported",
+          "sources": [
+            "gear-organizer"
+          ]
+        },
+        {
+          "operation": "extract-pages",
+          "documentaryStatus": "supported",
+          "sources": [
+            "gear-extract"
+          ]
+        },
+        {
+          "operation": "save-pdf",
+          "documentaryStatus": "supported",
+          "sources": [
+            "gear-extract"
+          ]
+        }
+      ],
+      "holds": [
+        "Extraction output is documented; save/reopen after combined page changes has not been tested.",
+        "Current free pricing is not a lifetime promise; AI/cloud privacy must remain separate.",
+        "Complete pinned editorial relationship, pricing/trade-off review before graph qualification."
+      ],
+      "nativeTestStatus": "not-run",
+      "qualified": false
+    }
+  ],
+  "productionCheckpoint": {
+    "products": 12,
+    "routes": 5,
+    "basis": "Owner acceptance; not a live query"
+  },
+  "excludedClaims": [
+    "complete-acrobat-parity",
+    "existing-text-editing-parity",
+    "export-fidelity-tested",
+    "secure-redaction",
+    "signature-validity",
+    "global-offline-or-private"
+  ],
+  "next": "Resolve pending edition evidence, then prepare a separate pinned draft review; do not run publication SQL."
+}
