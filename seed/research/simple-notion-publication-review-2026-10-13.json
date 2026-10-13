@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-10-13",
+  "publicationDecision": "pending",
+  "scope": "personal-basic-note-capture-edit-organization",
+  "bundleSha256": "af03a512ba90640dd473fb8bd956d105069e04f62a08f9358aa8b80448b65048",
+  "liveImportConfirmation": "Owner pushed PR5.24 0716823; 101 tests, lint/typecheck/build, staged diff and Production green; Supabase rehearsal/apply success and ten verification checks true. Production Obsidian basic-note scope, historical source pointer access confirmed on 2026-10-13.",
+  "method": "Uses the accepted PR5.23 documentary/editorial review and PR5.24 guarded import. Basic native personal notes only; no comparative usability measurement, native-app hands-on or migration test.",
+  "route": {
+    "slug": "simple-notion-alternatives",
+    "name": "Simple Notion Alternatives",
+    "status": "draft",
+    "editoriallyApproved": false,
+    "lastVerifiedAt": "2026-10-13T00:00:00Z",
+    "description": "Compare basic personal note capture, editing and organization in Joplin, Obsidian and Simplenote without configuring structured databases or plugins. Notion itself also supports ordinary pages; simplicity is a workflow fit, not a measured speed advantage or complete feature replacement. Local notebooks, Markdown vaults and account-based sync have different setup and data-handling limits.",
+    "products": [
+      {
+        "productSlug": "joplin",
+        "position": 1,
+        "noveltyScore": 0,
+        "editorialNote": "Native desktop personal notebook and note capture/editing. No custom database, plugin or server is needed for this documented local flow. Markdown and optional sync require separate learning/setup; this is not Notion database, team-workspace or migration parity."
+      },
+      {
+        "productSlug": "obsidian",
+        "position": 2,
+        "noveltyScore": 0,
+        "editorialNote": "Native desktop personal text notes in a named local vault, without community plugins or custom database configuration. Vault/Markdown concepts need learning; optional extensions, Sync and Publish add separate complexity or cost. No full Notion parity or tested migration is implied."
+      },
+      {
+        "productSlug": "simplenote",
+        "position": 3,
+        "noveltyScore": 0,
+        "editorialNote": "Personal text-note editing and tag organization in the official desktop app after account signup. No custom database, plugin or server deployment is required for this documented flow. Signup/email verification and service connectivity are setup prerequisites; this does not promise local-only operation or Notion parity."
+      }
+    ],
+    "anchorSlug": "notion"
+  }
+}
