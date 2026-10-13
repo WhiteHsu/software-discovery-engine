@@ -1,6 +1,6 @@
 # Project Status
 
-**Last Updated:** 2026-10-12
+**Last Updated:** 2026-10-13
 
 ## Current Phase
 
@@ -8,7 +8,7 @@
 
 ## Current Work
 
-**Issue #5 — Escape Route Engine: in progress (PR5.20 accepted; PR5.21 remaining six-route audit updated)**
+**Issue #5 — Escape Route Engine: in progress (PR5.21 accepted; PR5.22 Simple Notion documentary review prepared)**
 
 Issue #4 was closed by the owner on 2026-10-07 after production acceptance. Application/publication commits b7568d1 and c9dad66; acceptance commits 80a8828 and 80e537e. The owner confirmed official CTA and pricing-source clicks in Chrome. At that acceptance milestone only Obsidian was published. PR5.9 subsequently published three additional products and one route, as recorded below.
 
@@ -63,6 +63,8 @@ PR5.19 prepares an atomic selective update of exactly three AI Optional attribut
 PR5.20 prepares publication of one bounded no-required-AI Notion route using three already-published products, with exact personal note/object scope and zero novelty. Pinned complete product/claim/evidence and baseline route/member guards reject drift; missing reviewed memberships also abort on repeated apply. Zero product/claim/evidence writes. 93 tests, lint/typecheck/build and seven isolated database scenario groups passed, including all ten shipped verification checks, rollback, record preservation and anonymous route/RPC/engine checks. Owner pushed ff03b19 with green Production, completed rehearsal, explicitly approved publication and supplied approved apply success plus all ten verification checks true on 2026-10-12. Incognito screenshots confirm the public route title, bounded description and three-product AI Optional comparison. Production now has ten products and four approved routes. See NOTION_AI_PUBLICATION_REVIEW.md and NOTION_AI_PUBLICATION_CONTENT.md.
 
 PR5.21 refreshes the owner-evidence checkpoint and remaining-route audit using the latest reviewed AI graph. Six routes remain; all currently have zero qualified curated draft candidates. No claims, ranking, preview, SQL or publication changes. Issue #5 remains open. See ESCAPE_REMAINING_REVIEW.md.
+
+Owner pushed PR5.21 as 0ef8b2b on 2026-10-13 after 93 tests, lint/typecheck and staged diff checks passed; Production green. PR5.22 records twelve primary-source observations and proposes a bounded basic personal note workflow while preserving the existing taxonomy meanings. Joplin/Obsidian have documentary support proposals; Logseq remains held for edition and strict note-focus review. No claims, preview, engine, SQL or publication changes; qualification remains zero and production remains ten products/four routes. See SIMPLE_NOTION_REVIEW.md.
 
 ## Completed Issues
 
