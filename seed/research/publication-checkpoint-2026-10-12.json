@@ -2,16 +2,36 @@
   "version": 1,
   "recordedAt": "2026-10-12",
   "basis": "Owner screenshots and reported execution; not a live database query",
-  "publishedProducts": ["obsidian", "things", "omnifocus", "2do", "affine", "anytype", "appflowy", "gimp", "krita", "paint-net"],
-  "publishedRoutes": ["todoist-alternatives-with-a-one-time-purchase", "offline-notion-alternatives", "photoshop-alternatives-without-a-subscription"],
+  "publishedProducts": [
+    "obsidian",
+    "things",
+    "omnifocus",
+    "2do",
+    "affine",
+    "anytype",
+    "appflowy",
+    "gimp",
+    "krita",
+    "paint-net"
+  ],
+  "publishedRoutes": [
+    "todoist-alternatives-with-a-one-time-purchase",
+    "offline-notion-alternatives",
+    "photoshop-alternatives-without-a-subscription",
+    "notion-alternatives-without-ai"
+  ],
   "latestPublication": {
-    "packet": "PR5.16",
-    "commit": "b658009",
+    "packet": "PR5.20",
+    "commit": "ff03b19",
     "productionDeployment": "owner screenshot green",
-    "rehearsal": "owner screenshot success with rollback sentinel",
-    "apply": "owner executed apply and supplied success screenshot",
-    "verification": {"total": 10, "passed": 10},
-    "browserAcceptance": "Owner Incognito screenshots: route, three-product comparison, all three product pages without draft banners, all three Visit official destinations",
-    "sourceLinkAcceptance": "Not separately demonstrated by PR5.16 screenshots"
+    "approval": "Owner explicitly approved publication in chat on 2026-10-12",
+    "rehearsal": "Owner screenshot success with rollback sentinel",
+    "apply": "Owner supplied approved apply success screenshot",
+    "verification": {
+      "total": 10,
+      "passed": 10
+    },
+    "browserAcceptance": "Owner Incognito screenshots show public route title, bounded description, comparison with AFFiNE/Anytype/AppFlowy and AI Optional dated 2026-10-12",
+    "sourceLinkAcceptance": "PR5.19 source access samples retained; no additional PR5.20 source clicks demonstrated"
   }
 }
