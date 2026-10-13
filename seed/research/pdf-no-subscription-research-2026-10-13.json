@@ -1,0 +1,213 @@
+{
+  "version": 1,
+  "date": "2026-10-13",
+  "packet": "PR5.27",
+  "publicationApproved": false,
+  "applied": false,
+  "productionCheckpoint": {
+    "products": 12,
+    "routes": 5,
+    "acceptanceCommit": "6dcd2b4",
+    "publicationFixCommit": "4242515",
+    "basis": "Owner screenshots and chat; not a live query"
+  },
+  "routeSlug": "pdf-editors-without-a-subscription",
+  "proposedScope": "windows-personal-pdf-page-organization",
+  "requiredOperations": [
+    "reorder-pages",
+    "rotate-pages",
+    "remove-pages",
+    "extract-pages",
+    "save-pdf"
+  ],
+  "scopeStatus": "proposal-pending-edition-operation-review",
+  "sources": [
+    {
+      "id": "adobe-extract",
+      "title": "Adobe desktop extract pages",
+      "url": "https://helpx.adobe.com/acrobat/desktop/edit-documents/organize-pages/extract-pages.html",
+      "publisher": "Adobe",
+      "reviewedAt": "2026-10-13",
+      "type": "primary",
+      "reviewStatus": "pending",
+      "observation": "Desktop extraction workflow establishes reference task overlap."
+    },
+    {
+      "id": "adobe-rotate",
+      "title": "Adobe desktop rotate pages",
+      "url": "https://helpx.adobe.com/acrobat/desktop/edit-documents/organize-pages/rotate-pages.html",
+      "publisher": "Adobe",
+      "reviewedAt": "2026-10-13",
+      "type": "primary",
+      "reviewStatus": "pending",
+      "observation": "Desktop page rotation establishes reference task overlap."
+    },
+    {
+      "id": "adobe-text",
+      "title": "Adobe text editing",
+      "url": "https://helpx.adobe.com/acrobat/using/edit-text-pdfs1.html",
+      "publisher": "Adobe",
+      "reviewedAt": "2026-10-13",
+      "type": "primary",
+      "reviewStatus": "pending",
+      "observation": "Existing-text changes are separate from page operations; fonts and text boxes affect results."
+    },
+    {
+      "id": "pdf24-creator",
+      "title": "PDF24 Creator",
+      "url": "https://tools.pdf24.org/en/creator",
+      "publisher": "PDF24",
+      "reviewedAt": "2026-10-13",
+      "type": "primary",
+      "reviewStatus": "pending",
+      "observation": "Free Windows desktop private/commercial use; page add/remove/extract/rotate/sort/move; local offline handling."
+    },
+    {
+      "id": "pdf24-edit",
+      "title": "PDF24 online editor",
+      "url": "https://tools.pdf24.org/en/edit-pdf",
+      "publisher": "PDF24",
+      "reviewedAt": "2026-10-13",
+      "type": "primary",
+      "reviewStatus": "pending",
+      "observation": "Adds text/images/shapes; recommends Word conversion for text changes. Online processing is separate from Creator."
+    },
+    {
+      "id": "pdf24-history",
+      "title": "PDF24 page editing historical response",
+      "url": "https://help.pdf24.org/en/questions/question/edit-pages/",
+      "publisher": "PDF24",
+      "reviewedAt": "2026-10-13",
+      "type": "primary",
+      "reviewStatus": "pending",
+      "observation": "Historical page-based limitation; not sufficient alone to classify current desktop text editing."
+    },
+    {
+      "id": "xchange-license",
+      "title": "PDF-XChange licensing",
+      "url": "https://www.pdf-xchange.com/licensing",
+      "publisher": "PDF-XChange",
+      "reviewedAt": "2026-10-13",
+      "type": "primary",
+      "reviewStatus": "pending",
+      "observation": "Perpetual end-user licensing and optional maintenance; per-user license terms."
+    },
+    {
+      "id": "xchange-product",
+      "title": "PDF-XChange current product and maintenance",
+      "url": "https://www.pdf-xchange.com/product/pdf-xchange-editor",
+      "publisher": "PDF-XChange",
+      "reviewedAt": "2026-10-13",
+      "type": "primary",
+      "reviewStatus": "pending",
+      "observation": "Continued covered-version use; prior installer access limited after 90 days beyond maintenance expiry; newer licensed features need valid maintenance."
+    },
+    {
+      "id": "xchange-text",
+      "title": "PDF-XChange Editor V11 text guide",
+      "url": "https://help.pdf-xchange.com/pdfxe11/adding-and-editing-text-in-documents.html",
+      "publisher": "PDF-XChange",
+      "reviewedAt": "2026-10-13",
+      "type": "primary",
+      "reviewStatus": "pending",
+      "observation": "Documents adding and changing existing text."
+    },
+    {
+      "id": "xchange-extract-plus",
+      "title": "PDF-XChange Plus V11 extraction",
+      "url": "https://help.pdf-xchange.com/pdfxp11/extracting-pages.html",
+      "publisher": "PDF-XChange",
+      "reviewedAt": "2026-10-13",
+      "type": "primary",
+      "reviewStatus": "pending",
+      "observation": "Plus extraction documented; standard Editor operation/entitlement needs confirmation."
+    },
+    {
+      "id": "xchange-eula-v10",
+      "title": "PDF-XChange V10 EULA",
+      "url": "https://help.pdf-xchange.com/pdfxe10/license-agreements_ed.html",
+      "publisher": "PDF-XChange",
+      "reviewedAt": "2026-10-13",
+      "type": "primary",
+      "reviewStatus": "pending",
+      "observation": "Historical EULA warns advanced unlicensed features can apply demo stamps; current V11 entitlement review needed."
+    },
+    {
+      "id": "pdfgear-windows",
+      "title": "PDFgear for Windows",
+      "url": "https://www.pdfgear.com/pdfgear-for-windows/",
+      "publisher": "PDFgear",
+      "reviewedAt": "2026-10-13",
+      "type": "primary",
+      "reviewStatus": "pending",
+      "observation": "Current free desktop offer includes text/image editing and page organization; no lifetime pricing guarantee inferred."
+    },
+    {
+      "id": "pdfgear-privacy",
+      "title": "PDFgear privacy policy",
+      "url": "https://www.pdfgear.com/privacy/",
+      "publisher": "PDFgear",
+      "reviewedAt": "2026-10-13",
+      "type": "primary",
+      "reviewStatus": "pending",
+      "observation": "AI use may transmit PDF content, chat text and limited metadata to Azure OpenAI; no global private/offline inference."
+    }
+  ],
+  "candidates": [
+    {
+      "slug": "pdf24-creator",
+      "edition": "Current Windows Creator",
+      "decision": "pending",
+      "proposedNoSubscription": true,
+      "evidence": [
+        "pdf24-creator",
+        "adobe-extract",
+        "adobe-rotate"
+      ],
+      "limits": [
+        "Existing-text editing is unverified for native edition; overlays and Word conversion are separate workflows.",
+        "Online PDF24 processing is outside this edition scope."
+      ]
+    },
+    {
+      "slug": "pdf-xchange-editor",
+      "edition": "Licensed Windows Editor; standard/Plus entitlements must be separated",
+      "decision": "pending",
+      "proposedNoSubscription": true,
+      "evidence": [
+        "xchange-license",
+        "xchange-product",
+        "xchange-text",
+        "xchange-extract-plus",
+        "xchange-eula-v10",
+        "adobe-extract",
+        "adobe-rotate"
+      ],
+      "limits": [
+        "Maintenance/version/installer access limits must remain explicit.",
+        "Confirm all required standard Editor operations and current V11 feature licensing; Plus documentation is not standard-edition proof.",
+        "Unlicensed advanced use may stamp documents; free core is not unrestricted paid editing."
+      ]
+    },
+    {
+      "slug": "pdfgear",
+      "edition": "Current Windows desktop non-chat PDF workflow",
+      "decision": "pending",
+      "proposedNoSubscription": true,
+      "evidence": [
+        "pdfgear-windows",
+        "pdfgear-privacy",
+        "adobe-extract",
+        "adobe-rotate"
+      ],
+      "limits": [
+        "Confirm every required native page operation before qualification.",
+        "Current free availability is not a lifetime guarantee.",
+        "AI processing is separate and may transmit documents; no blanket privacy/offline claim."
+      ]
+    }
+  ],
+  "qualifiedCandidatesAdded": 0,
+  "noHandsOnTesting": true,
+  "nextStep": "Pinned draft review after exact edition and operation evidence; no SQL or publication in this packet."
+}

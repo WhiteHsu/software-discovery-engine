@@ -8,7 +8,7 @@
 
 ## Current Work
 
-**Issue #5 — Escape Route Engine: in progress (PR5.25 accepted; PR5.26 remaining five-route audit prepared)**
+**Issue #5 — Escape Route Engine: in progress (PR5.26 accepted; PR5.27 PDF documentary review prepared)**
 
 Issue #4 was closed by the owner on 2026-10-07 after production acceptance. Application/publication commits b7568d1 and c9dad66; acceptance commits 80a8828 and 80e537e. The owner confirmed official CTA and pricing-source clicks in Chrome. At that acceptance milestone only Obsidian was published. PR5.9 subsequently published three additional products and one route, as recorded below.
 
@@ -73,6 +73,8 @@ Owner accepted PR5.23 local browser checks on 2026-10-13: route comparison, thre
 Owner pushed PR5.24 as 0716823 on 2026-10-13: 101 tests, lint/typecheck/build and staged seven-file diff passed; Production green. Supabase rehearsal and apply succeeded; ten verification checks were true. Production Obsidian retained publication and displayed the exact dated basic-note Notion scope with historical and new source pointers; a historical source opened successfully. PR5.24 is accepted. PR5.25 prepares publication of Joplin and Simplenote plus the three-member Simple Notion route (Joplin, Obsidian, Simplenote), replacing Logseq only in this route's membership. Complete imported claims/evidence, lifecycle and original route/member guards prevent drift. Six local PostgreSQL checks confirm atomic rollback, limited mutation/preservation, repeat stability, drift rejection and ten verification checks true after simulated publication. 105 tests, lint/typecheck/build pass. Owner rehearsal and explicit approval of this publication remain pending; no remote writes performed. Production remains ten products/four routes, prospectively twelve/five only after approved apply. See SIMPLE_NOTION_PUBLICATION_REVIEW.md and SIMPLE_NOTION_PUBLICATION_CONTENT.md.
 
 PR5.25 accepted on 2026-10-13. Owner approved publication, then diagnosed the initial rehearsal mismatch: production held the October 6 rubric draft with zero members, unlike the seed fixture. Corrected rehearsal/apply succeeded; ten verification checks were true. Production screenshots confirm the route, Joplin/Obsidian/Simplenote order, all three product pages, official Visit destinations and source-link samples. Production now has twelve published products/five approved routes. Correction commit is not supplied. PR5.26 updates the owner-evidence checkpoint and audits the latest reviewed basic-note graph: five routes remain, all with zero qualified curated candidates. No new claims, database writes or publication. Issue #5 remains open.
+
+Owner pushed PR5.26 as 6dcd2b4 with 105 tests, lint/typecheck and staged checks passed; Production green. Owner also committed/pushed the five PR5.25 checkpoint correction files as 4242515; working tree clean and Production green. PR5.27 reviews thirteen primary-source observations for Windows PDF page organization. PDF24 text conversion/overlay limits, PDF-XChange edition/maintenance/installer limits and PDFgear current-free/AI processing limits remain explicit. All proposed claims are pending and unapplied; qualification remains PDF 0/3 and production remains twelve products/five routes. No SQL or publication. See PDF_NO_SUBSCRIPTION_REVIEW.md.
 
 ## Completed Issues
 
