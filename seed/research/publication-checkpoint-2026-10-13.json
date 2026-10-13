@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "recordedAt": "2026-10-13",
+  "basis": "Owner screenshots and reported execution; not a live database query",
+  "publishedProducts": [
+    "obsidian",
+    "things",
+    "omnifocus",
+    "2do",
+    "affine",
+    "anytype",
+    "appflowy",
+    "gimp",
+    "krita",
+    "paint-net",
+    "joplin",
+    "simplenote"
+  ],
+  "publishedRoutes": [
+    "todoist-alternatives-with-a-one-time-purchase",
+    "offline-notion-alternatives",
+    "photoshop-alternatives-without-a-subscription",
+    "notion-alternatives-without-ai",
+    "simple-notion-alternatives"
+  ],
+  "latestPublication": {
+    "packet": "PR5.25",
+    "commit": "3c5f14e (original packet); checkpoint correction commit not supplied",
+    "productionDeployment": "owner screenshot green",
+    "approval": "Owner explicitly approved publication in chat on 2026-10-13",
+    "rehearsal": "Owner screenshot success with rollback sentinel",
+    "apply": "Owner supplied approved apply success screenshot",
+    "verification": {
+      "total": 10,
+      "passed": 10
+    },
+    "browserAcceptance": "Owner production screenshots confirm route, exact member order Joplin/Obsidian/Simplenote, three product pages, and all three official Visit destinations",
+    "sourceLinkAcceptance": "Owner source-link samples reached Joplin help, Obsidian Manage vaults and Simplenote help",
+    "checkpointCorrection": "Original rehearsal aborted on route mismatch. Read-only diagnosis confirmed October 6 rubric draft with zero members. Corrected rehearsal/apply succeeded and all ten verification checks passed."
+  }
+}
