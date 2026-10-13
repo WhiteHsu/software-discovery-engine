@@ -18,7 +18,9 @@ test('publication refuses scope, source, lifecycle, candidate and approval drift
 test('publication guards all imported claims, evidence and original route members',()=>{
  const r=buildSimpleNotionPublication(...inputs());
  const payload=JSON.parse(r.sql.match(/payload jsonb=\$pr525_data\$([\s\S]*?)\$pr525_data\$::jsonb/)[1]);
- assert.deepEqual(payload.priorMembers.map(m=>m.product_id.$ref.where.slug).sort(),['joplin','logseq','obsidian']);
+ assert.deepEqual(payload.priorMembers,[]);
+ assert.equal(payload.priorRoute.last_verified_at,'2026-10-06T00:00:00Z');
+ assert.ok(payload.priorRoute.description.startsWith('Derived/editorial qualification'));
  assert.ok(payload.tables.some(t=>t.table==='product_audiences'&&t.rows.length));
  assert.ok(payload.tables.some(t=>t.table==='product_attribute_evidence'&&t.rows.length));
  assert.ok(r.sql.includes('PR5.25 baseline member drift'));assert.ok(r.sql.includes('PR5.25 relationship/evidence set changed'));

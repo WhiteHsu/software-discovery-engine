@@ -4,7 +4,6 @@ import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
 import {simpleNotionImportInputs,buildSimpleNotionImport,createSimpleNotionVerification} from './build-simple-notion-import.mjs';
 import {fullPublicationSelection} from './build-raster-publication.mjs';
-import {createDatabasePlan} from './database-plan.mjs';
 import {escapeDefinitions,rankCandidates} from '../../lib/discovery/escape-model.ts';
 const slugs=['joplin','obsidian','simplenote'],routeSlug='simple-notion-alternatives';
 const REVIEW_SHA256='8caca7cd54cfb12863e07d0fe7d36912744bdd2aefab66c259bd2ea2f375fa78';
@@ -23,9 +22,13 @@ export function buildSimpleNotionPublication(baseline,reviewed,workflowReview,re
  const importData=JSON.parse(imported.sql.match(/data jsonb=\$payload\$([\s\S]*?)\$payload\$::jsonb/)[1]);
  const plan={tables:[]};for(const g of importData.guardRows){let op=plan.tables.find(t=>t.table===g.table);if(!op){op={table:g.table,rows:[]};plan.tables.push(op);}op.rows.push(g.after);}
  const route={slug:routeSlug,name:review.route.name,description:review.route.description,anchor_id:{$ref:{table:'anchors',where:{slug:'notion'}}},last_verified_at:review.route.lastVerifiedAt};
- const priorPlan=createDatabasePlan(baseline);
- const priorRoute=priorPlan.tables.find(t=>t.table==='escape_routes').rows.find(r=>r.slug===routeSlug);
- const priorMembers=priorPlan.tables.find(t=>t.table==='escape_route_products').rows.filter(r=>r.escape_route_id.$ref.where.slug===routeSlug);
+ // Owner's read-only production diagnosis on 2026-10-13 confirmed this exact
+ // rubric-only draft, dated October 6, with no route members. The seed fixture
+ // is not the accepted database checkpoint for route metadata/membership.
+ const priorRoute={slug:routeSlug,name:review.route.name,
+  description:'Derived/editorial qualification, never a simple=true product attribute: an evidence-backed Notion alternative relationship AND verified focused-note-taking=true AND verified no-database-required=true. minimal-setup must be positively supported: verified true permits qualification, likely true permits only a provisional editorial candidate, unknown leaves qualification unknown, and an evidence-backed false signal fails the rubric. Unknown is never treated as passing. Editorial approval is separately required before publication.',
+  last_verified_at:'2026-10-06T00:00:00Z'};
+ const priorMembers=[];
  const payload=JSON.stringify({tables:plan.tables,route,priorRoute,priorMembers,members:review.route.products});
  if(payload.includes('$pr525_data$')||payload.includes('$pr525$'))throw Error('PR5.25 delimiter collision');
  const sql=`-- PR5.25 ${commit?'APPLY ONLY AFTER EXPLICIT OWNER PUBLICATION APPROVAL':'REHEARSAL: all publication changes roll back'}.
