@@ -194,3 +194,8 @@ When resuming development:
 6. Inspect current code before changing architecture.
 7. Keep implementation scoped to the active Issue.
 8. Update this file when an Issue closes or validation state changes.
+
+
+## PR5.35 — Productivity task-planning research
+
+Owner reports all prior packets pushed; PR5.34 acceptance/checkpoint commit d158bd4 is on main, with clean git status and green Production deployment (53). PR5.35 prepares a read-only official-source review of Things, OmniFocus and 2Do under a proposed personal task-planning scope. Current 2Do license/upgrade terms remain pending; audience fit remains an editorial judgment. No SQL, graph/gate changes or publication. Accepted checkpoint stays 15 products, six routes and four remaining. See PRODUCTIVITY_WORKFLOW_REVIEW.md.

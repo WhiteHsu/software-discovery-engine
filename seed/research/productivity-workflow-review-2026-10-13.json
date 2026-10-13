@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "packet": "PR5.35",
+  "reviewedAt": "2026-10-13",
+  "route": "productivity-apps-you-can-buy-once",
+  "scope": "personal-task-capture-project-organization-and-scheduling",
+  "researchOnly": true,
+  "publicationApproved": false,
+  "graphChanges": false,
+  "audienceFit": "Editorial judgment remains likely; do not promote it to a verified factual claim.",
+  "candidates": [
+    {
+      "slug": "things",
+      "workflow": "Inbox capture, project headings/checklists, scheduled tasks and reminders.",
+      "workflowSource": "https://culturedcode.com/things/features/",
+      "purchaseSource": "https://culturedcode.com/things/support/articles/2803552/",
+      "purchaseReview": "documented",
+      "limits": "One-time purchase per Apple platform; sync is free. No Windows/Android/browser edition or shared real-time lists. Future major upgrades are not promised free."
+    },
+    {
+      "slug": "omnifocus",
+      "workflow": "Quick Entry/Inbox, projects/tags, due/defer dates and reminders.",
+      "workflowSource": "https://www.omnigroup.com/omnifocus/features/",
+      "purchaseSource": "https://www.omnigroup.com/omnifocus/buy/",
+      "purchaseReview": "documented",
+      "limits": "Native OmniFocus 4 perpetual license covers 4.x. Future major upgrades and recurring Web access are separate. Pro-only features must not be attributed to Standard."
+    },
+    {
+      "slug": "2do",
+      "workflow": "Current Mac page documents task capture, projects/checklists, sorting, Smart Lists and reminders.",
+      "workflowSource": "https://www.2doapp.com/",
+      "purchaseSource": "https://www.2doapp.com/",
+      "purchaseReview": "pending",
+      "limits": "A Buy button and trial do not establish continued-use or major-upgrade license terms. Confirm the current paid edition and platform-specific terms before a fresh buy-once qualification. Current page also advertises optional AI integration; no AI/privacy inference."
+    }
+  ],
+  "excludedFromProposedScope": [
+    {
+      "slug": "pdf-xchange-editor",
+      "reason": "PDF document organization differs from this proposed task-planning scope; existing product and route memberships remain unchanged."
+    }
+  ],
+  "pending": [
+    "Confirm current 2Do continued-use and upgrade license terms.",
+    "Review a factual task-workflow qualification gate; broad productivity audience fit is editorial.",
+    "Agree route description and exact edition/platform bounds before graph changes.",
+    "Obtain a fresh live snapshot before any later selective import/publication."
+  ],
+  "acceptedCheckpoint": {
+    "products": 15,
+    "routes": 6,
+    "remaining": 4,
+    "acceptanceCommit": "d158bd4",
+    "deployment": "Owner screenshot: Production green, deployment count 53."
+  }
+}

@@ -29,8 +29,8 @@
   ],
   "latestPublication": {
     "packet": "PR5.33",
-    "commit": "Not yet reported by owner",
-    "productionDeployment": "Publication reflected on existing production site; packet push/deployment not yet reported",
+    "commit": "Owner reports publication packet pushed; exact publication commit not separately supplied",
+    "productionDeployment": "Owner screenshot: green Production deployment, count 53; owner reports all packets pushed",
     "approval": "Owner explicitly approved publication in chat on 2026-10-13",
     "rehearsal": "Owner success screenshot; full post-rehearsal snapshot unchanged except capture time",
     "apply": "Owner supplied approved apply success screenshot",
@@ -40,6 +40,7 @@
     },
     "browserAcceptance": "Owner Chrome incognito production screenshots confirm public route with PDF-XChange Editor/PDF24 Creator/PDFgear, three product pages without draft banner, Windows scope and pricing/trade-offs",
     "sourceLinkAcceptance": "Owner pricing/source-link samples and Visit destinations reached pdf-xchange.com/product/pdf-xchange-editor, tools.pdf24.org/en/creator and pdfgear.com",
-    "priorPublication": "PR5.25 accepted; original commit 3c5f14e, checkpoint correction 4242515"
+    "priorPublication": "PR5.25 accepted; original commit 3c5f14e, checkpoint correction 4242515",
+    "acceptanceCommit": "d158bd4"
   }
 }
