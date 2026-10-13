@@ -8,7 +8,7 @@
 
 ## Current Work
 
-**Issue #5 — Escape Route Engine: in progress (PR5.26 accepted; PR5.29 accepted; PR5.30 accepted; PR5.31 accepted; PR5.32 post-import snapshot received; PR5.33 publication proposal prepared)**
+**Issue #5 — Escape Route Engine: in progress (PR5.26 accepted; PR5.29 accepted; PR5.30 accepted; PR5.31 accepted; PR5.32 post-import snapshot received; PR5.33 production publication accepted; PR5.34 acceptance/checkpoint prepared)**
 
 Issue #4 was closed by the owner on 2026-10-07 after production acceptance. Application/publication commits b7568d1 and c9dad66; acceptance commits 80a8828 and 80e537e. The owner confirmed official CTA and pricing-source clicks in Chrome. At that acceptance milestone only Obsidian was published. PR5.9 subsequently published three additional products and one route, as recorded below.
 
@@ -175,6 +175,8 @@ PR5.30 owner commit 9ba9773 accepted with clean working tree and green Productio
 PR5.31 owner commit 7f6f158 pushed with clean working tree and green Production. PDF draft import accepted: three draft products, nine reviewed claims, three scoped Adobe alternatives and one unapproved draft route with three members; public remains twelve products/five routes. PR5.32 adds a SELECT-only post-import snapshot for exact publication guards; no new writes or approval. Publication preparation must use this fresh database checkpoint rather than the pre-import PR5.30 snapshot. See PDF_PUBLICATION_PREFLIGHT_REVIEW.md.
 
 Owner supplied the complete PR5.32 post-import snapshot captured 2026-10-13T08:44:19.631898+00:00. Three target products remain draft; nine reviewed attributes and three scoped alternatives are verified; the draft unapproved PDF route has exactly three members and no other target route exposures. Public lists remain 12/5 and anonymous evidence boundary is true. PR5.32 commit/push has not yet been reported. PR5.33 pins this checkpoint and prepares publication rehearsal/apply-after-approval/verification. 117 tests and lint/typecheck passed. Isolated PostgreSQL tested rollback, scope/source/member/identity/route/publication drift refusal, repeat refusal, unchanged evidence/relationships/members and all eleven post-publication checks. Owner approval is pending; no remote publication and no change to the accepted publication checkpoint. See PDF_PUBLICATION_REVIEW.md.
+
+Owner explicitly approved PR5.33 publication, executed approved APPLY, and returned all eleven live checks true. Owner Chrome incognito screenshots accepted the public PDF route, three member product pages without draft banners, Windows scope/pricing/trade-offs and official Visit/pricing-source destinations. Published checkpoint is now fifteen products/six of ten routes; four routes remain. PR5.32/PR5.33 commit/push and corresponding deployment have not yet been reported. PR5.34 records acceptance and updates the local audit checkpoint only; no SQL writes, re-import or new approval. Issue #5 remains open; Issue #11 Day 0 has not started. See PDF_PUBLICATION_ACCEPTANCE.md.
 
 ## Current Blockers
 
