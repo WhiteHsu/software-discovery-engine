@@ -10,7 +10,7 @@ export const escapeDefinitions = [
   {slug:"photoshop-alternatives-without-a-subscription",name:"Photoshop Alternatives Without a Subscription",anchor:"photoshop",relationshipScope:"desktop-raster-layers-painting-basic-adjustment",constraints:["no-subscription"]},
   {slug:"pdf-editors-without-a-subscription",name:"PDF Editors Without a Subscription",anchor:"adobe-pdf",relationshipScope:"windows-personal-pdf-page-organization",constraints:["no-subscription"]},
   {slug:"meditation-apps-without-a-subscription",name:"Meditation Apps Without a Subscription",anchor:"calm",constraints:["no-subscription"]},
-  {slug:"productivity-apps-you-can-buy-once",name:"Productivity Apps You Can Buy Once",anchor:null,constraints:["one-time-purchase"],audience:"productivity-users"},
+  {slug:"productivity-apps-you-can-buy-once",name:"Productivity Apps You Can Buy Once",anchor:null,constraints:["one-time-purchase"],workflowScope:"personal-task-capture-project-organization-and-scheduling"},
 ] as const;
 export type EscapeDefinition = typeof escapeDefinitions[number];
 export type Candidate = {product:ProductPage; noveltyScore?:number|null};
@@ -28,7 +28,7 @@ export function evaluateCandidate(def:EscapeDefinition,candidate:Candidate):Eval
     else if("relationshipScope" in def && (a.scope!==def.relationshipScope || ((def.relationshipScope==="personal-offline-note-object-organization" || def.relationshipScope==="desktop-raster-layers-painting-basic-adjustment") && (typeof a.description!=="string" || !a.description.trim()))))blockers.push(def.relationshipScope==="personal-offline-note-object-organization" ? "The alternative relationship must be reviewed for personal offline note and object organization." : def.relationshipScope==="desktop-raster-layers-painting-basic-adjustment" ? "The alternative relationship must be reviewed for desktop raster layers, painting and basic image adjustment." : "The alternative relationship must be reviewed for personal task and project organization.");
     else if("relationshipScope" in def && def.relationshipScope==="personal-basic-note-capture-edit-organization" && (typeof a.description!=="string" || !a.description.trim()))blockers.push("The alternative relationship needs a description of basic personal note capture, editing and organization.");
     else fit.push(a);}
-  if("audience" in def){const a=p.audiences.find(c=>c.slug===def.audience);if(!verified(a))blockers.push("The productivity audience fit is unconfirmed.");else fit.push(a);}
+  if("workflowScope" in def){const c=p.attributes.find(c=>c.slug==="personal-task-workflow-scope");if(!verified(c)||c.value!==def.workflowScope)blockers.push("Dated evidence for the exact personal task capture, project organization and scheduling scope is required.");else fit.push(c);}
   for(const slug of def.constraints){const c=p.attributes.find(c=>c.slug===slug);if(!verified(c)||c.value!==true)blockers.push(`${slug}: verified positive evidence is required.`);else fit.push(c);}
   for(const slug of ["pricing-model","trade-off-summary"]){const c=p.attributes.find(c=>c.slug===slug);if(!verified(c)||typeof c.value!=="string"||!c.value.trim())blockers.push(`${slug}: meaningful sourced information is required.`);else fit.push(c);}
   const quality=fit.length && fit.every(c=>bounded(c.confidence))?Math.min(...fit.map(c=>c.confidence!)):0;

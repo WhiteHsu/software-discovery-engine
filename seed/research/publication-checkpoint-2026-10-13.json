@@ -42,5 +42,13 @@
     "sourceLinkAcceptance": "Owner pricing/source-link samples and Visit destinations reached pdf-xchange.com/product/pdf-xchange-editor, tools.pdf24.org/en/creator and pdfgear.com",
     "priorPublication": "PR5.25 accepted; original commit 3c5f14e, checkpoint correction 4242515",
     "acceptanceCommit": "d158bd4"
+  },
+  "latestResearch": {
+    "packet": "PR5.35",
+    "commit": "279b649",
+    "pushed": true,
+    "workingTree": "Owner screenshot: clean",
+    "productionDeployment": "Owner screenshot: green Production, count 54",
+    "publicationChange": false
   }
 }

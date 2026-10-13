@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "date": "2026-10-13",
+  "scope": "personal-task-capture-project-organization-and-scheduling",
+  "publicationApproved": false,
+  "method": "Primary documentation review; no application execution, platform parity or future compatibility guarantee.",
+  "sources": [
+    {
+      "id": "things-workflow",
+      "url": "https://culturedcode.com/things/features/",
+      "title": "Things task workflow",
+      "publisher": "culturedcode.com",
+      "type": "official",
+      "reviewedAt": "2026-10-13"
+    },
+    {
+      "id": "things-buy",
+      "url": "https://culturedcode.com/things/support/articles/2803552/",
+      "title": "Things purchases",
+      "publisher": "culturedcode.com",
+      "type": "official",
+      "reviewedAt": "2026-10-13"
+    },
+    {
+      "id": "omni-workflow",
+      "url": "https://www.omnigroup.com/omnifocus/features/",
+      "title": "OmniFocus task workflow",
+      "publisher": "www.omnigroup.com",
+      "type": "official",
+      "reviewedAt": "2026-10-13"
+    },
+    {
+      "id": "omni-buy",
+      "url": "https://www.omnigroup.com/omnifocus/buy/",
+      "title": "OmniFocus perpetual licenses",
+      "publisher": "www.omnigroup.com",
+      "type": "official",
+      "reviewedAt": "2026-10-13"
+    },
+    {
+      "id": "2do-workflow",
+      "url": "https://www.2doapp.com/",
+      "title": "2Do Mac task workflow",
+      "publisher": "www.2doapp.com",
+      "type": "official",
+      "reviewedAt": "2026-10-13"
+    },
+    {
+      "id": "2do-license",
+      "url": "https://www.2doapp.com/docs/faqs/licensing-explained/",
+      "title": "2Do licensing explained",
+      "publisher": "www.2doapp.com",
+      "type": "official",
+      "reviewedAt": "2026-10-13"
+    },
+    {
+      "id": "2do-store",
+      "url": "https://www.2doapp.com/store/",
+      "title": "2Do direct store",
+      "publisher": "www.2doapp.com",
+      "type": "official",
+      "reviewedAt": "2026-10-13"
+    }
+  ],
+  "description": "Compare personal task capture, project organization and scheduling in Things 3, native OmniFocus 4 perpetual editions and direct-purchase 2Do Mac. Apple platforms and purchase channels differ; optional Web access, future upgrades and update eligibility have separate costs. Draft review; publication is not approved.",
+  "candidates": [
+    {
+      "slug": "things",
+      "sources": [
+        "things-workflow",
+        "things-buy"
+      ],
+      "pricing": "Things 3: separate one-time Apple-platform purchases; Things Cloud sync has no extra charge.",
+      "limits": "Apple platforms only; no real-time shared lists. Separate platform purchases; future major upgrades are not guaranteed free."
+    },
+    {
+      "slug": "omnifocus",
+      "sources": [
+        "omni-workflow",
+        "omni-buy"
+      ],
+      "pricing": "Native OmniFocus 4 Standard or Pro perpetual license includes 4.x updates and the supported Apple platforms.",
+      "limits": "Web access and all-access plans are recurring subscriptions. Future major upgrades are separate; Pro-only features are excluded from Standard workflow comparisons."
+    },
+    {
+      "slug": "2do",
+      "sources": [
+        "2do-workflow",
+        "2do-license",
+        "2do-store"
+      ],
+      "pricing": "Direct-store 2Do Mac perpetual license includes 18 months of updates from purchase; optional renewal adds update eligibility.",
+      "limits": "Mac App Store and Setapp editions use subscriptions. Keep the last eligible direct version without renewal; future macOS/sync compatibility is not guaranteed. iPhone/iPad are separate purchases; Android is outside this Mac workflow review."
+    }
+  ],
+  "inputSha256": "690633354917f0f452796ef0832bba695c6cc95dc403edae98cf88f7b8bf7588"
+}

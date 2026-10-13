@@ -1,7 +1,8 @@
+import {offlineWorkflowBaseline} from './build-offline-workflow.mjs';
 import fs from 'node:fs';import test from 'node:test';import assert from 'node:assert/strict';
 import {buildTodoistDraftImport} from './build-todoist-draft-import.mjs';
 const read=p=>JSON.parse(fs.readFileSync(new URL('../../'+p,import.meta.url),'utf8'));
-const inputs=()=>[read('.seed-output/editorial-fit/reviewed-five-ecosystems.json'),read('.seed-output/escape-draft/bundle.json'),read('seed/research/todoist-draft-import-2026-10-07.json')];
+const inputs=()=>[offlineWorkflowBaseline().baseline,offlineWorkflowBaseline().bundle,read('seed/research/todoist-draft-import-2026-10-07.json')];
 test('selective packet omits unrelated claims/products/routes and retains draft status',()=>{
  const args=inputs(),before=JSON.stringify(args),result=buildTodoistDraftImport(...args);
  assert.equal(JSON.stringify(args),before);assert.deepEqual(result.bundle.products.map(p=>p.slug),['things','omnifocus','2do']);assert.deepEqual(result.bundle.escapeRoutes,[]);

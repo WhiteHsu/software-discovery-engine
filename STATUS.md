@@ -199,3 +199,8 @@ When resuming development:
 ## PR5.35 — Productivity task-planning research
 
 Owner reports all prior packets pushed; PR5.34 acceptance/checkpoint commit d158bd4 is on main, with clean git status and green Production deployment (53). PR5.35 prepares a read-only official-source review of Things, OmniFocus and 2Do under a proposed personal task-planning scope. Current 2Do license/upgrade terms remain pending; audience fit remains an editorial judgment. No SQL, graph/gate changes or publication. Accepted checkpoint stays 15 products, six routes and four remaining. See PRODUCTIVITY_WORKFLOW_REVIEW.md.
+
+
+## PR5.36 — Bounded personal task planning drafts
+
+Owner pushed PR5.35 as 279b649; clean git status and green Production (54) confirmed. PR5.36 confirms direct-store 2Do Mac perpetual licensing with 18 months of updates and optional renewal, separately from Mac App Store/Setapp subscriptions. A sourced exact task-workflow attribute replaces the editorial-audience qualification gate for the productivity route. Three separate local draft candidates qualify; audience judgments and other routes remain unchanged. Twelve attribute updates, one draft taxonomy definition; no new products, SQL or publication. 121 tests, lint/typecheck/build and four local HTTP content checks passed. Production remains 15 products, six published routes, four remaining. See PRODUCTIVITY_TASK_WORKFLOW_REVIEW.md.
