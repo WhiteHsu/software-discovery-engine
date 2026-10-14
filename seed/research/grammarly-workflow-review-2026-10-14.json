@@ -1,0 +1,175 @@
+{
+  "version": 1,
+  "packet": "PR5.42",
+  "reviewedAt": "2026-10-14",
+  "researchOnly": true,
+  "publicationApproved": false,
+  "graphChanges": false,
+  "scopeProposal": "personal-english-prose-style-review",
+  "method": "Review vendor documentation; separate writing/style features, purchase eligibility and text-processing policies. No native-app testing, full Grammarly parity or broad privacy guarantee.",
+  "sources": [
+    {
+      "id": "hemingway-desktop",
+      "url": "https://hemingwayapp.com/desktop",
+      "title": "Hemingway Editor 3 Classic desktop",
+      "reviewedAt": "2026-10-14"
+    },
+    {
+      "id": "pwa-price",
+      "url": "https://prowritingaid.com/pricing",
+      "title": "ProWritingAid pricing",
+      "reviewedAt": "2026-10-14"
+    },
+    {
+      "id": "pwa-lifetime",
+      "url": "https://help.prowritingaid.com/article/389-what-does-a-lifetime-subscription-mean",
+      "title": "ProWritingAid lifetime account license",
+      "reviewedAt": "2026-10-14"
+    },
+    {
+      "id": "pwa-workflow",
+      "url": "https://help.prowritingaid.com/article/296-getting-started-with-prowritingaid",
+      "title": "ProWritingAid getting started",
+      "reviewedAt": "2026-10-14"
+    },
+    {
+      "id": "antidote-new",
+      "url": "https://www.antidote.info/en/store/first-purchase",
+      "title": "Antidote new purchase",
+      "reviewedAt": "2026-10-14"
+    },
+    {
+      "id": "antidote-upgrade",
+      "url": "https://www.antidote.info/en/store/upgrade/a11",
+      "title": "Antidote existing-license upgrade",
+      "reviewedAt": "2026-10-14"
+    },
+    {
+      "id": "antidote-policy",
+      "url": "https://www.antidote.info/en/privacy-policy",
+      "title": "Antidote privacy policy",
+      "reviewedAt": "2026-10-14"
+    },
+    {
+      "id": "lt-policy",
+      "url": "https://languagetool.org/legal/privacy",
+      "title": "LanguageTool privacy policy",
+      "reviewedAt": "2026-10-14"
+    },
+    {
+      "id": "grammarly-workflow",
+      "url": "https://www.grammarly.com/grammar-check",
+      "title": "Grammarly grammar checking",
+      "reviewedAt": "2026-10-14"
+    }
+  ],
+  "candidates": [
+    {
+      "slug": "hemingway-classic",
+      "edition": "Hemingway Editor 3 Classic for Mac/Windows",
+      "sources": [
+        "hemingway-desktop"
+      ],
+      "observations": [
+        "Desktop purchase offer is displayed. Page documents wordy/complex sentence, adverb and passive-voice flags.",
+        "Works without internet; new AI features are excluded."
+      ],
+      "pending": [
+        "Confirm no recurring charge and continued-use/upgrade license terms from explicit official purchasing documentation.",
+        "Style/readability flags do not establish grammar/spelling or full Grammarly parity.",
+        "Offline availability alone does not document all telemetry, integrations or privacy handling."
+      ]
+    },
+    {
+      "slug": "prowritingaid",
+      "edition": "Premium/Premium Pro lifetime account license; exact selected tier to review",
+      "sources": [
+        "pwa-price",
+        "pwa-lifetime",
+        "pwa-workflow"
+      ],
+      "observations": [
+        "Pricing FAQ explicitly states lifetime licenses are a one-time payment without subsequent license charges.",
+        "Writing suggestions and line-editing reports are documented; account/tier and separately sold Story Credits need distinct bounds."
+      ],
+      "pending": [
+        "Match exact lifetime tier to required style workflow and recurring AI/report quotas.",
+        "A lifetime account offer does not establish offline processing, perpetual installed software or every extra service included."
+      ]
+    },
+    {
+      "slug": "antidote",
+      "edition": "Antidote 12 installed edition; purchase eligibility matters",
+      "sources": [
+        "antidote-new",
+        "antidote-upgrade",
+        "antidote-policy"
+      ],
+      "observations": [
+        "Individual new-purchase page reviewed displays Antidote+ subscriptions. Existing-license upgrade page separately documents a perpetual Antidote 12 offer with eligibility limits.",
+        "Policy distinguishes local correction in perpetual editions from Reformulation/server processing and Antidote Web retention/consent scenarios."
+      ],
+      "pending": [
+        "Confirm a current first-time individual perpetual purchase path or label upgrade-only eligibility explicitly.",
+        "Document exact English style workflow before a scoped alternative claim.",
+        "Do not transfer installed perpetual processing facts to Web/subscription features or infer zero telemetry."
+      ]
+    },
+    {
+      "slug": "languagetool",
+      "edition": "Hosted service/extensions; self-hosted edition requires separate review",
+      "sources": [
+        "lt-policy"
+      ],
+      "observations": [
+        "Current policy specifically excludes LanguageTool user inputs from language-model training by default.",
+        "The policy also describes content collection; no-training does not establish local-only or no-retention processing."
+      ],
+      "pending": [
+        "Review edition-specific processing location, storage/retention, subprocessors and optional feature handling.",
+        "A comparative privacy-friendly label needs a defined rubric and appropriate evidence, not just homepage marketing."
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "slug": "grammarly-alternatives-without-a-subscription",
+      "shortlist": [
+        "hemingway-classic",
+        "antidote",
+        "prowritingaid"
+      ],
+      "qualifiedNewClaims": 0,
+      "blockers": [
+        "Exact common style workflow and licensing conditions remain under review.",
+        "Antidote upgrade eligibility must not be presented as an unrestricted first-time purchase offer."
+      ]
+    },
+    {
+      "slug": "privacy-friendly-grammarly-alternatives",
+      "shortlist": [
+        "languagetool",
+        "hemingway-classic",
+        "antidote"
+      ],
+      "qualifiedNewClaims": 0,
+      "blockers": [
+        "Define privacy criteria and edition/feature boundaries.",
+        "Local execution, no training and no retention are different facts; no broad positive privacy claim is approved."
+      ]
+    }
+  ],
+  "checkpoint": {
+    "products": 15,
+    "routes": 7,
+    "remaining": 3,
+    "acceptanceCommit": "e12b08b",
+    "deployment": "Owner screenshot: Production green, count 60"
+  },
+  "nextWork": [
+    "Confirm Hemingway purchase/continued-use terms.",
+    "Resolve Antidote first-time versus upgrade-only purchasing eligibility.",
+    "Review a common English prose style workflow on both anchor and each candidate.",
+    "Choose edition-specific factual privacy criteria before any classification or engine change."
+  ]
+}

@@ -229,3 +229,8 @@ Owner pushed PR5.39 as 9b2b93e; clean git status and green Production (58). Comp
 ## PR5.41 — Task publication accepted
 
 Owner pushed PR5.40 as 403381e with clean git status, explicitly approved publication and supplied live rehearsal/apply success plus all 20 checks true. Production Chrome incognito route/product pages and all three Visit/source-link samples accepted. Checkpoint now15 products/seven approved routes, three remaining. Current audit uses the task workflow graph and a dated 2026-10-14 checkpoint; PR5.35 historical research checker keeps its original baseline. No SQL/writes. Issue #5 stays open. See PRODUCTIVITY_PUBLICATION_ACCEPTANCE.md.
+
+
+## PR5.42 — Grammarly workflow research
+
+Owner pushed PR5.41 as e12b08b with clean git status and green Production (60). PR5.42 records nine primary sources across four edition reviews for the two remaining Grammarly routes. Proposed English prose style scope remains unapproved; Hemingway continued-use terms, Antidote first-time purchase eligibility and edition-specific privacy criteria need further review. No claims, engine changes, SQL or publication. Public checkpoint remains 15 products/seven routes/three remaining. See GRAMMARLY_WORKFLOW_REVIEW.md.
