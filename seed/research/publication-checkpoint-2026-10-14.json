@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "recordedAt": "2026-10-14",
+  "basis": "Owner screenshots and reported execution; not a live database query",
+  "publishedProducts": [
+    "obsidian",
+    "things",
+    "omnifocus",
+    "2do",
+    "affine",
+    "anytype",
+    "appflowy",
+    "gimp",
+    "krita",
+    "paint-net",
+    "joplin",
+    "simplenote",
+    "pdf-xchange-editor",
+    "pdf24-creator",
+    "pdfgear"
+  ],
+  "publishedRoutes": [
+    "todoist-alternatives-with-a-one-time-purchase",
+    "offline-notion-alternatives",
+    "photoshop-alternatives-without-a-subscription",
+    "notion-alternatives-without-ai",
+    "simple-notion-alternatives",
+    "pdf-editors-without-a-subscription",
+    "productivity-apps-you-can-buy-once"
+  ],
+  "latestPublication": {
+    "packet": "PR5.40",
+    "commit": "403381e",
+    "approval": "Owner explicitly approved publication in chat on 2026-10-14",
+    "rehearsal": "Owner success screenshot; rollback SQL shown",
+    "apply": "Owner supplied approved apply success screenshot",
+    "verification": {
+      "passed": 20,
+      "total": 20
+    },
+    "browserAcceptance": "Owner Chrome incognito screenshots confirm public route with exactly 2Do/OmniFocus/Things, bounded task scope, pricing/trade-offs and three product pages without draft banners.",
+    "sourceLinkAcceptance": "All three Visit destinations reached official sites; supplied source samples reached 2Do direct store, OmniFocus overview with View Pricing and Things App Store Pricing. This is link-access sampling, not exhaustive source revalidation.",
+    "productionDeployment": "Public site reflected approved route; separate PR5.40 deployment status screenshot not supplied",
+    "previousPublication": "PR5.33 PDF accepted; checkpoint acceptance d158bd4"
+  },
+  "latestResearch": {
+    "packet": "PR5.35",
+    "commit": "279b649",
+    "pushed": true,
+    "workingTree": "Owner screenshot: clean",
+    "productionDeployment": "Owner screenshot: green Production, count 54",
+    "publicationChange": false
+  }
+}

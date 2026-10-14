@@ -224,3 +224,8 @@ Owner pushed PR5.38 as 100e7c2 with clean git status, then supplied live rehears
 ## PR5.40 — Productivity route publication proposal
 
 Owner pushed PR5.39 as 9b2b93e; clean git status and green Production (58). Complete PR5.39 snapshot confirms three published products and one draft/unapproved productivity route with three members, 24 attributes, 58 fragments and 23 sources. PR5.40 prepares route-only publication with full stored-state guards and explicit approval pending. Products/claims/evidence/memberships remain unchanged. 128 tests, lint/typecheck and isolated database rollback/drift/apply/repeat scenarios passed; all20 checks true locally. Public checkpoint stays15/6 until owner-approved live apply; proposed result15/7. See PRODUCTIVITY_PUBLICATION_REVIEW.md.
+
+
+## PR5.41 — Task publication accepted
+
+Owner pushed PR5.40 as 403381e with clean git status, explicitly approved publication and supplied live rehearsal/apply success plus all 20 checks true. Production Chrome incognito route/product pages and all three Visit/source-link samples accepted. Checkpoint now15 products/seven approved routes, three remaining. Current audit uses the task workflow graph and a dated 2026-10-14 checkpoint; PR5.35 historical research checker keeps its original baseline. No SQL/writes. Issue #5 stays open. See PRODUCTIVITY_PUBLICATION_ACCEPTANCE.md.
