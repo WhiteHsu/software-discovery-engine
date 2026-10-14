@@ -214,3 +214,8 @@ Owner pushed PR5.36 as e05972b; green Production (55) and four local draft pages
 ## PR5.38 — Selective task workflow import prepared
 
 Owner pushed PR5.37 as b15be86; clean git status and green Production (56). Full live snapshot captured 2026-10-14 confirms three published task products, 15/6 public checkpoint, absent productivity route and retained Todoist memberships. PR5.38 prepares pinned, guarded rehearsal/apply SQL for 12 task workflow/purchase/price/trade-off attributes, one new workflow taxonomy and one unapproved draft route. Product lifecycle, historical provenance and unrelated claims/memberships are preserved. 124 tests, lint/typecheck and isolated database rollback/drift/apply/repeat checks passed; 23 verification checks true locally. No remote execution or route publication. See PRODUCTIVITY_TASK_IMPORT_REVIEW.md.
+
+
+## PR5.39 — Productivity publication preflight
+
+Owner pushed PR5.38 as 100e7c2 with clean git status, then supplied live rehearsal/apply success and all 23 checks true. The three task products remain published; productivity route is draft/unapproved with three members. Public checkpoint stays 15 products/six routes. PR5.39 prepares a post-import SELECT-only snapshot for a later guarded route-only publication proposal. Await complete JSON; no publication approval or remote write. See PRODUCTIVITY_PUBLICATION_PREFLIGHT_REVIEW.md.
