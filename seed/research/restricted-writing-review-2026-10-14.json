@@ -1,0 +1,165 @@
+{
+  "version": 1,
+  "packet": "PR5.51",
+  "reviewedAt": "2026-10-14",
+  "researchOnly": true,
+  "publicationApproved": false,
+  "graphChanges": false,
+  "membershipChanges": false,
+  "engineChanges": false,
+  "qualifiedNewCandidates": 0,
+  "baseline": {
+    "commit": "797d9858c980d00c0e30413f22db93dcc257e1ea",
+    "clean": "Independently inspected",
+    "deployment": "Owner screenshot green Production #69; not live queried",
+    "products": 15,
+    "routes": 7,
+    "remaining": 3,
+    "issue5": "Open historical baseline; not live queried"
+  },
+  "inputs": [
+    {
+      "path": "seed/research/hemingway-common-corpus-2026-10-14.json",
+      "sha256": "357f39feb7d92e1789e52b58e9300209fca975de0221dcaa824837199a143884"
+    },
+    {
+      "path": "seed/research/writing-owner-corpus-2026-10-14.json",
+      "sha256": "333badf98125e05f5b3bb706c1eea05145e3ae0797b31dd81d7a6f6e6a167271"
+    },
+    {
+      "path": "seed/research/grammarly-validation-protocol-2026-10-14.json",
+      "sha256": "f05ab5b975ad555e21c1ece7be848c2c53309120ea362a17ca8acccf5576a87a"
+    },
+    {
+      "path": "GRAMMARLY_REPLACEMENT_RESEARCH.md",
+      "sha256": "585642e1e19cec4f56f73f60f8b15cb67ee6c36c5fe1a69cceba043853622358"
+    },
+    {
+      "path": "lib/discovery/escape-model.ts",
+      "sha256": "ab2933089e7bdea25b547412c54ee51ca6c269407f01882c5a0ebab1416a5245"
+    }
+  ],
+  "proposedScope": {
+    "id": "personal-english-prose-style-manual-review",
+    "status": "Research label only; not new taxonomy/engine/relationship scope",
+    "operation": "Inspect local style feedback, manually revise fixed short English prose, then recheck.",
+    "excluded": [
+      "Generative rewrite/chat",
+      "Full grammar/spelling replacement",
+      "Identical readability scores",
+      "Offline or local-only processing equivalence",
+      "Privacy advantage",
+      "Team/integration parity",
+      "Applying vendor suggestions (not tested)"
+    ]
+  },
+  "observations": {
+    "runnableCasesObserved": 15,
+    "runnableCases": 15,
+    "pwaNotEntitledCases": 5,
+    "interpretation": "Coverage of protocol slots, not 15 passed features, accuracy benchmark or candidate qualification"
+  },
+  "operationMatrix": [
+    {
+      "operation": "Passive construction review",
+      "hemingway": "Flag before, clear after manual edit",
+      "grazie": "Local active-voice suggestion before, no notes after manual edit",
+      "grammarly": "Pro Free sample before; no suggestions after manual edit",
+      "pwa": "Documentary only; no Premium lifetime execution",
+      "decision": "Closest observed overlap between two free leads; stable selected Free anchor operation and third exact edition not established"
+    },
+    {
+      "operation": "Unnecessary wording review",
+      "hemingway": "In order to simpler-word flag; clear after manual edit",
+      "grazie": "In order to → To suggestion; clear after manual edit",
+      "grammarly": "Pro Free samples before and after manual edit",
+      "pwa": "Documentary only",
+      "decision": "Local phrase evidence only; no shared general-wordiness or stable Free entitlement claim"
+    },
+    {
+      "operation": "Redundancy review",
+      "hemingway": "No related feedback on selected sample",
+      "grazie": "Two deletion suggestions, clear after manual edit",
+      "grammarly": "One visible Pro sample and one masked before; masked wording after",
+      "pwa": "Documentary only",
+      "decision": "No common observed redundancy operation across proposed editions"
+    },
+    {
+      "operation": "Complex sentence review",
+      "hemingway": "Very-hard sentence flag, clear after manual edit",
+      "grazie": "No notes before and after with recorded Default settings",
+      "grammarly": "Pro masked Clarity before and after",
+      "pwa": "Documentary only",
+      "decision": "No common observed complex-sentence operation; no-notes is not universal lack of capability"
+    },
+    {
+      "operation": "Simple active control",
+      "hemingway": "No related feedback",
+      "grazie": "No notes",
+      "grammarly": "No suggestions",
+      "pwa": "Not tested",
+      "decision": "Control observation only, not affirmative feature/accuracy evidence"
+    }
+  ],
+  "editionDispositions": [
+    {
+      "edition": "Hemingway anonymous free web",
+      "status": "Retain research lead",
+      "boundary": "Not Classic. Passive/local wording/complexity flags observed; no redundancy evidence on selected case. No generic Grammarly replacement, rights or privacy conclusion."
+    },
+    {
+      "edition": "Grazie Free Chrome 1.15.1 / Gmail",
+      "status": "Retain research lead",
+      "boundary": "Passive/local wordiness/redundancy observed. Google Docs execution never confirmed recovered. Earlier loading cause unknown. Free service/quotas/processing and privacy gates unresolved; working few checks is not unlimited use."
+    },
+    {
+      "edition": "ProWritingAid Premium lifetime",
+      "status": "Documentary only / not-entitled",
+      "boundary": "Do not substitute Free/trial/other tier or require purchase. Entitled execution remains missing for this proposal."
+    },
+    {
+      "edition": "Grammarly Free / Coda Docs / Proofread",
+      "status": "Anchor access restriction observed",
+      "boundary": "Style cards identified Pro previews, later masked after daily samples exhausted. No stable Free style overlap established here; no absolute claim Free lacks style features. Do not infer cap count/reset or recover blurred text."
+    }
+  ],
+  "routeDecisions": [
+    {
+      "slug": "grammarly-alternatives-without-a-subscription",
+      "decision": "hold",
+      "qualifiedNewCandidates": 0,
+      "required": "Dated verified alternative relationship for exact edition; no-subscription=true; sourced pricing-model and trade-off-summary; minimum evidence confidence 0.80; at least three eligible published products before route publication.",
+      "gaps": [
+        "Anchor exact stable Free operation not established by Pro previews",
+        "Third proposed edition remains documentary-only",
+        "Free access or a lifetime label alone does not supply verified route attributes/rights",
+        "No identity, relationship claims, attribute claims or memberships approved by this review"
+      ]
+    },
+    {
+      "slug": "privacy-friendly-grammarly-alternatives",
+      "decision": "hold",
+      "qualifiedNewCandidates": 0,
+      "required": "Dated verified alternative relationship and privacy-friendly=true with sourced pricing/trade-offs and confidence threshold; three eligible published products.",
+      "gaps": [
+        "Style feedback says nothing by itself about privacy qualification",
+        "No new scoped positive privacy evidence approved",
+        "Account/cloud/no-training/local draft storage are different facts",
+        "Hemingway Classic offline documentary evidence must not transfer to free web"
+      ]
+    }
+  ],
+  "gateDistinction": "Existing engine requires dated supported verified graph claims. The current editorial research proposal additionally requires meaningful common operation on selected anchor/all exact editions. Neither requirement is waived by screenshot coverage.",
+  "nextWork": {
+    "priority": "Resolve selected anchor scope/entitlement and exact third candidate evidence before more broad samples or any graph/import design.",
+    "options": [
+      "Keep Grammarly Free: independently establish ordinary Free proofreading/style operation on a supported surface, separate Pro preview cards; revise/narrow proposed workflow only if evidence supports it.",
+      "If the owner explicitly selects another anchor tier, create a separate exact-tier protocol; never silently substitute Pro or start a trial.",
+      "PWA lifetime remains parked without entitlement; a separately researched exact alternative edition could replace it in a future proposal, not by automatic membership change."
+    ],
+    "noPurchaseRequired": true,
+    "noQuotaExhaustion": true,
+    "noRepeatingSameSamplesWithoutNewReason": true
+  },
+  "decision": "Restricted research review complete; qualification/publication held. This is not a product-wide rejection or approval."
+}
