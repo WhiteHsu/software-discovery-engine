@@ -1,0 +1,457 @@
+{
+  "version": 1,
+  "packet": "PR5.50",
+  "reviewedAt": "2026-10-14",
+  "researchOnly": true,
+  "publicationApproved": false,
+  "graphChanges": false,
+  "membershipChanges": false,
+  "engineChanges": false,
+  "qualifiedNewCandidates": 0,
+  "baseline": {
+    "commit": "a50ec99e84c40496cea627c4cce6e823ce1db617",
+    "gitStatus": "Independently inspected clean",
+    "products": 15,
+    "routes": 7,
+    "remaining": 3,
+    "deployment": "Owner screenshot shows green Production #68; not live queried",
+    "issue5": "Open baseline; not live queried"
+  },
+  "corpus": {
+    "source": "seed/research/grammarly-validation-protocol-2026-10-14.json",
+    "sha256": "f05ab5b975ad555e21c1ece7be848c2c53309120ea362a17ca8acccf5576a87a"
+  },
+  "sessions": {
+    "grazie": {
+      "browser": "Owner Chrome",
+      "version": "1.15.1",
+      "surface": "Gmail compose, no recipient / not sent",
+      "plan": "FREE displayed",
+      "language": "English",
+      "style": "Default",
+      "variant": "Neutral",
+      "settings": "Active voice, weak adverbs, tautology, redundant of, of chains and wordiness enabled; clear language disabled",
+      "loading": "Persistent loading in Google Docs and Gmail, extension toggle/reload did not immediately resolve. Later Gmail spellcheck and corpus worked; root cause and any DevTools effect unknown.",
+      "quota": "Settings and Chat showed AI volume exhausted notices. Proofreading later worked; no numeric cap or zero-metering conclusion."
+    },
+    "grammarly": {
+      "browser": "Owner Chrome",
+      "surface": "coda.grammarly.com document reached via app.grammarly.com New doc",
+      "plan": "Free displayed on app home; Pro trial declined",
+      "mode": "Proofread",
+      "goals": "No goals dialog reported; other defaults not independently inspected",
+      "access": "Pro Free sample visible at first; daily sample exhausted appeared mid-session. No trial/unlock or acceptance used."
+    }
+  },
+  "results": [
+    {
+      "edition": "grazie-free-extension",
+      "caseId": "passive",
+      "status": "owner-observed",
+      "before": {
+        "input": "The report was written by the editor before it was sent to the team.",
+        "count": 1,
+        "category": "active-voice",
+        "suggestions": [
+          {
+            "message": "This sentence might be clearer in the active voice",
+            "replacement": "The editor wrote the report",
+            "scope": "Displayed local suggestion only; application/replacement boundaries not tested"
+          }
+        ],
+        "evidence": "evidence/grazie-passive-before.png"
+      },
+      "after": {
+        "input": "The editor wrote the report and sent it to the team.",
+        "count": 0,
+        "message": "Perfect, no notes.",
+        "evidence": "evidence/grazie-passive-after.png",
+        "method": "Owner manually replaced text with fixed protocol reference; vendor suggestion not accepted"
+      },
+      "qualification": "Observation only; no candidate qualification"
+    },
+    {
+      "edition": "grammarly-anchor",
+      "caseId": "passive",
+      "status": "owner-observed",
+      "before": {
+        "input": "The report was written by the editor before it was sent to the team.",
+        "count": 1,
+        "category": "Clarity",
+        "access": "Pro suggestion · Free sample",
+        "replacement": "The editor wrote the report before sending it to the team.",
+        "evidence": "evidence/grammarly-passive-before.png"
+      },
+      "after": {
+        "input": "The editor wrote the report and sent it to the team.",
+        "count": 0,
+        "message": "There are no more suggestions",
+        "evidence": "evidence/grammarly-passive-after.png",
+        "method": "Owner manually replaced text with fixed protocol reference; vendor suggestion not accepted"
+      },
+      "qualification": "Observation only; no candidate qualification"
+    },
+    {
+      "edition": "grazie-free-extension",
+      "caseId": "wordiness",
+      "status": "owner-observed",
+      "before": {
+        "input": "In order to finish the review, the editor made the decision to read the draft again.",
+        "count": 1,
+        "category": "Readability",
+        "suggestions": [
+          {
+            "original": "In order to",
+            "replacement": "To",
+            "message": "The phrase 'in order to' may be wordy"
+          }
+        ],
+        "evidence": "evidence/grazie-wordiness-before.png"
+      },
+      "after": {
+        "input": "To finish the review, the editor decided to read the draft again.",
+        "count": 0,
+        "message": "Perfect, no notes.",
+        "evidence": "evidence/grazie-wordiness-after.png",
+        "method": "Owner manually replaced text with fixed protocol reference; vendor suggestion not accepted"
+      },
+      "qualification": "Observation only; no candidate qualification"
+    },
+    {
+      "edition": "grammarly-anchor",
+      "caseId": "wordiness",
+      "status": "owner-observed",
+      "before": {
+        "input": "In order to finish the review, the editor made the decision to read the draft again.",
+        "count": 1,
+        "category": "Clarity",
+        "access": "Pro suggestion · Free sample",
+        "replacement": "To finish the review, the editor decided to read the draft again.",
+        "evidence": "evidence/grammarly-wordiness-before.png"
+      },
+      "after": {
+        "input": "To finish the review, the editor decided to read the draft again.",
+        "count": 1,
+        "category": "Clarity",
+        "access": "Pro suggestion · Free sample",
+        "replacement": "To conclude the review, the editor decided to reread the draft.",
+        "evidence": "evidence/grammarly-wordiness-after.png",
+        "method": "Owner manually replaced text with fixed protocol reference; vendor suggestion not accepted"
+      },
+      "qualification": "Observation only; no candidate qualification"
+    },
+    {
+      "edition": "grazie-free-extension",
+      "caseId": "redundancy",
+      "status": "owner-observed",
+      "before": {
+        "input": "The editor returned back to the draft and repeated the review again.",
+        "count": 2,
+        "category": "Readability",
+        "suggestions": [
+          {
+            "original": "back",
+            "action": "delete",
+            "message": "The phrase 'return back' seems redundant"
+          },
+          {
+            "original": "again",
+            "action": "delete",
+            "message": "The word 'again' seems redundant with 'repeated'"
+          }
+        ],
+        "evidence": "evidence/grazie-redundancy-before.png"
+      },
+      "after": {
+        "input": "The editor returned to the draft and repeated the review.",
+        "count": 0,
+        "message": "Perfect, no notes.",
+        "evidence": "evidence/grazie-redundancy-after.png",
+        "method": "Owner manually replaced text with fixed protocol reference; vendor suggestion not accepted"
+      },
+      "qualification": "Observation only; no candidate qualification"
+    },
+    {
+      "edition": "grammarly-anchor",
+      "caseId": "redundancy",
+      "status": "owner-observed",
+      "before": {
+        "input": "The editor returned back to the draft and repeated the review again.",
+        "count": 2,
+        "category": "Grammar / Rephrase",
+        "access": "Mixed: back visible Pro free sample; again Pro daily sample exhausted / masked",
+        "suggestions": [
+          {
+            "original": "back",
+            "action": "delete",
+            "access": "Pro suggestion · Free sample"
+          },
+          {
+            "original": "again",
+            "access": "Pro suggestion · You're out of free samples for today",
+            "replacement": null
+          }
+        ],
+        "evidence": "evidence/grammarly-redundancy-before.png"
+      },
+      "after": {
+        "input": "The editor returned to the draft and repeated the review.",
+        "count": 1,
+        "category": "Clarity / Improve wording",
+        "original": "repeated the review",
+        "access": "Pro daily sample exhausted / masked",
+        "replacement": null,
+        "evidence": "evidence/grammarly-redundancy-after.png",
+        "method": "Owner manually replaced text with fixed protocol reference; vendor suggestion not accepted"
+      },
+      "qualification": "Observation only; no candidate qualification"
+    },
+    {
+      "edition": "grazie-free-extension",
+      "caseId": "complexity",
+      "status": "owner-observed",
+      "before": {
+        "input": "Although the editor had already reviewed the draft, the editor decided to read it again because the explanation, which had undergone several revisions during the previous week, still left the readers uncertain about the steps they needed to follow.",
+        "count": 0,
+        "message": "Perfect, no notes.",
+        "evidence": "evidence/grazie-complexity-before.png"
+      },
+      "after": {
+        "input": "The editor reviewed the draft again. The explanation still left readers unsure about the next steps.",
+        "count": 0,
+        "message": "Perfect, no notes.",
+        "evidence": "evidence/grazie-complexity-after.png",
+        "method": "Owner manually replaced text with fixed protocol reference; vendor suggestion not accepted"
+      },
+      "qualification": "Observation only; no candidate qualification"
+    },
+    {
+      "edition": "grammarly-anchor",
+      "caseId": "complexity",
+      "status": "owner-observed",
+      "before": {
+        "input": "Although the editor had already reviewed the draft, the editor decided to read it again because the explanation, which had undergone several revisions during the previous week, still left the readers uncertain about the steps they needed to follow.",
+        "count": 1,
+        "category": "Clarity / Improve your text",
+        "access": "Pro daily sample exhausted / masked",
+        "replacement": null,
+        "displayedScore": 94,
+        "evidence": "evidence/grammarly-complexity-before.png"
+      },
+      "after": {
+        "input": "The editor reviewed the draft again. The explanation still left readers unsure about the next steps.",
+        "count": 1,
+        "category": "Clarity / Improve wording",
+        "original": "the next steps",
+        "access": "Pro daily sample exhausted / masked",
+        "replacement": null,
+        "evidence": "evidence/grammarly-complexity-after.png",
+        "method": "Owner manually replaced text with fixed protocol reference; vendor suggestion not accepted"
+      },
+      "qualification": "Observation only; no candidate qualification"
+    },
+    {
+      "edition": "grazie-free-extension",
+      "caseId": "active-control",
+      "status": "owner-observed",
+      "before": {
+        "input": "The editor wrote the report. The team read it.",
+        "count": 0,
+        "message": "Perfect, no notes.",
+        "evidence": "evidence/grazie-active-control-before.png"
+      },
+      "after": {
+        "input": "The editor wrote the report. The team read it.",
+        "count": 0,
+        "message": "Perfect, no notes.",
+        "evidence": "evidence/grazie-active-control-before.png",
+        "method": "Unchanged control, one capture reused"
+      },
+      "qualification": "Observation only; no candidate qualification"
+    },
+    {
+      "edition": "grammarly-anchor",
+      "caseId": "active-control",
+      "status": "owner-observed",
+      "before": {
+        "input": "The editor wrote the report. The team read it.",
+        "count": 0,
+        "message": "There are no more suggestions",
+        "evidence": "evidence/grammarly-active-control-before.png"
+      },
+      "after": {
+        "input": "The editor wrote the report. The team read it.",
+        "count": 0,
+        "message": "There are no more suggestions",
+        "unchangedControl": true,
+        "evidence": "evidence/grammarly-active-control-before.png",
+        "method": "Unchanged control, one capture reused"
+      },
+      "qualification": "Observation only; no candidate qualification"
+    }
+  ],
+  "evidence": [
+    {
+      "name": "grazie-free-plan",
+      "path": "evidence/grazie-free-plan.png",
+      "sha256": "faf3515a932287b123ee38da24decbf369363963857cf6b4e85464cab871f795",
+      "source": "Owner-supplied conversation screenshot; visually reviewed, not independent browser execution"
+    },
+    {
+      "name": "grazie-version",
+      "path": "evidence/grazie-version.png",
+      "sha256": "0efeb051052f347db223f3d9b2083044c239a4fc6a78d51ed007bf4e765d8497",
+      "source": "Owner-supplied conversation screenshot; visually reviewed, not independent browser execution"
+    },
+    {
+      "name": "grazie-loading",
+      "path": "evidence/grazie-loading.png",
+      "sha256": "5015423daef889be2f0989c9c02e84acdd26e8d2c6cb2789ecf2d41804e356d9",
+      "source": "Owner-supplied conversation screenshot; visually reviewed, not independent browser execution"
+    },
+    {
+      "name": "grazie-spelling-control",
+      "path": "evidence/grazie-spelling-control.png",
+      "sha256": "568e5ac952d1a807f730a515e221bb817a75811281b2eabc654fe7a05f249774",
+      "source": "Owner-supplied conversation screenshot; visually reviewed, not independent browser execution"
+    },
+    {
+      "name": "grazie-passive-before",
+      "path": "evidence/grazie-passive-before.png",
+      "sha256": "62d125af6df24da81529831c25fa630dcf1ba9ade86a7b266ee73752342fd188",
+      "source": "Owner-supplied conversation screenshot; visually reviewed, not independent browser execution"
+    },
+    {
+      "name": "grazie-passive-after",
+      "path": "evidence/grazie-passive-after.png",
+      "sha256": "9aa6156e15471bfecc5ab956fcbbc9ca41fc7323e69f3ef394a8e5ac805bb087",
+      "source": "Owner-supplied conversation screenshot; visually reviewed, not independent browser execution"
+    },
+    {
+      "name": "grazie-wordiness-before",
+      "path": "evidence/grazie-wordiness-before.png",
+      "sha256": "8542bafdc697f791a9cb00868633e28d8c1c86c546fdb1e86608a59a523c8e40",
+      "source": "Owner-supplied conversation screenshot; visually reviewed, not independent browser execution"
+    },
+    {
+      "name": "grazie-wordiness-after",
+      "path": "evidence/grazie-wordiness-after.png",
+      "sha256": "7b9fcccb54e24049a400bc0d1eb041afa4d8209e9d7b42aa3d42d7a4470c217f",
+      "source": "Owner-supplied conversation screenshot; visually reviewed, not independent browser execution"
+    },
+    {
+      "name": "grazie-redundancy-before",
+      "path": "evidence/grazie-redundancy-before.png",
+      "sha256": "ecb62061d5930b76f42fac91da3103b2978b57050cc509666b3afdf02dc91247",
+      "source": "Owner-supplied conversation screenshot; visually reviewed, not independent browser execution"
+    },
+    {
+      "name": "grazie-redundancy-after",
+      "path": "evidence/grazie-redundancy-after.png",
+      "sha256": "4cdf20c820f085bb3aea0033a1e400254a7259ad52a759d6ae902c1ddaaceded",
+      "source": "Owner-supplied conversation screenshot; visually reviewed, not independent browser execution"
+    },
+    {
+      "name": "grazie-complexity-before",
+      "path": "evidence/grazie-complexity-before.png",
+      "sha256": "e05b9a4b9b9a015e6426e21da653da65ddbe7732fde6f94dfda1cb223e1a12c2",
+      "source": "Owner-supplied conversation screenshot; visually reviewed, not independent browser execution"
+    },
+    {
+      "name": "grazie-complexity-after",
+      "path": "evidence/grazie-complexity-after.png",
+      "sha256": "fb154df44e4bc3de6591397a789892d5dee6eb942ab340bc5745a95666ced8dd",
+      "source": "Owner-supplied conversation screenshot; visually reviewed, not independent browser execution"
+    },
+    {
+      "name": "grazie-active-control-before",
+      "path": "evidence/grazie-active-control-before.png",
+      "sha256": "b6ecb50eb32b6a90154ea9921ab7be54fe6388a63dc7c85cc6eee3b09eda941f",
+      "source": "Owner-supplied conversation screenshot; visually reviewed, not independent browser execution"
+    },
+    {
+      "name": "grammarly-free-plan",
+      "path": "evidence/grammarly-free-plan.png",
+      "sha256": "8c2c55af8ede26d95038b7afd17044e323ef98402e9beb4e67ecd72e9aaca758",
+      "source": "Owner-supplied conversation screenshot; visually reviewed, not independent browser execution"
+    },
+    {
+      "name": "grammarly-passive-before",
+      "path": "evidence/grammarly-passive-before.png",
+      "sha256": "b70238ab20d1fe750118e64eff17ad44cd4fcce99235d3010aba27824dde3811",
+      "source": "Owner-supplied conversation screenshot; visually reviewed, not independent browser execution"
+    },
+    {
+      "name": "grammarly-passive-after",
+      "path": "evidence/grammarly-passive-after.png",
+      "sha256": "3e7a9db1d0c13765cd0fd25a73e72079022a6629683f937d31fbfe07dacd84db",
+      "source": "Owner-supplied conversation screenshot; visually reviewed, not independent browser execution"
+    },
+    {
+      "name": "grammarly-wordiness-before",
+      "path": "evidence/grammarly-wordiness-before.png",
+      "sha256": "f22d4c2fb7bebbb30ef7d176b375f1b81d780b423ea9db87615103f85f36f517",
+      "source": "Owner-supplied conversation screenshot; visually reviewed, not independent browser execution"
+    },
+    {
+      "name": "grammarly-wordiness-after",
+      "path": "evidence/grammarly-wordiness-after.png",
+      "sha256": "46a8046b462d12f2525123db1f14951547619d0b84cf67726dadb7e3a09eb820",
+      "source": "Owner-supplied conversation screenshot; visually reviewed, not independent browser execution"
+    },
+    {
+      "name": "grammarly-redundancy-before-visible",
+      "path": "evidence/grammarly-redundancy-before-visible.png",
+      "sha256": "084432ebb509b7e066c489e519975461b9dc20d3a794c4e1dbe7fdbb9d9d25ff",
+      "source": "Owner-supplied conversation screenshot; visually reviewed, not independent browser execution"
+    },
+    {
+      "name": "grammarly-redundancy-before",
+      "path": "evidence/grammarly-redundancy-before.png",
+      "sha256": "50450268e650597e803df60d6103f725d9ceec9abc8640ca849645a157b9952c",
+      "source": "Owner-supplied conversation screenshot; visually reviewed, not independent browser execution"
+    },
+    {
+      "name": "grammarly-redundancy-after",
+      "path": "evidence/grammarly-redundancy-after.png",
+      "sha256": "731c3f853e2781862ffc28e481e426c7b312e329d7652e314b00218e5809932b",
+      "source": "Owner-supplied conversation screenshot; visually reviewed, not independent browser execution"
+    },
+    {
+      "name": "grammarly-complexity-before",
+      "path": "evidence/grammarly-complexity-before.png",
+      "sha256": "5e23fbae1bc5098a90a3c27ebb99a75a673e4f0e6efbac61efc72c0b3c79cc93",
+      "source": "Owner-supplied conversation screenshot; visually reviewed, not independent browser execution"
+    },
+    {
+      "name": "grammarly-complexity-after",
+      "path": "evidence/grammarly-complexity-after.png",
+      "sha256": "cd577e6e5f953ff6a8215360fd41d02d2afe93195d77d5103fec4c1f38e69772",
+      "source": "Owner-supplied conversation screenshot; visually reviewed, not independent browser execution"
+    },
+    {
+      "name": "grammarly-active-control-before",
+      "path": "evidence/grammarly-active-control-before.png",
+      "sha256": "11acd8749b1915732ec0e76be73a7a926495a34811bae805e80e0eab157579b8",
+      "source": "Owner-supplied conversation screenshot; visually reviewed, not independent browser execution"
+    }
+  ],
+  "progress": {
+    "newOwnerCases": 10,
+    "totalRunnableCasesObserved": 15,
+    "totalRunnableCases": 15,
+    "pwaLifetimeCases": 5,
+    "pwaStatus": "not-entitled; documentary only; no purchase or tier substitution"
+  },
+  "limitations": [
+    "Owner screenshots, not agent-controlled live execution; timestamps reflect same-day conversation.",
+    "Suggestions counted as UI cards, not distinct proven capabilities; no benchmark accuracy claim.",
+    "Gmail native Make concise/Correct spelling and completion hints excluded.",
+    "Grammarly masked replacement remains null; never reconstructed from blur or inferred.",
+    "Pro examples visible in Free session are not stable Free entitlement; daily allowance size/reset unknown.",
+    "15/15 means case observations, not passing features or complete paid-candidate qualification.",
+    "Application of vendor fixes was not tested; after text was manually supplied.",
+    "PWA lifetime not tested, Classic rights unresolved, privacy/usage gates remain."
+  ],
+  "decision": "Hold candidate qualification and publication. Preserve 15 products / 7 routes / 3 remaining and both Grammarly routes."
+}
