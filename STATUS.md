@@ -204,3 +204,8 @@ Owner reports all prior packets pushed; PR5.34 acceptance/checkpoint commit d158
 ## PR5.36 — Bounded personal task planning drafts
 
 Owner pushed PR5.35 as 279b649; clean git status and green Production (54) confirmed. PR5.36 confirms direct-store 2Do Mac perpetual licensing with 18 months of updates and optional renewal, separately from Mac App Store/Setapp subscriptions. A sourced exact task-workflow attribute replaces the editorial-audience qualification gate for the productivity route. Three separate local draft candidates qualify; audience judgments and other routes remain unchanged. Twelve attribute updates, one draft taxonomy definition; no new products, SQL or publication. 121 tests, lint/typecheck/build and four local HTTP content checks passed. Production remains 15 products, six published routes, four remaining. See PRODUCTIVITY_TASK_WORKFLOW_REVIEW.md.
+
+
+## PR5.37 — Task workflow import preflight
+
+Owner pushed PR5.36 as e05972b; green Production (55) and four local draft pages confirmed. After restoring generated next-env.d.ts, git status was clean. PR5.37 prepares a single-statement SELECT snapshot of the three existing published task products, complete claims/provenance/taxonomy, route memberships and publication checkpoint. No writes or new publication. Await the full live snapshot before selective import design. See PRODUCTIVITY_IMPORT_PREFLIGHT_REVIEW.md.
