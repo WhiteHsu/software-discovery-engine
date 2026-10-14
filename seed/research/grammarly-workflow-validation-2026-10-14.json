@@ -1,0 +1,159 @@
+{
+  "version": 1,
+  "packet": "PR5.46",
+  "reviewedAt": "2026-10-14",
+  "researchOnly": true,
+  "publicationApproved": false,
+  "graphChanges": false,
+  "membershipChanges": false,
+  "engineChanges": false,
+  "qualifiedNewCandidates": 0,
+  "baseline": {
+    "commit": "f0105e0db3a69e94b5ccc1e85413dfe1b009f79b",
+    "workingTree": "independently inspected clean",
+    "deployment": "Owner screenshot: green Production #64; not live-queried",
+    "products": 15,
+    "routes": 7,
+    "remaining": 3,
+    "issue5": "open"
+  },
+  "browserSession": {
+    "url": "https://languagetool.org/",
+    "surface": "Anonymous homepage checker; not an authenticated Basic-account/editor/add-on session",
+    "locale": "English (US)",
+    "picky": "Initially off for combined sample, then on for each recorded separate sample",
+    "limit": "UI denominator 2000 observed; boundary enforcement not tested; other surfaces not resolved",
+    "data": "Only fabricated short prose plus the publicly documented Basic example; no user documents or account created",
+    "timing": "Waited for changed counters and completed feedback; immediate stale results were not recorded as outcomes."
+  },
+  "observations": [
+    {
+      "id": "combined",
+      "sample": "In order to finish the review, I made the decision to read the draft again. The draft was reviewed by Maya before it was sent to the editor.",
+      "counter": "140/2000",
+      "result": "2 more advanced issues; Upgrade to Premium",
+      "settings": "Same outcome observed with Picky off and on",
+      "screenshot": "evidence/lt-combined-picky.png"
+    },
+    {
+      "id": "wordiness",
+      "sample": "In order to finish the review, I made the decision to read the draft again.",
+      "counter": "75/2000",
+      "result": "2 more advanced issues; Upgrade to Premium",
+      "settings": "Picky on",
+      "screenshot": "evidence/lt-wordiness-picky.png",
+      "interpretation": "No accessible suggestion for this sample; locked rule details not exposed, so no exact rule identity inferred."
+    },
+    {
+      "id": "passive",
+      "sample": "The draft was reviewed by Maya before it was sent to the editor.",
+      "counter": "64/2000",
+      "result": "No errors were found.",
+      "settings": "Picky on",
+      "screenshot": "evidence/lt-passive-picky.png",
+      "interpretation": "No passive suggestion for this sample; does not prove universal absence or exact tier allocation."
+    },
+    {
+      "id": "complex",
+      "sample": "Although Maya had already reviewed the draft, she decided to read it again because the explanation, which had been revised several times, still left readers uncertain about the next step.",
+      "counter": "187/2000",
+      "result": "No errors were found.",
+      "settings": "Picky on",
+      "screenshot": "evidence/lt-complex-picky.png",
+      "interpretation": "No complexity suggestion for this sample; does not prove universal absence."
+    },
+    {
+      "id": "basic-positive-control",
+      "sample": "You've gotta new car.",
+      "counter": "21/2000",
+      "result": "Grammar mistake; got a suggestion available without upgrade",
+      "settings": "Picky on",
+      "screenshot": "evidence/lt-basic-standard.png",
+      "after": {
+        "action": "Clicked got a",
+        "text": "You've got a new car.",
+        "result": "No errors were found.",
+        "screenshot": "evidence/lt-basic-applied.png"
+      },
+      "interpretation": "Confirms accessible correction workflow in anonymous surface; UI grammar label is not evidence of shared style operation across Classic and Premium lifetime."
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "evidence/lt-combined-picky.png",
+      "sha256": "fe96ecc635b6c4de71869181d9fe9e6019153e2f2c8ad6ebf8773639480ee5d7"
+    },
+    {
+      "file": "evidence/lt-wordiness-picky.png",
+      "sha256": "2b970b0c7d47ec03cee70124e256c4890e5d97e0fd3f1d85402f158ce487ecf9"
+    },
+    {
+      "file": "evidence/lt-passive-picky.png",
+      "sha256": "fca84c84a943b27ffcc1ce2033beef3f4d842ef4c585f0cb992ac7b31fe63f69"
+    },
+    {
+      "file": "evidence/lt-complex-picky.png",
+      "sha256": "2dfc06ad6b50ee089ff5e49bbf56797c4097a57332c506ae9d4c68e460984b08"
+    },
+    {
+      "file": "evidence/lt-basic-standard.png",
+      "sha256": "bee73777cb90df59e45b6241099aeb923ca90bebc93cf3e66ca433d9884067b2"
+    },
+    {
+      "file": "evidence/lt-basic-applied.png",
+      "sha256": "70c1e99059bc9b70051b7a1116634cc75e2b59dae765386c8bc52dbc0d873ef8"
+    }
+  ],
+  "hemingway": {
+    "sources": [
+      {
+        "url": "https://hemingway-app.myshopify.com/policies/terms-of-service",
+        "access": "Direct public HTML HTTP 200; policy body parsed empty",
+        "savedResponseSHA256": "97ed98490caea58195a297101bbd929eb23d1e1aba9792a6dc256d44e2df69d7",
+        "consequence": "Updates prior fetch failure; no current paid-license entitlement established."
+      },
+      {
+        "url": "https://hemingway-app.myshopify.com/collections/all",
+        "access": "Direct public HTML HTTP 200; No products found",
+        "savedResponseSHA256": "de36267cfe62d795cdbe102b000fa15a16b969800d124527a6405eb953265258",
+        "consequence": "Empty public catalog is not evidence that current desktop purchase links are invalid."
+      },
+      {
+        "url": "https://hemingwayapp.com/help.html",
+        "access": "Web tool redirected to /help; Editor Plus help",
+        "consequence": "Not Classic license evidence."
+      },
+      {
+        "url": "https://beta.hemingwayapp.com/help.html",
+        "access": "Direct retrieval did not return usable content; legacy indexing retained historically",
+        "consequence": "No promotion to current terms."
+      }
+    ],
+    "status": "Classic current no-renewal/continued-use rights unresolved; no purchase or contact."
+  },
+  "additionalSources": [
+    {
+      "url": "https://hemingwayapp.com/help/docs/highlighted-issues",
+      "access": "direct-page",
+      "finding": "Current help marks grammar checking and AI fixes as Plus premium features; do not attribute them to Classic."
+    },
+    {
+      "url": "https://hemingwayapp.com/help/docs/readability",
+      "access": "direct-page",
+      "finding": "Current help explains scores/flags and separately marks target adjustment premium; not verification of Classic terms."
+    },
+    {
+      "url": "https://community.languagetool.org/rule/list?lang=en&max=1000&offset=0&order=desc&sort=category",
+      "access": "official community catalogue search index only",
+      "finding": "Rule names visible in catalogue do not allocate hosted Basic entitlements; not used to qualify a candidate."
+    }
+  ],
+  "decision": {
+    "status": "Current three-edition proposal cannot advance to qualification/import.",
+    "researchDisposal": "LanguageTool Basic is not selected for the proposed shared wordiness/passive/complexity workflow on current evidence. Keep other Basic uses open; no global product rejection.",
+    "commonWorkflow": "Basic positive grammar control cannot replace the required style operations without new exact-edition and anchor evidence.",
+    "membership": "No changes applied; prior files preserved.",
+    "nextStep": "Review a different third candidate or explicitly separate editions; do not repeat broad style-category evidence as common-operation verification.",
+    "privacy": "No classification change; retain separate rubric."
+  }
+}

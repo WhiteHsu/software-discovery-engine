@@ -248,3 +248,8 @@ Owner pushed PR5.43 plus checkpoint correction as 863b1d8; actual HEAD and clean
 ## PR5.45 — LanguageTool Basic tier evidence
 
 Owner pushed PR5.44 as 996951e; clean HEAD inspected, green Production #63 shown in owner screenshot. Two current official English comparison tables were parsed from source HTML and cross-checked against table-cell markers. The selected Wordiness row is Premium-only, so the proposed three-edition shared-wordiness review is held; Basic still documents other style checking. Official 2,000/10,000-character copy conflict and current Hemingway Classic paid terms remain unresolved. PR5.44 and all prior baseline evidence are preserved. No claims, engine, memberships, taxonomy, SQL or publication changes; zero new qualified Grammarly candidates. Checkpoint remains 15 products/7 routes/3 remaining, Issue #5 open. See GRAMMARLY_BASIC_TIER_REVIEW.md.
+
+
+## PR5.46 — Anonymous style workflow validation
+
+Owner pushed PR5.45 as f0105e0; actual clean HEAD inspected, owner screenshot shows green Production #64. Anonymous LanguageTool English (US) homepage checks with Picky Mode recorded Premium-locked wordiness feedback, no suggestions for the selected passive/complex samples and a usable grammar positive control. These are sample/surface-specific results, not universal Basic capability claims. Current three-edition style proposal cannot advance; no memberships changed. Direct Hemingway store terms HTTP 200 contains an empty policy body, so current paid rights remain unresolved. Six screenshot artifacts supplied outside repository payload. No claims, engine, taxonomy, SQL, checkpoint or publication changes; zero newly qualified candidates, 15 products/7 routes/3 remaining, Issue #5 open. See GRAMMARLY_WORKFLOW_VALIDATION.md.
