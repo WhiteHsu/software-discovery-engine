@@ -234,3 +234,8 @@ Owner pushed PR5.40 as 403381e with clean git status, explicitly approved public
 ## PR5.42 — Grammarly workflow research
 
 Owner pushed PR5.41 as e12b08b with clean git status and green Production (60). PR5.42 records nine primary sources across four edition reviews for the two remaining Grammarly routes. Proposed English prose style scope remains unapproved; Hemingway continued-use terms, Antidote first-time purchase eligibility and edition-specific privacy criteria need further review. No claims, engine changes, SQL or publication. Public checkpoint remains 15 products/seven routes/three remaining. See GRAMMARLY_WORKFLOW_REVIEW.md.
+
+
+## PR5.43 — Writing edition eligibility decisions
+
+Owner pushed PR5.42 as f2271d4; clean git status and green Production61. PR5.43 distinguishes Antidote individual new subscriptions, conditional perpetual upgrades and organizational perpetual licenses. Hemingway indexed legacy FAQ supports historical one-time purchasing, but current direct terms remain pending; Editor Plus subscriptions excluded. Proposes LanguageTool Basic as a research replacement for the default first-time individual no-subscription shortlist. Privacy criteria separated by processing, retention/training, optional cloud and diagnostics. No claims/engine/membership changes, SQL or publication; checkpoint15/7. See GRAMMARLY_EDITION_DECISIONS.md.

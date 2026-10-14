@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {createHash} from 'node:crypto';
+import {currentRouteAudit} from '../escape-remaining-routes.mjs';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
+const r=JSON.parse(fs.readFileSync(path.join(root,'seed/research/grammarly-edition-decisions-2026-10-14.json'),'utf8'));
+if(process.argv.length!==2||createHash('sha256').update(JSON.stringify(r)).digest('hex')!=='c06f56f7e91a9b11395e7e3fde8b7d717309b96245b986e699cdb923cda041fa'||r.graphChanges!==false||r.publicationApproved!==false)throw Error('Research scope/content drift');
+const a=currentRouteAudit();if(a.publishedProducts!==15||a.acceptedPublishedRoutes!==7||a.remainingRoutes!==3)throw Error('Checkpoint drift');
+console.log('PR5.43: seven source-access observations; Antidote purchasing eligibility separated.');
+console.log('Proposed research shortlist: Hemingway Classic, LanguageTool Basic, ProWritingAid lifetime. No memberships changed.');
+console.log('Hemingway current paid terms pending; zero newly qualified candidates. Public checkpoint 15/7. No writes.');
