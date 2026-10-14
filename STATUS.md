@@ -219,3 +219,8 @@ Owner pushed PR5.37 as b15be86; clean git status and green Production (56). Full
 ## PR5.39 — Productivity publication preflight
 
 Owner pushed PR5.38 as 100e7c2 with clean git status, then supplied live rehearsal/apply success and all 23 checks true. The three task products remain published; productivity route is draft/unapproved with three members. Public checkpoint stays 15 products/six routes. PR5.39 prepares a post-import SELECT-only snapshot for a later guarded route-only publication proposal. Await complete JSON; no publication approval or remote write. See PRODUCTIVITY_PUBLICATION_PREFLIGHT_REVIEW.md.
+
+
+## PR5.40 — Productivity route publication proposal
+
+Owner pushed PR5.39 as 9b2b93e; clean git status and green Production (58). Complete PR5.39 snapshot confirms three published products and one draft/unapproved productivity route with three members, 24 attributes, 58 fragments and 23 sources. PR5.40 prepares route-only publication with full stored-state guards and explicit approval pending. Products/claims/evidence/memberships remain unchanged. 128 tests, lint/typecheck and isolated database rollback/drift/apply/repeat scenarios passed; all20 checks true locally. Public checkpoint stays15/6 until owner-approved live apply; proposed result15/7. See PRODUCTIVITY_PUBLICATION_REVIEW.md.
