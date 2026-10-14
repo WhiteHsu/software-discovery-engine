@@ -1,0 +1,236 @@
+{
+  "version": 1,
+  "packet": "PR5.44",
+  "reviewedAt": "2026-10-14",
+  "researchOnly": true,
+  "publicationApproved": false,
+  "graphChanges": false,
+  "membershipChanges": false,
+  "engineChanges": false,
+  "qualifiedNewCandidates": 0,
+  "baseline": {
+    "commit": "863b1d85b42cc8e63f5f00a7f4fcdf0ef8c2c832",
+    "localGitStatus": "clean; independently inspected",
+    "products": 15,
+    "routes": 7,
+    "remaining": 3,
+    "deployment": "Owner-reported Production #62 green; not independently queried",
+    "issue5": "open; owner-reported"
+  },
+  "scopeProposal": {
+    "id": "personal-english-prose-style-review",
+    "status": "restricted-review-only; not approved or applied",
+    "operation": "Review short English prose for style feedback, manually decide edits and recheck in the selected editor.",
+    "conservativeSampleLimit": {
+      "characters": 2000,
+      "basis": "Review sample bound only; not a reconciled universal Basic product limit."
+    },
+    "editions": [
+      "Hemingway Editor 3 Classic desktop",
+      "LanguageTool Basic hosted checker/editor with limited Picky Mode",
+      "ProWritingAid Premium lifetime account"
+    ],
+    "excluded": [
+      "full grammar/spelling parity",
+      "automatic or generative rewriting",
+      "integration parity",
+      "long-document parity",
+      "offline parity",
+      "team style guides",
+      "privacy-friendly classification",
+      "story critiques or plagiarism checks"
+    ]
+  },
+  "sources": [
+    {
+      "id": "H1",
+      "url": "https://hemingwayapp.com/desktop",
+      "access": "direct-page",
+      "finding": "Classic Editor 3 offers offline prose flags; current paid renewal/continued-use terms not stated here.",
+      "checkedAt": "2026-10-14"
+    },
+    {
+      "id": "H2",
+      "url": "https://beta.hemingwayapp.com/help.html",
+      "access": "search-index-only; direct fetch failed",
+      "finding": "Legacy one-time FAQ is historical support, not current paid-term verification.",
+      "checkedAt": "2026-10-14"
+    },
+    {
+      "id": "H3",
+      "url": "https://hemingwayapp.com/help/support-articles/billing-faqs",
+      "access": "direct-page",
+      "finding": "Editor Plus billing is separate from Classic.",
+      "checkedAt": "2026-10-14"
+    },
+    {
+      "id": "L1",
+      "url": "https://languagetool.org/premium",
+      "access": "direct-page; feature check icons absent in text extraction",
+      "finding": "Basic free; 2,000 characters per field; limited Picky Mode; per-rule tier allocation unresolved.",
+      "checkedAt": "2026-10-14"
+    },
+    {
+      "id": "L2",
+      "url": "https://languagetool.org/onboarding-premium",
+      "access": "direct-page",
+      "finding": "Basic includes style checks; introductory 10,000-character limit conflicts with 2,000-character table.",
+      "checkedAt": "2026-10-14"
+    },
+    {
+      "id": "L3",
+      "url": "https://languagetool.org/insights/post/picky-mode/",
+      "access": "direct-page",
+      "finding": "Picky Mode covers wordiness, passive voice and complex sentences; article does not allocate every rule to Basic.",
+      "checkedAt": "2026-10-14"
+    },
+    {
+      "id": "L4",
+      "url": "https://help.languagetool.org/hc/en-us/articles/39254526141463-What-languages-does-LanguageTool-support",
+      "access": "direct search result",
+      "finding": "Free tier supports English dialects.",
+      "checkedAt": "2026-10-14"
+    },
+    {
+      "id": "P1",
+      "url": "https://prowritingaid.com/pricing",
+      "access": "direct-page",
+      "finding": "Premium and Premium Pro have lifetime offers, unlimited line-editing reports and distinct daily optional-feature quotas.",
+      "checkedAt": "2026-10-14"
+    },
+    {
+      "id": "P2",
+      "url": "https://help.prowritingaid.com/article/389-what-does-a-lifetime-subscription-mean",
+      "access": "direct-page",
+      "finding": "Account-based lifetime access has feature/integration-change and future-plan caveats.",
+      "checkedAt": "2026-10-14"
+    },
+    {
+      "id": "P3",
+      "url": "https://help.prowritingaid.com/article/406-what-is-the-difference-between-monthly-yearly-and-lifetime-subscriptions",
+      "access": "direct-page",
+      "finding": "Billing interval does not change tier features; lifetime payment is one-time.",
+      "checkedAt": "2026-10-14"
+    },
+    {
+      "id": "P4",
+      "url": "https://help.prowritingaid.com/article/296-getting-started-with-prowritingaid",
+      "access": "direct-page",
+      "finding": "All apps/integrations need internet; license is personal; paid plans remove the free word limit.",
+      "checkedAt": "2026-10-14"
+    },
+    {
+      "id": "P5",
+      "url": "https://help.prowritingaid.com/article/353-how-to-use-the-writing-style-report",
+      "access": "direct-page",
+      "finding": "Style Report documents passive verbs, adverbs, readability and redundant-word feedback.",
+      "checkedAt": "2026-10-14"
+    },
+    {
+      "id": "P6",
+      "url": "https://prowritingaid.com/en/Home/TermsOfService",
+      "access": "direct-page; linked from current pricing footer; modified 2025-09-09",
+      "finding": "Lifetime covers ordered services while offered/supported, with personal and service/business termination limits.",
+      "checkedAt": "2026-10-14"
+    },
+    {
+      "id": "P7",
+      "url": "https://help.prowritingaid.com/article/319-are-manuscript-marketability-plot-analysis-included-premium",
+      "access": "direct-page",
+      "finding": "Whole-manuscript analyses are separate Story Credit add-ons; introductory credit is not unlimited entitlement.",
+      "checkedAt": "2026-10-14"
+    },
+    {
+      "id": "P8",
+      "url": "https://help.prowritingaid.com/article/344-do-i-get-credits-with-my-subscription",
+      "access": "direct-page",
+      "finding": "Story Credits and Plagiarism Checks are separate purchasable extras.",
+      "checkedAt": "2026-10-14"
+    },
+    {
+      "id": "G1",
+      "url": "https://www.grammarly.com/readability",
+      "access": "direct-page",
+      "finding": "Anchor documents conciseness checks and readability score; no exact tier parity inferred.",
+      "checkedAt": "2026-10-14"
+    },
+    {
+      "id": "G2",
+      "url": "https://www.grammarly.com/blog/product/grammarly-conciseness-suggestions/",
+      "access": "direct search result; historical article updated 2020-09-09",
+      "finding": "Historical anchor explanation describes passive voice and wordiness; not current tier allocation.",
+      "checkedAt": "2026-10-14"
+    }
+  ],
+  "operationMatrix": [
+    {
+      "operation": "Inspect highlighted style feedback and manually revise",
+      "hemingway": "documented H1",
+      "languagetool": "basic style checking documented L2; exact feedback workflow to validate",
+      "prowritingaid": "documented P5",
+      "commonStatus": "documentary workflow proposal; not hands-on validated"
+    },
+    {
+      "operation": "Reduce wordiness or unnecessarily complex wording",
+      "hemingway": "documented H1",
+      "languagetool": "Picky Mode documented L3; exact Basic rule entitlement unresolved",
+      "prowritingaid": "documented P1/P5",
+      "commonStatus": "not fully verified across selected tiers"
+    },
+    {
+      "operation": "Review passive voice",
+      "hemingway": "documented H1",
+      "languagetool": "Picky Mode documented L3; Basic allocation unresolved",
+      "prowritingaid": "documented P5",
+      "commonStatus": "not fully verified across selected tiers"
+    },
+    {
+      "operation": "Review long/complex sentences or readability",
+      "hemingway": "wordy sentence flags H1",
+      "languagetool": "Picky Mode complex sentences L3; Basic allocation unresolved",
+      "prowritingaid": "readability and long clauses P5",
+      "commonStatus": "not fully verified across selected tiers; no identical scoring claim"
+    },
+    {
+      "operation": "Review adverbs",
+      "hemingway": "documented H1",
+      "languagetool": "not established for Basic",
+      "prowritingaid": "documented P5",
+      "commonStatus": "excluded from shared requirement"
+    }
+  ],
+  "editionDecisions": {
+    "hemingwayClassic": {
+      "workflow": "documented",
+      "purchase": "current one-time/no-renewal/continued-use terms pending",
+      "ai": "excluded",
+      "privacy": "not classified"
+    },
+    "languageToolBasic": {
+      "purchase": "free current offer; no paid subscription required for documented Basic",
+      "style": "documented at category level",
+      "ruleAllocation": "pending",
+      "limits": "official copy conflicts: 2000 table versus 10000 introductory onboarding; no universal limit asserted",
+      "privacy": "not classified"
+    },
+    "proWritingAid": {
+      "selected": "Premium lifetime",
+      "reason": "Premium already documents proposed line-editing operations; Premium Pro higher optional quotas not required.",
+      "license": "one-time personal account service; online; supported ordered-service and future-plan limitations",
+      "privacy": "not classified"
+    }
+  },
+  "gates": [
+    "Direct current Hemingway Classic payment/renewal/continued-use evidence; keep legacy evidence historical.",
+    "Resolve LanguageTool Basic rule-level entitlements with accessible official tier markers or a dated Basic-session check.",
+    "Resolve LanguageTool surface/account-specific character limits; preserve conflicting copy meanwhile.",
+    "Run same short English samples in exact editions; record account/tier, Picky setting and paid prompts. No quality/parity claim from a single sample.",
+    "Select current Grammarly comparison tier before any paid/free equivalence claim.",
+    "Approve bounded editorial scope and obtain complete import/publication evidence separately.",
+    "Apply edition/operation-specific privacy rubric only after separate evidence review."
+  ],
+  "accessLimitations": [
+    "Directory CLI absent; stripe.directory setup page could not be read by web tool (unsupported text/markdown). Official vendor sources used; no provider engagement.",
+    "Browser verification unavailable: in-app browser attach timed out; Chrome unavailable. No tier-checkmark or hands-on observation claimed."
+  ]
+}
