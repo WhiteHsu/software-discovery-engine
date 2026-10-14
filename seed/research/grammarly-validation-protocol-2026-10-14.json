@@ -1,0 +1,217 @@
+{
+  "version": 1,
+  "packet": "PR5.48",
+  "reviewedAt": "2026-10-14",
+  "researchOnly": true,
+  "publicationApproved": false,
+  "graphChanges": false,
+  "membershipChanges": false,
+  "engineChanges": false,
+  "qualifiedNewCandidates": 0,
+  "baseline": {
+    "commit": "5d467135d6218190f6b73f75aa68514ee4e25583",
+    "gitStatus": "independently inspected clean",
+    "products": 15,
+    "routes": 7,
+    "remaining": 3,
+    "deployment": "Owner screenshot: green Production #66; not live-queried",
+    "issue5": "open"
+  },
+  "purpose": "Prepare bounded owner-run paired validation; no new product results claimed.",
+  "userChoices": {
+    "pwaEntitlement": "No Premium lifetime account (owner confirmed)",
+    "grammarlyTier": "Grammarly Free",
+    "grazieBrowser": "Chrome",
+    "status": "Owner response received 2026-10-14; choices are not installed-session evidence."
+  },
+  "editions": [
+    {
+      "id": "hemingway-free-web",
+      "target": "Anonymous free web editor at hemingwayapp.com",
+      "account": "No Plus trial/Classic substitution",
+      "status": "New common corpus not yet run; prior PR5.47 sample remains historical"
+    },
+    {
+      "id": "grazie-free-extension",
+      "target": "Grazie Free browser extension in Chrome",
+      "account": "Free plan plus JetBrains sign-in; installation and login not performed",
+      "status": "Chrome selected; installation/account/Free setting and actual execution remain unverified."
+    },
+    {
+      "id": "pwa-premium-lifetime",
+      "target": "ProWritingAid Premium lifetime account",
+      "account": "Exact entitled plan must be confirmed; other tiers require separate review",
+      "status": "Unavailable for owner-run licensed test; retain documentary research only; do not substitute or buy."
+    },
+    {
+      "id": "grammarly-anchor",
+      "target": "Current Grammarly Free",
+      "account": "Owner selected Free; verify actual displayed tier before session.",
+      "status": "Await Free session evidence; no paid/trial feature substitution."
+    }
+  ],
+  "samples": [
+    {
+      "id": "passive",
+      "operation": "passive-voice review",
+      "before": "The report was written by the editor before it was sent to the team.",
+      "manualAfter": "The editor wrote the report and sent it to the team.",
+      "purpose": "Review a passive construction; no requirement that all tools return identical suggestions."
+    },
+    {
+      "id": "wordiness",
+      "operation": "unnecessary-wording review",
+      "before": "In order to finish the review, the editor made the decision to read the draft again.",
+      "manualAfter": "To finish the review, the editor decided to read the draft again.",
+      "purpose": "Test wordiness without relying on a general style category."
+    },
+    {
+      "id": "redundancy",
+      "operation": "redundancy review",
+      "before": "The editor returned back to the draft and repeated the review again.",
+      "manualAfter": "The editor returned to the draft and repeated the review.",
+      "purpose": "Record the exact phrase and rule rather than assuming every redundancy detector is shared."
+    },
+    {
+      "id": "complexity",
+      "operation": "difficult-sentence review",
+      "before": "Although the editor had already reviewed the draft, the editor decided to read it again because the explanation, which had undergone several revisions during the previous week, still left the readers uncertain about the steps they needed to follow.",
+      "manualAfter": "The editor reviewed the draft again. The explanation still left readers unsure about the next steps.",
+      "purpose": "Exact complexity/readability entitlement remains a gate; a long sentence alone is not automatically an error."
+    },
+    {
+      "id": "active-control",
+      "operation": "simple active control",
+      "before": "The editor wrote the report. The team read it.",
+      "manualAfter": "The editor wrote the report. The team read it.",
+      "purpose": "Control only; no suggestion is not proof that the checker failed or that the input is universally error-free."
+    }
+  ],
+  "sources": [
+    {
+      "id": "Q1",
+      "url": "https://www.jetbrains.com/help/grazie-browser-extension/subscriptions.html",
+      "access": "direct-page",
+      "checkedAt": "2026-10-14",
+      "finding": "Default Free plan and paid AI plans are distinguished; no browser proofreading unlimited entitlement stated."
+    },
+    {
+      "id": "Q2",
+      "url": "https://www.jetbrains.com/help/grazie-browser-extension/proofread-text.html",
+      "access": "direct-page",
+      "checkedAt": "2026-10-14",
+      "finding": "English highlights, suggested fixes and dismissal are documented; numerical proofreading cap not given here."
+    },
+    {
+      "id": "Q3",
+      "url": "https://www.jetbrains.com/legal/docs/terms/grazie/",
+      "access": "direct-page",
+      "checkedAt": "2026-10-14",
+      "finding": "Section 16(k) reserves quotas/rate limits; a numeric browser Free cap or zero-metering guarantee is not established."
+    },
+    {
+      "id": "Q4",
+      "url": "https://blog.jetbrains.com/grazie/2025/10/grazie-s-next-step-built-in-language-intelligence-for-your-ide/",
+      "access": "direct-page",
+      "checkedAt": "2026-10-14",
+      "finding": "IDE-focused post says accepting cloud grammar/style suggestions does not consume AI quota; do not transfer to browser extension."
+    },
+    {
+      "id": "Q5",
+      "url": "https://www.jetbrains.com/help/grazie-browser-extension/text-playground.html",
+      "access": "direct-page",
+      "checkedAt": "2026-10-14",
+      "finding": "Extension Text Playground provides plain-text drafts stored locally; local draft storage is not local-only processing."
+    },
+    {
+      "id": "Q6",
+      "url": "https://www.jetbrains.com/help/grazie-browser-extension/generate-text.html",
+      "access": "direct-page",
+      "checkedAt": "2026-10-14",
+      "finding": "Completion can be disabled; separate from instant proofreading."
+    },
+    {
+      "id": "Q7",
+      "url": "https://www.jetbrains.com/help/grazie-browser-extension/writing-style-settings.html",
+      "access": "direct-page",
+      "checkedAt": "2026-10-14",
+      "finding": "Record English variant/style and required readability toggles; plan-independent style availability is not unlimited usage."
+    },
+    {
+      "id": "Q8",
+      "url": "https://www.grammarly.com/free",
+      "access": "direct-page",
+      "checkedAt": "2026-10-14",
+      "finding": "Free page describes removal of redundant phrasing/fillers/wordiness; exact passive/complex-rule availability remains a session gate."
+    },
+    {
+      "id": "Q9",
+      "url": "https://www.grammarly.com/plans",
+      "access": "direct-page",
+      "checkedAt": "2026-10-14",
+      "finding": "Free and Pro distinguished; full-sentence rewrites are promoted under Pro. Free generative prompts are excluded from this proofreading protocol."
+    },
+    {
+      "id": "Q10",
+      "url": "https://support.grammarly.com/hc/en-us/articles/38552281546765-Docs-Grammarly-s-new-AI-writing-surface",
+      "access": "direct-page",
+      "checkedAt": "2026-10-14",
+      "finding": "Current Docs support distinguishes advanced paid writing suggestions; do not assign all paid clarity/tone features to selected Free anchor."
+    }
+  ],
+  "quotaDecision": {
+    "browserFreeProofreading": "unresolved",
+    "numericCap": null,
+    "zeroMeteringVerified": false,
+    "observe": "Record visible quota/limits before and after identical short proofreading. If not exposed, use not-visible rather than zero. Do not exhaust quotas or invoke generative actions as a proxy.",
+    "inference": "An unchanged meter on a short sample establishes only that observation, not perpetual unlimited entitlement."
+  },
+  "resultProtocol": {
+    "status": "prepared-not-executed",
+    "sessions": 4,
+    "casesPerSession": 5,
+    "allowedOutcomes": [
+      "not-run",
+      "actionable-style-feedback",
+      "flag-only",
+      "no-feedback",
+      "paid-or-quota-block",
+      "surface-error",
+      "not-entitled"
+    ],
+    "requiredMetadata": [
+      "date",
+      "exact edition/plan",
+      "app or extension version",
+      "browser/surface",
+      "English variant",
+      "style/settings",
+      "entitlement evidence without credentials"
+    ],
+    "requiredCaseFields": [
+      "before text exact match",
+      "completed feedback",
+      "exact issue wording/rule where exposed",
+      "manual/accepted edit method",
+      "after text",
+      "completed recheck",
+      "paid/quota prompt",
+      "evidence references"
+    ],
+    "noFeedback": "Record the result and investigate settings. Never convert absence on one sample into universal absence.",
+    "evidence": "Screenshot/file references and exact text; avoid emails, keys or account IDs.",
+    "review": "Completed worksheet is evidence intake only. It does not approve editorial fit, qualification, graph import or publishing.",
+    "availableSessionTargets": 3,
+    "unavailableSession": "pwa-premium-lifetime",
+    "ownerResultSlots": 20,
+    "runnableCasesPending": 15
+  },
+  "preservation": "All PR5.43–47 results retained; no new candidate or privacy classification. Current research shortlist unchanged.",
+  "remainingGates": [
+    "Verify actual displayed Free plan/browser/version and session readiness; owner choices now received.",
+    "Run Grazie Free Chrome, Hemingway free web and Grammarly Free on the common corpus. PWA Premium lifetime remains documentation-only because owner lacks the target license; do not purchase or silently switch tiers.",
+    "Resolve rule-level overlap and browser Free quota facts from direct evidence; retain unknowns.",
+    "Review returned evidence and exact scope before any claim/engine/import design."
+  ],
+  "anchorDecision": "Grammarly Free supports a documentary wordiness lead, not established parity for every style operation. Treat passive/complexity as exploratory; blocked feedback is valid evidence."
+}
