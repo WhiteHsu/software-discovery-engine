@@ -1,0 +1,219 @@
+{
+  "version": 1,
+  "packet": "PR5.47",
+  "researchOnly": true,
+  "publicationApproved": false,
+  "graphChanges": false,
+  "membershipChanges": false,
+  "engineChanges": false,
+  "qualifiedNewCandidates": 0,
+  "reviewedAt": "2026-10-14",
+  "baseline": {
+    "commit": "c711bcfd435c9b79588e8ce072497877fc9100ab",
+    "gitStatus": "independently inspected clean",
+    "production": "Owner screenshot: green Production #65, not live-queried",
+    "products": 15,
+    "routes": 7,
+    "remaining": 3,
+    "issue5": "open"
+  },
+  "researchProposal": {
+    "status": "not-applied",
+    "editions": [
+      "Hemingway free web editor at hemingwayapp.com",
+      "Grazie Free browser extension (Chrome listing 1.15.1)",
+      "ProWritingAid Premium lifetime account"
+    ],
+    "changes": "Explicitly separate free Hemingway web from paid Classic; propose Grazie instead of Basic only in research. No product identity/slug/membership change.",
+    "scope": "Personal English prose style: inspect passive-voice and difficult/needlessly wordy writing feedback, manually revise and recheck.",
+    "excluded": [
+      "grammar/spelling replacement parity",
+      "automatic/generative rewriting",
+      "integration parity",
+      "identical readability scoring",
+      "offline/privacy-friendly claims",
+      "lifetime/free-forever guarantees"
+    ]
+  },
+  "sources": [
+    {
+      "id": "G1",
+      "url": "https://www.jetbrains.com/grazie/",
+      "access": "direct-page",
+      "checkedAt": "2026-10-14",
+      "finding": "Current free offer includes limited AI volume replenished weekly; vendor targets people in tech."
+    },
+    {
+      "id": "G2",
+      "url": "https://www.jetbrains.com/help/grazie-browser-extension/manage-subscriptions.html",
+      "access": "direct-page",
+      "checkedAt": "2026-10-14",
+      "finding": "Grazie Free exists separately from AI Pro/AI Ultimate."
+    },
+    {
+      "id": "G3",
+      "url": "https://www.jetbrains.com/help/grazie-browser-extension/subscriptions.html",
+      "access": "direct-page",
+      "checkedAt": "2026-10-14",
+      "finding": "Grazie Free is default; no unlimited-use inference."
+    },
+    {
+      "id": "G4",
+      "url": "https://www.jetbrains.com/help/grazie-browser-extension/writing-style-settings.html",
+      "access": "direct-page",
+      "checkedAt": "2026-10-14",
+      "finding": "English styles available regardless of plan; readability settings include passive constructions, tautologies and redundant prepositions."
+    },
+    {
+      "id": "G5",
+      "url": "https://www.jetbrains.com/help/grazie-browser-extension/proofread-text.html",
+      "access": "direct-page",
+      "checkedAt": "2026-10-14",
+      "finding": "English proofreading highlights problems and permits fixes/dismissal with configurable styles."
+    },
+    {
+      "id": "G6",
+      "url": "https://www.jetbrains.com/help/grazie-browser-extension/installation-guide.html",
+      "access": "direct-page",
+      "checkedAt": "2026-10-14",
+      "finding": "Extension requires supported browser and JetBrains account; distinct from IDE plugin."
+    },
+    {
+      "id": "G7",
+      "url": "https://www.jetbrains.com/legal/docs/terms/grazie/",
+      "access": "direct-page",
+      "checkedAt": "2026-10-14",
+      "finding": "Free plan has no plan fee; account, internet, plan limits and conditional service rights apply. Terms also discuss provider sharing/limited abuse retention and optional detailed collection."
+    },
+    {
+      "id": "G8",
+      "url": "https://www.jetbrains.com/legal/docs/terms/jetbrains-ai/service-territory/",
+      "access": "direct-page",
+      "checkedAt": "2026-10-14",
+      "finding": "Territory restrictions apply; Taiwan listed at review date. Listing is not an individual account test."
+    },
+    {
+      "id": "G9",
+      "url": "https://chromewebstore.google.com/detail/jetbrains-grazie-writing/fonaoompfjljjllgccccgjnhnoghohgc",
+      "access": "direct-page",
+      "checkedAt": "2026-10-14",
+      "finding": "JetBrains publisher; version 1.15.1 updated 2026-10-03; listing includes private use and website-content/personal-communications disclosures."
+    },
+    {
+      "id": "H1",
+      "url": "https://hemingwayapp.com/readability-checker",
+      "access": "direct-page",
+      "checkedAt": "2026-10-14",
+      "finding": "Current free readability offer documents score and difficult-sentence flags; AI simplification belongs to Plus."
+    },
+    {
+      "id": "H2",
+      "url": "https://hemingwayapp.com/",
+      "access": "live anonymous browser; bounded original sample",
+      "checkedAt": "2026-10-14",
+      "finding": "Separate anonymous free web editor exercised without Plus enrollment."
+    },
+    {
+      "id": "P1",
+      "url": "https://help.prowritingaid.com/article/353-how-to-use-the-writing-style-report",
+      "access": "direct-page",
+      "checkedAt": "2026-10-14",
+      "finding": "Style Report documents passive verbs, readability, redundant words and manual review."
+    },
+    {
+      "id": "A1",
+      "url": "https://www.grammarly.com/blog/product/grammarly-conciseness-suggestions/",
+      "access": "direct-page",
+      "checkedAt": "2026-10-14",
+      "finding": "Historical anchor product article describes passive and conciseness feedback; current exact tier remains unresolved."
+    }
+  ],
+  "hemingwayFreeTest": {
+    "surface": "Anonymous homepage editor; Edit mode; not desktop Classic or Plus trial",
+    "input": "The draft was reviewed by Maya before it was sent to the editor. Although Maya had already reviewed the draft, she decided to read it again because the explanation, which had been revised several times, still left readers uncertain about the next step.",
+    "before": {
+      "grade": 12,
+      "words": 43,
+      "veryHardSentences": 1,
+      "hardSentences": 0,
+      "totalSentences": 2,
+      "passiveUses": 3
+    },
+    "manualRevision": "Maya reviewed the draft and sent it to the editor. She read it again because readers still needed clearer instructions.",
+    "after": {
+      "grade": 7,
+      "words": 20,
+      "veryHardSentences": 0,
+      "hardSentences": 0,
+      "totalSentences": 2,
+      "passiveUses": 0
+    },
+    "limits": "UI metrics recorded as displayed, not comparative accuracy; no trial/account/paid action, export or grammar test. Current free use is not future availability guarantee. Classic terms unchanged and unresolved."
+  },
+  "screenshots": [
+    {
+      "file": "evidence/hemingway-free-before.png",
+      "sha256": "6eb3c04cd6d159dc89b96107b4287f206f21162d92342a47263be082b335c5b6"
+    },
+    {
+      "file": "evidence/hemingway-free-after.png",
+      "sha256": "b1ed80bdb5d1f17949e5ea615543c974931afc344d15bfcbf88563f467fc7329"
+    }
+  ],
+  "matrix": [
+    {
+      "operation": "Inspect passive-voice feedback",
+      "hemingwayFree": "Live flags observed H2",
+      "grazieFree": "Exact style-setting documentary support G4; not installed/tested",
+      "pwaLifetime": "Documentary Style Report support P1; paid app not tested",
+      "status": "Closest documented overlap; not qualified"
+    },
+    {
+      "operation": "Review difficult sentences",
+      "hemingwayFree": "Live flag/grade observed H2",
+      "grazieFree": "General readability support; exact difficult-sentence rule not established",
+      "pwaLifetime": "Documentary readability/long-clause support P1",
+      "status": "Pending Grazie exact rule and empirical validation"
+    },
+    {
+      "operation": "Reduce unnecessary wording",
+      "hemingwayFree": "No redundant-word sample tested in this packet",
+      "grazieFree": "Tautology/redundant-preposition settings documented G4; not every wordiness rule",
+      "pwaLifetime": "Redundant-word support P1",
+      "status": "Incomplete common operation; no broad parity"
+    }
+  ],
+  "grazieRestrictions": {
+    "selectedEdition": "Free browser extension; Chrome listing 1.15.1, not paid AI plans or IDE local-proofreading",
+    "account": "JetBrains account/sign-in required",
+    "browsers": "Chrome, Safari, Arc/other Chromium documented. Firefox not established by selected sources.",
+    "volume": "Free AI allowance replenishes weekly; exact instant-proofreading metering, reset behavior and numerical caps need testing. Writing-style availability does not establish unlimited use.",
+    "usage": "English selected; explicitly configure passive/readability checks; record domain/style and toggles.",
+    "audience": "Tech-oriented vendor positioning; personal use appears in official publisher listing but broad personal-prose fit remains editorial.",
+    "privacy": "Hosted/online terms; no privacy-friendly classification from homepage no-training/no-log claims.",
+    "validation": "No extension installed, account created, terms accepted or prose submitted to Grazie."
+  },
+  "otherLeads": [
+    {
+      "name": "Slick Write",
+      "url": "https://www.slickwrite.com/",
+      "access": "Web timeout; direct retrieval SSL failure",
+      "decision": "Access-limited lead, not a qualified/rejected product. No security bypass."
+    },
+    {
+      "name": "Expresso",
+      "url": "https://expresso-app.org/",
+      "access": "Web and direct retrieval timeout",
+      "decision": "Access-limited lead; no verified current free/workflow entitlement."
+    }
+  ],
+  "directoryAccess": "Stripe Directory skill used first: CLI absent; current setup guidance retrieved, no Directory search available in installed tools. Official vendor sources used; no install/provision/payment/contact.",
+  "remainingGates": [
+    "Test Grazie Free in supported browser with account/tier/version/style settings recorded; confirm no paid prompt for required operation.",
+    "Confirm exact proofreading quotas and difficult-sentence/wordiness rule entitlement; do not infer unlimited checks.",
+    "Choose current Grammarly anchor tier and perform paired sample review.",
+    "Verify PWA Premium lifetime selected features in an entitled session; Free results cannot substitute.",
+    "Review explicit edition identity and editorial fit before graph/engine/claims/import design.",
+    "Privacy criteria remain separate; no new privacy candidate qualification."
+  ]
+}
