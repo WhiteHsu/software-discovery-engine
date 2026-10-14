@@ -1,0 +1,145 @@
+{
+  "version": 1,
+  "packet": "PR5.54",
+  "observedAt": "2026-10-14",
+  "baseline": "26817548bec279a710458e39a68563cd0df960bf",
+  "researchOnly": true,
+  "publicationApproved": false,
+  "graphChanges": false,
+  "qualifiedNewCandidates": 0,
+  "scope": "personal-adult-guided-meditation-selection-playback",
+  "evidenceKind": "Owner screenshots plus explicit owner reports; agent did not run installed apps.",
+  "environment": {
+    "commonPlatform": "Android",
+    "androidVersion": null,
+    "deviceModel": null,
+    "storefrontRegion": null,
+    "appVersions": "Not supplied; all unknown",
+    "audioLanguage": "Not explicitly confirmed; English session labels do not establish audio language"
+  },
+  "inputs": [
+    {
+      "path": "seed/research/meditation-workflow-review-2026-10-14.json",
+      "hashMode": "UTF-8 CRLF normalized to LF",
+      "sha256": "c79310d85e2f2596c3b3b0f74c0831692cc9fc0b38e9b0a328dae76e97e7e350"
+    },
+    {
+      "path": "seed/research/escape-content-2026-10-07.json",
+      "hashMode": "UTF-8 CRLF normalized to LF",
+      "sha256": "4a5f672af4c32081467220f975e894028c23c442bd14b6585e0341f66f5756ce"
+    },
+    {
+      "path": "seed/research/publication-checkpoint-2026-10-14.json",
+      "hashMode": "UTF-8 CRLF normalized to LF",
+      "sha256": "5b60fd863c396a2d4a33f175581784521e6894631aa2dc6e409f44cdbc2185da"
+    },
+    {
+      "path": "lib/discovery/escape-model.ts",
+      "hashMode": "UTF-8 CRLF normalized to LF",
+      "sha256": "61829cd748ca679821ab6371d108d9e614fa31980fc333eeceaa390ee1eaee0e"
+    }
+  ],
+  "sessions": [
+    {
+      "product": "medito",
+      "platform": "Android",
+      "account": "Owner explicitly confirmed signed in; anonymous access not tested.",
+      "title": "Learning to sit",
+      "speaker": "Will",
+      "duration": "List says 4 min; paused player shows left 00:20 and right 03:44. Right value not assumed total.",
+      "guidedVoice": "Owner reported all requested operations work.",
+      "playback": "Owner reported playback/pause/resume normal; screenshot confirms paused state.",
+      "payment": "Owner explicitly reported no payment requested.",
+      "screenshots": [
+        "codex-clipboard-b7da4d5c-2838-469e-91e8-a98d802c607b.png",
+        "codex-clipboard-a3f7cc0c-8713-4151-a453-cdab9878fbff.png"
+      ],
+      "limit": "No independent full-session completion or repeat-entitlement test.",
+      "appVersion": null,
+      "androidVersion": null
+    },
+    {
+      "product": "healthy-minds-program",
+      "platform": "Android",
+      "account": "Public onboarding and personalized home observed; registration path. Institutional/research entitlement not established.",
+      "title": "Intro To Sitting Meditation",
+      "speaker": null,
+      "duration": "07:37",
+      "guidedVoice": "Owner explicitly confirmed guided voice.",
+      "playback": "Playing 00:03, paused 00:51, resumed 00:52.",
+      "payment": "Owner explicitly reported no payment requested.",
+      "screenshots": [
+        "codex-clipboard-c42a0553-9524-415b-936c-e2627808ed1a.png",
+        "codex-clipboard-78587a7b-3430-49a6-98c7-f787feb713b3.png",
+        "codex-clipboard-61ba4e73-c852-48b7-bf86-2dcddc953a65.png"
+      ],
+      "limit": "Do not infer assessments skipped/completed or research participation from instructions; full session not completed.",
+      "appVersion": null,
+      "androidVersion": null
+    },
+    {
+      "product": "smiling-mind",
+      "platform": "Android",
+      "account": "Owner explicitly confirmed Google sign-in.",
+      "title": "Exploring the Breath",
+      "speaker": null,
+      "duration": "06:58",
+      "guidedVoice": "Owner explicitly confirmed guided voice.",
+      "playback": "Playing 00:04, paused 00:36, resumed 01:09.",
+      "payment": "Owner explicitly confirmed no payment, trial or subscription requested.",
+      "screenshots": [
+        "codex-clipboard-d53d7ea2-a27b-4047-9376-db4c607210f0.png",
+        "codex-clipboard-aaf9d4dc-3c50-4eb1-a3b3-4bfa52a715df.png",
+        "codex-clipboard-3683fdd1-cd34-4324-8a1b-132566023673.png",
+        "codex-clipboard-a69bfa95-e22c-4365-9057-bee37910dd0f.png",
+        "codex-clipboard-ef7fb631-8bb1-4c3c-9ebf-7809cadae827.png"
+      ],
+      "limit": "Adult session selected. Earlier Windows web test is separate; no offline/full-session test.",
+      "appVersion": null,
+      "androidVersion": null
+    },
+    {
+      "product": "calm",
+      "platform": "Android",
+      "account": "Owner explicitly confirmed Google registration/sign-in; account gate preceded playback.",
+      "title": "7 Days of Calm — Day 1 / Basics of Mindfulness",
+      "speaker": "Tamara Levitt",
+      "duration": "10:17",
+      "guidedVoice": "Owner explicitly confirmed guided voice.",
+      "playback": "Playing 00:10, paused 01:57, resumed 02:08.",
+      "payment": "Pre-login subscription and discount offers were closed. After login owner reported no new trial prompt and no subscription confirmation.",
+      "screenshots": [
+        "codex-clipboard-f2142aed-c8b6-4d58-bb6e-8718ebf33eb1.png",
+        "codex-clipboard-a3507d70-4af1-4e0d-abd7-c14f785ea18e.png",
+        "codex-clipboard-ad8b6439-498c-4fec-ac86-78d8b997ae03.png",
+        "codex-clipboard-fc78755d-5818-4937-be2f-5d5165ab6ec3.png",
+        "codex-clipboard-60f13f1c-b1ee-40b1-b330-a54dcd543edf.png",
+        "codex-clipboard-51692b09-fbe2-4456-8a9d-2647ff2b759a.png"
+      ],
+      "limit": "Player explicitly says You get 3 free listens, on us. Counting/reset behavior unknown; this is limited free access, not ongoing free entitlement.",
+      "appVersion": null,
+      "androidVersion": null
+    }
+  ],
+  "supplementalWeb": {
+    "product": "smiling-mind",
+    "platform": "Windows Chrome web",
+    "title": "Exploring the Breath",
+    "duration": "06:58",
+    "result": "Owner confirmed guided voice and normal playback/pause/resume; personal home and player observed.",
+    "screenshots": [
+      "codex-clipboard-ae7f1a5e-22c2-4891-83bf-028963a0d2a5.png",
+      "codex-clipboard-2ae68bd5-894f-430c-87fa-b46188d7921d.png",
+      "codex-clipboard-03362c71-af27-4ea9-85f4-da6a393b3ada.png"
+    ]
+  },
+  "evidenceStorage": "Raw screenshots remain private local attachments outside Git; filenames are traceability references, not bundled evidence. No account emails, DOB or gender transcribed.",
+  "conclusion": "Three candidate Android sessions performed the bounded selection/playback workflow without observed payment requirement. Calm anchor performed it with an explicit three-free-listens limit. Combine with PR5.53 official sources for later editorial draft review, not automatic graph verification.",
+  "limits": [
+    "Single-session samples; no full-session completion or repeated access test.",
+    "App/OS versions and storefront unknown.",
+    "No offline, privacy, service permanence, clinical outcome or full Calm catalog equivalence claim.",
+    "No new official page fetch in this packet; documentary evidence is preserved in PR5.53."
+  ],
+  "next": "Prepare exact dated relationship, pricing and trade-off draft proposals against existing graph gates; metadata remains unknown unless supplied. No import/publication authorized by this record."
+}

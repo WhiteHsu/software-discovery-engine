@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {createHash} from 'node:crypto';
+import {currentRouteAudit} from '../escape-remaining-routes.mjs';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
+const hash=x=>createHash('sha256').update(x).digest('hex');
+const r=JSON.parse(fs.readFileSync(path.join(root,'seed/research/meditation-owner-results-2026-10-14.json'),'utf8'));
+if(process.argv.length!==2||hash(JSON.stringify(r))!=='4cad488e65efe438b4c00c4818c9b3b428081afe4fc365bb8f77ccfe0c3dff51')throw Error('Owner evidence drift');
+for(const x of r.inputs)if(hash(fs.readFileSync(path.join(root,x.path),'utf8').replace(/\r\n/g,'\n'))!==x.sha256)throw Error('Historical input drift: '+x.path);
+const a=currentRouteAudit(),route=a.routes.find(x=>x.slug==='meditation-apps-without-a-subscription');
+if(a.publishedProducts!==15||a.acceptedPublishedRoutes!==7||a.remainingRoutes!==3||route?.publication!=='not-published'||route?.qualifiedDraftGraphCandidates!==0)throw Error('Checkpoint drift');
+console.log('PR5.54: four Android owner playback samples recorded; Calm three-free-listens limit preserved.');
+console.log('Versions/OS/store unknown; static evidence check only. Zero newly qualified; checkpoint 15/7/3. No writes.');
