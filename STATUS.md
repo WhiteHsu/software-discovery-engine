@@ -243,3 +243,8 @@ Owner pushed PR5.42 as f2271d4; clean git status and green Production61. PR5.43 
 ## PR5.44 — Restricted English prose style review
 
 Owner pushed PR5.43 plus checkpoint correction as 863b1d8; actual HEAD and clean status inspected on 2026-10-14. Owner reports green Production #62. PR5.44 selects Hemingway Classic, LanguageTool Basic and ProWritingAid Premium lifetime for a research-only short English prose review. Documents style operation overlap, exact-tier uncertainty, conflicting LanguageTool 2,000/10,000-character copy, and online lifetime/service/add-on restrictions. Current Hemingway paid terms and Basic rule entitlements remain gates. The manual workflow validation plan is prepared, not executed. No claims, engine, memberships, taxonomy, SQL or publication changes; zero newly qualified Grammarly candidates. Checkpoint remains 15 products/7 routes/3 remaining; Issue #5 stays open. See GRAMMARLY_STYLE_REVIEW.md.
+
+
+## PR5.45 — LanguageTool Basic tier evidence
+
+Owner pushed PR5.44 as 996951e; clean HEAD inspected, green Production #63 shown in owner screenshot. Two current official English comparison tables were parsed from source HTML and cross-checked against table-cell markers. The selected Wordiness row is Premium-only, so the proposed three-edition shared-wordiness review is held; Basic still documents other style checking. Official 2,000/10,000-character copy conflict and current Hemingway Classic paid terms remain unresolved. PR5.44 and all prior baseline evidence are preserved. No claims, engine, memberships, taxonomy, SQL or publication changes; zero new qualified Grammarly candidates. Checkpoint remains 15 products/7 routes/3 remaining, Issue #5 open. See GRAMMARLY_BASIC_TIER_REVIEW.md.

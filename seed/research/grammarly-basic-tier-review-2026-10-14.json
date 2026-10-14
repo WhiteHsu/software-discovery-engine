@@ -1,0 +1,156 @@
+{
+  "version": 1,
+  "packet": "PR5.45",
+  "reviewedAt": "2026-10-14",
+  "researchOnly": true,
+  "publicationApproved": false,
+  "graphChanges": false,
+  "membershipChanges": false,
+  "engineChanges": false,
+  "qualifiedNewCandidates": 0,
+  "baseline": {
+    "commit": "996951e0deee31ba9e1e6f4f37da80ef71f40e1f",
+    "workingTree": "independently inspected clean",
+    "production": "Owner screenshot: green Production #63",
+    "products": 15,
+    "routes": 7,
+    "remaining": 3,
+    "issue5": "open"
+  },
+  "evidence": [
+    {
+      "url": "https://languagetool.org/premium",
+      "retrievedOn": "2026-10-14",
+      "sha256": "77093f969f28eed00f77bf04a69a495953774a4d5bd64ac3c393a47154bce55c",
+      "englishTableRows": [
+        {
+          "title": "Basic Standard Language",
+          "basic": true,
+          "premium": true,
+          "renderedCellsAgree": true
+        },
+        {
+          "title": "Repetition",
+          "basic": false,
+          "premium": true,
+          "renderedCellsAgree": true
+        },
+        {
+          "title": "Overused Words & Phrases",
+          "basic": false,
+          "premium": true,
+          "renderedCellsAgree": true
+        },
+        {
+          "title": "Wordiness",
+          "basic": false,
+          "premium": true,
+          "renderedCellsAgree": true
+        },
+        {
+          "title": "Character limit per text field",
+          "basic": "2,000",
+          "premium": "150,000",
+          "renderedCellsAgree": true
+        },
+        {
+          "title": "Picky Mode",
+          "basic": "Limited",
+          "premium": true,
+          "renderedCellsAgree": true
+        }
+      ],
+      "onboardingIntro10000": null
+    },
+    {
+      "url": "https://languagetool.org/onboarding-premium",
+      "retrievedOn": "2026-10-14",
+      "sha256": "0b64f538648877a65bfde1bc8a25d0b05b38529c198125314925cb8d00c026bc",
+      "englishTableRows": [
+        {
+          "title": "Basic Standard Language",
+          "basic": true,
+          "premium": true,
+          "renderedCellsAgree": true
+        },
+        {
+          "title": "Repetition",
+          "basic": false,
+          "premium": true,
+          "renderedCellsAgree": true
+        },
+        {
+          "title": "Overused Words & Phrases",
+          "basic": false,
+          "premium": true,
+          "renderedCellsAgree": true
+        },
+        {
+          "title": "Wordiness",
+          "basic": false,
+          "premium": true,
+          "renderedCellsAgree": true
+        },
+        {
+          "title": "Character limit per text field",
+          "basic": "2,000",
+          "premium": "150,000",
+          "renderedCellsAgree": true
+        },
+        {
+          "title": "Picky Mode",
+          "basic": "Limited",
+          "premium": true,
+          "renderedCellsAgree": true
+        }
+      ],
+      "onboardingIntro10000": true
+    }
+  ],
+  "method": "Public official HTML downloaded; English data-feature-data parsed; six selected rows cross-checked against first/Basic and second/Premium table cells. Both pages agree. No authenticated app test.",
+  "decision": {
+    "scope": "personal English prose style",
+    "proposal": "Hold LanguageTool Basic as a replacement research lead for a shared wordiness workflow.",
+    "basis": "The selected Wordiness comparison row explicitly excludes Basic. This is a row-specific documentary result, not a claim that Basic has no style checks or can never detect any wordiness.",
+    "change": "No shortlist/membership/claim change applied; PR5.44 retained as historical research.",
+    "commonOperations": "No complete shared exact-tier operation set established. Passive/complex-sentence Basic allocation remains unresolved.",
+    "limits": "Both tables show 2000; onboarding introduction still shows 10000. Conflict persists; no surface/account-specific universal limit claimed."
+  },
+  "hemingway": {
+    "status": "current paid renewal/continued-use terms remain unresolved",
+    "sources": [
+      {
+        "url": "https://hemingwayapp.com/desktop",
+        "access": "direct HTML; Shopify OS-specific links confirmed"
+      },
+      {
+        "url": "https://hemingwayapp.com/help",
+        "access": "direct-page; visible billing support is Editor Plus"
+      },
+      {
+        "url": "https://hemingway-app.myshopify.com/",
+        "access": "direct-page; generic store content, no Classic terms established"
+      },
+      {
+        "url": "https://hemingway-app.myshopify.com/policies/terms-of-service",
+        "access": "web fetch inaccessible"
+      },
+      {
+        "url": "https://hemingway-app.myshopify.com/policies/refund-policy",
+        "access": "web fetch inaccessible"
+      },
+      {
+        "url": "https://beta.hemingwayapp.com/help.html",
+        "access": "historical search index; no promotion to current paid terms"
+      }
+    ]
+  },
+  "preserved": "Antidote eligibility decisions, ProWritingAid Premium lifetime restrictions and privacy rubric from PR5.43/44 unchanged; neither Grammarly route gains qualified candidates.",
+  "next": [
+    "Do not proceed to claims/import/publication for the current three-edition wordiness proposal.",
+    "Resolve Classic paid terms directly, or explicitly research free core as a separate edition.",
+    "For Basic, validate exact rule entitlements before choosing a different shared operation; narrowing merely to any style feedback would need editorial justification and anchor evidence.",
+    "Any replacement third candidate requires a new edition, eligibility and workflow review; no automatic substitution.",
+    "Keep privacy route separate and unapproved."
+  ]
+}
