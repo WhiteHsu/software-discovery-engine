@@ -1,0 +1,296 @@
+{
+  "version": 1,
+  "packet": "PR5.49",
+  "reviewedAt": "2026-10-14",
+  "researchOnly": true,
+  "publicationApproved": false,
+  "graphChanges": false,
+  "membershipChanges": false,
+  "engineChanges": false,
+  "qualifiedNewCandidates": 0,
+  "baseline": {
+    "commit": "a8c8ad0da3f51c5b5bd47eab4375add458dfff8f",
+    "gitStatus": "independently inspected clean",
+    "products": 15,
+    "routes": 7,
+    "remaining": 3,
+    "deployment": "Owner screenshot: green Production #67; not live-queried",
+    "issue5": "open"
+  },
+  "corpus": {
+    "source": "seed/research/grammarly-validation-protocol-2026-10-14.json",
+    "sourceSHA256": "f05ab5b975ad555e21c1ece7be848c2c53309120ea362a17ca8acccf5576a87a",
+    "cases": [
+      "passive",
+      "wordiness",
+      "redundancy",
+      "complexity",
+      "active-control"
+    ],
+    "exactInputsVerified": true
+  },
+  "session": {
+    "edition": "Hemingway anonymous free web editor",
+    "url": "https://hemingwayapp.com/",
+    "surface": "Codex in-app browser; Edit mode; expanded weakener details",
+    "account": "Anonymous; no login or Plus trial",
+    "version": "Web build identifier not exposed in observed UI",
+    "settings": "Passive/readability visible; no target/AI/grammar/file feature changed",
+    "method": "Exact before input, observed DOM counters and screenshot, exact supplied manual reference after, observed completed recheck. Control unchanged.",
+    "quota": "No meter exposed; no blocking paid/quota prompt interrupted manual checks",
+    "upsells": "Persistent Plus trial/grammar/rewrite/file upsells; not invoked",
+    "data": "Only committed original short corpus; no user documents"
+  },
+  "results": [
+    {
+      "caseId": "passive",
+      "operation": "passive-voice review",
+      "before": {
+        "phase": "before",
+        "input": "The report was written by the editor before it was sent to the team.",
+        "readabilityLabel": "Grade 4",
+        "words": 14,
+        "passiveUses": 2,
+        "veryHard": 0,
+        "hard": 0,
+        "weakeners": 2,
+        "simplerWords": 0,
+        "screenshot": "evidence/passive-before.png"
+      },
+      "after": {
+        "phase": "after",
+        "input": "The editor wrote the report and sent it to the team.",
+        "readabilityLabel": "Grade 2",
+        "words": 11,
+        "passiveUses": 0,
+        "veryHard": 0,
+        "hard": 0,
+        "weakeners": 0,
+        "simplerWords": 0,
+        "screenshot": "evidence/passive-after.png"
+      },
+      "editMethod": "exact supplied manual reference"
+    },
+    {
+      "caseId": "wordiness",
+      "operation": "unnecessary-wording review",
+      "before": {
+        "phase": "before",
+        "input": "In order to finish the review, the editor made the decision to read the draft again.",
+        "readabilityLabel": "Grade 6",
+        "words": 16,
+        "passiveUses": 0,
+        "veryHard": 0,
+        "hard": 0,
+        "weakeners": 1,
+        "simplerWords": 1,
+        "screenshot": "evidence/wordiness-before.png"
+      },
+      "after": {
+        "phase": "after",
+        "input": "To finish the review, the editor decided to read the draft again.",
+        "readabilityLabel": "Grade 5",
+        "words": 12,
+        "passiveUses": 0,
+        "veryHard": 0,
+        "hard": 0,
+        "weakeners": 0,
+        "simplerWords": 0,
+        "screenshot": "evidence/wordiness-after.png"
+      },
+      "editMethod": "exact supplied manual reference"
+    },
+    {
+      "caseId": "redundancy",
+      "operation": "redundancy review",
+      "before": {
+        "phase": "before",
+        "input": "The editor returned back to the draft and repeated the review again.",
+        "readabilityLabel": "Grade 7",
+        "words": 12,
+        "passiveUses": 0,
+        "veryHard": 0,
+        "hard": 0,
+        "weakeners": 0,
+        "simplerWords": 0,
+        "screenshot": "evidence/redundancy-before.png"
+      },
+      "after": {
+        "phase": "after",
+        "input": "The editor returned to the draft and repeated the review.",
+        "readabilityLabel": "Grade 6",
+        "words": 10,
+        "passiveUses": 0,
+        "veryHard": 0,
+        "hard": 0,
+        "weakeners": 0,
+        "simplerWords": 0,
+        "screenshot": "evidence/redundancy-after.png"
+      },
+      "editMethod": "exact supplied manual reference"
+    },
+    {
+      "caseId": "complexity",
+      "operation": "difficult-sentence review",
+      "before": {
+        "phase": "before",
+        "input": "Although the editor had already reviewed the draft, the editor decided to read it again because the explanation, which had undergone several revisions during the previous week, still left the readers uncertain about the steps they needed to follow.",
+        "readabilityLabel": "Post-graduate",
+        "words": 39,
+        "passiveUses": 0,
+        "veryHard": 1,
+        "hard": 0,
+        "weakeners": 0,
+        "simplerWords": 0,
+        "screenshot": "evidence/complexity-before.png"
+      },
+      "after": {
+        "phase": "after",
+        "input": "The editor reviewed the draft again. The explanation still left readers unsure about the next steps.",
+        "readabilityLabel": "Grade 7",
+        "words": 16,
+        "passiveUses": 0,
+        "veryHard": 0,
+        "hard": 0,
+        "weakeners": 0,
+        "simplerWords": 0,
+        "screenshot": "evidence/complexity-after.png"
+      },
+      "editMethod": "exact supplied manual reference"
+    },
+    {
+      "caseId": "active-control",
+      "operation": "simple active control",
+      "before": {
+        "phase": "before",
+        "input": "The editor wrote the report. The team read it.",
+        "readabilityLabel": "Grade 0",
+        "words": 9,
+        "passiveUses": 0,
+        "veryHard": 0,
+        "hard": 0,
+        "weakeners": 0,
+        "simplerWords": 0,
+        "screenshot": "evidence/active-control-before.png"
+      },
+      "after": {
+        "phase": "after",
+        "input": "The editor wrote the report. The team read it.",
+        "readabilityLabel": "Grade 0",
+        "words": 9,
+        "passiveUses": 0,
+        "veryHard": 0,
+        "hard": 0,
+        "weakeners": 0,
+        "simplerWords": 0,
+        "screenshot": "evidence/active-control-after.png"
+      },
+      "editMethod": "unchanged control recheck"
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "evidence/passive-before.png",
+      "sha256": "43bca57be01eee559e3441ce8db4ccf10e834c3aa39fcd06fa3f10b2a164a532"
+    },
+    {
+      "file": "evidence/passive-after.png",
+      "sha256": "3d7ae208283c2dc5fe4a0eb9cef6e43d890300405756be66ec7839675b768eef"
+    },
+    {
+      "file": "evidence/wordiness-before.png",
+      "sha256": "77925f42777873f4c575dee7a3bb4618e24f60ec7a0718d31b67fe44d1a7b995"
+    },
+    {
+      "file": "evidence/wordiness-after.png",
+      "sha256": "c9376d6ded25975de9f2bf91214678f20165f526b9824c4ef8a5cb8732b0f3a7"
+    },
+    {
+      "file": "evidence/redundancy-before.png",
+      "sha256": "e55b4d5f955c3d7ab651ee9b410aaefab03a6d29e5194252ab0624224127a8fc"
+    },
+    {
+      "file": "evidence/redundancy-after.png",
+      "sha256": "93c4c7580066144f6a477ef0b96179941914c054b7d6411084299b1330c266eb"
+    },
+    {
+      "file": "evidence/complexity-before.png",
+      "sha256": "67eb623368119596be76477c6fbeaab3f696a07f965fa6fdad765da0cce28ac1"
+    },
+    {
+      "file": "evidence/complexity-after.png",
+      "sha256": "fb16945f17e2c168384835cc80a4b74613aadb79bf3bdd1aaf9caf141cc77574"
+    },
+    {
+      "file": "evidence/active-control-before.png",
+      "sha256": "cf3ede1d9e2c9a44598d43c35e704d049af4097e93c0a131366ed544db192477"
+    },
+    {
+      "file": "evidence/active-control-after.png",
+      "sha256": "cf3ede1d9e2c9a44598d43c35e704d049af4097e93c0a131366ed544db192477"
+    }
+  ],
+  "caseDisposition": [
+    {
+      "caseId": "passive",
+      "outcome": "flag-only",
+      "interpretation": "Observed flags and after-edit reduction only; vendor suggestion/AI replacement was not invoked."
+    },
+    {
+      "caseId": "wordiness",
+      "outcome": "flag-only",
+      "interpretation": "Observed flags and after-edit reduction only; vendor suggestion/AI replacement was not invoked."
+    },
+    {
+      "caseId": "redundancy",
+      "outcome": "no-feedback",
+      "interpretation": "No related counters/highlights on this exact sample; grade decrease after manual edit is not redundancy feedback."
+    },
+    {
+      "caseId": "complexity",
+      "outcome": "flag-only",
+      "interpretation": "Observed flags and after-edit reduction only; vendor suggestion/AI replacement was not invoked."
+    },
+    {
+      "caseId": "active-control",
+      "outcome": "no-feedback",
+      "interpretation": "Control had no related counters before or after; no universal error-free claim."
+    }
+  ],
+  "pending": [
+    {
+      "edition": "Grazie Free Chrome",
+      "cases": 5,
+      "status": "not-run",
+      "reason": "Browser inventory exposed only in-app browser and MCP apps, no connected Chrome or accessible extension session. Owner readiness asked; no state assumed."
+    },
+    {
+      "edition": "Grammarly Free",
+      "cases": 5,
+      "status": "not-run",
+      "reason": "In-app app.grammarly.com navigated to public homepage; login reached /signin without account entry. Existing Free account/session required.",
+      "handoff": "https://www.grammarly.com/signin"
+    },
+    {
+      "edition": "PWA Premium lifetime",
+      "cases": 5,
+      "status": "not-entitled",
+      "reason": "Owner previously confirmed no target license; retain documentation-only, no purchase or tier substitution."
+    }
+  ],
+  "progress": {
+    "runnableCases": 15,
+    "observedCases": 5,
+    "remainingRunnable": 10,
+    "pwaSkipped": 5,
+    "meaning": "Observed cases are not five passed features or candidate qualification."
+  },
+  "qualificationDecision": "No common-operation qualification while exact Grazie/Free anchor evidence is missing. Redundancy is not established by this Hemingway sample; do not approve a broad shared wordiness/grammar claim. Privacy rubric unchanged.",
+  "limitations": [
+    "Readability labels recorded as shown; Post-graduate not converted into invented numerical score.",
+    "UI word counts recorded as shown, not a language-model word-count benchmark.",
+    "Screenshot viewport captures and DOM counters, not a full product/telemetry audit.",
+    "No-feedback only applies to these exact sample/settings.",
+    "Parser initially missed Post-graduate and singular weakener labels; corrected before final capture. No missing metric was stored as zero."
+  ]
+}
