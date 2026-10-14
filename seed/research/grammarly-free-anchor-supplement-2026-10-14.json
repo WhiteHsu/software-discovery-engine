@@ -1,0 +1,113 @@
+{
+  "version": 1,
+  "packet": "PR5.52",
+  "reviewedAt": "2026-10-14",
+  "researchOnly": true,
+  "publicationApproved": false,
+  "graphChanges": false,
+  "membershipChanges": false,
+  "engineChanges": false,
+  "qualifiedNewCandidates": 0,
+  "baseline": {
+    "commit": "9b3e756d28d3e65ec0b6cab792425590fc5ea948",
+    "gitStatus": "Independently inspected clean",
+    "deployment": "Owner screenshot green Production #70; not live queried",
+    "products": 15,
+    "routes": 7,
+    "remaining": 3,
+    "issue5": "Open historical baseline; not live queried"
+  },
+  "inputs": [
+    {
+      "path": "seed/research/writing-owner-corpus-2026-10-14.json",
+      "sha256": "333badf98125e05f5b3bb706c1eea05145e3ae0797b31dd81d7a6f6e6a167271"
+    },
+    {
+      "path": "seed/research/restricted-writing-review-2026-10-14.json",
+      "sha256": "eaa88caa347b9e755f698e6568f8ca0cd98f3e28ffd5da3b232285274109086b"
+    }
+  ],
+  "sources": [
+    {
+      "id": "F1",
+      "url": "https://www.grammarly.com/free",
+      "access": "Direct web-tool page, 2026-10-14",
+      "finding": "Free-specific marketing describes removal of unnecessary phrasing and fillers.",
+      "limit": "Category-level description; does not map each rule or Docs suggestion to an ordinary Free entitlement."
+    },
+    {
+      "id": "F2",
+      "url": "https://www.grammarly.com/grammar-check",
+      "access": "Official page text returned by web search, 2026-10-14; not authenticated product execution",
+      "finding": "Free feature list includes conciseness alongside grammar, spelling, punctuation and tone detection. Pro list adds full-sentence rewrites and advanced improvements.",
+      "limit": "Generative monthly budgets are a different feature and do not establish the Pro preview daily allowance."
+    },
+    {
+      "id": "F3",
+      "url": "https://www.grammarly.com/plans",
+      "access": "Direct web-tool page, 2026-10-14",
+      "finding": "Plans distinguish Free from Pro; current onboarding and PR5.50 separately show full-sentence rewrite restrictions.",
+      "limit": "A plan-level description does not identify the exact scope of a locked suggestion."
+    },
+    {
+      "id": "F4",
+      "url": "https://support.grammarly.com/hc/en-us/articles/38552281546765-Docs-Grammarly-s-new-AI-writing-surface",
+      "access": "Direct web-tool page, 2026-10-14",
+      "finding": "Docs support describes advanced writing suggestions as a reason to upgrade from Free.",
+      "limit": "No definitive Free rule matrix or numeric Pro daily sample cap established."
+    },
+    {
+      "id": "F5",
+      "url": "https://support.grammarly.com/hc/en-us/articles/30916398193037-Introducing-paragraph-level-rewrites",
+      "access": "Official article text returned by web search, 2026-10-14",
+      "finding": "Paragraph/selected-text rewrite feature is documented separately. Feature access disable instructions specify desktop apps and Grammarly browser extension.",
+      "limit": "Do not transfer those disable instructions to the owner Coda Docs surface or claim this explains the no-feedback observation."
+    },
+    {
+      "id": "F6",
+      "url": "https://www.grammarly.com/blog/product/grammarly-conciseness-suggestions/",
+      "access": "Official article text returned by web search, 2026-10-14",
+      "finding": "Historical article dated September 9, 2020 gives filler-removal examples including Needless to say.",
+      "limit": "Motivates a targeted sample; not current exact-plan/rule entitlement proof."
+    }
+  ],
+  "supplement": {
+    "id": "free-anchor-filler-probe",
+    "status": "owner-observed-no-feedback",
+    "input": "Needless to say, the editor reviewed the draft.",
+    "surface": "Chrome / coda.grammarly.com / Proofread / All",
+    "plan": "Free shown in prior same-day owner onboarding; no new tier substitution reported",
+    "result": "Great job / There are no more suggestions",
+    "displayedWords": 8,
+    "screenshot": {
+      "path": "evidence/grammarly-filler-no-feedback.png",
+      "sha256": "2f0c408cb06e9abe143f3a28770a90a608e8700ac4778f1cf79209b8d4fe4bf0"
+    },
+    "manualAfter": null,
+    "recheck": "Not performed: probe intended to locate an ordinary accessible Free suggestion, none observed. No paired clearance claim.",
+    "settings": "Default/unknown; no independently confirmed goals or writing preferences",
+    "execution": "Owner screenshot only; not agent-controlled browser execution",
+    "notObserved": [
+      "No suggestion to accept",
+      "No Free ordinary style rule established by this sample",
+      "No new Pro lock card on this input"
+    ],
+    "interpretation": "Exact single input produced no suggestion. Does not establish that Free lacks conciseness or that prior Pro sample exhaustion caused no-feedback."
+  },
+  "synthesis": {
+    "documentary": "Free conciseness category supported by current official marketing; retain documentary lead.",
+    "empirical": "PR5.50 exposed Pro previews/locks, and this new probe no-feedback. Stable ordinary Free style operation on selected surface remains unverified.",
+    "classification": "Unresolved category-to-rule/surface boundary, not proof of a vendor contradiction or universal feature absence.",
+    "proSampleLimit": "Daily sample exhaustion observed in PR5.50 only. No numeric cap, reset time, bypass or masked replacement inference.",
+    "route": "Both Grammarly routes retain hold, zero newly qualified candidates."
+  },
+  "coverage": {
+    "originalRunnableCasesObserved": 15,
+    "originalRunnableCases": 15,
+    "supplementalProbeCasesObserved": 1,
+    "originalProtocolChanged": false,
+    "pwaLifetimeNotEntitledCases": 5
+  },
+  "decision": "Preserve PR5.51 hold. No broad repeat testing or new qualification/relationship/scope approval.",
+  "nextStep": "Pause repeated Free style probes. Resolve exact ordinary Free rule entitlement/supported surface from stronger primary evidence before another targeted test. Work on a different remaining route or separately research a third exact edition only with its own evidence; no paid purchase, trial or silent anchor switch."
+}
