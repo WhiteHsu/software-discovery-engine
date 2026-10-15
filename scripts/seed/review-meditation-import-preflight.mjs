@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {createHash} from 'node:crypto';
+import {meditationInputs,buildMeditationWorkflow} from './build-meditation-workflow.mjs';
+import {currentRouteAudit} from '../escape-remaining-routes.mjs';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
+const sql=fs.readFileSync(path.join(root,'supabase/verification/PR5.57_PREFLIGHT.sql'),'utf8').replace(/\r\n/g,'\n');
+if(process.argv.length!==2||createHash('sha256').update(sql).digest('hex')!=='c3b030fe2ce37f0566eb701f20580c70ee2cf84de7c28956d0763effcaf0ec84')throw Error('Preflight query drift');
+const i=meditationInputs(),r=buildMeditationWorkflow(i.baseline,i.review),a=currentRouteAudit();
+if(r.report.qualifiedDraftCandidates!==3||r.report.qualifiedPublishedCandidates!==0||r.report.publishable||a.publishedProducts!==15||a.acceptedPublishedRoutes!==7||a.remainingRoutes!==3)throw Error('Preflight draft/checkpoint drift');
+console.log('PR5.57: exact SELECT-only meditation preflight pinned; three local qualified drafts, no database execution.');
+console.log('Production baseline unknown until complete snapshot returned. Public checkpoint15/7/3 unchanged.');

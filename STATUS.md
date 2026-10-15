@@ -303,3 +303,8 @@ Owner pushed PR5.54 as f98de5b; clean actual HEAD inspected. Owner screenshot sh
 ## PR5.56 — Bounded meditation draft qualification
 
 Clean actual HEAD40eb5ca inspected; owner screenshot green Production #74. Exact adult guided selection/playback scope and nonempty description enforced for Calm alternative relationships. Separate cloned draft builder applies 9 attribute/3 anchor updates to Medito, Smiling Mind and Healthy Minds public editions; 3 drafts qualify at0.85, zero published/publishable. Memberships, identities, taxonomy, source research and accepted checkpoint unchanged. Calm three-free-listens and unknown environment limits retained. Historical input checks allow only exact reviewed engine transition; evidence remains pinned. 25 focused tests, five historical checks and strict scoped TypeScript check pass. No SQL/database/import/publication writes; accepted15/7/3. See MEDITATION_WORKFLOW_DRAFTS.md.
+
+
+## PR5.57 — Meditation selective import preflight
+
+Owner pushed PR5.56 as453ad34; clean actual HEAD inspected, owner screenshot green Production #75. Single-statement SELECT preflight captures three meditation identities/lifecycles, all claims/evidence/taxonomy, target/all related memberships, scope storage, provenance collisions and published slug sets/private boundary. No live database query executed by agent; production state unknown until owner returns full snapshot. Local draft qualification3, published0; accepted checkpoint15/7/3. No apply SQL, importer, graph, engine, publication or lifecycle changes. See MEDITATION_IMPORT_PREFLIGHT_REVIEW.md.
