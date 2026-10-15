@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {createHash} from 'node:crypto';
+import {latestPublicationAudit} from '../escape-remaining-routes.mjs';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..'),hash=x=>createHash('sha256').update(x).digest('hex');
+const r=JSON.parse(fs.readFileSync(path.join(root,'seed/research/writing-publication-checkpoint-2026-10-15.json'),'utf8'));
+if(process.argv.length!==2||hash(JSON.stringify(r))!=='7b3cd6e99a5040348237a634499ea6fd5e53d8199b93aa16fcb4a1d97e6a5e6b')throw Error('Writing acceptance drift');
+const a=latestPublicationAudit();if(a.publishedProducts!==21||a.acceptedPublishedRoutes!==9||a.remainingRoutes!==1||r.latestPublication.verificationResults.length!==21||r.latestPublication.verificationResults.some(x=>!x.passed)||r.latestPublication.frontEndEvidence.length!==8)throw Error('Acceptance/checkpoint drift');
+console.log('PR5.71: owner-approved writing publication accepted;21/21 SQL checks and route/product/official-link screenshots recorded.');
+console.log('Latest21/9/1. Historical18/8/2 and15/7/3 preserved. Privacy remains unqualified; no remote writes.');

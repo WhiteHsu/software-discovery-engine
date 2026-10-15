@@ -1,0 +1,176 @@
+{
+  "version": 1,
+  "recordedAt": "2026-10-15",
+  "basis": "Owner explicit writing-publication approval, successful apply screenshot, complete21/21 SQL result and incognito public-route/product/official-destination screenshots. Not a new agent DB query.",
+  "publishedProducts": [
+    "obsidian",
+    "things",
+    "omnifocus",
+    "2do",
+    "affine",
+    "anytype",
+    "appflowy",
+    "gimp",
+    "krita",
+    "paint-net",
+    "joplin",
+    "simplenote",
+    "pdf-xchange-editor",
+    "pdf24-creator",
+    "pdfgear",
+    "medito",
+    "smiling-mind",
+    "healthy-minds-program",
+    "hemingway-free-web",
+    "grazie-free-browser",
+    "real-write-passive-checker"
+  ],
+  "publishedRoutes": [
+    "todoist-alternatives-with-a-one-time-purchase",
+    "offline-notion-alternatives",
+    "photoshop-alternatives-without-a-subscription",
+    "notion-alternatives-without-ai",
+    "simple-notion-alternatives",
+    "pdf-editors-without-a-subscription",
+    "productivity-apps-you-can-buy-once",
+    "meditation-apps-without-a-subscription",
+    "grammarly-alternatives-without-a-subscription"
+  ],
+  "previousCheckpoint": "seed/research/publication-checkpoint-2026-10-15.json",
+  "latestPublication": {
+    "packet": "PR5.70",
+    "proposalCommit": "cc3b30b706e78e023fd576c69b2037947f31b76a",
+    "approval": "Owner explicitly said 核准寫作路線公開 before apply",
+    "applyScreenshot": "codex-clipboard-66c994b1-51d7-4d3d-a287-fe91aaf755c6.png",
+    "verifyScreenshot": "codex-clipboard-69b6b01f-59e2-491f-bf2a-7b9ad9745fef.png",
+    "verificationResults": [
+      {
+        "check_name": "exact_products",
+        "passed": true
+      },
+      {
+        "check_name": "exact_product_attributes",
+        "passed": true
+      },
+      {
+        "check_name": "exact_product_anchors",
+        "passed": true
+      },
+      {
+        "check_name": "exact_product_problems",
+        "passed": true
+      },
+      {
+        "check_name": "exact_product_audiences",
+        "passed": true
+      },
+      {
+        "check_name": "exact_product_attribute_evidence",
+        "passed": true
+      },
+      {
+        "check_name": "exact_product_anchor_evidence",
+        "passed": true
+      },
+      {
+        "check_name": "exact_product_problem_evidence",
+        "passed": true
+      },
+      {
+        "check_name": "exact_product_audience_evidence",
+        "passed": true
+      },
+      {
+        "check_name": "exact_claim_evidence",
+        "passed": true
+      },
+      {
+        "check_name": "exact_evidence_sources",
+        "passed": true
+      },
+      {
+        "check_name": "exact_attributes",
+        "passed": true
+      },
+      {
+        "check_name": "exact_anchors",
+        "passed": true
+      },
+      {
+        "check_name": "exact_problems",
+        "passed": true
+      },
+      {
+        "check_name": "exact_audiences",
+        "passed": true
+      },
+      {
+        "check_name": "exact_escape_routes",
+        "passed": true
+      },
+      {
+        "check_name": "exact_escape_route_products",
+        "passed": true
+      },
+      {
+        "check_name": "published_slug_sets",
+        "passed": true
+      },
+      {
+        "check_name": "public_product_qualification_fields",
+        "passed": true
+      },
+      {
+        "check_name": "public_read_rls_and_policies",
+        "passed": true
+      },
+      {
+        "check_name": "anon_private_evidence_boundary",
+        "passed": true
+      }
+    ],
+    "frontEndEvidence": [
+      {
+        "attachment": "codex-clipboard-c1625960-27ea-465e-8bdd-87bad760711e.png",
+        "meaning": "Public route description in owner incognito Chrome"
+      },
+      {
+        "attachment": "codex-clipboard-5b868a3a-f488-427b-99dc-873d09520c4b.png",
+        "meaning": "Comparison lists exactly Grazie Free, Hemingway Free Web and Real Write with documented access/trade-offs"
+      },
+      {
+        "attachment": "codex-clipboard-9e7cab39-5811-4416-a6aa-90aca7e5a54e.png",
+        "meaning": "Grazie public product page"
+      },
+      {
+        "attachment": "codex-clipboard-967d1ec4-4a4f-4607-bdc3-f7293ed4f1c3.png",
+        "meaning": "Grazie official Visit destination loaded"
+      },
+      {
+        "attachment": "codex-clipboard-52ccd78f-fe77-4fe3-ae90-c47da99ce2f0.png",
+        "meaning": "Hemingway Free Web public product page"
+      },
+      {
+        "attachment": "codex-clipboard-a0ba4953-c2b3-4c7d-b42e-a153c9d9811b.png",
+        "meaning": "Hemingway official free editor destination loaded, Plus features still separate"
+      },
+      {
+        "attachment": "codex-clipboard-e947c2b7-d606-41db-b504-797af05598be.png",
+        "meaning": "Real Write public product page"
+      },
+      {
+        "attachment": "codex-clipboard-f93e8a63-020e-473a-b659-4aecd01bc96c.png",
+        "meaning": "Real Write official dedicated detector destination loaded"
+      }
+    ],
+    "scope": "personal-english-passive-construction-review",
+    "limits": "Bounded passive feedback/manual revision/recheck against Pro capability, not full grammar, rewrite or privacy parity. Retain exact-edition/service/metric limits."
+  },
+  "remainingRoutes": [
+    "privacy-friendly-grammarly-alternatives"
+  ],
+  "excludedFromPublication": [
+    "hemingway-classic"
+  ],
+  "newPublicationApproved": false
+}
