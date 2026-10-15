@@ -1,0 +1,156 @@
+{
+  "version": 1,
+  "packet": "PR5.62",
+  "reviewedAt": "2026-10-15",
+  "baseline": "c8f66a5046d8dc9414fd4bc1dfab18ec1ee4c123",
+  "researchOnly": true,
+  "publicationApproved": false,
+  "graphChanges": false,
+  "qualifiedNewCandidates": 0,
+  "inputs": [
+    {
+      "path": "seed/research/publication-checkpoint-2026-10-15.json",
+      "sha256": "7da09c394c67994d05742a56a98a3d5618985a699c47d530bf4c4af1d4f62e78"
+    },
+    {
+      "path": "seed/research/writing-owner-corpus-2026-10-14.json",
+      "sha256": "efb5b344f5a0d9fc810bb33c263fc6bdacbf65e68d155f406ff3c9f4288ab482"
+    },
+    {
+      "path": "seed/research/grammarly-free-anchor-supplement-2026-10-14.json",
+      "sha256": "592b41176853b5f374695fe03b73e29739937872f275f1b8c89c5daab7d40aab"
+    },
+    {
+      "path": "seed/research/restricted-writing-review-2026-10-14.json",
+      "sha256": "a82f87c649704d2a65517a171cc5179b8d6764da345ec629eac6bbfb1577da51"
+    },
+    {
+      "path": "lib/discovery/escape-model.ts",
+      "sha256": "8f0b4ab061439cced108b079bd25ef5ebc169d5030afd4cfa09ab787c69f1854"
+    }
+  ],
+  "sources": [
+    {
+      "id": "G1",
+      "url": "https://www.grammarly.com/free",
+      "access": "Official page opened",
+      "summary": "Free marketing retains conciseness category; no exact rule/surface entitlement follows.",
+      "checkedAt": "2026-10-15"
+    },
+    {
+      "id": "G2",
+      "url": "https://www.grammarly.com/plans",
+      "access": "Official page opened",
+      "summary": "Free and Pro remain separate. AI-prompt allowances are not proof of ordinary style-rule access or daily preview reset.",
+      "checkedAt": "2026-10-15"
+    },
+    {
+      "id": "G3",
+      "url": "https://support.grammarly.com/hc/en-us/articles/38552281546765-Docs-Grammarly-s-new-AI-writing-surface",
+      "access": "Official support opened",
+      "summary": "Docs distinguishes basic red feedback from paid advanced clarity/tone. Does not resolve the exact ordinary-Free passive rule.",
+      "checkedAt": "2026-10-15"
+    },
+    {
+      "id": "G4",
+      "url": "https://support.grammarly.com/hc/en-us/articles/38552469933837-Paraphraser-agent-user-guide",
+      "access": "Official support opened",
+      "summary": "Free Paraphraser use has daily limited suggestions. This is a different agent, not proof of a matching proofreading rule.",
+      "checkedAt": "2026-10-15"
+    },
+    {
+      "id": "G5",
+      "url": "https://www.grammarly.com/passive-voice-checker",
+      "access": "Official page and anonymous IAB widget opened",
+      "summary": "Dedicated page describes a free passive checker. Distinct surface from owner signed-in Docs; widget outcome below is not a Docs entitlement test.",
+      "checkedAt": "2026-10-15"
+    },
+    {
+      "id": "S1",
+      "url": "https://www.slickwrite.com/",
+      "access": "Official-domain indexed content returned; direct web fetch timed out, IAB navigation ERR_CERT_DATE_INVALID",
+      "summary": "Indexed free/style-check lead, not verified current usable access. No certificate bypass; not a global rejection.",
+      "checkedAt": "2026-10-15"
+    },
+    {
+      "id": "R1",
+      "url": "https://realwriteapp.com/tools/passive-voice-detector",
+      "access": "Official page opened and anonymous IAB tool executed",
+      "summary": "Dedicated detector is described as free without signup. Rendered UI shows3000-word field; other AI tools/credits are separate. Pattern limitations and manual revision are documented; no private/offline classification made.",
+      "checkedAt": "2026-10-15"
+    },
+    {
+      "id": "B1",
+      "url": "https://www.scribens.com/",
+      "access": "Official-domain indexed content only",
+      "summary": "Free grammar lead and style descriptions do not establish exact free passive/style rights. Not selected or tested.",
+      "checkedAt": "2026-10-15"
+    },
+    {
+      "id": "B2",
+      "url": "https://www.scribens.com/paraphrasing-tool/index.html",
+      "access": "Official-domain indexed content only",
+      "summary": "Free paraphrasing quota is a distinct operation, not proof of a free matching rule. No plan promotion.",
+      "checkedAt": "2026-10-15"
+    }
+  ],
+  "directory": "Stripe Directory skill checked; no CLI/Directory tool available. Agent docs fetch unsupported content type. Primary official sources used; no install, account creation, transaction or contact.",
+  "originalCorpus": "15/15 original observations and separate prior filler probe preserved. New probes below are separate and do not count as additional alternatives qualified.",
+  "operation": "Inspect passive construction, decide a manual edit and recheck. No full grammar, rewrite or privacy parity implied.",
+  "anchor": {
+    "surface": "Anonymous official passive-voice-checker web widget in Codex in-app browser, not owner Chrome or signed-in Docs",
+    "before": "The report was written by the editor before it was sent to the team.",
+    "observation": "Widget loaded, accepted input, but Suggestions panel stayed at introductory steps without a readable passive suggestion. A normal keyboard re-entry of the same input did not expose feedback.",
+    "control": {
+      "input": "This is a sentnce.",
+      "observation": "Panel still introductory; accessibility tree later exposed a disabled popup numbered1. No readable correction captured, so feedback liveness is not established."
+    },
+    "result": "Inconclusive environment/surface observation; no product-wide absence, ordinary-Free rule entitlement or universal quota conclusion.",
+    "screenshots": [
+      "grammarly-passive-no-feedback.png",
+      "grammarly-spelling-control.png"
+    ]
+  },
+  "thirdCandidate": {
+    "name": "Real Write — dedicated public Passive Voice & Sentence Checker",
+    "identityStatus": "Research-only lead; not added to product graph",
+    "account": "Anonymous; Sign in remained visible. No trial/purchase/account created.",
+    "before": "The report was written by the editor before it was sent to the team.",
+    "beforeWordCount": 14,
+    "beforeFeedback": {
+      "highlighted": [
+        "was written",
+        "was sent"
+      ],
+      "rawSummary": "Mostly Active 2 in 1 sentences (200.0%)",
+      "interpretation": "Construction highlights are relevant; percentage/label inconsistent with a sentence-share metric. Do not adopt as accuracy, severity or sentence-percentage score."
+    },
+    "manualAfter": "The editor wrote the report and sent it to the team.",
+    "afterWordCount": 11,
+    "afterFeedback": "No passive voice detected — your writing is direct and active!",
+    "limits": [
+      "One selected before/after pair, not the five-operation corpus or general accuracy proof.",
+      "Manual revision from the existing protocol, not an accepted tool-generated rewrite.",
+      "Header Credits3 persisted; no credit decrease observed across these two detections. Not proof of all-tool unlimited access.",
+      "Vendor local-processing statement not network-audited; privacy route remains unreviewed.",
+      "Heuristic detector can miss passives and flag participial adjectives; use construction highlights for human review."
+    ],
+    "screenshots": [
+      "realwrite-before.png",
+      "realwrite-after.png",
+      "realwrite-after-result.png"
+    ]
+  },
+  "decision": {
+    "ordinaryFreeAnchor": "Still unresolved. Dedicated anonymous page is a new test surface and cannot silently replace prior Docs edition evidence.",
+    "thirdCandidate": "Concrete accessible passive-detection lead, not a qualified general Grammarly alternative; metric anomaly retained.",
+    "route": "Hold qualification/publication. No purchase or repeated full corpus requested.",
+    "next": "One owner Chrome check of the dedicated official passive page could distinguish IAB behavior, using existing passive input and active revision only. If no interpretable feedback, use one spelling control and stop. Record exact surface/account/card restrictions. Do not silently switch to Pro, Paraphraser or a rewrite-only workflow."
+  },
+  "checkpoint": {
+    "products": 18,
+    "routes": 8,
+    "remaining": 2
+  },
+  "evidenceStorage": "Synthetic-text browser screenshots copied to delivery evidence/ for review only, outside files/ and Git payload. UI results do not establish hidden implementation details."
+}
