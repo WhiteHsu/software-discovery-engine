@@ -313,3 +313,8 @@ Owner pushed PR5.56 as453ad34; clean actual HEAD inspected, owner screenshot gre
 ## PR5.58 — Guarded meditation draft import
 
 Clean actual HEADff5adde inspected; owner screenshot green Production #76. Full PR5.57 snapshot captured2026-10-15T02:16:36Z parsed from Markdown-escaped JSON and pinned: three draft identities, route absent, no target memberships, checkpoint15/7, scope storage/private boundary intact. Guarded rehearsal/apply/SELECT verification prepared for nine attributes/three scoped anchors, additive14 sources/64 fragments, one unapproved draft route with3 members. Product lifecycle/identity/taxonomy/unrelated graph and old evidence preserved; no publication or agent remote writes.29 focused tests/11 local database scenarios pass, including28 verification booleans across3 timezones. Await owner SQL execution/results. Accepted checkpoint15/7/3. See MEDITATION_DRAFT_IMPORT_REVIEW.md.
+
+
+## PR5.59 — Meditation publication preflight
+
+Clean actual HEADe005003 inspected; owner screenshots Production #77 green,29 Node tests pass, rehearsal/apply success, returned28/28 verificationtrue. Imported meditation products/route remain draft/unapproved; owner acceptance receipt recorded. New single-statement SELECT publication preflight captures full post-import target graph/memberships/provenance/taxonomy, published sets, scope storage, public RPC projections and relevant RLS/policies/private boundary. Agent has not queried production. No publication approval, new apply SQL or lifecycle/checkpoint changes. Accepted15/7/3; potential18/8/2 requires later concrete proposal/owner approval/validation. See MEDITATION_PUBLICATION_PREFLIGHT_REVIEW.md.

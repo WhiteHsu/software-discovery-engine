@@ -1,0 +1,146 @@
+{
+  "version": 1,
+  "packet": "PR5.59",
+  "recordedAt": "2026-10-15",
+  "baselineCommit": "e005003412ef38d381acbf0f99e8316e62fb128e",
+  "evidenceKind": "Owner returned PR5.58 verification CSV and screenshots; no agent production query",
+  "ownerScreenshots": {
+    "push": "e005003",
+    "workingTree": "clean",
+    "deployment": "Production #77 green",
+    "nodeTests": {
+      "passed": 29,
+      "failed": 0
+    },
+    "rehearsal": "SQL Editor Success; rollback sentinel shown",
+    "apply": "SQL Editor Success; no rehearsal raise shown"
+  },
+  "verification": [
+    {
+      "check_name": "three_original_draft_products",
+      "passed": true
+    },
+    {
+      "check_name": "nine_exact_reviewed_attributes",
+      "passed": true
+    },
+    {
+      "check_name": "three_exact_scoped_anchors",
+      "passed": true
+    },
+    {
+      "check_name": "reviewed_attribute_evidence_linked",
+      "passed": true
+    },
+    {
+      "check_name": "reviewed_anchor_evidence_linked",
+      "passed": true
+    },
+    {
+      "check_name": "reviewed_source_rows_exact",
+      "passed": true
+    },
+    {
+      "check_name": "reviewed_fragment_rows_exact",
+      "passed": true
+    },
+    {
+      "check_name": "unapproved_draft_route",
+      "passed": true
+    },
+    {
+      "check_name": "exact_three_route_members",
+      "passed": true
+    },
+    {
+      "check_name": "no_other_target_memberships",
+      "passed": true
+    },
+    {
+      "check_name": "published_slug_sets_preserved",
+      "passed": true
+    },
+    {
+      "check_name": "drafts_hidden_from_public_rpc",
+      "passed": true
+    },
+    {
+      "check_name": "anon_private_evidence_boundary",
+      "passed": true
+    },
+    {
+      "check_name": "retained_products",
+      "passed": true
+    },
+    {
+      "check_name": "retained_product_attributes",
+      "passed": true
+    },
+    {
+      "check_name": "retained_product_anchors",
+      "passed": true
+    },
+    {
+      "check_name": "retained_product_problems",
+      "passed": true
+    },
+    {
+      "check_name": "retained_product_audiences",
+      "passed": true
+    },
+    {
+      "check_name": "retained_product_attribute_evidence",
+      "passed": true
+    },
+    {
+      "check_name": "retained_product_anchor_evidence",
+      "passed": true
+    },
+    {
+      "check_name": "retained_product_problem_evidence",
+      "passed": true
+    },
+    {
+      "check_name": "retained_product_audience_evidence",
+      "passed": true
+    },
+    {
+      "check_name": "retained_claim_evidence",
+      "passed": true
+    },
+    {
+      "check_name": "retained_evidence_sources",
+      "passed": true
+    },
+    {
+      "check_name": "retained_attributes",
+      "passed": true
+    },
+    {
+      "check_name": "retained_anchors",
+      "passed": true
+    },
+    {
+      "check_name": "retained_problems",
+      "passed": true
+    },
+    {
+      "check_name": "retained_audiences",
+      "passed": true
+    }
+  ],
+  "interpretation": "Owner evidence supports imported bounded claims and unapproved draft route, preserved data and public invisibility. Fresh full baseline still needed before publication proposal.",
+  "publicationApproved": false,
+  "acceptedCheckpoint": {
+    "products": 15,
+    "routes": 7,
+    "remaining": 3
+  },
+  "expectedPublicationProposal": {
+    "products": 18,
+    "routes": 8,
+    "remaining": 2,
+    "status": "Future possibility only; requires snapshot review, concrete proposal, owner approval and validation"
+  },
+  "metadataLimits": "App/OS versions, device/storefront and audio language remain unknown; Calm sampled three-free-listens limit retained."
+}

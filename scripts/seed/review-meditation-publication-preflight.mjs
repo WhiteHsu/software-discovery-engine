@@ -1,0 +1,15 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {createHash} from 'node:crypto';
+import {meditationImportInputs,buildMeditationImport} from './build-meditation-import.mjs';
+import {currentRouteAudit} from '../escape-remaining-routes.mjs';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
+const hash=x=>createHash('sha256').update(x).digest('hex');
+const sql=fs.readFileSync(path.join(root,'supabase/verification/PR5.59_PREFLIGHT.sql'),'utf8').replace(/\r\n/g,'\n');
+const receipt=JSON.parse(fs.readFileSync(path.join(root,'seed/research/meditation-draft-import-acceptance-2026-10-15.json'),'utf8'));
+if(process.argv.length!==2||hash(sql)!=='df193b16b0cdc9b92128d76f2ccd09f82125cdd982b9a43e6cb5eb89e8ccd6f3'||hash(JSON.stringify(receipt))!=='9850abea70614c786de4f2e688506179b271ddc829a5b6da77c1798efd594c5e')throw Error('Publication preflight/receipt drift');
+const r=buildMeditationImport(meditationImportInputs()),a=currentRouteAudit();
+if(r.report.publicationApproved||a.publishedProducts!==15||a.acceptedPublishedRoutes!==7||a.remainingRoutes!==3)throw Error('Checkpoint drift');
+console.log('PR5.59: owner PR5.58 acceptance28/28 recorded; exact SELECT-only publication preflight pinned.');
+console.log('Static reconstruction only; no live snapshot or publication approval. Accepted checkpoint15/7/3.');
