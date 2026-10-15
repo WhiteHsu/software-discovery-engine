@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {createHash} from 'node:crypto';
+import {currentPublicationAudit} from '../escape-remaining-routes.mjs';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..'),hash=x=>createHash('sha256').update(x).digest('hex');
+const r=JSON.parse(fs.readFileSync(path.join(root,'seed/research/writing-passive-access-review-2026-10-15.json'),'utf8'));
+if(process.argv.length!==2||hash(JSON.stringify(r))!=='2409d0b33be1c3a662cdfc9aa6e0df5ba98d2e2456e614adb45acd8f89e8b2cb')throw Error('Access review drift');
+if(hash(fs.readFileSync(path.join(root,r.input.path),'utf8').replace(/\r\n/g,'\n'))!==r.input.sha256)throw Error('Prior claim draft drift');
+const claims=r.reviewedCandidates.flatMap(x=>x.claims);if(claims.length!==12||claims.some(x=>x.verificationStatus!=='unknown'||x.confidence!==null||x.reviewStatus!=='editorially-reviewed-draft'||!x.evidenceRefs.length))throw Error('Reviewed proposals promoted or evidence missing');
+const a=currentPublicationAudit();if(a.publishedProducts!==18||a.acceptedPublishedRoutes!==8||a.remainingRoutes!==2||a.routes.filter(x=>x.publication==='not-published').some(x=>x.qualifiedDraftGraphCandidates!==0))throw Error('Checkpoint drift');
+console.log('PR5.66: rendered detector FAQ/pricing resolve selected free-access path; conditional service terms retained.');
+console.log('Twelve editorially reviewed proposals; zero graph qualification. Current18/8/2. No remote writes.');

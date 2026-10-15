@@ -348,3 +348,8 @@ Owner approved investigating Grammarly Pro capability as baseline for passive fe
 ## PR5.65 — Writing exact-edition claim drafts
 
 Reconstructed local baseline confirms existing Hemingway identity is paid Classic; preserve it and propose separate free-web identity plus Grazie Free and Real Write dedicated detector. Twelve structured unknown-status/null-confidence claims and route copy prepared, not an importable bundle. Fresh Real Write pricing text includes daily credits across all21 tools; detector exemption unresolved despite prior unchanged counter. Terms unreadable. Scope enforcement and live identity collision check required later. No graph/engine/SQL/publication changes, zero newly qualified;18/8/2. See WRITING_PASSIVE_CLAIM_DRAFTS.md.
+
+
+## PR5.66 — Rendered detector access reviewed
+
+Rendered Real Write detector FAQ explicitly gives signup-free/no-daily-cap access; rendered pricing separates local analysis from AI credits. Prior extracted all-tools wording preserved with method/date limits. Terms now readable, feature/limit-change rights retained; mobile/web billing differences not transferred. Three separate edition proposals/twelve claims editorially reviewed with evidence references, still unknown graph status/null confidence. Scope enforcement and isolated bundle next; no repeated input, purchase or SQL. Public18/8/2 unchanged; zero newly qualified. See WRITING_PASSIVE_ACCESS_REVIEW.md.
