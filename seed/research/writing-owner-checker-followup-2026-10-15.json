@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "packet": "PR5.63",
+  "observedAt": "2026-10-15",
+  "baseline": "4673ef91dc516f32f1117feaf6ba432ff08d7b1f",
+  "researchOnly": true,
+  "graphChanges": false,
+  "publicationApproved": false,
+  "qualifiedNewCandidates": 0,
+  "prior": {
+    "path": "seed/research/writing-gap-recheck-2026-10-15.json",
+    "sha256": "ea56f1842753f683a50636f8aa3d08633ae63d6ca4267a2d6e9b7d3aec33dd21"
+  },
+  "evidence": [
+    {
+      "file": "owner-1.png",
+      "attachment": "codex-clipboard-ed5e2306-e224-4d27-95ac-6181fbdb2a47.png",
+      "sha256": "f2afb98821d9cce4a59cac2e51035e9d638e41d21ff090411f099c7205367924"
+    },
+    {
+      "file": "owner-2.png",
+      "attachment": "codex-clipboard-b7c9e257-ac41-4218-8a3b-0a7fe2e53ddb.png",
+      "sha256": "1e3a438733289855e38a70969ef347b58d5f9b44431dc103603c27398b7455e2"
+    },
+    {
+      "file": "owner-3.png",
+      "attachment": "codex-clipboard-36691154-2270-4baa-a769-3a434330ca3f.png",
+      "sha256": "9bc440571003d279ce263611084219f1f2c1e39ff9a0551b6d96a6cacc66a24e"
+    },
+    {
+      "file": "owner-4.png",
+      "attachment": "codex-clipboard-b3dc29e7-6650-4de4-ad12-b7c483a4c16c.png",
+      "sha256": "570d39207fb59677f0ec78601e87af4e97ef610b0fe6ee7380500d1c5792d8aa"
+    },
+    {
+      "file": "owner-5.png",
+      "attachment": "codex-clipboard-ca030c49-d44f-4d50-b704-41bda7feeefb.png",
+      "sha256": "d60f9ebf8c0ab3c3f1ed2b2730a2c66e2c266f43deab769b8c51b3c140454f71"
+    }
+  ],
+  "publicChecker": {
+    "url": "https://www.grammarly.com/passive-voice-checker",
+    "environment": "Owner Chrome. Header shows My Grammarly and Finish account setup; authenticated-looking UI, exact session/tier not independently inspected. Do not label anonymous.",
+    "passive": {
+      "input": "The report was written by the editor before it was sent to the team.",
+      "observation": "Input visible; no visible underline or readable passive suggestion in returned screenshot. Right panel remains introductory."
+    },
+    "spellingControl": {
+      "input": "This is a sentnce.",
+      "observation": "sentnce underlined red; readable Correct your spelling card proposes sentence, Accept button visible, suggestion counter1. Right panel still introductory.",
+      "accepted": false
+    },
+    "interpretation": "Spelling feedback liveness established in owner Chrome. Passive probe had no visible readable feedback; not a product-wide absence or proof of rule entitlement. Exact feedback provider (embedded widget versus browser extension) was not isolated."
+  },
+  "editor": {
+    "url": "https://app.grammarly.com/ddocs/3001854723",
+    "surface": "Separate signed-in Grammarly Editor; not the public checker and not silently substituted for prior Docs surface.",
+    "input": "The report was written by the editor before it was sent to the team.",
+    "cardLabel": "Pro suggestion · 3 free samples left today",
+    "suggestedText": "The editor wrote the report before sending it to the team.",
+    "observation": "One readable Improve your text rewrite with Use this version button. Screenshot shows proposed edit only; no accepted rewrite or manual-after recheck captured.",
+    "interpretation": "Limited Pro sample observed in this session; no ordinary-Free passive entitlement, exact universal allowance or reset schedule established."
+  },
+  "decision": {
+    "stopOwnerProbe": true,
+    "repeatCorpus": false,
+    "anchor": "Matching repeatable ordinary-Free operation remains unresolved. Public spelling success does not qualify passive-style scope.",
+    "thirdCandidate": "Real Write remains research-only passive-detection lead with prior metric anomaly; no additional test or qualification here.",
+    "next": "Move to an explicit editorial scope/edition decision before further candidate testing. Preserve original Free anchor evidence and keep a passive-only research comparison separate; do not replace the existing route with spelling or a Pro preview.",
+    "publication": "Both writing routes remain unapproved and zero-qualified; no SQL or public changes."
+  },
+  "checkpoint": {
+    "products": 18,
+    "routes": 8,
+    "remaining": 2
+  }
+}

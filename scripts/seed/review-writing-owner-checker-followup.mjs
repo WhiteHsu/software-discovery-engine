@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {createHash} from 'node:crypto';
+import {currentPublicationAudit} from '../escape-remaining-routes.mjs';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
+const hash=x=>createHash('sha256').update(x).digest('hex');
+const r=JSON.parse(fs.readFileSync(path.join(root,'seed/research/writing-owner-checker-followup-2026-10-15.json'),'utf8'));
+if(process.argv.length!==2||hash(JSON.stringify(r))!=='61b12af82ad6e2f0bf3666ee1909616b4f215cd16c238937369c6ee2b04e08f2')throw Error('Owner follow-up record drift');
+if(hash(fs.readFileSync(path.join(root,r.prior.path),'utf8').replace(/\r\n/g,'\n'))!==r.prior.sha256)throw Error('Prior research drift');
+const a=currentPublicationAudit();
+if(a.publishedProducts!==18||a.acceptedPublishedRoutes!==8||a.remainingRoutes!==2||a.routes.filter(x=>x.publication==='not-published').some(x=>x.qualifiedDraftGraphCandidates!==0))throw Error('Checkpoint drift');
+console.log('PR5.63: owner spelling control responded; public passive feedback not observed; separate Editor card is a limited Pro sample.');
+console.log('Owner probe closed. No new qualification or publication; current18/8/2. Static validation only.');

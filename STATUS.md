@@ -333,3 +333,8 @@ Actual clean HEAD935dd8c inspected. Owner explicitly approved public release and
 ## PR5.62 — Writing gap recheck
 
 Clean actual HEADc8f66a5 inspected. New official Free/Docs/Paraphraser/dedicated passive-page review keeps exact ordinary-Free anchor entitlement unresolved. Anonymous IAB public checker accepted text but no readable passive feedback; independent spelling control did not establish liveness (disabled1 indicator). Slick Write indexed lead blocked by local certificate error; no bypass. New Real Write dedicated passive detector highlights2 constructions and clears on existing manual active revision, but200%/Mostly Active metric inconsistency retained. One pair only; original15/15 unchanged. No graph/engine/SQL/publication changes, zero new qualified; checkpoint18/8/2. Targeted owner Chrome public-page check prepared instead of full corpus repetition. See WRITING_GAP_RECHECK.md.
+
+
+## PR5.63 — Owner Chrome checker follow-up
+
+Owner public-page spelling control returned readable sentnce-to-sentence feedback despite introductory right panel; prior passive input had no visible readable suggestion. Header is authenticated-looking, exact tier/provider not isolated. Separate Editor shows readable passive rewrite explicitly labeled Pro suggestion with 3 free samples left today; no ordinary-Free entitlement, reset or accepted edit inferred. Close owner probe; preserve prior research/corpus and hold both writing routes at zero qualified. Real Write remains research-only. No graph/engine/SQL/publication changes; accepted18/8/2. See WRITING_OWNER_CHECKER_FOLLOWUP.md.
