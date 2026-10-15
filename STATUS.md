@@ -388,3 +388,8 @@ Clean actual HEADfb919be and owner Production90 acceptance recorded. Three origi
 ## PR5.73 — Privacy writing control boundaries
 
 Clean actual HEAD8841aa9 inspected; owner Production91 green. Antidote12 official docs confirm passive-voice review and automatic Reformulation triggers within Correction, requiring exact control verification rather than mode-name inference. Hemingway synthetic UI run retained text after reload; manual active revision cleared weakeners, and editor was cleared/reloaded before closing. No network payload or storage inspection available; no privacy qualification inferred. Five official documents and bounded observations recorded with next network-evidence procedure. Accepted21/9/1, zero privacy-qualified candidates unchanged. No native install, SQL, graph or engine changes. See PRIVACY_WRITING_CONTROLS.md.
+
+
+## PR5.74 — Anonymous Hemingway network receipt
+
+Clean actual HEAD1ec712c inspected; owner Production92 green. Three returned analytics bodies decoded without submitted prose; selected engagement screenshot fields also show no test text. Anonymous free events include device-associated analytics identifiers. Partial capture, unknown consent state and uninspected requests prevent any no-transmission or privacy qualification claim. Sanitized receipt omits raw payloads, identifiers and tokens. Owner per-request capture round closed; consent/data-path research remains. Accepted21/9/1 and zero privacy qualifications unchanged. No SQL, graph, engine or publication changes. See HEMINGWAY_NETWORK_OBSERVATION.md.

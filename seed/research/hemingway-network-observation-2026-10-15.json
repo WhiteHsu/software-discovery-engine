@@ -1,0 +1,35 @@
+{
+  "version":1,
+  "packet":"PR5.74",
+  "recordedAt":"2026-10-15",
+  "baselineCommit":"1ec712c509e41ddc32406621a400323f9556c4ed",
+  "researchOnly":true,
+  "graphChanges":false,
+  "publicationApproved":false,
+  "qualifiedNewCandidates":0,
+  "checkpoint":{"products":21,"completedRoutes":9,"remainingRoutes":1},
+  "product":"hemingway-free-web",
+  "url":"https://hemingwayapp.com/",
+  "evidenceType":"Owner-returned DevTools screenshots and three complete Base64 data values decoded locally; selected requests only, not a full trace audit.",
+  "captureContext":{"browser":"Chrome incognito shown in screenshots","account":"decoded events report loggedIn=false and billingStatus=free","cookieConsent":"unknown; banner visible initially, no selected choice returned","build":"not established","timing":"long-lived recording; exact edit-to-request timing not established","networkUI":"All selected, Keep log enabled; no text in filter field shown","coverage":"request bodies for three track events plus visible fields of selected event requests; no full HAR or storage inspection"},
+  "text":{"before":"The report was written by Mira. The parcel was sent by Leon.","after":"Mira wrote the report. Leon sent the parcel."},
+  "decodedRequests":[
+    {"event":"App analytics session started","endpoint":"https://app-events.hemingwayapp.com/track/","bodyCoverage":"complete returned data value decoded as JSON","textFieldsPresent":false,"syntheticTextPresent":false},
+    {"event":"Editor session started","endpoint":"https://app-events.hemingwayapp.com/track/","bodyCoverage":"complete returned data value decoded as JSON","textFieldsPresent":false,"syntheticTextPresent":false},
+    {"event":"$mp_web_page_view","endpoint":"https://app-events.hemingwayapp.com/track/","bodyCoverage":"complete returned data value decoded as JSON","textFieldsPresent":false,"syntheticTextPresent":false,"pagePath":"/"}
+  ],
+  "decodedFieldCategories":["event name","first editor/trial session flags","free billing status","logged-in flag","reported mobile flag","web client","device/distinct identifiers","event identifier","analytics token","timestamp","screen dimensions","page path for page-view event"],
+  "visibleEventRequests":{"endpointFromEarlierHeaders":"https://plausible.io/api/event","eventName":"engagement","visibleFields":["n","sd","d","e","u","v"],"syntheticTextInVisibleFields":false,"coverage":"expanded screenshot fields only; no claim to every hidden property or event body"},
+  "requestCounts":{"beforeRevisionScreenshot":52,"activeRevisionScreenshot":53,"latestSelectedEventScreenshot":54,"interpretation":"Additional requests occurred. Selected latest event shows engagement. Counts and ordering do not prove editing triggered it or establish the contents of every added request."},
+  "attachments":[
+    {"id":"7a64379e-536c-4328-9d7a-a31c3a0dcce5","role":"selected event Headers"},
+    {"id":"b61d2923-0199-406e-92f3-593f8939cfea","role":"selected engagement Payload"},
+    {"id":"7caafbb8-8bb7-47ae-b94b-ae91699ab03e","role":"selected track Headers"},
+    {"id":"329a09c8-4aad-400d-bcda-eb664fa17aaf","role":"encoded track Payload"},
+    {"id":"9491306c-23a8-49fc-9783-18c1c65740df","role":"active revision,53 requests"},
+    {"id":"ecd72867-302c-4ce2-a64e-806b4ff7f3b7","role":"selected engagement,54 requests"}
+  ],
+  "minimization":"Do not commit raw Base64, actual identifiers, analytics token values, exact timestamps, remote IP addresses, cookies or authorization headers. This receipt retains event names and field categories only; attachment IDs locate evidence in this conversation, not public files.",
+  "conclusion":{"supported":"Three decoded analytics event bodies contain no submitted prose or synthetic test text. Selected visible engagement fields also contain no test text. Analytics and device-associated identifiers were transmitted in this anonymous session.","notEstablished":["all requests inspected","no text ever transmitted","no telemetry or persistent identifier","consent compliance","specific third-party backend behind the first-party track endpoint","storage mechanism or deletion of all copies","server retention or training use","privacy-friendly qualification"],"decision":"hold-no-privacy-qualification"},
+  "nextWork":{"ownerCapture":"This limited capture round is complete; no further per-request screenshots requested.","independentResearch":"Review anonymous free-web privacy controls and consent-specific data paths against current vendor documents. Keep Antidote installed controls and local LanguageTool as separate candidates.","beforeGraphProposal":"Resolve material unknown data paths and define edition-specific supported claims. Keep route evidence minimum and existing publication checkpoint unchanged."}
+}
