@@ -1,0 +1,49 @@
+{
+  "version":1,
+  "packet":"PR5.73",
+  "reviewedAt":"2026-10-15",
+  "baselineCommit":"8841aa9ef35ec4484d5c34ef571694ea147175fc",
+  "researchOnly":true,
+  "graphChanges":false,
+  "publicationApproved":false,
+  "qualifiedNewCandidates":0,
+  "checkpoint":{"products":21,"completedRoutes":9,"remainingRoutes":1},
+  "priorReview":"privacy-writing-review-2026-10-15.json",
+  "sources":[
+    {"id":"antidote-passive","url":"https://www.antidote.info/en/documentation/user-guide/the-corrector/the-correction-prism/style-view/constructions","locator":"Antidote12 / Passive voice; Reformulation","finding":"Style constructions view flags passive voice. Optional Reformulate command is separate and subscription-dependent. This documents a bounded manual-review feature, not observed installed behavior or accuracy."},
+    {"id":"antidote-auto","url":"https://www.antidote.info/en/documentation/user-guide/settings/corrector-settings/general-panel","locator":"Automatically reformulate discontinuities; Automatically reformulate certain detections in the Language view","finding":"Guide describes automatic reformulation within Correction mode and enabled-by-default settings. Avoiding the separate Reformulation screen alone does not establish a local-only workflow. Exact installed build and controls must be verified before testing."},
+    {"id":"antidote-detection","url":"https://www.antidote.info/en/documentation/user-guide/the-corrector/the-correction-prism/correction-process/handling-a-detection","locator":"Reformulate; Reformulate the selection","finding":"Correction-view detections and selection commands can invoke reformulation. A local-only protocol must exclude these actions and automatic triggers, including applicable verbless-sentence handling."},
+    {"id":"antidote-sync","url":"https://www.antidote.info/en/documentation/user-guide/settings/interface-settings/sync-panel","locator":"Druide Account Panel","finding":"Synchronization is optional and separately controls favourites, customizations, settings, hidden alerts and new personal dictionaries/custom-rule lists. Disabling one checkbox is not evidence all sync is disabled."},
+    {"id":"antidote-install","url":"https://www.antidote.info/en/antidote-12/documentation/installation/windows","locator":"Activation, synchronization and integration","finding":"Windows installation requires activation credentials, offers optional subscription sync and connector selection. Documentation is not proof of owner entitlement; no installation, login or trial signup was performed."}
+  ],
+  "antidoteDecision":{
+    "status":"hold-no-native-observation",
+    "featureEvidence":"Vendor documents English passive voice review in installed Antidote12.",
+    "boundaryCorrection":"PR5.72 local-Correction research path now explicitly includes automatic reformulation triggers inside Correction. No prior immutable record changed.",
+    "proposedControls":["Record exact installed build, English module and legitimate access type.","Inspect and disable applicable automatic reformulation settings before synthetic testing; do not infer state from screen name.","Avoid Reformulate commands and selection actions, Live Correction connectors, Web, sync and support uploads.","Record every sync category and automatic-new-dictionary/custom-rule setting separately.","Trace outbound traffic for the exact operation; distinguish authentication/diagnostics from text and retain unresolved opaque paths."],
+    "limitations":"These controls are a planned protocol, not applied settings or a zero-telemetry guarantee. No purchase required to continue documentation research."
+  },
+  "hemingwayObservation":{
+    "date":"2026-10-15",
+    "url":"https://hemingwayapp.com/",
+    "surface":"Codex in-app browser, temporary tab15; no login or Plus trial started in this run",
+    "build":"Not exposed in visible UI; not pinned",
+    "initialState":"Prior synthetic sentence already visible in this browser profile; this was not a fresh-profile test.",
+    "input":"The report was written by Mira. The parcel was sent by Leon.",
+    "before":{"words":12,"weakeners":2,"highlightedPhrases":["was written","was sent"]},
+    "reload":"Same synthetic input and2 weakeners remained after page reload.",
+    "revision":"Mira wrote the report. Leon sent the parcel.",
+    "after":{"words":8,"weakeners":0},
+    "cleanup":"Editor cleared; reload visibly showed empty start prompt and0 words; temporary tab closed.",
+    "screenshots":["PR5.73-hemingway-passive.png","PR5.73-hemingway-active.png"],
+    "networkCapture":"not-performed-supported-browser-API-has-no-request-payload-capture",
+    "storageInspection":"not-performed; reload persistence is UI evidence only, not storage-mechanism proof",
+    "decision":"hold-no-privacy-qualification",
+    "limitations":["No request bodies, cookies, storage keys or server logs inspected.","No inference of zero text transmission, zero tracking, exact storage mechanism or server deletion.","Clearing visible editor is not proof every copy was deleted.","No new policy claim; PR5.72 sources remain separate from UI observations."]
+  },
+  "nextEvidence":{
+    "hemingway":"Capture a fresh anonymous synthetic session's Network requests and request bodies, preserving reload activity and recording cookie choice. Return a sanitized table or screenshots, not an unredacted HAR.",
+    "antidote":"If an entitled installed edition is available, record build and automatic-reformulation/sync controls before a separate synthetic operation trace. Otherwise continue docs or another candidate without buying.",
+    "completionRule":"A successful two-sentence run is not broad privacy or replacement qualification. Existing route minimum and evidence requirements unchanged."
+  }
+}

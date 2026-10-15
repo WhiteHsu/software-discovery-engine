@@ -383,3 +383,8 @@ Owner explicit writing-publication approval, successful apply,21/21 true SQL che
 ## PR5.72 — Privacy writing evidence review
 
 Clean actual HEADfb919be and owner Production90 acceptance recorded. Three original privacy candidates reviewed by exact edition across six proposed evidence axes; separate local-LanguageTool and free-web-Hemingway leads retained without graph promotion. Thirteen official sources distinguish installed/cloud operations, retention, training and rights. Classic is excluded from the current web privacy policy; installed Antidote subscription Correction is a separate research path from conditional perpetual upgrades. Zero new qualified candidates; accepted21/9/1 unchanged. No SQL, engine, graph, installation or publication changes. See PRIVACY_WRITING_REVIEW.md.
+
+
+## PR5.73 — Privacy writing control boundaries
+
+Clean actual HEAD8841aa9 inspected; owner Production91 green. Antidote12 official docs confirm passive-voice review and automatic Reformulation triggers within Correction, requiring exact control verification rather than mode-name inference. Hemingway synthetic UI run retained text after reload; manual active revision cleared weakeners, and editor was cleared/reloaded before closing. No network payload or storage inspection available; no privacy qualification inferred. Five official documents and bounded observations recorded with next network-evidence procedure. Accepted21/9/1, zero privacy-qualified candidates unchanged. No native install, SQL, graph or engine changes. See PRIVACY_WRITING_CONTROLS.md.
