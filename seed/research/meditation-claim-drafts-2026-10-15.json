@@ -1,0 +1,104 @@
+{
+  "version": 1,
+  "packet": "PR5.55",
+  "preparedAt": "2026-10-15",
+  "baseline": "f98de5b4d4cc9806164c1151ad7b25fe60ad3839",
+  "researchOnly": true,
+  "publicationApproved": false,
+  "graphChanges": false,
+  "qualifiedNewCandidates": 0,
+  "scope": "personal-adult-guided-meditation-selection-playback",
+  "scopeStatus": "Proposed only; not engine taxonomy or graph assignment",
+  "evidenceDates": {
+    "officialSourcesReviewed": "2026-10-14",
+    "ownerPlayback": "2026-10-14",
+    "newSourceFetch": false
+  },
+  "inputs": [
+    {
+      "path": "seed/research/meditation-workflow-review-2026-10-14.json",
+      "sha256": "c79310d85e2f2596c3b3b0f74c0831692cc9fc0b38e9b0a328dae76e97e7e350"
+    },
+    {
+      "path": "seed/research/meditation-owner-results-2026-10-14.json",
+      "sha256": "ee6300ff87f34dc78821175dbed71c19de937951f99a12581ea81247118c6e4d"
+    },
+    {
+      "path": "seed/research/escape-content-2026-10-07.json",
+      "sha256": "4a5f672af4c32081467220f975e894028c23c442bd14b6585e0341f66f5756ce"
+    },
+    {
+      "path": "seed/research/publication-checkpoint-2026-10-14.json",
+      "sha256": "5b60fd863c396a2d4a33f175581784521e6894631aa2dc6e409f44cdbc2185da"
+    },
+    {
+      "path": "lib/discovery/escape-model.ts",
+      "sha256": "61829cd748ca679821ab6371d108d9e614fa31980fc333eeceaa390ee1eaee0e"
+    }
+  ],
+  "candidates": [
+    {
+      "slug": "medito",
+      "edition": "Medito public Android app; signed-in owner sample",
+      "sourceIds": [
+        "M1",
+        "M2",
+        "M3"
+      ],
+      "relationship": "For personal adult guided meditation, Medito lets you choose a session from its courses and play guided audio, as observed with Learning to sit. This substitutes for selecting and playing a Calm guided meditation; it does not establish equivalent catalog, sleep stories or health outcomes.",
+      "noSubscription": "The vendor describes the public app and meditation content as free without a paywall. The signed-in Android owner sample played Learning to sit without a payment request. No mandatory recurring software payment is documented for this bounded public workflow.",
+      "pricingModel": "Free public app and meditation content, supported by donations; no paid perpetual license is implied.",
+      "tradeOffSummary": "A course-based meditation alternative rather than the complete Calm catalog. Core no-account access is vendor-documented but the owner tested signed in. App code licensing does not grant unrestricted reuse of original or partner audio.",
+      "confidenceProposal": 0.85
+    },
+    {
+      "slug": "smiling-mind",
+      "edition": "Smiling Mind free individual adult Android content; Google sign-in",
+      "sourceIds": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "relationship": "For personal adult guided meditation, Smiling Mind lets you select an adult session and play guided audio, as observed with Exploring the Breath. This substitutes for the corresponding Calm selection/playback activity, without implying parity with Calm sleep stories, music or its entire catalog.",
+      "noSubscription": "Official material describes the individual app as currently free. The Android owner sample selected Exploring the Breath and played, paused and resumed it without a payment, trial or subscription request. No mandatory recurring software payment is documented for this bounded workflow.",
+      "pricingModel": "Currently free individual access supported by the nonprofit; a registered account is required. This is not a perpetual-access guarantee.",
+      "tradeOffSummary": "A broader mental-fitness app with adult, family and other sections; the comparison covers adult guided sessions only. Account registration is required. Download features are documented but offline playback was not tested.",
+      "confidenceProposal": 0.85
+    },
+    {
+      "slug": "healthy-minds-program",
+      "edition": "Healthy Minds donor-funded public program on Android; exclude institutional/research contracts",
+      "sourceIds": [
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H6",
+        "H7"
+      ],
+      "relationship": "For personal adult guided meditation, the Healthy Minds public program lets you choose and play a guided practice, as observed with Intro To Sitting Meditation. This substitutes for Calm guided-session selection and playback within a structured learning program, not for every Calm content category.",
+      "noSubscription": "Official material describes the donor-funded public program as entirely free. The owner sample played, paused and resumed a guided sitting practice without a payment request. The EULA term Public Subscription describes free public access, not evidence of mandatory recurring payment; institutional arrangements are excluded.",
+      "pricingModel": "Free donor-funded public access with registration; donations are optional. Separate paid courses, workplace or research agreements are outside this edition.",
+      "tradeOffSummary": "A structured Awareness, Connection, Insight and Purpose program rather than the complete Calm catalog. Registration is required. Older offline instructions and conflicting documented iOS requirements remain limitations; the Android sample does not resolve them.",
+      "confidenceProposal": 0.85
+    }
+  ],
+  "confidenceMeaning": "Editorial proposal only, not stored verified claim confidence; do not automatically import.",
+  "anchorBoundary": "Calm sampled Day 1 played after Google login; player offered three free listens. Counter/reset unknown. Do not claim all Calm use is paid or continuously free.",
+  "metadata": "Android OS, app versions, device/storefront and audio language remain unknown. Sample-specific evidence is valid as observed, but no current-version/general-region guarantee follows.",
+  "decision": "Three scoped draft proposals prepared. None promoted to verified graph claims.",
+  "nextGate": [
+    "Review how the proposed meditation scope is represented and enforced by qualification before graph edits; existing route has no relationshipScope.",
+    "Design a separate draft-graph packet with dated evidence links, proposed confidence and exact edition; preserve previous claims rather than silently replacing them.",
+    "Verify three draft candidates against scope/claim gates; keep accepted published-route count unchanged until separate import and publication validation."
+  ],
+  "excluded": [
+    "Clinical outcomes and treatment equivalence",
+    "Full Calm content parity",
+    "Privacy or offline equivalence",
+    "Permanent free availability",
+    "Audio redistribution permission",
+    "Unobserved version, anonymous access or trial entitlement"
+  ]
+}

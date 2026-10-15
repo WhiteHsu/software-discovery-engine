@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {createHash} from 'node:crypto';
+import {currentRouteAudit} from '../escape-remaining-routes.mjs';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
+const hash=x=>createHash('sha256').update(x).digest('hex');
+const r=JSON.parse(fs.readFileSync(path.join(root,'seed/research/meditation-claim-drafts-2026-10-15.json'),'utf8'));
+if(process.argv.length!==2||hash(JSON.stringify(r))!=='2f8e6e85256327867205dee3eea6bb5e764852a9dd8e43a1bd76d7e9e1c61f3c')throw Error('Draft review drift');
+for(const x of r.inputs)if(hash(fs.readFileSync(path.join(root,x.path),'utf8').replace(/\r\n/g,'\n'))!==x.sha256)throw Error('Historical input drift: '+x.path);
+const a=currentRouteAudit(),route=a.routes.find(x=>x.slug==='meditation-apps-without-a-subscription');
+if(a.publishedProducts!==15||a.acceptedPublishedRoutes!==7||a.remainingRoutes!==3||route?.qualifiedDraftGraphCandidates!==0||route?.publication!=='not-published')throw Error('Checkpoint drift');
+console.log('PR5.55: three edition-specific relationship/pricing/trade-off drafts; proposed scope and confidence only.');
+console.log('No graph changes or qualification. Scope-enforcement gate retained. Checkpoint 15/7/3; no writes.');

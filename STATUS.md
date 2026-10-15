@@ -293,3 +293,8 @@ Owner pushed PR5.52 repair as 4223977; actual clean HEAD inspected, owner screen
 ## PR5.54 — Owner Android meditation playback evidence
 
 Clean HEAD 2681754 inspected. Owner Android samples cover Medito, Healthy Minds Program, Smiling Mind and Calm guided playback with pause/resume. Three candidate flows showed no payment requirement; Calm Google login enabled sampled playback with explicit 3-free-listens limit and no confirmed trial/subscription. Smiling Mind web result remains supplemental. App/OS versions, storefront and audio language unknown. Single sessions only; no clinical, offline, privacy or ongoing-free-Calm claims. Four research/status/checker payloads; no graph/import/publication changes. Zero newly qualified; checkpoint15/7/3. See MEDITATION_OWNER_RESULTS.md.
+
+
+## PR5.55 — Scoped meditation claim drafts
+
+Owner pushed PR5.54 as f98de5b; clean actual HEAD inspected. Owner screenshot shows green Production #73, not independently live queried. Three exact-edition relationship/no-subscription/pricing/trade-off draft proposals combine preserved PR5.53 official sources and PR5.54 Android observations. Calm three-free-listens limit and unknown environment versions retained. Confidence0.85 proposed only. Existing meditation route lacks relationshipScope; scope representation/enforcement review required before draft qualification. Four research/status/checker files; no graph, engine, taxonomy, SQL, membership/import/publication edits. Zero newly qualified; checkpoint15/7/3. See MEDITATION_CLAIM_DRAFTS.md.
