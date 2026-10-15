@@ -1,0 +1,209 @@
+{
+  "version": 1,
+  "packet": "PR5.56",
+  "date": "2026-10-15",
+  "sourceReviewDate": "2026-10-14",
+  "observationDate": "2026-10-14",
+  "publicationApproved": false,
+  "scope": "personal-adult-guided-meditation-selection-playback",
+  "baselineCommit": "40eb5ca1ceecd260896b265572f6ce26fed0508f",
+  "inputSha256": "db5a8e4d3ed46a3fe0e830be065d936f7eaddf37ac80151f74aa56e69f9dec61",
+  "sourcePins": [
+    {
+      "path": "seed/research/meditation-workflow-review-2026-10-14.json",
+      "sha256": "c79310d85e2f2596c3b3b0f74c0831692cc9fc0b38e9b0a328dae76e97e7e350"
+    },
+    {
+      "path": "seed/research/meditation-owner-results-2026-10-14.json",
+      "sha256": "ee6300ff87f34dc78821175dbed71c19de937951f99a12581ea81247118c6e4d"
+    },
+    {
+      "path": "seed/research/meditation-claim-drafts-2026-10-15.json",
+      "sha256": "3f109b3982ce5e29aa58fd6220c3fa2956dbbf6032e4f491190eace09f738370"
+    }
+  ],
+  "sources": [
+    {
+      "id": "M1",
+      "title": "M1 — Guided meditation, courses and other content; no paywall, no required account or payment according to vendor.",
+      "url": "https://meditofoundation.org/medito-app/",
+      "publisher": "Medito Foundation",
+      "sourceType": "official",
+      "retrievedAt": "2026-10-14"
+    },
+    {
+      "id": "M2",
+      "title": "M2 — AGPL applies to app code, not original audio. Original/partner content remains restricted; external reuse needs separate rights.",
+      "url": "https://meditofoundation.org/license/",
+      "publisher": "Medito Foundation",
+      "sourceType": "official",
+      "retrievedAt": "2026-10-14"
+    },
+    {
+      "id": "M3",
+      "title": "M3 — Developer listing documents session choice, playback and downloads; iOS 15+, English. Account-related release notes exist; no-account core does not mean no optional account features.",
+      "url": "https://apps.apple.com/us/app/medito-mindfulness-meditation/id1500780518",
+      "publisher": "Medito Foundation",
+      "sourceType": "app_store",
+      "retrievedAt": "2026-10-14"
+    },
+    {
+      "id": "S1",
+      "title": "S1 — App is currently free; email account required; mobile/web access and adult guided activities documented. Statement excludes treatment purpose.",
+      "url": "https://www.smilingmind.com.au/app-product-information-statement",
+      "publisher": "Smiling Mind",
+      "sourceType": "official",
+      "retrievedAt": "2026-10-14"
+    },
+    {
+      "id": "S2",
+      "title": "S2 — Adult meditation and learning pathways, content search/filtering, routines and progress; charity-supported free individual access.",
+      "url": "https://www.smilingmind.com.au/smiling-mind-app",
+      "publisher": "Smiling Mind",
+      "sourceType": "official",
+      "retrievedAt": "2026-10-14"
+    },
+    {
+      "id": "S3",
+      "title": "S3 — Developer description includes offline downloads. Listing iOS 16.4+, interface English; this AU storefront is not owner-region installation proof.",
+      "url": "https://apps.apple.com/au/app/smiling-mind-mental-wellbeing/id560442518",
+      "publisher": "Smiling Mind",
+      "sourceType": "app_store",
+      "retrievedAt": "2026-10-14"
+    },
+    {
+      "id": "H1",
+      "title": "H1 — Public program entirely free and donor funded; iOS/Android registration required. Separate paid courses/events do not define app entitlement.",
+      "url": "https://www.humin.org/wellbeing-tools/app",
+      "publisher": "Humin / Healthy Minds",
+      "sourceType": "official",
+      "retrievedAt": "2026-10-14"
+    },
+    {
+      "id": "H2",
+      "title": "H2 — EULA names free donor-funded Public Subscription and distinguishes institutional/Foundations access. Personal license is conditional/revocable; updates may alter features.",
+      "url": "https://hminnovations.zendesk.com/hc/en-us/articles/38075933477133-Privacy-Policy-Pol%C3%ADtica-de-Privacidad-and-End-User-License-Agreement-EULA-Terms-of-Use-Acuerdo-de-licencia-de-usuario-final-y-condiciones-de-uso",
+      "publisher": "Humin / Healthy Minds",
+      "sourceType": "official",
+      "retrievedAt": "2026-10-14"
+    },
+    {
+      "id": "H3",
+      "title": "H3 — Public program has Awareness/Connection/Insight/Purpose modules; Foundations recommended, moving among modules allowed. Institutional/research configurations may differ.",
+      "url": "https://hminnovations.zendesk.com/hc/en-us/articles/360046317412-Do-I-need-to-complete-the-activities-in-order",
+      "publisher": "Humin / Healthy Minds",
+      "sourceType": "official",
+      "retrievedAt": "2026-10-14"
+    },
+    {
+      "id": "H4",
+      "title": "H4 — Older help article describes preloading identical activity choices for offline use; not a modern full download manager guarantee.",
+      "url": "https://hminnovations.zendesk.com/hc/en-us/articles/360045889711-Listen-to-Meditations-Lessons-While-Offline",
+      "publisher": "Humin / Healthy Minds",
+      "sourceType": "official",
+      "retrievedAt": "2026-10-14"
+    },
+    {
+      "id": "H5",
+      "title": "H5 — Older article says English-only and store-available countries with South Korea exception; present owner-store availability requires recheck.",
+      "url": "https://hminnovations.zendesk.com/hc/en-us/articles/360034568152-Is-the-app-available-in-all-countries-What-languages-are-available",
+      "publisher": "Humin / Healthy Minds",
+      "sourceType": "official",
+      "retrievedAt": "2026-10-14"
+    },
+    {
+      "id": "H6",
+      "title": "H6 — Older support lists iOS 14+ / most Android 10+. Current App Store lists iOS 13.4+: preserve mismatch, do not choose a universal minimum.",
+      "url": "https://hminnovations.zendesk.com/hc/en-us/articles/360001259572-Which-mobile-devices-can-use-the-Healthy-Minds-Program-app",
+      "publisher": "Humin / Healthy Minds",
+      "sourceType": "official",
+      "retrievedAt": "2026-10-14"
+    },
+    {
+      "id": "H7",
+      "title": "H7 — Current US listing interface English, iOS 13.4+; account region/device not tested.",
+      "url": "https://apps.apple.com/us/app/healthy-minds-program-by-humin/id1326310617",
+      "publisher": "Humin / Healthy Minds",
+      "sourceType": "app_store",
+      "retrievedAt": "2026-10-14"
+    },
+    {
+      "id": "OWNER",
+      "title": "Owner Android guided meditation playback evidence — PR5.54",
+      "url": "https://github.com/WhiteHsu/software-discovery-engine/blob/f98de5b4d4cc9806164c1151ad7b25fe60ad3839/MEDITATION_OWNER_RESULTS.md",
+      "publisher": "Software Discovery Engine owner",
+      "sourceType": "manual",
+      "retrievedAt": "2026-10-14"
+    }
+  ],
+  "candidates": [
+    {
+      "slug": "medito",
+      "edition": "Medito public Android app; signed-in owner sample",
+      "sourceIds": [
+        "M1",
+        "M2",
+        "M3",
+        "OWNER"
+      ],
+      "relationship": "For personal adult guided meditation, Medito lets you choose a session from its courses and play guided audio, as observed with Learning to sit. This substitutes for selecting and playing a Calm guided meditation; it does not establish equivalent catalog, sleep stories or health outcomes.",
+      "noSubscription": "The vendor describes the public app and meditation content as free without a paywall. The signed-in Android owner sample played Learning to sit without a payment request. No mandatory recurring software payment is documented for this bounded public workflow.",
+      "pricingModel": "Free public app and meditation content, supported by donations; no paid perpetual license is implied.",
+      "tradeOffSummary": "A course-based meditation alternative rather than the complete Calm catalog. Core no-account access is vendor-documented but the owner tested signed in. App code licensing does not grant unrestricted reuse of original or partner audio.",
+      "confidenceProposal": 0.85,
+      "confidence": 0.85
+    },
+    {
+      "slug": "smiling-mind",
+      "edition": "Smiling Mind free individual adult Android content; Google sign-in",
+      "sourceIds": [
+        "S1",
+        "S2",
+        "S3",
+        "OWNER"
+      ],
+      "relationship": "For personal adult guided meditation, Smiling Mind lets you select an adult session and play guided audio, as observed with Exploring the Breath. This substitutes for the corresponding Calm selection/playback activity, without implying parity with Calm sleep stories, music or its entire catalog.",
+      "noSubscription": "Official material describes the individual app as currently free. The Android owner sample selected Exploring the Breath and played, paused and resumed it without a payment, trial or subscription request. No mandatory recurring software payment is documented for this bounded workflow.",
+      "pricingModel": "Currently free individual access supported by the nonprofit; a registered account is required. This is not a perpetual-access guarantee.",
+      "tradeOffSummary": "A broader mental-fitness app with adult, family and other sections; the comparison covers adult guided sessions only. Account registration is required. Download features are documented but offline playback was not tested.",
+      "confidenceProposal": 0.85,
+      "confidence": 0.85
+    },
+    {
+      "slug": "healthy-minds-program",
+      "edition": "Healthy Minds donor-funded public program on Android; exclude institutional/research contracts",
+      "sourceIds": [
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H6",
+        "H7",
+        "OWNER"
+      ],
+      "relationship": "For personal adult guided meditation, the Healthy Minds public program lets you choose and play a guided practice, as observed with Intro To Sitting Meditation. This substitutes for Calm guided-session selection and playback within a structured learning program, not for every Calm content category.",
+      "noSubscription": "Official material describes the donor-funded public program as entirely free. The owner sample played, paused and resumed a guided sitting practice without a payment request. The EULA term Public Subscription describes free public access, not evidence of mandatory recurring payment; institutional arrangements are excluded.",
+      "pricingModel": "Free donor-funded public access with registration; donations are optional. Separate paid courses, workplace or research agreements are outside this edition.",
+      "tradeOffSummary": "A structured Awareness, Connection, Insight and Purpose program rather than the complete Calm catalog. Registration is required. Older offline instructions and conflicting documented iOS requirements remain limitations; the Android sample does not resolve them.",
+      "confidenceProposal": 0.85,
+      "confidence": 0.85
+    }
+  ],
+  "description": "Alternatives for selecting and playing personal adult guided meditations without mandatory recurring software payment. Reviewed public editions only; accounts and service limits apply. Calm also has limited free access. No clinical, offline or full-catalog equivalence.",
+  "editorialDecision": "Accept documentary and owner evidence for bounded draft claims at 0.85 confidence; unknown versions/store/audio language limit reproducibility, not proof of indefinite access. Dated 2026-10-15 editorial review uses preserved 2026-10-14 sources, not new live verification.",
+  "limits": [
+    "Clinical outcomes and treatment equivalence",
+    "Full Calm content parity",
+    "Privacy or offline equivalence",
+    "Permanent free availability",
+    "Audio redistribution permission",
+    "Unobserved version, anonymous access or trial entitlement"
+  ],
+  "metadata": "Android OS, app versions, device/storefront and audio language remain unknown. Sample-specific evidence is valid as observed, but no current-version/general-region guarantee follows.",
+  "engineTransition": {
+    "path": "lib/discovery/escape-model.ts",
+    "oldNormalizedSha256": "61829cd748ca679821ab6371d108d9e614fa31980fc333eeceaa390ee1eaee0e",
+    "newNormalizedSha256": "8f0b4ab061439cced108b079bd25ef5ebc169d5030afd4cfa09ab787c69f1854"
+  }
+}
