@@ -1,0 +1,260 @@
+{
+  "version": 1,
+  "packet": "PR5.67",
+  "baseline": "649ebb89a4d439abadd3dfb937b6acce1cce3d2b",
+  "date": "2026-10-15T00:00:00Z",
+  "scope": "personal-english-passive-construction-review",
+  "publicationApproved": false,
+  "localDraftOnly": true,
+  "inputSha256": "9117adf1a5da65e781a2130b048dddc7da31c859e90c8686d35615b53e19f85f",
+  "engineTransition": {
+    "path": "lib/discovery/escape-model.ts",
+    "oldNormalizedSha256": "8f0b4ab061439cced108b079bd25ef5ebc169d5030afd4cfa09ab787c69f1854",
+    "newNormalizedSha256": "cb81cd116102fc1ff4055fd361e8feadc2b8f63fdf79ab7fd550c50ee09ec7fc"
+  },
+  "sourcePins": [
+    {
+      "path": "seed/research/writing-passive-access-review-2026-10-15.json",
+      "sha256": "5692931231472bc4ba9e6fc72fff9c452534c6761ac32b1947805c4d899c896e"
+    },
+    {
+      "path": "seed/research/writing-passive-claim-drafts-2026-10-15.json",
+      "sha256": "5ca3cde09fcf7e414ea4b61ba0fc24f0388331afbc117d8254cde348f629f2dc"
+    },
+    {
+      "path": "seed/research/writing-passive-scope-review-2026-10-15.json",
+      "sha256": "fdd89cbc101933cfa4496394a8a823f7b419218703425defaacc0dca8152794e"
+    },
+    {
+      "path": "seed/research/writing-owner-checker-followup-2026-10-15.json",
+      "sha256": "5dfdb9fe608e3f605ab7b82245affbeb1415a3f4b8d1ef97e8088c301bf1cd50"
+    },
+    {
+      "path": "seed/research/hemingway-common-corpus-2026-10-14.json",
+      "sha256": "a9f0d6bb1fd167446854d50d511bf992cf1225bc851867b22e2b27f26a78bfa7"
+    },
+    {
+      "path": "seed/research/writing-owner-corpus-2026-10-14.json",
+      "sha256": "efb5b344f5a0d9fc810bb33c263fc6bdacbf65e68d155f406ff3c9f4288ab482"
+    },
+    {
+      "path": "seed/research/writing-gap-recheck-2026-10-15.json",
+      "sha256": "ea56f1842753f683a50636f8aa3d08633ae63d6ca4267a2d6e9b7d3aec33dd21"
+    }
+  ],
+  "sources": [
+    {
+      "id": "G1",
+      "title": "Pro includes full-sentence rewrites; plan table icons not inferred. No exact price adopted.",
+      "url": "https://www.grammarly.com/plans",
+      "publisher": "www.grammarly.com",
+      "sourceType": "official",
+      "retrievedAt": "2026-10-15T00:00:00Z"
+    },
+    {
+      "id": "G2",
+      "title": "Paid-plan control lists passive suggestions; control entitlement alone is not exclusive detection entitlement.",
+      "url": "https://support.grammarly.com/hc/en-us/articles/360045784631-How-to-deactivate-certain-suggestions-in-the-Grammarly-Editor",
+      "publisher": "support.grammarly.com",
+      "sourceType": "official",
+      "retrievedAt": "2026-10-15T00:00:00Z"
+    },
+    {
+      "id": "G3",
+      "title": "Pro-accessible domains include Academic passive feedback; Casual/Creative can omit passive flags. Prior owner domain remains unknown.",
+      "url": "https://support.grammarly.com/hc/en-us/articles/115000091472-What-is-document-domain-and-how-do-I-change-it",
+      "publisher": "support.grammarly.com",
+      "sourceType": "official",
+      "retrievedAt": "2026-10-15T00:00:00Z"
+    },
+    {
+      "id": "H1",
+      "title": "Describes passive highlights; do not transfer Plus rewriting to free web.",
+      "url": "https://hemingwayapp.com/",
+      "publisher": "hemingwayapp.com",
+      "sourceType": "official",
+      "retrievedAt": "2026-10-15T00:00:00Z"
+    },
+    {
+      "id": "H2",
+      "title": "Free live readability feedback documented; earlier dated passive pair supplies hands-on evidence.",
+      "url": "https://hemingwayapp.com/readability-checker",
+      "publisher": "hemingwayapp.com",
+      "sourceType": "official",
+      "retrievedAt": "2026-10-15T00:00:00Z"
+    },
+    {
+      "id": "J1",
+      "title": "All writing styles available across plans; English passive highlighting configurable.",
+      "url": "https://www.jetbrains.com/help/grazie-browser-extension/writing-style-settings.html",
+      "publisher": "www.jetbrains.com",
+      "sourceType": "official",
+      "retrievedAt": "2026-10-15T00:00:00Z"
+    },
+    {
+      "id": "J2",
+      "title": "Free default distinguished from paid AI plans; no universal proofreading quota inferred.",
+      "url": "https://www.jetbrains.com/help/grazie-browser-extension/subscriptions.html",
+      "publisher": "www.jetbrains.com",
+      "sourceType": "official",
+      "retrievedAt": "2026-10-15T00:00:00Z"
+    },
+    {
+      "id": "J3",
+      "title": "Supported browser and JetBrains account needed.",
+      "url": "https://www.jetbrains.com/help/grazie-browser-extension/installation-guide.html",
+      "publisher": "www.jetbrains.com",
+      "sourceType": "official",
+      "retrievedAt": "2026-10-15T00:00:00Z"
+    },
+    {
+      "id": "R1",
+      "title": "Dedicated detector explicitly free without signup; no suite-wide unlimited rights inferred.",
+      "url": "https://realwriteapp.com/tools/passive-voice-detector",
+      "publisher": "realwriteapp.com",
+      "sourceType": "official",
+      "retrievedAt": "2026-10-15T00:00:00Z"
+    },
+    {
+      "id": "R2",
+      "title": "Paid service pricing separate from dedicated detector.",
+      "url": "https://realwriteapp.com/pricing",
+      "publisher": "realwriteapp.com",
+      "sourceType": "official",
+      "retrievedAt": "2026-10-15T00:00:00Z"
+    },
+    {
+      "id": "R3",
+      "title": "Opened but no readable body returned; legal terms not verified.",
+      "url": "https://realwriteapp.com/terms",
+      "publisher": "realwriteapp.com",
+      "sourceType": "official",
+      "retrievedAt": "2026-10-15T00:00:00Z"
+    },
+    {
+      "id": "RW66-detector",
+      "title": "Tool FAQ expressly describes signup-free detection without a daily cap; describes manual editing, heuristic misses and false positives. Browser-local processing is a vendor statement, not a network/privacy audit.",
+      "url": "https://realwriteapp.com/tools/passive-voice-detector",
+      "publisher": "realwriteapp.com",
+      "sourceType": "official",
+      "retrievedAt": "2026-10-15T00:00:00Z"
+    },
+    {
+      "id": "RW66-pricing",
+      "title": "Rendered Free card separates limited daily AI runs from uncapped browser analysis; explanatory section says local analysis does not use AI credits. Earlier extracted description grouped all tools; retain both observations, page-change cause/date unknown. No new quota/reset or paid price claim needed.",
+      "url": "https://realwriteapp.com/pricing",
+      "publisher": "realwriteapp.com",
+      "sourceType": "official",
+      "retrievedAt": "2026-10-15T00:00:00Z"
+    },
+    {
+      "id": "RW66-terms",
+      "title": "Operator identified as Stackwares. Submitted content rights retained with processing license; features/limits/pricing may change or disappear. Billing paragraph describes mobile-store purchases while rendered web pricing names Dodo Payments; do not resolve cross-platform billing or infer a perpetual license.",
+      "url": "https://realwriteapp.com/terms",
+      "publisher": "realwriteapp.com",
+      "sourceType": "official",
+      "retrievedAt": "2026-10-15T00:00:00Z"
+    },
+    {
+      "id": "seed/research/hemingway-common-corpus-2026-10-14.json",
+      "title": "Hemingway free-web owner corpus",
+      "url": "https://hemingwayapp.com/",
+      "publisher": "Dated owner/agent observation recorded in pinned research",
+      "sourceType": "manual",
+      "retrievedAt": "2026-10-14T00:00:00Z"
+    },
+    {
+      "id": "seed/research/writing-owner-corpus-2026-10-14.json",
+      "title": "Owner Grazie/Grammarly corpus",
+      "url": "https://www.jetbrains.com/grazie/",
+      "publisher": "Dated owner/agent observation recorded in pinned research",
+      "sourceType": "manual",
+      "retrievedAt": "2026-10-14T00:00:00Z"
+    },
+    {
+      "id": "seed/research/writing-gap-recheck-2026-10-15.json",
+      "title": "Anonymous Real Write passive pair and metric limitation",
+      "url": "https://realwriteapp.com/tools/passive-voice-detector",
+      "publisher": "Dated owner/agent observation recorded in pinned research",
+      "sourceType": "manual",
+      "retrievedAt": "2026-10-15T00:00:00Z"
+    },
+    {
+      "id": "owner-pro-sample",
+      "title": "Owner Grammarly Editor Pro-labeled passive sample",
+      "url": "https://app.grammarly.com/",
+      "publisher": "Dated owner/agent observation recorded in pinned research",
+      "sourceType": "manual",
+      "retrievedAt": "2026-10-15T00:00:00Z"
+    }
+  ],
+  "description": "Options for reviewing English passive constructions without a mandatory recurring software payment for the reviewed access path. Compare the bounded task of inspecting feedback, manually revising and rechecking against Grammarly Pro capability. Not a complete Grammarly or automatic rewrite replacement; account, usage limits and service conditions apply.",
+  "candidates": [
+    {
+      "slug": "hemingway-free-web",
+      "name": "Hemingway Editor — Free Web",
+      "websiteUrl": "https://hemingwayapp.com/",
+      "shortDescription": "Browser-based English readability and passive-construction highlights for manual editing.",
+      "relationship": "A bounded alternative to reviewing personal English passive constructions with Grammarly Pro: inspect feedback, choose a manual revision and recheck. Not an equivalent automatic rewrite or full grammar replacement. Owner Grammarly access was a limited Pro sample, not a paid Pro session.",
+      "pricingModel": "Free browser editor for the reviewed highlighting/manual-edit workflow. Plus AI rewriting and paid Classic desktop are separate editions; no permanent availability guarantee.",
+      "tradeOffSummary": "Passive highlights support manual review; no automatic rewrite, complete grammar, accuracy, offline or privacy parity. Existing dated before/after observations apply only to free web.",
+      "sourceIds": [
+        "H1",
+        "H2",
+        "seed/research/hemingway-common-corpus-2026-10-14.json",
+        "G1",
+        "G2",
+        "G3",
+        "owner-pro-sample"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "slug": "grazie-free-browser",
+      "name": "Grazie — Free Browser Extension",
+      "websiteUrl": "https://www.jetbrains.com/grazie/",
+      "shortDescription": "Browser writing feedback with configurable English passive-construction checks.",
+      "relationship": "A bounded alternative to reviewing personal English passive constructions with Grammarly Pro: inspect feedback, choose a manual revision and recheck. Not an equivalent automatic rewrite or full grammar replacement. Owner Grammarly access was a limited Pro sample, not a paid Pro session.",
+      "pricingModel": "Default Free plan with browser/account requirements. Paid AI plans and their allowances are separate; exact proofreading metering is not established.",
+      "tradeOffSummary": "Reviewed in Chrome 1.15.1/Gmail with English active-voice style enabled. Prior load failures and unknown root cause retained. No claim of unlimited checks, universal integrations, automatic rewrite parity or private/offline processing.",
+      "sourceIds": [
+        "J1",
+        "J2",
+        "J3",
+        "seed/research/writing-owner-corpus-2026-10-14.json",
+        "G1",
+        "G2",
+        "G3",
+        "owner-pro-sample"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "slug": "real-write-passive-checker",
+      "name": "Real Write — Passive Voice Checker",
+      "websiteUrl": "https://realwriteapp.com/tools/passive-voice-detector",
+      "shortDescription": "A browser tool that highlights likely English passive constructions for manual review.",
+      "relationship": "A bounded alternative to reviewing personal English passive constructions with Grammarly Pro: inspect feedback, choose a manual revision and recheck. Not an equivalent automatic rewrite or full grammar replacement. Owner Grammarly access was a limited Pro sample, not a paid Pro session.",
+      "pricingModel": "Free anonymous access to the dedicated browser passive detector. Rendered tool FAQ specifies no daily cap and rendered pricing distinguishes local analysis from paid/credit-limited AI generation. The observed editor allows up to 3,000 words per input; feature availability and usage limits may change. No paid-suite entitlement or permanent free-access guarantee.",
+      "tradeOffSummary": "Two relevant construction highlights cleared after manual active revision in one sample. Heuristic misses/false positives and inconsistent 200% Mostly Active summary remain. Ignore the percentage as sentence-share accuracy; no automatic rewrite or privacy claim. Vendor can change or discontinue features and limits. Browser-local description is not an audited privacy guarantee. Mobile and web billing text differ and are outside this free-tool review.",
+      "sourceIds": [
+        "R1",
+        "R2",
+        "R3",
+        "seed/research/writing-gap-recheck-2026-10-15.json",
+        "RW66-detector",
+        "RW66-pricing",
+        "RW66-terms",
+        "G1",
+        "G2",
+        "G3",
+        "owner-pro-sample"
+      ],
+      "confidence": 0.85
+    }
+  ],
+  "identityBoundary": "Three new reviewed edition identities; existing Classic and all baseline products remain byte-equivalent in the bundle. Live collision status not queried.",
+  "qualificationBoundary": "Three qualified local draft candidates only. No database import or publication. Accepted current audit remains meditation-stage18/8/2 with writing holds.",
+  "privacyBoundary": "No privacy-friendly claims added; privacy route definition/memberships unchanged.",
+  "proofBoundary": "No new live product execution; reuse dated evidence. Browser-local and uncapped access are vendor descriptions with service-change limits, not audited implementation or permanence guarantees."
+}

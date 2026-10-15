@@ -353,3 +353,8 @@ Reconstructed local baseline confirms existing Hemingway identity is paid Classi
 ## PR5.66 — Rendered detector access reviewed
 
 Rendered Real Write detector FAQ explicitly gives signup-free/no-daily-cap access; rendered pricing separates local analysis from AI credits. Prior extracted all-tools wording preserved with method/date limits. Terms now readable, feature/limit-change rights retained; mobile/web billing differences not transferred. Three separate edition proposals/twelve claims editorially reviewed with evidence references, still unknown graph status/null confidence. Scope enforcement and isolated bundle next; no repeated input, purchase or SQL. Public18/8/2 unchanged; zero newly qualified. See WRITING_PASSIVE_ACCESS_REVIEW.md.
+
+
+## PR5.67 — Scoped writing drafts implemented
+
+No-subscription writing now requires exact passive-review scope and meaningful edition description. Separate local builder adds three new draft editions, nine attribute claims, three scoped anchors and three memberships;35 baseline products/Classic/taxonomy/old memberships preserved. Three local drafts qualify; zero published. Historical engine compatibility explicitly pins three versions; frozen JSON unchanged. Current accepted audit remains18/8/2. Read-only PR5.67_PREFLIGHT.sql captures live identity/source collisions and writing route baseline before any import proposal. See WRITING_PASSIVE_WORKFLOW_REVIEW.md.

@@ -30,7 +30,7 @@ test('review and baseline mutation cannot manufacture qualification or approval'
  const i=meditationInputs();for(const change of [r=>r.publicationApproved=true,r=>r.scope='all-content',r=>r.candidates[0].confidence=1,r=>r.sources[0].url='https://example.com']){const r=structuredClone(i.review);change(r);assert.throws(()=>buildMeditationWorkflow(i.baseline,r));}
  const b=structuredClone(i.baseline);b.products[0].status='published';assert.throws(()=>buildMeditationWorkflow(b,i.review));
 });
-test('historical engine transition accepts only two exact versions, keeps LF/CRLF portable and rejects content drift',()=>{
+test('historical engine transition accepts explicit reviewed versions, keeps LF/CRLF portable and rejects content drift',()=>{
  const r=build().review,t=r.engineTransition,temp=fs.mkdtempSync(path.join(os.tmpdir(),'meditation-input-'));
  try{const target=path.join(temp,t.path);fs.mkdirSync(path.dirname(target),{recursive:true});const current=fs.readFileSync(new URL('../../lib/discovery/escape-model.ts',import.meta.url),'utf8');
  for(const text of [current.replace(/\r\n/g,'\n'),current.replace(/\r?\n/g,'\r\n')]){fs.writeFileSync(target,text);assert.equal(historicalInputMatches(temp,t.path,t.oldNormalizedSha256),true);}

@@ -3,6 +3,7 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
 import {productivityInputs,buildProductivityWorkflow} from './build-productivity-workflow.mjs';
+import {historicalInputMatches} from './historical-review-input.mjs';
 import {validateSeedBundle} from './validate.mjs';
 import {escapeDefinitions,rankCandidates,publishable} from '../../lib/discovery/escape-model.ts';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
@@ -17,7 +18,7 @@ export function meditationInputs(){
 export function buildMeditationWorkflow(input,review){
  if(hash(review)!==REVIEW_HASH||hash(input)!==review.inputSha256||review.publicationApproved!==false||review.scope!==meditationScope)throw Error('Meditation review/input drift');
  for(const x of review.sourcePins)if(textHash(fs.readFileSync(path.join(root,x.path),'utf8'))!==x.sha256)throw Error('Meditation historical evidence drift');
- if(textHash(fs.readFileSync(path.join(root,review.engineTransition.path),'utf8'))!==review.engineTransition.newNormalizedSha256)throw Error('Scoped engine drift');
+ if(!historicalInputMatches(root,review.engineTransition.path,review.engineTransition.newNormalizedSha256))throw Error('Scoped engine drift');
  if(input.products.some(p=>p.status!=='draft')||input.escapeRoutes.some(r=>r.status!=='draft'||r.editoriallyApproved))throw Error('Only unapproved draft fixtures supported');
  const bundle=structuredClone(input),keys={};
  for(const s of review.sources){const key='meditation-'+s.id.toLowerCase()+'-2026-10-15';if(bundle.sources.some(x=>x.key===key))throw Error('Meditation source collision');keys[s.id]=key;bundle.sources.push({key,title:s.title,url:s.url,publisher:s.publisher,sourceType:s.sourceType,retrievedAt:s.retrievedAt});}

@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import {historicalInputMatches} from './historical-review-input.mjs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
@@ -7,7 +8,7 @@ const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
 const hash=x=>createHash('sha256').update(x).digest('hex');
 const r=JSON.parse(fs.readFileSync(path.join(root,'seed/research/writing-gap-recheck-2026-10-15.json'),'utf8'));
 if(process.argv.length!==2||hash(JSON.stringify(r))!=='76ba36ff7c61fd34b31af8318150f2783b1478f862d6269b05c68adc03b3f6cc')throw Error('Writing gap record drift');
-for(const x of r.inputs)if(hash(fs.readFileSync(path.join(root,x.path),'utf8').replace(/\r\n/g,'\n'))!==x.sha256)throw Error('Historical input drift: '+x.path);
+for(const x of r.inputs)if(!historicalInputMatches(root,x.path,x.sha256))throw Error('Historical input drift: '+x.path);
 const a=currentPublicationAudit();
 if(a.publishedProducts!==18||a.acceptedPublishedRoutes!==8||a.remainingRoutes!==2||a.routes.filter(x=>x.publication==='not-published').some(x=>x.qualifiedDraftGraphCandidates!==0))throw Error('Checkpoint or writing hold drift');
 console.log('PR5.62: official Free entitlement remains unresolved; Real Write anonymous passive pair is a research lead with metric anomaly.');

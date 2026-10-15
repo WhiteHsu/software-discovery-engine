@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import {historicalInputMatches} from './historical-review-input.mjs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
@@ -7,7 +8,7 @@ import {meditationInputs,buildMeditationWorkflow} from './build-meditation-workf
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..'),hash=x=>createHash('sha256').update(x).digest('hex');
 const r=JSON.parse(fs.readFileSync(path.join(root,'seed/research/writing-passive-claim-drafts-2026-10-15.json'),'utf8'));
 if(process.argv.length!==2||hash(JSON.stringify(r))!=='e3d9261e75a376c7007272ed54ccf28b4418972e98c5ced94f4244a50445dc35')throw Error('Claim draft drift');
-for(const x of r.inputs)if(hash(fs.readFileSync(path.join(root,x.path),'utf8').replace(/\r\n/g,'\n'))!==x.sha256)throw Error('Historical input drift');
+for(const x of r.inputs)if(!historicalInputMatches(root,x.path,x.sha256))throw Error('Historical input drift');
 const i=meditationInputs(),{bundle}=buildMeditationWorkflow(i.baseline,i.review),classic=bundle.products.find(x=>x.slug==='hemingway-classic');
 if(!classic||classic.websiteUrl!=='https://hemingwayapp.com/desktop'||r.candidates.some(x=>bundle.products.some(p=>p.slug===x.slug)))throw Error('Local identity assumptions changed');
 if(r.candidates.length!==3||r.candidates.flatMap(x=>x.claims).length!==12||r.candidates.flatMap(x=>x.claims).some(x=>x.verificationStatus!=='unknown'||x.confidence!==null))throw Error('Unreviewed claims promoted');

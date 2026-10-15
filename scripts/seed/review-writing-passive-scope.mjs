@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import {historicalInputMatches} from './historical-review-input.mjs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
@@ -6,7 +7,7 @@ import {currentPublicationAudit} from '../escape-remaining-routes.mjs';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..'),hash=x=>createHash('sha256').update(x).digest('hex');
 const r=JSON.parse(fs.readFileSync(path.join(root,'seed/research/writing-passive-scope-review-2026-10-15.json'),'utf8'));
 if(process.argv.length!==2||hash(JSON.stringify(r))!=='e35c61f5a7948994752454b6f864ee9308a884a7101747e003ac941a4befb3f8')throw Error('Scope record drift');
-for(const x of r.inputs)if(hash(fs.readFileSync(path.join(root,x.path),'utf8').replace(/\r\n/g,'\n'))!==x.sha256)throw Error('Frozen input drift: '+x.path);
+for(const x of r.inputs)if(!historicalInputMatches(root,x.path,x.sha256))throw Error('Frozen input drift: '+x.path);
 const a=currentPublicationAudit();
 if(a.publishedProducts!==18||a.acceptedPublishedRoutes!==8||a.remainingRoutes!==2||a.routes.filter(x=>x.publication==='not-published').some(x=>x.qualifiedDraftGraphCandidates!==0))throw Error('Checkpoint drift');
 console.log('PR5.64: owner-selected Pro capability baseline and passive/manual-review scope recorded.');
