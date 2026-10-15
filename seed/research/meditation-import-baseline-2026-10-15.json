@@ -1,0 +1,1083 @@
+{
+  "route": [],
+  "packet": "PR5.57",
+  "products": [
+    {
+      "id": "b25a79c2-a32f-40a3-9404-df30ce531306",
+      "name": "Healthy Minds Program",
+      "slug": "healthy-minds-program",
+      "status": "draft",
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "website_url": "https://www.humin.org/wellbeing-tools/app",
+      "short_description": "Meditation practices and lessons organized into a wellbeing learning path."
+    },
+    {
+      "id": "6d36929c-acde-4179-bb24-45e981e22a7e",
+      "name": "Medito",
+      "slug": "medito",
+      "status": "draft",
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "website_url": "https://meditofoundation.org/medito-app/",
+      "short_description": "Free guided meditations, breathing exercises, sleep content, and a timer."
+    },
+    {
+      "id": "695ac103-18ca-4ebe-8dcc-ec4b62127eb1",
+      "name": "Smiling Mind",
+      "slug": "smiling-mind",
+      "status": "draft",
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "website_url": "https://www.smilingmind.com.au/smiling-mind-app",
+      "short_description": "Meditations and mental-fitness learning pathways for adults and children."
+    }
+  ],
+  "read_only": true,
+  "captured_at": "2026-10-15T02:16:36.487909+00:00",
+  "route_members": [],
+  "scope_columns": [
+    {
+      "data_type": "text",
+      "column_name": "relationship_scope"
+    },
+    {
+      "data_type": "text",
+      "column_name": "scope_description"
+    }
+  ],
+  "claim_evidence": [
+    {
+      "id": "26f451d1-c71f-4a9c-beb9-b2348da44782",
+      "notes": "Seed source reference for [\"medito\",\"anchors\",\"calm\",\"alternative\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:02c8753ccfcd837f686939b22d745478975a339a8881c2fc0b6b5a6243afe1cd",
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "evidence_source_id": "14491199-63e1-439a-8b35-840277b8a21b"
+    },
+    {
+      "id": "858b9184-c2c1-4c0f-9bf0-83d5b4235dea",
+      "notes": "Seed source reference for [\"healthy-minds-program\",\"attributes\",\"supported-platforms\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:126ab7a684135d0ba6902fb7dad0c96ed9dfc026afbe0f53ed8ddf04eeaff67a",
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "evidence_source_id": "4922c30f-4bdf-419f-936b-b5df449b2810"
+    },
+    {
+      "id": "86bb5f26-a84c-499c-a0ad-801ab98d20e3",
+      "notes": "Seed source reference for [\"medito\",\"attributes\",\"free-core-use\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:1ff840b16898f2380579d18b9ecf7e8fe4b843e5892471ccc39780b3d5b1810f",
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "evidence_source_id": "25b4aed5-f0eb-47bb-b317-3e930007fb92"
+    },
+    {
+      "id": "a40f9579-a625-4dfb-b79c-6dd92cc2afbb",
+      "notes": "Seed source reference for [\"healthy-minds-program\",\"attributes\",\"free-core-use\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:23de61e24a65f1c67164e2fc1e4838242ef16bdfbb1ac58a51fa02971d037dd7",
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "evidence_source_id": "24043f60-054d-4585-971d-07adf2ea0e28"
+    },
+    {
+      "id": "7fd9ee3b-b13d-4a52-9ecf-70ac1fa14911",
+      "notes": "Seed source reference for [\"medito\",\"attributes\",\"trade-off-summary\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:34919b07cebac85433e9d203e1f841e4fe5135e2d9117b4938b814983e1a0cbf",
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "evidence_source_id": "c18b0e94-007f-4b36-bf58-8c9ccedfa702"
+    },
+    {
+      "id": "3e53b6c4-7f1f-4785-a032-3f350ea956db",
+      "notes": "Seed source reference for [\"smiling-mind\",\"attributes\",\"pricing-model\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:612e089f980cf405c4c0bcd9fc00bfcb0a10252e0dbd5795ef1a3090762b8d8f",
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "evidence_source_id": "8aa17004-edce-4c08-a557-311dfa7937c1"
+    },
+    {
+      "id": "db5e05f4-387f-4647-935c-121ec56d0e4c",
+      "notes": "Seed source reference for [\"healthy-minds-program\",\"attributes\",\"trade-off-summary\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:78add811a1b94a8f35bdcb4bba04decf07f95cc0f4adc36b6779875b1196c7bd",
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "evidence_source_id": "7d49e9d1-fc28-42b7-85ec-98b7ba59b638"
+    },
+    {
+      "id": "95e9f8fb-6060-4b57-b290-32ee0993349e",
+      "notes": "Seed source reference for [\"healthy-minds-program\",\"attributes\",\"pricing-model\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:7b2020d3b8322df43cf206f96ebca576a27bd9eae2d273b58a779d07aae73739",
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "evidence_source_id": "24043f60-054d-4585-971d-07adf2ea0e28"
+    },
+    {
+      "id": "ab074cd9-2e28-460e-afd3-bfc54ea07c2d",
+      "notes": "Seed source reference for [\"smiling-mind\",\"attributes\",\"supported-platforms\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:7c65093b7492e083a7757412f24f040f84235402bfb081da85c282d32cc37ca4",
+      "created_at": "2026-10-06T03:54:47.989626+00:00",
+      "updated_at": "2026-10-06T03:54:47.989626+00:00",
+      "evidence_source_id": "d39ff3e7-b4ec-45fc-a512-552bb320f83b"
+    },
+    {
+      "id": "ad2d9852-97ec-489e-8324-6a0a871b7c6b",
+      "notes": "Seed source reference for [\"smiling-mind\",\"problems\",\"subscription-fatigue\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:84c2a45bdc500c0b7bbe7c3c3e78b8d3a014a36dd303c0f99b3d227e4fc815b6",
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "updated_at": "2026-10-06T04:14:23.31324+00:00",
+      "evidence_source_id": "8aa17004-edce-4c08-a557-311dfa7937c1"
+    },
+    {
+      "id": "2cc5c62a-ad58-47b3-b88a-2146139008a1",
+      "notes": "Seed source reference for [\"healthy-minds-program\",\"audiences\",\"meditation-app-listeners\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:90e8419c23fbc2c58cccd1e9b2bd89478a96127ac6eb723f6774c4a0bfab90c6",
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "updated_at": "2026-10-06T04:14:23.31324+00:00",
+      "evidence_source_id": "b655df47-571e-4cd1-a51e-fa678c567b6c"
+    },
+    {
+      "id": "62f8df5b-f156-4f58-ad17-9fce4ad1f12f",
+      "notes": "Seed source reference for [\"smiling-mind\",\"anchors\",\"calm\",\"alternative\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:9352cfbfb80e25c6beed22dba915f8b4353b1f1f8641529e7b1ed2e518db46ec",
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "evidence_source_id": "444545db-c7be-4e34-8307-f39b80cc9eb6"
+    },
+    {
+      "id": "755a65b9-afcd-423e-a224-2f68aa64aa8a",
+      "notes": "Seed source reference for [\"medito\",\"problems\",\"subscription-fatigue\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:9cdfacd81ec217d6a7154d6841ac8b034d56536e75244a37627c2212ecea2b4a",
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "updated_at": "2026-10-06T04:14:23.31324+00:00",
+      "evidence_source_id": "25b4aed5-f0eb-47bb-b317-3e930007fb92"
+    },
+    {
+      "id": "ce8fb1b0-8201-479d-ada2-6c27b5b45370",
+      "notes": "Seed source reference for [\"smiling-mind\",\"audiences\",\"meditation-app-listeners\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:9ee0c21f5586f7a377b4b6172a8d8ba59c6bcbbeffceb0167ada58cb9e71171e",
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "updated_at": "2026-10-06T04:14:23.31324+00:00",
+      "evidence_source_id": "444545db-c7be-4e34-8307-f39b80cc9eb6"
+    },
+    {
+      "id": "0e886d8d-bdc8-46eb-9bc7-84b7f1092568",
+      "notes": "Seed source reference for [\"smiling-mind\",\"attributes\",\"trade-off-summary\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:a53b6975a972b78c99add273973f31ed3d16d2294de7a516ec79aa0d1832ebdd",
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "evidence_source_id": "5269db10-a398-41d1-8a47-96cacdaed910"
+    },
+    {
+      "id": "a5d5992f-da11-4f64-b0be-d40e568c1488",
+      "notes": "Seed source reference for [\"medito\",\"attributes\",\"no-account-required\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:ae6e746de67e82e736d1b43729538bd79504fb4d62929faa1c80562ef08b2081",
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "evidence_source_id": "14491199-63e1-439a-8b35-840277b8a21b"
+    },
+    {
+      "id": "28690a82-f7f1-4d55-821c-96762d825763",
+      "notes": "Seed source reference for [\"healthy-minds-program\",\"attributes\",\"no-account-required\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:c1f52642d145061dba77e3398ef7b06997c1071960a3b1ae09af5898ddf20f8e",
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "evidence_source_id": "b655df47-571e-4cd1-a51e-fa678c567b6c"
+    },
+    {
+      "id": "281362a0-4791-4ee2-aeaa-dfe13159ce95",
+      "notes": "Seed source reference for [\"healthy-minds-program\",\"problems\",\"subscription-fatigue\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:cb27f1360988db9d19f3bfcabc388621544fd281018a482c8f14799e3be19aca",
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "updated_at": "2026-10-06T04:14:23.31324+00:00",
+      "evidence_source_id": "24043f60-054d-4585-971d-07adf2ea0e28"
+    },
+    {
+      "id": "eb4c15c6-c280-4342-8779-f7f73e15dda2",
+      "notes": "Seed source reference for [\"healthy-minds-program\",\"anchors\",\"calm\",\"alternative\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:d5dedfd27b67a77225a25e90c279e7441c3b29ce354e7e814b5d7c8108499460",
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "evidence_source_id": "b655df47-571e-4cd1-a51e-fa678c567b6c"
+    },
+    {
+      "id": "078489fb-38df-4993-99fa-8827e09aba2e",
+      "notes": "Seed source reference for [\"medito\",\"audiences\",\"meditation-app-listeners\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:db3700f965ba2a768f82ce9c00b0d1de5b5ef531fb18311376f23f35488d1705",
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "updated_at": "2026-10-06T04:14:23.31324+00:00",
+      "evidence_source_id": "14491199-63e1-439a-8b35-840277b8a21b"
+    },
+    {
+      "id": "a7526a00-9657-4ddb-aa0f-23fcfc1e473d",
+      "notes": "Seed source reference for [\"smiling-mind\",\"attributes\",\"free-core-use\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:ebd79608503e14e095e312dba2848e006a5818e0c80b9aee0f9934cc06207dd3",
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "evidence_source_id": "8aa17004-edce-4c08-a557-311dfa7937c1"
+    },
+    {
+      "id": "e4228c15-8478-40f5-9033-afe0b37ec745",
+      "notes": "Seed source reference for [\"smiling-mind\",\"attributes\",\"no-account-required\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:ed0af1bdeb25309e57046e2b130519b5f4fb0303b19656070cccf01ee3aa1280",
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "evidence_source_id": "444545db-c7be-4e34-8307-f39b80cc9eb6"
+    },
+    {
+      "id": "d5e4eb15-6a76-4cf4-a494-8b85efbdd9b0",
+      "notes": "Seed source reference for [\"medito\",\"attributes\",\"supported-platforms\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:fd91c124f04f446f4ad974618e5ce83e3b352e3ee1dabe1a60a69d0cf012e6f9",
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "evidence_source_id": "56eac97b-b259-4da5-a21b-62a08e8be710"
+    },
+    {
+      "id": "47168ddf-efef-49d3-a58e-f980a6482525",
+      "notes": "Seed source reference for [\"medito\",\"attributes\",\"pricing-model\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:ffb0c442a0b9c010b62541bcdb217da5de37eb81353cd37d9d00fcd3179ce060",
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "evidence_source_id": "25b4aed5-f0eb-47bb-b317-3e930007fb92"
+    }
+  ],
+  "product_anchors": [
+    {
+      "anchor_id": "f213f70d-961c-4a90-9543-8c68825f0567",
+      "confidence": 0.75,
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "product_id": "695ac103-18ca-4ebe-8dcc-ec4b62127eb1",
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "relationship_type": "alternative",
+      "scope_description": null,
+      "relationship_scope": null,
+      "verification_status": "likely"
+    },
+    {
+      "anchor_id": "f213f70d-961c-4a90-9543-8c68825f0567",
+      "confidence": 0.75,
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "product_id": "6d36929c-acde-4179-bb24-45e981e22a7e",
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "relationship_type": "alternative",
+      "scope_description": null,
+      "relationship_scope": null,
+      "verification_status": "likely"
+    },
+    {
+      "anchor_id": "f213f70d-961c-4a90-9543-8c68825f0567",
+      "confidence": 0.75,
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "product_id": "b25a79c2-a32f-40a3-9404-df30ce531306",
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "relationship_type": "alternative",
+      "scope_description": null,
+      "relationship_scope": null,
+      "verification_status": "likely"
+    }
+  ],
+  "evidence_sources": [
+    {
+      "id": "b655df47-571e-4cd1-a51e-fa678c567b6c",
+      "url": "https://www.humin.org/wellbeing-tools/app",
+      "title": "Healthy Minds Program — overview reference",
+      "seed_key": "healthy-minds-program-overview-2026-10-06",
+      "publisher": "Healthy Minds Program",
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "source_type": "official",
+      "retrieved_at": "2026-10-06T00:00:00+00:00"
+    },
+    {
+      "id": "4922c30f-4bdf-419f-936b-b5df449b2810",
+      "url": "https://www.humin.org/wellbeing-tools/app",
+      "title": "Healthy Minds Program — platform reference",
+      "seed_key": "healthy-minds-program-platform-2026-10-06",
+      "publisher": "Healthy Minds Program",
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "source_type": "official",
+      "retrieved_at": "2026-10-06T00:00:00+00:00"
+    },
+    {
+      "id": "24043f60-054d-4585-971d-07adf2ea0e28",
+      "url": "https://www.humin.org/wellbeing-tools/app",
+      "title": "Healthy Minds Program — pricing reference",
+      "seed_key": "healthy-minds-program-pricing-2026-10-06",
+      "publisher": "Healthy Minds Program",
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "source_type": "pricing",
+      "retrieved_at": "2026-10-06T00:00:00+00:00"
+    },
+    {
+      "id": "7d49e9d1-fc28-42b7-85ec-98b7ba59b638",
+      "url": "https://www.humin.org/wellbeing-tools/app",
+      "title": "Healthy Minds Program — tradeoff reference",
+      "seed_key": "healthy-minds-program-tradeoff-2026-10-06",
+      "publisher": "Healthy Minds Program",
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "source_type": "official",
+      "retrieved_at": "2026-10-06T00:00:00+00:00"
+    },
+    {
+      "id": "14491199-63e1-439a-8b35-840277b8a21b",
+      "url": "https://meditofoundation.org/medito-app/",
+      "title": "Medito — overview reference",
+      "seed_key": "medito-overview-2026-10-06",
+      "publisher": "Medito",
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "source_type": "official",
+      "retrieved_at": "2026-10-06T00:00:00+00:00"
+    },
+    {
+      "id": "56eac97b-b259-4da5-a21b-62a08e8be710",
+      "url": "https://meditofoundation.org/medito-app/",
+      "title": "Medito — platform reference",
+      "seed_key": "medito-platform-2026-10-06",
+      "publisher": "Medito",
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "source_type": "official",
+      "retrieved_at": "2026-10-06T00:00:00+00:00"
+    },
+    {
+      "id": "25b4aed5-f0eb-47bb-b317-3e930007fb92",
+      "url": "https://meditofoundation.org/medito-app/",
+      "title": "Medito — pricing reference",
+      "seed_key": "medito-pricing-2026-10-06",
+      "publisher": "Medito",
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "source_type": "pricing",
+      "retrieved_at": "2026-10-06T00:00:00+00:00"
+    },
+    {
+      "id": "c18b0e94-007f-4b36-bf58-8c9ccedfa702",
+      "url": "https://meditofoundation.org/medito-app/",
+      "title": "Medito — tradeoff reference",
+      "seed_key": "medito-tradeoff-2026-10-06",
+      "publisher": "Medito",
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "source_type": "official",
+      "retrieved_at": "2026-10-06T00:00:00+00:00"
+    },
+    {
+      "id": "d39ff3e7-b4ec-45fc-a512-552bb320f83b",
+      "url": "https://www.smilingmind.com.au/app-product-information-statement",
+      "title": "Smiling Mind — AI source review reference",
+      "seed_key": "smiling-mind-ai-review-992e9ef1066b-2026-10-06",
+      "publisher": "Smiling Mind",
+      "created_at": "2026-10-06T03:54:47.989626+00:00",
+      "updated_at": "2026-10-06T03:54:47.989626+00:00",
+      "source_type": "official",
+      "retrieved_at": "2026-10-06T00:00:00+00:00"
+    },
+    {
+      "id": "444545db-c7be-4e34-8307-f39b80cc9eb6",
+      "url": "https://www.smilingmind.com.au/smiling-mind-app",
+      "title": "Smiling Mind — overview reference",
+      "seed_key": "smiling-mind-overview-2026-10-06",
+      "publisher": "Smiling Mind",
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "source_type": "official",
+      "retrieved_at": "2026-10-06T00:00:00+00:00"
+    },
+    {
+      "id": "8aa17004-edce-4c08-a557-311dfa7937c1",
+      "url": "https://www.smilingmind.com.au/smiling-mind-app",
+      "title": "Smiling Mind — pricing reference",
+      "seed_key": "smiling-mind-pricing-2026-10-06",
+      "publisher": "Smiling Mind",
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "source_type": "pricing",
+      "retrieved_at": "2026-10-06T00:00:00+00:00"
+    },
+    {
+      "id": "5269db10-a398-41d1-8a47-96cacdaed910",
+      "url": "https://www.smilingmind.com.au/app-product-information-statement",
+      "title": "Smiling Mind — tradeoff reference",
+      "seed_key": "smiling-mind-tradeoff-2026-10-06",
+      "publisher": "Smiling Mind",
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "source_type": "official",
+      "retrieved_at": "2026-10-06T00:00:00+00:00"
+    }
+  ],
+  "product_problems": [
+    {
+      "confidence": 0.75,
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "problem_id": "58231e35-9b9b-46bb-add8-21417ed2c6d1",
+      "product_id": "695ac103-18ca-4ebe-8dcc-ec4b62127eb1",
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "likely"
+    },
+    {
+      "confidence": 0.75,
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "problem_id": "58231e35-9b9b-46bb-add8-21417ed2c6d1",
+      "product_id": "6d36929c-acde-4179-bb24-45e981e22a7e",
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "likely"
+    },
+    {
+      "confidence": 0.75,
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "problem_id": "58231e35-9b9b-46bb-add8-21417ed2c6d1",
+      "product_id": "b25a79c2-a32f-40a3-9404-df30ce531306",
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "likely"
+    }
+  ],
+  "taxonomy_anchors": [
+    {
+      "id": "f213f70d-961c-4a90-9543-8c68825f0567",
+      "name": "Calm / Meditation",
+      "slug": "calm",
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "description": "Meditation and sleep-content ecosystem; listing establishes software scope, not medical efficacy."
+    }
+  ],
+  "product_audiences": [
+    {
+      "confidence": 0.75,
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "product_id": "695ac103-18ca-4ebe-8dcc-ec4b62127eb1",
+      "audience_id": "3ce62231-ca49-488e-b379-84aec4276294",
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "likely"
+    },
+    {
+      "confidence": 0.75,
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "product_id": "6d36929c-acde-4179-bb24-45e981e22a7e",
+      "audience_id": "3ce62231-ca49-488e-b379-84aec4276294",
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "likely"
+    },
+    {
+      "confidence": 0.75,
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "product_id": "b25a79c2-a32f-40a3-9404-df30ce531306",
+      "audience_id": "3ce62231-ca49-488e-b379-84aec4276294",
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "likely"
+    }
+  ],
+  "taxonomy_problems": [
+    {
+      "id": "58231e35-9b9b-46bb-add8-21417ed2c6d1",
+      "name": "Subscription Fatigue",
+      "slug": "subscription-fatigue",
+      "created_at": "2026-10-06T02:49:38.03521+00:00",
+      "updated_at": "2026-10-06T02:49:38.03521+00:00",
+      "description": "The user wants useful core functionality without another mandatory recurring subscription."
+    }
+  ],
+  "product_attributes": [
+    {
+      "confidence": 0.75,
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "product_id": "695ac103-18ca-4ebe-8dcc-ec4b62127eb1",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "value_enum": null,
+      "value_text": "Access requires creating an account; the app's mental-fitness pathways should not be described as a complete Calm replacement.",
+      "attribute_id": "18dee1eb-8a8a-45fa-b463-8487065642d9",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "likely"
+    },
+    {
+      "confidence": null,
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "product_id": "695ac103-18ca-4ebe-8dcc-ec4b62127eb1",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "value_enum": null,
+      "value_text": null,
+      "attribute_id": "2d9835d9-4aa0-4fb3-93fa-2c98d4f890c4",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": null,
+      "verification_status": "unknown"
+    },
+    {
+      "confidence": 0.95,
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "product_id": "695ac103-18ca-4ebe-8dcc-ec4b62127eb1",
+      "updated_at": "2026-10-06T03:54:47.989626+00:00",
+      "value_enum": null,
+      "value_text": "iOS, Android, and Web browser access",
+      "attribute_id": "2e5f8446-3bb6-4e92-990e-d6c253d2417c",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "verified"
+    },
+    {
+      "confidence": 0.95,
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "product_id": "695ac103-18ca-4ebe-8dcc-ec4b62127eb1",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "value_enum": null,
+      "value_text": null,
+      "attribute_id": "7f2af8c8-8aee-4d54-a93a-46d77a3ead17",
+      "value_number": null,
+      "value_boolean": true,
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "verified"
+    },
+    {
+      "confidence": 0.95,
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "product_id": "695ac103-18ca-4ebe-8dcc-ec4b62127eb1",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "value_enum": null,
+      "value_text": "Free app for individuals and families, supported by a nonprofit.",
+      "attribute_id": "83353c3f-3cd2-4505-8311-f722e720867c",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "verified"
+    },
+    {
+      "confidence": 0.95,
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "product_id": "695ac103-18ca-4ebe-8dcc-ec4b62127eb1",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "value_enum": null,
+      "value_text": null,
+      "attribute_id": "bfda8b52-b153-4479-9c04-e46f25e6c7c0",
+      "value_number": null,
+      "value_boolean": false,
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "verified"
+    },
+    {
+      "confidence": null,
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "product_id": "695ac103-18ca-4ebe-8dcc-ec4b62127eb1",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "value_enum": null,
+      "value_text": null,
+      "attribute_id": "cf8b0015-81e0-440b-b7d6-281ae28c43d4",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": null,
+      "verification_status": "unknown"
+    },
+    {
+      "confidence": null,
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "product_id": "695ac103-18ca-4ebe-8dcc-ec4b62127eb1",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "value_enum": null,
+      "value_text": null,
+      "attribute_id": "f540baaf-959c-485b-a65b-68c2b072841e",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": null,
+      "verification_status": "unknown"
+    },
+    {
+      "confidence": 0.75,
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "product_id": "6d36929c-acde-4179-bb24-45e981e22a7e",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "value_enum": null,
+      "value_text": "The documented offering is mobile meditation and sleep audio; equivalence to every Calm content category is unverified.",
+      "attribute_id": "18dee1eb-8a8a-45fa-b463-8487065642d9",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "likely"
+    },
+    {
+      "confidence": null,
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "product_id": "6d36929c-acde-4179-bb24-45e981e22a7e",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "value_enum": null,
+      "value_text": null,
+      "attribute_id": "2d9835d9-4aa0-4fb3-93fa-2c98d4f890c4",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": null,
+      "verification_status": "unknown"
+    },
+    {
+      "confidence": 0.95,
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "product_id": "6d36929c-acde-4179-bb24-45e981e22a7e",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "value_enum": null,
+      "value_text": "iOS, Android",
+      "attribute_id": "2e5f8446-3bb6-4e92-990e-d6c253d2417c",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "verified"
+    },
+    {
+      "confidence": 0.95,
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "product_id": "6d36929c-acde-4179-bb24-45e981e22a7e",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "value_enum": null,
+      "value_text": null,
+      "attribute_id": "7f2af8c8-8aee-4d54-a93a-46d77a3ead17",
+      "value_number": null,
+      "value_boolean": true,
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "verified"
+    },
+    {
+      "confidence": 0.95,
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "product_id": "6d36929c-acde-4179-bb24-45e981e22a7e",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "value_enum": null,
+      "value_text": "Free nonprofit app with no premium tier or paywall.",
+      "attribute_id": "83353c3f-3cd2-4505-8311-f722e720867c",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "verified"
+    },
+    {
+      "confidence": 0.95,
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "product_id": "6d36929c-acde-4179-bb24-45e981e22a7e",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "value_enum": null,
+      "value_text": null,
+      "attribute_id": "bfda8b52-b153-4479-9c04-e46f25e6c7c0",
+      "value_number": null,
+      "value_boolean": true,
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "verified"
+    },
+    {
+      "confidence": null,
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "product_id": "6d36929c-acde-4179-bb24-45e981e22a7e",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "value_enum": null,
+      "value_text": null,
+      "attribute_id": "cf8b0015-81e0-440b-b7d6-281ae28c43d4",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": null,
+      "verification_status": "unknown"
+    },
+    {
+      "confidence": null,
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "product_id": "6d36929c-acde-4179-bb24-45e981e22a7e",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "value_enum": null,
+      "value_text": null,
+      "attribute_id": "f540baaf-959c-485b-a65b-68c2b072841e",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": null,
+      "verification_status": "unknown"
+    },
+    {
+      "confidence": 0.95,
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "product_id": "b25a79c2-a32f-40a3-9404-df30ce531306",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "value_enum": null,
+      "value_text": "The setup instructions require registration; the free app and paid courses or events are separate offers.",
+      "attribute_id": "18dee1eb-8a8a-45fa-b463-8487065642d9",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "verified"
+    },
+    {
+      "confidence": null,
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "product_id": "b25a79c2-a32f-40a3-9404-df30ce531306",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "value_enum": null,
+      "value_text": null,
+      "attribute_id": "2d9835d9-4aa0-4fb3-93fa-2c98d4f890c4",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": null,
+      "verification_status": "unknown"
+    },
+    {
+      "confidence": 0.95,
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "product_id": "b25a79c2-a32f-40a3-9404-df30ce531306",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "value_enum": null,
+      "value_text": "iOS, Android",
+      "attribute_id": "2e5f8446-3bb6-4e92-990e-d6c253d2417c",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "verified"
+    },
+    {
+      "confidence": 0.95,
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "product_id": "b25a79c2-a32f-40a3-9404-df30ce531306",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "value_enum": null,
+      "value_text": null,
+      "attribute_id": "7f2af8c8-8aee-4d54-a93a-46d77a3ead17",
+      "value_number": null,
+      "value_boolean": true,
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "verified"
+    },
+    {
+      "confidence": 0.95,
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "product_id": "b25a79c2-a32f-40a3-9404-df30ce531306",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "value_enum": null,
+      "value_text": "Free donor-supported app; separate courses and events may be paid.",
+      "attribute_id": "83353c3f-3cd2-4505-8311-f722e720867c",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "verified"
+    },
+    {
+      "confidence": 0.95,
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "product_id": "b25a79c2-a32f-40a3-9404-df30ce531306",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "value_enum": null,
+      "value_text": null,
+      "attribute_id": "bfda8b52-b153-4479-9c04-e46f25e6c7c0",
+      "value_number": null,
+      "value_boolean": false,
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "verified"
+    },
+    {
+      "confidence": null,
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "product_id": "b25a79c2-a32f-40a3-9404-df30ce531306",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "value_enum": null,
+      "value_text": null,
+      "attribute_id": "cf8b0015-81e0-440b-b7d6-281ae28c43d4",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": null,
+      "verification_status": "unknown"
+    },
+    {
+      "confidence": null,
+      "created_at": "2026-10-06T03:24:11.813175+00:00",
+      "product_id": "b25a79c2-a32f-40a3-9404-df30ce531306",
+      "updated_at": "2026-10-06T03:24:11.813175+00:00",
+      "value_enum": null,
+      "value_text": null,
+      "attribute_id": "f540baaf-959c-485b-a65b-68c2b072841e",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": null,
+      "verification_status": "unknown"
+    }
+  ],
+  "published_products": [
+    "2do",
+    "affine",
+    "anytype",
+    "appflowy",
+    "gimp",
+    "joplin",
+    "krita",
+    "obsidian",
+    "omnifocus",
+    "paint-net",
+    "pdf-xchange-editor",
+    "pdf24-creator",
+    "pdfgear",
+    "simplenote",
+    "things"
+  ],
+  "taxonomy_audiences": [
+    {
+      "id": "3ce62231-ca49-488e-b379-84aec4276294",
+      "name": "Meditation App Listeners",
+      "slug": "meditation-app-listeners",
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "updated_at": "2026-10-06T04:14:23.31324+00:00",
+      "description": "People comparing meditation or sleep-audio applications; no therapeutic outcome or medical suitability is asserted."
+    }
+  ],
+  "taxonomy_attributes": [
+    {
+      "id": "f540baaf-959c-485b-a65b-68c2b072841e",
+      "name": "AI Optional",
+      "slug": "ai-optional",
+      "category": "ai",
+      "created_at": "2026-10-06T02:49:38.03521+00:00",
+      "updated_at": "2026-10-06T02:49:38.03521+00:00",
+      "value_type": "boolean",
+      "description": "Core product workflows remain usable without enabling, purchasing, or depending on AI functionality. Integrated AI or optional AI plugins do not disqualify a product; evidence must support the non-AI core workflow."
+    },
+    {
+      "id": "7f2af8c8-8aee-4d54-a93a-46d77a3ead17",
+      "name": "Free Core Use",
+      "slug": "free-core-use",
+      "category": "pricing",
+      "created_at": "2026-10-06T02:49:38.03521+00:00",
+      "updated_at": "2026-10-06T02:49:38.03521+00:00",
+      "value_type": "boolean",
+      "description": "A meaningful core product workflow is available without a recurring software fee."
+    },
+    {
+      "id": "bfda8b52-b153-4479-9c04-e46f25e6c7c0",
+      "name": "No Account Required",
+      "slug": "no-account-required",
+      "category": "account",
+      "created_at": "2026-10-06T02:49:38.03521+00:00",
+      "updated_at": "2026-10-06T02:49:38.03521+00:00",
+      "value_type": "boolean",
+      "description": "A meaningful local/core workflow can be started without creating a vendor account."
+    },
+    {
+      "id": "496d6370-cf03-4842-b0e3-22c307613b97",
+      "name": "No Subscription",
+      "slug": "no-subscription",
+      "category": "pricing",
+      "created_at": "2026-10-07T09:58:41.404192+00:00",
+      "updated_at": "2026-10-07T09:58:41.404192+00:00",
+      "value_type": "boolean",
+      "description": "The named edition supports the stated meaningful core workflow without a mandatory recurring software payment. Free and perpetual paid editions may qualify; trials do not. Optional sync, AI, cloud, maintenance and paid upgrades must be disclosed."
+    },
+    {
+      "id": "cf8b0015-81e0-440b-b7d6-281ae28c43d4",
+      "name": "Open Source",
+      "slug": "open-source",
+      "category": "licensing",
+      "created_at": "2026-10-06T02:49:38.03521+00:00",
+      "updated_at": "2026-10-06T02:49:38.03521+00:00",
+      "value_type": "boolean",
+      "description": "The product or its core editor is distributed under an open-source license according to current official materials."
+    },
+    {
+      "id": "83353c3f-3cd2-4505-8311-f722e720867c",
+      "name": "Pricing Model",
+      "slug": "pricing-model",
+      "category": "pricing",
+      "created_at": "2026-10-06T03:22:38.833862+00:00",
+      "updated_at": "2026-10-06T03:22:38.833862+00:00",
+      "value_type": "text",
+      "description": "Source-backed pricing model and relevant edition scope; excludes transient numeric prices."
+    },
+    {
+      "id": "2e5f8446-3bb6-4e92-990e-d6c253d2417c",
+      "name": "Supported Platforms",
+      "slug": "supported-platforms",
+      "category": "platform",
+      "created_at": "2026-10-06T03:22:38.833862+00:00",
+      "updated_at": "2026-10-06T03:22:38.833862+00:00",
+      "value_type": "text",
+      "description": "Source-listed platforms and edition scope; an omitted platform is not a verified negative."
+    },
+    {
+      "id": "18dee1eb-8a8a-45fa-b463-8487065642d9",
+      "name": "Trade-Off Summary",
+      "slug": "trade-off-summary",
+      "category": "workflow",
+      "created_at": "2026-10-06T03:22:38.833862+00:00",
+      "updated_at": "2026-10-06T03:22:38.833862+00:00",
+      "value_type": "text",
+      "description": "Evidence-backed restrictions or explicitly provisional editorial interpretation, with confidence status."
+    },
+    {
+      "id": "2d9835d9-4aa0-4fb3-93fa-2c98d4f890c4",
+      "name": "Works Offline",
+      "slug": "works-offline",
+      "category": "offline",
+      "created_at": "2026-10-06T02:49:38.03521+00:00",
+      "updated_at": "2026-10-06T02:49:38.03521+00:00",
+      "value_type": "boolean",
+      "description": "Core work remains available without an internet connection."
+    }
+  ],
+  "product_anchor_evidence": [
+    {
+      "anchor_id": "f213f70d-961c-4a90-9543-8c68825f0567",
+      "product_id": "695ac103-18ca-4ebe-8dcc-ec4b62127eb1",
+      "claim_evidence_id": "62f8df5b-f156-4f58-ad17-9fce4ad1f12f",
+      "relationship_type": "alternative"
+    },
+    {
+      "anchor_id": "f213f70d-961c-4a90-9543-8c68825f0567",
+      "product_id": "6d36929c-acde-4179-bb24-45e981e22a7e",
+      "claim_evidence_id": "26f451d1-c71f-4a9c-beb9-b2348da44782",
+      "relationship_type": "alternative"
+    },
+    {
+      "anchor_id": "f213f70d-961c-4a90-9543-8c68825f0567",
+      "product_id": "b25a79c2-a32f-40a3-9404-df30ce531306",
+      "claim_evidence_id": "eb4c15c6-c280-4342-8779-f7f73e15dda2",
+      "relationship_type": "alternative"
+    }
+  ],
+  "product_problem_evidence": [
+    {
+      "problem_id": "58231e35-9b9b-46bb-add8-21417ed2c6d1",
+      "product_id": "695ac103-18ca-4ebe-8dcc-ec4b62127eb1",
+      "claim_evidence_id": "ad2d9852-97ec-489e-8324-6a0a871b7c6b"
+    },
+    {
+      "problem_id": "58231e35-9b9b-46bb-add8-21417ed2c6d1",
+      "product_id": "6d36929c-acde-4179-bb24-45e981e22a7e",
+      "claim_evidence_id": "755a65b9-afcd-423e-a224-2f68aa64aa8a"
+    },
+    {
+      "problem_id": "58231e35-9b9b-46bb-add8-21417ed2c6d1",
+      "product_id": "b25a79c2-a32f-40a3-9404-df30ce531306",
+      "claim_evidence_id": "281362a0-4791-4ee2-aeaa-dfe13159ce95"
+    }
+  ],
+  "target_route_memberships": [],
+  "approved_published_routes": [
+    "notion-alternatives-without-ai",
+    "offline-notion-alternatives",
+    "pdf-editors-without-a-subscription",
+    "photoshop-alternatives-without-a-subscription",
+    "productivity-apps-you-can-buy-once",
+    "simple-notion-alternatives",
+    "todoist-alternatives-with-a-one-time-purchase"
+  ],
+  "product_audience_evidence": [
+    {
+      "product_id": "695ac103-18ca-4ebe-8dcc-ec4b62127eb1",
+      "audience_id": "3ce62231-ca49-488e-b379-84aec4276294",
+      "claim_evidence_id": "ce8fb1b0-8201-479d-ada2-6c27b5b45370"
+    },
+    {
+      "product_id": "6d36929c-acde-4179-bb24-45e981e22a7e",
+      "audience_id": "3ce62231-ca49-488e-b379-84aec4276294",
+      "claim_evidence_id": "078489fb-38df-4993-99fa-8827e09aba2e"
+    },
+    {
+      "product_id": "b25a79c2-a32f-40a3-9404-df30ce531306",
+      "audience_id": "3ce62231-ca49-488e-b379-84aec4276294",
+      "claim_evidence_id": "2cc5c62a-ad58-47b3-b88a-2146139008a1"
+    }
+  ],
+  "product_attribute_evidence": [
+    {
+      "product_id": "695ac103-18ca-4ebe-8dcc-ec4b62127eb1",
+      "attribute_id": "18dee1eb-8a8a-45fa-b463-8487065642d9",
+      "claim_evidence_id": "0e886d8d-bdc8-46eb-9bc7-84b7f1092568"
+    },
+    {
+      "product_id": "695ac103-18ca-4ebe-8dcc-ec4b62127eb1",
+      "attribute_id": "2e5f8446-3bb6-4e92-990e-d6c253d2417c",
+      "claim_evidence_id": "ab074cd9-2e28-460e-afd3-bfc54ea07c2d"
+    },
+    {
+      "product_id": "695ac103-18ca-4ebe-8dcc-ec4b62127eb1",
+      "attribute_id": "7f2af8c8-8aee-4d54-a93a-46d77a3ead17",
+      "claim_evidence_id": "a7526a00-9657-4ddb-aa0f-23fcfc1e473d"
+    },
+    {
+      "product_id": "695ac103-18ca-4ebe-8dcc-ec4b62127eb1",
+      "attribute_id": "83353c3f-3cd2-4505-8311-f722e720867c",
+      "claim_evidence_id": "3e53b6c4-7f1f-4785-a032-3f350ea956db"
+    },
+    {
+      "product_id": "695ac103-18ca-4ebe-8dcc-ec4b62127eb1",
+      "attribute_id": "bfda8b52-b153-4479-9c04-e46f25e6c7c0",
+      "claim_evidence_id": "e4228c15-8478-40f5-9033-afe0b37ec745"
+    },
+    {
+      "product_id": "6d36929c-acde-4179-bb24-45e981e22a7e",
+      "attribute_id": "18dee1eb-8a8a-45fa-b463-8487065642d9",
+      "claim_evidence_id": "7fd9ee3b-b13d-4a52-9ecf-70ac1fa14911"
+    },
+    {
+      "product_id": "6d36929c-acde-4179-bb24-45e981e22a7e",
+      "attribute_id": "2e5f8446-3bb6-4e92-990e-d6c253d2417c",
+      "claim_evidence_id": "d5e4eb15-6a76-4cf4-a494-8b85efbdd9b0"
+    },
+    {
+      "product_id": "6d36929c-acde-4179-bb24-45e981e22a7e",
+      "attribute_id": "7f2af8c8-8aee-4d54-a93a-46d77a3ead17",
+      "claim_evidence_id": "86bb5f26-a84c-499c-a0ad-801ab98d20e3"
+    },
+    {
+      "product_id": "6d36929c-acde-4179-bb24-45e981e22a7e",
+      "attribute_id": "83353c3f-3cd2-4505-8311-f722e720867c",
+      "claim_evidence_id": "47168ddf-efef-49d3-a58e-f980a6482525"
+    },
+    {
+      "product_id": "6d36929c-acde-4179-bb24-45e981e22a7e",
+      "attribute_id": "bfda8b52-b153-4479-9c04-e46f25e6c7c0",
+      "claim_evidence_id": "a5d5992f-da11-4f64-b0be-d40e568c1488"
+    },
+    {
+      "product_id": "b25a79c2-a32f-40a3-9404-df30ce531306",
+      "attribute_id": "18dee1eb-8a8a-45fa-b463-8487065642d9",
+      "claim_evidence_id": "db5e05f4-387f-4647-935c-121ec56d0e4c"
+    },
+    {
+      "product_id": "b25a79c2-a32f-40a3-9404-df30ce531306",
+      "attribute_id": "2e5f8446-3bb6-4e92-990e-d6c253d2417c",
+      "claim_evidence_id": "858b9184-c2c1-4c0f-9bf0-83d5b4235dea"
+    },
+    {
+      "product_id": "b25a79c2-a32f-40a3-9404-df30ce531306",
+      "attribute_id": "7f2af8c8-8aee-4d54-a93a-46d77a3ead17",
+      "claim_evidence_id": "a40f9579-a625-4dfb-b79c-6dd92cc2afbb"
+    },
+    {
+      "product_id": "b25a79c2-a32f-40a3-9404-df30ce531306",
+      "attribute_id": "83353c3f-3cd2-4505-8311-f722e720867c",
+      "claim_evidence_id": "95e9f8fb-6060-4b57-b290-32ee0993349e"
+    },
+    {
+      "product_id": "b25a79c2-a32f-40a3-9404-df30ce531306",
+      "attribute_id": "bfda8b52-b153-4479-9c04-e46f25e6c7c0",
+      "claim_evidence_id": "28690a82-f7f1-4d55-821c-96762d825763"
+    }
+  ],
+  "anon_private_evidence_boundary": true
+}

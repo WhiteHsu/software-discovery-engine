@@ -308,3 +308,8 @@ Clean actual HEAD40eb5ca inspected; owner screenshot green Production #74. Exact
 ## PR5.57 — Meditation selective import preflight
 
 Owner pushed PR5.56 as453ad34; clean actual HEAD inspected, owner screenshot green Production #75. Single-statement SELECT preflight captures three meditation identities/lifecycles, all claims/evidence/taxonomy, target/all related memberships, scope storage, provenance collisions and published slug sets/private boundary. No live database query executed by agent; production state unknown until owner returns full snapshot. Local draft qualification3, published0; accepted checkpoint15/7/3. No apply SQL, importer, graph, engine, publication or lifecycle changes. See MEDITATION_IMPORT_PREFLIGHT_REVIEW.md.
+
+
+## PR5.58 — Guarded meditation draft import
+
+Clean actual HEADff5adde inspected; owner screenshot green Production #76. Full PR5.57 snapshot captured2026-10-15T02:16:36Z parsed from Markdown-escaped JSON and pinned: three draft identities, route absent, no target memberships, checkpoint15/7, scope storage/private boundary intact. Guarded rehearsal/apply/SELECT verification prepared for nine attributes/three scoped anchors, additive14 sources/64 fragments, one unapproved draft route with3 members. Product lifecycle/identity/taxonomy/unrelated graph and old evidence preserved; no publication or agent remote writes.29 focused tests/11 local database scenarios pass, including28 verification booleans across3 timezones. Await owner SQL execution/results. Accepted checkpoint15/7/3. See MEDITATION_DRAFT_IMPORT_REVIEW.md.
