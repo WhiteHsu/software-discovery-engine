@@ -363,3 +363,8 @@ No-subscription writing now requires exact passive-review scope and meaningful e
 ## PR5.68 — Guarded writing draft import
 
 Actual clean HEAD7dfe4de inspected. Returned PR5.67 snapshot at2026-10-15T06:50:49.805493+00:00 pins only retained draft Classic, no new edition collisions or writing routes, public18/8 and private boundary intact. Selective atomic proposal adds3 draft products,9 attributes,3 scoped anchors,18 sources/104 fragments and1 unapproved route with3 members; no taxonomy/Classic/privacy/publication writes. Rehearsal/apply/29-row verify generated with identity/provenance/baseline/public-set/privilege guards and repeat rejection.25 focused tests and14 database runtime checks pass. See WRITING_DRAFT_IMPORT_REVIEW.md.
+
+
+## PR5.69 — Writing draft import accepted; publication preflight
+
+Owner PR5.68 verification29/29 true recorded with rehearsal/apply screenshots. Clean actual HEAD51b0732 inspected; owner Production87 screenshot green. Three imported editions and route remain draft/unapproved, Classic and private evidence preserved, public18/8/2. SELECT-only PR5.69_PREFLIGHT.sql adds actual stored claims/IDs/provenance plus RPC/RLS/policy metadata for publication review. No graph, claim, engine or publication writes; do not replay draft apply. See WRITING_PUBLICATION_PREFLIGHT_REVIEW.md.

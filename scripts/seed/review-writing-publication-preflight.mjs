@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {createHash} from 'node:crypto';
+import {writingImportInputs,buildWritingImport} from './build-writing-import.mjs';
+import {currentPublicationAudit} from '../escape-remaining-routes.mjs';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..'),hash=x=>createHash('sha256').update(x).digest('hex');
+const r=JSON.parse(fs.readFileSync(path.join(root,'seed/research/writing-draft-import-acceptance-2026-10-15.json'),'utf8'));
+if(process.argv.length!==2||hash(JSON.stringify(r))!=='4118d697f07b6ef0a0a0b346ce75fd34a2de5e768cd3f4c169c83451312f41e0')throw Error('Writing draft receipt drift');
+for(const x of [r.preflight,r.inputVerify])if(hash(fs.readFileSync(path.join(root,x.path),'utf8').replace(/\r\n/g,'\n'))!==x.normalizedSha256)throw Error('Pinned SQL drift');
+const i=buildWritingImport(writingImportInputs()),a=currentPublicationAudit();
+if(r.verificationResults.length!==29||r.verificationResults.some(x=>x.passed!==true)||i.report.publicationApproved||a.publishedProducts!==18||a.acceptedPublishedRoutes!==8||a.remainingRoutes!==2)throw Error('Accepted receipt/checkpoint drift');
+console.log('PR5.69: owner writing draft-import acceptance29/29 recorded; SELECT-only publication preflight pinned.');
+console.log('No replay of draft apply, no publication approval. Accepted public18/8/2. Static reconstruction only.');

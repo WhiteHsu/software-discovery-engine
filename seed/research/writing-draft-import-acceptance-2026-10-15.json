@@ -1,0 +1,170 @@
+{
+  "version": 1,
+  "packet": "PR5.69",
+  "acceptedAt": "2026-10-15",
+  "baseline": "51b0732018b2cd004517f539e3fd61bb5622ece7",
+  "acceptance": "Owner returned complete29-row PR5.68 verification, all true, with rehearsal/apply/verification screenshots. Draft import accepted; not publication approval.",
+  "verificationResults": [
+    {
+      "check_name": "exact_evidence_sources",
+      "passed": true
+    },
+    {
+      "check_name": "exact_products",
+      "passed": true
+    },
+    {
+      "check_name": "exact_product_attributes",
+      "passed": true
+    },
+    {
+      "check_name": "exact_product_anchors",
+      "passed": true
+    },
+    {
+      "check_name": "exact_claim_evidence",
+      "passed": true
+    },
+    {
+      "check_name": "exact_product_attribute_evidence",
+      "passed": true
+    },
+    {
+      "check_name": "exact_product_anchor_evidence",
+      "passed": true
+    },
+    {
+      "check_name": "exact_escape_routes",
+      "passed": true
+    },
+    {
+      "check_name": "exact_escape_route_products",
+      "passed": true
+    },
+    {
+      "check_name": "retained_products",
+      "passed": true
+    },
+    {
+      "check_name": "retained_product_attributes",
+      "passed": true
+    },
+    {
+      "check_name": "retained_product_anchors",
+      "passed": true
+    },
+    {
+      "check_name": "retained_product_problems",
+      "passed": true
+    },
+    {
+      "check_name": "retained_product_audiences",
+      "passed": true
+    },
+    {
+      "check_name": "retained_product_attribute_evidence",
+      "passed": true
+    },
+    {
+      "check_name": "retained_product_anchor_evidence",
+      "passed": true
+    },
+    {
+      "check_name": "retained_product_problem_evidence",
+      "passed": true
+    },
+    {
+      "check_name": "retained_product_audience_evidence",
+      "passed": true
+    },
+    {
+      "check_name": "retained_claim_evidence",
+      "passed": true
+    },
+    {
+      "check_name": "retained_evidence_sources",
+      "passed": true
+    },
+    {
+      "check_name": "retained_attributes",
+      "passed": true
+    },
+    {
+      "check_name": "retained_anchors",
+      "passed": true
+    },
+    {
+      "check_name": "retained_problems",
+      "passed": true
+    },
+    {
+      "check_name": "retained_audiences",
+      "passed": true
+    },
+    {
+      "check_name": "retained_escape_route_products",
+      "passed": true
+    },
+    {
+      "check_name": "published_slug_sets_preserved",
+      "passed": true
+    },
+    {
+      "check_name": "draft_lifecycle_and_public_boundary",
+      "passed": true
+    },
+    {
+      "check_name": "no_privacy_or_extra_claims",
+      "passed": true
+    },
+    {
+      "check_name": "anon_private_evidence_boundary",
+      "passed": true
+    }
+  ],
+  "evidence": [
+    {
+      "file": "codex-clipboard-54c07f57-863c-45d1-b61f-85c8aeac4231.png",
+      "meaning": "Push51b0732 and clean working tree"
+    },
+    {
+      "file": "codex-clipboard-03a1e4ed-f0e9-4983-859e-e8a43826dc59.png",
+      "meaning": "Owner GitHub screenshot Production87 green; not independently queried"
+    },
+    {
+      "file": "codex-clipboard-942feee4-47bc-4066-9529-d8b16bcfdd63.png",
+      "meaning": "Successful rehearsal"
+    },
+    {
+      "file": "codex-clipboard-ee168fd5-6f4a-4833-bc42-8c64108a49de.png",
+      "meaning": "Successful draft apply"
+    },
+    {
+      "file": "codex-clipboard-c5a8cde8-e0ad-4e6d-82db-0a8bb3eb1297.png",
+      "meaning": "29-row verification display; full result supplied as user CSV text"
+    }
+  ],
+  "draftState": {
+    "newProducts": 3,
+    "attributeClaims": 9,
+    "scopedAnchors": 3,
+    "routeMembers": 3,
+    "sources": 18,
+    "evidenceFragments": 104,
+    "routeStatus": "draft",
+    "editoriallyApproved": false,
+    "publicProductsRemain": 18,
+    "approvedPublicRoutesRemain": 8,
+    "privacyRouteAbsent": true
+  },
+  "publicationApproved": false,
+  "next": "Run SELECT-only PR5.69 preflight and return complete snapshot. Compare actual stored claims/identities/provenance and policies before preparing guarded publication proposal.",
+  "preflight": {
+    "path": "supabase/verification/PR5.69_PREFLIGHT.sql",
+    "normalizedSha256": "b64096147c703363a0695ca30950f230f8826d865af501c48f30355d8f60f73c"
+  },
+  "inputVerify": {
+    "path": "supabase/verification/PR5.68_VERIFY.sql",
+    "normalizedSha256": "05fa2e18970e6bba10c956e88abba71744cf5508259bafbc88c210b26766d152"
+  }
+}
