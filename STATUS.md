@@ -358,3 +358,8 @@ Rendered Real Write detector FAQ explicitly gives signup-free/no-daily-cap acces
 ## PR5.67 — Scoped writing drafts implemented
 
 No-subscription writing now requires exact passive-review scope and meaningful edition description. Separate local builder adds three new draft editions, nine attribute claims, three scoped anchors and three memberships;35 baseline products/Classic/taxonomy/old memberships preserved. Three local drafts qualify; zero published. Historical engine compatibility explicitly pins three versions; frozen JSON unchanged. Current accepted audit remains18/8/2. Read-only PR5.67_PREFLIGHT.sql captures live identity/source collisions and writing route baseline before any import proposal. See WRITING_PASSIVE_WORKFLOW_REVIEW.md.
+
+
+## PR5.68 — Guarded writing draft import
+
+Actual clean HEAD7dfe4de inspected. Returned PR5.67 snapshot at2026-10-15T06:50:49.805493+00:00 pins only retained draft Classic, no new edition collisions or writing routes, public18/8 and private boundary intact. Selective atomic proposal adds3 draft products,9 attributes,3 scoped anchors,18 sources/104 fragments and1 unapproved route with3 members; no taxonomy/Classic/privacy/publication writes. Rehearsal/apply/29-row verify generated with identity/provenance/baseline/public-set/privilege guards and repeat rejection.25 focused tests and14 database runtime checks pass. See WRITING_DRAFT_IMPORT_REVIEW.md.

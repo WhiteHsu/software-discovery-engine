@@ -1,0 +1,505 @@
+{
+  "route": [],
+  "packet": "PR5.67",
+  "products": [
+    {
+      "id": "db62ef76-724f-412f-9b63-d5b000d80ddc",
+      "name": "Hemingway Editor Classic",
+      "slug": "hemingway-classic",
+      "status": "draft",
+      "created_at": "2026-10-06T03:23:20.913879+00:00",
+      "updated_at": "2026-10-06T03:23:20.913879+00:00",
+      "website_url": "https://hemingwayapp.com/desktop",
+      "short_description": "Desktop readability editing that highlights sentence complexity and style issues."
+    }
+  ],
+  "read_only": true,
+  "captured_at": "2026-10-15T06:50:49.805493+00:00",
+  "route_members": [],
+  "scope_columns": [
+    {
+      "data_type": "text",
+      "column_name": "relationship_scope"
+    },
+    {
+      "data_type": "text",
+      "column_name": "scope_description"
+    }
+  ],
+  "claim_evidence": [
+    {
+      "id": "2e8adb0d-ed71-4ec6-ac20-b5d3af8634c6",
+      "notes": "Seed source reference for [\"hemingway-classic\",\"audiences\",\"writers-and-editors\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:2f1c29bdbbd7389384c2881c08a9eb2d956d7affd6b80ab4f0918cb2c79a8a1d",
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "updated_at": "2026-10-06T04:14:23.31324+00:00",
+      "evidence_source_id": "8d56bdcb-3293-4bed-b123-e9fa063091c4"
+    },
+    {
+      "id": "68cda7f8-929c-4c00-8030-a9963d19cd73",
+      "notes": "Seed source reference for [\"hemingway-classic\",\"audiences\",\"offline-first-users\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:333e079692c9e48ef422d2f6f6664eae1afccf822259aa882a06839655466195",
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "updated_at": "2026-10-06T04:14:23.31324+00:00",
+      "evidence_source_id": "8d56bdcb-3293-4bed-b123-e9fa063091c4"
+    },
+    {
+      "id": "b9156831-4d89-4bde-a0dc-46789e2ddb0b",
+      "notes": "Seed source reference for [\"hemingway-classic\",\"attributes\",\"ai-optional\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:5b187a9c775da6ad23552d7cc85c33277be2aed144533f345b7b3b6e3bcaac00",
+      "created_at": "2026-10-06T03:23:20.913879+00:00",
+      "updated_at": "2026-10-06T03:23:20.913879+00:00",
+      "evidence_source_id": "8d56bdcb-3293-4bed-b123-e9fa063091c4"
+    },
+    {
+      "id": "fb686abb-bb34-4ca4-86a9-4ffd3085b829",
+      "notes": "Seed source reference for [\"hemingway-classic\",\"anchors\",\"grammarly\",\"alternative\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:6550d77005d7a60c69a2efda45ae4593262d5737f24da70d6b53289d4662fabb",
+      "created_at": "2026-10-06T03:23:20.913879+00:00",
+      "updated_at": "2026-10-06T03:23:20.913879+00:00",
+      "evidence_source_id": "8d56bdcb-3293-4bed-b123-e9fa063091c4"
+    },
+    {
+      "id": "19b33acd-f995-43c2-923e-7a908a75a7a8",
+      "notes": "Seed source reference for [\"hemingway-classic\",\"attributes\",\"supported-platforms\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:85da9d62e11a6667e28596b15cddee63b557664af3cb303f31aae09574b01aa9",
+      "created_at": "2026-10-06T03:23:20.913879+00:00",
+      "updated_at": "2026-10-06T03:23:20.913879+00:00",
+      "evidence_source_id": "61764af4-1c7c-4280-8f17-9879b15490f0"
+    },
+    {
+      "id": "842c8448-932e-4b9f-a582-39ee65e9ef7e",
+      "notes": "Seed source reference for [\"hemingway-classic\",\"problems\",\"unwanted-ai\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:b8755801c6af84c975a85dd5343be9a4596b9ecbd4839f5ee024f33d682c6a43",
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "updated_at": "2026-10-06T04:14:23.31324+00:00",
+      "evidence_source_id": "8d56bdcb-3293-4bed-b123-e9fa063091c4"
+    },
+    {
+      "id": "b2ea4607-be91-4364-a958-0c2e7f018d94",
+      "notes": "Seed source reference for [\"hemingway-classic\",\"problems\",\"cloud-dependency\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:c7219af0a802c32d29c52177937b5cefaddf4559abe03ff7736eee807e546ace",
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "updated_at": "2026-10-06T04:14:23.31324+00:00",
+      "evidence_source_id": "8d56bdcb-3293-4bed-b123-e9fa063091c4"
+    },
+    {
+      "id": "8eb54ad2-9490-4240-ab47-1c659ec8624c",
+      "notes": "Seed source reference for [\"hemingway-classic\",\"attributes\",\"trade-off-summary\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:e77805c684d41d2ab2b12129774291a58f1554469c7c836fc0da2d7fb403d4b2",
+      "created_at": "2026-10-06T03:23:20.913879+00:00",
+      "updated_at": "2026-10-06T03:23:20.913879+00:00",
+      "evidence_source_id": "c4a9d134-a64d-4953-a867-a0ddd4214bd7"
+    },
+    {
+      "id": "ecb4ecae-35e6-43cb-aef2-365f0da594a0",
+      "notes": "Seed source reference for [\"hemingway-classic\",\"attributes\",\"works-offline\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:e83196f64eee506fc5e842daa04b4b38358aea8e5290e93923549dd839847833",
+      "created_at": "2026-10-06T03:23:20.913879+00:00",
+      "updated_at": "2026-10-06T03:23:20.913879+00:00",
+      "evidence_source_id": "8d56bdcb-3293-4bed-b123-e9fa063091c4"
+    },
+    {
+      "id": "e8af9a32-d18d-4751-9d57-f7468b5f0121",
+      "notes": "Seed source reference for [\"hemingway-classic\",\"attributes\",\"pricing-model\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:eecaa6e51ad09a7df312358e53a9939e90a1bb08ca7ca31f5d43180466cfefbc",
+      "created_at": "2026-10-06T03:23:20.913879+00:00",
+      "updated_at": "2026-10-06T03:23:20.913879+00:00",
+      "evidence_source_id": "d61e6da0-e3ac-450c-9b4f-e9511f390541"
+    }
+  ],
+  "product_anchors": [
+    {
+      "anchor_id": "0270dd80-f9fb-4c10-8937-3928c4ae4362",
+      "confidence": 0.75,
+      "created_at": "2026-10-06T03:23:20.913879+00:00",
+      "product_id": "db62ef76-724f-412f-9b63-d5b000d80ddc",
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "relationship_type": "alternative",
+      "scope_description": null,
+      "relationship_scope": null,
+      "verification_status": "likely"
+    }
+  ],
+  "evidence_sources": [
+    {
+      "id": "8d56bdcb-3293-4bed-b123-e9fa063091c4",
+      "url": "https://hemingwayapp.com/desktop",
+      "title": "Hemingway Editor Classic — overview reference",
+      "seed_key": "hemingway-classic-overview-2026-10-06",
+      "publisher": "Hemingway Editor Classic",
+      "created_at": "2026-10-06T03:23:20.913879+00:00",
+      "updated_at": "2026-10-06T03:23:20.913879+00:00",
+      "source_type": "official",
+      "retrieved_at": "2026-10-06T00:00:00+00:00"
+    },
+    {
+      "id": "61764af4-1c7c-4280-8f17-9879b15490f0",
+      "url": "https://hemingwayapp.com/desktop",
+      "title": "Hemingway Editor Classic — platform reference",
+      "seed_key": "hemingway-classic-platform-2026-10-06",
+      "publisher": "Hemingway Editor Classic",
+      "created_at": "2026-10-06T03:23:20.913879+00:00",
+      "updated_at": "2026-10-06T03:23:20.913879+00:00",
+      "source_type": "official",
+      "retrieved_at": "2026-10-06T00:00:00+00:00"
+    },
+    {
+      "id": "d61e6da0-e3ac-450c-9b4f-e9511f390541",
+      "url": "https://hemingwayapp.com/desktop",
+      "title": "Hemingway Editor Classic — pricing reference",
+      "seed_key": "hemingway-classic-pricing-2026-10-06",
+      "publisher": "Hemingway Editor Classic",
+      "created_at": "2026-10-06T03:23:20.913879+00:00",
+      "updated_at": "2026-10-06T03:23:20.913879+00:00",
+      "source_type": "pricing",
+      "retrieved_at": "2026-10-06T00:00:00+00:00"
+    },
+    {
+      "id": "c4a9d134-a64d-4953-a867-a0ddd4214bd7",
+      "url": "https://hemingwayapp.com/desktop",
+      "title": "Hemingway Editor Classic — tradeoff reference",
+      "seed_key": "hemingway-classic-tradeoff-2026-10-06",
+      "publisher": "Hemingway Editor Classic",
+      "created_at": "2026-10-06T03:23:20.913879+00:00",
+      "updated_at": "2026-10-06T03:23:20.913879+00:00",
+      "source_type": "official",
+      "retrieved_at": "2026-10-06T00:00:00+00:00"
+    }
+  ],
+  "product_problems": [
+    {
+      "confidence": 0.75,
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "problem_id": "969ac1b9-21ca-433f-8365-e3d8554b1271",
+      "product_id": "db62ef76-724f-412f-9b63-d5b000d80ddc",
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "likely"
+    },
+    {
+      "confidence": 0.75,
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "problem_id": "ea051229-179e-4714-a1a3-a1304070bf70",
+      "product_id": "db62ef76-724f-412f-9b63-d5b000d80ddc",
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "likely"
+    }
+  ],
+  "taxonomy_anchors": [
+    {
+      "id": "0270dd80-f9fb-4c10-8937-3928c4ae4362",
+      "name": "Grammarly",
+      "slug": "grammarly",
+      "created_at": "2026-10-06T03:23:20.913879+00:00",
+      "updated_at": "2026-10-06T03:23:20.913879+00:00",
+      "description": "Grammar, writing assistance, and style-editing ecosystem; alternatives may cover only part of the workflow."
+    }
+  ],
+  "product_audiences": [
+    {
+      "confidence": 0.75,
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "product_id": "db62ef76-724f-412f-9b63-d5b000d80ddc",
+      "audience_id": "6c4f55ba-6a76-4b4e-aab3-2913750f8dd1",
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "likely"
+    },
+    {
+      "confidence": 0.75,
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "product_id": "db62ef76-724f-412f-9b63-d5b000d80ddc",
+      "audience_id": "a109e976-6346-458d-b1aa-dac8c190b8c0",
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "likely"
+    }
+  ],
+  "taxonomy_problems": [
+    {
+      "id": "ea051229-179e-4714-a1a3-a1304070bf70",
+      "name": "Cloud Dependency",
+      "slug": "cloud-dependency",
+      "created_at": "2026-10-06T02:49:38.03521+00:00",
+      "updated_at": "2026-10-06T02:49:38.03521+00:00",
+      "description": "The user wants important work to remain available without depending on a vendor cloud connection."
+    },
+    {
+      "id": "969ac1b9-21ca-433f-8365-e3d8554b1271",
+      "name": "Unwanted AI",
+      "slug": "unwanted-ai",
+      "created_at": "2026-10-06T02:49:38.03521+00:00",
+      "updated_at": "2026-10-06T02:49:38.03521+00:00",
+      "description": "The user wants a workflow where AI is not required for core use."
+    }
+  ],
+  "product_attributes": [
+    {
+      "confidence": 0.95,
+      "created_at": "2026-10-06T03:23:20.913879+00:00",
+      "product_id": "db62ef76-724f-412f-9b63-d5b000d80ddc",
+      "updated_at": "2026-10-06T03:23:20.913879+00:00",
+      "value_enum": null,
+      "value_text": "Classic excludes the new AI features; its described workflow focuses on readability and style highlights.",
+      "attribute_id": "18dee1eb-8a8a-45fa-b463-8487065642d9",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "verified"
+    },
+    {
+      "confidence": 0.95,
+      "created_at": "2026-10-06T03:23:20.913879+00:00",
+      "product_id": "db62ef76-724f-412f-9b63-d5b000d80ddc",
+      "updated_at": "2026-10-06T03:23:20.913879+00:00",
+      "value_enum": null,
+      "value_text": null,
+      "attribute_id": "2d9835d9-4aa0-4fb3-93fa-2c98d4f890c4",
+      "value_number": null,
+      "value_boolean": true,
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "verified"
+    },
+    {
+      "confidence": 0.95,
+      "created_at": "2026-10-06T03:23:20.913879+00:00",
+      "product_id": "db62ef76-724f-412f-9b63-d5b000d80ddc",
+      "updated_at": "2026-10-06T03:23:20.913879+00:00",
+      "value_enum": null,
+      "value_text": "Windows, macOS",
+      "attribute_id": "2e5f8446-3bb6-4e92-990e-d6c253d2417c",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "verified"
+    },
+    {
+      "confidence": 0.95,
+      "created_at": "2026-10-06T03:23:20.913879+00:00",
+      "product_id": "db62ef76-724f-412f-9b63-d5b000d80ddc",
+      "updated_at": "2026-10-06T03:23:20.913879+00:00",
+      "value_enum": null,
+      "value_text": "Paid desktop license sold through the vendor's linked checkout.",
+      "attribute_id": "83353c3f-3cd2-4505-8311-f722e720867c",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "verified"
+    },
+    {
+      "confidence": null,
+      "created_at": "2026-10-06T03:23:20.913879+00:00",
+      "product_id": "db62ef76-724f-412f-9b63-d5b000d80ddc",
+      "updated_at": "2026-10-06T03:23:20.913879+00:00",
+      "value_enum": null,
+      "value_text": null,
+      "attribute_id": "cf8b0015-81e0-440b-b7d6-281ae28c43d4",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": null,
+      "verification_status": "unknown"
+    },
+    {
+      "confidence": 0.95,
+      "created_at": "2026-10-06T03:23:20.913879+00:00",
+      "product_id": "db62ef76-724f-412f-9b63-d5b000d80ddc",
+      "updated_at": "2026-10-06T03:23:20.913879+00:00",
+      "value_enum": null,
+      "value_text": null,
+      "attribute_id": "f540baaf-959c-485b-a65b-68c2b072841e",
+      "value_number": null,
+      "value_boolean": true,
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "verified"
+    }
+  ],
+  "published_products": [
+    "2do",
+    "affine",
+    "anytype",
+    "appflowy",
+    "gimp",
+    "healthy-minds-program",
+    "joplin",
+    "krita",
+    "medito",
+    "obsidian",
+    "omnifocus",
+    "paint-net",
+    "pdf-xchange-editor",
+    "pdf24-creator",
+    "pdfgear",
+    "simplenote",
+    "smiling-mind",
+    "things"
+  ],
+  "taxonomy_audiences": [
+    {
+      "id": "a109e976-6346-458d-b1aa-dac8c190b8c0",
+      "name": "Offline-First Users",
+      "slug": "offline-first-users",
+      "created_at": "2026-10-06T02:49:38.03521+00:00",
+      "updated_at": "2026-10-06T02:49:38.03521+00:00",
+      "description": null
+    },
+    {
+      "id": "6c4f55ba-6a76-4b4e-aab3-2913750f8dd1",
+      "name": "Writers and Editors",
+      "slug": "writers-and-editors",
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "updated_at": "2026-10-06T04:14:23.31324+00:00",
+      "description": "People comparing grammar, style, or language-reference tools within the documented edition and language scope."
+    }
+  ],
+  "taxonomy_attributes": [
+    {
+      "id": "f540baaf-959c-485b-a65b-68c2b072841e",
+      "name": "AI Optional",
+      "slug": "ai-optional",
+      "category": "ai",
+      "created_at": "2026-10-06T02:49:38.03521+00:00",
+      "updated_at": "2026-10-06T02:49:38.03521+00:00",
+      "value_type": "boolean",
+      "description": "Core product workflows remain usable without enabling, purchasing, or depending on AI functionality. Integrated AI or optional AI plugins do not disqualify a product; evidence must support the non-AI core workflow."
+    },
+    {
+      "id": "496d6370-cf03-4842-b0e3-22c307613b97",
+      "name": "No Subscription",
+      "slug": "no-subscription",
+      "category": "pricing",
+      "created_at": "2026-10-07T09:58:41.404192+00:00",
+      "updated_at": "2026-10-07T09:58:41.404192+00:00",
+      "value_type": "boolean",
+      "description": "The named edition supports the stated meaningful core workflow without a mandatory recurring software payment. Free and perpetual paid editions may qualify; trials do not. Optional sync, AI, cloud, maintenance and paid upgrades must be disclosed."
+    },
+    {
+      "id": "cf8b0015-81e0-440b-b7d6-281ae28c43d4",
+      "name": "Open Source",
+      "slug": "open-source",
+      "category": "licensing",
+      "created_at": "2026-10-06T02:49:38.03521+00:00",
+      "updated_at": "2026-10-06T02:49:38.03521+00:00",
+      "value_type": "boolean",
+      "description": "The product or its core editor is distributed under an open-source license according to current official materials."
+    },
+    {
+      "id": "83353c3f-3cd2-4505-8311-f722e720867c",
+      "name": "Pricing Model",
+      "slug": "pricing-model",
+      "category": "pricing",
+      "created_at": "2026-10-06T03:22:38.833862+00:00",
+      "updated_at": "2026-10-06T03:22:38.833862+00:00",
+      "value_type": "text",
+      "description": "Source-backed pricing model and relevant edition scope; excludes transient numeric prices."
+    },
+    {
+      "id": "2e5f8446-3bb6-4e92-990e-d6c253d2417c",
+      "name": "Supported Platforms",
+      "slug": "supported-platforms",
+      "category": "platform",
+      "created_at": "2026-10-06T03:22:38.833862+00:00",
+      "updated_at": "2026-10-06T03:22:38.833862+00:00",
+      "value_type": "text",
+      "description": "Source-listed platforms and edition scope; an omitted platform is not a verified negative."
+    },
+    {
+      "id": "18dee1eb-8a8a-45fa-b463-8487065642d9",
+      "name": "Trade-Off Summary",
+      "slug": "trade-off-summary",
+      "category": "workflow",
+      "created_at": "2026-10-06T03:22:38.833862+00:00",
+      "updated_at": "2026-10-06T03:22:38.833862+00:00",
+      "value_type": "text",
+      "description": "Evidence-backed restrictions or explicitly provisional editorial interpretation, with confidence status."
+    },
+    {
+      "id": "2d9835d9-4aa0-4fb3-93fa-2c98d4f890c4",
+      "name": "Works Offline",
+      "slug": "works-offline",
+      "category": "offline",
+      "created_at": "2026-10-06T02:49:38.03521+00:00",
+      "updated_at": "2026-10-06T02:49:38.03521+00:00",
+      "value_type": "boolean",
+      "description": "Core work remains available without an internet connection."
+    }
+  ],
+  "product_anchor_evidence": [
+    {
+      "anchor_id": "0270dd80-f9fb-4c10-8937-3928c4ae4362",
+      "product_id": "db62ef76-724f-412f-9b63-d5b000d80ddc",
+      "claim_evidence_id": "fb686abb-bb34-4ca4-86a9-4ffd3085b829",
+      "relationship_type": "alternative"
+    }
+  ],
+  "product_problem_evidence": [
+    {
+      "problem_id": "969ac1b9-21ca-433f-8365-e3d8554b1271",
+      "product_id": "db62ef76-724f-412f-9b63-d5b000d80ddc",
+      "claim_evidence_id": "842c8448-932e-4b9f-a582-39ee65e9ef7e"
+    },
+    {
+      "problem_id": "ea051229-179e-4714-a1a3-a1304070bf70",
+      "product_id": "db62ef76-724f-412f-9b63-d5b000d80ddc",
+      "claim_evidence_id": "b2ea4607-be91-4364-a958-0c2e7f018d94"
+    }
+  ],
+  "target_route_memberships": [],
+  "approved_published_routes": [
+    "meditation-apps-without-a-subscription",
+    "notion-alternatives-without-ai",
+    "offline-notion-alternatives",
+    "pdf-editors-without-a-subscription",
+    "photoshop-alternatives-without-a-subscription",
+    "productivity-apps-you-can-buy-once",
+    "simple-notion-alternatives",
+    "todoist-alternatives-with-a-one-time-purchase"
+  ],
+  "product_audience_evidence": [
+    {
+      "product_id": "db62ef76-724f-412f-9b63-d5b000d80ddc",
+      "audience_id": "6c4f55ba-6a76-4b4e-aab3-2913750f8dd1",
+      "claim_evidence_id": "2e8adb0d-ed71-4ec6-ac20-b5d3af8634c6"
+    },
+    {
+      "product_id": "db62ef76-724f-412f-9b63-d5b000d80ddc",
+      "audience_id": "a109e976-6346-458d-b1aa-dac8c190b8c0",
+      "claim_evidence_id": "68cda7f8-929c-4c00-8030-a9963d19cd73"
+    }
+  ],
+  "product_attribute_evidence": [
+    {
+      "product_id": "db62ef76-724f-412f-9b63-d5b000d80ddc",
+      "attribute_id": "18dee1eb-8a8a-45fa-b463-8487065642d9",
+      "claim_evidence_id": "8eb54ad2-9490-4240-ab47-1c659ec8624c"
+    },
+    {
+      "product_id": "db62ef76-724f-412f-9b63-d5b000d80ddc",
+      "attribute_id": "2d9835d9-4aa0-4fb3-93fa-2c98d4f890c4",
+      "claim_evidence_id": "ecb4ecae-35e6-43cb-aef2-365f0da594a0"
+    },
+    {
+      "product_id": "db62ef76-724f-412f-9b63-d5b000d80ddc",
+      "attribute_id": "2e5f8446-3bb6-4e92-990e-d6c253d2417c",
+      "claim_evidence_id": "19b33acd-f995-43c2-923e-7a908a75a7a8"
+    },
+    {
+      "product_id": "db62ef76-724f-412f-9b63-d5b000d80ddc",
+      "attribute_id": "83353c3f-3cd2-4505-8311-f722e720867c",
+      "claim_evidence_id": "e8af9a32-d18d-4751-9d57-f7468b5f0121"
+    },
+    {
+      "product_id": "db62ef76-724f-412f-9b63-d5b000d80ddc",
+      "attribute_id": "f540baaf-959c-485b-a65b-68c2b072841e",
+      "claim_evidence_id": "b9156831-4d89-4bde-a0dc-46789e2ddb0b"
+    }
+  ],
+  "anon_private_evidence_boundary": true
+}
