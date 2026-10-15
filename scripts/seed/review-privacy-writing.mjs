@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {createHash} from 'node:crypto';
+import {latestPublicationAudit} from '../escape-remaining-routes.mjs';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
+const review=JSON.parse(fs.readFileSync(path.join(root,'seed/research/privacy-writing-review-2026-10-15.json'),'utf8'));
+if(process.argv.length!==2||createHash('sha256').update(JSON.stringify(review)).digest('hex')!=='b4af54974720a7ceb6521703ac39226fc1e413cc003b0c9839a74371115929bf')throw Error('Privacy research content drift');
+if(!review.researchOnly||review.graphChanges||review.publicationApproved||review.qualifiedNewCandidates!==0||review.validationProtocol.status!=='planned-not-executed')throw Error('Research boundary drift');
+const audit=latestPublicationAudit(),privacy=audit.routes.find(x=>x.slug===review.route);
+if(audit.publishedProducts!==21||audit.acceptedPublishedRoutes!==9||audit.remainingRoutes!==1||!privacy||privacy.publication!=='not-published'||privacy.qualifiedDraftGraphCandidates!==0)throw Error('Accepted checkpoint or privacy qualification drift');
+console.log('PR5.72:13 primary sources;3 original edition reviews and2 separate research leads. Six-axis rubric proposed, not applied.');
+console.log('Accepted21 products/9 completed routes/1 remaining. Zero new privacy qualifications. No database/network writes or native tests.');

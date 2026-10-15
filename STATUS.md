@@ -378,3 +378,8 @@ Clean actual HEAD0e167d8 inspected. Actual PR5.69 stored snapshot matches all re
 ## PR5.71 — Writing publication accepted
 
 Owner explicit writing-publication approval, successful apply,21/21 true SQL checks and eight incognito route/product/official-link screenshots recorded. Latest accepted21 products/9 completed routes/1 remaining. CLI/latestPublicationAudit uses reviewed writing-stage reconstruction and immutable new checkpoint; historical meditation18/8/2 and productivity15/7/3 entry points retained. Classic excluded; privacy remains zero-qualified/unapproved. No new SQL/graph/publication changes. See WRITING_PUBLICATION_ACCEPTANCE.md.
+
+
+## PR5.72 — Privacy writing evidence review
+
+Clean actual HEADfb919be and owner Production90 acceptance recorded. Three original privacy candidates reviewed by exact edition across six proposed evidence axes; separate local-LanguageTool and free-web-Hemingway leads retained without graph promotion. Thirteen official sources distinguish installed/cloud operations, retention, training and rights. Classic is excluded from the current web privacy policy; installed Antidote subscription Correction is a separate research path from conditional perpetual upgrades. Zero new qualified candidates; accepted21/9/1 unchanged. No SQL, engine, graph, installation or publication changes. See PRIVACY_WRITING_REVIEW.md.
