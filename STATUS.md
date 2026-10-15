@@ -338,3 +338,8 @@ Clean actual HEADc8f66a5 inspected. New official Free/Docs/Paraphraser/dedicated
 ## PR5.63 — Owner Chrome checker follow-up
 
 Owner public-page spelling control returned readable sentnce-to-sentence feedback despite introductory right panel; prior passive input had no visible readable suggestion. Header is authenticated-looking, exact tier/provider not isolated. Separate Editor shows readable passive rewrite explicitly labeled Pro suggestion with 3 free samples left today; no ordinary-Free entitlement, reset or accepted edit inferred. Close owner probe; preserve prior research/corpus and hold both writing routes at zero qualified. Real Write remains research-only. No graph/engine/SQL/publication changes; accepted18/8/2. See WRITING_OWNER_CHECKER_FOLLOWUP.md.
+
+
+## PR5.64 — Owner-selected passive review scope
+
+Owner approved investigating Grammarly Pro capability as baseline for passive feedback/manual revision/recheck against no-subscription editions. Official documentation rechecked; prior sample access stays limited, Free history frozen. Hemingway free web/Grazie Free evidence reusable; Real Write remains research-only with metric/terms limitations. Exact identity mapping, scoped claim drafts and later no-subscription scope enforcement required; privacy unchanged. No graph/engine/SQL/publication edits, zero newly qualified;18/8/2. See WRITING_PASSIVE_SCOPE_REVIEW.md.

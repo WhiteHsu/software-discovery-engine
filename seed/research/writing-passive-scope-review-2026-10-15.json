@@ -1,0 +1,164 @@
+{
+  "version": 1,
+  "packet": "PR5.64",
+  "baseline": "47ecb332b8b047f362b501bdac47a7d2651ba5b5",
+  "researchOnly": true,
+  "ownerDecision": {
+    "approved": true,
+    "quote": "對，我覺得就這樣",
+    "scope": "Investigate paid Grammarly Pro capability baseline against no-subscription candidates for passive review; no publication approval."
+  },
+  "scope": {
+    "proposedKey": "personal-english-passive-construction-review",
+    "activity": [
+      "inspect feedback",
+      "decide and make a manual revision",
+      "recheck"
+    ],
+    "anchorEdition": "Grammarly Pro capability; owner observation remains a limited Pro sample, not paid-account execution",
+    "candidatePaymentConstraint": "No mandatory recurring payment for the reviewed detector operation, independently evidenced per edition.",
+    "excludes": [
+      "full grammar replacement",
+      "generated rewrite parity",
+      "accuracy equivalence",
+      "privacy/offline parity",
+      "all passive constructions detected"
+    ]
+  },
+  "inputs": [
+    {
+      "path": "lib/discovery/escape-model.ts",
+      "sha256": "8f0b4ab061439cced108b079bd25ef5ebc169d5030afd4cfa09ab787c69f1854"
+    },
+    {
+      "path": "seed/research/writing-owner-corpus-2026-10-14.json",
+      "sha256": "efb5b344f5a0d9fc810bb33c263fc6bdacbf65e68d155f406ff3c9f4288ab482"
+    },
+    {
+      "path": "seed/research/hemingway-common-corpus-2026-10-14.json",
+      "sha256": "a9f0d6bb1fd167446854d50d511bf992cf1225bc851867b22e2b27f26a78bfa7"
+    },
+    {
+      "path": "seed/research/writing-gap-recheck-2026-10-15.json",
+      "sha256": "ea56f1842753f683a50636f8aa3d08633ae63d6ca4267a2d6e9b7d3aec33dd21"
+    },
+    {
+      "path": "seed/research/writing-owner-checker-followup-2026-10-15.json",
+      "sha256": "5dfdb9fe608e3f605ab7b82245affbeb1415a3f4b8d1ef97e8088c301bf1cd50"
+    }
+  ],
+  "sources": [
+    {
+      "id": "G1",
+      "url": "https://www.grammarly.com/plans",
+      "checkedAt": "2026-10-15",
+      "summary": "Pro includes full-sentence rewrites; plan table icons not inferred. No exact price adopted."
+    },
+    {
+      "id": "G2",
+      "url": "https://support.grammarly.com/hc/en-us/articles/360045784631-How-to-deactivate-certain-suggestions-in-the-Grammarly-Editor",
+      "checkedAt": "2026-10-15",
+      "summary": "Paid-plan control lists passive suggestions; control entitlement alone is not exclusive detection entitlement."
+    },
+    {
+      "id": "G3",
+      "url": "https://support.grammarly.com/hc/en-us/articles/115000091472-What-is-document-domain-and-how-do-I-change-it",
+      "checkedAt": "2026-10-15",
+      "summary": "Pro-accessible domains include Academic passive feedback; Casual/Creative can omit passive flags. Prior owner domain remains unknown."
+    },
+    {
+      "id": "H1",
+      "url": "https://hemingwayapp.com/",
+      "checkedAt": "2026-10-15",
+      "summary": "Describes passive highlights; do not transfer Plus rewriting to free web."
+    },
+    {
+      "id": "H2",
+      "url": "https://hemingwayapp.com/readability-checker",
+      "checkedAt": "2026-10-15",
+      "summary": "Free live readability feedback documented; earlier dated passive pair supplies hands-on evidence."
+    },
+    {
+      "id": "J1",
+      "url": "https://www.jetbrains.com/help/grazie-browser-extension/writing-style-settings.html",
+      "checkedAt": "2026-10-15",
+      "summary": "All writing styles available across plans; English passive highlighting configurable."
+    },
+    {
+      "id": "J2",
+      "url": "https://www.jetbrains.com/help/grazie-browser-extension/subscriptions.html",
+      "checkedAt": "2026-10-15",
+      "summary": "Free default distinguished from paid AI plans; no universal proofreading quota inferred."
+    },
+    {
+      "id": "J3",
+      "url": "https://www.jetbrains.com/help/grazie-browser-extension/installation-guide.html",
+      "checkedAt": "2026-10-15",
+      "summary": "Supported browser and JetBrains account needed."
+    },
+    {
+      "id": "R1",
+      "url": "https://realwriteapp.com/tools/passive-voice-detector",
+      "checkedAt": "2026-10-15",
+      "summary": "Dedicated detector explicitly free without signup; no suite-wide unlimited rights inferred."
+    },
+    {
+      "id": "R2",
+      "url": "https://realwriteapp.com/pricing",
+      "checkedAt": "2026-10-15",
+      "summary": "Paid service pricing separate from dedicated detector."
+    },
+    {
+      "id": "R3",
+      "url": "https://realwriteapp.com/terms",
+      "checkedAt": "2026-10-15",
+      "summary": "Opened but no readable body returned; legal terms not verified."
+    }
+  ],
+  "candidates": [
+    {
+      "edition": "Hemingway free anonymous web",
+      "reused": "Prior passive before/after feedback; not Classic or Plus.",
+      "fit": "Relevant passive flags and manual recheck observed.",
+      "limits": "Free detector distinct from Plus rewriting. No full grammar, offline or accuracy parity.",
+      "status": "Evidence reusable; draft claims not yet approved."
+    },
+    {
+      "edition": "Grazie Free Chrome 1.15.1 in owner Gmail",
+      "reused": "Prior branded passive suggestion and manual-after no-notes result.",
+      "fit": "Documented plan-independent passive style plus Free owner session.",
+      "limits": "Account/browser/internet and style configuration; proofreading metering unresolved. Earlier load issue and unknown root cause retained.",
+      "status": "Evidence reusable; no unlimited-service claim."
+    },
+    {
+      "edition": "Real Write dedicated public passive detector",
+      "reused": "PR5.62 anonymous one-pair result: two relevant highlights, active revision no detection.",
+      "fit": "Official dedicated detector free without signup.",
+      "limits": "Heuristic misses/false positives; 200% Mostly Active summary not usable as sentence-share metric; 3000-word UI observed earlier; paid suite/credits separate; terms body unreadable.",
+      "status": "Research-only new identity; rights/identity/trade-off review required before graph inclusion."
+    }
+  ],
+  "editorialDecision": "A defensible bounded task comparison can proceed to exact-edition draft-claim design; this is an editorial inference from documentation plus dated observations, not three qualified alternatives.",
+  "implementationAudit": {
+    "current": "No relationshipScope on either Grammarly route. Generic anchor match could accept broader unrelated relationship evidence once future claims are added.",
+    "required": "Add exact scope and nonempty reviewed-edition description enforcement only for no-subscription writing; preserve privacy route hold. Audit existing Hemingway identity versus selected free web edition; create Grazie/Real Write identities only after review. Existing general Grammarly anchor can remain with explicit Pro baseline in scoped relationship description; no silent global anchor edition change.",
+    "futureClaims": [
+      "dated scoped alternative relationship",
+      "no-subscription positive evidence",
+      "meaningful pricing model",
+      "meaningful trade-off summary"
+    ],
+    "publicCopy": "Proposed comparison must say passive review with manual edits and identify Pro capability baseline. Do not present a complete Grammarly replacement.",
+    "historicalSafety": "Engine changes require updating explicit historical compatibility pins rather than overwriting frozen records."
+  },
+  "next": "Prepare reviewed claim drafts and exact identity mapping first; resolve Real Write terms/access limitations without a purchase. No repeat owner corpus, Pro account purchase or new SQL requested.",
+  "qualifiedNewCandidates": 0,
+  "graphChanges": false,
+  "publicationApproved": false,
+  "checkpoint": {
+    "products": 18,
+    "routes": 8,
+    "remaining": 2
+  },
+  "directory": "Stripe Directory skill consulted. No Directory tool available in current catalog; prior CLI unavailable. Official primary-source fallback; no installation, provisioning or transaction."
+}
