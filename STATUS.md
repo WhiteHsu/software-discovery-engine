@@ -393,3 +393,8 @@ Clean actual HEAD8841aa9 inspected; owner Production91 green. Antidote12 officia
 ## PR5.74 — Anonymous Hemingway network receipt
 
 Clean actual HEAD1ec712c inspected; owner Production92 green. Three returned analytics bodies decoded without submitted prose; selected engagement screenshot fields also show no test text. Anonymous free events include device-associated analytics identifiers. Partial capture, unknown consent state and uninspected requests prevent any no-transmission or privacy qualification claim. Sanitized receipt omits raw payloads, identifiers and tokens. Owner per-request capture round closed; consent/data-path research remains. Accepted21/9/1 and zero privacy qualifications unchanged. No SQL, graph, engine or publication changes. See HEMINGWAY_NETWORK_OBSERVATION.md.
+
+
+## PR5.75 — Anonymous privacy choices boundary
+
+Clean actual HEADd03db87 and owner Production93 recorded. Anonymous free-web Privacy choices exposes independent product analytics/affiliate options; both displayed unchecked after save/reload in existing agent browser profile. Necessary operation and aggregate measurement remain always-active per UI. No network enforcement, storage or GPC test; separate owner capture had unknown consent, so no violation/compliance inference. Hemingway privacy qualification paused at explicit evidence boundary; next distinct lead is local LanguageTool source/configuration review. Accepted21/9/1, zero new qualifications unchanged. No SQL/graph/engine changes. See HEMINGWAY_PRIVACY_CHOICES.md.

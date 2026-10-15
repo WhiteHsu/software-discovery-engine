@@ -1,0 +1,18 @@
+{
+  "version":1,
+  "packet":"PR5.75",
+  "recordedAt":"2026-10-15",
+  "baselineCommit":"d03db8779b4883c7918dd9dddd07e9d6b17a0fe4",
+  "researchOnly":true,
+  "graphChanges":false,
+  "publicationApproved":false,
+  "qualifiedNewCandidates":0,
+  "checkpoint":{"products":21,"completedRoutes":9,"remainingRoutes":1},
+  "edition":"Hemingway free web; no login or Plus trial initiated",
+  "uiObservation":{"browser":"Codex in-app browser; existing profile, temporary tab16","url":"https://hemingwayapp.com/","path":["Menu","Privacy choices"],"initialState":{"productAnalytics":false,"affiliateAttribution":false},"action":"Saved both optional choices unchecked, reloaded page, reopened Privacy choices.","verifiedState":{"productAnalytics":false,"affiliateAttribution":false},"alwaysActiveLabels":["Essential service operation: authentication, billing, security, runtime diagnostics, experiment assignment, survey suppression and requested preferences","Audience measurement: aggregate visits and traffic sources without persistent visitor identifiers, per UI description"],"screenshot":"PR5.75-privacy-choices.png","cleanup":"Temporary tab closed; optional choices remain declined in agent browser profile. Owner Chrome settings were not changed.","limitations":["Initial unchecked state is not proof of factory defaults: profile existed before this test.","No network capture, cookie/storage inspection or GPC test performed.","UI state proves displayed preference persistence only, not server enforcement or absence of telemetry."]},
+  "source":{"url":"https://hemingwayapp.com/legal/privacy-policy","canonicalUrl":"https://hemingwayapp.com/legal/privacy-policy/2026-10-08","effective":"2026-10-08","access":"Current alias directly read; canonical direct open failed in this tool, but alias lists that canonical version.","locator":"Sections4 and5","finding":"Policy separates basic website measurement from optional product analytics/referral tracking and exposes Privacy choices. It describes GPC disabling both optional purposes. This is vendor documentation; no GPC behavior was tested. Legacy standalone desktop remains outside this policy's scope."},
+  "comparisonWithOwnerCapture":{"receipt":"hemingway-network-observation-2026-10-15.json","ownerConsentState":"unknown","sameProfile":false,"conclusion":"Owner-returned identified analytics events and separate agent UI choices cannot establish that optional tracking occurred after refusal. No consent-violation or compliant-enforcement finding is made."},
+  "decision":"hold-no-privacy-qualification",
+  "supportedClaims":["Anonymous free-web interface offers two independent optional choices.","Both displayed choices remained unchecked after saving and reload in this existing agent browser profile.","UI distinguishes optional choices from always-active categories; refusing options is not a zero-telemetry guarantee."],
+  "nextWork":{"hemingway":"Pause qualification at this explicit evidence boundary; no further per-request owner screenshots requested. Any later enforcement claim needs a single controlled trace with recorded consent in the same session.","priority":"Assess local LanguageTool as a distinct edition through official source/configuration review before any installation or graph proposal; retain Antidote control gaps separately.","publication":"Keep current engine, minimum candidate requirement and accepted21/9/1 checkpoint unchanged."}
+}

@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {createHash} from 'node:crypto';
+import {latestPublicationAudit} from '../escape-remaining-routes.mjs';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
+const review=JSON.parse(fs.readFileSync(path.join(root,'seed/research/hemingway-privacy-choices-2026-10-15.json'),'utf8'));
+if(process.argv.length!==2||createHash('sha256').update(JSON.stringify(review)).digest('hex')!=='456be2015f509d70df199166bf93c5dd5ecf98d49ba36cf46bc8009d15f38fbf')throw Error('Privacy research content drift');
+if(!review.researchOnly||review.graphChanges||review.publicationApproved||review.qualifiedNewCandidates!==0)throw Error('Research boundary drift');
+const audit=latestPublicationAudit(),privacy=audit.routes.find(x=>x.slug==='privacy-friendly-grammarly-alternatives');
+if(audit.publishedProducts!==21||audit.acceptedPublishedRoutes!==9||audit.remainingRoutes!==1||!privacy||privacy.publication!=='not-published'||privacy.qualifiedDraftGraphCandidates!==0)throw Error('Accepted checkpoint or privacy qualification drift');
+console.log('PR5.75:optional privacy choices persist after save/reload in existing agent profile.');
+console.log('Accepted21 products/9 completed routes/1 remaining. Zero new privacy qualifications. UI observation only; network enforcement and GPC not tested.');
