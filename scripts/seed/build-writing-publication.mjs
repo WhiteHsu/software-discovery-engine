@@ -1,0 +1,76 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {createHash} from 'node:crypto';
+import {writingImportInputs,buildWritingImport} from './build-writing-import.mjs';
+import {escapeDefinitions,rankCandidates,publishable} from '../../lib/discovery/escape-model.ts';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
+const hash=x=>createHash('sha256').update(JSON.stringify(x)).digest('hex');
+const PIN='30a2b53643e369ad33fd5e2d725eec36f6deed3d146fb03f3776baae7189ad64';
+const slugs=['hemingway-free-web','grazie-free-browser','real-write-passive-checker'],routeSlug='grammarly-alternatives-without-a-subscription';
+const quote=x=>"'"+x.replaceAll("'","''")+"'",list=xs=>xs.map(quote).join(',')||'NULL';
+const rlsQuery="SELECT coalesce(jsonb_agg(jsonb_build_object('table_name',c.relname,'rls_enabled',c.relrowsecurity) ORDER BY c.relname),'[]'::jsonb) FROM pg_class c JOIN pg_namespace n ON n.oid=c.relnamespace WHERE n.nspname='software_discovery' AND c.relname IN ('products','escape_routes','escape_route_products')";
+const policyQuery="SELECT coalesce(jsonb_agg(to_jsonb(p) ORDER BY tablename,policyname),'[]'::jsonb) FROM pg_policies p WHERE schemaname='software_discovery' AND tablename IN ('products','escape_routes','escape_route_products')";
+export function writingPublicationInputs(){return {importInput:writingImportInputs(),snapshot:JSON.parse(fs.readFileSync(path.join(root,'seed/research/writing-publication-baseline-2026-10-15.json'),'utf8'))};}
+export function buildWritingPublication(input,{commit=false}={}){
+ const s=input.snapshot;
+ if(hash(s)!==PIN||s.packet!=='PR5.69'||s.read_only!==true||s.products.length!==4||s.products.some(p=>p.status!=='draft'||![...slugs,'hemingway-classic'].includes(p.slug))||s.route.length!==1||s.route[0].slug!==routeSlug||s.route[0].status!=='draft'||s.route[0].editorially_approved||s.route_members.length!==3||s.target_route_memberships.length!==3||s.target_route_memberships.some(m=>m.route_slug!==routeSlug)||s.published_products.length!==18||s.approved_published_routes.length!==8||!s.anon_private_evidence_boundary||s.public_product_projections.length!==4||s.public_product_projections.some(x=>x.page!==null)||s.public_read_rls.length!==3||s.public_read_rls.some(x=>!x.rls_enabled))throw Error('Writing publication baseline drift');
+ const imported=buildWritingImport(input.importInput),lookup={products:s.products,attributes:s.taxonomy_attributes,anchors:s.taxonomy_anchors,evidence_sources:s.evidence_sources,claim_evidence:s.claim_evidence,escape_routes:s.route};
+ // Check every row proposed by the prior import against the actual returned production snapshot.
+ for(const op of imported.plan.tables){const actual=s[op.table]??lookup[op.table]??(op.table==='escape_route_products'?s.route_members:[]);
+  for(const row of op.rows)if(!actual.some(a=>Object.entries(row).every(([k,v])=>{
+   if(v&&typeof v==='object'&&v.$ref){const ref=v.$ref,target=lookup[ref.table]?.find(t=>Object.entries(ref.where).every(([key,value])=>t[key]===value));return a[k]===target?.id;}
+   return ['last_verified_at','retrieved_at'].includes(k)?Date.parse(a[k])===Date.parse(v):a[k]===v;
+  })))throw Error('Stored reviewed import row mismatch: '+op.table);
+ }
+ const sourcesFor=(links,pid,key,id,relationship)=>links.filter(l=>l.product_id===pid&&l[key]===id&&(!relationship||l.relationship_type===relationship)).map(l=>{const e=s.claim_evidence.find(e=>e.id===l.claim_evidence_id),src=s.evidence_sources.find(src=>src.id===e?.evidence_source_id);if(!src)throw Error('Incomplete stored evidence');return {title:src.title,url:src.url,retrievedAt:src.retrieved_at};});
+ const pages=s.products.filter(p=>slugs.includes(p.slug)).map(p=>({slug:p.slug,name:p.name,websiteUrl:p.website_url,description:p.short_description,status:'published',problems:[],audiences:[],routes:[],attributes:s.product_attributes.filter(c=>c.product_id===p.id).map(c=>{const t=s.taxonomy_attributes.find(t=>t.id===c.attribute_id);if(!t)throw Error('Missing stored attribute taxonomy');return {slug:t.slug,name:t.name,description:t.description,value:c.value_boolean??c.value_text??c.value_number??c.value_enum,verificationStatus:c.verification_status,confidence:c.confidence,lastVerifiedAt:c.last_verified_at,sources:sourcesFor(s.product_attribute_evidence,p.id,'attribute_id',t.id)};}),anchors:s.product_anchors.filter(c=>c.product_id===p.id).map(c=>{const t=s.taxonomy_anchors.find(t=>t.id===c.anchor_id);if(!t)throw Error('Missing stored anchor taxonomy');return {slug:t.slug,name:t.name,description:c.scope_description??t.description,scope:c.relationship_scope,relationshipType:c.relationship_type,verificationStatus:c.verification_status,confidence:c.confidence,lastVerifiedAt:c.last_verified_at,sources:sourcesFor(s.product_anchor_evidence,p.id,'anchor_id',t.id,c.relationship_type)};})}));
+ const def=escapeDefinitions.find(x=>x.slug===routeSlug),candidates=rankCandidates(def,pages.map(product=>({product,noveltyScore:0})));
+ if(candidates.length!==3||!publishable({published:true,candidates}))throw Error('Three qualified publication candidates required');
+ const allIds=list(s.products.map(p=>p.id)),ids=list(s.products.filter(p=>slugs.includes(p.slug)).map(p=>p.id)),guards=[];
+ for(const table of ['products','product_attributes','product_anchors','product_problems','product_audiences','product_attribute_evidence','product_anchor_evidence','product_problem_evidence','product_audience_evidence'])guards.push({table,rows:s[table],where:table==='products'?`slug IN (${list([...slugs,'hemingway-classic'])})`:`product_id IN (${allIds})`});
+ for(const table of ['claim_evidence','evidence_sources'])guards.push({table,rows:s[table],where:`id IN (${list(s[table].map(r=>r.id))})${table==='evidence_sources'?" OR seed_key LIKE 'writing67-%'":" OR evidence_source_id IN (SELECT id FROM software_discovery.evidence_sources WHERE seed_key LIKE 'writing67-%')"}`});
+ for(const table of ['attributes','anchors','problems','audiences'])guards.push({table,rows:s['taxonomy_'+table],where:`id IN (${list(s['taxonomy_'+table].map(r=>r.id))})`});
+ const members=s.route_members.map(m=>Object.fromEntries(Object.entries(m).filter(([k])=>k!=='product_slug')));
+ guards.push({table:'escape_routes',rows:s.route,where:`slug IN (${list([routeSlug,'privacy-friendly-grammarly-alternatives'])})`},{table:'escape_route_products',rows:members,where:`escape_route_id=${quote(s.route[0].id)} OR product_id IN (${allIds})`});
+ const data={guards,snapshot:{published_products:s.published_products,approved_published_routes:s.approved_published_routes,public_read_rls:s.public_read_rls,public_read_policies:s.public_read_policies}},payload=JSON.stringify(data);
+ const sql=`-- PR5.70 ${commit?'APPLY ONLY AFTER EXPLICIT OWNER PUBLICATION APPROVAL':'REHEARSAL: publication changes roll back'}.
+-- Only statuses of three existing products and status/approval of one route change.
+DO $writing_publish$
+DECLARE data jsonb=$payload$${payload}$payload$::jsonb; op jsonb; expected jsonb; actual jsonb;
+BEGIN
+ PERFORM set_config('lock_timeout','10s',true);
+ PERFORM set_config('TimeZone','UTC',true);
+ PERFORM pg_advisory_xact_lock(7232003);
+ LOCK TABLE ${guards.map(g=>'software_discovery.'+g.table).join(',')} IN SHARE ROW EXCLUSIVE MODE;
+ IF coalesce((SELECT jsonb_agg(slug ORDER BY slug) FROM software_discovery.products WHERE status='published'),'[]'::jsonb)<>data->'snapshot'->'published_products' OR coalesce((SELECT jsonb_agg(slug ORDER BY slug) FROM software_discovery.escape_routes WHERE status='published' AND editorially_approved),'[]'::jsonb)<>data->'snapshot'->'approved_published_routes' THEN RAISE EXCEPTION 'PR5.70 publication state drift or repeated apply; fresh preflight required'; END IF;
+ IF NOT has_function_privilege('anon','software_discovery.product_discovery_page(text)','EXECUTE') OR has_table_privilege('anon','software_discovery.claim_evidence','SELECT') THEN RAISE EXCEPTION 'PR5.70 private evidence boundary drift'; END IF;
+ IF (${rlsQuery})<>data->'snapshot'->'public_read_rls' OR (${policyQuery})<>data->'snapshot'->'public_read_policies' THEN RAISE EXCEPTION 'PR5.70 public read policy drift'; END IF;
+ FOR op IN SELECT value FROM jsonb_array_elements(data->'guards') LOOP
+  EXECUTE format('SELECT coalesce(jsonb_agg(j ORDER BY j::text),''[]''::jsonb) FROM (SELECT to_jsonb(jsonb_populate_record(NULL::software_discovery.%I,r))-''created_at''-''updated_at'' j FROM jsonb_array_elements($1) r) x',op->>'table') INTO expected USING op->'rows';
+  EXECUTE format('SELECT coalesce(jsonb_agg(j ORDER BY j::text),''[]''::jsonb) FROM (SELECT to_jsonb(t)-''created_at''-''updated_at'' j FROM software_discovery.%I t WHERE %s) x',op->>'table',op->>'where') INTO actual;
+  IF expected<>actual THEN RAISE EXCEPTION 'PR5.70 stored baseline drift: %',op->>'table'; END IF;
+ END LOOP;
+ IF EXISTS(SELECT 1 FROM software_discovery.products WHERE id IN (${ids}) AND software_discovery.product_discovery_page(slug) IS NOT NULL) THEN RAISE EXCEPTION 'PR5.70 draft public visibility drift'; END IF;
+ UPDATE software_discovery.products SET status='published' WHERE id IN (${ids});
+ UPDATE software_discovery.escape_routes SET status='published',editorially_approved=true WHERE id=${quote(s.route[0].id)};
+ IF (SELECT count(*) FROM software_discovery.products WHERE status='published')<>21 OR (SELECT count(*) FROM software_discovery.escape_routes WHERE status='published' AND editorially_approved)<>9 THEN RAISE EXCEPTION 'PR5.70 post-publication count mismatch'; END IF;
+ IF EXISTS(SELECT 1 FROM software_discovery.products p WHERE p.id IN (${ids}) AND (software_discovery.product_discovery_page(p.slug) IS NULL OR NOT EXISTS(SELECT 1 FROM jsonb_array_elements(software_discovery.product_discovery_page(p.slug)->'anchors') a WHERE a->>'slug'='grammarly' AND a->>'scope'='personal-english-passive-construction-review' AND a->>'verificationStatus'='verified' AND length(a->>'description')>0 AND jsonb_array_length(a->'sources')>0) OR NOT EXISTS(SELECT 1 FROM jsonb_array_elements(software_discovery.product_discovery_page(p.slug)->'attributes') a WHERE a->>'slug'='no-subscription' AND a->'value'='true'::jsonb AND a->>'verificationStatus'='verified' AND jsonb_array_length(a->'sources')>0))) THEN RAISE EXCEPTION 'PR5.70 public qualified projection missing'; END IF;
+ ${commit?'-- Apply persists only after owner approval.':"RAISE SQLSTATE 'ZSR01' USING MESSAGE='Writing publication rehearsal only';"}
+EXCEPTION WHEN SQLSTATE 'ZSR01' THEN RAISE NOTICE 'Writing publication rehearsal rolled back; no changes persisted';
+END $writing_publish$;
+`;
+ return {sql,guards,candidates,pages,report:{packet:'PR5.70',baselineSha256:PIN,publicationDecision:'pending-owner-approval',mode:commit?'apply-after-owner-approval':'rehearsal-rollback',products:slugs,route:routeSlug,qualified:3,before:{products:18,routes:8,remaining:2},after:{products:21,routes:9,remaining:1},claimsChanged:0,evidenceChanged:0,membershipsChanged:0,routeCopyChanged:false}};
+}
+export function writingPublicationVerification(input){
+ const r=buildWritingPublication(input),s=input.snapshot,products=[...s.published_products,...slugs].sort(),routes=[...s.approved_published_routes,routeSlug].sort();
+ const checks=r.guards.map(g=>{const rows=g.rows.map(row=>g.table==='products'&&slugs.includes(row.slug)?{...row,status:'published'}:g.table==='escape_routes'?{...row,status:'published',editorially_approved:true}:row);return `SELECT 'exact_${g.table}' check_name,(${`SELECT coalesce(jsonb_agg(j ORDER BY j::text),'[]'::jsonb) FROM (SELECT to_jsonb(t)-'created_at'-'updated_at' j FROM software_discovery.${g.table} t WHERE ${g.where}) x`})=(${`SELECT coalesce(jsonb_agg(j ORDER BY j::text),'[]'::jsonb) FROM (SELECT to_jsonb(jsonb_populate_record(NULL::software_discovery.${g.table},a))-'created_at'-'updated_at' j FROM jsonb_array_elements($verify$${JSON.stringify(rows)}$verify$::jsonb) a) x`}) passed`;});
+ checks.push(`SELECT 'published_slug_sets',coalesce((SELECT jsonb_agg(slug ORDER BY slug) FROM software_discovery.products WHERE status='published'),'[]'::jsonb)=$verify$${JSON.stringify(products)}$verify$::jsonb AND coalesce((SELECT jsonb_agg(slug ORDER BY slug) FROM software_discovery.escape_routes WHERE status='published' AND editorially_approved),'[]'::jsonb)=$verify$${JSON.stringify(routes)}$verify$::jsonb`,
+ `SELECT 'public_product_qualification_fields',(SELECT count(*)=3 AND bool_and((software_discovery.product_discovery_page(p.slug) IS NOT NULL AND EXISTS(SELECT 1 FROM jsonb_array_elements(software_discovery.product_discovery_page(p.slug)->'anchors') a WHERE a->>'slug'='grammarly' AND a->>'scope'='personal-english-passive-construction-review' AND a->>'verificationStatus'='verified' AND (a->>'confidence')::numeric>=.8 AND length(a->>'description')>0 AND jsonb_array_length(a->'sources')>0) AND EXISTS(SELECT 1 FROM jsonb_array_elements(software_discovery.product_discovery_page(p.slug)->'attributes') a WHERE a->>'slug'='no-subscription' AND a->'value'='true'::jsonb AND a->>'verificationStatus'='verified' AND (a->>'confidence')::numeric>=.8 AND jsonb_array_length(a->'sources')>0) AND EXISTS(SELECT 1 FROM jsonb_array_elements(software_discovery.product_discovery_page(p.slug)->'routes') a WHERE a->>'slug'='${routeSlug}')) IS TRUE) FROM software_discovery.products p WHERE p.slug IN (${list(slugs)}))`,
+ `SELECT 'public_read_rls_and_policies',(${rlsQuery})=$verify$${JSON.stringify(s.public_read_rls)}$verify$::jsonb AND (${policyQuery})=$verify$${JSON.stringify(s.public_read_policies)}$verify$::jsonb`,
+ `SELECT 'anon_private_evidence_boundary',has_function_privilege('anon','software_discovery.product_discovery_page(text)','EXECUTE') AND NOT has_table_privilege('anon','software_discovery.claim_evidence','SELECT')`);
+ return '-- PR5.70 SELECT only: all 21 checks must be true after approved publication.\n'+checks.join('\nUNION ALL\n')+';\n';
+}
+if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
+ try{if(process.argv.length!==2)throw Error('No arguments supported');const i=writingPublicationInputs(),r=buildWritingPublication(i);for(const commit of [false,true])fs.writeFileSync(path.join(root,`supabase/data/PR5.70_${commit?'APPLY_AFTER_APPROVAL':'REHEARSE'}.sql`),buildWritingPublication(i,{commit}).sql);fs.writeFileSync(path.join(root,'supabase/verification/PR5.70_VERIFY.sql'),writingPublicationVerification(i));const out=path.join(root,'.seed-output/writing-publication');fs.mkdirSync(out,{recursive:true});fs.writeFileSync(path.join(out,'report.json'),JSON.stringify(r.report,null,2)+'\n');console.log('PR5.70 concrete proposal generated; owner publication approval pending. No remote execution.');}catch(e){console.error(e.message);process.exitCode=1;}
+}

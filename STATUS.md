@@ -368,3 +368,8 @@ Actual clean HEAD7dfe4de inspected. Returned PR5.67 snapshot at2026-10-15T06:50:
 ## PR5.69 — Writing draft import accepted; publication preflight
 
 Owner PR5.68 verification29/29 true recorded with rehearsal/apply screenshots. Clean actual HEAD51b0732 inspected; owner Production87 screenshot green. Three imported editions and route remain draft/unapproved, Classic and private evidence preserved, public18/8/2. SELECT-only PR5.69_PREFLIGHT.sql adds actual stored claims/IDs/provenance plus RPC/RLS/policy metadata for publication review. No graph, claim, engine or publication writes; do not replay draft apply. See WRITING_PUBLICATION_PREFLIGHT_REVIEW.md.
+
+
+## PR5.70 — Writing publication proposal, owner approval pending
+
+Clean actual HEAD0e167d8 inspected. Actual PR5.69 stored snapshot matches all reviewed draft import rows; real engine qualifies the three scoped new editions. Concrete proposal updates only three product statuses and one route status/approval, retaining Classic, claims/evidence/memberships/policies and privacy hold. Public18/8/2 would become21/9/1 only after explicit owner writing-publication approval and apply.19 focused tests,9 database runtime groups and21 verification checks pass locally; no production execution. See WRITING_PUBLICATION_REVIEW.md.
