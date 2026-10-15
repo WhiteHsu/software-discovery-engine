@@ -1,0 +1,174 @@
+{
+  "version": 1,
+  "recordedAt": "2026-10-15",
+  "basis": "Owner explicit approval, SQL success/verification CSV and public browser screenshots; not a new agent database query",
+  "publishedProducts": [
+    "obsidian",
+    "things",
+    "omnifocus",
+    "2do",
+    "affine",
+    "anytype",
+    "appflowy",
+    "gimp",
+    "krita",
+    "paint-net",
+    "joplin",
+    "simplenote",
+    "pdf-xchange-editor",
+    "pdf24-creator",
+    "pdfgear",
+    "medito",
+    "smiling-mind",
+    "healthy-minds-program"
+  ],
+  "publishedRoutes": [
+    "todoist-alternatives-with-a-one-time-purchase",
+    "offline-notion-alternatives",
+    "photoshop-alternatives-without-a-subscription",
+    "notion-alternatives-without-ai",
+    "simple-notion-alternatives",
+    "pdf-editors-without-a-subscription",
+    "productivity-apps-you-can-buy-once",
+    "meditation-apps-without-a-subscription"
+  ],
+  "previousCheckpoint": "seed/research/publication-checkpoint-2026-10-14.json",
+  "latestPublication": {
+    "packet": "PR5.60",
+    "proposalCommit": "935dd8c44b9130467b49d806b990a154731765e4",
+    "approval": "Owner explicitly said 核准公開 in this chat before production apply on 2026-10-15",
+    "rehearsal": "Owner screenshot Success; publication rollback sentinel present",
+    "apply": "Owner screenshot Success; approved apply with no rollback raise",
+    "verification": {
+      "passed": 21,
+      "total": 21,
+      "checks": [
+        {
+          "check_name": "exact_products",
+          "passed": true
+        },
+        {
+          "check_name": "exact_product_attributes",
+          "passed": true
+        },
+        {
+          "check_name": "exact_product_anchors",
+          "passed": true
+        },
+        {
+          "check_name": "exact_product_problems",
+          "passed": true
+        },
+        {
+          "check_name": "exact_product_audiences",
+          "passed": true
+        },
+        {
+          "check_name": "exact_product_attribute_evidence",
+          "passed": true
+        },
+        {
+          "check_name": "exact_product_anchor_evidence",
+          "passed": true
+        },
+        {
+          "check_name": "exact_product_problem_evidence",
+          "passed": true
+        },
+        {
+          "check_name": "exact_product_audience_evidence",
+          "passed": true
+        },
+        {
+          "check_name": "exact_claim_evidence",
+          "passed": true
+        },
+        {
+          "check_name": "exact_evidence_sources",
+          "passed": true
+        },
+        {
+          "check_name": "exact_attributes",
+          "passed": true
+        },
+        {
+          "check_name": "exact_anchors",
+          "passed": true
+        },
+        {
+          "check_name": "exact_problems",
+          "passed": true
+        },
+        {
+          "check_name": "exact_audiences",
+          "passed": true
+        },
+        {
+          "check_name": "exact_escape_routes",
+          "passed": true
+        },
+        {
+          "check_name": "exact_escape_route_products",
+          "passed": true
+        },
+        {
+          "check_name": "published_slug_sets",
+          "passed": true
+        },
+        {
+          "check_name": "public_product_qualification_fields",
+          "passed": true
+        },
+        {
+          "check_name": "public_read_rls_and_policies",
+          "passed": true
+        },
+        {
+          "check_name": "anon_private_evidence_boundary",
+          "passed": true
+        }
+      ]
+    },
+    "browserAcceptance": {
+      "basis": "Owner supplied eight screenshots; no independent live browser replay",
+      "route": "/escape/meditation-apps-without-a-subscription",
+      "routeEvidence": [
+        "f0a1a295-caf2-4056-8ded-a551343a3fc2",
+        "35af426d-e5b6-4ca0-98e6-c3a6533e5ad1"
+      ],
+      "products": [
+        {
+          "slug": "healthy-minds-program",
+          "path": "/software/healthy-minds-program",
+          "pageEvidence": "fc267b89-6950-469d-9523-5c50be5817fe",
+          "visitEvidence": "aa7650e4-4312-4a40-a62e-c20f0794503a",
+          "destination": "https://www.humin.org/wellbeing-tools/app"
+        },
+        {
+          "slug": "medito",
+          "path": "/software/medito",
+          "pageEvidence": "9084b847-a299-4b1a-a170-c375a789d947",
+          "visitEvidence": "1fede511-d424-4e05-9614-4319db8532de",
+          "destination": "https://meditofoundation.org/medito-app/"
+        },
+        {
+          "slug": "smiling-mind",
+          "path": "/software/smiling-mind",
+          "pageEvidence": "bf4aee37-4463-4d68-b5a0-da2997dff6d8",
+          "visitEvidence": "04222c22-4251-42df-ab52-2e70a849ec60",
+          "destination": "https://www.smilingmind.com.au/smiling-mind-app"
+        }
+      ],
+      "limits": "Screenshots show comparison with exactly three candidates, pricing/trade-offs and three product headers plus official Visit destinations. Source links/body claims were not exhaustively clicked or revalidated; external marketing health claims are not adopted."
+    },
+    "productionDeployment": "Owner screenshot green Production #79 for proposal commit; publication later changed database state without a new application deployment",
+    "scope": "personal-adult-guided-meditation-selection-playback",
+    "confidence": 0.85,
+    "metadataLimits": "Calm sampled three-free-listens limitation retained; app/OS versions, device/storefront and audio language unknown.",
+    "evidenceStorage": "Attachment identifiers refer to codex-clipboard-<id>.png; raw screenshots remain private outside Git.",
+    "remainingRoutes": [
+      "grammarly-alternatives-without-a-subscription",
+      "privacy-friendly-grammarly-alternatives"
+    ]
+  }
+}
