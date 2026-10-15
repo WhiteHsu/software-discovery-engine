@@ -1,0 +1,16 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {createHash} from 'node:crypto';
+import {currentPublicationAudit} from '../escape-remaining-routes.mjs';
+import {meditationInputs,buildMeditationWorkflow} from './build-meditation-workflow.mjs';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..'),hash=x=>createHash('sha256').update(x).digest('hex');
+const r=JSON.parse(fs.readFileSync(path.join(root,'seed/research/writing-passive-claim-drafts-2026-10-15.json'),'utf8'));
+if(process.argv.length!==2||hash(JSON.stringify(r))!=='e3d9261e75a376c7007272ed54ccf28b4418972e98c5ced94f4244a50445dc35')throw Error('Claim draft drift');
+for(const x of r.inputs)if(hash(fs.readFileSync(path.join(root,x.path),'utf8').replace(/\r\n/g,'\n'))!==x.sha256)throw Error('Historical input drift');
+const i=meditationInputs(),{bundle}=buildMeditationWorkflow(i.baseline,i.review),classic=bundle.products.find(x=>x.slug==='hemingway-classic');
+if(!classic||classic.websiteUrl!=='https://hemingwayapp.com/desktop'||r.candidates.some(x=>bundle.products.some(p=>p.slug===x.slug)))throw Error('Local identity assumptions changed');
+if(r.candidates.length!==3||r.candidates.flatMap(x=>x.claims).length!==12||r.candidates.flatMap(x=>x.claims).some(x=>x.verificationStatus!=='unknown'||x.confidence!==null))throw Error('Unreviewed claims promoted');
+const a=currentPublicationAudit();if(a.publishedProducts!==18||a.acceptedPublishedRoutes!==8||a.remainingRoutes!==2||a.routes.filter(x=>x.publication==='not-published').some(x=>x.qualifiedDraftGraphCandidates!==0))throw Error('Checkpoint drift');
+console.log('PR5.65: three separate edition proposals, twelve unknown-status claim drafts; Classic preserved.');
+console.log('Real Write credit applicability unresolved. No graph writes or qualification; current18/8/2.');

@@ -343,3 +343,8 @@ Owner public-page spelling control returned readable sentnce-to-sentence feedbac
 ## PR5.64 — Owner-selected passive review scope
 
 Owner approved investigating Grammarly Pro capability as baseline for passive feedback/manual revision/recheck against no-subscription editions. Official documentation rechecked; prior sample access stays limited, Free history frozen. Hemingway free web/Grazie Free evidence reusable; Real Write remains research-only with metric/terms limitations. Exact identity mapping, scoped claim drafts and later no-subscription scope enforcement required; privacy unchanged. No graph/engine/SQL/publication edits, zero newly qualified;18/8/2. See WRITING_PASSIVE_SCOPE_REVIEW.md.
+
+
+## PR5.65 — Writing exact-edition claim drafts
+
+Reconstructed local baseline confirms existing Hemingway identity is paid Classic; preserve it and propose separate free-web identity plus Grazie Free and Real Write dedicated detector. Twelve structured unknown-status/null-confidence claims and route copy prepared, not an importable bundle. Fresh Real Write pricing text includes daily credits across all21 tools; detector exemption unresolved despite prior unchanged counter. Terms unreadable. Scope enforcement and live identity collision check required later. No graph/engine/SQL/publication changes, zero newly qualified;18/8/2. See WRITING_PASSIVE_CLAIM_DRAFTS.md.
