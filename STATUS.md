@@ -408,3 +408,8 @@ Clean actual HEAD118445a and owner Production94 recorded. Official local-server 
 ## PR5.77 — Named LanguageTool artifact pinned
 
 Clean actual HEAD83f150c and owner Production95 recorded. Official named6.6 ZIP downloaded and SHA256/size/English module version inspected without execution. Actual style.xml contains three passive-related rule groups, with PASSIVE_VOICE explicitly off. Source tag6.6 commit recorded separately from newer6.8; binary reproducible-build equivalence and dependency safety not claimed. Read-only artifact inspector accepts matching bytes and rejects mismatch. Runtime/rule enablement/outbound/logging gates remain; no installation, SQL, graph or engine changes. Accepted21/9/1, zero new privacy qualifications unchanged. See LANGUAGETOOL_ARTIFACT_PIN.md.
+
+
+## PR5.78 — Local LanguageTool runtime evidence
+
+Clean actual HEAD13c0552 and owner Production96 recorded. Authorized portable Temurin17 digest verified before executing pinned LanguageTool6.6 CLI. Twelve synthetic matrix runs succeeded. Explicit passive rules alone returned zero; PICKY plus explicit rules found two target passives, with zero active/adjectival matches. Positive grammar control confirmed processing. Manual hints only; no replacements. No server or system setup. Outbound and full retention unverified; privacy remains on hold. Accepted21/9/1 and zero new qualifications unchanged. See LANGUAGETOOL_LOCAL_RUNTIME_REVIEW.md.
