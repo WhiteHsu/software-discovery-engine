@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {createHash} from 'node:crypto';
+import {latestPublicationAudit} from '../escape-remaining-routes.mjs';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
+const review=JSON.parse(fs.readFileSync(path.join(root,'seed/research/languagetool-local-feasibility-2026-10-16.json'),'utf8'));
+if(process.argv.length!==2||createHash('sha256').update(JSON.stringify(review)).digest('hex')!=='22deacbf9f69e4450869053b8ee104a16452e341c49d8b5f746d53cf4415ec0b')throw Error('Privacy research content drift');
+if(!review.researchOnly||review.graphChanges||review.publicationApproved||review.qualifiedNewCandidates!==0)throw Error('Research boundary drift');
+const audit=latestPublicationAudit(),privacy=audit.routes.find(x=>x.slug==='privacy-friendly-grammarly-alternatives');
+if(audit.publishedProducts!==21||audit.acceptedPublishedRoutes!==9||audit.remainingRoutes!==1||!privacy||privacy.publication!=='not-published'||privacy.qualifiedDraftGraphCandidates!==0)throw Error('Accepted checkpoint or privacy qualification drift');
+console.log('PR5.76:local LanguageTool feasibility documented; artifact pin and runtime gates pending.');
+console.log('Accepted21 products/9 completed routes/1 remaining. Zero new privacy qualifications. Documentation/partial source only; no LanguageTool installation or execution.');

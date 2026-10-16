@@ -398,3 +398,8 @@ Clean actual HEAD1ec712c inspected; owner Production92 green. Three returned ana
 ## PR5.75 — Anonymous privacy choices boundary
 
 Clean actual HEADd03db87 and owner Production93 recorded. Anonymous free-web Privacy choices exposes independent product analytics/affiliate options; both displayed unchecked after save/reload in existing agent browser profile. Necessary operation and aggregate measurement remain always-active per UI. No network enforcement, storage or GPC test; separate owner capture had unknown consent, so no violation/compliance inference. Hemingway privacy qualification paused at explicit evidence boundary; next distinct lead is local LanguageTool source/configuration review. Accepted21/9/1, zero new qualifications unchanged. No SQL/graph/engine changes. See HEMINGWAY_PRIVACY_CHOICES.md.
+
+
+## PR5.76 — Local LanguageTool feasibility
+
+Clean actual HEAD118445a and owner Production94 recorded. Official local-server guide, default-off PASSIVE_VOICE rule page and partial moving-master server configuration reviewed. Fixed artifact/commit not obtained; public-index download approval timed out without execution. Local server remains a distinct research edition, not hosted Basic/Premium. Version/rule enablement, outbound behavior, all logging and cleanup gates remain before execution or qualification. No install, port exposure, SQL, graph or engine changes. Accepted21/9/1, zero new qualifications unchanged. See LANGUAGETOOL_LOCAL_FEASIBILITY.md.

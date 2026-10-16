@@ -1,0 +1,25 @@
+{
+  "version":1,"packet":"PR5.76","reviewedAt":"2026-10-16",
+  "baselineCommit":"118445a740ca403f2e4d56eaf3d3df19f6277840",
+  "researchOnly":true,"graphChanges":false,"publicationApproved":false,"qualifiedNewCandidates":0,
+  "checkpoint":{"products":21,"completedRoutes":9,"remainingRoutes":1},
+  "edition":"Proposed local basic HTTP server, distinct from hosted Basic/Premium and Windows desktop client",
+  "sources":[
+    {"id":"local-guide","url":"https://dev.languagetool.org/http-server","locator":"Getting the Server; Starting from Command Line","finding":"Official guide documents local server and explicit client endpoint selection. Basic local server lacks cloud AI rules and synonyms; Windows desktop app is incompatible. Advanced setup is required. It recommends POST for text requests; default server is not remotely accessible without public exposure. This is documentation, not a runtime test."},
+    {"id":"passive-rule","url":"https://community.languagetool.org/rule/show/PASSIVE_VOICE?lang=en&subId=6","locator":"Rule metadata; examples; version","finding":"Official rule page lists PASSIVE_VOICE, not active by default, with passive/active examples and version6.8-SNAPSHOT dated2026-05-04. This supports a local-rule research lead, not proof a selected current downloadable artifact includes/enables the same rule or detects our corpus."},
+    {"id":"server-config","url":"https://github.com/languagetool-org/languagetool/blob/master/languagetool-server/src/main/java/org/languagetool/server/HTTPServerConfig.java","locator":"Property parsing: remoteRulesFile, cacheSize, cacheTTLSeconds, dbLogging, skipLoggingChecks, skipLoggingRuleMatches, localApiMode","finding":"Readable moving-master source exposes remote-rule configuration, cache and database logging controls. Observed parsing defaults include cacheSize0 and dbLoggingfalse. These are not proof of every log sink, absence of outbound traffic or the defaults of an unpinned installed release. localApiMode name alone is not a privacy guarantee."}
+  ],
+  "accessLimits":{"commitPin":"not-obtained","sourceReview":"partial; moving-master configuration file only, not a whole-program audit","grammarFile":"GitHub rendered page omitted large file; raw fetch exceeded web tool size limit, so rule support relies on official rule page","apiDownload":"Sandbox DNS failed; escalated public GitHub index download was not executed because automatic approval review timed out. No safety denial inferred; no source archive or executable downloaded.","execution":"No Java/runtime install, server/client installation, download execution, port opening or network security changes performed."},
+  "decision":"Worth a bounded feasibility test after pinning an official artifact; not ready for graph or privacy qualification.",
+  "gates":[
+    "Choose exact official release/source revision and record digest, Java requirement and bundled English rules before execution.",
+    "Verify PASSIVE_VOICE exists and explicitly enable it using that version's documented interface; record default-off and enabled results separately.",
+    "Start with direct loopback API requests and synthetic text, without an extension, proxy, public binding or cloud credentials.",
+    "Review effective remote-rule/cache/logging settings and all relevant application/console/file logs. A disabled database logger is not no logging.",
+    "Observe outbound connections and failure behavior; no fallback-to-cloud claim before server and chosen client are separately checked.",
+    "Inspect passive-to-active corpus results and false positives; exclude AI/Premium/synonym parity claims.",
+    "Record memory/cache/log/file lifetime and cleanup; stopping a process is not proof all copies were erased."
+  ],
+  "proposedCorpus":{"passive":"The report was written by Mira. The parcel was sent by Leon.","active":"Mira wrote the report. Leon sent the parcel.","control":"The students are bored.","status":"planned-not-executed"},
+  "nextAction":"Pin a reproducible official artifact and review exact startup/client/log configuration before any installation decision. Do not ask owner to purchase or repeat Hemingway screenshots. Keep Antidote and Hemingway holds unchanged."
+}
