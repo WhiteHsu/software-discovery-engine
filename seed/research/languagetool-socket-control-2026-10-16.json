@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "packet": "PR5.80",
+  "recordedAt": "2026-10-16",
+  "baselineCommit": "1150dae8cdb00148def89f8878e8a730a208262d",
+  "researchOnly": true,
+  "graphChanges": false,
+  "publicationApproved": false,
+  "qualifiedNewCandidates": 0,
+  "checkpoint": {
+    "products": 21,
+    "completedRoutes": 9,
+    "remainingRoutes": 1
+  },
+  "runtimeReference": "languagetool-local-runtime-2026-10-16.json",
+  "observationReference": "languagetool-io-observation-2026-10-16.json",
+  "method": {
+    "client": "same pinned Temurin 17 keytool -printcert -sslserver",
+    "listener": "Node TLS, loopback only, temporary OS-assigned port",
+    "certificate": "existing synthetic local control PKCS12; not a production credential",
+    "jfrConfigSha256": "29ba4928c56cc802e73b6a1bd5d7f20b376d9edc5fe074d34b3a8a56ae54cad2",
+    "configReusedFromPR579": true,
+    "events": [
+      "jdk.SocketRead",
+      "jdk.SocketWrite",
+      "jdk.DataLoss"
+    ],
+    "threshold": "0 ms",
+    "externalDestinationUsed": false,
+    "trustStoreModified": false,
+    "httpServerStarted": false,
+    "systemSettingsChanged": false
+  },
+  "control": {
+    "exitCode": 0,
+    "listener": {
+      "bindAddress": "127.0.0.1",
+      "ephemeralPort": true,
+      "tls": true,
+      "http": false,
+      "closedAfterRun": true
+    },
+    "counts": {
+      "jdk.SocketRead": 13,
+      "jdk.SocketWrite": 5,
+      "jdk.DataLoss": 0
+    },
+    "allSocketAddressesLoopback": true,
+    "bytesRead": 1948,
+    "bytesWritten": 586
+  },
+  "findings": [
+    "The same JFR settings detected deliberate Java TLS socket reads and writes in a separate control process.",
+    "PR5.79 four LanguageTool runs remain their original immutable observations: zero selected socket events, not proof of no transmission.",
+    "This verifies one observer path under this runtime, not comprehensive process/network coverage."
+  ],
+  "limits": [
+    "Separate keytool process; not injected into or simultaneous with the earlier LanguageTool JVMs.",
+    "Java event coverage does not establish DNS, failed connection, UDP, native code, all startup/exit activity or OS packet visibility.",
+    "No external endpoint, network denial, OS packet capture, full file-retention audit or server-side retention review.",
+    "Zero DataLoss reports do not guarantee complete capture.",
+    "No new LanguageTool text matrix performed this round; PR5.78 and PR5.79 results remain separately referenced."
+  ],
+  "disposition": "Socket observer positive control passed; local LanguageTool remains research-only and privacy qualification stays on hold.",
+  "nextDecision": "Close repeated Java-event-only testing: another zero-event run cannot resolve the uncovered paths. Require independent process/OS-level coverage and retention evidence before qualification; no publication or broad no-transmission claim."
+}

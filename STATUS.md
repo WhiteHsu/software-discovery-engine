@@ -418,3 +418,8 @@ Clean actual HEAD13c0552 and owner Production96 recorded. Authorized portable Te
 ## PR5.79 — Bounded LanguageTool Java I/O observation
 
 Clean actual HEAD7c1e814 and owner Production97 recorded. Four PICKY/explicit-passive CLI cases repeated under zero-threshold JFR socket/file-write observation; target hints preserved. Each run recorded three null-path writes, zero socket read/write and zero reported DataLoss events. Local synthetic keystore positive control confirmed FileWrite capture. No network positive control or OS-wide coverage; no no-transmission claim. Dedicated home/tmp empty after exit, while deliberate experiment files retained. Privacy stays on hold; accepted21/9/1 and zero qualifications unchanged. See LANGUAGETOOL_IO_OBSERVATION.md.
+
+
+## PR5.80 — Java socket observer positive control
+
+Clean actual HEAD1150dae and owner Production98 recorded. Same pinned Temurin/JFR settings observed 13 SocketRead and 5 SocketWrite events in a separate synthetic loopback TLS control, zero reported DataLoss. Listener bound only127.0.0.1 and closed after run; no external destination or trust-store modification. This confirms one Java observer path, not complete DNS/native/OS coverage or no transmission. PR5.79 observations remain immutable. Repeated Java-event-only testing closed at this boundary; independent process/OS coverage and retention evidence required before qualification. Accepted21/9/1, zero privacy qualifications unchanged. See LANGUAGETOOL_SOCKET_CONTROL.md.
