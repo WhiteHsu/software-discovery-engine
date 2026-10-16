@@ -403,3 +403,8 @@ Clean actual HEADd03db87 and owner Production93 recorded. Anonymous free-web Pri
 ## PR5.76 — Local LanguageTool feasibility
 
 Clean actual HEAD118445a and owner Production94 recorded. Official local-server guide, default-off PASSIVE_VOICE rule page and partial moving-master server configuration reviewed. Fixed artifact/commit not obtained; public-index download approval timed out without execution. Local server remains a distinct research edition, not hosted Basic/Premium. Version/rule enablement, outbound behavior, all logging and cleanup gates remain before execution or qualification. No install, port exposure, SQL, graph or engine changes. Accepted21/9/1, zero new qualifications unchanged. See LANGUAGETOOL_LOCAL_FEASIBILITY.md.
+
+
+## PR5.77 — Named LanguageTool artifact pinned
+
+Clean actual HEAD83f150c and owner Production95 recorded. Official named6.6 ZIP downloaded and SHA256/size/English module version inspected without execution. Actual style.xml contains three passive-related rule groups, with PASSIVE_VOICE explicitly off. Source tag6.6 commit recorded separately from newer6.8; binary reproducible-build equivalence and dependency safety not claimed. Read-only artifact inspector accepts matching bytes and rejects mismatch. Runtime/rule enablement/outbound/logging gates remain; no installation, SQL, graph or engine changes. Accepted21/9/1, zero new privacy qualifications unchanged. See LANGUAGETOOL_ARTIFACT_PIN.md.

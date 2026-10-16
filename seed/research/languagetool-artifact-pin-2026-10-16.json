@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "packet": "PR5.77",
+  "recordedAt": "2026-10-16",
+  "baselineCommit": "83f150c0ad9fb7dc867b343f83ad44daf0472b6a",
+  "researchOnly": true,
+  "graphChanges": false,
+  "publicationApproved": false,
+  "qualifiedNewCandidates": 0,
+  "checkpoint": {
+    "products": 21,
+    "completedRoutes": 9,
+    "remainingRoutes": 1
+  },
+  "downloadUrl": "https://languagetool.org/download/LanguageTool-6.6.zip",
+  "sourceReference": {
+    "tag": "v6.6",
+    "commit": "f13e71a7fe85a122290826fd691d267d64e97c33",
+    "binaryReproducibleBuildVerified": false
+  },
+  "inspection": {
+    "version": 1,
+    "artifact": "LanguageTool-6.6.zip",
+    "bytes": 251998221,
+    "sha256": "53600506b399bb5ffe1e4c8dec794fd378212f14aaf38ccef9b6f89314d11631",
+    "englishModuleVersion": "6.6",
+    "rulesEntry": "LanguageTool-6.6/org/languagetool/rules/en/style.xml",
+    "passiveRuleGroups": [
+      {
+        "id": "PASSIVE_VOICE_SIMPLE",
+        "explicitDefault": "not-specified-on-group",
+        "tags": "picky"
+      },
+      {
+        "id": "PASSIVE_VOICE",
+        "explicitDefault": "off",
+        "tags": "picky"
+      },
+      {
+        "id": "REP_PASSIVE_VOICE",
+        "explicitDefault": "not-specified-on-group",
+        "tags": "picky"
+      }
+    ],
+    "method": "Read-only ZIP metadata/text inspection; no extraction, Java execution or server startup.",
+    "privacyQualified": false
+  },
+  "sources": [
+    {
+      "url": "https://github.com/languagetool-org/languagetool/tags",
+      "finding": "Source v6.8 and v6.6 tags distinguish source versions from downloadable artifact."
+    },
+    {
+      "url": "https://languagetool.org/download/",
+      "finding": "Named6.6 ZIP selected over mutable stable alias; source6.8 is not substituted."
+    },
+    {
+      "url": "https://github.com/languagetool-org/languagetool/blob/v6.6/languagetool-server/src/main/java/org/languagetool/server/HTTPServerConfig.java",
+      "finding": "Tag-specific partial config source shows remoteRulesFile,cacheSize and dbLogging property parsing; not a full data-flow audit."
+    }
+  ],
+  "limits": [
+    "Local SHA256 identifies received bytes, not a vendor signature or proof of clean dependencies.",
+    "Two rule groups lack an explicit default on their group; runtime enablement unknown.",
+    "No Java, server, extension or LanguageTool runtime invoked.",
+    "No outbound, cache lifetime, logging or cleanup claim established."
+  ],
+  "decision": "Pinned read-only artifact; candidate for bounded synthetic runtime study only.",
+  "nextWork": "Verify compatible isolated Java runtime and effective local configuration before a controlled rule test. Do not promote hosted Basic/Premium identity or privacy claims."
+}

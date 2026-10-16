@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {createHash} from 'node:crypto';
+import {latestPublicationAudit} from '../escape-remaining-routes.mjs';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
+const review=JSON.parse(fs.readFileSync(path.join(root,'seed/research/languagetool-artifact-pin-2026-10-16.json'),'utf8'));
+if(process.argv.length!==2||createHash('sha256').update(JSON.stringify(review)).digest('hex')!=='4a46a5bbf9f8ea533bdce2e855ffbac2fabef7fd47690a8c10dfe2f06012f3a3')throw Error('Privacy research content drift');
+if(!review.researchOnly||review.graphChanges||review.publicationApproved||review.qualifiedNewCandidates!==0)throw Error('Research boundary drift');
+const audit=latestPublicationAudit(),privacy=audit.routes.find(x=>x.slug==='privacy-friendly-grammarly-alternatives');
+if(audit.publishedProducts!==21||audit.acceptedPublishedRoutes!==9||audit.remainingRoutes!==1||!privacy||privacy.publication!=='not-published'||privacy.qualifiedDraftGraphCandidates!==0)throw Error('Accepted checkpoint or privacy qualification drift');
+console.log('PR5.77:named6.6 artifact digest/version/passive groups pinned; no LanguageTool execution.');
+console.log('Accepted21 products/9 completed routes/1 remaining. Zero new privacy qualifications. Documentation/partial source only; no LanguageTool installation or execution.');
