@@ -1,0 +1,183 @@
+{
+  "version": 1,
+  "packet": "PR5.79",
+  "recordedAt": "2026-10-16",
+  "baselineCommit": "7c1e814c389bf7e03e27db050f338cbc5d072bc2",
+  "researchOnly": true,
+  "graphChanges": false,
+  "publicationApproved": false,
+  "qualifiedNewCandidates": 0,
+  "checkpoint": {
+    "products": 21,
+    "completedRoutes": 9,
+    "remainingRoutes": 1
+  },
+  "runtimeReference": "languagetool-local-runtime-2026-10-16.json",
+  "method": {
+    "observer": "Temurin 17 JFR, jfr print JSON",
+    "events": [
+      "jdk.FileWrite",
+      "jdk.SocketRead",
+      "jdk.SocketWrite",
+      "jdk.DataLoss"
+    ],
+    "threshold": "0 ms",
+    "stackTraces": true,
+    "mode": "PICKY plus explicit passive-only rules, en-US, fresh JVM per case",
+    "inputsReference": "PR5.78 four synthetic texts",
+    "networkBlocked": false,
+    "packetCapture": false,
+    "serverStarted": false,
+    "systemSettingsChanged": false
+  },
+  "results": [
+    {
+      "id": "passive",
+      "exitCode": 0,
+      "matches": [
+        {
+          "ruleId": "PASSIVE_VOICE",
+          "offset": 11,
+          "length": 11
+        },
+        {
+          "ruleId": "PASSIVE_VOICE",
+          "offset": 43,
+          "length": 8
+        }
+      ],
+      "eventCounts": {
+        "jdk.FileWrite": 3,
+        "jdk.SocketRead": 0,
+        "jdk.SocketWrite": 0,
+        "jdk.DataLoss": 0
+      },
+      "fileWrites": [
+        {
+          "path": null,
+          "bytesWritten": 65
+        },
+        {
+          "path": null,
+          "bytesWritten": 128
+        },
+        {
+          "path": null,
+          "bytesWritten": 1768
+        }
+      ],
+      "homeFiles": [],
+      "tmpFiles": []
+    },
+    {
+      "id": "active",
+      "exitCode": 0,
+      "matches": [],
+      "eventCounts": {
+        "jdk.FileWrite": 3,
+        "jdk.SocketRead": 0,
+        "jdk.SocketWrite": 0,
+        "jdk.DataLoss": 0
+      },
+      "fileWrites": [
+        {
+          "path": null,
+          "bytesWritten": 65
+        },
+        {
+          "path": null,
+          "bytesWritten": 127
+        },
+        {
+          "path": null,
+          "bytesWritten": 374
+        }
+      ],
+      "homeFiles": [],
+      "tmpFiles": []
+    },
+    {
+      "id": "adjectival",
+      "exitCode": 0,
+      "matches": [],
+      "eventCounts": {
+        "jdk.FileWrite": 3,
+        "jdk.SocketRead": 0,
+        "jdk.SocketWrite": 0,
+        "jdk.DataLoss": 0
+      },
+      "fileWrites": [
+        {
+          "path": null,
+          "bytesWritten": 65
+        },
+        {
+          "path": null,
+          "bytesWritten": 131
+        },
+        {
+          "path": null,
+          "bytesWritten": 374
+        }
+      ],
+      "homeFiles": [],
+      "tmpFiles": []
+    },
+    {
+      "id": "positive",
+      "exitCode": 0,
+      "matches": [
+        {
+          "ruleId": "PASSIVE_VOICE",
+          "offset": 20,
+          "length": 15
+        },
+        {
+          "ruleId": "PASSIVE_VOICE",
+          "offset": 77,
+          "length": 11
+        }
+      ],
+      "eventCounts": {
+        "jdk.FileWrite": 3,
+        "jdk.SocketRead": 0,
+        "jdk.SocketWrite": 0,
+        "jdk.DataLoss": 0
+      },
+      "fileWrites": [
+        {
+          "path": null,
+          "bytesWritten": 65
+        },
+        {
+          "path": null,
+          "bytesWritten": 129
+        },
+        {
+          "path": null,
+          "bytesWritten": 1828
+        }
+      ],
+      "homeFiles": [],
+      "tmpFiles": []
+    }
+  ],
+  "fileWritePositiveControl": {
+    "exitCode": 0,
+    "keystoreWritten": true,
+    "fileWriteEvents": 2,
+    "keystoreWriteObserved": true,
+    "dataLossEvents": 0
+  },
+  "networkPositiveControlTested": false,
+  "limitations": [
+    "No socket positive control; zero observed socket events cannot establish network observer coverage.",
+    "JFR selected Java events do not capture all DNS, connection attempts, UDP, native code or OS activity. No no-transmission claim.",
+    "FileWrite path null events were recorded; null path alone cannot identify destination or prove absence of file retention.",
+    "Dedicated home/tmp were empty after process exit; other filesystem locations and native writes were not comprehensively audited.",
+    "Observer creates recordings; harness retains synthetic inputs and stdout/stderr. These deliberate research files are not application retention proof.",
+    "No DataLoss event was reported, which is not a guarantee of complete capture.",
+    "No server-side retention, training defaults, edition rights, dependency safety or broad accuracy conclusion."
+  ],
+  "disposition": "Bounded Java I/O observation recorded; privacy qualification remains on hold."
+}

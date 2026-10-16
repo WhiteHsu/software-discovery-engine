@@ -413,3 +413,8 @@ Clean actual HEAD83f150c and owner Production95 recorded. Official named6.6 ZIP 
 ## PR5.78 — Local LanguageTool runtime evidence
 
 Clean actual HEAD13c0552 and owner Production96 recorded. Authorized portable Temurin17 digest verified before executing pinned LanguageTool6.6 CLI. Twelve synthetic matrix runs succeeded. Explicit passive rules alone returned zero; PICKY plus explicit rules found two target passives, with zero active/adjectival matches. Positive grammar control confirmed processing. Manual hints only; no replacements. No server or system setup. Outbound and full retention unverified; privacy remains on hold. Accepted21/9/1 and zero new qualifications unchanged. See LANGUAGETOOL_LOCAL_RUNTIME_REVIEW.md.
+
+
+## PR5.79 — Bounded LanguageTool Java I/O observation
+
+Clean actual HEAD7c1e814 and owner Production97 recorded. Four PICKY/explicit-passive CLI cases repeated under zero-threshold JFR socket/file-write observation; target hints preserved. Each run recorded three null-path writes, zero socket read/write and zero reported DataLoss events. Local synthetic keystore positive control confirmed FileWrite capture. No network positive control or OS-wide coverage; no no-transmission claim. Dedicated home/tmp empty after exit, while deliberate experiment files retained. Privacy stays on hold; accepted21/9/1 and zero qualifications unchanged. See LANGUAGETOOL_IO_OBSERVATION.md.
