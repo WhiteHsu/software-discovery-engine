@@ -498,3 +498,8 @@ Clean HEADacb316d and owner Production111. LT CLI/write-good/Vale relationship, 
 ## PR5.95 — Executable scoped privacy proposal
 
 Clean HEAD436fb79 and owner Production112. Three dossiers converted to standalone candidate preview using current evaluator plus scope/profile/six-axis proposal guards; actual privacy remains likely, retained unresolved axis decisions block all3. Local license/pricing wording reviewed separately from hosted services. Regression fixtures reject cross-edition/scope leakage, unverified/material-unknown claims and duplicate modes/minimum shortfalls. Production evaluator/graph/seed unchanged;21/9/1, zero qualifications. Next explicit retention/operational-text claim decisions before scoped implementation. See SCOPED_PRIVACY_PREVIEW.md.
+
+
+## PR5.96 — Explicit scoped privacy claim decisions
+
+Clean HEAD809c64e and owner Production113. Existing evidence supports write-good exact local-function claim across six explicit axes, with caller memory/output and host exclusions disclosed. New proposal-only verified claim yields research1/3, while actual graph0 and21/9/1 remain. LT/Vale broader process-level clauses held for narrower wrapper/init/diagnostic wording; no new capture or blanket erasure/reproducibility gate. Frozen PR5.95 remains0. New clear success output, no engine/graph/SQL changes. See PRIVACY_CLAIM_DECISIONS.md.
