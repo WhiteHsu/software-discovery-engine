@@ -1,0 +1,140 @@
+{
+  "version": 1,
+  "packet": "PR5.85",
+  "reviewedAt": "2026-10-17",
+  "baselineCommit": "5a5612dba47b781b1e9c6e8b51c71f530dd06142",
+  "researchOnly": true,
+  "graphChanges": false,
+  "publicationApproved": false,
+  "qualifiedNewCandidates": 0,
+  "checkpoint": {
+    "products": 21,
+    "completedRoutes": 9,
+    "remainingRoutes": 1
+  },
+  "edition": "Fixed LanguageTool6.6 CLI, synthetic-only output-minimizing probe",
+  "controls": {
+    "fixedSyntheticCasesOnly": true,
+    "stdinInsteadOfInputFile": true,
+    "freshJvmPerCase": true,
+    "selectedRuleIds": [
+      "PASSIVE_VOICE_SIMPLE",
+      "PASSIVE_VOICE",
+      "REP_PASSIVE_VOICE"
+    ],
+    "level": "PICKY",
+    "language": "en-US",
+    "outputFieldsPerMatch": [
+      "ruleId",
+      "offset",
+      "length"
+    ],
+    "rawChildStdoutStderrPersistedOrPrintedByProbe": false,
+    "rawStreamsRemainTransientInProcessMemory": true,
+    "environmentInjectionNamesRejected": [
+      "JAVA_TOOL_OPTIONS",
+      "JDK_JAVA_OPTIONS",
+      "_JAVA_OPTIONS"
+    ],
+    "pinnedJavaExeSha256": "1977f302375adbb920d41dac65c7e22eb9c2ed8e1e8d6258964154ff16f14406",
+    "pinnedCliJarSha256": "7e652a409245a7c9ffce517c891cb6cc27eee00abbb32a3427995abd6f9096ac",
+    "pinsCoverCompleteDistribution": false,
+    "ownedTemporaryHomeAndTmp": true,
+    "verifiedOwnDirectoryBeforeRecursiveCleanup": true,
+    "childTimeoutMs": 15000,
+    "childMaxBufferBytes": 1048576
+  },
+  "implementationPins": [
+    {
+      "path": "scripts/seed/probe-languagetool-cli-profile.mjs",
+      "utf8LfSha256": "edc1a707336fbf0483ff42538757a2d8f58fe99dd2ea3b9882442f1dedfb976f"
+    },
+    {
+      "path": "scripts/seed/languagetool-cli-profile.test.mjs",
+      "utf8LfSha256": "8ecfb95dd28696f950ec8336bdbbb9fa9153549c47af6a455b1069e77e3ee4f1"
+    }
+  ],
+  "priorEvidence": [
+    {
+      "path": "seed/research/languagetool-cli-source-2026-10-17.json",
+      "utf8LfSha256": "bbbedf7a9fce68ccd6ac1c76ebf45fd170f8147f62ac41eb62330ad1413d2c2b"
+    },
+    {
+      "path": "seed/research/languagetool-cli-defaults-2026-10-17.json",
+      "utf8LfSha256": "2028384b26b15f342d54825d90381656df6919139cb9b5a0ad840d3d5b47afba"
+    }
+  ],
+  "runtimeResult": {
+    "version": 1,
+    "mode": "synthetic-stdin-summary-only",
+    "runtimeIdentityPinned": true,
+    "completeDistributionVerified": false,
+    "networkBlocked": false,
+    "runs": [
+      {
+        "id": "passive",
+        "exitCode": 0,
+        "matches": [
+          {
+            "ruleId": "PASSIVE_VOICE",
+            "offset": 11,
+            "length": 11
+          },
+          {
+            "ruleId": "PASSIVE_VOICE",
+            "offset": 43,
+            "length": 8
+          }
+        ]
+      },
+      {
+        "id": "active",
+        "exitCode": 0,
+        "matches": []
+      },
+      {
+        "id": "adjectival",
+        "exitCode": 0,
+        "matches": []
+      },
+      {
+        "id": "positive",
+        "exitCode": 0,
+        "matches": [
+          {
+            "ruleId": "PASSIVE_VOICE",
+            "offset": 20,
+            "length": 15
+          },
+          {
+            "ruleId": "PASSIVE_VOICE",
+            "offset": 77,
+            "length": 11
+          }
+        ]
+      }
+    ],
+    "cleanup": "owned-temp-removed"
+  },
+  "regression": {
+    "tests": 4,
+    "passed": 4,
+    "boundaries": [
+      "Canary text in sentence/context/messages/replacements/extra fields excluded from projected report",
+      "Invalid JSON/version/rule IDs/out-of-range spans rejected without raw content",
+      "JVM injection rejected before artifact access; no option value disclosure",
+      "Cleanup path guard rejects parent/outside/arbitrary directories"
+    ]
+  },
+  "limits": [
+    "Only the two named executable/JAR files pinned; other runtime/library/resource/config contents not fully verified.",
+    "No OS network denial, traffic capture or runtime exporter/config attestation.",
+    "Raw child text exists transiently in memory; no secure memory erasure, crash dump, swap, terminal history or system-retention guarantee.",
+    "Recursive cleanup is restricted to the newly created temp directory; prior experiment inputs/logs and user files are not erased.",
+    "Custom/native code or external mechanisms can write outside the intended directories; no complete write audit.",
+    "This probe accepts fixed synthetic cases only. It is not a real-document editor or a generally approved privacy tool.",
+    "Counts/offsets are derived data, not a universal de-identification guarantee. No full accuracy/license/rights qualification."
+  ],
+  "decision": "Reproducible synthetic summary boundary validated; privacy candidate remains unqualified.",
+  "ownerAction": "Run the new pure Node tests and receipt checks when applying; Java probe is optional and not needed to submit this packet."
+}

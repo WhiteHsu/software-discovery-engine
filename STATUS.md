@@ -443,3 +443,8 @@ Clean actual HEAD7b9d29f and owner Production101 recorded. Ten source files down
 ## PR5.84 — Empty-config factories and bundled defaults
 
 Clean actual HEADc4610dd and owner Production102 recorded. Fixed6.6 GRPCRule/GRPCPostProcessing factories create nothing through their config iteration when supplied an empty list. Actual CLI logback.xml declares INFO ConsoleAppender, no file/network appender. Bundled OTel API1.42.1 source has conditional no-op fallback;139 JAR scan found no SDK/exporter package or OTel service descriptors. External globals/agents/config and effective runtime remain unverified; no broad no-transmission/telemetry claim. Root classpath/unpacked language resources and33 absent language-JAR references noted. Prior text-bearing output/retention limits remain. Research hold, accepted21/9/1, zero new qualifications unchanged. No execution/SQL/graph changes. See LANGUAGETOOL_CLI_DEFAULTS.md.
+
+
+## PR5.85 — Synthetic CLI summary boundary
+
+Clean actual HEAD5a5612d and owner Production103 recorded. Added research-only fixed-synthetic stdin probe; two executable identities pinned, injected JVM option variables rejected, raw stdout/stderr not printed or persisted by wrapper. Four actual cases returned2/0/0/2 and owned temp cleanup succeeded. Four meaningful output/error/option/cleanup-boundary tests pass. Node/JVM memory, external writes, complete distribution, network/exporter and retention remain outside guarantee; not a real-document product or privacy qualification. Source pins normalize CRLF only. Accepted21/9/1, zero new qualifications unchanged. No owner capture/SQL/graph/engine changes. See LANGUAGETOOL_SYNTHETIC_PROFILE.md.
