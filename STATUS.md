@@ -473,3 +473,8 @@ Actual clean HEADdb9a12c and owner Production106. Registry integrity verified pa
 ## PR5.90 — write-good local library workflow
 
 Clean actual HEADc539f01 and owner Production107. npm1.0.8 plus seven dependencies locked/downloaded with scripts disabled in separate research folder. Full direct library loaded14 files across7 packages; commander excluded. Eight synthetic inputs in default/passive-only modes confirm manual active revision and detector limitations; adverb warning is not passive success. Selected loaded source has no direct I/O calls; text-bearing returns and runtime memory/caller retention remain explicit limits. No OS capture, CLI/editor evidence or source-release equivalence claim. Close bounded probe round, next consolidate rubric/Vale. Research only;21/9/1, zero qualifications unchanged. See WRITE_GOOD_LIBRARY_REVIEW.md.
+
+
+## PR5.91 — Vale local passive rule workflow
+
+Clean actual HEAD8f6ea43 and owner Production108. Official portable3.24.0 archive digest matched; fixed Microsoft.Passive local rule with explicit config/no-global/plain stdin. Eight synthetic runs plus warning-threshold control show manual revision, adverb/get misses, adjectival ambiguity and indeed false positive. Suggestion-level rule requires suggestion threshold; exit0 is not alert absence. Same heuristic family as write-good, not CMS sequence rule or evidence of independent accuracy. JSON holds matched prose; CLI data-path/retention review pending. No system install/sync/account or owner capture.21/9/1, zero qualifications unchanged. See VALE_LOCAL_RULE_REVIEW.md.

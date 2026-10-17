@@ -1,0 +1,212 @@
+{
+  "packet": "PR5.91",
+  "reviewedAt": "2026-10-17",
+  "baselineCommit": "8f6ea43868423203deab6b13d9c5762fa219f389",
+  "ownerProductionScreenshot": 108,
+  "researchOnly": true,
+  "graphChanges": false,
+  "publicationApproved": false,
+  "qualifiedNewCandidates": 0,
+  "edition": "Vale CLI3.24.0 Windows64 portable + single Microsoft.Passive local rule, plain-text stdin; exclude CMS, sync, editor and CI integrations",
+  "sources": [
+    "https://github.com/vale-cli/vale/releases/tag/v3.24.0",
+    "https://api.github.com/repos/vale-cli/vale/releases/tags/v3.24.0",
+    "https://raw.githubusercontent.com/errata-ai/Microsoft/ea5fa73c530a8413f39701b01856258c0223f101/Microsoft/Passive.yml",
+    "https://vale.sh/",
+    "https://vale.sh/cms"
+  ],
+  "pins": {
+    "cliTag": "v3.24.0",
+    "cliTagCommit": "2ee781716f8c177c2a143e18d535ddb11e264f00",
+    "styleCommit": "ea5fa73c530a8413f39701b01856258c0223f101",
+    "archive": "https://github.com/vale-cli/vale/releases/download/v3.24.0/vale_3.24.0_Windows_64-bit.zip",
+    "verifiedReleaseAssetDigest": "sha256:3a8884774973b6f2826877e1c6388a5feae4704ef88a9a9c912c77ce186990f3"
+  },
+  "method": "Portable official binary downloaded and release API digest matched, single fixed-source rule downloaded. No installer/PATH/service/account change. Explicit local config and --no-global; no vale sync, CMS or editor connection. Synthetic text supplied via stdin, captured JSON in research result; network used for downloads, no OS traffic capture.",
+  "configuration": {
+    "text": "StylesPath = styles\nMinAlertLevel = suggestion\n\n[*.txt]\nBasedOnStyles = Microsoft\r\n",
+    "flags": [
+      "--config=<explicit local ini>",
+      "--no-global",
+      "--output=JSON",
+      "--ext=.txt"
+    ],
+    "styleDirectory": "Only Microsoft/Passive.yml present; not the entire Microsoft style suite.",
+    "threshold": "MinAlertLevel=suggestion is required to display this suggestion-level rule; additional warning-threshold control returned empty JSON for simple passive."
+  },
+  "probe": {
+    "version": "vale version 3.24.0",
+    "hashes": [
+      {
+        "path": "vale.zip",
+        "sha256": "3a8884774973b6f2826877e1c6388a5feae4704ef88a9a9c912c77ce186990f3"
+      },
+      {
+        "path": "bin/vale.exe",
+        "sha256": "ecc1c85a83c384154e6bb1ea2f8ae16b67ccea505746ca0053155d03394719ce"
+      },
+      {
+        "path": ".vale.ini",
+        "sha256": "61bca81caebae2c71b93b77352b8d0b11de4dc8921efc687c07179110ee8903d"
+      },
+      {
+        "path": "styles/Microsoft/Passive.yml",
+        "sha256": "6735ca9ebda4123407a02ef55cb370d1850026e6a37bfa4218d9927ebad57b9c"
+      }
+    ],
+    "runs": [
+      {
+        "id": "regular-passive",
+        "text": "The report was reviewed by the editor.",
+        "output": {
+          "stdin.txt": [
+            {
+              "Action": {
+                "Name": "",
+                "Params": null
+              },
+              "Suggestions": [],
+              "Span": [
+                12,
+                23
+              ],
+              "Check": "Microsoft.Passive",
+              "Description": "",
+              "Link": "",
+              "Message": "'was reviewed' looks like passive voice.",
+              "Severity": "suggestion",
+              "Match": "was reviewed",
+              "Line": 1
+            }
+          ]
+        },
+        "alerts": 1
+      },
+      {
+        "id": "irregular-passive",
+        "text": "The letter was written by Maya.",
+        "output": {
+          "stdin.txt": [
+            {
+              "Action": {
+                "Name": "",
+                "Params": null
+              },
+              "Suggestions": [],
+              "Span": [
+                12,
+                22
+              ],
+              "Check": "Microsoft.Passive",
+              "Description": "",
+              "Link": "",
+              "Message": "'was written' looks like passive voice.",
+              "Severity": "suggestion",
+              "Match": "was written",
+              "Line": 1
+            }
+          ]
+        },
+        "alerts": 1
+      },
+      {
+        "id": "active-revision",
+        "text": "The editor reviewed the report.",
+        "output": {},
+        "alerts": 0
+      },
+      {
+        "id": "adverb-passive",
+        "text": "The report was carefully reviewed by the editor.",
+        "output": {},
+        "alerts": 0
+      },
+      {
+        "id": "get-passive",
+        "text": "The report got reviewed by the editor.",
+        "output": {},
+        "alerts": 0
+      },
+      {
+        "id": "adjectival-state",
+        "text": "The door is closed.",
+        "output": {
+          "stdin.txt": [
+            {
+              "Action": {
+                "Name": "",
+                "Params": null
+              },
+              "Suggestions": [],
+              "Span": [
+                10,
+                18
+              ],
+              "Check": "Microsoft.Passive",
+              "Description": "",
+              "Link": "",
+              "Message": "'is closed' looks like passive voice.",
+              "Severity": "suggestion",
+              "Match": "is closed",
+              "Line": 1
+            }
+          ]
+        },
+        "alerts": 1
+      },
+      {
+        "id": "progressive-active",
+        "text": "She is running.",
+        "output": {},
+        "alerts": 0
+      },
+      {
+        "id": "indeed-exception",
+        "text": "This sentence is indeed active.",
+        "output": {
+          "stdin.txt": [
+            {
+              "Action": {
+                "Name": "",
+                "Params": null
+              },
+              "Suggestions": [],
+              "Span": [
+                15,
+                23
+              ],
+              "Check": "Microsoft.Passive",
+              "Description": "",
+              "Link": "",
+              "Message": "'is indeed' looks like passive voice.",
+              "Severity": "suggestion",
+              "Match": "is indeed",
+              "Line": 1
+            }
+          ]
+        },
+        "alerts": 1
+      }
+    ]
+  },
+  "thresholdControl": {
+    "text": "The report was reviewed by the editor.",
+    "override": "--minAlertLevel=warning",
+    "output": {},
+    "alerts": 0
+  },
+  "findings": [
+    "All eight main runs exit0 with empty stderr; exit success is not zero-alert proof. Inspect JSON.",
+    "Regular/irregular passive1 each, active manual revision0; adverb/get0; adjectival state1; progressive0; indeed1 false positive.",
+    "Rule is existence-based be + immediate participle, same broad heuristic family as write-good; shared behavior is not independent accuracy evidence. It does not include passive-voice indeed exclusion.",
+    "JSON includes matched words and message; output capture/storage is an explicit text data path. No automatic rewrite or replacement suggestions in observed alerts.",
+    "Local runtime behavior is demonstrated, but no comprehensive source dependency, network/diagnostic/retention audit was conducted. --no-global limits global config loading; not a network block or all-host-state guarantee."
+  ],
+  "privacyGaps": [
+    "Selected CLI code paths and libraries have not been reviewed for operational text transmission/diagnostics.",
+    "No observed or documented complete text-retention/deletion boundary for this chosen CLI invocation.",
+    "Binary/source equivalence not established; release digest confirms artifact identity, not behavior or isolation."
+  ],
+  "decision": "Useful local configurable passive-review workflow with explicit threshold and false-positive limits; research-only and not privacy qualified. Same-rule variants must not fill minimum candidate counts.",
+  "next": "Assess selected CLI text-data paths against route rubric before qualification; do not substitute hosted CMS sequence-rule examples for this existence rule. No new owner packet capture requested."
+}
