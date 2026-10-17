@@ -1,0 +1,147 @@
+{
+  "packet": "PR5.94",
+  "reviewedAt": "2026-10-17",
+  "baselineCommit": "acb316d64b17da32bffbd33cb98e4f1d0e428a5d",
+  "ownerProductionScreenshot": 111,
+  "researchOnly": true,
+  "graphChanges": false,
+  "publicationApproved": false,
+  "qualifiedNewCandidates": 0,
+  "provenanceHashNormalization": "UTF8 CRLF-to-LF only",
+  "provenance": [
+    {
+      "path": "seed/research/privacy-evidence-decisions-2026-10-17.json",
+      "sha256": "9abda136aef35314fd7e0d1fd9f9e57239291ce0271e1162ac34a0b94febdebb"
+    },
+    {
+      "path": "seed/research/languagetool-cli-source-2026-10-17.json",
+      "sha256": "bbbedf7a9fce68ccd6ac1c76ebf45fd170f8147f62ac41eb62330ad1413d2c2b"
+    },
+    {
+      "path": "seed/research/languagetool-cli-defaults-2026-10-17.json",
+      "sha256": "2028384b26b15f342d54825d90381656df6919139cb9b5a0ad840d3d5b47afba"
+    },
+    {
+      "path": "seed/research/languagetool-distribution-profile-2026-10-17.json",
+      "sha256": "5227b3367a7a0fd2450371403744aa5b45a89cbea4d94a3e3c9598f89f3bb3ea"
+    },
+    {
+      "path": "seed/research/write-good-library-review-2026-10-17.json",
+      "sha256": "25ec04f5bc5585ae921aa101d7f9c5b223019da8ce23325e0b30f6408c6a7320"
+    },
+    {
+      "path": "seed/research/vale-local-rule-review-2026-10-17.json",
+      "sha256": "a75da6f3a11c0239c70291f5f839c5d5f5c85d091984b1a33eeba7225e4125f6"
+    },
+    {
+      "path": "seed/research/vale-data-path-review-2026-10-17.json",
+      "sha256": "2cd3a64cfe4cabd31749e07e74622b06948e4db48e6bca3f5e6a23f1048d6ec6"
+    }
+  ],
+  "candidates": [
+    {
+      "family": "LanguageTool",
+      "edition": "6.6 direct CLI + pinned portable Java + complete distribution snapshot",
+      "proposedRelationship": "A technical local alternative for manually reviewing English passive constructions, revising them yourself and rechecking. Explicit passive rules with PICKY mode are required in this tested profile; not the hosted editor, browser add-on or full Grammarly replacement.",
+      "proposedPrivacy": "In the selected direct CLI profile, fixed local resources process synthetic text without an HTTP server or editor client. Reviewed default branches and bounded runtime observations support local operation; returned context, diagnostics, caller storage and host memory remain within the documented limits.",
+      "workflow": "Two passive targets detected; active and adjectival controls not flagged in selected recorded corpus. No automatic rewriting.",
+      "commercialBoundary": "Local open-source distribution, not hosted Premium entitlement. Current commercial pricing and complete rights/notice wording not refreshed; pricing graph claim remains pending.",
+      "tradeoff": "Requires Java and command-line setup; fixed English style-rule profile; no Premium parity or universal grammar coverage.",
+      "evidence": [
+        "languagetool-cli-source-2026-10-17",
+        "languagetool-cli-defaults-2026-10-17",
+        "languagetool-distribution-profile-2026-10-17"
+      ]
+    },
+    {
+      "family": "write-good",
+      "edition": "npm1.0.8 direct local Node function with eight-package lock, stock checks and passive-only options",
+      "proposedRelationship": "A developer-oriented local function for highlighting likely passive English constructions, manually revising and rechecking. It requires a caller and does not supply a Grammarly-like editor.",
+      "proposedPrivacy": "The selected inspected loaded library path performs string matching locally and returns suggestions containing matched text, with no direct I/O calls located. The caller must keep prose and returned values within the described local operation; logging, saving, CLI/editor integrations and host diagnostics are separate data paths.",
+      "workflow": "Regular/irregular passive1 each; manual active revision0. Adverb/get passive misses and closed-state ambiguity remain.",
+      "commercialBoundary": "Eight locked package metadata records declare MIT; no paid account used. No legal audit or hosted-service pricing claim.",
+      "tradeoff": "Node integration required; heuristic detector, no automatic rewrite; caller owns presentation and retention.",
+      "evidence": [
+        "write-good-library-review-2026-10-17"
+      ]
+    },
+    {
+      "family": "Vale",
+      "edition": "3.24.0 portable CLI + fixed single Microsoft.Passive rule, explicit ini/no-global, clean child VALE environment",
+      "proposedRelationship": "A configurable local command-line workflow for identifying likely passive constructions in plain English text, manually editing and rechecking. Suggestion threshold must be enabled for the chosen rule.",
+      "proposedPrivacy": "The selected profile uses local configuration and a local existence rule, with empty NLP endpoint and profiling variables excluded. JSON contains matched prose. Optional remote NLP, pipeline configurations and profiling exist in the product and must remain outside this scoped operation.",
+      "workflow": "Simple passive1 and manual active0; adverb/get misses, closed-state ambiguity and indeed false positive.",
+      "commercialBoundary": "Official CLI documents MIT/free open-source; commercial CMS is excluded. Full distribution notices and style-license attribution wording remain review items.",
+      "tradeoff": "CLI and local configuration required; limited regex-based detection, no automatic rewrite. Not a hosted CMS or a browser integration.",
+      "evidence": [
+        "vale-local-rule-review-2026-10-17",
+        "vale-data-path-review-2026-10-17"
+      ]
+    }
+  ],
+  "valeGate": {
+    "status": "selected-config-rule-load-question-resolved-with-limits",
+    "sourceCommit": "2ee781716f8c177c2a143e18d535ddb11e264f00",
+    "sourceSections": [
+      "internal/core/config.go:pipeConfig",
+      "internal/core/source.go:ReadPipeline/loadINI",
+      "internal/core/ini.go:processSources",
+      "internal/check/manager.go:NewManager/loadStyle/compileCheck/registerCheck"
+    ],
+    "finding": "ReadPipeline can merge styles/.vale-config sources even with no-global. Manager loads defaults plus configured style files and individual checks, compiles/inherits definitions then filters. Do not equate one local YAML with a complete dependency audit.",
+    "observed": {
+      "pipelineFolderAbsent": true,
+      "styleFiles": [
+        "Passive.yml"
+      ],
+      "effective": {
+        "NLPEndpoint": "",
+        "SBaseStyles": {
+          "*.txt": [
+            "Microsoft"
+          ]
+        },
+        "GBaseStyles": null,
+        "ConfigFiles": [
+          "C:\\Users\\USER\\.codex\\.chatgpt-projects\\g-p-69a26a2cf7b481918880b7b4a5965518\\PR5.91-runtime\\.vale.ini"
+        ]
+      },
+      "output": {
+        "files": {
+          "stdin.txt": [
+            {
+              "Action": {
+                "Name": "",
+                "Params": null
+              },
+              "Suggestions": [],
+              "Span": [
+                12,
+                23
+              ],
+              "Check": "Microsoft.Passive",
+              "Description": "",
+              "Link": "",
+              "Message": "'was reviewed' looks like passive voice.",
+              "Severity": "suggestion",
+              "Match": "was reviewed",
+              "Line": 1
+            }
+          ]
+        },
+        "counts": {
+          "Microsoft.Passive": 1
+        }
+      }
+    },
+    "limits": "Counts attest effective named checks in this controlled run, not all compiled or linked code. Missing pipeline directory is a point-in-time observation, not protection from later changes; no filesystem lock."
+  },
+  "decision": "Three concrete candidate dossiers drafted, not three qualified graph candidates. These narrow statements may support a selective proposal; they do not change the broad current privacy route or establish overall vendor superiority.",
+  "remainingBeforeGraphProposal": [
+    "Map scope consistently to relationship and privacy attribute metadata, and decide explicit six-axis qualification semantics.",
+    "Review edition-specific pricing/licensing wording and dated primary references for each required graph claim; no inferred free pricing across all editions.",
+    "Check selected-operation material text-path limits against exact proposed claims; reject unsupported blanket language.",
+    "Prepare separate selective draft preview with three independently evaluated candidates; preserve publication minimum and historical fixtures."
+  ],
+  "next": "Use these concrete dossiers for scoped graph proposal preparation; no further blanket runtime capture or vendor signup. Publication remains a later separate action."
+}

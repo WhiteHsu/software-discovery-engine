@@ -488,3 +488,8 @@ Actual clean HEAD7c4fc6f and owner Production109. Fixed source sections traced s
 ## PR5.93 — Privacy evidence decisions and publication gates
 
 Clean actual HEADc5160f2 and owner Production110. Ten frozen receipts consolidated across8 edition profiles. Graph-qualified0 distinguished from research readiness: prioritize LT CLI/write-good scoped draft wording; one bounded Vale config/rule-load gate remains. Privacy engine still has no relationshipScope; proposed passive workflow/rubric not applied. Do not invent universal no-packets/secure-erasure tests or count modes as products. Next concrete dossiers/config decision before selective graph proposal; no default further capture. No graph/engine/SQL changes;21/9/1, zero applied qualifications unchanged. See PRIVACY_EVIDENCE_DECISIONS.md.
+
+
+## PR5.94 — Concrete scoped writing candidate dossiers
+
+Clean HEADacb316d and owner Production111. LT CLI/write-good/Vale relationship, privacy, workflow, commercial-boundary and tradeoff drafts written explicitly. Vale pipeline .vale-config source identified; absent in selected tree, one explicit config and counts only Microsoft.Passive observed. Selected config gate resolved, not full linked-code audit. Seven receipts pinned, no old evidence edits. Dossiers are not graph qualification; next selective scope/claim/pricing review and draft preview. No engine/graph/SQL changes;21/9/1, zero applied qualifications unchanged. See SCOPED_WRITING_CANDIDATE_DRAFTS.md.
