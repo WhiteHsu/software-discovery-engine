@@ -1,0 +1,158 @@
+{
+  "packet": "PR5.92",
+  "reviewedAt": "2026-10-17",
+  "baselineCommit": "7c4fc6fd5b48e0bdf767e78974ee93611603de40",
+  "ownerProductionScreenshot": 109,
+  "researchOnly": true,
+  "graphChanges": false,
+  "publicationApproved": false,
+  "qualifiedNewCandidates": 0,
+  "scope": "Vale3.24.0 + same fixed single Microsoft.Passive rule, explicit config/no-global/plain stdin/JSON, no hosted CMS",
+  "method": "Selected source sections at official tag commit2ee781716f8c177c2a143e18d535ddb11e264f00 reviewed. Thirteen source files indexed for reproducibility, not thirteen fully audited dependency closures. Prior official binary reused. Child-only environment removes all VALE_* variables; host variables unchanged. Effective config inspected and two synthetic calls repeated.",
+  "result": {
+    "removedValeVariableNames": [],
+    "selectedConfig": {
+      "NLPEndpoint": "",
+      "MinAlertLevel": 0,
+      "SBaseStyles": {
+        "*.txt": [
+          "Microsoft"
+        ]
+      },
+      "StylesPathExplicit": true
+    },
+    "runs": [
+      {
+        "text": "The report was reviewed by the editor.",
+        "output": {
+          "stdin.txt": [
+            {
+              "Action": {
+                "Name": "",
+                "Params": null
+              },
+              "Suggestions": [],
+              "Span": [
+                12,
+                23
+              ],
+              "Check": "Microsoft.Passive",
+              "Description": "",
+              "Link": "",
+              "Message": "'was reviewed' looks like passive voice.",
+              "Severity": "suggestion",
+              "Match": "was reviewed",
+              "Line": 1
+            }
+          ]
+        }
+      },
+      {
+        "text": "The editor reviewed the report.",
+        "output": {}
+      }
+    ],
+    "sources": [
+      {
+        "path": "cmd/vale/main.go",
+        "url": "https://github.com/vale-cli/vale/blob/2ee781716f8c177c2a143e18d535ddb11e264f00/cmd/vale/main.go",
+        "normalisedTextSha256": "88bfd75f86b699a88c54e0f3589f89decb3bbb14dfa3adfeea405db1086f7b78"
+      },
+      {
+        "path": "cmd/vale/profile.go",
+        "url": "https://github.com/vale-cli/vale/blob/2ee781716f8c177c2a143e18d535ddb11e264f00/cmd/vale/profile.go",
+        "normalisedTextSha256": "b8a621741a32705159da1f53f1ed5e8fc3da30ce3432595318db97273a1c98ee"
+      },
+      {
+        "path": "cmd/vale/json.go",
+        "url": "https://github.com/vale-cli/vale/blob/2ee781716f8c177c2a143e18d535ddb11e264f00/cmd/vale/json.go",
+        "normalisedTextSha256": "f4c61c63e7b0400f81461928274173f88fa6aabed59e6aa579006fd816a02253"
+      },
+      {
+        "path": "internal/core/source.go",
+        "url": "https://github.com/vale-cli/vale/blob/2ee781716f8c177c2a143e18d535ddb11e264f00/internal/core/source.go",
+        "normalisedTextSha256": "2be790afded1bc85760c103fbf1e551b10b83587432e41bad63151a24c0de192"
+      },
+      {
+        "path": "internal/core/config.go",
+        "url": "https://github.com/vale-cli/vale/blob/2ee781716f8c177c2a143e18d535ddb11e264f00/internal/core/config.go",
+        "normalisedTextSha256": "32d23e1fadf43dca535554c62cefd00f475a19873c88bf0a34f16a19397923ec"
+      },
+      {
+        "path": "internal/core/ini.go",
+        "url": "https://github.com/vale-cli/vale/blob/2ee781716f8c177c2a143e18d535ddb11e264f00/internal/core/ini.go",
+        "normalisedTextSha256": "004abc0e609039397e6792b47b8d2a2a8032304fc1252021a62e1b7a2eaef66c"
+      },
+      {
+        "path": "internal/core/file.go",
+        "url": "https://github.com/vale-cli/vale/blob/2ee781716f8c177c2a143e18d535ddb11e264f00/internal/core/file.go",
+        "normalisedTextSha256": "39ad0574993686bc3979db726b06245290a54adbb22d1de7806c03dc914e6ee2"
+      },
+      {
+        "path": "internal/lint/lint.go",
+        "url": "https://github.com/vale-cli/vale/blob/2ee781716f8c177c2a143e18d535ddb11e264f00/internal/lint/lint.go",
+        "normalisedTextSha256": "3f4b7e92bd5278dc1e89243056bf4a4fa2d17f93b6e10e5605aee460d429ab3b"
+      },
+      {
+        "path": "internal/check/manager.go",
+        "url": "https://github.com/vale-cli/vale/blob/2ee781716f8c177c2a143e18d535ddb11e264f00/internal/check/manager.go",
+        "normalisedTextSha256": "8002a4176458b1f0f5dbdc04be5fc0d15bac4758ad9788ada1e68a27be2a3b10"
+      },
+      {
+        "path": "internal/check/existence.go",
+        "url": "https://github.com/vale-cli/vale/blob/2ee781716f8c177c2a143e18d535ddb11e264f00/internal/check/existence.go",
+        "normalisedTextSha256": "ccc7bf33eb89d2ad7f69be3facae22351b3d055a2022dbeaaaf95d7d105c0102"
+      },
+      {
+        "path": "internal/nlp/provider.go",
+        "url": "https://github.com/vale-cli/vale/blob/2ee781716f8c177c2a143e18d535ddb11e264f00/internal/nlp/provider.go",
+        "normalisedTextSha256": "7e4caaa1d9a47c7f59b97441a8c6983126a4e854284855e3daaa70e23d00b224"
+      },
+      {
+        "path": "internal/nlp/prose.go",
+        "url": "https://github.com/vale-cli/vale/blob/2ee781716f8c177c2a143e18d535ddb11e264f00/internal/nlp/prose.go",
+        "normalisedTextSha256": "b2bb105de09078987335dd59e00760bb6d2736b54e9ba84c3aa62436dc3a58fd"
+      },
+      {
+        "path": "internal/nlp/http.go",
+        "url": "https://github.com/vale-cli/vale/blob/2ee781716f8c177c2a143e18d535ddb11e264f00/internal/nlp/http.go",
+        "normalisedTextSha256": "52d72a35b66d4a34fc3bc18ccbe9a5fea2ef7fb5b5bf4f19878cac6a6cf6efc0"
+      }
+    ]
+  },
+  "findings": [
+    {
+      "boundary": "stdin",
+      "source": "cmd/vale/main.go:doLint",
+      "finding": "No positional args reads complete stdin into memory, then LintString. Errors go to stderr and exit2; outputs/errors are separate text paths."
+    },
+    {
+      "boundary": "configuration",
+      "source": "internal/core/source.go:loadINI;internal/core/config.go:DefaultStylesPath",
+      "finding": "Explicit config wins over VALE_CONFIG_PATH selection. --no-global prevents loading default global INI, but other environment paths remain possible. DefaultStylesPath consults VALE_STYLES_PATH; explicit local styles used in chosen profile."
+    },
+    {
+      "boundary": "remote NLP",
+      "source": "internal/nlp/http.go;prose.go;provider.go;internal/core/ini.go",
+      "finding": "Optional nonempty NLPEndpoint allows remote NLP. Text/lang appear in encoded URL query passed to HTTP POST, not just an opaque metadata request. Endpoint is empty in selected effective config. Empty endpoint takes local tagging fallback; non-English segmentation has its own endpoint condition. No full callgraph exclusion of every network function claimed."
+    },
+    {
+      "boundary": "profiling",
+      "source": "cmd/vale/main.go;profile.go",
+      "finding": "startProfiling runs before flag parsing. VALE_CPUPROFILE and VALE_MEMPROFILE can create profile files. Child-only removal in new controlled runs excludes those environment-controlled paths. Profiles can contain operational metadata; exact prose content not established. Does not prove earlier PR5.91 inherited variables absent."
+    },
+    {
+      "boundary": "matching",
+      "source": "internal/check/existence.go:Run",
+      "finding": "Selected existence rule matches block text, creates alerts and anchors. No text-submission operation seen in inspected rule runner."
+    },
+    {
+      "boundary": "output",
+      "source": "cmd/vale/json.go:PrintJSONAlerts",
+      "finding": "Alerts including matched prose printed as JSON stdout; error-level alerts affect exit status, explaining suggestion exit0. Caller persistence remains explicit."
+    }
+  ],
+  "controlledResult": "Effective NLPEndpoint empty; suggestion threshold and only selected Microsoft style section confirmed. Passive1 and manual active revision0. Previous eight-case results remain frozen.",
+  "privacyDecision": "Stronger selected-path evidence, still research-only. Optional NLP/profiling paths prevent blanket whole-product no-network/no-write assertions. No OS traffic/write observation, full dependency audit, binary-source equivalence or deletion guarantee. No new graph qualification.",
+  "next": "Consolidate distinct candidate evidence and remaining publication gates; no further automatic capture/tool expansion. Preserve unknowns as unknown rather than negative vendor findings."
+}

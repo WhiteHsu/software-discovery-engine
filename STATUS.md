@@ -478,3 +478,8 @@ Clean actual HEADc539f01 and owner Production107. npm1.0.8 plus seven dependenci
 ## PR5.91 — Vale local passive rule workflow
 
 Clean actual HEAD8f6ea43 and owner Production108. Official portable3.24.0 archive digest matched; fixed Microsoft.Passive local rule with explicit config/no-global/plain stdin. Eight synthetic runs plus warning-threshold control show manual revision, adverb/get misses, adjectival ambiguity and indeed false positive. Suggestion-level rule requires suggestion threshold; exit0 is not alert absence. Same heuristic family as write-good, not CMS sequence rule or evidence of independent accuracy. JSON holds matched prose; CLI data-path/retention review pending. No system install/sync/account or owner capture.21/9/1, zero qualifications unchanged. See VALE_LOCAL_RULE_REVIEW.md.
+
+
+## PR5.92 — Vale selected text data paths
+
+Actual clean HEAD7c4fc6f and owner Production109. Fixed source sections traced stdin/config/existence/JSON plus optional remote NLP and environment profiling. NLP may send text in URL query; profiling starts before flags and can write files. New child-only VALE_* removal, empty effective endpoint and explicit local profile confirmed; passive1/manual-active0. Does not retroactively attest prior inherited environment or all network/write paths.13 source files indexed, not full dependency audit. Research only;21/9/1, zero qualifications unchanged. Next consolidate evidence/gates without default capture expansion. See VALE_DATA_PATH_REVIEW.md.
