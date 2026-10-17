@@ -1,0 +1,80 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {createHash} from 'node:crypto';
+import {privacyImportInputs,buildPrivacyImport} from './build-privacy-import.mjs';
+import {escapeDefinitions,publishable} from '../../lib/discovery/escape-model.ts';
+import {rankEscapeCandidates} from '../../lib/discovery/privacy-route.ts';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
+const hash=x=>createHash('sha256').update(JSON.stringify(x)).digest('hex');
+const PIN='480ed852d319bf37ca224caf390db9f13dcb8b272edbb1610d333dc5f18cc5c8';
+const slugs=['languagetool-local-cli-6-6','write-good-local-library-1-0-8','vale-local-passive-3-24-0'],routeSlug='privacy-friendly-grammarly-alternatives';
+const quote=x=>"'"+x.replaceAll("'","''")+"'",list=xs=>xs.map(quote).join(',')||'NULL';
+const rlsQuery="SELECT coalesce(jsonb_agg(jsonb_build_object('table_name',c.relname,'rls_enabled',c.relrowsecurity) ORDER BY c.relname),'[]'::jsonb) FROM pg_class c JOIN pg_namespace n ON n.oid=c.relnamespace WHERE n.nspname='software_discovery' AND c.relname IN ('products','escape_routes','escape_route_products')";
+const policyQuery="SELECT coalesce(jsonb_agg(to_jsonb(p) ORDER BY tablename,policyname),'[]'::jsonb) FROM pg_policies p WHERE schemaname='software_discovery' AND tablename IN ('products','escape_routes','escape_route_products')";
+export function privacyPublicationInputs(){return {importInput:privacyImportInputs(),snapshot:JSON.parse(fs.readFileSync(path.join(root,'seed/research/privacy-publication-baseline-2026-10-17.json'),'utf8'))};}
+export function buildPrivacyPublication(input,{commit=false}={}){
+ const s=input.snapshot;
+ if(hash(s)!==PIN||s.packet!=='PR5.103'||s.read_only!==true||s.products.length!==4||s.products.some(p=>p.status!=='draft'||![...slugs,'languagetool'].includes(p.slug))||s.route.length!==2||!s.route.some(r=>r.slug===routeSlug&&r.status==='draft'&&!r.editorially_approved)||s.route_members.length!==6||s.target_route_memberships.length!==3||s.target_route_memberships.some(m=>m.route_slug!==routeSlug)||s.published_products.length!==21||s.approved_published_routes.length!==9||!s.anon_private_evidence_boundary||s.public_product_projections.length!==4||s.public_product_projections.some(x=>x.page!==null)||s.public_read_rls.length!==3||s.public_read_rls.some(x=>!x.rls_enabled))throw Error('Privacy publication baseline drift');
+ const imported=buildPrivacyImport(input.importInput),lookup={products:s.products,attributes:s.taxonomy_attributes,anchors:s.taxonomy_anchors,evidence_sources:s.evidence_sources,claim_evidence:s.claim_evidence,escape_routes:s.route};
+ // Check every row proposed by the prior import against the actual returned production snapshot.
+ for(const op of imported.plan.tables){const actual=s[op.table]??lookup[op.table]??(op.table==='escape_route_products'?s.route_members:[]);
+  for(const row of op.rows)if(!actual.some(a=>Object.entries(row).every(([k,v])=>{
+   if(v&&typeof v==='object'&&v.$ref){const ref=v.$ref,target=lookup[ref.table]?.find(t=>Object.entries(ref.where).every(([key,value])=>t[key]===value));return a[k]===target?.id;}
+   return ['last_verified_at','retrieved_at'].includes(k)?Date.parse(a[k])===Date.parse(v):a[k]===v;
+  })))throw Error('Stored reviewed import row mismatch: '+op.table);
+ }
+ const sourcesFor=(links,pid,key,id,relationship)=>links.filter(l=>l.product_id===pid&&l[key]===id&&(!relationship||l.relationship_type===relationship)).map(l=>{const e=s.claim_evidence.find(e=>e.id===l.claim_evidence_id),src=s.evidence_sources.find(src=>src.id===e?.evidence_source_id);if(!src)throw Error('Incomplete stored evidence');return {title:src.title,url:src.url,retrievedAt:src.retrieved_at};});
+ const pages=s.products.filter(p=>slugs.includes(p.slug)).map(p=>({slug:p.slug,name:p.name,websiteUrl:p.website_url,description:p.short_description,status:'published',problems:[],audiences:[],routes:[],attributes:s.product_attributes.filter(c=>c.product_id===p.id).map(c=>{const t=s.taxonomy_attributes.find(t=>t.id===c.attribute_id);if(!t)throw Error('Missing stored attribute taxonomy');return {slug:t.slug,name:t.name,description:t.description,value:c.value_boolean??c.value_text??c.value_number??c.value_enum,verificationStatus:c.verification_status,confidence:c.confidence,lastVerifiedAt:c.last_verified_at,sources:sourcesFor(s.product_attribute_evidence,p.id,'attribute_id',t.id)};}),anchors:s.product_anchors.filter(c=>c.product_id===p.id).map(c=>{const t=s.taxonomy_anchors.find(t=>t.id===c.anchor_id);if(!t)throw Error('Missing stored anchor taxonomy');return {slug:t.slug,name:t.name,description:c.scope_description??t.description,scope:c.relationship_scope,relationshipType:c.relationship_type,verificationStatus:c.verification_status,confidence:c.confidence,lastVerifiedAt:c.last_verified_at,sources:sourcesFor(s.product_anchor_evidence,p.id,'anchor_id',t.id,c.relationship_type)};})}));
+ const def=escapeDefinitions.find(x=>x.slug===routeSlug),candidates=rankEscapeCandidates(def,pages.map(product=>({product,noveltyScore:0})));
+ if(candidates.length!==3||!publishable({published:true,candidates}))throw Error('Three qualified publication candidates required');
+ const allIds=list(s.products.map(p=>p.id)),ids=list(s.products.filter(p=>slugs.includes(p.slug)).map(p=>p.id)),guards=[];
+ for(const table of ['products','product_attributes','product_anchors','product_problems','product_audiences','product_attribute_evidence','product_anchor_evidence','product_problem_evidence','product_audience_evidence'])guards.push({table,rows:s[table],where:table==='products'?`slug IN (${list([...slugs,'languagetool'])})`:`product_id IN (${allIds})`});
+ for(const table of ['claim_evidence','evidence_sources'])guards.push({table,rows:s[table],where:`id IN (${list(s[table].map(r=>r.id))})${table==='evidence_sources'?" OR seed_key LIKE 'privacy99-%'":" OR evidence_source_id IN (SELECT id FROM software_discovery.evidence_sources WHERE seed_key LIKE 'privacy99-%')"}`});
+ for(const table of ['attributes','anchors','problems','audiences'])guards.push({table,rows:s['taxonomy_'+table],where:`id IN (${list(s['taxonomy_'+table].map(r=>r.id))})`});
+ const members=s.route_members.map(m=>Object.fromEntries(Object.entries(m).filter(([k])=>k!=='product_slug')));
+ guards.push({table:'escape_routes',rows:s.route,where:`slug IN (${list([routeSlug,'grammarly-alternatives-without-a-subscription'])})`},{table:'escape_route_products',rows:members,where:`escape_route_id IN (${list(s.route.map(r=>r.id))}) OR product_id IN (${allIds})`});
+ const data={guards,snapshot:{published_products:s.published_products,approved_published_routes:s.approved_published_routes,public_read_rls:s.public_read_rls,public_read_policies:s.public_read_policies}},payload=JSON.stringify(data);
+ const sql=`-- PR5.104 ${commit?'APPLY ONLY AFTER EXPLICIT OWNER PUBLICATION APPROVAL':'REHEARSAL: publication changes roll back'}.
+-- Only statuses of three existing products and status/approval of one route change.
+DO $privacy_publish$
+DECLARE data jsonb=$payload$${payload}$payload$::jsonb; op jsonb; expected jsonb; actual jsonb;
+BEGIN
+ PERFORM set_config('lock_timeout','10s',true);
+ PERFORM set_config('TimeZone','UTC',true);
+ PERFORM pg_advisory_xact_lock(7232003);
+ LOCK TABLE ${guards.map(g=>'software_discovery.'+g.table).join(',')} IN SHARE ROW EXCLUSIVE MODE;
+ IF coalesce((SELECT jsonb_agg(slug ORDER BY slug) FROM software_discovery.products WHERE status='published'),'[]'::jsonb)<>data->'snapshot'->'published_products' OR coalesce((SELECT jsonb_agg(slug ORDER BY slug) FROM software_discovery.escape_routes WHERE status='published' AND editorially_approved),'[]'::jsonb)<>data->'snapshot'->'approved_published_routes' THEN RAISE EXCEPTION 'PR5.104 publication state drift or repeated apply; fresh preflight required'; END IF;
+ IF NOT has_function_privilege('anon','software_discovery.product_discovery_page(text)','EXECUTE') OR has_table_privilege('anon','software_discovery.claim_evidence','SELECT') THEN RAISE EXCEPTION 'PR5.104 private evidence boundary drift'; END IF;
+ IF (${rlsQuery})<>data->'snapshot'->'public_read_rls' OR (${policyQuery})<>data->'snapshot'->'public_read_policies' THEN RAISE EXCEPTION 'PR5.104 public read policy drift'; END IF;
+ FOR op IN SELECT value FROM jsonb_array_elements(data->'guards') LOOP
+  EXECUTE format('SELECT coalesce(jsonb_agg(j ORDER BY j::text),''[]''::jsonb) FROM (SELECT to_jsonb(jsonb_populate_record(NULL::software_discovery.%I,r))-''created_at''-''updated_at'' j FROM jsonb_array_elements($1) r) x',op->>'table') INTO expected USING op->'rows';
+  EXECUTE format('SELECT coalesce(jsonb_agg(j ORDER BY j::text),''[]''::jsonb) FROM (SELECT to_jsonb(t)-''created_at''-''updated_at'' j FROM software_discovery.%I t WHERE %s) x',op->>'table',op->>'where') INTO actual;
+  IF expected<>actual THEN RAISE EXCEPTION 'PR5.104 stored baseline drift: %',op->>'table'; END IF;
+ END LOOP;
+ IF EXISTS(SELECT 1 FROM software_discovery.products WHERE id IN (${ids}) AND software_discovery.product_discovery_page(slug) IS NOT NULL) THEN RAISE EXCEPTION 'PR5.104 draft public visibility drift'; END IF;
+ UPDATE software_discovery.products SET status='published' WHERE id IN (${ids});
+ UPDATE software_discovery.escape_routes SET status='published',editorially_approved=true WHERE id=${quote(s.route.find(r=>r.slug===routeSlug).id)};
+ IF (SELECT count(*) FROM software_discovery.products WHERE status='published')<>24 OR (SELECT count(*) FROM software_discovery.escape_routes WHERE status='published' AND editorially_approved)<>10 THEN RAISE EXCEPTION 'PR5.104 post-publication count mismatch'; END IF;
+ IF EXISTS(SELECT 1 FROM software_discovery.products p WHERE p.id IN (${ids}) AND (software_discovery.product_discovery_page(p.slug) IS NULL OR NOT EXISTS(SELECT 1 FROM jsonb_array_elements(software_discovery.product_discovery_page(p.slug)->'anchors') a WHERE a->>'slug'='grammarly' AND a->>'scope'='personal-english-passive-construction-review' AND a->>'verificationStatus'='verified' AND length(a->>'description')>0 AND jsonb_array_length(a->'sources')>0) OR NOT EXISTS(SELECT 1 FROM jsonb_array_elements(software_discovery.product_discovery_page(p.slug)->'attributes') a WHERE a->>'slug'='privacy-friendly' AND a->'value'='true'::jsonb AND a->>'verificationStatus'='verified' AND jsonb_array_length(a->'sources')>0))) THEN RAISE EXCEPTION 'PR5.104 public qualified projection missing'; END IF;
+
+ IF EXISTS(SELECT 1 FROM software_discovery.products p WHERE p.id IN (${ids}) AND NOT EXISTS(SELECT 1 FROM jsonb_array_elements(software_discovery.product_discovery_page(p.slug)->'attributes') a JOIN software_discovery.attributes t ON t.slug='reviewed-local-operation' JOIN software_discovery.product_attributes c ON c.product_id=p.id AND c.attribute_id=t.id WHERE a->>'slug'=t.slug AND a->>'value'=c.value_text AND a->>'verificationStatus'='verified' AND jsonb_array_length(a->'sources')>0)) THEN RAISE EXCEPTION 'PR5.104 public operation statement missing'; END IF;
+ ${commit?'-- Apply persists only after owner approval.':"RAISE SQLSTATE 'ZSR01' USING MESSAGE='Privacy publication rehearsal only';"}
+EXCEPTION WHEN SQLSTATE 'ZSR01' THEN RAISE NOTICE 'Privacy publication rehearsal rolled back; no changes persisted';
+END $privacy_publish$;
+`;
+ return {sql,guards,candidates,pages,report:{packet:'PR5.104',baselineSha256:PIN,publicationDecision:'pending-owner-approval',mode:commit?'apply-after-owner-approval':'rehearsal-rollback',products:slugs,route:routeSlug,qualified:3,before:{products:21,routes:9,remaining:1},after:{products:24,routes:10,remaining:0},claimsChanged:0,evidenceChanged:0,membershipsChanged:0,routeCopyChanged:false}};
+}
+export function privacyPublicationVerification(input){
+ const r=buildPrivacyPublication(input),s=input.snapshot,products=[...s.published_products,...slugs].sort(),routes=[...s.approved_published_routes,routeSlug].sort();
+ const checks=r.guards.map(g=>{const rows=g.rows.map(row=>g.table==='products'&&slugs.includes(row.slug)?{...row,status:'published'}:g.table==='escape_routes'&&row.slug===routeSlug?{...row,status:'published',editorially_approved:true}:row);return `SELECT 'exact_${g.table}' check_name,(${`SELECT coalesce(jsonb_agg(j ORDER BY j::text),'[]'::jsonb) FROM (SELECT to_jsonb(t)-'created_at'-'updated_at' j FROM software_discovery.${g.table} t WHERE ${g.where}) x`})=(${`SELECT coalesce(jsonb_agg(j ORDER BY j::text),'[]'::jsonb) FROM (SELECT to_jsonb(jsonb_populate_record(NULL::software_discovery.${g.table},a))-'created_at'-'updated_at' j FROM jsonb_array_elements($verify$${JSON.stringify(rows)}$verify$::jsonb) a) x`}) passed`;});
+ checks.push(`SELECT 'public_operation_statement',(SELECT count(*)=3 AND bool_and(EXISTS(SELECT 1 FROM jsonb_array_elements(software_discovery.product_discovery_page(p.slug)->'attributes') a JOIN software_discovery.attributes t ON t.slug='reviewed-local-operation' JOIN software_discovery.product_attributes c ON c.product_id=p.id AND c.attribute_id=t.id WHERE a->>'slug'=t.slug AND a->>'value'=c.value_text AND a->>'verificationStatus'='verified' AND jsonb_array_length(a->'sources')>0)) FROM software_discovery.products p WHERE p.slug IN (${list(slugs)}))`);
+ checks.push(`SELECT 'published_slug_sets',coalesce((SELECT jsonb_agg(slug ORDER BY slug) FROM software_discovery.products WHERE status='published'),'[]'::jsonb)=$verify$${JSON.stringify(products)}$verify$::jsonb AND coalesce((SELECT jsonb_agg(slug ORDER BY slug) FROM software_discovery.escape_routes WHERE status='published' AND editorially_approved),'[]'::jsonb)=$verify$${JSON.stringify(routes)}$verify$::jsonb`,
+ `SELECT 'public_product_qualification_fields',(SELECT count(*)=3 AND bool_and((software_discovery.product_discovery_page(p.slug) IS NOT NULL AND EXISTS(SELECT 1 FROM jsonb_array_elements(software_discovery.product_discovery_page(p.slug)->'anchors') a WHERE a->>'slug'='grammarly' AND a->>'scope'='personal-english-passive-construction-review' AND a->>'verificationStatus'='verified' AND (a->>'confidence')::numeric>=.8 AND length(a->>'description')>0 AND jsonb_array_length(a->'sources')>0) AND EXISTS(SELECT 1 FROM jsonb_array_elements(software_discovery.product_discovery_page(p.slug)->'attributes') a WHERE a->>'slug'='privacy-friendly' AND a->'value'='true'::jsonb AND a->>'verificationStatus'='verified' AND (a->>'confidence')::numeric>=.8 AND jsonb_array_length(a->'sources')>0) AND EXISTS(SELECT 1 FROM jsonb_array_elements(software_discovery.product_discovery_page(p.slug)->'routes') a WHERE a->>'slug'='${routeSlug}')) IS TRUE) FROM software_discovery.products p WHERE p.slug IN (${list(slugs)}))`,
+ `SELECT 'public_read_rls_and_policies',(${rlsQuery})=$verify$${JSON.stringify(s.public_read_rls)}$verify$::jsonb AND (${policyQuery})=$verify$${JSON.stringify(s.public_read_policies)}$verify$::jsonb`,
+ `SELECT 'anon_private_evidence_boundary',has_function_privilege('anon','software_discovery.product_discovery_page(text)','EXECUTE') AND NOT has_table_privilege('anon','software_discovery.claim_evidence','SELECT')`);
+ return '-- PR5.104 SELECT only: all checks must be true after approved publication.\n'+checks.join('\nUNION ALL\n')+';\n';
+}
+if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
+ try{if(process.argv.length!==2)throw Error('No arguments supported');const i=privacyPublicationInputs(),r=buildPrivacyPublication(i);for(const commit of [false,true])fs.writeFileSync(path.join(root,`supabase/data/PR5.104_${commit?'APPLY_AFTER_APPROVAL':'REHEARSE'}.sql`),buildPrivacyPublication(i,{commit}).sql);fs.writeFileSync(path.join(root,'supabase/verification/PR5.104_VERIFY.sql'),privacyPublicationVerification(i));const out=path.join(root,'.seed-output/privacy-publication');fs.mkdirSync(out,{recursive:true});fs.writeFileSync(path.join(out,'report.json'),JSON.stringify(r.report,null,2)+'\n');console.log('PR5.104 concrete proposal generated; owner publication approval pending. No remote execution.');}catch(e){console.error(e.message);process.exitCode=1;}
+}

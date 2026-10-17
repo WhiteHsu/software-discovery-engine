@@ -535,3 +535,7 @@ Owner pushed35b520e and returned privileged PR5.101 snapshot:21 published produc
 ## PR5.103 — Privacy draft acceptance and publication preflight
 
 Owner returned PR5.102 verification32/32 true after apply;3 scoped drafts imported, generic LanguageTool/old route retained, public21/9/1 and private evidence boundary preserved. Frozen owner receipt plus SELECT-only post-import snapshot capture actual IDs, RLS/policies and public projections before guarded publication proposal. No apply replay or publication approval/execution. Await snapshot; see PRIVACY_PUBLICATION_PREFLIGHT.md.
+
+## PR5.104 — Guarded scoped privacy publication proposal
+
+Owner pushed94cafe4 and returned actual PR5.103 snapshot. Stored import rows match;3 actual scoped editions qualify via runtime, generic draft and published route retained. Concrete rollback rehearsal/pending-approved apply/22-check verification prepared. Only3 product statuses and1 route status/approval would change; expected24/10/0 after acceptance, current accepted21/9/1 unchanged.23 local tests passed; no remote publication or approval. See PRIVACY_PUBLICATION_PROPOSAL.md.
