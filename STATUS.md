@@ -523,3 +523,8 @@ Clean HEADa28a62c and owner Production116. Three scoped dossiers converted throu
 ## PR5.100 — Runtime scoped privacy and display integration
 
 Clean HEAD18e8f9b and owner Production117. Registered reviewed profiles match frozen PR5.99 drafts. getEscape preview/live paths now enforce scoped profile evaluation; unreviewed/altered/missing-evidence pages fail closed. Other routes unchanged, historical evaluator/source pins untouched. Route/product displays include complete reviewed local operation; invalid scope privacy badge becomes unknown, no standalone positive privacy highlight. Privacy draft file selection development-only.17 tests, full typecheck, webpack production build and two local SSR pages passed; server stopped. No SQL/import/publication or graph changes;21/9/1, actual privacy0 unchanged. See PRIVACY_RUNTIME_INTEGRATION.md.
+
+## PR5.101 — Read-only privacy import preflight
+
+Owner accepted PR5.100 local UI and links at HEAD ca9f971. Added single-SELECT privileged collision snapshot for three scoped editions, existing families, routes, claims/evidence, taxonomy and public sets. No live query executed or import/publication approved. Pending returned snapshot before selective draft SQL; public checkpoint21/9/1 unchanged. See PRIVACY_IMPORT_PREFLIGHT.md.
+
