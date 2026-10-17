@@ -438,3 +438,8 @@ Clean actual HEAD6bf8e2c and owner Production100 recorded. Six editions/operatio
 ## PR5.83 — Pinned CLI source path review
 
 Clean actual HEAD7b9d29f and owner Production101 recorded. Ten source files downloaded from fixed6.6 commit; selected CLI entry/options/remote-config/output/error/cleanup/telemetry paths reviewed. Absent remote config passes empty list but downstream factories remain unreviewed. JSON output carries sentence/context; error branches can carry abbreviated sentence text. Cleanup covers registered temporary files at normal end, not every caller copy or crash. Global telemetry hookup is not exporter verification. Source/binary equivalence not claimed. Privacy stays on hold; accepted21/9/1, zero new qualifications. No execution, owner capture, SQL/graph/engine changes. See LANGUAGETOOL_CLI_SOURCE_REVIEW.md.
+
+
+## PR5.84 — Empty-config factories and bundled defaults
+
+Clean actual HEADc4610dd and owner Production102 recorded. Fixed6.6 GRPCRule/GRPCPostProcessing factories create nothing through their config iteration when supplied an empty list. Actual CLI logback.xml declares INFO ConsoleAppender, no file/network appender. Bundled OTel API1.42.1 source has conditional no-op fallback;139 JAR scan found no SDK/exporter package or OTel service descriptors. External globals/agents/config and effective runtime remain unverified; no broad no-transmission/telemetry claim. Root classpath/unpacked language resources and33 absent language-JAR references noted. Prior text-bearing output/retention limits remain. Research hold, accepted21/9/1, zero new qualifications unchanged. No execution/SQL/graph changes. See LANGUAGETOOL_CLI_DEFAULTS.md.

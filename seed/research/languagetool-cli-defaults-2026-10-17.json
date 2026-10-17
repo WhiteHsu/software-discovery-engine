@@ -1,0 +1,165 @@
+{
+  "version": 1,
+  "packet": "PR5.84",
+  "reviewedAt": "2026-10-17",
+  "baselineCommit": "c4610dd1fa5e8d3c76361e26130a799d241e396e",
+  "researchOnly": true,
+  "graphChanges": false,
+  "publicationApproved": false,
+  "qualifiedNewCandidates": 0,
+  "checkpoint": {
+    "products": 21,
+    "completedRoutes": 9,
+    "remainingRoutes": 1
+  },
+  "edition": "LanguageTool6.6 direct CLI; fixed source and bundled defaults, not runtime attestation",
+  "sourceReference": {
+    "commit": "f13e71a7fe85a122290826fd691d267d64e97c33",
+    "tag": "v6.6",
+    "binaryReproducibleBuildVerified": false
+  },
+  "sources": [
+    {
+      "id": "GRPCRule",
+      "path": "languagetool-core/src/main/java/org/languagetool/rules/GRPCRule.java",
+      "url": "https://raw.githubusercontent.com/languagetool-org/languagetool/f13e71a7fe85a122290826fd691d267d64e97c33/languagetool-core/src/main/java/org/languagetool/rules/GRPCRule.java",
+      "sha256": "55a321087b0deb33d5fe3db6d3b7ed739a4a264c6a3c4e03a4afc3ae9f0743af"
+    },
+    {
+      "id": "GRPCPostProcessing",
+      "path": "languagetool-core/src/main/java/org/languagetool/rules/GRPCPostProcessing.java",
+      "url": "https://raw.githubusercontent.com/languagetool-org/languagetool/f13e71a7fe85a122290826fd691d267d64e97c33/languagetool-core/src/main/java/org/languagetool/rules/GRPCPostProcessing.java",
+      "sha256": "54c593145be2cb632b7a6474ddc0628a2be65f1d6e1c6883641456eea85825c0"
+    }
+  ],
+  "otelSource": {
+    "coordinates": "io.opentelemetry:opentelemetry-api:1.42.1",
+    "versionReadFromBundledManifest": true,
+    "downloadUrl": "https://repo.maven.apache.org/maven2/io/opentelemetry/opentelemetry-api/1.42.1/opentelemetry-api-1.42.1-sources.jar",
+    "sourceArchiveSha256": "0c3c8c37171fa4eb7e2201cb575fee8ae5eb681890b849e3ef42c7d793eec841",
+    "entry": "io/opentelemetry/api/GlobalOpenTelemetry.java",
+    "extractedUtf8LfSha256": "5102ec2f2d2acfb7a5b7814d1f4cfe093e67c038e11c7e29d2051bfcc1c305c3"
+  },
+  "artifactInspection": {
+    "basisZipSha256": "53600506b399bb5ffe1e4c8dec794fd378212f14aaf38ccef9b6f89314d11631",
+    "cliJarSha256": "7e652a409245a7c9ffce517c891cb6cc27eee00abbb32a3427995abd6f9096ac",
+    "jarsScanned": 139,
+    "scanSummarySha256": "22a41ceb58f3ccb938d1890836bb52489d4d4f1e632ab28dbc898eb1baecf369",
+    "sdkOrExporterEntries": 0,
+    "otelServiceDescriptors": 0,
+    "apiJarSha256": "6b0f9d067260ea3ed6c3960352b80800b993cb3962fa6fb1b6383cd04c3c0874",
+    "cliManifestClassPathEntries": 142,
+    "uniqueManifestEntries": 140,
+    "manifestReferencesMissingFromExtractedTree": [
+      "libs/language-all.jar",
+      "libs/language-ar.jar",
+      "libs/language-ast.jar",
+      "libs/language-be.jar",
+      "libs/language-br.jar",
+      "libs/language-ca.jar",
+      "libs/language-da.jar",
+      "libs/language-de.jar",
+      "libs/language-de-DE-x-simple-language.jar",
+      "libs/language-el.jar",
+      "libs/language-en.jar",
+      "libs/language-eo.jar",
+      "libs/language-es.jar",
+      "libs/language-fa.jar",
+      "libs/language-fr.jar",
+      "libs/language-ga.jar",
+      "libs/language-gl.jar",
+      "libs/language-it.jar",
+      "libs/language-ja.jar",
+      "libs/language-km.jar",
+      "libs/language-nl.jar",
+      "libs/language-pl.jar",
+      "libs/language-pt.jar",
+      "libs/language-ro.jar",
+      "libs/language-ru.jar",
+      "libs/language-sk.jar",
+      "libs/language-sl.jar",
+      "libs/language-sv.jar",
+      "libs/language-ta.jar",
+      "libs/language-tl.jar",
+      "libs/language-uk.jar",
+      "libs/language-zh.jar",
+      "libs/language-crh.jar"
+    ],
+    "classPathIncludesRoot": true,
+    "cliManifestIncludesCoreTests": false,
+    "logbackCandidates": [
+      {
+        "jar": "languagetool-commandline.jar",
+        "entries": [
+          "logback.xml"
+        ]
+      },
+      {
+        "jar": "languagetool-core-tests.jar",
+        "entries": [
+          "logback-test.xml",
+          "logback.xml"
+        ]
+      }
+    ],
+    "cliLogback": {
+      "entry": "logback.xml",
+      "entrySha256": "a298b86526d0e25f77d6a84f18f39ac3ef4a4014dc42acd9229a6808bd518fea",
+      "rootLevel": "info",
+      "appenderClass": "ch.qos.logback.core.ConsoleAppender",
+      "appenderName": "stdout",
+      "explicitTarget": false,
+      "fileOrNetworkAppenderInThisXml": false,
+      "includeOrPropertyInThisXml": false
+    },
+    "unpackedRootSdkDirectoryPresent": false,
+    "unpackedRootExporterDirectoryPresent": false
+  },
+  "findings": [
+    {
+      "id": "empty-grpc",
+      "locator": "GRPCRule.java:501-512",
+      "claim": "Both createAll overloads stream/filter/map the supplied configs; an empty list produces no rules or connection constructor calls through these factories.",
+      "condition": "Selected fresh CLI with the previously observed absent --remoterules; not all transitive/native networking."
+    },
+    {
+      "id": "empty-postprocessing",
+      "locator": "GRPCPostProcessing.java:55-90",
+      "claim": "configure iterates relevant configs; instance/channel creation is inside that iteration. Empty configs create no instance through this path.",
+      "condition": "Fresh state for the selected CLI; does not clear or inspect instances preconfigured by other embedding code."
+    },
+    {
+      "id": "bundled-logback",
+      "locator": "CLI JAR!/logback.xml",
+      "claim": "Bundled XML specifies one INFO ConsoleAppender, no file/network appender or include. This does not remove direct System.out/System.err text-bearing outputs.",
+      "condition": "Actual selected configuration/overrides were not runtime-inspected. CLI root classpath and external configuration/code may change behavior."
+    },
+    {
+      "id": "otel-default",
+      "locator": "GlobalOpenTelemetry.java:73-88,221-258",
+      "claim": "Existing global is returned; otherwise tries SDK autoconfigure, and uses OpenTelemetry.noop when none results. Autoconfigure requires SDK class and enabled property (default false).",
+      "condition": "Conditional source inference; not proof no external agent/global provider exists in every execution."
+    },
+    {
+      "id": "bundled-scan",
+      "locator": "139 local JAR ZIP-entry scans and CLI manifest",
+      "claim": "No SDK/exporter package entries or OTel service descriptors found in scanned JARs; manifest names API/context/semconv. core-tests logging resources exist in libs but core-tests is not in CLI manifest.",
+      "condition": "Package-entry scan is not whole-program audit, dynamic class-loading analysis, complete service audit or effective runtime exporter inspection."
+    }
+  ],
+  "limitations": [
+    "33 language-all/language-* manifest references are absent as JAR files in the extracted distribution; root ./ is present with unpacked language resources. Manifest list alone is not a complete runtime classpath attestation.",
+    "Fixed source versions and artifact evidence remain distinct; no reproducible-build equivalence.",
+    "No new Java execution, active exporter inspection, exception trigger, network capture or retention audit.",
+    "No zero-telemetry, no-transmission, no-training or zero-retention claim. Prior text-bearing JSON/error and caller-copy findings remain.",
+    "External configuration, JVM agents/options and already-set globals were not retrospectively verified for all prior runs."
+  ],
+  "decision": "Reviewed two factory gates and narrowed bundled logging/telemetry defaults. Research hold remains; no production privacy attribute.",
+  "nextAction": "Use consolidated evidence to assess a narrowly specified CLI use profile and remaining material retention/rights/workflow gaps. Do not extend into new owner traffic captures merely to accumulate negative events.",
+  "documentation": [
+    {
+      "url": "https://logback.qos.ch/manual/appenders-console-file.html",
+      "finding": "Current official manual describes ConsoleAppender default target as System.out; supporting documentation, not independent runtime/version proof."
+    }
+  ]
+}
