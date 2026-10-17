@@ -1,0 +1,501 @@
+{
+  "route": [
+    {
+      "id": "e0170d70-5f76-4d56-b541-858ec84a0f19",
+      "name": "Grammarly Alternatives Without a Subscription",
+      "slug": "grammarly-alternatives-without-a-subscription",
+      "status": "published",
+      "anchor_id": "0270dd80-f9fb-4c10-8937-3928c4ae4362",
+      "created_at": "2026-10-15T07:04:33.158474+00:00",
+      "updated_at": "2026-10-15T07:04:33.158474+00:00",
+      "description": "Options for reviewing English passive constructions without a mandatory recurring software payment for the reviewed access path. Compare the bounded task of inspecting feedback, manually revising and rechecking against Grammarly Pro capability. Not a complete Grammarly or automatic rewrite replacement; account, usage limits and service conditions apply.",
+      "last_verified_at": "2026-10-15T00:00:00+00:00",
+      "editorially_approved": true
+    }
+  ],
+  "packet": "PR5.101",
+  "products": [
+    {
+      "id": "92f86c9d-d0b5-46b2-a831-d6f366a80e2f",
+      "name": "LanguageTool",
+      "slug": "languagetool",
+      "status": "draft",
+      "created_at": "2026-10-06T03:23:20.913879+00:00",
+      "updated_at": "2026-10-06T03:23:20.913879+00:00",
+      "website_url": "https://languagetool.org/",
+      "short_description": "Multilingual spelling, grammar, and style checking with optional paraphrasing tools."
+    }
+  ],
+  "read_only": true,
+  "captured_at": "2026-10-17T08:08:32.319575+00:00",
+  "route_members": [
+    {
+      "position": 2,
+      "created_at": "2026-10-15T07:04:33.158474+00:00",
+      "product_id": "f6150c8b-5485-4f65-b769-a27b6f50af66",
+      "updated_at": "2026-10-15T07:04:33.158474+00:00",
+      "product_slug": "grazie-free-browser",
+      "novelty_score": null,
+      "quality_score": null,
+      "editorial_note": null,
+      "escape_route_id": "e0170d70-5f76-4d56-b541-858ec84a0f19",
+      "relevance_score": null,
+      "constraint_fit_score": null
+    },
+    {
+      "position": 1,
+      "created_at": "2026-10-15T07:04:33.158474+00:00",
+      "product_id": "964e1139-e9ce-4b9a-93eb-e4cf43ad2a02",
+      "updated_at": "2026-10-15T07:04:33.158474+00:00",
+      "product_slug": "hemingway-free-web",
+      "novelty_score": null,
+      "quality_score": null,
+      "editorial_note": null,
+      "escape_route_id": "e0170d70-5f76-4d56-b541-858ec84a0f19",
+      "relevance_score": null,
+      "constraint_fit_score": null
+    },
+    {
+      "position": 3,
+      "created_at": "2026-10-15T07:04:33.158474+00:00",
+      "product_id": "8fff305e-bbbf-4b61-80c7-0f2dcffc68ad",
+      "updated_at": "2026-10-15T07:04:33.158474+00:00",
+      "product_slug": "real-write-passive-checker",
+      "novelty_score": null,
+      "quality_score": null,
+      "editorial_note": null,
+      "escape_route_id": "e0170d70-5f76-4d56-b541-858ec84a0f19",
+      "relevance_score": null,
+      "constraint_fit_score": null
+    }
+  ],
+  "scope_columns": [
+    {
+      "data_type": "text",
+      "column_name": "relationship_scope"
+    },
+    {
+      "data_type": "text",
+      "column_name": "scope_description"
+    }
+  ],
+  "claim_evidence": [
+    {
+      "id": "f9730c97-f839-4d57-9d67-a42317076262",
+      "notes": "Seed source reference for [\"languagetool\",\"attributes\",\"free-core-use\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:0fcf37bf75f73e8d9dec41c9996185d948179a9bd0d109093b0c4832a0dc0702",
+      "created_at": "2026-10-06T03:23:20.913879+00:00",
+      "updated_at": "2026-10-06T03:23:20.913879+00:00",
+      "evidence_source_id": "29b51d69-91e0-4056-a67e-c59dafc95e63"
+    },
+    {
+      "id": "ccc1ee80-1dc1-4ced-9152-0b3438e33029",
+      "notes": "Seed source reference for [\"languagetool\",\"problems\",\"subscription-fatigue\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:16aaf07cedf581a963201e2555cb1ff346bc13e3a9c4b7f98a327f32eceb2c51",
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "updated_at": "2026-10-06T04:14:23.31324+00:00",
+      "evidence_source_id": "29b51d69-91e0-4056-a67e-c59dafc95e63"
+    },
+    {
+      "id": "4d994880-9883-40fc-8edf-190080202586",
+      "notes": "Seed source reference for [\"languagetool\",\"audiences\",\"writers-and-editors\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:761d96388bcae09696efd118ff4b3124572483009a06c3a4cd8440a7b4fba2d5",
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "updated_at": "2026-10-06T04:14:23.31324+00:00",
+      "evidence_source_id": "91278fa3-9e72-4c3b-b7f6-66013bd2b8c7"
+    },
+    {
+      "id": "1d13a890-cda5-4de6-944a-dbcc32e7b429",
+      "notes": "Seed source reference for [\"languagetool\",\"attributes\",\"supported-platforms\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:9c4029c3864dab812f7e75d5a4e53462c2f91dc82d0e40f615f145ac9a4b7352",
+      "created_at": "2026-10-06T03:23:20.913879+00:00",
+      "updated_at": "2026-10-06T03:23:20.913879+00:00",
+      "evidence_source_id": "31f54c5d-6ea2-4f83-978d-be741bc6cf09"
+    },
+    {
+      "id": "fb3fa4e5-4a80-4e60-8b0d-2d3ff0249075",
+      "notes": "Seed source reference for [\"languagetool\",\"attributes\",\"trade-off-summary\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:ace07892abd3450db08e13fbed0e1bb93e85146a0d03c53e58ddff3061b11e16",
+      "created_at": "2026-10-06T03:23:20.913879+00:00",
+      "updated_at": "2026-10-06T03:23:20.913879+00:00",
+      "evidence_source_id": "7b1a1d02-090e-425c-ba3d-36ed3ea24c21"
+    },
+    {
+      "id": "55cd2dd6-cb71-498d-81bb-c6f78636b107",
+      "notes": "Seed source reference for [\"languagetool\",\"anchors\",\"grammarly\",\"alternative\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:afff6ebf4b4c55c22d95e4dd8138a288165edf641bcb21c6e1b664c256549ed2",
+      "created_at": "2026-10-06T03:23:20.913879+00:00",
+      "updated_at": "2026-10-06T03:23:20.913879+00:00",
+      "evidence_source_id": "91278fa3-9e72-4c3b-b7f6-66013bd2b8c7"
+    },
+    {
+      "id": "12f35a8a-d018-41bf-b04e-6f87d60f3e6f",
+      "notes": "Seed source reference for [\"languagetool\",\"attributes\",\"pricing-model\"]. Source content is not embedded; this pointer is not an independently verified quotation.",
+      "excerpt": null,
+      "seed_key": "seed-claim:f4811072e9b2d6bacfc514d5035a7972b5394092b3dc38df106d722d5a03c11c",
+      "created_at": "2026-10-06T03:23:20.913879+00:00",
+      "updated_at": "2026-10-06T03:23:20.913879+00:00",
+      "evidence_source_id": "29b51d69-91e0-4056-a67e-c59dafc95e63"
+    }
+  ],
+  "product_anchors": [
+    {
+      "anchor_id": "0270dd80-f9fb-4c10-8937-3928c4ae4362",
+      "confidence": 0.75,
+      "created_at": "2026-10-06T03:23:20.913879+00:00",
+      "product_id": "92f86c9d-d0b5-46b2-a831-d6f366a80e2f",
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "relationship_type": "alternative",
+      "scope_description": null,
+      "relationship_scope": null,
+      "verification_status": "likely"
+    }
+  ],
+  "evidence_sources": [
+    {
+      "id": "91278fa3-9e72-4c3b-b7f6-66013bd2b8c7",
+      "url": "https://languagetool.org/",
+      "title": "LanguageTool — overview reference",
+      "seed_key": "languagetool-overview-2026-10-06",
+      "publisher": "LanguageTool",
+      "created_at": "2026-10-06T03:23:20.913879+00:00",
+      "updated_at": "2026-10-06T03:23:20.913879+00:00",
+      "source_type": "official",
+      "retrieved_at": "2026-10-06T00:00:00+00:00"
+    },
+    {
+      "id": "31f54c5d-6ea2-4f83-978d-be741bc6cf09",
+      "url": "https://languagetool.org/",
+      "title": "LanguageTool — platform reference",
+      "seed_key": "languagetool-platform-2026-10-06",
+      "publisher": "LanguageTool",
+      "created_at": "2026-10-06T03:23:20.913879+00:00",
+      "updated_at": "2026-10-06T03:23:20.913879+00:00",
+      "source_type": "official",
+      "retrieved_at": "2026-10-06T00:00:00+00:00"
+    },
+    {
+      "id": "29b51d69-91e0-4056-a67e-c59dafc95e63",
+      "url": "https://languagetool.org/",
+      "title": "LanguageTool — pricing reference",
+      "seed_key": "languagetool-pricing-2026-10-06",
+      "publisher": "LanguageTool",
+      "created_at": "2026-10-06T03:23:20.913879+00:00",
+      "updated_at": "2026-10-06T03:23:20.913879+00:00",
+      "source_type": "pricing",
+      "retrieved_at": "2026-10-06T00:00:00+00:00"
+    },
+    {
+      "id": "7b1a1d02-090e-425c-ba3d-36ed3ea24c21",
+      "url": "https://languagetool.org/",
+      "title": "LanguageTool — tradeoff reference",
+      "seed_key": "languagetool-tradeoff-2026-10-06",
+      "publisher": "LanguageTool",
+      "created_at": "2026-10-06T03:23:20.913879+00:00",
+      "updated_at": "2026-10-06T03:23:20.913879+00:00",
+      "source_type": "official",
+      "retrieved_at": "2026-10-06T00:00:00+00:00"
+    }
+  ],
+  "product_problems": [
+    {
+      "confidence": 0.75,
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "problem_id": "58231e35-9b9b-46bb-add8-21417ed2c6d1",
+      "product_id": "92f86c9d-d0b5-46b2-a831-d6f366a80e2f",
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "likely"
+    }
+  ],
+  "taxonomy_anchors": [
+    {
+      "id": "0270dd80-f9fb-4c10-8937-3928c4ae4362",
+      "name": "Grammarly",
+      "slug": "grammarly",
+      "created_at": "2026-10-06T03:23:20.913879+00:00",
+      "updated_at": "2026-10-06T03:23:20.913879+00:00",
+      "description": "Grammar, writing assistance, and style-editing ecosystem; alternatives may cover only part of the workflow."
+    }
+  ],
+  "product_audiences": [
+    {
+      "confidence": 0.75,
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "product_id": "92f86c9d-d0b5-46b2-a831-d6f366a80e2f",
+      "audience_id": "6c4f55ba-6a76-4b4e-aab3-2913750f8dd1",
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "likely"
+    }
+  ],
+  "taxonomy_problems": [
+    {
+      "id": "58231e35-9b9b-46bb-add8-21417ed2c6d1",
+      "name": "Subscription Fatigue",
+      "slug": "subscription-fatigue",
+      "created_at": "2026-10-06T02:49:38.03521+00:00",
+      "updated_at": "2026-10-06T02:49:38.03521+00:00",
+      "description": "The user wants useful core functionality without another mandatory recurring subscription."
+    }
+  ],
+  "product_attributes": [
+    {
+      "confidence": 0.95,
+      "created_at": "2026-10-06T03:23:20.913879+00:00",
+      "product_id": "92f86c9d-d0b5-46b2-a831-d6f366a80e2f",
+      "updated_at": "2026-10-06T03:23:20.913879+00:00",
+      "value_enum": null,
+      "value_text": "The free version covers basic corrections; the vendor reserves the complete error set for Premium.",
+      "attribute_id": "18dee1eb-8a8a-45fa-b463-8487065642d9",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "verified"
+    },
+    {
+      "confidence": null,
+      "created_at": "2026-10-06T03:23:20.913879+00:00",
+      "product_id": "92f86c9d-d0b5-46b2-a831-d6f366a80e2f",
+      "updated_at": "2026-10-06T03:23:20.913879+00:00",
+      "value_enum": null,
+      "value_text": null,
+      "attribute_id": "2d9835d9-4aa0-4fb3-93fa-2c98d4f890c4",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": null,
+      "verification_status": "unknown"
+    },
+    {
+      "confidence": 0.95,
+      "created_at": "2026-10-06T03:23:20.913879+00:00",
+      "product_id": "92f86c9d-d0b5-46b2-a831-d6f366a80e2f",
+      "updated_at": "2026-10-06T03:23:20.913879+00:00",
+      "value_enum": null,
+      "value_text": "Web, Windows, macOS, iOS; browser and office add-ons",
+      "attribute_id": "2e5f8446-3bb6-4e92-990e-d6c253d2417c",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "verified"
+    },
+    {
+      "confidence": 0.95,
+      "created_at": "2026-10-06T03:23:20.913879+00:00",
+      "product_id": "92f86c9d-d0b5-46b2-a831-d6f366a80e2f",
+      "updated_at": "2026-10-06T03:23:20.913879+00:00",
+      "value_enum": null,
+      "value_text": null,
+      "attribute_id": "7f2af8c8-8aee-4d54-a93a-46d77a3ead17",
+      "value_number": null,
+      "value_boolean": true,
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "verified"
+    },
+    {
+      "confidence": 0.95,
+      "created_at": "2026-10-06T03:23:20.913879+00:00",
+      "product_id": "92f86c9d-d0b5-46b2-a831-d6f366a80e2f",
+      "updated_at": "2026-10-06T03:23:20.913879+00:00",
+      "value_enum": null,
+      "value_text": "Free checking tier with optional Premium and team plans.",
+      "attribute_id": "83353c3f-3cd2-4505-8311-f722e720867c",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": "2026-10-06T00:00:00+00:00",
+      "verification_status": "verified"
+    },
+    {
+      "confidence": null,
+      "created_at": "2026-10-06T03:23:20.913879+00:00",
+      "product_id": "92f86c9d-d0b5-46b2-a831-d6f366a80e2f",
+      "updated_at": "2026-10-06T03:23:20.913879+00:00",
+      "value_enum": null,
+      "value_text": null,
+      "attribute_id": "cf8b0015-81e0-440b-b7d6-281ae28c43d4",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": null,
+      "verification_status": "unknown"
+    },
+    {
+      "confidence": null,
+      "created_at": "2026-10-06T03:23:20.913879+00:00",
+      "product_id": "92f86c9d-d0b5-46b2-a831-d6f366a80e2f",
+      "updated_at": "2026-10-06T03:23:20.913879+00:00",
+      "value_enum": null,
+      "value_text": null,
+      "attribute_id": "f540baaf-959c-485b-a65b-68c2b072841e",
+      "value_number": null,
+      "value_boolean": null,
+      "last_verified_at": null,
+      "verification_status": "unknown"
+    }
+  ],
+  "published_products": [
+    "2do",
+    "affine",
+    "anytype",
+    "appflowy",
+    "gimp",
+    "grazie-free-browser",
+    "healthy-minds-program",
+    "hemingway-free-web",
+    "joplin",
+    "krita",
+    "medito",
+    "obsidian",
+    "omnifocus",
+    "paint-net",
+    "pdf-xchange-editor",
+    "pdf24-creator",
+    "pdfgear",
+    "real-write-passive-checker",
+    "simplenote",
+    "smiling-mind",
+    "things"
+  ],
+  "taxonomy_audiences": [
+    {
+      "id": "6c4f55ba-6a76-4b4e-aab3-2913750f8dd1",
+      "name": "Writers and Editors",
+      "slug": "writers-and-editors",
+      "created_at": "2026-10-06T04:14:23.31324+00:00",
+      "updated_at": "2026-10-06T04:14:23.31324+00:00",
+      "description": "People comparing grammar, style, or language-reference tools within the documented edition and language scope."
+    }
+  ],
+  "taxonomy_attributes": [
+    {
+      "id": "f540baaf-959c-485b-a65b-68c2b072841e",
+      "name": "AI Optional",
+      "slug": "ai-optional",
+      "category": "ai",
+      "created_at": "2026-10-06T02:49:38.03521+00:00",
+      "updated_at": "2026-10-06T02:49:38.03521+00:00",
+      "value_type": "boolean",
+      "description": "Core product workflows remain usable without enabling, purchasing, or depending on AI functionality. Integrated AI or optional AI plugins do not disqualify a product; evidence must support the non-AI core workflow."
+    },
+    {
+      "id": "7f2af8c8-8aee-4d54-a93a-46d77a3ead17",
+      "name": "Free Core Use",
+      "slug": "free-core-use",
+      "category": "pricing",
+      "created_at": "2026-10-06T02:49:38.03521+00:00",
+      "updated_at": "2026-10-06T02:49:38.03521+00:00",
+      "value_type": "boolean",
+      "description": "A meaningful core product workflow is available without a recurring software fee."
+    },
+    {
+      "id": "cf8b0015-81e0-440b-b7d6-281ae28c43d4",
+      "name": "Open Source",
+      "slug": "open-source",
+      "category": "licensing",
+      "created_at": "2026-10-06T02:49:38.03521+00:00",
+      "updated_at": "2026-10-06T02:49:38.03521+00:00",
+      "value_type": "boolean",
+      "description": "The product or its core editor is distributed under an open-source license according to current official materials."
+    },
+    {
+      "id": "83353c3f-3cd2-4505-8311-f722e720867c",
+      "name": "Pricing Model",
+      "slug": "pricing-model",
+      "category": "pricing",
+      "created_at": "2026-10-06T03:22:38.833862+00:00",
+      "updated_at": "2026-10-06T03:22:38.833862+00:00",
+      "value_type": "text",
+      "description": "Source-backed pricing model and relevant edition scope; excludes transient numeric prices."
+    },
+    {
+      "id": "2e5f8446-3bb6-4e92-990e-d6c253d2417c",
+      "name": "Supported Platforms",
+      "slug": "supported-platforms",
+      "category": "platform",
+      "created_at": "2026-10-06T03:22:38.833862+00:00",
+      "updated_at": "2026-10-06T03:22:38.833862+00:00",
+      "value_type": "text",
+      "description": "Source-listed platforms and edition scope; an omitted platform is not a verified negative."
+    },
+    {
+      "id": "18dee1eb-8a8a-45fa-b463-8487065642d9",
+      "name": "Trade-Off Summary",
+      "slug": "trade-off-summary",
+      "category": "workflow",
+      "created_at": "2026-10-06T03:22:38.833862+00:00",
+      "updated_at": "2026-10-06T03:22:38.833862+00:00",
+      "value_type": "text",
+      "description": "Evidence-backed restrictions or explicitly provisional editorial interpretation, with confidence status."
+    },
+    {
+      "id": "2d9835d9-4aa0-4fb3-93fa-2c98d4f890c4",
+      "name": "Works Offline",
+      "slug": "works-offline",
+      "category": "offline",
+      "created_at": "2026-10-06T02:49:38.03521+00:00",
+      "updated_at": "2026-10-06T02:49:38.03521+00:00",
+      "value_type": "boolean",
+      "description": "Core work remains available without an internet connection."
+    }
+  ],
+  "product_anchor_evidence": [
+    {
+      "anchor_id": "0270dd80-f9fb-4c10-8937-3928c4ae4362",
+      "product_id": "92f86c9d-d0b5-46b2-a831-d6f366a80e2f",
+      "claim_evidence_id": "55cd2dd6-cb71-498d-81bb-c6f78636b107",
+      "relationship_type": "alternative"
+    }
+  ],
+  "product_problem_evidence": [
+    {
+      "problem_id": "58231e35-9b9b-46bb-add8-21417ed2c6d1",
+      "product_id": "92f86c9d-d0b5-46b2-a831-d6f366a80e2f",
+      "claim_evidence_id": "ccc1ee80-1dc1-4ced-9152-0b3438e33029"
+    }
+  ],
+  "target_route_memberships": [],
+  "approved_published_routes": [
+    "grammarly-alternatives-without-a-subscription",
+    "meditation-apps-without-a-subscription",
+    "notion-alternatives-without-ai",
+    "offline-notion-alternatives",
+    "pdf-editors-without-a-subscription",
+    "photoshop-alternatives-without-a-subscription",
+    "productivity-apps-you-can-buy-once",
+    "simple-notion-alternatives",
+    "todoist-alternatives-with-a-one-time-purchase"
+  ],
+  "product_audience_evidence": [
+    {
+      "product_id": "92f86c9d-d0b5-46b2-a831-d6f366a80e2f",
+      "audience_id": "6c4f55ba-6a76-4b4e-aab3-2913750f8dd1",
+      "claim_evidence_id": "4d994880-9883-40fc-8edf-190080202586"
+    }
+  ],
+  "product_attribute_evidence": [
+    {
+      "product_id": "92f86c9d-d0b5-46b2-a831-d6f366a80e2f",
+      "attribute_id": "18dee1eb-8a8a-45fa-b463-8487065642d9",
+      "claim_evidence_id": "fb3fa4e5-4a80-4e60-8b0d-2d3ff0249075"
+    },
+    {
+      "product_id": "92f86c9d-d0b5-46b2-a831-d6f366a80e2f",
+      "attribute_id": "2e5f8446-3bb6-4e92-990e-d6c253d2417c",
+      "claim_evidence_id": "1d13a890-cda5-4de6-944a-dbcc32e7b429"
+    },
+    {
+      "product_id": "92f86c9d-d0b5-46b2-a831-d6f366a80e2f",
+      "attribute_id": "7f2af8c8-8aee-4d54-a93a-46d77a3ead17",
+      "claim_evidence_id": "f9730c97-f839-4d57-9d67-a42317076262"
+    },
+    {
+      "product_id": "92f86c9d-d0b5-46b2-a831-d6f366a80e2f",
+      "attribute_id": "83353c3f-3cd2-4505-8311-f722e720867c",
+      "claim_evidence_id": "12f35a8a-d018-41bf-b04e-6f87d60f3e6f"
+    }
+  ],
+  "anon_private_evidence_boundary": true
+}

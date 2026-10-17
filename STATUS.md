@@ -528,3 +528,6 @@ Clean HEAD18e8f9b and owner Production117. Registered reviewed profiles match fr
 
 Owner accepted PR5.100 local UI and links at HEAD ca9f971. Added single-SELECT privileged collision snapshot for three scoped editions, existing families, routes, claims/evidence, taxonomy and public sets. No live query executed or import/publication approved. Pending returned snapshot before selective draft SQL; public checkpoint21/9/1 unchanged. See PRIVACY_IMPORT_PREFLIGHT.md.
 
+## PR5.102 — Selective privacy draft import
+
+Owner pushed35b520e and returned privileged PR5.101 snapshot:21 published products/9 approved routes, generic LanguageTool draft retained, proposed identities/route/taxons absent. Frozen snapshot guards protect retained claims, memberships, taxonomy and public/private boundary. Selective3 drafts/12 attributes/3 scoped anchors/3 memberships with2 new taxons,6 sources/30 evidence fragments.20 local tests passed; generated rehearsal/apply/verification SQL, no remote execution or publication. Await owner rollback rehearsal, then separate draft apply and full verification. See PRIVACY_SELECTIVE_IMPORT.md.
