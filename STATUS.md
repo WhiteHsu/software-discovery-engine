@@ -483,3 +483,8 @@ Clean actual HEAD8f6ea43 and owner Production108. Official portable3.24.0 archiv
 ## PR5.92 — Vale selected text data paths
 
 Actual clean HEAD7c4fc6f and owner Production109. Fixed source sections traced stdin/config/existence/JSON plus optional remote NLP and environment profiling. NLP may send text in URL query; profiling starts before flags and can write files. New child-only VALE_* removal, empty effective endpoint and explicit local profile confirmed; passive1/manual-active0. Does not retroactively attest prior inherited environment or all network/write paths.13 source files indexed, not full dependency audit. Research only;21/9/1, zero qualifications unchanged. Next consolidate evidence/gates without default capture expansion. See VALE_DATA_PATH_REVIEW.md.
+
+
+## PR5.93 — Privacy evidence decisions and publication gates
+
+Clean actual HEADc5160f2 and owner Production110. Ten frozen receipts consolidated across8 edition profiles. Graph-qualified0 distinguished from research readiness: prioritize LT CLI/write-good scoped draft wording; one bounded Vale config/rule-load gate remains. Privacy engine still has no relationshipScope; proposed passive workflow/rubric not applied. Do not invent universal no-packets/secure-erasure tests or count modes as products. Next concrete dossiers/config decision before selective graph proposal; no default further capture. No graph/engine/SQL changes;21/9/1, zero applied qualifications unchanged. See PRIVACY_EVIDENCE_DECISIONS.md.

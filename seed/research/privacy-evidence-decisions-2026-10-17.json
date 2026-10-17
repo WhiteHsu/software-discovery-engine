@@ -1,0 +1,155 @@
+{
+  "packet": "PR5.93",
+  "reviewedAt": "2026-10-17",
+  "baselineCommit": "c5160f23477d7c12dc5d4a8885c8583ccacf75b1",
+  "ownerProductionScreenshot": 110,
+  "researchOnly": true,
+  "graphChanges": false,
+  "publicationApproved": false,
+  "qualifiedNewCandidates": 0,
+  "method": "Consolidation of ten frozen local receipts and current engine definition. No new vendor policy refresh, download, third-party execution or capture.",
+  "provenanceHashNormalization": "UTF-8 CRLF-to-LF only",
+  "provenance": [
+    {
+      "path": "seed/research/privacy-writing-review-2026-10-15.json",
+      "sha256": "c9f66009937abb2c0ed6262a50463ac578d61393f41fae4382989184cbe4b00c"
+    },
+    {
+      "path": "seed/research/privacy-writing-readiness-2026-10-17.json",
+      "sha256": "e0fe27aa008bb22d2eaff1e99dbe454520bc9e85f5f75aa8d19dbdf0b94cc7c8"
+    },
+    {
+      "path": "seed/research/languagetool-cli-source-2026-10-17.json",
+      "sha256": "bbbedf7a9fce68ccd6ac1c76ebf45fd170f8147f62ac41eb62330ad1413d2c2b"
+    },
+    {
+      "path": "seed/research/languagetool-cli-defaults-2026-10-17.json",
+      "sha256": "2028384b26b15f342d54825d90381656df6919139cb9b5a0ad840d3d5b47afba"
+    },
+    {
+      "path": "seed/research/languagetool-distribution-profile-2026-10-17.json",
+      "sha256": "5227b3367a7a0fd2450371403744aa5b45a89cbea4d94a3e3c9598f89f3bb3ea"
+    },
+    {
+      "path": "seed/research/languagetool-os-observation-2026-10-17.json",
+      "sha256": "f7e91a0664d8f77c009c87e084ce35efd6a4b7a1a1bd0660730189dbd6eef051"
+    },
+    {
+      "path": "seed/research/antidote-local-controls-2026-10-17.json",
+      "sha256": "3f34d38c295513c48d8500ebd88b8ab6bc007f005570a423f98f8fd38c5ffcbd"
+    },
+    {
+      "path": "seed/research/write-good-library-review-2026-10-17.json",
+      "sha256": "25ec04f5bc5585ae921aa101d7f9c5b223019da8ce23325e0b30f6408c6a7320"
+    },
+    {
+      "path": "seed/research/vale-local-rule-review-2026-10-17.json",
+      "sha256": "a75da6f3a11c0239c70291f5f839c5d5f5c85d091984b1a33eeba7225e4125f6"
+    },
+    {
+      "path": "seed/research/vale-data-path-review-2026-10-17.json",
+      "sha256": "2cd3a64cfe4cabd31749e07e74622b06948e4db48e6bca3f5e6a23f1048d6ec6"
+    }
+  ],
+  "currentEngine": {
+    "privacyRoute": "privacy-friendly-grammarly-alternatives",
+    "anchor": "grammarly",
+    "relationshipScope": "absent",
+    "constraint": "privacy-friendly=true with verified dated evidence",
+    "publicationMinimum": 3,
+    "pricingAndTradeoffEvidenceRequired": true
+  },
+  "proposedScope": {
+    "status": "not-applied",
+    "operation": "Personal English passive-construction review, manual revision and recheck, for explicitly described editions; not full Grammarly replacement.",
+    "technicalUsability": "CLI/library setup must be prominent; not presented as a plug-in replacement for nontechnical users.",
+    "qualification": "Use dated scoped evidence on six axes. Material unresolved selected-operation text paths block positive classification. Do not require eternal zero packets, universal no telemetry or secure memory erasure as invented mandatory rules."
+  },
+  "rows": [
+    {
+      "id": "lt-cli",
+      "family": "LanguageTool",
+      "edition": "6.6 direct CLI, pinned JRE/distribution, explicit passive rules and PICKY mode",
+      "evidence": "Observed passive/manual-active controls; selected source/default config review; bounded Java and owner OS controls; complete distribution snapshot checked.",
+      "materialLimit": "No end-to-end binary/source equivalence or all-runtime/deletion proof. Those are limits, not automatic universal requirements. Publication wording must describe selected operation, explicit output/diagnostic limits and technical setup.",
+      "decision": "Prioritize scoped draft dossier using existing evidence; no more CLI capture expansion by default."
+    },
+    {
+      "id": "write-good-library",
+      "family": "write-good",
+      "edition": "npm1.0.8 direct Node function with locked dependency set, stock checks, passive-only output profile",
+      "evidence": "Full function workflow and14 loaded source files; manual active revision; selected source has no direct I/O; text-bearing results explicit.",
+      "materialLimit": "Caller output/memory handling is part of profile. CLI/editor/cloud integrations excluded. No full grammar replacement, secure deletion or host-wide no-network promise.",
+      "decision": "Prioritize scoped draft dossier; state caller-memory and limited linguistic coverage, no more detector hardening by default."
+    },
+    {
+      "id": "vale-cli",
+      "family": "Vale",
+      "edition": "3.24.0 CLI, fixed single Microsoft.Passive rule, plain stdin/JSON, explicit ini/no-global, child VALE_* removal",
+      "evidence": "Eight controls plus threshold control; controlled passive/revision; empty effective endpoint; selected source paths and optional NLP/profiling identified.",
+      "materialLimit": "Selected startup/config/data path review is partial; configuration package composition and dependencies not completely traced. Does not inherit write-good privacy evidence even when heuristics are similar.",
+      "decision": "Resolve one bounded configuration/rule-load path question before deciding whether a third scoped dossier is supportable; no new owner capture."
+    },
+    {
+      "id": "antidote-installed",
+      "family": "Antidote",
+      "edition": "12 installed English Correction with documented global rewrite/sync controls",
+      "evidence": "Vendor control documentation; exact global/per-document semantics separated.",
+      "materialLimit": "Owner no/uncertain entitlement, no observed installed profile.",
+      "decision": "Defer runtime work without purchase. Access gap is not a privacy defect."
+    },
+    {
+      "id": "hemingway-classic",
+      "family": "Hemingway",
+      "edition": "Classic3 installed",
+      "evidence": "Prior offline documentation lead.",
+      "materialLimit": "Applicable edition notice and installed rights/workflow unresolved.",
+      "decision": "Defer, no purchase; do not use web policy as installed evidence."
+    },
+    {
+      "id": "hemingway-web",
+      "family": "Hemingway",
+      "edition": "Anonymous free web",
+      "evidence": "Manual passive workflow and bounded browser/network/choice records exist.",
+      "materialLimit": "Some selected text/storage/control paths remain unresolved; separate browser profiles cannot be merged.",
+      "decision": "Hold. Existing writing-function acceptance is not privacy acceptance."
+    },
+    {
+      "id": "lt-hosted",
+      "family": "LanguageTool",
+      "edition": "Hosted add-on",
+      "evidence": "Dated policy and feature statements in earlier receipts.",
+      "materialLimit": "Feature-specific text retention/logging/control mapping not completed.",
+      "decision": "Hold separately from local CLI; no inherited local privacy attribute."
+    },
+    {
+      "id": "lt-http",
+      "family": "LanguageTool",
+      "edition": "Local HTTP server plus selected client",
+      "evidence": "Feasibility documentation.",
+      "materialLimit": "Client not selected, server not run, fallback/logging paths unknown.",
+      "decision": "Defer as separate operating mode, not another product to reach minimum3."
+    }
+  ],
+  "distinctions": {
+    "graphQualifiedZero": "No new scoped graph claims applied; not equivalent to eight negative privacy verdicts.",
+    "researchReady": "Prioritized dossier means enough evidence to draft narrow claims and list residual limits, not already qualified.",
+    "threeFamilies": "LanguageTool/write-good/Vale are three product families, but Vale remains pending and common heuristics do not prove independent accuracy. Modes and dependency ports cannot inflate counts.",
+    "historical": "PR5.82 priorities are historical, not an instruction to redo already completed CLI research. All old receipts remain unchanged."
+  },
+  "nextSteps": [
+    {
+      "order": 1,
+      "action": "Prepare concrete local-only draft scope/claim wording for LanguageTool CLI and write-good library, with evidence-backed limits and setup tradeoffs. Keep graph/publication unchanged until candidate claim review."
+    },
+    {
+      "order": 2,
+      "action": "Finish bounded Vale config-to-rule-load mapping to determine selected executable rule set and external configuration hooks; then make a clear support/hold decision."
+    },
+    {
+      "order": 3,
+      "action": "If three distinct scoped candidates can be supported, prepare a selective draft graph/engine scope proposal with pricing, tradeoffs, dated sources and validation. Otherwise retain route hold with specific remaining blocker; do not force completion."
+    }
+  ],
+  "decision": "Shift from repeated probes to explicit draft decisions and one bounded Vale gate.21/9/1, zero applied privacy qualifications unchanged. No production SQL/import/publication."
+}
