@@ -1,0 +1,188 @@
+{
+  "version": 1,
+  "packet": "PR5.83",
+  "reviewedAt": "2026-10-17",
+  "baselineCommit": "7b9d29fed125182922eb8960ee442ec1c67cd396",
+  "researchOnly": true,
+  "graphChanges": false,
+  "publicationApproved": false,
+  "qualifiedNewCandidates": 0,
+  "checkpoint": {
+    "products": 21,
+    "completedRoutes": 9,
+    "remainingRoutes": 1
+  },
+  "edition": "LanguageTool6.6 direct CLI, separate from hosted and HTTP server",
+  "sourceReference": {
+    "tag": "v6.6",
+    "commit": "f13e71a7fe85a122290826fd691d267d64e97c33",
+    "binaryReproducibleBuildVerified": false
+  },
+  "scope": "Ten fixed-commit source files; bounded selected paths, not complete whole-program audit.",
+  "sources": [
+    {
+      "id": "Main",
+      "path": "languagetool-commandline/src/main/java/org/languagetool/commandline/Main.java",
+      "url": "https://raw.githubusercontent.com/languagetool-org/languagetool/f13e71a7fe85a122290826fd691d267d64e97c33/languagetool-commandline/src/main/java/org/languagetool/commandline/Main.java",
+      "bytes": 18550,
+      "downloadedBytesSha256": "ca67d6f617e19325eab2090903a04fdac6d0792f6101f712621c9c642c854059",
+      "utf8LfSha256": "ca67d6f617e19325eab2090903a04fdac6d0792f6101f712621c9c642c854059"
+    },
+    {
+      "id": "CommandLineParser",
+      "path": "languagetool-commandline/src/main/java/org/languagetool/commandline/CommandLineParser.java",
+      "url": "https://raw.githubusercontent.com/languagetool-org/languagetool/f13e71a7fe85a122290826fd691d267d64e97c33/languagetool-commandline/src/main/java/org/languagetool/commandline/CommandLineParser.java",
+      "bytes": 13619,
+      "downloadedBytesSha256": "ca6657ecd9a3f7db285954d0116566002e521acea3074aea15212e7dfbb9ad23",
+      "utf8LfSha256": "ca6657ecd9a3f7db285954d0116566002e521acea3074aea15212e7dfbb9ad23"
+    },
+    {
+      "id": "CommandLineOptions",
+      "path": "languagetool-commandline/src/main/java/org/languagetool/commandline/CommandLineOptions.java",
+      "url": "https://raw.githubusercontent.com/languagetool-org/languagetool/f13e71a7fe85a122290826fd691d267d64e97c33/languagetool-commandline/src/main/java/org/languagetool/commandline/CommandLineOptions.java",
+      "bytes": 9921,
+      "downloadedBytesSha256": "6e1c47ac9a2507be760892fd6dbb02e1c45967cc2b3f2f184bf27418ae007082",
+      "utf8LfSha256": "6e1c47ac9a2507be760892fd6dbb02e1c45967cc2b3f2f184bf27418ae007082"
+    },
+    {
+      "id": "CommandLineTools",
+      "path": "languagetool-commandline/src/main/java/org/languagetool/commandline/CommandLineTools.java",
+      "url": "https://raw.githubusercontent.com/languagetool-org/languagetool/f13e71a7fe85a122290826fd691d267d64e97c33/languagetool-commandline/src/main/java/org/languagetool/commandline/CommandLineTools.java",
+      "bytes": 17189,
+      "downloadedBytesSha256": "f054be5b979b1a1fbb414c1da49cf14991dad16010eda648ebee0fcc514ca55a",
+      "utf8LfSha256": "f054be5b979b1a1fbb414c1da49cf14991dad16010eda648ebee0fcc514ca55a"
+    },
+    {
+      "id": "JLanguageTool",
+      "path": "languagetool-core/src/main/java/org/languagetool/JLanguageTool.java",
+      "url": "https://raw.githubusercontent.com/languagetool-org/languagetool/f13e71a7fe85a122290826fd691d267d64e97c33/languagetool-core/src/main/java/org/languagetool/JLanguageTool.java",
+      "bytes": 94580,
+      "downloadedBytesSha256": "780c4ebd788ebf42f7e3e9f48862adba5aae029c3e885fbbd0481b9baa025cc7",
+      "utf8LfSha256": "780c4ebd788ebf42f7e3e9f48862adba5aae029c3e885fbbd0481b9baa025cc7"
+    },
+    {
+      "id": "MultiThreadedJLanguageTool",
+      "path": "languagetool-core/src/main/java/org/languagetool/MultiThreadedJLanguageTool.java",
+      "url": "https://raw.githubusercontent.com/languagetool-org/languagetool/f13e71a7fe85a122290826fd691d267d64e97c33/languagetool-core/src/main/java/org/languagetool/MultiThreadedJLanguageTool.java",
+      "bytes": 8588,
+      "downloadedBytesSha256": "84745f8f378b02567989de994b3768f65aaffb6d6c0dff7223ddeefe6c8e2ecc",
+      "utf8LfSha256": "84745f8f378b02567989de994b3768f65aaffb6d6c0dff7223ddeefe6c8e2ecc"
+    },
+    {
+      "id": "Language",
+      "path": "languagetool-core/src/main/java/org/languagetool/Language.java",
+      "url": "https://raw.githubusercontent.com/languagetool-org/languagetool/f13e71a7fe85a122290826fd691d267d64e97c33/languagetool-core/src/main/java/org/languagetool/Language.java",
+      "bytes": 34847,
+      "downloadedBytesSha256": "8d0a419ced0d22788377af7bf941b87037863f46df7999bcba22bf6c8507f7ff",
+      "utf8LfSha256": "8d0a419ced0d22788377af7bf941b87037863f46df7999bcba22bf6c8507f7ff"
+    },
+    {
+      "id": "English",
+      "path": "languagetool-language-modules/en/src/main/java/org/languagetool/language/English.java",
+      "url": "https://raw.githubusercontent.com/languagetool-org/languagetool/f13e71a7fe85a122290826fd691d267d64e97c33/languagetool-language-modules/en/src/main/java/org/languagetool/language/English.java",
+      "bytes": 42187,
+      "downloadedBytesSha256": "dccb6b70df19bba2b4c727a2828fa853c4aed599a265a06bfe0277cd14785660",
+      "utf8LfSha256": "dccb6b70df19bba2b4c727a2828fa853c4aed599a265a06bfe0277cd14785660"
+    },
+    {
+      "id": "TelemetryProvider",
+      "path": "languagetool-core/src/main/java/org/languagetool/tools/TelemetryProvider.java",
+      "url": "https://raw.githubusercontent.com/languagetool-org/languagetool/f13e71a7fe85a122290826fd691d267d64e97c33/languagetool-core/src/main/java/org/languagetool/tools/TelemetryProvider.java",
+      "bytes": 3957,
+      "downloadedBytesSha256": "84dad9b818bf6b4ef350b9edc81425fb8f4684eeeb819d7a36fc45f86b7207d3",
+      "utf8LfSha256": "84dad9b818bf6b4ef350b9edc81425fb8f4684eeeb819d7a36fc45f86b7207d3"
+    },
+    {
+      "id": "RuleMatchesAsJsonSerializer",
+      "path": "languagetool-core/src/main/java/org/languagetool/tools/RuleMatchesAsJsonSerializer.java",
+      "url": "https://raw.githubusercontent.com/languagetool-org/languagetool/f13e71a7fe85a122290826fd691d267d64e97c33/languagetool-core/src/main/java/org/languagetool/tools/RuleMatchesAsJsonSerializer.java",
+      "bytes": 15773,
+      "downloadedBytesSha256": "e7d9615c8eadd207d4062b1c283c4055481b3cfa7815ff6a302354c5c4061205",
+      "utf8LfSha256": "e7d9615c8eadd207d4062b1c283c4055481b3cfa7815ff6a302354c5c4061205"
+    }
+  ],
+  "findings": [
+    {
+      "id": "entry",
+      "sources": [
+        "Main:369-417",
+        "Main:160-195",
+        "CommandLineParser:107-138"
+      ],
+      "finding": "CLI parses explicit options, constructs MultiThreadedJLanguageTool, reads text and invokes checkText. Tested args select en-US, JSON and PICKY/manual passive rules, not HTTP server.",
+      "limit": "Selected entry only; transitive initialization/native dependencies not fully audited."
+    },
+    {
+      "id": "remote-config",
+      "sources": [
+        "CommandLineOptions:84-86",
+        "CommandLineParser:117-119",
+        "Main:81",
+        "JLanguageTool:608-634",
+        "Language:226-234",
+        "English:682-695"
+      ],
+      "finding": "Absent --remoterules yields null; activateRemoteRules(null) passes an empty config list. Language still calls GRPCPostProcessing.configure and GRPCRule.createAll; English remote spelling enhancement requires a relevant BERT config.",
+      "limit": "GRPC factories/postprocessing and all transitive rules not reviewed; empty list is not complete no-network proof or an OS block."
+    },
+    {
+      "id": "output-text",
+      "sources": [
+        "CommandLineTools:120-129",
+        "RuleMatchesAsJsonSerializer:306-320",
+        "Main:172-174"
+      ],
+      "finding": "JSON is printed to stdout and serialization includes context text and sentence in noncompact mode; stderr reports input filename. Earlier synthetic raw output has both context and sentence fields for two matches.",
+      "limit": "Actual test uses synthetic data. No new private text or runtime execution this round. Redirected stdout/stderr are caller-managed copies, not automatic deletion."
+    },
+    {
+      "id": "exception-text",
+      "sources": [
+        "JLanguageTool:2145-2153"
+      ],
+      "finding": "Reviewed StackOverflowError branch prints abbreviated sentence text up to10000 characters; general exception wrapper embeds sentence text up to500 characters.",
+      "limit": "Static branch evidence; not deliberately triggered. No claim that every error is text-bearing or that exception text is uploaded."
+    },
+    {
+      "id": "cleanup",
+      "sources": [
+        "Main:114-121",
+        "Main:453-461",
+        "JLanguageTool:1919-1929",
+        "MultiThreadedJLanguageTool:103-105"
+      ],
+      "finding": "Normal end calls cleanUp, shutdownNow for the internal pool and deletion of registered temporary files. The registry loop calls File.delete; Main does not wrap the whole run in a finally cleanup.",
+      "limit": "Not proof of secure erasure, successful deletion, crash cleanup, deletion of caller input/output or full retention behavior."
+    },
+    {
+      "id": "telemetry",
+      "sources": [
+        "TelemetryProvider:32-43",
+        "TelemetryProvider:50-65",
+        "JLanguageTool:1032",
+        "JLanguageTool:1065"
+      ],
+      "finding": "TelemetryProvider obtains GlobalOpenTelemetry and creates spans, recording exceptions in wrapper catch paths. Core check code calls spans.",
+      "limit": "Exporter/provider bootstrap and bundled effective configuration not audited. Class name or presence alone proves neither an active exporter nor absent telemetry."
+    }
+  ],
+  "sourceAcquisition": {
+    "officialRawDownloadsSucceeded": true,
+    "earlierSerializerPath404CorrectedFromActualImport": true,
+    "downloadedCodeExecuted": false
+  },
+  "priorOutputCheck": {
+    "source": "PR5.78 synthetic passive-picky-explicit-passive-only.stdout.json retained locally",
+    "matchesWithContextAndSentence": 2,
+    "noNewExecution": true
+  },
+  "remaining": [
+    "GRPC rule/postprocessing factories with empty configs",
+    "Telemetry global provider/exporter bootstrap and effective bundled logger configuration",
+    "Transitive native/dependency behavior and process startup/exit coverage",
+    "Full caller output/error/file retention boundaries",
+    "Source-to-distributed-artifact equivalence and dependency safety"
+  ],
+  "decision": "Known selected configuration flow and text-bearing output/error sinks now documented. Privacy qualification stays on hold; no server-default, zero-transmission or zero-retention inference.",
+  "nextAction": "Review effective bundled logging/telemetry configuration and referenced remote factories before considering a narrow configured-use proposal. Owner capture round remains closed."
+}

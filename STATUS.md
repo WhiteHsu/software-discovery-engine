@@ -433,3 +433,8 @@ Clean baseline HEADeb96a76 and owner Production99 recorded. Initial Level5 captu
 ## PR5.82 — Privacy writing readiness inventory
 
 Clean actual HEAD6bf8e2c and owner Production100 recorded. Six editions/operations separated across six research axes with ten prior receipts pinned; direct6.6 CLI evidence cannot fill HTTP-server or hosted gaps. All remain on hold, unknown is not negative privacy evidence. Material selected-operation data paths, not an impossible universal no-packet proof, determine research blockers. Next bounded investigation is pinned CLI startup/config/logging source review; cache-miss source lookup did not close that gate. Owner captures closed; no purchase or new runtime requested. Accepted21/9/1 and zero new qualifications unchanged. See PRIVACY_WRITING_READINESS.md.
+
+
+## PR5.83 — Pinned CLI source path review
+
+Clean actual HEAD7b9d29f and owner Production101 recorded. Ten source files downloaded from fixed6.6 commit; selected CLI entry/options/remote-config/output/error/cleanup/telemetry paths reviewed. Absent remote config passes empty list but downstream factories remain unreviewed. JSON output carries sentence/context; error branches can carry abbreviated sentence text. Cleanup covers registered temporary files at normal end, not every caller copy or crash. Global telemetry hookup is not exporter verification. Source/binary equivalence not claimed. Privacy stays on hold; accepted21/9/1, zero new qualifications. No execution, owner capture, SQL/graph/engine changes. See LANGUAGETOOL_CLI_SOURCE_REVIEW.md.
