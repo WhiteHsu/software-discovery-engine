@@ -453,3 +453,13 @@ Clean actual HEAD5a5612d and owner Production103 recorded. Added research-only f
 ## PR5.86 — Full distribution file snapshot identity
 
 Clean actual HEADece2cb4 and owner Production104 recorded. Matched both fixed official ZIP hashes before per-file inventory; Java316 and LanguageTool1789 file paths/lengths/content hashes match extracted trees. Added a separate verified probe without changing frozen PR5.85 helper/pins. Dependency mutation, unexpected/missing file and junction tests reject altered trees. Four actual verified synthetic cases returned2/0/0/2; owned temp removed. Snapshot check is not atomic containment, loader/global-state coverage, rights or privacy certification. Accepted21/9/1 and zero qualifications unchanged. No owner capture/SQL/graph/engine changes. See LANGUAGETOOL_DISTRIBUTION_PROFILE.md.
+
+
+## PR5.87 — Antidote installed control boundary
+
+Clean actual HEADd66d397 and owner Production105 recorded. Seven current official documents reviewed for installed12 English Correction. Global rewrite-disable switch located; requires administrator panel unlock and differs from automatic suggestions or per-document disable. Correction-state memory is default-on with broader clear action; sync categories/onboarding choices separate. Nothing applied or installed, entitlement unconfirmed; no purchase requested. Proposed manual passive workflow still unobserved in selected configuration. Privacy hold, accepted21/9/1 and zero qualifications unchanged. No further CLI probe expansion/owner capture/SQL/graph changes. See ANTIDOTE_LOCAL_CONTROLS_REVIEW.md.
+
+
+## PR5.88 — Open writing candidate source leads
+
+Owner reports no/uncertain Antidote12 access; defer without purchase or negative privacy inference. write-good fixed main/CLI source reviewed: passive check, eager dependency imports and text-bearing output identified; dependency graph and synthetic behavior pending. Vale CLI offline claim separated from hosted CMS; local passive rule unverified. Two leads, zero qualifications;21/9/1 unchanged. No candidate execution, graph/SQL changes or further owner capture. See OPEN_WRITING_CANDIDATE_REVIEW.md.

@@ -1,0 +1,117 @@
+{
+  "version": 1,
+  "packet": "PR5.87",
+  "reviewedAt": "2026-10-17",
+  "baselineCommit": "d66d397cd8c55e01e5e22e690370b9a6dbc429c1",
+  "researchOnly": true,
+  "graphChanges": false,
+  "publicationApproved": false,
+  "qualifiedNewCandidates": 0,
+  "checkpoint": {
+    "products": 21,
+    "completedRoutes": 9,
+    "remainingRoutes": 1
+  },
+  "edition": "Antidote12 installed English Correction with explicit feature controls; not Web or Reformulation",
+  "method": "Current official documentation review only. No application installed/launched, account signup, purchase, admin setting change or runtime capture.",
+  "sources": [
+    {
+      "id": "policy",
+      "url": "https://www.antidote.info/en/privacy-policy",
+      "locator": "2.1.1;2.2.1;2.2.2;2.3",
+      "finding": "Vendor distinguishes installed Correction from server Reformulation; Web agreements differ. Account/usage records and retention remain separate. No blanket no-account or no-telemetry conclusion."
+    },
+    {
+      "id": "confidentiality",
+      "url": "https://www.antidote.info/en/help-centre/troubleshooting/language-content/antidote-and-the-confidentiality-of-your-texts",
+      "locator": "Installed perpetual/subscription versus Web scenarios",
+      "finding": "Installed text-local claim is edition/feature specific. The statement about reformulated text not being stored/trained does not mean it is never transmitted."
+    },
+    {
+      "id": "general",
+      "url": "https://www.antidote.info/en/documentation/user-guide/settings/corrector-settings/general-panel",
+      "locator": "Correction mode; Reformulation; Correction data",
+      "finding": "Two documented automatic rewrite suggestion controls are enabled by default. Correction-state memory across sessions is also enabled by default; an application-wide clear function is documented. Exact storage representation and scope not established."
+    },
+    {
+      "id": "sync",
+      "url": "https://www.antidote.info/en/documentation/user-guide/settings/interface-settings/sync-panel",
+      "locator": "Page currently headed Druide Account Panel; synchronization options",
+      "finding": "Favourites, customizations, settings and hidden alerts are separately selectable; initial choices follow onboarding response. New dictionary/rule-list automatic sync has a separate control. No universal default-off claim."
+    },
+    {
+      "id": "access",
+      "url": "https://www.antidote.info/en/documentation/user-guide/settings/interface-settings/access-control-panel",
+      "locator": "Reformulation; panel lock/defaults",
+      "finding": "Global rewrite disabling removes feature UI; access-control options are initially off, so the disable switch must be enabled. Changing the panel requires local administrator credentials. Not an observed network block."
+    },
+    {
+      "id": "rewrite-data",
+      "url": "https://www.antidote.info/en/documentation/user-guide/the-corrector/reformulation-mode/data-privacy-and-limits",
+      "locator": "All-text versus per-document disable controls",
+      "finding": "Rewrite uses vendor servers. Per-document disabling persists for that document while other documents remain enabled; it is not equivalent to the global disable switch."
+    },
+    {
+      "id": "passive",
+      "url": "https://www.antidote.info/en/documentation/user-guide/the-corrector/the-correction-prism/style-view/constructions",
+      "locator": "Passive voice; optional rewrite actions",
+      "finding": "Manual passive-construction review is documented. Sensitivity slider also relates to rewrite view; automatic rewrite is not required by the proposed manual review operation."
+    }
+  ],
+  "ownerAccess": {
+    "status": "not-confirmed",
+    "optionalQuestionAsked": true,
+    "assumedEntitled": false,
+    "purchaseRequested": false,
+    "dependencyMeaning": "Access dependency, not a negative privacy finding. Answer does not change this documentation-only receipt."
+  },
+  "proposedProfile": {
+    "status": "not-applied-not-tested",
+    "operation": "Highlight English passive constructions; manually revise and recheck.",
+    "controls": [
+      {
+        "id": "global-rewrite-disable",
+        "source": "access",
+        "desired": "Enable the global disable switch; record installed build and resulting UI.",
+        "verification": "Entitled test environment, local admin action only if separately authorized. UI hiding alone is not traffic proof."
+      },
+      {
+        "id": "automatic-suggestions",
+        "source": "general",
+        "desired": "Record both automatic suggestion controls and interaction with global disabling.",
+        "verification": "Do not assume remaining in Correction mode excludes automatic remote-feature paths."
+      },
+      {
+        "id": "sync",
+        "source": "sync",
+        "desired": "Record each selected category and new dictionary/rule-list control.",
+        "verification": "A single disabled category does not establish all sync is disabled."
+      },
+      {
+        "id": "correction-state",
+        "source": "general",
+        "desired": "Record correction-state memory setting and persistence in an isolated synthetic test context.",
+        "verification": "Do not globally erase owner correction history as a routine test; clear function scope is broader than a single synthetic document."
+      },
+      {
+        "id": "manual-passive",
+        "source": "passive",
+        "desired": "Use passive, manually active-revised and adjectival-control sentences; record sensitivity and recheck.",
+        "verification": "Documentation supports the feature, not actual corpus results."
+      }
+    ]
+  },
+  "newlyNarrowedGaps": [
+    "Global feature-disable mechanism and its administrator dependency located.",
+    "Document-scoped versus global disable semantics separated.",
+    "Correction-state persistence is an explicit retention control, not just an unknown empty-folder check."
+  ],
+  "remainingMaterialGaps": [
+    "No entitled installed build/control-state observation.",
+    "No observed manual passive workflow in the chosen configured edition.",
+    "No corresponding operational/diagnostic/account data-path verification.",
+    "Local correction-history representation/deletion and residual copies not audited."
+  ],
+  "decision": "Priority documentation lead remains on hold. A documented global feature control is stronger scope information, not an applied or verified privacy configuration.",
+  "nextAction": "If entitled installed access exists, prepare a bounded synthetic/control-state test with specific authorization for any admin change. Otherwise retain the documented lead without purchase/install and move to another available evidence path. No further LanguageTool probe expansion planned in this packet."
+}

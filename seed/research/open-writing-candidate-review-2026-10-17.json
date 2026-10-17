@@ -1,0 +1,58 @@
+{
+  "packet": "PR5.88",
+  "reviewedAt": "2026-10-17",
+  "baselineCommit": "d66d397cd8c55e01e5e22e690370b9a6dbc429c1",
+  "researchOnly": true,
+  "graphChanges": false,
+  "publicationApproved": false,
+  "qualifiedNewCandidates": 0,
+  "ownerAnswer": {
+    "antidote12Access": "No or uncertain",
+    "effect": "Defer installed testing; no purchase/signup/install requested. This does not amend the frozen PR5.87 receipt or establish a privacy defect."
+  },
+  "method": "Official documentation and static source review only; no candidate installed or executed. Directory unavailable: no exposed connector/CLI, website returned unsupported content; official-source fallback.",
+  "candidates": [
+    {
+      "name": "write-good",
+      "profile": "Node library with bundled checks; CLI considered separately; exclude custom checks and editor integrations",
+      "status": "priority-source-lead-not-qualified",
+      "sourceCommit": "6940b034c6f5a7e101c01a24d651a778fc3fe435",
+      "sources": [
+        "https://github.com/btford/write-good",
+        "https://raw.githubusercontent.com/btford/write-good/6940b034c6f5a7e101c01a24d651a778fc3fe435/write-good.js",
+        "https://raw.githubusercontent.com/btford/write-good/6940b034c6f5a7e101c01a24d651a778fc3fe435/bin/write-good.js",
+        "https://raw.githubusercontent.com/btford/write-good/master/package.json"
+      ],
+      "findings": [
+        "README documents English passive suggestions. Fixed main module calls passive-voice among default checks; checks can be disabled or replaced.",
+        "Main module returns matched text in reasons. CLI prints annotated text and accepts direct text arguments or file inputs; output and argument exposure must be considered.",
+        "Current master package metadata says version1.0.8 and MIT; this is metadata, not a verified installed release. Runtime dependency ranges include passive-voice ^0.1.0. Main module eagerly imports other checks even when disabled."
+      ],
+      "gaps": [
+        "Exact dependency resolution, licenses and complete selected dependency data paths unreviewed.",
+        "No fixed distribution/runtime or passive/active/adjectival synthetic results.",
+        "No retention, diagnostics or runtime transmission verification; absence of network calls in one module is insufficient."
+      ],
+      "next": "Resolve exact runtime dependency graph and inspect passive detection before a bounded synthetic test. Do not execute floating npx or infer all integrations share the library boundary."
+    },
+    {
+      "name": "Vale CLI",
+      "profile": "Local CLI with explicitly selected local rule set; exclude hosted CMS/editor and remote integrations",
+      "status": "secondary-documentation-lead-not-qualified",
+      "sources": [
+        "https://vale.sh/",
+        "https://vale.sh/cms"
+      ],
+      "findings": [
+        "Official homepage describes MIT open-source CLI and offline operation.",
+        "CMS documentation is a hosted service and shows a passive sequence-rule example; that example is not proof a default local CLI installation supplies or runs that rule."
+      ],
+      "gaps": [
+        "Exact CLI release and local English passive rule not selected or verified.",
+        "No synthetic workflow or selected-rule data-path review."
+      ],
+      "next": "Identify an official local passive rule and fixed CLI release. Do not count configuration variants or ports as separate qualified products."
+    }
+  ],
+  "decision": "Two leads, zero newly qualified products. Accepted21/9/1 and privacy route hold remain. Antidote deferred for access, LanguageTool capture round remains closed."
+}
