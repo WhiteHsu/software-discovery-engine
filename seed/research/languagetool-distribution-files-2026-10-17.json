@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "algorithm": "SHA256(JSON.stringify(sorted [relative POSIX path,file byte length,SHA256(file bytes)] rows)); ordinal UTF-16 path order; files only",
+  "java": {
+    "zipSha256": "bc21a93923103cdaac93ee337b0ae4365e739fde36df823dd456bc67c8a9d352",
+    "fileCount": 316,
+    "fileTreeSha256": "b5c34b405842fb4aa8be1128de342134c80f97bf400c75db524d7ff282f82a5e"
+  },
+  "languagetool": {
+    "zipSha256": "53600506b399bb5ffe1e4c8dec794fd378212f14aaf38ccef9b6f89314d11631",
+    "fileCount": 1789,
+    "fileTreeSha256": "67ea678b8be032ce4bd0203e6876c733bd18f39e1b8e942c0f58c8e81e2a4cb8"
+  }
+}

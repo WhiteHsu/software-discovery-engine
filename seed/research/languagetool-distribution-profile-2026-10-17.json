@@ -1,0 +1,138 @@
+{
+  "version": 1,
+  "packet": "PR5.86",
+  "reviewedAt": "2026-10-17",
+  "baselineCommit": "ece2cb4346fe60262210be5763a7d753d18be1b7",
+  "researchOnly": true,
+  "graphChanges": false,
+  "publicationApproved": false,
+  "qualifiedNewCandidates": 0,
+  "checkpoint": {
+    "products": 21,
+    "completedRoutes": 9,
+    "remainingRoutes": 1
+  },
+  "scope": "Complete regular-file snapshot identity of two selected ZIP distributions, before fixed-synthetic probe execution; not runtime isolation.",
+  "archiveInventory": {
+    "downloadedArchivesMatchedPriorSha256BeforeEntryHashing": true,
+    "archiveCodeExecuted": false,
+    "treeAlgorithm": "SHA256(JSON.stringify(sorted [relative POSIX path,file byte length,SHA256(file bytes)] rows)); ordinal UTF-16 path order; files only",
+    "java": {
+      "zipSha256": "bc21a93923103cdaac93ee337b0ae4365e739fde36df823dd456bc67c8a9d352",
+      "fileCount": 316,
+      "fileTreeSha256": "b5c34b405842fb4aa8be1128de342134c80f97bf400c75db524d7ff282f82a5e"
+    },
+    "languagetool": {
+      "zipSha256": "53600506b399bb5ffe1e4c8dec794fd378212f14aaf38ccef9b6f89314d11631",
+      "fileCount": 1789,
+      "fileTreeSha256": "67ea678b8be032ce4bd0203e6876c733bd18f39e1b8e942c0f58c8e81e2a4cb8"
+    },
+    "actualExtractedTreesMatched": true,
+    "zeroByteFilesIncluded": true,
+    "emptyDirectoryMetadataNotIncluded": true
+  },
+  "implementationPins": [
+    {
+      "path": "seed/research/languagetool-distribution-files-2026-10-17.json",
+      "utf8LfSha256": "974fc768b0dc1ada46613e53e649b120784f1675f963d3ac5d7427a35ea9b652"
+    },
+    {
+      "path": "scripts/seed/languagetool-distribution.mjs",
+      "utf8LfSha256": "0689df51c3d3e7abeb69e2749ac1041feef75fcb867cb7531be6a3f30e43b90b"
+    },
+    {
+      "path": "scripts/seed/probe-languagetool-verified-profile.mjs",
+      "utf8LfSha256": "41ae26cf49e9c22ae560c9ec3808b48af394399f278fa3a2c3c470012c349cbe"
+    },
+    {
+      "path": "scripts/seed/languagetool-distribution.test.mjs",
+      "utf8LfSha256": "b6a1f835c28a40404661744c57ee6f7d742eb8b1936bea7bbfa5a9f377b147ed"
+    }
+  ],
+  "inheritedImplementationPins": [
+    {
+      "path": "scripts/seed/probe-languagetool-cli-profile.mjs",
+      "utf8LfSha256": "edc1a707336fbf0483ff42538757a2d8f58fe99dd2ea3b9882442f1dedfb976f"
+    }
+  ],
+  "runtimeResult": {
+    "version": 1,
+    "mode": "synthetic-stdin-summary-only",
+    "runtimeIdentityPinned": true,
+    "networkBlocked": false,
+    "runs": [
+      {
+        "id": "passive",
+        "exitCode": 0,
+        "matches": [
+          {
+            "ruleId": "PASSIVE_VOICE",
+            "offset": 11,
+            "length": 11
+          },
+          {
+            "ruleId": "PASSIVE_VOICE",
+            "offset": 43,
+            "length": 8
+          }
+        ]
+      },
+      {
+        "id": "active",
+        "exitCode": 0,
+        "matches": []
+      },
+      {
+        "id": "adjectival",
+        "exitCode": 0,
+        "matches": []
+      },
+      {
+        "id": "positive",
+        "exitCode": 0,
+        "matches": [
+          {
+            "ruleId": "PASSIVE_VOICE",
+            "offset": 20,
+            "length": 15
+          },
+          {
+            "ruleId": "PASSIVE_VOICE",
+            "offset": 77,
+            "length": 11
+          }
+        ]
+      }
+    ],
+    "cleanup": "owned-temp-removed",
+    "distributionFileSnapshotVerified": true,
+    "verifiedFileCounts": {
+      "java": 316,
+      "languagetool": 1789
+    },
+    "atomicVerificationOrIsolation": false
+  },
+  "regression": {
+    "newTests": 3,
+    "passed": 3,
+    "existingProfileTests": 4,
+    "existingRouteTests": 8,
+    "linkFixtureMaySkipOnUnsupportedHost": true,
+    "covered": [
+      "Dependency mutation while original entrypoint stays unchanged",
+      "Unexpected logger configuration file and missing resource",
+      "Directory junction rejected rather than followed"
+    ]
+  },
+  "limits": [
+    "Snapshot check and execution are not atomic; a concurrent writer could alter files after checking. No locking, OS containment or network block.",
+    "Only regular file paths/sizes/contents in selected roots are fingerprinted; empty directories, ACLs, registry, filesystem metadata and external/global state are not.",
+    "Rejects symlink/junction entries inside roots and root itself, but does not comprehensively audit every ancestor reparse point or OS loader search path.",
+    "Does not attest external agents, providers, configurations, native/system libraries, live class loading or platform side effects.",
+    "Raw output remains transiently present in process memory. Owned-temp removal is not secure erasure or comprehensive retention cleanup.",
+    "Exact snapshot match is not a dependency-vulnerability, license, no-training or privacy certification.",
+    "Probe still accepts fixed synthetic texts only; no real-document workflow validation."
+  ],
+  "decision": "Closes the earlier two-file-only identity gap for the selected distribution file snapshots. All prior privacy qualifications remain on hold.",
+  "ownerAction": "Apply eight files, run pure Node reviews/tests; no Java download, probe rerun, admin capture or SQL required."
+}

@@ -448,3 +448,8 @@ Clean actual HEADc4610dd and owner Production102 recorded. Fixed6.6 GRPCRule/GRP
 ## PR5.85 — Synthetic CLI summary boundary
 
 Clean actual HEAD5a5612d and owner Production103 recorded. Added research-only fixed-synthetic stdin probe; two executable identities pinned, injected JVM option variables rejected, raw stdout/stderr not printed or persisted by wrapper. Four actual cases returned2/0/0/2 and owned temp cleanup succeeded. Four meaningful output/error/option/cleanup-boundary tests pass. Node/JVM memory, external writes, complete distribution, network/exporter and retention remain outside guarantee; not a real-document product or privacy qualification. Source pins normalize CRLF only. Accepted21/9/1, zero new qualifications unchanged. No owner capture/SQL/graph/engine changes. See LANGUAGETOOL_SYNTHETIC_PROFILE.md.
+
+
+## PR5.86 — Full distribution file snapshot identity
+
+Clean actual HEADece2cb4 and owner Production104 recorded. Matched both fixed official ZIP hashes before per-file inventory; Java316 and LanguageTool1789 file paths/lengths/content hashes match extracted trees. Added a separate verified probe without changing frozen PR5.85 helper/pins. Dependency mutation, unexpected/missing file and junction tests reject altered trees. Four actual verified synthetic cases returned2/0/0/2; owned temp removed. Snapshot check is not atomic containment, loader/global-state coverage, rights or privacy certification. Accepted21/9/1 and zero qualifications unchanged. No owner capture/SQL/graph/engine changes. See LANGUAGETOOL_DISTRIBUTION_PROFILE.md.
