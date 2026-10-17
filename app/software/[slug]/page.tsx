@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getProduct, localPreview } from "@/lib/discovery/products";
 import { claimValue, latestVerification, safeUrl, supported, type Claim } from "@/lib/discovery/model";
+import {reviewedPrivacyOperation,privacyClaimForDisplay} from "@/lib/discovery/privacy-route";
 import styles from "./product.module.css";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -31,7 +32,8 @@ export default async function Product({params}:Props) {
   const attribute=(slug:string)=>p.attributes.find(c=>c.slug===slug);
   const pricing=attribute("pricing-model"),platforms=attribute("supported-platforms"),tradeoffs=attribute("trade-off-summary");
   const facts=p.attributes.filter(c=>!["pricing-model","supported-platforms","trade-off-summary"].includes(c.slug));
-  const positive=facts.filter(c=>supported(c)&&c.verificationStatus==="verified"&&c.value===true);
+  const privacyOperation=reviewedPrivacyOperation(p);
+  const positive=facts.filter(c=>c.slug!=="privacy-friendly"&&supported(c)&&c.verificationStatus==="verified"&&c.value===true);
   const audiences=p.audiences.filter(supported),problems=p.problems.filter(supported),anchors=p.anchors.filter(supported);
   return <article className={styles.page}>
     {preview&&<aside className={styles.preview}>Local draft preview · Publication has not been approved.</aside>}
@@ -47,7 +49,7 @@ export default async function Product({params}:Props) {
       return <section className={styles.section} key={title as string}><h2>{title as string}</h2><p>{usable?claimValue(claim):"Unknown — not verified."}</p>{claim&&<Evidence claim={claim}/>}<p className={styles.muted}>{title==="Pricing"?"Check the official source for current regional prices and plan limits.":"Platform availability does not imply feature parity."}</p></section>;
     })}</div>
     <section className={styles.section}><h2>Skip it if… / Trade-offs</h2><p>Compare these limits before deciding:</p><p>{tradeoffs?claimValue(tradeoffs):"Unknown — meaningful trade-offs have not been documented."}</p>{tradeoffs&&<Evidence claim={tradeoffs}/>}</section>
-    <section className={styles.section}><h2>Attribute details</h2><p className={styles.muted}>Unknown means unconfirmed. “No” appears only for a supported explicit negative claim.</p><div className={styles.facts}>{facts.map(c=><div className={styles.fact} key={c.slug}><h3>{c.name}</h3><p>{claimValue(c)}</p>{c.description&&<p className={styles.muted}>Attribute meaning: {c.description}</p>}<Evidence claim={c}/></div>)}</div></section>
+    <section className={styles.section}><h2>Attribute details</h2><p className={styles.muted}>Unknown means unconfirmed. “No” appears only for a supported explicit negative claim.</p><div className={styles.facts}>{facts.map(c=><div className={styles.fact} key={c.slug}><h3>{c.name}</h3><p>{c.slug==="privacy-friendly"?(privacyOperation?"Verified only for the reviewed local operation":"Not verified for a reviewed local operation."):claimValue(c)}</p>{c.slug==="privacy-friendly"&&privacyOperation&&<p>{privacyOperation}</p>}{c.description&&<p className={styles.muted}>Attribute meaning: {c.description}</p>}<Evidence claim={privacyClaimForDisplay(p,c)}/></div>)}</div></section>
     <section className={styles.section}><h2>Mainstream software to compare</h2><p className={styles.muted}>These graph relationships describe alternatives or complements, not full replacement guarantees.</p><Claims items={anchors} empty="No supported mainstream comparison is available."/></section>
     <section className={styles.section}><h2>Related Escape Routes</h2>{p.routes.length?<ul className={styles.claims}>{p.routes.map(r=><li key={r.slug}><strong><Link href={`/escape/${r.slug}`}>{r.name}</Link></strong><p className={styles.muted}>{preview?"Draft route · not approved for publication.":r.description}</p></li>)}</ul>:<p className={styles.muted}>No approved related Escape Routes are available.</p>}</section>
     <footer className={styles.footer}>Source checks are scoped to individual claims. They do not imply hands-on testing of every feature.{url&&<a href={url} target="_blank" rel="noopener noreferrer">Explore {p.name} on its official website ↗</a>}</footer>

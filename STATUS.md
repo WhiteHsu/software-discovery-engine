@@ -518,3 +518,8 @@ Clean HEAD4e7f9f6 and owner Production115. Fixed source default-style/config/man
 ## PR5.99 — Contract-valid privacy draft graph
 
 Clean HEADa28a62c and owner Production116. Three scoped dossiers converted through actual seed semantic validator into offline draft graph,12 attrs/3 anchors/3 memberships. Persisted Reviewed Local Operation text carries edition/conditions. New reusable helper checks exact profile/operation/six axes but is proposal-only, not wired into production. Existing products/unrelated routes and historical engine/pins unchanged. Draft3, published0, not publishable; public21/9/1 and actual privacy graph0 unchanged. Next production projection/display integration review and selective import proposal, no SQL now. See PRIVACY_GRAPH_PROPOSAL.md.
+
+
+## PR5.100 — Runtime scoped privacy and display integration
+
+Clean HEAD18e8f9b and owner Production117. Registered reviewed profiles match frozen PR5.99 drafts. getEscape preview/live paths now enforce scoped profile evaluation; unreviewed/altered/missing-evidence pages fail closed. Other routes unchanged, historical evaluator/source pins untouched. Route/product displays include complete reviewed local operation; invalid scope privacy badge becomes unknown, no standalone positive privacy highlight. Privacy draft file selection development-only.17 tests, full typecheck, webpack production build and two local SSR pages passed; server stopped. No SQL/import/publication or graph changes;21/9/1, actual privacy0 unchanged. See PRIVACY_RUNTIME_INTEGRATION.md.

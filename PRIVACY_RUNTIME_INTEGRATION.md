@@ -1,0 +1,13 @@
+# PR5.100 — 網站讀取、資格與操作條件顯示
+
+基準18e8f9b；使用者截圖Production117。PR5.99三款草稿的已審profile固定為server可用registry，內容逐項與凍結草稿比對；正式網站getEscape的本機預覽及資料庫讀取分支都改呼叫同一範圍檢查。舊escape-model與其歷史source pins不改，其他路線沿用原排名。
+
+隱私路線只接受已登錄的精確產品版本、相同英文被動句關係範圍、完全相符且有日期／來源的Reviewed Local Operation及已完成六軸，並沿用原有verified／信心／定價與取捨門檻。未知版本、不同條件或資料不足都fail closed；已審profile不是執行時監測或使用者機器的控制證明。條件變更需另行審查，不可只改registry讓資料通過。
+
+路線比較及解釋區會呈現本機操作條件，不只列Privacy Friendly。產品頁不再把這個boolean列成無範圍亮點；細節會顯示限定操作文字，缺乏有效範圍時顯示未驗證，徽章也改Unknown。一般屬性、其他路線與已有公開產品不受新分類影響。
+
+PRIVACY_DRAFT_PREVIEW=true新增選擇草稿輸出檔，但仍必須NODE_ENV=development及PRODUCT_LOCAL_PREVIEW=true，production無法開啟。若要自行看草稿，可先跑builder，再在獨立開發終端機設定這兩個preview變數後npm run dev；不是匯入或發佈步驟。環境變數只設在該終端機，結束後關閉即可。
+
+驗證：17項測試通過，包含已審registry與實際草稿一致、未知／範圍／來源／條件拒絕、其他路線排序不變及production預覽禁止；完整型別檢查與Next正式webpack建置通過。本機SSR路線頁及write-good產品頁200，草稿提示及操作／留存條件存在，預覽server已停止。Windows跨磁碟依賴問題以工作區同磁碟副本完成驗證，不修改原專案依賴。
+
+尚未匯入資料、建立SQL或發佈；公開仍21／9／1，實際隱私圖譜仍0。下一步可準備live collision唯讀核對與選擇性匯入／發佈提案，不可把完整歷史draft bundle直接送入production。沒有完整瀏覽器互動／視覺QA或正式資料庫整合測試；本輪只以現有資料形狀及本機SSR驗證。
