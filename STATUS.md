@@ -513,3 +513,8 @@ Clean HEADd942194 and owner Production114. LT broad process wording replaced onl
 ## PR5.98 — Vale conditional claim and three research dossiers
 
 Clean HEAD4e7f9f6 and owner Production115. Fixed source default-style/config/manager/extension/linter initialization sections reviewed. Selected local Vale profile supported with explicit pipeline/endpoint/profiling/no-script/output conditions and retained caller/OS limits. New research3/3, actual graph0/public21/9/1 unchanged; old0/1/2 snapshots immutable. No new binary run/download/capture or production engine/graph/SQL change. Next actual seed-contract draft and scoped production guards, not further default probes. See VALE_CLAIM_DECISION.md.
+
+
+## PR5.99 — Contract-valid privacy draft graph
+
+Clean HEADa28a62c and owner Production116. Three scoped dossiers converted through actual seed semantic validator into offline draft graph,12 attrs/3 anchors/3 memberships. Persisted Reviewed Local Operation text carries edition/conditions. New reusable helper checks exact profile/operation/six axes but is proposal-only, not wired into production. Existing products/unrelated routes and historical engine/pins unchanged. Draft3, published0, not publishable; public21/9/1 and actual privacy graph0 unchanged. Next production projection/display integration review and selective import proposal, no SQL now. See PRIVACY_GRAPH_PROPOSAL.md.

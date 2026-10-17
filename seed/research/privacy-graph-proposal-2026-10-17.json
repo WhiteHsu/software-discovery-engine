@@ -1,0 +1,21 @@
+{
+  "packet": "PR5.99",
+  "reviewedAt": "2026-10-17",
+  "baselineCommit": "a28a62c93d53c0bbdd51d4d69ab74cf34175cff1",
+  "ownerProductionScreenshot": 116,
+  "researchOnly": true,
+  "graphChanges": false,
+  "publicationApproved": false,
+  "baselineHash": "90501123a9a4c9c5e7b76440e7fbddc0dfad6182118058a6a847fc3d1a36510b",
+  "decisionHash": "a907fb63bf258162b512c3b33b2ae005b3646c9a3774ff9a1ad61226c4c9102b",
+  "provenance": [
+    {
+      "path": "seed/research/vale-claim-decision-2026-10-17.json",
+      "sha256": "221c4a1514c614d2247456d3d24d699de1c640f30a9c9430fc3e1abca31c1abd"
+    }
+  ],
+  "routeDescription": "Technical local alternatives for personal English passive-construction review, manual revision and recheck only. Fixed CLI/library editions require setup and explicit local conditions. Not full Grammarly replacements or vendor-wide privacy guarantees; read each Reviewed Local Operation and output/retention limits.",
+  "scope": "personal-english-passive-construction-review",
+  "purpose": "Contract-valid offline draft graph; adds reviewed local operation text and a separate reusable scope/profile gate. Production route renderer/evaluator not integrated; no SQL/import/publication.",
+  "next": "Review generated product pages/conditions, then integrate scoped qualification and exact edition metadata into production access/display paths before any selective import/publication. Check live identity collisions separately."
+}
