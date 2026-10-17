@@ -463,3 +463,8 @@ Clean actual HEADd66d397 and owner Production105 recorded. Seven current officia
 ## PR5.88 — Open writing candidate source leads
 
 Owner reports no/uncertain Antidote12 access; defer without purchase or negative privacy inference. write-good fixed main/CLI source reviewed: passive check, eager dependency imports and text-bearing output identified; dependency graph and synthetic behavior pending. Vale CLI offline claim separated from hosted CMS; local passive rule unverified. Two leads, zero qualifications;21/9/1 unchanged. No candidate execution, graph/SQL changes or further owner capture. See OPEN_WRITING_CANDIDATE_REVIEW.md.
+
+
+## PR5.89 — write-good passive dependency controls
+
+Actual clean HEADdb9a12c and owner Production106. Registry integrity verified passive-voice0.1.0; inspected dependency module has no imports/direct I/O. Eight synthetic controls demonstrate simple passive/manual-active behavior, missed adverb/get constructions and adjectival ambiguity. Dependency only, not full write-good or network/retention proof. No npm installation or real text. Other eager dependencies/end-to-end profile pending;21/9/1 and zero qualifications unchanged. See WRITE_GOOD_PASSIVE_REVIEW.md.

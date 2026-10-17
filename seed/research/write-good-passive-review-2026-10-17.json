@@ -1,0 +1,124 @@
+{
+  "packet": "PR5.89",
+  "reviewedAt": "2026-10-17",
+  "baselineCommit": "db9a12c815081218a29bbe1913914d6cd05d0449",
+  "ownerProductionScreenshot": 106,
+  "researchOnly": true,
+  "graphChanges": false,
+  "publicationApproved": false,
+  "qualifiedNewCandidates": 0,
+  "scope": "write-good lead: direct passive-voice dependency only; NOT a full write-good installation or CLI execution",
+  "writeGoodSourceCommit": "6940b034c6f5a7e101c01a24d651a778fc3fe435",
+  "sources": [
+    "https://registry.npmjs.org/passive-voice",
+    "https://registry.npmjs.org/passive-voice/0.1.0",
+    "https://registry.npmjs.org/passive-voice/-/passive-voice-0.1.0.tgz",
+    "https://github.com/btford/write-good/blob/6940b034c6f5a7e101c01a24d651a778fc3fe435/write-good.js"
+  ],
+  "artifact": {
+    "name": "passive-voice",
+    "version": "0.1.0",
+    "license": "MIT",
+    "registryGitHead": "0e7fe7f57481dd1487f5e185e466e52e4669f909",
+    "registryIntegrity": "sha512-Pj9iwzXw4bKEtdugGYm92jT4tnsj+xrTSkHFEM4bn6fefqbFdZi49tZMmGIZ91aIQTyFtMUww7O2qYaZKAsDag==",
+    "archiveSha256": "dd4cb61d1ac7a44308214e2e6b78f608217ccefb6984f80a3d0e09da4130ee95",
+    "moduleSha256": "3243637a25d70c3ba3b53f09abeb45a9cea3d1de15f936e89860aa5f3407a69e",
+    "runtimeDependencies": [],
+    "versionResolution": "Registry currently lists0.0.0,0.0.1,0.1.0;0.1.0 is the only presently listed release satisfying write-good ^0.1.0. This is not a lock for all write-good dependencies."
+  },
+  "method": {
+    "runtime": "v24.14.1",
+    "operation": "Read fixed tar member; verify tarball SHA512 against registry; evaluate inspected no-import module and invoke on eight synthetic strings with per-evaluation timeout. No npm installation, lifecycle script, editor integration or external text supplied.",
+    "limits": "VM context is a test harness, not an attested OS sandbox. No packet capture or comprehensive filesystem/retention audit. No full write-good or transitive graph verification."
+  },
+  "staticFindings": [
+    "Module contains an irregular participle list and a case-insensitive be-plus-immediate-participle regex.",
+    "Module has no require/import or direct filesystem/network/output calls; it returns numeric index/offset spans. This observation is only about these inspected module bytes.",
+    "Optional by mode requires by immediately after the match. Fixed write-good main calls fn(text) without forwarding this option.",
+    "Developer tests cover simple regular/irregular passives, line breaks, indeed exception and by option; they do not establish broad linguistic accuracy."
+  ],
+  "results": [
+    {
+      "id": "regular-passive",
+      "text": "The report was reviewed by the editor.",
+      "linguisticControl": "passive",
+      "spans": [
+        {
+          "index": 11,
+          "offset": 12
+        }
+      ],
+      "count": 1
+    },
+    {
+      "id": "irregular-passive",
+      "text": "The letter was written by Maya.",
+      "linguisticControl": "passive",
+      "spans": [
+        {
+          "index": 11,
+          "offset": 11
+        }
+      ],
+      "count": 1
+    },
+    {
+      "id": "active-revision",
+      "text": "The editor reviewed the report.",
+      "linguisticControl": "active",
+      "spans": [],
+      "count": 0
+    },
+    {
+      "id": "adverb-passive",
+      "text": "The report was carefully reviewed by the editor.",
+      "linguisticControl": "passive",
+      "spans": [],
+      "count": 0
+    },
+    {
+      "id": "get-passive",
+      "text": "The report got reviewed by the editor.",
+      "linguisticControl": "passive",
+      "spans": [],
+      "count": 0
+    },
+    {
+      "id": "adjectival-state",
+      "text": "The door is closed.",
+      "linguisticControl": "context-dependent-state",
+      "spans": [
+        {
+          "index": 9,
+          "offset": 9
+        }
+      ],
+      "count": 1
+    },
+    {
+      "id": "progressive-active",
+      "text": "She is running.",
+      "linguisticControl": "active",
+      "spans": [],
+      "count": 0
+    },
+    {
+      "id": "indeed-exception",
+      "text": "This sentence is indeed active.",
+      "linguisticControl": "active",
+      "spans": [],
+      "count": 0
+    }
+  ],
+  "interpretation": {
+    "basicManualWorkflow": "Simple regular/irregular passives highlighted; one active revision not highlighted.",
+    "limitations": "Adverb-separated and get-passive examples missed; adjectival closed state flagged, so human interpretation required. Small controls are not accuracy statistics.",
+    "privacy": "No direct I/O in this dependency is useful bounded evidence, not proof for full application, all eagerly loaded modules, CLI output, host process or editor integrations."
+  },
+  "remainingGaps": [
+    "All other write-good runtime dependency versions and data paths remain unverified.",
+    "Complete pinned distribution and end-to-end chosen workflow not run.",
+    "Installation/download phase, output retention, host diagnostics and operational text paths not established."
+  ],
+  "decision": "Prioritize bounded complete-library review if continuing this candidate; no route qualification or publication. Do not count passive-voice separately as a second independent product."
+}
