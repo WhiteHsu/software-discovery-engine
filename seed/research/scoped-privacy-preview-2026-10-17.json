@@ -1,0 +1,515 @@
+{
+  "packet": "PR5.95",
+  "reviewedAt": "2026-10-17",
+  "baselineCommit": "436fb79cf59e49e378a3c9fe20f4c40376317d19",
+  "ownerProductionScreenshot": 112,
+  "researchOnly": true,
+  "graphChanges": false,
+  "publicationApproved": false,
+  "qualifiedNewCandidates": 0,
+  "proposalScope": "personal-english-passive-construction-review",
+  "provenanceHashNormalization": "UTF8 CRLF-to-LF only",
+  "provenance": [
+    {
+      "path": "seed/research/scoped-writing-drafts-2026-10-17.json",
+      "sha256": "9d34b6b8eaa18cbe156adabf61f1153ec7aacf35333542b7e489085924f44dc1"
+    },
+    {
+      "path": "seed/research/privacy-evidence-decisions-2026-10-17.json",
+      "sha256": "9abda136aef35314fd7e0d1fd9f9e57239291ce0271e1162ac34a0b94febdebb"
+    }
+  ],
+  "licenses": [
+    {
+      "title": "LanguageTool distribution COPYING",
+      "url": "https://github.com/languagetool-org/languagetool/blob/f13e71a7fe85a122290826fd691d267d64e97c33/COPYING.txt",
+      "finding": "LGPL plus bundled component notices",
+      "reviewedAt": "2026-10-17",
+      "sourceBytesSha256": "6cb151ab0b1fe9c2d4c367ff781755f4dec6a7129e2bb248b078d9eb0e12718b"
+    },
+    {
+      "title": "write-good LICENSE",
+      "url": "https://registry.npmjs.org/write-good/-/write-good-1.0.8.tgz",
+      "finding": "MIT",
+      "reviewedAt": "2026-10-17",
+      "sourceBytesSha256": "897df2d117b16204eb1af4f1ffc9b3bf7359bcf88089d64e695c98451b91bca3"
+    },
+    {
+      "title": "Vale binary distribution LICENSE",
+      "url": "https://github.com/vale-cli/vale/blob/2ee781716f8c177c2a143e18d535ddb11e264f00/LICENSE",
+      "finding": "MIT",
+      "reviewedAt": "2026-10-17",
+      "sourceBytesSha256": "29a16197c8d01cafcacbd9c1774b66b28d7c0f15a6aceed88e4e8068ea398470"
+    },
+    {
+      "title": "Microsoft rule collection LICENSE",
+      "url": "https://raw.githubusercontent.com/vale-cli/Microsoft/ea5fa73c530a8413f39701b01856258c0223f101/LICENSE",
+      "finding": "MIT",
+      "reviewedAt": "2026-10-17",
+      "sourceBytesSha256": "f661986be23c000812a439e03dfed8d16ff23117e8d1219fc2beb7cd01393640"
+    }
+  ],
+  "candidates": [
+    {
+      "family": "LanguageTool",
+      "profileId": "languagetool-local-cli-6-6",
+      "relationshipProfile": "languagetool-local-cli-6-6",
+      "privacyProfile": "languagetool-local-cli-6-6",
+      "axes": {
+        "processing": {
+          "summary": "Draft boundary: In the selected direct CLI profile, fixed local resources process synthetic text without an HTTP server or editor client. Reviewed default branches and bounded runtime observations support local operation; returned context, diagnostics, caller storage and host memory remain within the documented limits.",
+          "reviewedAt": "2026-10-17",
+          "evidence": [
+            "seed/research/languagetool-cli-source-2026-10-17.json",
+            "seed/research/languagetool-cli-defaults-2026-10-17.json",
+            "seed/research/languagetool-distribution-profile-2026-10-17.json"
+          ],
+          "materialUnknown": false,
+          "decision": "Selected profile only; limits in dossier."
+        },
+        "retention": {
+          "summary": "Draft boundary: In the selected direct CLI profile, fixed local resources process synthetic text without an HTTP server or editor client. Reviewed default branches and bounded runtime observations support local operation; returned context, diagnostics, caller storage and host memory remain within the documented limits.",
+          "reviewedAt": "2026-10-17",
+          "evidence": [
+            "seed/research/languagetool-cli-source-2026-10-17.json",
+            "seed/research/languagetool-cli-defaults-2026-10-17.json",
+            "seed/research/languagetool-distribution-profile-2026-10-17.json"
+          ],
+          "materialUnknown": null,
+          "decision": "Exact proposed statement still needs axis-specific claim decision; not proof of a negative finding."
+        },
+        "training": {
+          "summary": "Draft boundary: In the selected direct CLI profile, fixed local resources process synthetic text without an HTTP server or editor client. Reviewed default branches and bounded runtime observations support local operation; returned context, diagnostics, caller storage and host memory remain within the documented limits.",
+          "reviewedAt": "2026-10-17",
+          "evidence": [
+            "seed/research/languagetool-cli-source-2026-10-17.json",
+            "seed/research/languagetool-cli-defaults-2026-10-17.json",
+            "seed/research/languagetool-distribution-profile-2026-10-17.json"
+          ],
+          "materialUnknown": false,
+          "decision": "Selected profile only; limits in dossier."
+        },
+        "integrations": {
+          "summary": "Draft boundary: In the selected direct CLI profile, fixed local resources process synthetic text without an HTTP server or editor client. Reviewed default branches and bounded runtime observations support local operation; returned context, diagnostics, caller storage and host memory remain within the documented limits.",
+          "reviewedAt": "2026-10-17",
+          "evidence": [
+            "seed/research/languagetool-cli-source-2026-10-17.json",
+            "seed/research/languagetool-cli-defaults-2026-10-17.json",
+            "seed/research/languagetool-distribution-profile-2026-10-17.json"
+          ],
+          "materialUnknown": false,
+          "decision": "Selected profile only; limits in dossier."
+        },
+        "telemetry": {
+          "summary": "Draft boundary: In the selected direct CLI profile, fixed local resources process synthetic text without an HTTP server or editor client. Reviewed default branches and bounded runtime observations support local operation; returned context, diagnostics, caller storage and host memory remain within the documented limits.",
+          "reviewedAt": "2026-10-17",
+          "evidence": [
+            "seed/research/languagetool-cli-source-2026-10-17.json",
+            "seed/research/languagetool-cli-defaults-2026-10-17.json",
+            "seed/research/languagetool-distribution-profile-2026-10-17.json"
+          ],
+          "materialUnknown": null,
+          "decision": "Exact proposed statement still needs axis-specific claim decision; not proof of a negative finding."
+        },
+        "rights": {
+          "summary": "Local open-source6.6 distribution under LGPL with separately licensed bundled components; hosted Premium and support services excluded. No service subscription used for reviewed local operation.",
+          "reviewedAt": "2026-10-17",
+          "evidence": [
+            "seed/research/languagetool-cli-source-2026-10-17.json",
+            "seed/research/languagetool-cli-defaults-2026-10-17.json",
+            "seed/research/languagetool-distribution-profile-2026-10-17.json"
+          ],
+          "materialUnknown": false,
+          "decision": "Selected profile only; limits in dossier."
+        }
+      },
+      "product": {
+        "slug": "languagetool-local-cli-6-6",
+        "name": "LanguageTool — reviewed local profile",
+        "description": "A technical local alternative for manually reviewing English passive constructions, revising them yourself and rechecking. Explicit passive rules with PICKY mode are required in this tested profile; not the hosted editor, browser add-on or full Grammarly replacement.",
+        "websiteUrl": "https://languagetool.org/",
+        "status": "draft",
+        "anchors": [
+          {
+            "slug": "grammarly",
+            "name": "grammarly",
+            "value": null,
+            "description": "A technical local alternative for manually reviewing English passive constructions, revising them yourself and rechecking. Explicit passive rules with PICKY mode are required in this tested profile; not the hosted editor, browser add-on or full Grammarly replacement.",
+            "scope": "personal-english-passive-construction-review",
+            "verificationStatus": "verified",
+            "confidence": 0.9,
+            "lastVerifiedAt": "2026-10-17",
+            "sources": [
+              {
+                "title": "Fixed edition primary reference; bounded local evidence in provenance",
+                "url": "https://github.com/languagetool-org/languagetool/blob/f13e71a7fe85a122290826fd691d267d64e97c33/COPYING.txt",
+                "retrievedAt": "2026-10-17"
+              }
+            ],
+            "relationshipType": "alternative"
+          }
+        ],
+        "attributes": [
+          {
+            "slug": "privacy-friendly",
+            "name": "privacy-friendly",
+            "value": true,
+            "description": "In the selected direct CLI profile, fixed local resources process synthetic text without an HTTP server or editor client. Reviewed default branches and bounded runtime observations support local operation; returned context, diagnostics, caller storage and host memory remain within the documented limits.",
+            "scope": "personal-english-passive-construction-review",
+            "verificationStatus": "likely",
+            "confidence": 0.9,
+            "lastVerifiedAt": "2026-10-17",
+            "sources": [
+              {
+                "title": "Fixed edition primary reference; bounded local evidence in provenance",
+                "url": "https://github.com/languagetool-org/languagetool/blob/f13e71a7fe85a122290826fd691d267d64e97c33/COPYING.txt",
+                "retrievedAt": "2026-10-17"
+              }
+            ]
+          },
+          {
+            "slug": "pricing-model",
+            "name": "pricing-model",
+            "value": "Local open-source6.6 distribution under LGPL with separately licensed bundled components; hosted Premium and support services excluded. No service subscription used for reviewed local operation.",
+            "description": "Local open-source6.6 distribution under LGPL with separately licensed bundled components; hosted Premium and support services excluded. No service subscription used for reviewed local operation.",
+            "scope": "personal-english-passive-construction-review",
+            "verificationStatus": "verified",
+            "confidence": 0.9,
+            "lastVerifiedAt": "2026-10-17",
+            "sources": [
+              {
+                "title": "Fixed edition primary reference; bounded local evidence in provenance",
+                "url": "https://github.com/languagetool-org/languagetool/blob/f13e71a7fe85a122290826fd691d267d64e97c33/COPYING.txt",
+                "retrievedAt": "2026-10-17"
+              }
+            ]
+          },
+          {
+            "slug": "trade-off-summary",
+            "name": "trade-off-summary",
+            "value": "Requires Java and command-line setup; fixed English style-rule profile; no Premium parity or universal grammar coverage.",
+            "description": "Requires Java and command-line setup; fixed English style-rule profile; no Premium parity or universal grammar coverage.",
+            "scope": "personal-english-passive-construction-review",
+            "verificationStatus": "verified",
+            "confidence": 0.9,
+            "lastVerifiedAt": "2026-10-17",
+            "sources": [
+              {
+                "title": "Fixed edition primary reference; bounded local evidence in provenance",
+                "url": "https://github.com/languagetool-org/languagetool/blob/f13e71a7fe85a122290826fd691d267d64e97c33/COPYING.txt",
+                "retrievedAt": "2026-10-17"
+              }
+            ]
+          }
+        ],
+        "audiences": [],
+        "problems": [],
+        "routes": []
+      }
+    },
+    {
+      "family": "write-good",
+      "profileId": "write-good-local-library-1-0-8",
+      "relationshipProfile": "write-good-local-library-1-0-8",
+      "privacyProfile": "write-good-local-library-1-0-8",
+      "axes": {
+        "processing": {
+          "summary": "Draft boundary: The selected inspected loaded library path performs string matching locally and returns suggestions containing matched text, with no direct I/O calls located. The caller must keep prose and returned values within the described local operation; logging, saving, CLI/editor integrations and host diagnostics are separate data paths.",
+          "reviewedAt": "2026-10-17",
+          "evidence": [
+            "seed/research/write-good-library-review-2026-10-17.json"
+          ],
+          "materialUnknown": false,
+          "decision": "Selected profile only; limits in dossier."
+        },
+        "retention": {
+          "summary": "Draft boundary: The selected inspected loaded library path performs string matching locally and returns suggestions containing matched text, with no direct I/O calls located. The caller must keep prose and returned values within the described local operation; logging, saving, CLI/editor integrations and host diagnostics are separate data paths.",
+          "reviewedAt": "2026-10-17",
+          "evidence": [
+            "seed/research/write-good-library-review-2026-10-17.json"
+          ],
+          "materialUnknown": null,
+          "decision": "Exact proposed statement still needs axis-specific claim decision; not proof of a negative finding."
+        },
+        "training": {
+          "summary": "Draft boundary: The selected inspected loaded library path performs string matching locally and returns suggestions containing matched text, with no direct I/O calls located. The caller must keep prose and returned values within the described local operation; logging, saving, CLI/editor integrations and host diagnostics are separate data paths.",
+          "reviewedAt": "2026-10-17",
+          "evidence": [
+            "seed/research/write-good-library-review-2026-10-17.json"
+          ],
+          "materialUnknown": false,
+          "decision": "Selected profile only; limits in dossier."
+        },
+        "integrations": {
+          "summary": "Draft boundary: The selected inspected loaded library path performs string matching locally and returns suggestions containing matched text, with no direct I/O calls located. The caller must keep prose and returned values within the described local operation; logging, saving, CLI/editor integrations and host diagnostics are separate data paths.",
+          "reviewedAt": "2026-10-17",
+          "evidence": [
+            "seed/research/write-good-library-review-2026-10-17.json"
+          ],
+          "materialUnknown": false,
+          "decision": "Selected profile only; limits in dossier."
+        },
+        "telemetry": {
+          "summary": "Draft boundary: The selected inspected loaded library path performs string matching locally and returns suggestions containing matched text, with no direct I/O calls located. The caller must keep prose and returned values within the described local operation; logging, saving, CLI/editor integrations and host diagnostics are separate data paths.",
+          "reviewedAt": "2026-10-17",
+          "evidence": [
+            "seed/research/write-good-library-review-2026-10-17.json"
+          ],
+          "materialUnknown": null,
+          "decision": "Exact proposed statement still needs axis-specific claim decision; not proof of a negative finding."
+        },
+        "rights": {
+          "summary": "Pinned local npm1.0.8 package and seven dependency metadata records declare MIT; no paid service used. Caller integration costs excluded.",
+          "reviewedAt": "2026-10-17",
+          "evidence": [
+            "seed/research/write-good-library-review-2026-10-17.json"
+          ],
+          "materialUnknown": false,
+          "decision": "Selected profile only; limits in dossier."
+        }
+      },
+      "product": {
+        "slug": "write-good-local-library-1-0-8",
+        "name": "write-good — reviewed local profile",
+        "description": "A developer-oriented local function for highlighting likely passive English constructions, manually revising and rechecking. It requires a caller and does not supply a Grammarly-like editor.",
+        "websiteUrl": "https://github.com/btford/write-good",
+        "status": "draft",
+        "anchors": [
+          {
+            "slug": "grammarly",
+            "name": "grammarly",
+            "value": null,
+            "description": "A developer-oriented local function for highlighting likely passive English constructions, manually revising and rechecking. It requires a caller and does not supply a Grammarly-like editor.",
+            "scope": "personal-english-passive-construction-review",
+            "verificationStatus": "verified",
+            "confidence": 0.9,
+            "lastVerifiedAt": "2026-10-17",
+            "sources": [
+              {
+                "title": "Fixed edition primary reference; bounded local evidence in provenance",
+                "url": "https://github.com/btford/write-good/blob/6940b034c6f5a7e101c01a24d651a778fc3fe435/package.json",
+                "retrievedAt": "2026-10-17"
+              }
+            ],
+            "relationshipType": "alternative"
+          }
+        ],
+        "attributes": [
+          {
+            "slug": "privacy-friendly",
+            "name": "privacy-friendly",
+            "value": true,
+            "description": "The selected inspected loaded library path performs string matching locally and returns suggestions containing matched text, with no direct I/O calls located. The caller must keep prose and returned values within the described local operation; logging, saving, CLI/editor integrations and host diagnostics are separate data paths.",
+            "scope": "personal-english-passive-construction-review",
+            "verificationStatus": "likely",
+            "confidence": 0.9,
+            "lastVerifiedAt": "2026-10-17",
+            "sources": [
+              {
+                "title": "Fixed edition primary reference; bounded local evidence in provenance",
+                "url": "https://github.com/btford/write-good/blob/6940b034c6f5a7e101c01a24d651a778fc3fe435/package.json",
+                "retrievedAt": "2026-10-17"
+              }
+            ]
+          },
+          {
+            "slug": "pricing-model",
+            "name": "pricing-model",
+            "value": "Pinned local npm1.0.8 package and seven dependency metadata records declare MIT; no paid service used. Caller integration costs excluded.",
+            "description": "Pinned local npm1.0.8 package and seven dependency metadata records declare MIT; no paid service used. Caller integration costs excluded.",
+            "scope": "personal-english-passive-construction-review",
+            "verificationStatus": "verified",
+            "confidence": 0.9,
+            "lastVerifiedAt": "2026-10-17",
+            "sources": [
+              {
+                "title": "Fixed edition primary reference; bounded local evidence in provenance",
+                "url": "https://github.com/btford/write-good/blob/6940b034c6f5a7e101c01a24d651a778fc3fe435/package.json",
+                "retrievedAt": "2026-10-17"
+              }
+            ]
+          },
+          {
+            "slug": "trade-off-summary",
+            "name": "trade-off-summary",
+            "value": "Node integration required; heuristic detector, no automatic rewrite; caller owns presentation and retention.",
+            "description": "Node integration required; heuristic detector, no automatic rewrite; caller owns presentation and retention.",
+            "scope": "personal-english-passive-construction-review",
+            "verificationStatus": "verified",
+            "confidence": 0.9,
+            "lastVerifiedAt": "2026-10-17",
+            "sources": [
+              {
+                "title": "Fixed edition primary reference; bounded local evidence in provenance",
+                "url": "https://github.com/btford/write-good/blob/6940b034c6f5a7e101c01a24d651a778fc3fe435/package.json",
+                "retrievedAt": "2026-10-17"
+              }
+            ]
+          }
+        ],
+        "audiences": [],
+        "problems": [],
+        "routes": []
+      }
+    },
+    {
+      "family": "Vale",
+      "profileId": "vale-local-passive-3-24-0",
+      "relationshipProfile": "vale-local-passive-3-24-0",
+      "privacyProfile": "vale-local-passive-3-24-0",
+      "axes": {
+        "processing": {
+          "summary": "Draft boundary: The selected profile uses local configuration and a local existence rule, with empty NLP endpoint and profiling variables excluded. JSON contains matched prose. Optional remote NLP, pipeline configurations and profiling exist in the product and must remain outside this scoped operation.",
+          "reviewedAt": "2026-10-17",
+          "evidence": [
+            "seed/research/vale-local-rule-review-2026-10-17.json",
+            "seed/research/vale-data-path-review-2026-10-17.json"
+          ],
+          "materialUnknown": false,
+          "decision": "Selected profile only; limits in dossier."
+        },
+        "retention": {
+          "summary": "Draft boundary: The selected profile uses local configuration and a local existence rule, with empty NLP endpoint and profiling variables excluded. JSON contains matched prose. Optional remote NLP, pipeline configurations and profiling exist in the product and must remain outside this scoped operation.",
+          "reviewedAt": "2026-10-17",
+          "evidence": [
+            "seed/research/vale-local-rule-review-2026-10-17.json",
+            "seed/research/vale-data-path-review-2026-10-17.json"
+          ],
+          "materialUnknown": null,
+          "decision": "Exact proposed statement still needs axis-specific claim decision; not proof of a negative finding."
+        },
+        "training": {
+          "summary": "Draft boundary: The selected profile uses local configuration and a local existence rule, with empty NLP endpoint and profiling variables excluded. JSON contains matched prose. Optional remote NLP, pipeline configurations and profiling exist in the product and must remain outside this scoped operation.",
+          "reviewedAt": "2026-10-17",
+          "evidence": [
+            "seed/research/vale-local-rule-review-2026-10-17.json",
+            "seed/research/vale-data-path-review-2026-10-17.json"
+          ],
+          "materialUnknown": false,
+          "decision": "Selected profile only; limits in dossier."
+        },
+        "integrations": {
+          "summary": "Draft boundary: The selected profile uses local configuration and a local existence rule, with empty NLP endpoint and profiling variables excluded. JSON contains matched prose. Optional remote NLP, pipeline configurations and profiling exist in the product and must remain outside this scoped operation.",
+          "reviewedAt": "2026-10-17",
+          "evidence": [
+            "seed/research/vale-local-rule-review-2026-10-17.json",
+            "seed/research/vale-data-path-review-2026-10-17.json"
+          ],
+          "materialUnknown": false,
+          "decision": "Selected profile only; limits in dossier."
+        },
+        "telemetry": {
+          "summary": "Draft boundary: The selected profile uses local configuration and a local existence rule, with empty NLP endpoint and profiling variables excluded. JSON contains matched prose. Optional remote NLP, pipeline configurations and profiling exist in the product and must remain outside this scoped operation.",
+          "reviewedAt": "2026-10-17",
+          "evidence": [
+            "seed/research/vale-local-rule-review-2026-10-17.json",
+            "seed/research/vale-data-path-review-2026-10-17.json"
+          ],
+          "materialUnknown": null,
+          "decision": "Exact proposed statement still needs axis-specific claim decision; not proof of a negative finding."
+        },
+        "rights": {
+          "summary": "Local Vale CLI under MIT; fixed Microsoft rule set MIT separately. Hosted CMS and paid services excluded.",
+          "reviewedAt": "2026-10-17",
+          "evidence": [
+            "seed/research/vale-local-rule-review-2026-10-17.json",
+            "seed/research/vale-data-path-review-2026-10-17.json"
+          ],
+          "materialUnknown": false,
+          "decision": "Selected profile only; limits in dossier."
+        }
+      },
+      "product": {
+        "slug": "vale-local-passive-3-24-0",
+        "name": "Vale — reviewed local profile",
+        "description": "A configurable local command-line workflow for identifying likely passive constructions in plain English text, manually editing and rechecking. Suggestion threshold must be enabled for the chosen rule.",
+        "websiteUrl": "https://vale.sh/",
+        "status": "draft",
+        "anchors": [
+          {
+            "slug": "grammarly",
+            "name": "grammarly",
+            "value": null,
+            "description": "A configurable local command-line workflow for identifying likely passive constructions in plain English text, manually editing and rechecking. Suggestion threshold must be enabled for the chosen rule.",
+            "scope": "personal-english-passive-construction-review",
+            "verificationStatus": "verified",
+            "confidence": 0.9,
+            "lastVerifiedAt": "2026-10-17",
+            "sources": [
+              {
+                "title": "Fixed edition primary reference; bounded local evidence in provenance",
+                "url": "https://github.com/vale-cli/vale/blob/2ee781716f8c177c2a143e18d535ddb11e264f00/LICENSE",
+                "retrievedAt": "2026-10-17"
+              }
+            ],
+            "relationshipType": "alternative"
+          }
+        ],
+        "attributes": [
+          {
+            "slug": "privacy-friendly",
+            "name": "privacy-friendly",
+            "value": true,
+            "description": "The selected profile uses local configuration and a local existence rule, with empty NLP endpoint and profiling variables excluded. JSON contains matched prose. Optional remote NLP, pipeline configurations and profiling exist in the product and must remain outside this scoped operation.",
+            "scope": "personal-english-passive-construction-review",
+            "verificationStatus": "likely",
+            "confidence": 0.9,
+            "lastVerifiedAt": "2026-10-17",
+            "sources": [
+              {
+                "title": "Fixed edition primary reference; bounded local evidence in provenance",
+                "url": "https://github.com/vale-cli/vale/blob/2ee781716f8c177c2a143e18d535ddb11e264f00/LICENSE",
+                "retrievedAt": "2026-10-17"
+              }
+            ]
+          },
+          {
+            "slug": "pricing-model",
+            "name": "pricing-model",
+            "value": "Local Vale CLI under MIT; fixed Microsoft rule set MIT separately. Hosted CMS and paid services excluded.",
+            "description": "Local Vale CLI under MIT; fixed Microsoft rule set MIT separately. Hosted CMS and paid services excluded.",
+            "scope": "personal-english-passive-construction-review",
+            "verificationStatus": "verified",
+            "confidence": 0.9,
+            "lastVerifiedAt": "2026-10-17",
+            "sources": [
+              {
+                "title": "Fixed edition primary reference; bounded local evidence in provenance",
+                "url": "https://github.com/vale-cli/vale/blob/2ee781716f8c177c2a143e18d535ddb11e264f00/LICENSE",
+                "retrievedAt": "2026-10-17"
+              }
+            ]
+          },
+          {
+            "slug": "trade-off-summary",
+            "name": "trade-off-summary",
+            "value": "CLI and local configuration required; limited regex-based detection, no automatic rewrite. Not a hosted CMS or a browser integration.",
+            "description": "CLI and local configuration required; limited regex-based detection, no automatic rewrite. Not a hosted CMS or a browser integration.",
+            "scope": "personal-english-passive-construction-review",
+            "verificationStatus": "verified",
+            "confidence": 0.9,
+            "lastVerifiedAt": "2026-10-17",
+            "sources": [
+              {
+                "title": "Fixed edition primary reference; bounded local evidence in provenance",
+                "url": "https://github.com/vale-cli/vale/blob/2ee781716f8c177c2a143e18d535ddb11e264f00/LICENSE",
+                "retrievedAt": "2026-10-17"
+              }
+            ]
+          }
+        ],
+        "audiences": [],
+        "problems": [],
+        "routes": []
+      }
+    }
+  ],
+  "expected": {
+    "profileCount": 3,
+    "eligible": 0,
+    "minimum": 3
+  },
+  "qualificationDecision": "Privacy claims deliberately remain likely. Retention/telemetry axes need an explicit claim-by-claim evidence decision before promotion, not another blanket no-traffic test. Pricing refers only to selected open-source local profiles and excludes paid hosted services. This is a mechanically executable proposal, not seed/import JSON.",
+  "engineLimit": "Current generic evaluator does not check privacy-attribute scope/profile against the relationship. Standalone proposal adds exact operation/edition consistency and six dated evidence axes. Production engine unchanged.",
+  "next": "Make explicit supported/unsupported decisions for the exact retention and operational-text statements in the three profiles, then prepare scoped engine/graph change only for statements that pass. Do not mark likely privacy verified merely to reach three."
+}

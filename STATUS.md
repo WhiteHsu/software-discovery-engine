@@ -493,3 +493,8 @@ Clean actual HEADc5160f2 and owner Production110. Ten frozen receipts consolidat
 ## PR5.94 — Concrete scoped writing candidate dossiers
 
 Clean HEADacb316d and owner Production111. LT CLI/write-good/Vale relationship, privacy, workflow, commercial-boundary and tradeoff drafts written explicitly. Vale pipeline .vale-config source identified; absent in selected tree, one explicit config and counts only Microsoft.Passive observed. Selected config gate resolved, not full linked-code audit. Seven receipts pinned, no old evidence edits. Dossiers are not graph qualification; next selective scope/claim/pricing review and draft preview. No engine/graph/SQL changes;21/9/1, zero applied qualifications unchanged. See SCOPED_WRITING_CANDIDATE_DRAFTS.md.
+
+
+## PR5.95 — Executable scoped privacy proposal
+
+Clean HEAD436fb79 and owner Production112. Three dossiers converted to standalone candidate preview using current evaluator plus scope/profile/six-axis proposal guards; actual privacy remains likely, retained unresolved axis decisions block all3. Local license/pricing wording reviewed separately from hosted services. Regression fixtures reject cross-edition/scope leakage, unverified/material-unknown claims and duplicate modes/minimum shortfalls. Production evaluator/graph/seed unchanged;21/9/1, zero qualifications. Next explicit retention/operational-text claim decisions before scoped implementation. See SCOPED_PRIVACY_PREVIEW.md.
