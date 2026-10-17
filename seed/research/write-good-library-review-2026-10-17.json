@@ -1,0 +1,321 @@
+{
+  "packet": "PR5.90",
+  "reviewedAt": "2026-10-17",
+  "baselineCommit": "c539f0151dc9c1052f9f4aa2e87f48fd3efcb586",
+  "ownerProductionScreenshot": 107,
+  "researchOnly": true,
+  "graphChanges": false,
+  "publicationApproved": false,
+  "qualifiedNewCandidates": 0,
+  "edition": "npm write-good1.0.8 direct local Node function, stock checks, no custom checks, no editor integration, no CLI",
+  "method": "npm lock-only resolution then npm ci --ignore-scripts --no-audit --no-fund against registry.npmjs.org in dedicated workspace research folder. Network used for dependency acquisition before synthetic prose evaluation; installation is not an offline phase. Loaded source imports/matchers/dictionary definitions and annotation inspected. Direct real CommonJS function run, no stubs; eight synthetic strings in two modes.",
+  "sourceScope": "Published npm1.0.8 is the tested artifact. Earlier GitHub commit is background only; source-release byte equivalence not asserted.",
+  "sources": [
+    "https://registry.npmjs.org/adverb-where/-/adverb-where-0.2.6.tgz",
+    "https://registry.npmjs.org/commander/-/commander-2.20.3.tgz",
+    "https://registry.npmjs.org/e-prime/-/e-prime-0.10.4.tgz",
+    "https://registry.npmjs.org/no-cliches/-/no-cliches-0.3.6.tgz",
+    "https://registry.npmjs.org/passive-voice/-/passive-voice-0.1.0.tgz",
+    "https://registry.npmjs.org/too-wordy/-/too-wordy-0.3.6.tgz",
+    "https://registry.npmjs.org/weasel-words/-/weasel-words-0.1.1.tgz",
+    "https://registry.npmjs.org/write-good/-/write-good-1.0.8.tgz"
+  ],
+  "probe": {
+    "nodeVersion": "v24.14.1",
+    "packages": [
+      {
+        "path": "node_modules/adverb-where",
+        "version": "0.2.6",
+        "resolved": "https://registry.npmjs.org/adverb-where/-/adverb-where-0.2.6.tgz",
+        "integrity": "sha512-uVazUDEPYpBSVRjEDTzO6hVXh9X/eQb+gobzDpqdzMiM1MkfGxfPtgN8YerBjAeDkoABZprsOwhSZnY4X3knnw==",
+        "license": "MIT",
+        "engines": {
+          "node": ">=6",
+          "npm": ">=5"
+        }
+      },
+      {
+        "path": "node_modules/commander",
+        "version": "2.20.3",
+        "resolved": "https://registry.npmjs.org/commander/-/commander-2.20.3.tgz",
+        "integrity": "sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==",
+        "license": "MIT"
+      },
+      {
+        "path": "node_modules/e-prime",
+        "version": "0.10.4",
+        "resolved": "https://registry.npmjs.org/e-prime/-/e-prime-0.10.4.tgz",
+        "integrity": "sha512-tzBmM2mFSnAq5BuxPSyin6qXb3yMe1wufJN7L7ZPcEWS5S+jI2dhKQEoqHVEcSMMXo/j5lcWpX5jzA6wLSmX6w==",
+        "license": "MIT"
+      },
+      {
+        "path": "node_modules/no-cliches",
+        "version": "0.3.6",
+        "resolved": "https://registry.npmjs.org/no-cliches/-/no-cliches-0.3.6.tgz",
+        "integrity": "sha512-3yZ1vfGKOcv0dyyhUeqA0Qa6RsQ4SfUnL6o2IWR4sVg8kdnJo48XTWbMLdtnfiZTbCUdsMttNwyJcihEdGCZBw==",
+        "license": "MIT",
+        "engines": {
+          "node": ">=16",
+          "npm": ">=8"
+        }
+      },
+      {
+        "path": "node_modules/passive-voice",
+        "version": "0.1.0",
+        "resolved": "https://registry.npmjs.org/passive-voice/-/passive-voice-0.1.0.tgz",
+        "integrity": "sha512-Pj9iwzXw4bKEtdugGYm92jT4tnsj+xrTSkHFEM4bn6fefqbFdZi49tZMmGIZ91aIQTyFtMUww7O2qYaZKAsDag==",
+        "license": "MIT"
+      },
+      {
+        "path": "node_modules/too-wordy",
+        "version": "0.3.6",
+        "resolved": "https://registry.npmjs.org/too-wordy/-/too-wordy-0.3.6.tgz",
+        "integrity": "sha512-fK4DKkEcrpBbK6uANekH37VeNAb/88qKdkqc/nBOFJpHdvXKXdA4lZRkiM6zNlow00Zp4W4/lnWyqqCaOQlg/w==",
+        "license": "MIT",
+        "engines": {
+          "node": ">=6",
+          "npm": ">=5"
+        }
+      },
+      {
+        "path": "node_modules/weasel-words",
+        "version": "0.1.1",
+        "resolved": "https://registry.npmjs.org/weasel-words/-/weasel-words-0.1.1.tgz",
+        "integrity": "sha512-rWkTAGqs4TN6qreS06+irmFUMrQVx5KoFjD8CxMHUsAwmxw/upDcfleaEYOLsonUbornahg+VJ9xrWxp4udyJA==",
+        "license": "MIT"
+      },
+      {
+        "path": "node_modules/write-good",
+        "version": "1.0.8",
+        "resolved": "https://registry.npmjs.org/write-good/-/write-good-1.0.8.tgz",
+        "integrity": "sha512-P1Ct7+DNrOcr2JAxDZ3Q5i5sx2LSveu7iLaoUL0A+YiG0GKf0l5+9j3rwMeyh6JeTL1+HfQV1rnwEvzhNIvpFw==",
+        "license": "MIT",
+        "dependencies": {
+          "adverb-where": "^0.2.2",
+          "commander": "^2.19.0",
+          "e-prime": "^0.10.4",
+          "no-cliches": "^0.3.0",
+          "passive-voice": "^0.1.0",
+          "too-wordy": "^0.3.1",
+          "weasel-words": "^0.1.1"
+        },
+        "bin": {
+          "write-good": "bin/write-good.js",
+          "writegood": "bin/write-good.js"
+        },
+        "engines": {
+          "node": ">=6",
+          "npm": ">=5"
+        }
+      }
+    ],
+    "loaded": [
+      {
+        "path": "node_modules/adverb-where/adverbs.js",
+        "sha256": "2071e89d3929452f2cb45b1d6e350031ac2eae179dc0669ecbbfb4621d6e2565",
+        "normalisedTextSha256": "2071e89d3929452f2cb45b1d6e350031ac2eae179dc0669ecbbfb4621d6e2565"
+      },
+      {
+        "path": "node_modules/adverb-where/matcher.js",
+        "sha256": "302aa08f9fb7e8019208d5a787157cfed4ce61c4ce74222b819554b67515d2b1",
+        "normalisedTextSha256": "302aa08f9fb7e8019208d5a787157cfed4ce61c4ce74222b819554b67515d2b1"
+      },
+      {
+        "path": "node_modules/e-prime/e-prime.js",
+        "sha256": "64d46e4249782add828e78284eb6909d2e2d6d262ebcfb0bd128b6797ff7affd",
+        "normalisedTextSha256": "64d46e4249782add828e78284eb6909d2e2d6d262ebcfb0bd128b6797ff7affd"
+      },
+      {
+        "path": "node_modules/no-cliches/cliches.js",
+        "sha256": "bf5c5a71a393ad6b6a0029f81142697fa93c87095dbb8c163a597394191b1340",
+        "normalisedTextSha256": "bf5c5a71a393ad6b6a0029f81142697fa93c87095dbb8c163a597394191b1340"
+      },
+      {
+        "path": "node_modules/no-cliches/matcher.js",
+        "sha256": "302aa08f9fb7e8019208d5a787157cfed4ce61c4ce74222b819554b67515d2b1",
+        "normalisedTextSha256": "302aa08f9fb7e8019208d5a787157cfed4ce61c4ce74222b819554b67515d2b1"
+      },
+      {
+        "path": "node_modules/passive-voice/passive.js",
+        "sha256": "3243637a25d70c3ba3b53f09abeb45a9cea3d1de15f936e89860aa5f3407a69e",
+        "normalisedTextSha256": "3243637a25d70c3ba3b53f09abeb45a9cea3d1de15f936e89860aa5f3407a69e"
+      },
+      {
+        "path": "node_modules/too-wordy/matcher.js",
+        "sha256": "302aa08f9fb7e8019208d5a787157cfed4ce61c4ce74222b819554b67515d2b1",
+        "normalisedTextSha256": "302aa08f9fb7e8019208d5a787157cfed4ce61c4ce74222b819554b67515d2b1"
+      },
+      {
+        "path": "node_modules/too-wordy/too-wordy.js",
+        "sha256": "d3d466695c4a1b3be8704d890ec051cef1b5348bd54a656ff44d12a13d6eadf3",
+        "normalisedTextSha256": "d3d466695c4a1b3be8704d890ec051cef1b5348bd54a656ff44d12a13d6eadf3"
+      },
+      {
+        "path": "node_modules/weasel-words/weasel.js",
+        "sha256": "b75c66da002e67e313dfc4116ec43a689a4ee108d39a69405a71ddc9a9e22500",
+        "normalisedTextSha256": "b75c66da002e67e313dfc4116ec43a689a4ee108d39a69405a71ddc9a9e22500"
+      },
+      {
+        "path": "node_modules/write-good/lib/annotate.js",
+        "sha256": "97b6ef45812565feb268aa681f193634339a8ef3e405c5415ce118cd637a1a57",
+        "normalisedTextSha256": "97b6ef45812565feb268aa681f193634339a8ef3e405c5415ce118cd637a1a57"
+      },
+      {
+        "path": "node_modules/write-good/lib/lexical-illusions.js",
+        "sha256": "f685332dd155545f6b5db562f32bdaaead15897314ecfe1a6dac4f59ab024cb9",
+        "normalisedTextSha256": "f685332dd155545f6b5db562f32bdaaead15897314ecfe1a6dac4f59ab024cb9"
+      },
+      {
+        "path": "node_modules/write-good/lib/starts-with-so.js",
+        "sha256": "06d270f9e6bff32ea8e5acffc04e9a9cc5299e0e2609afa13ea24299f62ea584",
+        "normalisedTextSha256": "06d270f9e6bff32ea8e5acffc04e9a9cc5299e0e2609afa13ea24299f62ea584"
+      },
+      {
+        "path": "node_modules/write-good/lib/there-is.js",
+        "sha256": "d975e0eb553cdc85c7330f2e3c9b519c270406e28c309ab66180dbbeb6f84ad4",
+        "normalisedTextSha256": "d975e0eb553cdc85c7330f2e3c9b519c270406e28c309ab66180dbbeb6f84ad4"
+      },
+      {
+        "path": "node_modules/write-good/write-good.js",
+        "sha256": "1a24f19d1aa6eda7ac8353e94b24961f6c11166c3e519b84fd5bf8293e8372e5",
+        "normalisedTextSha256": "1a24f19d1aa6eda7ac8353e94b24961f6c11166c3e519b84fd5bf8293e8372e5"
+      }
+    ],
+    "loadedPackageNames": [
+      "adverb-where",
+      "e-prime",
+      "no-cliches",
+      "passive-voice",
+      "too-wordy",
+      "weasel-words",
+      "write-good"
+    ],
+    "options": {
+      "weasel": false,
+      "illusion": false,
+      "so": false,
+      "thereIs": false,
+      "adverb": false,
+      "tooWordy": false,
+      "cliches": false,
+      "eprime": false
+    },
+    "runs": [
+      {
+        "id": "regular-passive",
+        "text": "The report was reviewed by the editor.",
+        "passiveOnly": [
+          {
+            "index": 11,
+            "offset": 12,
+            "reason": "\"was reviewed\" may be passive voice"
+          }
+        ],
+        "defaults": [
+          {
+            "index": 11,
+            "offset": 12,
+            "reason": "\"was reviewed\" may be passive voice"
+          }
+        ]
+      },
+      {
+        "id": "irregular-passive",
+        "text": "The letter was written by Maya.",
+        "passiveOnly": [
+          {
+            "index": 11,
+            "offset": 11,
+            "reason": "\"was written\" may be passive voice"
+          }
+        ],
+        "defaults": [
+          {
+            "index": 11,
+            "offset": 11,
+            "reason": "\"was written\" may be passive voice"
+          }
+        ]
+      },
+      {
+        "id": "active-revision",
+        "text": "The editor reviewed the report.",
+        "passiveOnly": [],
+        "defaults": []
+      },
+      {
+        "id": "adverb-passive",
+        "text": "The report was carefully reviewed by the editor.",
+        "passiveOnly": [],
+        "defaults": [
+          {
+            "index": 15,
+            "offset": 9,
+            "reason": "\"carefully\" can weaken meaning"
+          }
+        ]
+      },
+      {
+        "id": "get-passive",
+        "text": "The report got reviewed by the editor.",
+        "passiveOnly": [],
+        "defaults": []
+      },
+      {
+        "id": "adjectival-state",
+        "text": "The door is closed.",
+        "passiveOnly": [
+          {
+            "index": 9,
+            "offset": 9,
+            "reason": "\"is closed\" may be passive voice"
+          }
+        ],
+        "defaults": [
+          {
+            "index": 9,
+            "offset": 9,
+            "reason": "\"is closed\" may be passive voice"
+          }
+        ]
+      },
+      {
+        "id": "progressive-active",
+        "text": "She is running.",
+        "passiveOnly": [],
+        "defaults": []
+      },
+      {
+        "id": "indeed-exception",
+        "text": "This sentence is indeed active.",
+        "passiveOnly": [],
+        "defaults": []
+      }
+    ],
+    "sourceLockSha256": "d45a2881bf875888836cd31f45401e35a0d25fb24987410d03e6d230f533e486"
+  },
+  "findings": [
+    "All eight locked packages declare MIT; seven packages loaded by direct library entry. Commander is downloaded but not loaded in this profile. Package cache shows14 loaded JavaScript files.",
+    "Inspected loaded code handles strings, regexes, arrays and numeric positions. No direct network, filesystem-write, console or process invocation located in that selected source path. Node module loading itself reads files. This is source evidence, not an OS packet/write observation.",
+    "Disabling non-passive checks does not prevent their source loading. Default mode also reports adverb carefully in adverb-separated passive example; that is not passive detection.",
+    "Suggestion reasons contain matched prose. Calling annotate can return additional line context. Return values and input must be treated as text in caller memory; any caller logging/storage adds a different data path.",
+    "No account/cloud/training operation is present in the selected function path; no caller or whole-system guarantee follows. Module regex state/caches and managed-memory lifetime exist; no secure deletion/retention deadline verified."
+  ],
+  "workflow": {
+    "input": "Synthetic strings passed as function arguments, not prose command-line arguments or documents.",
+    "operation": "Call writeGood(text, passive-only boolean options), inspect suggestions, manually revise regular passive to active, call again.",
+    "results": "Regular/irregular passive1 each; active revision0; adverb-separated/get passives0; closed state1; progressive/indeed0. Default mode same except carefully produces an adverb suggestion.",
+    "automaticRewrite": false,
+    "limitations": "Naive detector; manual interpretation needed;8 controls are not general accuracy statistics."
+  },
+  "privacyAxes": {
+    "processing": "Selected function executes locally; static loaded source path has no remote operation. Acquisition used registry network.",
+    "retention": "Text-bearing input/output held in Node memory; no direct persistence found in selected module source. No heap/GC/OS diagnostics or deletion attestation.",
+    "training": "No training/submission path in selected function source; not a vendor-wide policy claim.",
+    "cloudSync": "No integration/custom module selected; other host applications excluded.",
+    "telemetry": "No telemetry/account invocation found in selected function source; host/runtime/install behavior outside review.",
+    "rights": "Eight package metadata declarations MIT; no paid entitlement required for this research profile. Notices not comprehensively legally audited."
+  },
+  "decision": "Concrete end-to-end local library evidence recorded, still research-only. No blanket no-traffic/no-retention/no-training certification; no graph qualification. CLI/editor cannot inherit this result.",
+  "next": "Close this bounded library probe round. Consolidate evidence with route rubric and investigate Vale local rule next; do not expand owner packet captures or build more write-good instrumentation by default."
+}

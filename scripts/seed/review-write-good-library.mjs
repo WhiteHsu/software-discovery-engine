@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {createHash} from 'node:crypto';
+import {latestPublicationAudit} from '../escape-remaining-routes.mjs';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
+const review=JSON.parse(fs.readFileSync(path.join(root,'seed/research/write-good-library-review-2026-10-17.json'),'utf8'));
+if(process.argv.length!==2||createHash('sha256').update(JSON.stringify(review)).digest('hex')!=='0cd1f924435256629779e9f8344627a579048ae7090cb9d587fdc2f35cb792da')throw Error('Privacy research content drift');
+if(!review.researchOnly||review.graphChanges||review.publicationApproved||review.qualifiedNewCandidates!==0)throw Error('Research boundary drift');
+const audit=latestPublicationAudit(),privacy=audit.routes.find(x=>x.slug==='privacy-friendly-grammarly-alternatives');
+if(audit.publishedProducts!==21||audit.acceptedPublishedRoutes!==9||audit.remainingRoutes!==1||!privacy||privacy.publication!=='not-published'||privacy.qualifiedDraftGraphCandidates!==0)throw Error('Accepted checkpoint or privacy qualification drift');
+console.log('PR5.90: eight locked packages, fourteen loaded files, sixteen direct library calls. Research only; accepted21/9/1; zero qualified.');

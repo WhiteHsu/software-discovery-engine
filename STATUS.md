@@ -468,3 +468,8 @@ Owner reports no/uncertain Antidote12 access; defer without purchase or negative
 ## PR5.89 — write-good passive dependency controls
 
 Actual clean HEADdb9a12c and owner Production106. Registry integrity verified passive-voice0.1.0; inspected dependency module has no imports/direct I/O. Eight synthetic controls demonstrate simple passive/manual-active behavior, missed adverb/get constructions and adjectival ambiguity. Dependency only, not full write-good or network/retention proof. No npm installation or real text. Other eager dependencies/end-to-end profile pending;21/9/1 and zero qualifications unchanged. See WRITE_GOOD_PASSIVE_REVIEW.md.
+
+
+## PR5.90 — write-good local library workflow
+
+Clean actual HEADc539f01 and owner Production107. npm1.0.8 plus seven dependencies locked/downloaded with scripts disabled in separate research folder. Full direct library loaded14 files across7 packages; commander excluded. Eight synthetic inputs in default/passive-only modes confirm manual active revision and detector limitations; adverb warning is not passive success. Selected loaded source has no direct I/O calls; text-bearing returns and runtime memory/caller retention remain explicit limits. No OS capture, CLI/editor evidence or source-release equivalence claim. Close bounded probe round, next consolidate rubric/Vale. Research only;21/9/1, zero qualifications unchanged. See WRITE_GOOD_LIBRARY_REVIEW.md.
