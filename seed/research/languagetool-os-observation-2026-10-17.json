@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "recordedAt": "2026-10-17",
+  "researchOnly": true,
+  "captureSavedAndStoppedConfirmedByOwner": true,
+  "traceSha256": "90ea072031a6fdb7685fe3923c639799de69a926e25aff917efd0da4de9e82d8",
+  "syntheticCasesSuccessful": true,
+  "passiveMatches": 2,
+  "tcpProviderEvents": 31191,
+  "controlHeaderEvents": 287,
+  "controlLoopbackBidirectionalSummaries": 2,
+  "languageToolHeaderEvents": 108,
+  "languageToolExplicitOwnerEventCounts": [
+    {
+      "id": 1001,
+      "count": 1
+    },
+    {
+      "id": 1013,
+      "count": 1
+    }
+  ],
+  "languageToolExplicitOwnerConnectionLifecycleEvents": 0,
+  "header1332Events": 5,
+  "header1332WithOtherExplicitTcbOwner": 0,
+  "limitations": [
+    "PID in event header may be kernel execution context; not reliable causal connection attribution alone.",
+    "No ProcessThread collector, DNS provider, comprehensive UDP/native/file-retention audit or packet capture.",
+    "Absence of explicitly attributed connection events is not proof of no network activity.",
+    "This is one short synthetic CLI run, not all modes, editions or future runs."
+  ],
+  "privacyQualified": false,
+  "qualifiedNewCandidates": 0,
+  "checkpoint": {
+    "remainingRoutes": 1,
+    "products": 21,
+    "completedRoutes": 9
+  },
+  "packet": "PR5.81",
+  "baselineCommit": "eb96a76832e6f679c17a3804b46f26838066d9bb",
+  "graphChanges": false,
+  "publicationApproved": false,
+  "method": {
+    "ownerOperatedAdminCapture": true,
+    "provider": "Microsoft-Windows-TCPIP",
+    "providerGuid": "2f07e2ee-15db-40f1-90ef-9d7ba282188a",
+    "level": 16,
+    "nonPagedMemory": true,
+    "strict": true,
+    "profileSha256": "6e26c3043881576cf72c3270a892530cff752c40f2fabf6c8095d7fa08e09394",
+    "approximateSeconds": 20,
+    "orderedCases": [
+      "synthetic loopback TLS control",
+      "pinned LanguageTool 6.6 CLI passive text"
+    ],
+    "runtimeReference": "languagetool-local-runtime-2026-10-16.json"
+  },
+  "earlierAttempts": {
+    "level5Capture": "Saved and stopped; expected TCP control not observed, schema warnings. Invalid as network negative evidence.",
+    "controlV2": "Level16, NonPagedMemory and Strict changed together; 11711 provider records, 290 header matches; known loopback endpoint/time and nonzero bidirectional summaries validated. This does not isolate a single setting as root cause."
+  },
+  "interpretation": "Same-window socket positive control observed. LanguageTool header PID alone is not a connection ownership finding. No explicit owner match in selected connection lifecycle IDs; not proof of no transmission.",
+  "reviewScope": {
+    "connectionLifecycleIds": [
+      1017,
+      1031,
+      1033,
+      1038,
+      1043,
+      1044
+    ],
+    "explicitOwnerIdsObserved": [
+      1001,
+      1013
+    ],
+    "fullLifetimeCoverageProven": false,
+    "dnsCaptured": false,
+    "udpCoverageProven": false,
+    "filesOrRetentionAudited": false,
+    "eventLossAuditedForThisTrace": false
+  },
+  "disposition": "Research-only, privacy hold. Close this owner capture round; no further per-request screenshots or capture reruns requested."
+}

@@ -423,3 +423,8 @@ Clean actual HEAD7c1e814 and owner Production97 recorded. Four PICKY/explicit-pa
 ## PR5.80 — Java socket observer positive control
 
 Clean actual HEAD1150dae and owner Production98 recorded. Same pinned Temurin/JFR settings observed 13 SocketRead and 5 SocketWrite events in a separate synthetic loopback TLS control, zero reported DataLoss. Listener bound only127.0.0.1 and closed after run; no external destination or trust-store modification. This confirms one Java observer path, not complete DNS/native/OS coverage or no transmission. PR5.79 observations remain immutable. Repeated Java-event-only testing closed at this boundary; independent process/OS coverage and retention evidence required before qualification. Accepted21/9/1, zero privacy qualifications unchanged. See LANGUAGETOOL_SOCKET_CONTROL.md.
+
+
+## PR5.81 — Bounded owner-operated OS observation
+
+Clean baseline HEADeb96a76 and owner Production99 recorded. Initial Level5 capture lacked TCP control; local provider metadata exposed TcpSummary16. Corrected Level16/nonpaged/strict control verified loopback transfer. Same-window 20-second TCPIP observation then completed and stopped: control287 header events/two bidirectional loopback summaries; LanguageTool108 header events, normal exit and two passive hints. Header PID is execution context, not causal ownership. Selected lifecycle IDs have no explicit LanguageTool owner match; no no-transmission finding. DNS/UDP/retention/complete coverage unresolved. Owner capture round closed; sanitized evidence only, raw ETL stays local. Accepted21/9/1 and zero privacy qualifications unchanged. See LANGUAGETOOL_OS_OBSERVATION.md.
