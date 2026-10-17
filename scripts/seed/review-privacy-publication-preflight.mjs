@@ -1,0 +1,18 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {createHash} from 'node:crypto';
+import {privacyImportInputs,buildPrivacyImport} from './build-privacy-import.mjs';
+import {latestPublicationAudit} from '../escape-remaining-routes.mjs';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
+const hash=x=>createHash('sha256').update(x).digest('hex');
+if(process.argv.length!==2)throw Error('No arguments supported');
+const r=JSON.parse(fs.readFileSync(path.join(root,'seed/research/privacy-draft-import-acceptance-2026-10-17.json'),'utf8'));
+if(hash(JSON.stringify(r))!=='1f2a72599675467cc00f3fd2c8eeb6cf0775e6000886552688c0dc9338946ccf')throw Error('Owner acceptance receipt drift');
+for(const p of [r.inputVerify,r.preflight])if(hash(fs.readFileSync(path.join(root,p.path),'utf8').replace(/\r\n/g,'\n'))!==p.normalizedSha256)throw Error('Pinned SQL drift');
+const sql=fs.readFileSync(path.join(root,r.preflight.path),'utf8').replace(/--[^\n]*/g,'');
+if(!/^\s*WITH\b/i.test(sql)||(sql.match(/;/g)||[]).length!==1||/\b(INSERT|UPDATE|DELETE|MERGE|CREATE|ALTER|DROP|TRUNCATE|GRANT|REVOKE|DO|CALL)\b/i.test(sql))throw Error('Preflight must be one read-only statement');
+for(const key of ['public_product_projections','public_read_rls','public_read_policies','target_route_memberships','reviewed-local-operation','privacy99-%'])if(!sql.includes(key))throw Error('Missing publication review field');
+const imported=buildPrivacyImport(privacyImportInputs()),audit=latestPublicationAudit();
+if(r.verificationResults.length!==32||r.verificationResults.some((x,i)=>x.passed!==true||x.ordinal!==i+1)||r.publicationApproved||r.publicationExecuted||imported.report.newProducts!==3||imported.report.attributeClaims!==12||audit.publishedProducts!==21||audit.acceptedPublishedRoutes!==9||audit.remainingRoutes!==1)throw Error('Receipt/import/public checkpoint drift');
+console.log('PR5.103: owner draft import32/32 accepted; SELECT-only publication snapshot pinned. Public21/9/1, three drafts, no publication. No remote calls.');

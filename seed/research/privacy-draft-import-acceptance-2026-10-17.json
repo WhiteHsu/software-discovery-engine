@@ -1,0 +1,187 @@
+{
+  "packet": "PR5.103",
+  "kind": "owner-returned-draft-import-acceptance",
+  "acceptedDate": "2026-10-17",
+  "head": "27015e51783a50e7b37b053e05ad42acfe7a455a",
+  "provenance": "Owner pasted all 32 PR5.102_VERIFY rows and supplied SQL Editor success screenshots. Assistant did not execute remote SQL.",
+  "inputVerify": {
+    "path": "supabase/verification/PR5.102_VERIFY.sql",
+    "normalizedSha256": "c9a8410ee2d7a2c96207f79b11b4626920129b8e67c72644838ea7bf2412623e"
+  },
+  "preflight": {
+    "path": "supabase/verification/PR5.103_PREFLIGHT.sql",
+    "normalizedSha256": "1d9761a88906ffdd5f5069901b34c66cdaf7b62ab742e44ffd828e4190676fbe"
+  },
+  "verificationResults": [
+    {
+      "ordinal": 1,
+      "check_name": "exact_evidence_sources",
+      "passed": true
+    },
+    {
+      "ordinal": 2,
+      "check_name": "exact_attributes",
+      "passed": true
+    },
+    {
+      "ordinal": 3,
+      "check_name": "exact_products",
+      "passed": true
+    },
+    {
+      "ordinal": 4,
+      "check_name": "exact_product_attributes",
+      "passed": true
+    },
+    {
+      "ordinal": 5,
+      "check_name": "exact_product_anchors",
+      "passed": true
+    },
+    {
+      "ordinal": 6,
+      "check_name": "exact_claim_evidence",
+      "passed": true
+    },
+    {
+      "ordinal": 7,
+      "check_name": "exact_product_attribute_evidence",
+      "passed": true
+    },
+    {
+      "ordinal": 8,
+      "check_name": "exact_product_anchor_evidence",
+      "passed": true
+    },
+    {
+      "ordinal": 9,
+      "check_name": "exact_escape_routes",
+      "passed": true
+    },
+    {
+      "ordinal": 10,
+      "check_name": "exact_escape_route_products",
+      "passed": true
+    },
+    {
+      "ordinal": 11,
+      "check_name": "retained_products",
+      "passed": true
+    },
+    {
+      "ordinal": 12,
+      "check_name": "retained_product_attributes",
+      "passed": true
+    },
+    {
+      "ordinal": 13,
+      "check_name": "retained_product_anchors",
+      "passed": true
+    },
+    {
+      "ordinal": 14,
+      "check_name": "retained_product_problems",
+      "passed": true
+    },
+    {
+      "ordinal": 15,
+      "check_name": "retained_product_audiences",
+      "passed": true
+    },
+    {
+      "ordinal": 16,
+      "check_name": "retained_product_attribute_evidence",
+      "passed": true
+    },
+    {
+      "ordinal": 17,
+      "check_name": "retained_product_anchor_evidence",
+      "passed": true
+    },
+    {
+      "ordinal": 18,
+      "check_name": "retained_product_problem_evidence",
+      "passed": true
+    },
+    {
+      "ordinal": 19,
+      "check_name": "retained_product_audience_evidence",
+      "passed": true
+    },
+    {
+      "ordinal": 20,
+      "check_name": "retained_claim_evidence",
+      "passed": true
+    },
+    {
+      "ordinal": 21,
+      "check_name": "retained_evidence_sources",
+      "passed": true
+    },
+    {
+      "ordinal": 22,
+      "check_name": "retained_attributes",
+      "passed": true
+    },
+    {
+      "ordinal": 23,
+      "check_name": "retained_anchors",
+      "passed": true
+    },
+    {
+      "ordinal": 24,
+      "check_name": "retained_problems",
+      "passed": true
+    },
+    {
+      "ordinal": 25,
+      "check_name": "retained_audiences",
+      "passed": true
+    },
+    {
+      "ordinal": 26,
+      "check_name": "retained_escape_routes",
+      "passed": true
+    },
+    {
+      "ordinal": 27,
+      "check_name": "retained_escape_route_products",
+      "passed": true
+    },
+    {
+      "ordinal": 28,
+      "check_name": "retained_escape_route_products",
+      "passed": true
+    },
+    {
+      "ordinal": 29,
+      "check_name": "published_slug_sets_preserved",
+      "passed": true
+    },
+    {
+      "ordinal": 30,
+      "check_name": "draft_lifecycle_and_public_boundary",
+      "passed": true
+    },
+    {
+      "ordinal": 31,
+      "check_name": "no_extra_claims",
+      "passed": true
+    },
+    {
+      "ordinal": 32,
+      "check_name": "anon_private_evidence_boundary",
+      "passed": true
+    }
+  ],
+  "acceptedPublic": {
+    "products": 21,
+    "routes": 9,
+    "remaining": 1
+  },
+  "importedDrafts": 3,
+  "privacyRouteStatus": "draft",
+  "publicationApproved": false,
+  "publicationExecuted": false,
+  "notes": "Duplicate retained_escape_route_products labels preserved as distinct checks (retained published route memberships and generic-product memberships). No publication inferred from successful draft import."
+}

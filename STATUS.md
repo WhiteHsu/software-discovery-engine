@@ -531,3 +531,7 @@ Owner accepted PR5.100 local UI and links at HEAD ca9f971. Added single-SELECT p
 ## PR5.102 — Selective privacy draft import
 
 Owner pushed35b520e and returned privileged PR5.101 snapshot:21 published products/9 approved routes, generic LanguageTool draft retained, proposed identities/route/taxons absent. Frozen snapshot guards protect retained claims, memberships, taxonomy and public/private boundary. Selective3 drafts/12 attributes/3 scoped anchors/3 memberships with2 new taxons,6 sources/30 evidence fragments.20 local tests passed; generated rehearsal/apply/verification SQL, no remote execution or publication. Await owner rollback rehearsal, then separate draft apply and full verification. See PRIVACY_SELECTIVE_IMPORT.md.
+
+## PR5.103 — Privacy draft acceptance and publication preflight
+
+Owner returned PR5.102 verification32/32 true after apply;3 scoped drafts imported, generic LanguageTool/old route retained, public21/9/1 and private evidence boundary preserved. Frozen owner receipt plus SELECT-only post-import snapshot capture actual IDs, RLS/policies and public projections before guarded publication proposal. No apply replay or publication approval/execution. Await snapshot; see PRIVACY_PUBLICATION_PREFLIGHT.md.

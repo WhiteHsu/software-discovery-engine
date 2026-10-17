@@ -1,0 +1,11 @@
+# PR5.103 — Privacy draft acceptance and publication preflight
+
+Owner returned 32/32 true PR5.102 verification rows after apply at HEAD27015e5 / Production120. Three exact scoped draft products, twelve attributes, three scoped anchors, provenance and route membership passed. Generic LanguageTool and the existing published Grammarly route remain intact. Public21 products /9 routes /1 remaining; private evidence boundary passed. Receipt preserves both identically named membership checks with ordinal numbers.
+
+Run only supabase/verification/PR5.103_PREFLIGHT.sql in the existing privileged SQL Editor and export the complete snapshot JSON cell. This is a single SELECT; no status, claim, evidence, membership or policy changes. The previous pre-import snapshot cannot supply actual generated IDs or post-import policy/projection state. Anonymous API responses can omit drafts and cannot replace this snapshot.
+
+New snapshot includes all matching family products, both routes and members, claims, evidence, taxonomy, current published sets, public product projections, RLS and public policies. Expected proposed edition pages are null through the public projection while drafts. The privacy route should remain draft/unapproved. Treat other results as data to review, not permission to change policies.
+
+After the snapshot is returned, compare every imported row with the frozen PR5.102 plan and evaluate the actual projected claims through the PR5.100 scoped runtime. Then prepare guarded rollback rehearsal, concrete publication apply proposal and post-publication verification. Planned publication scope is three product status changes and one route status/approval change, preserving all wording/evidence/memberships and generic LanguageTool draft. Expected public counts would become24/10 with0 remaining only after successful publication and acceptance. No publication apply SQL is included or executed here.
+
+Validation: local receipt checker verifies frozen owner result, SQL hashes, required review fields, SELECT-only structure, prior selective import reconstruction and historical public checkpoint. No database call or new build. Do not replay PR5.102 draft apply. next-env.d.ts is outside this payload.
