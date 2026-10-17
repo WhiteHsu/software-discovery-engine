@@ -1,0 +1,431 @@
+{
+  "version": 1,
+  "packet": "PR5.82",
+  "reviewedAt": "2026-10-17",
+  "baselineCommit": "6bf8e2c3e2be64a7167f315e6704d54dbdbf2b55",
+  "researchOnly": true,
+  "graphChanges": false,
+  "publicationApproved": false,
+  "qualifiedNewCandidates": 0,
+  "checkpoint": {
+    "products": 21,
+    "completedRoutes": 9,
+    "remainingRoutes": 1
+  },
+  "route": "privacy-friendly-grammarly-alternatives",
+  "purpose": "Consolidate dated evidence across six distinct editions/operations and select one bounded next investigation.",
+  "rubricStatus": "Research proposal only; existing engine and minimum-three publication threshold unchanged.",
+  "statusSemantics": {
+    "observed": "Only the bounded operation actually performed.",
+    "documented": "Dated vendor statement recorded in earlier receipt; not refreshed or independently certified here.",
+    "partial": "Some evidence exists; material scope may remain unresolved.",
+    "unresolved": "Unknown, not a negative privacy finding.",
+    "material-unresolved": "Known relevant data path still unresolved; blocks a positive research classification."
+  },
+  "qualificationPrinciples": [
+    "Do not require proof that no packet can ever be sent as a universal privacy definition.",
+    "A material unresolved selected-operation text-data path blocks a positive classification; limited negative observations cannot close it.",
+    "Telemetry is not automatically submitted prose; no-training, no-account, offline support and retention are distinct.",
+    "Access/entitlement dependency is not a privacy defect; no owner purchase requested.",
+    "Privacy research may allow subscriptions; do not import no-subscription route constraints.",
+    "Same product name does not make hosted, Classic, HTTP and direct CLI evidence interchangeable."
+  ],
+  "provenanceHashNormalization": "UTF-8 CRLF-to-LF only; every other character remains significant.",
+  "provenance": [
+    {
+      "path": "seed/research/privacy-writing-review-2026-10-15.json",
+      "sha256": "c9f66009937abb2c0ed6262a50463ac578d61393f41fae4382989184cbe4b00c"
+    },
+    {
+      "path": "seed/research/privacy-writing-controls-2026-10-15.json",
+      "sha256": "4dd37a2fca85fd48009e1e4f89db20489dc7a5af94be78bdfb3416e73c37084d"
+    },
+    {
+      "path": "seed/research/hemingway-network-observation-2026-10-15.json",
+      "sha256": "fce169df0392f434c2c0ab8acfa563ff111c18deb639933b932dbd2394bd7c38"
+    },
+    {
+      "path": "seed/research/hemingway-privacy-choices-2026-10-15.json",
+      "sha256": "1d052b43244ca7e46d89269aff0238850a736114c73a9d0cf46252b827bbc520"
+    },
+    {
+      "path": "seed/research/languagetool-local-feasibility-2026-10-16.json",
+      "sha256": "fa87a303f6ef9cfb87fed7913e53e38641bb57f48cbc290c63a85663e42b9600"
+    },
+    {
+      "path": "seed/research/languagetool-artifact-pin-2026-10-16.json",
+      "sha256": "3d8a5557420cb90a259390ac9ff067e821ea592beb7b3c123508313f6aa49d42"
+    },
+    {
+      "path": "seed/research/languagetool-local-runtime-2026-10-16.json",
+      "sha256": "77c961876da56f05f08e977579a3e1b19a658a7509c1a973f7d3a660a820406e"
+    },
+    {
+      "path": "seed/research/languagetool-io-observation-2026-10-16.json",
+      "sha256": "141ac6a5c6d28226297823e4b213af0d61d801a765c883a7b80c872fe768f7b3"
+    },
+    {
+      "path": "seed/research/languagetool-socket-control-2026-10-16.json",
+      "sha256": "4db2a707ebdfed3fdd0d28b153881087f41edf7164cc9e8735c4593635563f72"
+    },
+    {
+      "path": "seed/research/languagetool-os-observation-2026-10-17.json",
+      "sha256": "f7e91a0664d8f77c009c87e084ce35efd6a4b7a1a1bd0660730189dbd6eef051"
+    }
+  ],
+  "editions": [
+    {
+      "id": "lt-hosted-addon",
+      "edition": "LanguageTool hosted browser add-on; saved editor excluded",
+      "decision": "hold",
+      "axes": {
+        "processing": {
+          "status": "documented",
+          "finding": "Cloud default; not the local CLI.",
+          "evidence": [
+            "PR5.72",
+            "PR5.76"
+          ]
+        },
+        "retention": {
+          "status": "partial",
+          "finding": "Add-on no-storage statement does not resolve feature-specific logs/deletion.",
+          "evidence": [
+            "PR5.72"
+          ]
+        },
+        "training": {
+          "status": "documented",
+          "finding": "Dated policy excludes Individual/Team input from model training by default; no broader telemetry claim.",
+          "evidence": [
+            "PR5.72"
+          ]
+        },
+        "cloud": {
+          "status": "partial",
+          "finding": "Saved editor excluded; client/integration paths unresolved.",
+          "evidence": [
+            "PR5.72"
+          ]
+        },
+        "telemetry": {
+          "status": "unresolved",
+          "finding": "Exact add-on operational/optional controls not verified.",
+          "evidence": [
+            "PR5.72"
+          ]
+        },
+        "workflow": {
+          "status": "unresolved",
+          "finding": "Hosted selected edition passive-review operation not established by local CLI results.",
+          "evidence": [
+            "PR5.72",
+            "PR5.78"
+          ]
+        }
+      },
+      "materialBlockers": [
+        "Feature-specific retention/log/deletion handling",
+        "Hosted edition workflow and telemetry controls"
+      ],
+      "nextAction": "Map the exact hosted add-on feature and applicable data controls in primary documentation; do not infer from CLI.",
+      "ownerActionRequiredNow": false
+    },
+    {
+      "id": "hemingway-classic",
+      "edition": "Hemingway Classic Editor3 installed Windows/Mac",
+      "decision": "hold",
+      "axes": {
+        "processing": {
+          "status": "documented",
+          "finding": "Offline capability documented; not observed installed.",
+          "evidence": [
+            "PR5.72"
+          ]
+        },
+        "retention": {
+          "status": "unresolved",
+          "finding": "Applicable standalone notice and local copies/deletion not established.",
+          "evidence": [
+            "PR5.72"
+          ]
+        },
+        "training": {
+          "status": "partial",
+          "finding": "New AI excluded; web policy cannot establish Classic handling.",
+          "evidence": [
+            "PR5.72"
+          ]
+        },
+        "cloud": {
+          "status": "partial",
+          "finding": "Publishing/integrations excluded from intended operation; settings unverified.",
+          "evidence": [
+            "PR5.72"
+          ]
+        },
+        "telemetry": {
+          "status": "unresolved",
+          "finding": "Classic-specific operational/telemetry notice unresolved.",
+          "evidence": [
+            "PR5.72"
+          ]
+        },
+        "workflow": {
+          "status": "unresolved",
+          "finding": "Current access rights and entitled installed workflow not established.",
+          "evidence": [
+            "PR5.72"
+          ]
+        }
+      },
+      "materialBlockers": [
+        "Applicable Classic notice",
+        "Current rights and installed workflow"
+      ],
+      "nextAction": "Locate standalone-edition notice and rights information; no purchase or installation requested.",
+      "ownerActionRequiredNow": false
+    },
+    {
+      "id": "antidote-installed",
+      "edition": "Antidote12 English installed Correction; subscription/eligible perpetual stated separately",
+      "decision": "hold",
+      "axes": {
+        "processing": {
+          "status": "documented",
+          "finding": "Vendor describes installed Correction as local; Reformulation is a distinct server path.",
+          "evidence": [
+            "PR5.72",
+            "PR5.73"
+          ]
+        },
+        "retention": {
+          "status": "partial",
+          "finding": "Local-correction claim does not audit local files/backups or support copies.",
+          "evidence": [
+            "PR5.72"
+          ]
+        },
+        "training": {
+          "status": "partial",
+          "finding": "Vendor local-correction statement; account/other feature handling separate.",
+          "evidence": [
+            "PR5.72"
+          ]
+        },
+        "cloud": {
+          "status": "material-unresolved",
+          "finding": "Automatic Reformulation suggestions may occur within Correction and are documented enabled by default; sync has multiple controls.",
+          "evidence": [
+            "PR5.73"
+          ]
+        },
+        "telemetry": {
+          "status": "unresolved",
+          "finding": "Account/usage remain; selected installed controls unverified.",
+          "evidence": [
+            "PR5.72",
+            "PR5.73"
+          ]
+        },
+        "workflow": {
+          "status": "partial",
+          "finding": "English passive constructions documented; entitled installed manual workflow/control configuration not tested.",
+          "evidence": [
+            "PR5.72",
+            "PR5.73"
+          ]
+        }
+      },
+      "materialBlockers": [
+        "Automatic Reformulation and sync controls",
+        "Installed entitlement/workflow and relevant data paths"
+      ],
+      "nextAction": "Review the complete documented control path before considering an already-entitled installed test. Lack of owner entitlement is an access dependency, not proof of poor privacy.",
+      "ownerActionRequiredNow": false
+    },
+    {
+      "id": "hemingway-free-web",
+      "edition": "Hemingway free web, anonymous manual highlight/revise/recheck, no Plus trial",
+      "decision": "hold",
+      "axes": {
+        "processing": {
+          "status": "partial",
+          "finding": "Manual highlighting observed; browser location not established by UI alone.",
+          "evidence": [
+            "PR5.73",
+            "PR5.74"
+          ]
+        },
+        "retention": {
+          "status": "partial",
+          "finding": "Reload preserved synthetic text; visible clearing observed, complete local/server copies unresolved.",
+          "evidence": [
+            "PR5.73",
+            "PR5.72"
+          ]
+        },
+        "training": {
+          "status": "documented",
+          "finding": "Dated web policy excludes content training; no runtime verification of all paths.",
+          "evidence": [
+            "PR5.72"
+          ]
+        },
+        "cloud": {
+          "status": "partial",
+          "finding": "Plus not initiated; opaque/uninspected requests remain.",
+          "evidence": [
+            "PR5.74"
+          ]
+        },
+        "telemetry": {
+          "status": "partial",
+          "finding": "Analytics fields inspected without submitted prose; optional choices persisted in a different profile, not an enforcement test or violation finding.",
+          "evidence": [
+            "PR5.74",
+            "PR5.75"
+          ]
+        },
+        "workflow": {
+          "status": "observed",
+          "finding": "Passive-to-active manual review/recheck observed; accepted writing workflow supplies no privacy qualification.",
+          "evidence": [
+            "PR5.73"
+          ]
+        }
+      },
+      "materialBlockers": [
+        "Complete applicable text/storage paths",
+        "Consent/network correlation in one profile not established"
+      ],
+      "nextAction": "Keep owner capture round closed. Reuse dated policy/receipt evidence; do not request another per-request screenshot loop.",
+      "ownerActionRequiredNow": false
+    },
+    {
+      "id": "lt-local-http",
+      "edition": "LanguageTool basic local HTTP server plus explicitly selected client",
+      "decision": "hold",
+      "axes": {
+        "processing": {
+          "status": "documented",
+          "finding": "Local server guide reviewed; no server was started.",
+          "evidence": [
+            "PR5.76"
+          ]
+        },
+        "retention": {
+          "status": "unresolved",
+          "finding": "No pinned effective server/client log/cache/retention configuration.",
+          "evidence": [
+            "PR5.76"
+          ]
+        },
+        "training": {
+          "status": "unresolved",
+          "finding": "Selected server and client data paths not audited; hosted policy cannot silently fill this field.",
+          "evidence": [
+            "PR5.76"
+          ]
+        },
+        "cloud": {
+          "status": "material-unresolved",
+          "finding": "Client default-cloud/fallback paths require explicit configuration and observation.",
+          "evidence": [
+            "PR5.76"
+          ]
+        },
+        "telemetry": {
+          "status": "unresolved",
+          "finding": "Server and chosen client must be reviewed separately.",
+          "evidence": [
+            "PR5.76"
+          ]
+        },
+        "workflow": {
+          "status": "unresolved",
+          "finding": "HTTP interface and chosen client not tested; CLI results are not HTTP results.",
+          "evidence": [
+            "PR5.76",
+            "PR5.78"
+          ]
+        }
+      },
+      "materialBlockers": [
+        "Pinned server/client effective configuration",
+        "Untested HTTP/client workflow and fallback/log paths"
+      ],
+      "nextAction": "Defer server/client expansion while the narrower CLI lead is evaluated. No server start authorized by this readiness record.",
+      "ownerActionRequiredNow": false
+    },
+    {
+      "id": "lt-local-cli-6.6",
+      "edition": "LanguageTool6.6 direct CLI, Temurin17, en-US PICKY plus explicit passive-only rules",
+      "decision": "priority-research-hold",
+      "axes": {
+        "processing": {
+          "status": "observed",
+          "finding": "Named artifact/runtime and direct CLI execution observed; not a browser/editor or HTTP service.",
+          "evidence": [
+            "PR5.77",
+            "PR5.78"
+          ]
+        },
+        "retention": {
+          "status": "partial",
+          "finding": "Dedicated home/tmp empty after earlier tests, but intentional input/output logs retained; not a full retention audit.",
+          "evidence": [
+            "PR5.79",
+            "PR5.78"
+          ]
+        },
+        "training": {
+          "status": "unresolved",
+          "finding": "Pinned CLI source/data-path review incomplete; no transfer of hosted policy.",
+          "evidence": [
+            "PR5.72",
+            "PR5.81"
+          ]
+        },
+        "cloud": {
+          "status": "partial",
+          "finding": "No selected lifecycle explicit-owner match in one corrected trace; not proof of absent DNS/UDP/native paths.",
+          "evidence": [
+            "PR5.81"
+          ]
+        },
+        "telemetry": {
+          "status": "partial",
+          "finding": "Java and corrected OS controls observed; no full lifetime or native coverage and no all-path telemetry conclusion.",
+          "evidence": [
+            "PR5.79",
+            "PR5.80",
+            "PR5.81"
+          ]
+        },
+        "workflow": {
+          "status": "observed",
+          "finding": "12-case matrix; PICKY plus selected rules marked target passives, active/adjectival controls zero. Manual hints, no replacements; small corpus and old6.6.",
+          "evidence": [
+            "PR5.78"
+          ]
+        }
+      },
+      "materialBlockers": [
+        "Pinned CLI startup/configuration, network/logging source paths",
+        "Retention boundaries and technical-user workflow suitability"
+      ],
+      "nextAction": "Next bounded read-only investigation: obtain exact v6.6 CLI startup/configuration source, record source-to-artifact limits, and identify logging/network branches before any more runtime capture. If source unavailable, retain hold rather than invent defaults.",
+      "ownerActionRequiredNow": false
+    }
+  ],
+  "selection": {
+    "nextEdition": "lt-local-cli-6.6",
+    "nextWork": "Pinned read-only CLI source/configuration path audit; not another short traffic capture.",
+    "candidateStatus": "not-qualified",
+    "sourceLookupThisRound": "GitHub v6.6 commandline directory web lookup returned cache miss; no source archive obtained, source gate remains open.",
+    "ownerCaptureRound": "closed",
+    "ownerPurchaseOrSignupRequested": false,
+    "productionAction": "none"
+  }
+}

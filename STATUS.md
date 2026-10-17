@@ -428,3 +428,8 @@ Clean actual HEAD1150dae and owner Production98 recorded. Same pinned Temurin/JF
 ## PR5.81 — Bounded owner-operated OS observation
 
 Clean baseline HEADeb96a76 and owner Production99 recorded. Initial Level5 capture lacked TCP control; local provider metadata exposed TcpSummary16. Corrected Level16/nonpaged/strict control verified loopback transfer. Same-window 20-second TCPIP observation then completed and stopped: control287 header events/two bidirectional loopback summaries; LanguageTool108 header events, normal exit and two passive hints. Header PID is execution context, not causal ownership. Selected lifecycle IDs have no explicit LanguageTool owner match; no no-transmission finding. DNS/UDP/retention/complete coverage unresolved. Owner capture round closed; sanitized evidence only, raw ETL stays local. Accepted21/9/1 and zero privacy qualifications unchanged. See LANGUAGETOOL_OS_OBSERVATION.md.
+
+
+## PR5.82 — Privacy writing readiness inventory
+
+Clean actual HEAD6bf8e2c and owner Production100 recorded. Six editions/operations separated across six research axes with ten prior receipts pinned; direct6.6 CLI evidence cannot fill HTTP-server or hosted gaps. All remain on hold, unknown is not negative privacy evidence. Material selected-operation data paths, not an impossible universal no-packet proof, determine research blockers. Next bounded investigation is pinned CLI startup/config/logging source review; cache-miss source lookup did not close that gate. Owner captures closed; no purchase or new runtime requested. Accepted21/9/1 and zero new qualifications unchanged. See PRIVACY_WRITING_READINESS.md.
