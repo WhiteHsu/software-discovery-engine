@@ -1,0 +1,510 @@
+{
+  "packet": "PR5.97",
+  "reviewedAt": "2026-10-17",
+  "baselineCommit": "d942194d337267bae4f650e32e859c1c9fbfc832",
+  "ownerProductionScreenshot": 114,
+  "researchOnly": true,
+  "graphChanges": false,
+  "publicationApproved": false,
+  "qualifiedNewCandidates": 0,
+  "provenanceHashNormalization": "UTF8 CRLF-to-LF only",
+  "provenance": [
+    {
+      "path": "seed/research/privacy-claim-decisions-2026-10-17.json",
+      "sha256": "d3f485fc17f1e098eaa9441866bc639060870bc4123f81824647ed7da7b48f5a"
+    },
+    {
+      "path": "seed/research/languagetool-cli-source-2026-10-17.json",
+      "sha256": "bbbedf7a9fce68ccd6ac1c76ebf45fd170f8147f62ac41eb62330ad1413d2c2b"
+    },
+    {
+      "path": "seed/research/languagetool-cli-defaults-2026-10-17.json",
+      "sha256": "2028384b26b15f342d54825d90381656df6919139cb9b5a0ad840d3d5b47afba"
+    },
+    {
+      "path": "seed/research/languagetool-distribution-profile-2026-10-17.json",
+      "sha256": "5227b3367a7a0fd2450371403744aa5b45a89cbea4d94a3e3c9598f89f3bb3ea"
+    },
+    {
+      "path": "seed/research/languagetool-synthetic-profile-2026-10-17.json",
+      "sha256": "6d5c32b9dad3fd90e36b9559e2560c59e316076189422aed2b83bb4ce85a9406"
+    }
+  ],
+  "candidates": [
+    {
+      "family": "LanguageTool",
+      "profileId": "lt-6-6-direct-cli-explicit-local-conditions",
+      "relationshipProfile": "lt-6-6-direct-cli-explicit-local-conditions",
+      "privacyProfile": "lt-6-6-direct-cli-explicit-local-conditions",
+      "axes": {
+        "processing": {
+          "summary": "Fixed6.6 CLI and JRE file snapshots, English local rule selection with PICKY and explicit passive IDs, stdin input. Empty selected remote resources follow reviewed factory branches. No HTTP server/client/editor selected.",
+          "reviewedAt": "2026-10-17",
+          "evidence": [
+            "seed/research/languagetool-cli-source-2026-10-17.json",
+            "seed/research/languagetool-cli-defaults-2026-10-17.json",
+            "seed/research/languagetool-distribution-profile-2026-10-17.json",
+            "seed/research/languagetool-synthetic-profile-2026-10-17.json"
+          ],
+          "materialUnknown": false,
+          "decision": "support-only-this-conditional-local-operation-wording; excluded host/global behavior is not covered"
+        },
+        "retention": {
+          "summary": "JSON holds context/sentence; stderr/error branches may include text. Caller captures/copies and runtime memory are explicit sinks, not promised deleted. Own temporary directory removal observed for synthetic harness only, not secure erasure or every CLI copy.",
+          "reviewedAt": "2026-10-17",
+          "evidence": [
+            "seed/research/languagetool-cli-source-2026-10-17.json",
+            "seed/research/languagetool-cli-defaults-2026-10-17.json",
+            "seed/research/languagetool-distribution-profile-2026-10-17.json",
+            "seed/research/languagetool-synthetic-profile-2026-10-17.json"
+          ],
+          "materialUnknown": false,
+          "decision": "support-only-this-conditional-local-operation-wording; excluded host/global behavior is not covered"
+        },
+        "training": {
+          "summary": "Selected local rule branches do not implement a training submission operation. No vendor-wide no-training policy inferred, and hosted Basic/Premium excluded.",
+          "reviewedAt": "2026-10-17",
+          "evidence": [
+            "seed/research/languagetool-cli-source-2026-10-17.json",
+            "seed/research/languagetool-cli-defaults-2026-10-17.json",
+            "seed/research/languagetool-distribution-profile-2026-10-17.json",
+            "seed/research/languagetool-synthetic-profile-2026-10-17.json"
+          ],
+          "materialUnknown": false,
+          "decision": "support-only-this-conditional-local-operation-wording; excluded host/global behavior is not covered"
+        },
+        "integrations": {
+          "summary": "Direct command-line entry only. No server/client/add-on, language-model resource, custom rules or external diagnostic feature included. Controlled home/tmp paths and rejected injected JVM options are conditions, not OS containment.",
+          "reviewedAt": "2026-10-17",
+          "evidence": [
+            "seed/research/languagetool-cli-source-2026-10-17.json",
+            "seed/research/languagetool-cli-defaults-2026-10-17.json",
+            "seed/research/languagetool-distribution-profile-2026-10-17.json",
+            "seed/research/languagetool-synthetic-profile-2026-10-17.json"
+          ],
+          "materialUnknown": false,
+          "decision": "support-only-this-conditional-local-operation-wording; excluded host/global behavior is not covered"
+        },
+        "telemetry": {
+          "summary": "Reviewed bundled logger is console-based; empty remote factories and OTel API/global-noop/default bootstrap observations constrain the selected profile. Not an assertion of all dependency/platform side effects, externally preconfigured providers or universal zero traffic.",
+          "reviewedAt": "2026-10-17",
+          "evidence": [
+            "seed/research/languagetool-cli-source-2026-10-17.json",
+            "seed/research/languagetool-cli-defaults-2026-10-17.json",
+            "seed/research/languagetool-distribution-profile-2026-10-17.json",
+            "seed/research/languagetool-synthetic-profile-2026-10-17.json"
+          ],
+          "materialUnknown": false,
+          "decision": "support-only-this-conditional-local-operation-wording; excluded host/global behavior is not covered"
+        },
+        "rights": {
+          "summary": "Official local6.6 distribution COPYING identifies LGPL plus separately licensed resources/libraries; portable JRE and component notices separate. No hosted service subscription used; no complete legal audit.",
+          "reviewedAt": "2026-10-17",
+          "evidence": [
+            "seed/research/languagetool-cli-source-2026-10-17.json",
+            "seed/research/languagetool-cli-defaults-2026-10-17.json",
+            "seed/research/languagetool-distribution-profile-2026-10-17.json",
+            "seed/research/languagetool-synthetic-profile-2026-10-17.json"
+          ],
+          "materialUnknown": false,
+          "decision": "support-only-this-conditional-local-operation-wording; excluded host/global behavior is not covered"
+        }
+      },
+      "product": {
+        "slug": "languagetool-local-cli-6-6",
+        "name": "LanguageTool — reviewed local profile",
+        "description": "Technical direct CLI workflow for reviewing English passive constructions, manually editing and rechecking under explicitly local settings. Research probe is not the product.",
+        "websiteUrl": "https://languagetool.org/",
+        "status": "draft",
+        "anchors": [
+          {
+            "slug": "grammarly",
+            "name": "grammarly",
+            "value": null,
+            "description": "Technical direct CLI workflow for reviewing English passive constructions, manually editing and rechecking under explicitly local settings. Research probe is not the product.",
+            "scope": "personal-english-passive-construction-review",
+            "verificationStatus": "verified",
+            "confidence": 0.9,
+            "lastVerifiedAt": "2026-10-17",
+            "sources": [
+              {
+                "title": "Fixed edition primary reference; bounded local evidence in provenance",
+                "url": "https://github.com/languagetool-org/languagetool/blob/f13e71a7fe85a122290826fd691d267d64e97c33/COPYING.txt",
+                "retrievedAt": "2026-10-17"
+              }
+            ],
+            "relationshipType": "alternative"
+          }
+        ],
+        "attributes": [
+          {
+            "slug": "privacy-friendly",
+            "name": "privacy-friendly",
+            "value": true,
+            "description": "Conditional selected-use statement for fixed LanguageTool6.6 direct CLI: local rules process English stdin with no server/client or selected remote-rule resources. Require fixed distribution, explicit settings and no injected JVM options. Text-bearing JSON, diagnostic/error snippets and caller copies remain local-operation outputs to manage; no no-retention, network-block or whole-host guarantee.",
+            "scope": "personal-english-passive-construction-review",
+            "verificationStatus": "verified",
+            "confidence": 0.85,
+            "lastVerifiedAt": "2026-10-17",
+            "sources": [
+              {
+                "title": "Fixed6.6 CLI selected source/default branches, corroborated by pinned-distribution synthetic controls in provenance",
+                "url": "https://github.com/languagetool-org/languagetool/tree/f13e71a7fe85a122290826fd691d267d64e97c33/languagetool-commandline",
+                "retrievedAt": "2026-10-17"
+              }
+            ]
+          },
+          {
+            "slug": "pricing-model",
+            "name": "pricing-model",
+            "value": "Local open-source6.6 distribution under LGPL with separately licensed bundled components; hosted Premium and support services excluded. No service subscription used for reviewed local operation.",
+            "description": "Local open-source6.6 distribution under LGPL with separately licensed bundled components; hosted Premium and support services excluded. No service subscription used for reviewed local operation.",
+            "scope": "personal-english-passive-construction-review",
+            "verificationStatus": "verified",
+            "confidence": 0.9,
+            "lastVerifiedAt": "2026-10-17",
+            "sources": [
+              {
+                "title": "Fixed edition primary reference; bounded local evidence in provenance",
+                "url": "https://github.com/languagetool-org/languagetool/blob/f13e71a7fe85a122290826fd691d267d64e97c33/COPYING.txt",
+                "retrievedAt": "2026-10-17"
+              }
+            ]
+          },
+          {
+            "slug": "trade-off-summary",
+            "name": "trade-off-summary",
+            "value": "Requires portable Java/CLI and explicit local rule/config management. JSON/errors may contain prose; caller must manage output and files. Naive style coverage, no automatic rewrite or hosted Premium parity. Fixed-case research probe is not a daily editor.",
+            "description": "Requires Java and command-line setup; fixed English style-rule profile; no Premium parity or universal grammar coverage.",
+            "scope": "personal-english-passive-construction-review",
+            "verificationStatus": "verified",
+            "confidence": 0.9,
+            "lastVerifiedAt": "2026-10-17",
+            "sources": [
+              {
+                "title": "Fixed edition primary reference; bounded local evidence in provenance",
+                "url": "https://github.com/languagetool-org/languagetool/blob/f13e71a7fe85a122290826fd691d267d64e97c33/COPYING.txt",
+                "retrievedAt": "2026-10-17"
+              }
+            ]
+          }
+        ],
+        "audiences": [],
+        "problems": [],
+        "routes": []
+      }
+    },
+    {
+      "family": "write-good",
+      "profileId": "write-good-local-library-1-0-8",
+      "relationshipProfile": "write-good-local-library-1-0-8",
+      "privacyProfile": "write-good-local-library-1-0-8",
+      "axes": {
+        "processing": {
+          "summary": "The exact npm1.0.8 direct-function profile executes string matching in local Node memory. Source acquisition used network before input; no input sent through package installation.",
+          "reviewedAt": "2026-10-17",
+          "evidence": [
+            "seed/research/write-good-library-review-2026-10-17.json"
+          ],
+          "materialUnknown": false,
+          "decision": "supported-for-exact-function-path-with-stated-limits"
+        },
+        "retention": {
+          "summary": "Input, returned matched prose and module regex state are in managed memory. Inspected14 loaded files do not implement direct persistence. Caller logs, saved outputs, OS diagnostics, heap snapshots and secure deletion are excluded, explicit residual risks. Local memory lifetime is not claimed zero.",
+          "reviewedAt": "2026-10-17",
+          "evidence": [
+            "seed/research/write-good-library-review-2026-10-17.json"
+          ],
+          "materialUnknown": false,
+          "decision": "supported-for-exact-function-path-with-stated-limits"
+        },
+        "training": {
+          "summary": "No training/submission function in selected loaded source path; no vendor-wide policy inference or claim about arbitrary caller.",
+          "reviewedAt": "2026-10-17",
+          "evidence": [
+            "seed/research/write-good-library-review-2026-10-17.json"
+          ],
+          "materialUnknown": false,
+          "decision": "supported-for-exact-function-path-with-stated-limits"
+        },
+        "integrations": {
+          "summary": "Stock checks only; non-passive modules still loaded and inspected. No custom checks, annotate invocation, editor/CLI/server integration, or external callback supplied.",
+          "reviewedAt": "2026-10-17",
+          "evidence": [
+            "seed/research/write-good-library-review-2026-10-17.json"
+          ],
+          "materialUnknown": false,
+          "decision": "supported-for-exact-function-path-with-stated-limits"
+        },
+        "telemetry": {
+          "summary": "Selected loaded source contains no account, telemetry, network, console or process-spawn call. This does not attest Node runtime/OS or importing application behavior. The claim is about the reviewed function path, not the entire host process.",
+          "reviewedAt": "2026-10-17",
+          "evidence": [
+            "seed/research/write-good-library-review-2026-10-17.json"
+          ],
+          "materialUnknown": false,
+          "decision": "supported-for-exact-function-path-with-stated-limits"
+        },
+        "rights": {
+          "summary": "Eight locked package metadata declarations MIT, core LICENSE inspected. No paid account or hosted service required by tested local operation; notices and integration costs remain separate.",
+          "reviewedAt": "2026-10-17",
+          "evidence": [
+            "seed/research/write-good-library-review-2026-10-17.json"
+          ],
+          "materialUnknown": false,
+          "decision": "supported-for-exact-function-path-with-stated-limits"
+        }
+      },
+      "product": {
+        "slug": "write-good-local-library-1-0-8",
+        "name": "write-good — reviewed local profile",
+        "description": "A developer-oriented local function for highlighting likely passive English constructions, manually revising and rechecking. It requires a caller and does not supply a Grammarly-like editor.",
+        "websiteUrl": "https://github.com/btford/write-good",
+        "status": "draft",
+        "anchors": [
+          {
+            "slug": "grammarly",
+            "name": "grammarly",
+            "value": null,
+            "description": "A developer-oriented local function for highlighting likely passive English constructions, manually revising and rechecking. It requires a caller and does not supply a Grammarly-like editor.",
+            "scope": "personal-english-passive-construction-review",
+            "verificationStatus": "verified",
+            "confidence": 0.9,
+            "lastVerifiedAt": "2026-10-17",
+            "sources": [
+              {
+                "title": "Fixed edition primary reference; bounded local evidence in provenance",
+                "url": "https://github.com/btford/write-good/blob/6940b034c6f5a7e101c01a24d651a778fc3fe435/package.json",
+                "retrievedAt": "2026-10-17"
+              }
+            ],
+            "relationshipType": "alternative"
+          }
+        ],
+        "attributes": [
+          {
+            "slug": "privacy-friendly",
+            "name": "privacy-friendly",
+            "value": true,
+            "description": "For the fixed direct local function profile only: inspected loaded source performs in-memory matching and returns text-bearing suggestions, without direct network or persistence calls. Caller storage, integrations, runtime/OS diagnostics and memory deletion are outside this claim. Requires technical integration; not a vendor-wide privacy guarantee.",
+            "scope": "personal-english-passive-construction-review",
+            "verificationStatus": "verified",
+            "confidence": 0.9,
+            "lastVerifiedAt": "2026-10-17",
+            "sources": [
+              {
+                "title": "npm1.0.8 release source;14-file loaded path and synthetic workflow reviewed in PR5.90",
+                "url": "https://registry.npmjs.org/write-good/-/write-good-1.0.8.tgz",
+                "retrievedAt": "2026-10-17"
+              }
+            ]
+          },
+          {
+            "slug": "pricing-model",
+            "name": "pricing-model",
+            "value": "Pinned local npm1.0.8 package and seven dependency metadata records declare MIT; no paid service used. Caller integration costs excluded.",
+            "description": "Pinned local npm1.0.8 package and seven dependency metadata records declare MIT; no paid service used. Caller integration costs excluded.",
+            "scope": "personal-english-passive-construction-review",
+            "verificationStatus": "verified",
+            "confidence": 0.9,
+            "lastVerifiedAt": "2026-10-17",
+            "sources": [
+              {
+                "title": "Fixed edition primary reference; bounded local evidence in provenance",
+                "url": "https://github.com/btford/write-good/blob/6940b034c6f5a7e101c01a24d651a778fc3fe435/package.json",
+                "retrievedAt": "2026-10-17"
+              }
+            ]
+          },
+          {
+            "slug": "trade-off-summary",
+            "name": "trade-off-summary",
+            "value": "Node integration required; heuristic detector, no automatic rewrite; caller owns presentation and retention.",
+            "description": "Node integration required; heuristic detector, no automatic rewrite; caller owns presentation and retention.",
+            "scope": "personal-english-passive-construction-review",
+            "verificationStatus": "verified",
+            "confidence": 0.9,
+            "lastVerifiedAt": "2026-10-17",
+            "sources": [
+              {
+                "title": "Fixed edition primary reference; bounded local evidence in provenance",
+                "url": "https://github.com/btford/write-good/blob/6940b034c6f5a7e101c01a24d651a778fc3fe435/package.json",
+                "retrievedAt": "2026-10-17"
+              }
+            ]
+          }
+        ],
+        "audiences": [],
+        "problems": [],
+        "routes": []
+      }
+    },
+    {
+      "family": "Vale",
+      "profileId": "vale-local-passive-3-24-0",
+      "relationshipProfile": "vale-local-passive-3-24-0",
+      "privacyProfile": "vale-local-passive-3-24-0",
+      "axes": {
+        "processing": {
+          "summary": "Draft boundary: The selected profile uses local configuration and a local existence rule, with empty NLP endpoint and profiling variables excluded. JSON contains matched prose. Optional remote NLP, pipeline configurations and profiling exist in the product and must remain outside this scoped operation.",
+          "reviewedAt": "2026-10-17",
+          "evidence": [
+            "seed/research/vale-local-rule-review-2026-10-17.json",
+            "seed/research/vale-data-path-review-2026-10-17.json"
+          ],
+          "materialUnknown": false,
+          "decision": "Selected profile only; limits in dossier."
+        },
+        "retention": {
+          "summary": "Draft boundary: The selected profile uses local configuration and a local existence rule, with empty NLP endpoint and profiling variables excluded. JSON contains matched prose. Optional remote NLP, pipeline configurations and profiling exist in the product and must remain outside this scoped operation.",
+          "reviewedAt": "2026-10-17",
+          "evidence": [
+            "seed/research/vale-local-rule-review-2026-10-17.json",
+            "seed/research/vale-data-path-review-2026-10-17.json"
+          ],
+          "materialUnknown": null,
+          "decision": "Exact proposed statement still needs axis-specific claim decision; not proof of a negative finding."
+        },
+        "training": {
+          "summary": "Draft boundary: The selected profile uses local configuration and a local existence rule, with empty NLP endpoint and profiling variables excluded. JSON contains matched prose. Optional remote NLP, pipeline configurations and profiling exist in the product and must remain outside this scoped operation.",
+          "reviewedAt": "2026-10-17",
+          "evidence": [
+            "seed/research/vale-local-rule-review-2026-10-17.json",
+            "seed/research/vale-data-path-review-2026-10-17.json"
+          ],
+          "materialUnknown": false,
+          "decision": "Selected profile only; limits in dossier."
+        },
+        "integrations": {
+          "summary": "Draft boundary: The selected profile uses local configuration and a local existence rule, with empty NLP endpoint and profiling variables excluded. JSON contains matched prose. Optional remote NLP, pipeline configurations and profiling exist in the product and must remain outside this scoped operation.",
+          "reviewedAt": "2026-10-17",
+          "evidence": [
+            "seed/research/vale-local-rule-review-2026-10-17.json",
+            "seed/research/vale-data-path-review-2026-10-17.json"
+          ],
+          "materialUnknown": false,
+          "decision": "Selected profile only; limits in dossier."
+        },
+        "telemetry": {
+          "summary": "Draft boundary: The selected profile uses local configuration and a local existence rule, with empty NLP endpoint and profiling variables excluded. JSON contains matched prose. Optional remote NLP, pipeline configurations and profiling exist in the product and must remain outside this scoped operation.",
+          "reviewedAt": "2026-10-17",
+          "evidence": [
+            "seed/research/vale-local-rule-review-2026-10-17.json",
+            "seed/research/vale-data-path-review-2026-10-17.json"
+          ],
+          "materialUnknown": null,
+          "decision": "Exact proposed statement still needs axis-specific claim decision; not proof of a negative finding."
+        },
+        "rights": {
+          "summary": "Local Vale CLI under MIT; fixed Microsoft rule set MIT separately. Hosted CMS and paid services excluded.",
+          "reviewedAt": "2026-10-17",
+          "evidence": [
+            "seed/research/vale-local-rule-review-2026-10-17.json",
+            "seed/research/vale-data-path-review-2026-10-17.json"
+          ],
+          "materialUnknown": false,
+          "decision": "Selected profile only; limits in dossier."
+        }
+      },
+      "product": {
+        "slug": "vale-local-passive-3-24-0",
+        "name": "Vale — reviewed local profile",
+        "description": "A configurable local command-line workflow for identifying likely passive constructions in plain English text, manually editing and rechecking. Suggestion threshold must be enabled for the chosen rule.",
+        "websiteUrl": "https://vale.sh/",
+        "status": "draft",
+        "anchors": [
+          {
+            "slug": "grammarly",
+            "name": "grammarly",
+            "value": null,
+            "description": "A configurable local command-line workflow for identifying likely passive constructions in plain English text, manually editing and rechecking. Suggestion threshold must be enabled for the chosen rule.",
+            "scope": "personal-english-passive-construction-review",
+            "verificationStatus": "verified",
+            "confidence": 0.9,
+            "lastVerifiedAt": "2026-10-17",
+            "sources": [
+              {
+                "title": "Fixed edition primary reference; bounded local evidence in provenance",
+                "url": "https://github.com/vale-cli/vale/blob/2ee781716f8c177c2a143e18d535ddb11e264f00/LICENSE",
+                "retrievedAt": "2026-10-17"
+              }
+            ],
+            "relationshipType": "alternative"
+          }
+        ],
+        "attributes": [
+          {
+            "slug": "privacy-friendly",
+            "name": "privacy-friendly",
+            "value": true,
+            "description": "The selected profile uses local configuration and a local existence rule, with empty NLP endpoint and profiling variables excluded. JSON contains matched prose. Optional remote NLP, pipeline configurations and profiling exist in the product and must remain outside this scoped operation.",
+            "scope": "personal-english-passive-construction-review",
+            "verificationStatus": "likely",
+            "confidence": 0.9,
+            "lastVerifiedAt": "2026-10-17",
+            "sources": [
+              {
+                "title": "Fixed edition primary reference; bounded local evidence in provenance",
+                "url": "https://github.com/vale-cli/vale/blob/2ee781716f8c177c2a143e18d535ddb11e264f00/LICENSE",
+                "retrievedAt": "2026-10-17"
+              }
+            ]
+          },
+          {
+            "slug": "pricing-model",
+            "name": "pricing-model",
+            "value": "Local Vale CLI under MIT; fixed Microsoft rule set MIT separately. Hosted CMS and paid services excluded.",
+            "description": "Local Vale CLI under MIT; fixed Microsoft rule set MIT separately. Hosted CMS and paid services excluded.",
+            "scope": "personal-english-passive-construction-review",
+            "verificationStatus": "verified",
+            "confidence": 0.9,
+            "lastVerifiedAt": "2026-10-17",
+            "sources": [
+              {
+                "title": "Fixed edition primary reference; bounded local evidence in provenance",
+                "url": "https://github.com/vale-cli/vale/blob/2ee781716f8c177c2a143e18d535ddb11e264f00/LICENSE",
+                "retrievedAt": "2026-10-17"
+              }
+            ]
+          },
+          {
+            "slug": "trade-off-summary",
+            "name": "trade-off-summary",
+            "value": "CLI and local configuration required; limited regex-based detection, no automatic rewrite. Not a hosted CMS or a browser integration.",
+            "description": "CLI and local configuration required; limited regex-based detection, no automatic rewrite. Not a hosted CMS or a browser integration.",
+            "scope": "personal-english-passive-construction-review",
+            "verificationStatus": "verified",
+            "confidence": 0.9,
+            "lastVerifiedAt": "2026-10-17",
+            "sources": [
+              {
+                "title": "Fixed edition primary reference; bounded local evidence in provenance",
+                "url": "https://github.com/vale-cli/vale/blob/2ee781716f8c177c2a143e18d535ddb11e264f00/LICENSE",
+                "retrievedAt": "2026-10-17"
+              }
+            ]
+          }
+        ],
+        "audiences": [],
+        "problems": [],
+        "routes": []
+      }
+    }
+  ],
+  "expectedResearchEligible": 2,
+  "claimChange": "Replaces broad LT process wording only in this new proposal, with conditional local CLI statement and explicit output/error/bootstrap limits. Earlier holds and frozen previews unchanged.",
+  "conditions": [
+    "Official6.6 direct CLI and pinned portable JRE/distribution; no concurrent artifact mutation assumed, no atomic/OS isolation claim.",
+    "Explicit English passive IDs, PICKY, stdin; no selected remote configuration/resources or server/client/editor.",
+    "No nonempty JAVA_TOOL_OPTIONS/JDK_JAVA_OPTIONS/_JAVA_OPTIONS; controlled home/tmp paths; no external agent/logger/provider changes.",
+    "Caller treats JSON sentence/context, error fragments and any captured copies as sensitive local outputs; no claim every copy deleted."
+  ],
+  "researchHarnessBoundary": "PR5.85/86 probes accept fixed synthetic cases and summarize output. They are reproducibility evidence, not daily writing products or privacy-enforcing general-purpose applications. CLI program is the candidate; any real-document adapter must be separately reviewed.",
+  "remainingLimits": [
+    "No complete source/binary reproducible-build equality, OS denial of network/files, complete runtime/provider attestation, secure deletion, vulnerability audit or all-JRE dependency review. None silently converted into proven properties.",
+    "Support is an editorial research decision for exact wording; broader no-exfiltration/no-retention assertions remain unsupported.",
+    "Vale current process-level statement still likely with explicit unresolved axes."
+  ],
+  "decision": "Research2/3: write-good exact function and LT conditional direct-CLI statement supported. Formal graph0, public21/9/1 and minimum3 unchanged; no import or publication.",
+  "next": "Make a concrete support/hold decision on Vale exact startup/rule/diagnostic clauses. If a material selected path remains unknown, retain route hold rather than expanding an endless capture program."
+}

@@ -503,3 +503,8 @@ Clean HEAD436fb79 and owner Production112. Three dossiers converted to standalon
 ## PR5.96 — Explicit scoped privacy claim decisions
 
 Clean HEAD809c64e and owner Production113. Existing evidence supports write-good exact local-function claim across six explicit axes, with caller memory/output and host exclusions disclosed. New proposal-only verified claim yields research1/3, while actual graph0 and21/9/1 remain. LT/Vale broader process-level clauses held for narrower wrapper/init/diagnostic wording; no new capture or blanket erasure/reproducibility gate. Frozen PR5.95 remains0. New clear success output, no engine/graph/SQL changes. See PRIVACY_CLAIM_DECISIONS.md.
+
+
+## PR5.97 — Conditional CLI privacy wording
+
+Clean HEADd942194 and owner Production114. LT broad process wording replaced only in new proposal by explicit fixed local CLI/boot/config/output conditions. Six axes support bounded statement with JSON/error/caller retention disclosed; no universal no-I/O/deletion guarantee. Synthetic harness not counted as daily writing product or generic privacy application. Research2/3 with write-good retained; Vale held. Prior snapshots unchanged, graph0/public21/9/1 unchanged. No new runtime/capture/engine/SQL changes. See CLI_CLAIM_BOUNDARY.md.
