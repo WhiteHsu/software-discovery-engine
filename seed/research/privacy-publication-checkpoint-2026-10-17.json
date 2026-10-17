@@ -1,0 +1,162 @@
+{
+  "version": 1,
+  "recordedAt": "2026-10-17",
+  "basis": "Owner executed publication apply, returned all22 verification rows true, then supplied incognito production route/product/official-destination screenshots. Owner said tests appear OK; assistant accepted this publication. Not an independent live database query.",
+  "publishedProducts": [
+    "2do",
+    "affine",
+    "anytype",
+    "appflowy",
+    "gimp",
+    "grazie-free-browser",
+    "healthy-minds-program",
+    "hemingway-free-web",
+    "joplin",
+    "krita",
+    "languagetool-local-cli-6-6",
+    "medito",
+    "obsidian",
+    "omnifocus",
+    "paint-net",
+    "pdf-xchange-editor",
+    "pdf24-creator",
+    "pdfgear",
+    "real-write-passive-checker",
+    "simplenote",
+    "smiling-mind",
+    "things",
+    "vale-local-passive-3-24-0",
+    "write-good-local-library-1-0-8"
+  ],
+  "publishedRoutes": [
+    "grammarly-alternatives-without-a-subscription",
+    "meditation-apps-without-a-subscription",
+    "notion-alternatives-without-ai",
+    "offline-notion-alternatives",
+    "pdf-editors-without-a-subscription",
+    "photoshop-alternatives-without-a-subscription",
+    "privacy-friendly-grammarly-alternatives",
+    "productivity-apps-you-can-buy-once",
+    "simple-notion-alternatives",
+    "todoist-alternatives-with-a-one-time-purchase"
+  ],
+  "head": "742c81a8d689fca9f8da0b453d8712c4f91cc567",
+  "verification": {
+    "path": "supabase/verification/PR5.104_VERIFY.sql",
+    "normalizedSha256": "8092cb4e49d4dd10ff56d6fd4f54d1aff0c52c4ce74e5d21fe35689bf575700c",
+    "results": [
+      {
+        "check_name": "exact_products",
+        "passed": true
+      },
+      {
+        "check_name": "exact_product_attributes",
+        "passed": true
+      },
+      {
+        "check_name": "exact_product_anchors",
+        "passed": true
+      },
+      {
+        "check_name": "exact_product_problems",
+        "passed": true
+      },
+      {
+        "check_name": "exact_product_audiences",
+        "passed": true
+      },
+      {
+        "check_name": "exact_product_attribute_evidence",
+        "passed": true
+      },
+      {
+        "check_name": "exact_product_anchor_evidence",
+        "passed": true
+      },
+      {
+        "check_name": "exact_product_problem_evidence",
+        "passed": true
+      },
+      {
+        "check_name": "exact_product_audience_evidence",
+        "passed": true
+      },
+      {
+        "check_name": "exact_claim_evidence",
+        "passed": true
+      },
+      {
+        "check_name": "exact_evidence_sources",
+        "passed": true
+      },
+      {
+        "check_name": "exact_attributes",
+        "passed": true
+      },
+      {
+        "check_name": "exact_anchors",
+        "passed": true
+      },
+      {
+        "check_name": "exact_problems",
+        "passed": true
+      },
+      {
+        "check_name": "exact_audiences",
+        "passed": true
+      },
+      {
+        "check_name": "exact_escape_routes",
+        "passed": true
+      },
+      {
+        "check_name": "exact_escape_route_products",
+        "passed": true
+      },
+      {
+        "check_name": "public_operation_statement",
+        "passed": true
+      },
+      {
+        "check_name": "published_slug_sets",
+        "passed": true
+      },
+      {
+        "check_name": "public_product_qualification_fields",
+        "passed": true
+      },
+      {
+        "check_name": "public_read_rls_and_policies",
+        "passed": true
+      },
+      {
+        "check_name": "anon_private_evidence_boundary",
+        "passed": true
+      }
+    ]
+  },
+  "frontEndEvidence": {
+    "basis": "Nine owner screenshots, no new assistant browser session.",
+    "route": "https://software-discovery-engine.vercel.app/escape/privacy-friendly-grammarly-alternatives",
+    "productPages": [
+      "https://software-discovery-engine.vercel.app/software/languagetool-local-cli-6-6",
+      "https://software-discovery-engine.vercel.app/software/vale-local-passive-3-24-0",
+      "https://software-discovery-engine.vercel.app/software/write-good-local-library-1-0-8"
+    ],
+    "officialDestinations": [
+      "https://languagetool.org/",
+      "https://vale.sh/",
+      "https://github.com/btford/write-good"
+    ],
+    "checks": [
+      "Production route has no draft banner",
+      "Three reviewed local candidates shown with conditions and limits",
+      "Three production product pages open without draft banner",
+      "Three official destinations open"
+    ],
+    "limit": "Screenshots do not assert exhaustive source-content validation, mobile QA, analytics health or experimental demand."
+  },
+  "scope": "Fixed local CLI/library operation profiles for English passive-construction review and manual revision/recheck. No universal privacy or complete Grammarly-replacement claim.",
+  "experimentStarted": false,
+  "issueClosedByOwner": false
+}

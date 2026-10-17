@@ -43,5 +43,8 @@ export function latestPublicationAudit(){
  return {...report,qualificationBasis:'Reviewed writing-stage draft reconstruction; accepted publication from owner approval/SQL/public-page evidence. Not a live database query or new publication approval.'};
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
- try{if(process.argv.length!==2)throw Error('No arguments supported');const report=latestPublicationAudit(),out=path.join(root,'.seed-output/escape');fs.mkdirSync(out,{recursive:true});fs.writeFileSync(path.join(out,'remaining-routes.json'),JSON.stringify(report,null,2)+'\n');console.log(`Owner-confirmed: ${report.publishedProducts} products, ${report.acceptedPublishedRoutes}/10 routes. Remaining: ${report.remainingRoutes}. No graph changes or remote writes.`);for(const r of report.routes.filter(r=>r.publication==='not-published'))console.log(`${r.name}: ${r.qualifiedDraftGraphCandidates}/${r.curatedCandidates} qualified curated draft-graph candidates; ${r.researchShortlist.length} research-only names.`);}catch(e){console.error(e.message);process.exitCode=1;}
+ if(process.argv.length!==2){console.error("No arguments supported");process.exitCode=1;}
+ else import("./accepted-publication-audit.mjs").then(({acceptedPublicationAudit})=>{
+ const report=acceptedPublicationAudit(),out=path.join(root,".seed-output/escape");fs.mkdirSync(out,{recursive:true});fs.writeFileSync(path.join(out,"remaining-routes.json"),JSON.stringify(report,null,2)+"\n");console.log("Owner-confirmed: "+report.publishedProducts+" products, "+report.acceptedPublishedRoutes+"/10 routes. Remaining: "+report.remainingRoutes+". No graph changes or remote writes.");
+ }).catch(e=>{console.error(e.message);process.exitCode=1;});
 }

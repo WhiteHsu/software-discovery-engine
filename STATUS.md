@@ -1,6 +1,6 @@
 # Project Status
 
-**Last Updated:** 2026-10-13
+**Last Updated:** 2026-10-17
 
 ## Current Phase
 
@@ -8,7 +8,9 @@
 
 ## Current Work
 
-**Issue #5 — Escape Route Engine: in progress (PR5.26 accepted; PR5.29 accepted; PR5.30 accepted; PR5.31 accepted; PR5.32 post-import snapshot received; PR5.33 production publication accepted; PR5.34 acceptance/checkpoint prepared)**
+**Issue #5 — Escape Route Engine: all 10 launch routes published and owner-accepted; GitHub issue closure not recorded.**
+
+Current accepted checkpoint: **24 published products / 10 routes / 0 remaining routes**. PR5.104 publication22/22 and production UI/link acceptance completed. The 30-day experiment has not started; see POST_ESCAPE_VALIDATION_READINESS.md. Historical entries below describe their original stages.
 
 Issue #4 was closed by the owner on 2026-10-07 after production acceptance. Application/publication commits b7568d1 and c9dad66; acceptance commits 80a8828 and 80e537e. The owner confirmed official CTA and pricing-source clicks in Chrome. At that acceptance milestone only Obsidian was published. PR5.9 subsequently published three additional products and one route, as recorded below.
 
@@ -539,3 +541,7 @@ Owner returned PR5.102 verification32/32 true after apply;3 scoped drafts import
 ## PR5.104 — Guarded scoped privacy publication proposal
 
 Owner pushed94cafe4 and returned actual PR5.103 snapshot. Stored import rows match;3 actual scoped editions qualify via runtime, generic draft and published route retained. Concrete rollback rehearsal/pending-approved apply/22-check verification prepared. Only3 product statuses and1 route status/approval would change; expected24/10/0 after acceptance, current accepted21/9/1 unchanged.23 local tests passed; no remote publication or approval. See PRIVACY_PUBLICATION_PROPOSAL.md.
+
+## PR5.105 — Privacy publication acceptance and ten-route milestone
+
+Owner applied publication, returned22/22 true and nine incognito production screenshots confirming route/three product pages/official destinations. Accepted24/10/0 checkpoint recorded; default route audit now reflects it while historical15/7/3,18/8/2,21/9/1 functions remain frozen for pinned research. No SQL or runtime change. Ten-route scope complete, broader Validation MVP gates and Issue11 remain unverified; experiment not started. See PRIVACY_PUBLICATION_ACCEPTANCE.md and POST_ESCAPE_VALIDATION_READINESS.md.
