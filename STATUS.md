@@ -508,3 +508,8 @@ Clean HEAD809c64e and owner Production113. Existing evidence supports write-good
 ## PR5.97 — Conditional CLI privacy wording
 
 Clean HEADd942194 and owner Production114. LT broad process wording replaced only in new proposal by explicit fixed local CLI/boot/config/output conditions. Six axes support bounded statement with JSON/error/caller retention disclosed; no universal no-I/O/deletion guarantee. Synthetic harness not counted as daily writing product or generic privacy application. Research2/3 with write-good retained; Vale held. Prior snapshots unchanged, graph0/public21/9/1 unchanged. No new runtime/capture/engine/SQL changes. See CLI_CLAIM_BOUNDARY.md.
+
+
+## PR5.98 — Vale conditional claim and three research dossiers
+
+Clean HEAD4e7f9f6 and owner Production115. Fixed source default-style/config/manager/extension/linter initialization sections reviewed. Selected local Vale profile supported with explicit pipeline/endpoint/profiling/no-script/output conditions and retained caller/OS limits. New research3/3, actual graph0/public21/9/1 unchanged; old0/1/2 snapshots immutable. No new binary run/download/capture or production engine/graph/SQL change. Next actual seed-contract draft and scoped production guards, not further default probes. See VALE_CLAIM_DECISION.md.
