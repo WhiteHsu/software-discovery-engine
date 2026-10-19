@@ -1,3 +1,4 @@
+import {requestSeo} from "@/lib/discovery/seo-server";
 import DiscoveryTracker from '@/components/DiscoveryTracker';
 import {pageTrackingEnabled} from '@/lib/analytics/page-tracking';
 import type {Metadata} from "next";
@@ -11,7 +12,8 @@ type Props={params:Promise<{slug:string}>};
 export const dynamic="force-dynamic";
 export async function generateMetadata({params}:Props):Promise<Metadata>{
   const {slug}=await params,p=await getEscape(slug);
-  return {title:p?.name??"Escape Route not available",description:p?.description??undefined,metadataBase:new URL(safeUrl(process.env.NEXT_PUBLIC_SITE_URL)??"https://software-discovery-engine.vercel.app"),alternates:{canonical:`/escape/${slug}`},robots:{index:!!p&&!escapePreview(),follow:!!p&&!escapePreview()}};
+  const seo=await requestSeo();
+  return {title:p?.name??"Escape Route not available",description:p?.description??undefined,metadataBase:new URL(seo.origin),alternates:{canonical:`/escape/${slug}`},robots:{index:seo.indexable&&!!p&&!escapePreview(),follow:seo.indexable&&!!p&&!escapePreview()}};
 }
 const date=(value:string|null)=>value&&Number.isFinite(Date.parse(value))?new Date(value).toISOString().slice(0,10):"Unknown";
 export default async function Escape({params}:Props){

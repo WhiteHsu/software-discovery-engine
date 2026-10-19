@@ -1,8 +1,14 @@
+import {requestSeo} from "@/lib/discovery/seo-server";
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
 
-export const metadata: Metadata = {
+export async function generateMetadata():Promise<Metadata>{
+ const seo=await requestSeo();
+ return {
+  metadataBase:new URL(seo.origin),
+  alternates:{canonical:"/"},
+  robots:{index:seo.indexable,follow:seo.indexable},
   title: {
     default: "Software Discovery Engine",
     template: "%s | Software Discovery Engine",
@@ -10,6 +16,7 @@ export const metadata: Metadata = {
   description:
     "A constraint-aware discovery engine for finding great software beyond the big names.",
 };
+}
 
 export default function RootLayout({
   children,

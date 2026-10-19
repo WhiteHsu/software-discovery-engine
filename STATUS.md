@@ -589,3 +589,7 @@ Owner accepted configuration8/8 + storage10/10 and actual2026-10-19 Taipei11:17 
 ## PR5.114 — Cloud QA receipts and metric QA exclusion
 
 Owner b6bd041 collector HTTP4/4 + SQL3/3 accepted; enabled browser route→AFFiNE→official journey HTTP4/4 + SQL6/6 accepted. Producer restoredfalse and Ready/Current deployment observed; fresh disabled-context network check pending. Recorded2knownQA sessions and1event fallback; discoveryMetrics now excludes them after validation/dedup and reports excludedQaEvents. No DB changes/secrets accessed, no demand inference. Browser privacy/mobile/edge QA and broader launch requirements remain pending; experiment not started. See ANALYTICS_CLOUD_ACCEPTANCE.md.
+
+## PR5.115 — Live public sitemap and canonical-host indexing policy
+
+Owner f701679 / Production132;31 tests/typecheck/build accepted. Added dynamic live sitemap from public published product RPCs and runtime-qualified registered routes, no private/fixture fallback or inventeddates;503 on read failure. Added robots and shared canonical-production index policy across root/product/route metadata, preview/alias noindex. No DB/grant/secret/analytics flag changes. Owner deployed output QA pending; product count/search/HiddenGems/otherlaunchgates remain; experiment not started. See DISCOVERY_SEO_REVIEW.md.
