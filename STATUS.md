@@ -569,3 +569,15 @@ Owner PR5.109 storage10/10 accepted atd1a38d8 / Production127. Added bounded sam
 ## PR5.111 — Disabled-by-default browser producer and maintenance capability preflight
 
 Owner pushedd4ecd5b / Production128;21 tests/build and disabled POST404 accepted. Wired published route/product exposure/view/click/outbound with server-only enable decision, tab/session/page/exposure UUIDs, continuous visible product-entry threshold, shared-placement dedup, bounded best-effort transport and cleanup. Gates remain off; no actual visitor collection or daily job enabled.25 tests, typecheck/targeted lint/build and11 isolated SQL scenario groups passed. Read-only maintenance capability snapshot pending before daily purge configuration. Public24/10/0, experiment-not-started preserved. See DISCOVERY_PRODUCER_REVIEW.md.
+
+## PR5.112 — Daily purge installation and scheduling proposal
+
+Owner PR5.111 snapshot confirms pg_cron absent/available1.6.4, empty events and preserved24/10/private boundary. Prepared guarded shared-extension install plus one daily scoped purge job, rollback rehearsal, read-only configuration/run evidence and exact-job removal. Collection flags remain false; actual Supabase rehearsal/apply and successful scheduled run pending. No experiment start. See ANALYTICS_MAINTENANCE_REVIEW.md.
+
+## PR5.112 — Daily purge installation and scheduling proposal
+
+Owner PR5.111 snapshot confirms pg_cron absent/available1.6.4, empty events and preserved24/10/private boundary. Prepared guarded shared-extension install plus one daily scoped purge job, rollback rehearsal, read-only configuration/run evidence and exact-job removal. Collection flags remain false; actual Supabase rehearsal/apply and successful scheduled run pending. No experiment start. See ANALYTICS_MAINTENANCE_REVIEW.md.
+
+## PR5.112A — Installed-scheduler recovery proposal
+
+Owner rehearsal true; first-install migration refused existing cron state. New03:19:59Z owner snapshot confirms installedpg_cron1.6.4, emptyevents, unchangedpurge/public24/10/privateboundary; job state unknown. Recovery validates existing extension, creates only absent scoped job, retains an exact existing one and rejects drift. No extension/grant/other-job changes. Owner recovery rehearsal/apply/configuration+actual-run evidence pending. Collection OFF; experiment not started. See ANALYTICS_MAINTENANCE_RECOVERY.md.

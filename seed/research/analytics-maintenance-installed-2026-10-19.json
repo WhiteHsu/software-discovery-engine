@@ -1,0 +1,42 @@
+{
+  "packet": "PR5.112A",
+  "source": "Owner-supplied PR5.111 read-only snapshot; not independently queried",
+  "captured_at": "2026-10-19T03:19:59.392314+00:00",
+  "database": "postgres",
+  "executor": "postgres",
+  "pg_cron": {
+    "schema": "pg_catalog",
+    "version": "1.6.4"
+  },
+  "cron_database": "postgres",
+  "available_pg_cron": {
+    "default_version": "1.6.4",
+    "installed_version": "1.6.4"
+  },
+  "schedule_text_text_text_execute": true,
+  "unschedule_bigint_execute": true,
+  "cron_job_readable": true,
+  "cron_job_run_details_readable": true,
+  "purge_function": {
+    "owner": "postgres",
+    "settings": [
+      "search_path=pg_catalog"
+    ],
+    "can_execute": true,
+    "definition_md5": "853671b9a4d6484b164b337685297f2e",
+    "security_definer": true
+  },
+  "event_counts": {
+    "total": 0,
+    "older_than_90_days": 0
+  },
+  "published_product_count": 24,
+  "approved_route_count": 10,
+  "private_analytics_tables": true,
+  "job_existence": "not captured",
+  "cron_timezone": "not captured",
+  "cron_log_run": "not captured",
+  "cause_of_extension_installation": "unknown; no claim that rollback caused installation",
+  "analytics_enabled": false,
+  "experiment_started": false
+}

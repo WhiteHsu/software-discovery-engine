@@ -1,0 +1,9 @@
+-- Owner-only, read-only. Run only AFTER successful persistent apply.
+SELECT 'pg_cron_installed' AS check_name, EXISTS(SELECT 1 FROM pg_extension e JOIN pg_namespace n ON n.oid=e.extnamespace WHERE e.extname='pg_cron' AND e.extversion='1.6.4' AND n.nspname='pg_catalog') AS passed
+UNION ALL SELECT 'daily_job_exact',count(*)=1 AND coalesce(bool_and(schedule='17 3 * * *' AND command='SELECT software_discovery.purge_discovery_events();' AND database='postgres' AND username='postgres' AND active),false) FROM cron.job WHERE jobname='software_discovery_analytics_purge_v1'
+UNION ALL SELECT 'cron_clock_utc',current_setting('cron.database_name',true)='postgres' AND coalesce(nullif(current_setting('cron.timezone',true),''),'GMT') IN ('GMT','UTC','Etc/UTC')
+UNION ALL SELECT 'purge_definition_preserved',pg_get_userbyid(proowner)='postgres' AND prosecdef AND proconfig=ARRAY['search_path=pg_catalog']::text[] AND md5(pg_get_functiondef(oid))='853671b9a4d6484b164b337685297f2e' FROM pg_proc WHERE oid='software_discovery.purge_discovery_events()'::regprocedure
+UNION ALL SELECT 'private_tables_and_rls',count(*)=2 AND bool_and(relrowsecurity AND relforcerowsecurity) FROM pg_class WHERE oid IN ('software_discovery.discovery_events'::regclass,'software_discovery.discovery_event_limits'::regclass)
+UNION ALL SELECT 'empty_before_activation',NOT EXISTS(SELECT 1 FROM software_discovery.discovery_events) AND NOT EXISTS(SELECT 1 FROM software_discovery.discovery_event_limits)
+UNION ALL SELECT 'published_counts_preserved',(SELECT count(*)=24 FROM software_discovery.products WHERE status='published') AND (SELECT count(*)=10 FROM software_discovery.escape_routes WHERE status='published' AND editorially_approved)
+UNION ALL SELECT 'anon_private_evidence_boundary',has_function_privilege('anon','software_discovery.product_discovery_page(text)','EXECUTE') AND NOT has_table_privilege('anon','software_discovery.claim_evidence','SELECT');

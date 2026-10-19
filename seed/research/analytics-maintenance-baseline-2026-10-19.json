@@ -1,0 +1,31 @@
+{
+  "packet": "PR5.111",
+  "pg_cron": null,
+  "database": "postgres",
+  "executor": "postgres",
+  "read_only": true,
+  "captured_at": "2026-10-19T02:57:57.704031+00:00",
+  "event_counts": {
+    "total": 0,
+    "older_than_90_days": 0
+  },
+  "cron_database": "postgres",
+  "cron_functions": [],
+  "cron_relations": [],
+  "purge_function": {
+    "owner": "postgres",
+    "settings": [
+      "search_path=pg_catalog"
+    ],
+    "can_execute": true,
+    "definition_md5": "853671b9a4d6484b164b337685297f2e",
+    "security_definer": true
+  },
+  "available_pg_cron": {
+    "default_version": "1.6.4",
+    "installed_version": null
+  },
+  "approved_route_count": 10,
+  "published_product_count": 24,
+  "private_analytics_tables": true
+}
