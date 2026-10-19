@@ -1,0 +1,12 @@
+{
+  "packet": "PR5.111",
+  "recordedAt": "2026-10-19",
+  "head": "d4ecd5b512c4e0b52f26abaff6f986c7690e4200",
+  "basis": "Owner screenshots confirm21 tests passed, production build completed, push/deployment128 succeeded and canonical-site POST /api/events returned404 while collection disabled.",
+  "testsPassed": 21,
+  "disabledPostStatus": 404,
+  "enabledCloudCollectionVerified": false,
+  "browserProducerVerified": false,
+  "maintenanceScheduled": false,
+  "experimentStarted": false
+}

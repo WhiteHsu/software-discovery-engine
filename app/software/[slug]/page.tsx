@@ -1,3 +1,5 @@
+import DiscoveryTracker from '@/components/DiscoveryTracker';
+import {pageTrackingEnabled} from '@/lib/analytics/page-tracking';
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -36,9 +38,10 @@ export default async function Product({params}:Props) {
   const positive=facts.filter(c=>c.slug!=="privacy-friendly"&&supported(c)&&c.verificationStatus==="verified"&&c.value===true);
   const audiences=p.audiences.filter(supported),problems=p.problems.filter(supported),anchors=p.anchors.filter(supported);
   return <article className={styles.page}>
+    <DiscoveryTracker enabled={!preview&&p.status==="published"&&pageTrackingEnabled()} surface="product" slug={slug} officialUrl={url} />
     {preview&&<aside className={styles.preview}>Local draft preview · Publication has not been approved.</aside>}
     <header className={styles.hero}><p className="eyebrow">Software worth a closer look</p><h1>{p.name}</h1><p className={styles.positioning}>{p.description??"Product positioning has not been reviewed yet."}</p>
-      <div className={styles.actions}>{url?<a className={styles.cta} href={url} target="_blank" rel="noopener noreferrer">Visit {p.name} ↗</a>:<span>Official website unknown</span>}<span className={styles.muted}>Latest claim check: {date(latestVerification(p))}</span></div>
+      <div className={styles.actions}>{url?<a className={styles.cta} href={url} data-discovery-outbound target="_blank" rel="noopener noreferrer">Visit {p.name} ↗</a>:<span>Official website unknown</span>}<span className={styles.muted}>Latest claim check: {date(latestVerification(p))}</span></div>
     </header>
     <section className={styles.section}><h2>Why it’s worth discovering</h2><p>Start with the supported features below, then compare the limits with your workflow.</p><Claims items={positive} empty="No positive verified feature claims are available yet."/></section>
     <div className={styles.columns}><section className={styles.section}><h2>Best for</h2><p className={styles.muted}>Audience fits are editorial judgments. “Likely” describes a potential fit.</p><Claims items={audiences} empty="Suitable audiences have not been established."/></section>
@@ -52,6 +55,6 @@ export default async function Product({params}:Props) {
     <section className={styles.section}><h2>Attribute details</h2><p className={styles.muted}>Unknown means unconfirmed. “No” appears only for a supported explicit negative claim.</p><div className={styles.facts}>{facts.map(c=><div className={styles.fact} key={c.slug}><h3>{c.name}</h3><p>{c.slug==="privacy-friendly"?(privacyOperation?"Verified only for the reviewed local operation":"Not verified for a reviewed local operation."):claimValue(c)}</p>{c.slug==="privacy-friendly"&&privacyOperation&&<p>{privacyOperation}</p>}{c.description&&<p className={styles.muted}>Attribute meaning: {c.description}</p>}<Evidence claim={privacyClaimForDisplay(p,c)}/></div>)}</div></section>
     <section className={styles.section}><h2>Mainstream software to compare</h2><p className={styles.muted}>These graph relationships describe alternatives or complements, not full replacement guarantees.</p><Claims items={anchors} empty="No supported mainstream comparison is available."/></section>
     <section className={styles.section}><h2>Related Escape Routes</h2>{p.routes.length?<ul className={styles.claims}>{p.routes.map(r=><li key={r.slug}><strong><Link href={`/escape/${r.slug}`}>{r.name}</Link></strong><p className={styles.muted}>{preview?"Draft route · not approved for publication.":r.description}</p></li>)}</ul>:<p className={styles.muted}>No approved related Escape Routes are available.</p>}</section>
-    <footer className={styles.footer}>Source checks are scoped to individual claims. They do not imply hands-on testing of every feature.{url&&<a href={url} target="_blank" rel="noopener noreferrer">Explore {p.name} on its official website ↗</a>}</footer>
+    <footer className={styles.footer}>Source checks are scoped to individual claims. They do not imply hands-on testing of every feature.{url&&<a href={url} data-discovery-outbound target="_blank" rel="noopener noreferrer">Explore {p.name} on its official website ↗</a>}</footer>
   </article>;
 }

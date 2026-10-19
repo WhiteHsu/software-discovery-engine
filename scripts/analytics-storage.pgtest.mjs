@@ -30,6 +30,10 @@ try{
   await db.exec(read('supabase/migrations/202610190001_private_discovery_events.sql'));
   const r=await db.query(read('supabase/verification/PR5.109_VERIFY.sql'));assert.equal(r.rows.length,10);assert.ok(r.rows.every(x=>x.passed),JSON.stringify(r.rows));
  });
+ await check('maintenance capability preflight works when pg_cron is absent and exposes no event rows',async()=>{
+  const result=(await db.query(read('supabase/verification/PR5.111_MAINTENANCE_PREFLIGHT.sql'))).rows[0].snapshot;
+  assert.equal(result.packet,'PR5.111');assert.equal(result.read_only,true);assert.equal(result.pg_cron,null);assert.equal(result.private_analytics_tables,true);assert.equal(result.event_counts.total,0);assert.equal(result.published_product_count,24);
+ });
  await check('anonymous RPC and direct service table reads are denied',async()=>{
   await db.exec('SET ROLE anon');await assert.rejects(()=>ingest([event]));await db.exec('RESET ROLE');
   await db.exec('SET ROLE service_role');await assert.rejects(()=>count('discovery_events'));await db.exec('RESET ROLE');

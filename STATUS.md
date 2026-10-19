@@ -1,6 +1,6 @@
 # Project Status
 
-**Last Updated:** 2026-10-17
+**Last Updated:** 2026-10-19
 
 ## Current Phase
 
@@ -565,3 +565,7 @@ Owner pushed86dc09f / Production126; PR5.108 metadata confirms absent analytics 
 ## PR5.110 — Disabled-by-default HTTP collector and maintenance endpoints
 
 Owner PR5.109 storage10/10 accepted atd1a38d8 / Production127. Added bounded same-origin JSON collector, trusted production platform IP→daily HMAC key, local load shedding plus durable quota handoff, authoritative eligible placement lookup, stateless server-only RPC client, and separately authenticated POST purge endpoint. Default flags off; no browser producers/job/secrets/collection enabled.21 tests, typecheck/build,10 isolated SQL scenario groups passed including HTTP→RPC persistence bridge. No new migration; public24/10/0 and experiment-not-started preserved. Owner disabled-state POST check pending. See ANALYTICS_COLLECTOR_REVIEW.md.
+
+## PR5.111 — Disabled-by-default browser producer and maintenance capability preflight
+
+Owner pushedd4ecd5b / Production128;21 tests/build and disabled POST404 accepted. Wired published route/product exposure/view/click/outbound with server-only enable decision, tab/session/page/exposure UUIDs, continuous visible product-entry threshold, shared-placement dedup, bounded best-effort transport and cleanup. Gates remain off; no actual visitor collection or daily job enabled.25 tests, typecheck/targeted lint/build and11 isolated SQL scenario groups passed. Read-only maintenance capability snapshot pending before daily purge configuration. Public24/10/0, experiment-not-started preserved. See DISCOVERY_PRODUCER_REVIEW.md.
