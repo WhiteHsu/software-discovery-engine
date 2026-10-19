@@ -46,7 +46,7 @@ export async function publishedSitemapPaths(deps:{identities:()=>Promise<unknown
 export function sitemapXml(origin:string,paths:string[]){
  if(canonicalOrigin({NEXT_PUBLIC_SITE_URL:origin})!==origin)throw Error('Noncanonical sitemap origin');
  const escape=(s:string)=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&apos;');
- for(const p of paths)if(p!=='/'&&!/^\/(?:software|escape)\/[a-z0-9]+(?:-[a-z0-9]+)*$/.test(p))throw Error('Invalid sitemap path');
+ for(const p of paths)if(p!=='/'&&p!=='/hidden-gems'&&!/^\/(?:software|escape)\/[a-z0-9]+(?:-[a-z0-9]+)*$/.test(p))throw Error('Invalid sitemap path');
  return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+paths.map(p=>`  <url><loc>${escape(origin+p)}</loc></url>`).join('\n')+'\n</urlset>\n';
 }
 export async function sitemapResponse(context:SeoContext,load:()=>Promise<string[]>){

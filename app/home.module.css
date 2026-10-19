@@ -12,4 +12,10 @@
 .card a {text-underline-offset: 4px;}
 .card a:hover {text-decoration-thickness: 2px;}
 .browse:focus-visible, .card a:focus-visible {outline: 3px solid currentColor; outline-offset: 5px;}
+.gems {margin-top: 48px; border-top: 1px solid var(--border); padding-top: 36px;}
+.gemsLink {display: inline-block; margin: 18px 0 0 24px; text-underline-offset: 4px;}
+.gemsLink:focus-visible {outline: 3px solid currentColor; outline-offset: 5px;}
+.gems h2 {font-size: clamp(26px,4vw,36px); letter-spacing: -.025em; margin: 0 0 16px;}
+.gems > p:not(:first-child) {max-width: 720px; color: var(--muted); line-height: 1.7; margin: 0 0 24px;}
 @media (max-width: 640px) {.hero {padding-bottom: 44px;} .grid {grid-template-columns: minmax(0,1fr);} .card {padding: 22px;} .hero > p:not(:first-child) {font-size: 17px;}}
+@media (max-width: 640px) {.gemsLink {display: block; margin-left: 0;}}

@@ -4,11 +4,13 @@ import {createClient} from '@/lib/supabase/server';
 import {escapeDefinitions} from './escape-model';
 import {getEscape} from './escapes';
 import {seoContext,publishedSitemapPaths} from './seo';
+import {getHiddenGems} from './hidden-gems-server';
+import {indexableGemCollection} from './hidden-gems';
 
 export async function requestSeo(){return seoContext(process.env,(await headers()).get('host'));}
 export async function liveSitemapPaths(){
  const client=await createClient();
- return publishedSitemapPaths({
+ const [paths,gems]=await Promise.all([publishedSitemapPaths({
   identities:async()=>{
    const {data,error}=await client.from('products').select('slug').eq('status','published').order('slug').limit(500);
    if(error||!Array.isArray(data))throw Error('Published product catalog unavailable');
@@ -21,5 +23,6 @@ export async function liveSitemapPaths(){
   },
   // getEscape includes editorial approval, published status and runtime qualification.
   routes:()=>Promise.all(escapeDefinitions.map(d=>getEscape(d.slug))),
- });
+ }),getHiddenGems()]);
+ return [...paths,...(indexableGemCollection(gems)?['/hidden-gems']:[])].sort();
 }

@@ -1,0 +1,38 @@
+{
+  "packet": "PR5.116",
+  "type": "Editorial selection proposal using already accepted product/route scopes",
+  "source_pins": {
+    "seed/research/simple-notion-workflow-2026-10-13.json": "6e244ce8a237fcc5d6e25bfc2b1b8d4ab9b2b6bd86aeaed4ca12b7344e699b03",
+    "seed/research/raster-workflow-review-2026-10-12.json": "d4446ed1be7ac1158fc2b26151417f5a4982d0bfcdb78d56d5fcc69b96b48e5a",
+    "seed/research/pdf-workflow-review-2026-10-13.json": "fbac76b6a04a4596f8992ecf310ff624981a3b5f3288c3623bfe5902da91d26d",
+    "seed/research/privacy-publication-checkpoint-2026-10-17.json": "e4f1a26ef3fb38ad40d6b1742a1185bb4b7a45f1ec86bd2c99f17dd3e0bb2187"
+  },
+  "selections": [
+    {
+      "product": "joplin",
+      "route": "simple-notion-alternatives",
+      "task": "Native desktop personal notebook capture/editing",
+      "limits": "Markdown and optional synchronization setup; no full Notion database/team/migration parity"
+    },
+    {
+      "product": "krita",
+      "route": "photoshop-alternatives-without-a-subscription",
+      "task": "Desktop painting and reviewed raster scope",
+      "limits": "Illustration focus; PSD and text/layer exchange need review; no complete Photoshop parity"
+    },
+    {
+      "product": "pdf24-creator",
+      "route": "pdf-editors-without-a-subscription",
+      "task": "Windows personal PDF page organization",
+      "limits": "Reviewed Windows Creator edition; no implied existing-text editing or online edition equivalence"
+    }
+  ],
+  "order": "Fixed editorial sequence; no popularity or measured novelty ranking",
+  "public_data_source": "Existing public getEscape runtime loader and public product projection only",
+  "new_claims_or_db_publications": false,
+  "live_qualification_required": true,
+  "collection_index_requires": 3,
+  "collection_instrumentation": "pending; no fake route impressions or CTR",
+  "owner_collection_ui_qa": "pending",
+  "experiment_started": false
+}

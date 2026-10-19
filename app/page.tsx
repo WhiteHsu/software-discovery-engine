@@ -12,6 +12,7 @@ export default async function Home(){
    <h1 id="discovery-title">Software that fits<br />the way you work.</h1>
    <p>Start with what you want to change: fewer subscriptions, offline access, simpler tools, or a specific local workflow.</p>
    <a className={styles.browse} href="#comparisons">Explore comparisons <span aria-hidden="true">↓</span></a>
+   <Link className={styles.gemsLink} href="/hidden-gems">Explore Hidden Gems →</Link>
   </section>
   <section id="comparisons" aria-labelledby="comparisons-title" className={styles.directory}>
    <h2 id="comparisons-title">What would you like to change?</h2>
@@ -20,6 +21,12 @@ export default async function Home(){
     <h3><Link href={`/escape/${route.slug}`}>{route.name}<span aria-hidden="true"> ↗</span></Link></h3>
     <p>{route.description}</p>
    </li>)}</ul>}
+  </section>
+  <section className={styles.gems} aria-labelledby="hidden-gems-title">
+   <p className="eyebrow">Explore a focused workflow</p>
+   <h2 id="hidden-gems-title">Hidden Gems</h2>
+   <p>Explore editorial software picks with reviewed scope, pricing and practical trade-offs.</p>
+   <Link className={styles.browse} href="/hidden-gems">Explore the picks <span aria-hidden="true">→</span></Link>
   </section>
  </div>;
 }

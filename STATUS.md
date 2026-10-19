@@ -593,3 +593,7 @@ Owner b6bd041 collector HTTP4/4 + SQL3/3 accepted; enabled browser route→AFFiN
 ## PR5.115 — Live public sitemap and canonical-host indexing policy
 
 Owner f701679 / Production132;31 tests/typecheck/build accepted. Added dynamic live sitemap from public published product RPCs and runtime-qualified registered routes, no private/fixture fallback or inventeddates;503 on read failure. Added robots and shared canonical-production index policy across root/product/route metadata, preview/alias noindex. No DB/grant/secret/analytics flag changes. Owner deployed output QA pending; product count/search/HiddenGems/otherlaunchgates remain; experiment not started. See DISCOVERY_SEO_REVIEW.md.
+
+## PR5.116 — Editorial Hidden Gems surface with live evidence guards
+
+Owner e9d4383 / Production133,38 tests/build and canonical sitemap35/metadata+alias noindex evidence accepted. Added homepage links and /hidden-gems with3 existing accepted scoped products (Joplin/Krita/PDF24 Creator); live source route qualification and evidence re-evaluation, exact scope/pricing/tradeoffs/source links, conditional index/sitemap36. No DB/grant/secret/publication/analytics activation changes. Dedicated collection telemetry, search and other launch gates remain; experiment not started. Owner UI/live QA pending. See HIDDEN_GEMS_REVIEW.md.

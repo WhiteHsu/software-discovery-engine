@@ -1,0 +1,35 @@
+{
+  "packet": "PR5.116",
+  "source": "Owner-supplied production/alias screenshots, not independently fetched",
+  "app_commit": "e9d438384a3093b1b1260ac99cfefbf83f94c980",
+  "production_deployment_count_reported": 133,
+  "canonical_origin": "https://software-discovery-engine.vercel.app",
+  "sitemap_loc_count": 35,
+  "canonical_robots": {
+    "allow": "/",
+    "disallow": "/api/",
+    "sitemap": "https://software-discovery-engine.vercel.app/sitemap.xml"
+  },
+  "product_page": {
+    "path": "/software/affine",
+    "robots": "index, follow",
+    "canonical": "https://software-discovery-engine.vercel.app/software/affine"
+  },
+  "route_page": {
+    "path": "/escape/offline-notion-alternatives",
+    "robots": "index, follow",
+    "canonical": "https://software-discovery-engine.vercel.app/escape/offline-notion-alternatives"
+  },
+  "alias_host": "software-discovery-engine-i769xawgl-whitehsus-projects.vercel.app",
+  "alias_robots": {
+    "disallow": "/",
+    "sitemap_present": false
+  },
+  "alias_product": {
+    "path": "/software/affine",
+    "robots": "noindex, nofollow",
+    "canonical": "https://software-discovery-engine.vercel.app/software/affine"
+  },
+  "indexation_verified": false,
+  "experiment_started": false
+}
