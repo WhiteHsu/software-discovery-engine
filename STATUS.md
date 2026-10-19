@@ -549,3 +549,7 @@ Owner applied publication, returned22/22 true and nine incognito production scre
 ## PR5.106 — Homepage discovery entry and implementation inventory
 
 Owner pushedaf554e6 / Production123. Homepage placeholder replaced with live approved-route navigation, scoped descriptions, responsive cards and safe empty/error states. Public24/10/0 unchanged; no SQL or fixture fallback. App/lib inventory records missing search/parser, events, Hidden Gems and sitemap/robots; existing page metadata retained.4 tests, typecheck and webpack build passed. Local HTTP QA blocked by socket permissions; owner visual check pending. Experiment not started. See HOME_DISCOVERY_ENTRY.md.
+
+## PR5.107 — Anonymous event and CTR contract
+
+Owner pushedb741dd2 / Production124 and accepted homepage tests/build/navigation. Added strict versioned payloads for route product exposure/click and product view/outbound plus executable CTR aggregation. Anonymous UUID context, query-free paths/hostname-only source, duplicate action/event handling and unmatched-action diagnostics tested.8 tests/typecheck passed. No endpoint, producer, storage, migration or live collection; current24/10/0 and experiment-not-started preserved. Next collector/storage boundary then browser visibility producers. See DISCOVERY_EVENT_CONTRACT.md.
