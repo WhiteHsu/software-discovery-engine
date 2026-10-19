@@ -545,3 +545,7 @@ Owner pushed94cafe4 and returned actual PR5.103 snapshot. Stored import rows mat
 ## PR5.105 — Privacy publication acceptance and ten-route milestone
 
 Owner applied publication, returned22/22 true and nine incognito production screenshots confirming route/three product pages/official destinations. Accepted24/10/0 checkpoint recorded; default route audit now reflects it while historical15/7/3,18/8/2,21/9/1 functions remain frozen for pinned research. No SQL or runtime change. Ten-route scope complete, broader Validation MVP gates and Issue11 remain unverified; experiment not started. See PRIVACY_PUBLICATION_ACCEPTANCE.md and POST_ESCAPE_VALIDATION_READINESS.md.
+
+## PR5.106 — Homepage discovery entry and implementation inventory
+
+Owner pushedaf554e6 / Production123. Homepage placeholder replaced with live approved-route navigation, scoped descriptions, responsive cards and safe empty/error states. Public24/10/0 unchanged; no SQL or fixture fallback. App/lib inventory records missing search/parser, events, Hidden Gems and sitemap/robots; existing page metadata retained.4 tests, typecheck and webpack build passed. Local HTTP QA blocked by socket permissions; owner visual check pending. Experiment not started. See HOME_DISCOVERY_ENTRY.md.

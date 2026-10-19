@@ -1,16 +1,25 @@
-export default function Home() {
-  return (
-    <section className="foundation">
-      <p className="eyebrow">Validation MVP</p>
-      <h1>Find software the algorithms missed.</h1>
-      <p className="foundation__copy">
-        The application foundation is running. Discovery functionality will be
-        implemented in later issues.
-      </p>
-      <div className="foundation__status" aria-label="Foundation status">
-        <span className="status-dot" aria-hidden="true" />
-        Issue #1 · Foundation &amp; Core Infrastructure
-      </div>
-    </section>
-  );
+import Link from 'next/link';
+import {getPublishedRouteCards} from '@/lib/discovery/route-catalog-server';
+import type {RouteCard} from '@/lib/discovery/route-catalog';
+import styles from './home.module.css';
+export default async function Home(){
+ let routes:RouteCard[]=[];
+ let unavailable=false;
+ try{routes=await getPublishedRouteCards();}catch{unavailable=true;}
+ return <div>
+  <section className={styles.hero} aria-labelledby="discovery-title">
+   <p className="eyebrow">Find a better fit</p>
+   <h1 id="discovery-title">Software that fits<br />the way you work.</h1>
+   <p>Start with what you want to change: fewer subscriptions, offline access, simpler tools, or a specific local workflow.</p>
+   <a className={styles.browse} href="#comparisons">Explore comparisons <span aria-hidden="true">↓</span></a>
+  </section>
+  <section id="comparisons" aria-labelledby="comparisons-title" className={styles.directory}>
+   <h2 id="comparisons-title">What would you like to change?</h2>
+   <p className={styles.intro}>Compare reviewed alternatives, their pricing models and their limits. Each comparison covers a specific task or edition; check the scope before choosing.</p>
+   {unavailable?<p role="status">Comparisons are temporarily unavailable. Please try again shortly.</p>:routes.length===0?<p>No comparisons are available yet. Please check back soon.</p>:<ul className={styles.grid}>{routes.map(route=><li key={route.slug} className={styles.card}>
+    <h3><Link href={`/escape/${route.slug}`}>{route.name}<span aria-hidden="true"> ↗</span></Link></h3>
+    <p>{route.description}</p>
+   </li>)}</ul>}
+  </section>
+ </div>;
 }
