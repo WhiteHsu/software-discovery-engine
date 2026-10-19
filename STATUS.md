@@ -581,3 +581,7 @@ Owner PR5.111 snapshot confirms pg_cron absent/available1.6.4, empty events and 
 ## PR5.112A — Installed-scheduler recovery proposal
 
 Owner rehearsal true; first-install migration refused existing cron state. New03:19:59Z owner snapshot confirms installedpg_cron1.6.4, emptyevents, unchangedpurge/public24/10/privateboundary; job state unknown. Recovery validates existing extension, creates only absent scoped job, retains an exact existing one and rejects drift. No extension/grant/other-job changes. Owner recovery rehearsal/apply/configuration+actual-run evidence pending. Collection OFF; experiment not started. See ANALYTICS_MAINTENANCE_RECOVERY.md.
+
+## PR5.113 — Maintenance accepted; isolated collector activation QA prepared
+
+Owner accepted configuration8/8 + storage10/10 and actual2026-10-19 Taipei11:17 scheduled success, expiredcounts0. Frozen receipt records evidence without claiming installation cause. Added independent default-OFF browser producer gate and explicit synthetic collector probe/ID-scoped SQL receipt to validate cloud persistence/dedup/privacy with browser producers still off. No credentials configured or real HTTP/DB commands run by this packet. Controlled cloud QA pending; experiment not started. See ANALYTICS_CONTROLLED_ACTIVATION.md.
