@@ -557,3 +557,7 @@ Owner pushedb741dd2 / Production124 and accepted homepage tests/build/navigation
 ## PR5.108 — Ingestion boundary and analytics schema preflight
 
 Owner pushed3b69985 / Production125. Added strict batch validation (16KiB/20 events, timestamp window, trusted public products/qualified positions, retry deduplication) plus one SELECT-only analytics metadata/privilege/collision snapshot.11 tests/typecheck passed; no endpoint, storage, migration, credentials or live collection enabled. Await owner snapshot before concrete storage/collector proposal. Public24/10/0 and experiment-not-started unchanged. See ANALYTICS_INGESTION_PREFLIGHT.md.
+
+## PR5.109 — Private analytics storage migration proposal
+
+Owner pushed86dc09f / Production126; PR5.108 metadata confirms absent analytics objects, service_role schema usage false, public24/10 and private boundary intact. Prepared two private RLS tables, service-only atomic ingest/purge RPCs, bounded batch/public-membership checks, durable quota/dedup, explicit service USAGE grant and retention function.9 isolated PostgreSQL-compatible scenario groups passed including all10 shipped verification checks; SQL pins verified. Owner rollback rehearsal pending. No HTTP collector, producers, secrets, scheduled purge or collection enabled; no experiment start. See ANALYTICS_STORAGE_REVIEW.md.

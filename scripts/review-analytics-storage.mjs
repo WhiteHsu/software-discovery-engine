@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import {createHash} from 'node:crypto';
+import {fileURLToPath} from 'node:url';
+const root=new URL('../',import.meta.url),hash=x=>createHash('sha256').update(x).digest('hex');
+if(process.argv.length!==2)throw Error('No arguments supported');
+const read=p=>fs.readFileSync(fileURLToPath(new URL(p,root)),'utf8').replace(/\r\n/g,'\n');
+const s=JSON.parse(read('seed/research/analytics-storage-baseline-2026-10-19.json'));
+if(hash(JSON.stringify(s))!=='8a4302eab35f39a9b65f04b3b78def4a95c1d48c8b2892161e46ed2960cfb35d'||s.packet!=='PR5.108'||!s.read_only||s.relations.length||s.functions.length||s.published_product_count!==24||s.approved_route_count!==10||!s.anon_private_evidence_boundary)throw Error('Returned metadata baseline drift');
+for(const p of [{"path":"supabase/migrations/202610190001_private_discovery_events.sql","sha256":"0bb93067ee2553d9af35ea04a18baddb1c2adb93174eb60607331290ea924d3a"},{"path":"supabase/data/PR5.109_REHEARSE.sql","sha256":"d2a71ea4aea51e5dcd68375045f6be29420f93c9f7198c4fc71df03fc386987f"},{"path":"supabase/verification/PR5.109_VERIFY.sql","sha256":"94f76014086df697369b5bfdf470522b40c5cc5095f0082488ee78ce1d05477a"}])if(hash(read(p.path))!==p.sha256)throw Error('Reviewed SQL drift: '+p.path);
+const migration=read('supabase/migrations/202610190001_private_discovery_events.sql'),rehearsal=read('supabase/data/PR5.109_REHEARSE.sql');
+if(migration.replace(/COMMIT;\s*$/,'ROLLBACK;\n')!==rehearsal)throw Error('Rehearsal differs from migration');
+console.log('PR5.109: captured analytics names absent; service schema USAGE change explicit. Private storage/rehearsal/10-check SQL pinned. No database connection or tracking enabled.');

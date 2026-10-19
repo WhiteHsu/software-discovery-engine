@@ -1,0 +1,39 @@
+{
+  "roles": [
+    {
+      "name": "anon",
+      "bypass_rls": false,
+      "schema_usage": true,
+      "schema_create": false
+    },
+    {
+      "name": "authenticated",
+      "bypass_rls": false,
+      "schema_usage": true,
+      "schema_create": false
+    },
+    {
+      "name": "service_role",
+      "bypass_rls": true,
+      "schema_usage": false,
+      "schema_create": false
+    }
+  ],
+  "packet": "PR5.108",
+  "schema": {
+    "name": "software_discovery",
+    "owner": "postgres"
+  },
+  "columns": [],
+  "policies": [],
+  "functions": [],
+  "read_only": true,
+  "relations": [],
+  "captured_at": "2026-10-19T01:51:55.42063+00:00",
+  "default_acl": [],
+  "table_privileges": [],
+  "function_privileges": [],
+  "approved_route_count": 10,
+  "published_product_count": 24,
+  "anon_private_evidence_boundary": true
+}
