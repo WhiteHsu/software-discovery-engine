@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import {createHash} from 'node:crypto';
+import {collectorConfig} from '../lib/analytics/http.ts';
+const root=new URL('../',import.meta.url),hash=x=>createHash('sha256').update(x).digest('hex');
+if(process.argv.length!==2)throw Error('No arguments supported');
+const r=JSON.parse(fs.readFileSync(new URL('seed/research/analytics-storage-acceptance-2026-10-19.json',root),'utf8'));
+if(hash(JSON.stringify(r))!=='020b5fcc238595df95693a947d7b7208f27268c5714db7079ef9570c72acc831'||r.verification.results.length!==10||r.verification.results.some(x=>!x.passed)||r.producerEnabled||r.experimentStarted)throw Error('Storage acceptance drift');
+if(hash(fs.readFileSync(new URL(r.verification.path,root),'utf8').replace(/\r\n/g,'\n'))!==r.verification.normalizedSha256)throw Error('Accepted SQL drift');
+if(collectorConfig({}).enabled)throw Error('Collector must default off');
+console.log('PR5.110: storage owner10/10 accepted; collector defaults OFF. Cloud collection, daily maintenance and producers pending. No remote calls or secrets read.');

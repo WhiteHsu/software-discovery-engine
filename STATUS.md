@@ -561,3 +561,7 @@ Owner pushed3b69985 / Production125. Added strict batch validation (16KiB/20 eve
 ## PR5.109 — Private analytics storage migration proposal
 
 Owner pushed86dc09f / Production126; PR5.108 metadata confirms absent analytics objects, service_role schema usage false, public24/10 and private boundary intact. Prepared two private RLS tables, service-only atomic ingest/purge RPCs, bounded batch/public-membership checks, durable quota/dedup, explicit service USAGE grant and retention function.9 isolated PostgreSQL-compatible scenario groups passed including all10 shipped verification checks; SQL pins verified. Owner rollback rehearsal pending. No HTTP collector, producers, secrets, scheduled purge or collection enabled; no experiment start. See ANALYTICS_STORAGE_REVIEW.md.
+
+## PR5.110 — Disabled-by-default HTTP collector and maintenance endpoints
+
+Owner PR5.109 storage10/10 accepted atd1a38d8 / Production127. Added bounded same-origin JSON collector, trusted production platform IP→daily HMAC key, local load shedding plus durable quota handoff, authoritative eligible placement lookup, stateless server-only RPC client, and separately authenticated POST purge endpoint. Default flags off; no browser producers/job/secrets/collection enabled.21 tests, typecheck/build,10 isolated SQL scenario groups passed including HTTP→RPC persistence bridge. No new migration; public24/10/0 and experiment-not-started preserved. Owner disabled-state POST check pending. See ANALYTICS_COLLECTOR_REVIEW.md.

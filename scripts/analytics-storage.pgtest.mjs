@@ -1,6 +1,7 @@
 const {PGlite}=await import(process.env.ANALYTICS_PG_TEST_MODULE??'@electric-sql/pglite');
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
+import {collectEvents} from '../lib/analytics/http.ts';
 const root=new URL('../',import.meta.url),read=p=>fs.readFileSync(new URL(p,root),'utf8');
 const db=new PGlite();let tests=0;
 const check=async(name,fn)=>{await fn();tests++;console.log('PASS '+name);};
@@ -46,6 +47,16 @@ try{
   try{
    const view={...event,eventId:id(20),pageViewId:id(21),name:'product_view',surface:'product',path:'/software/'+event.productSlug};delete view.routeSlug;delete view.position;delete view.exposureId;
    assert.equal((await ingest([view,{...view,name:'outbound_click',eventId:id(22)},{...event,name:'product_click',eventId:id(23)}])).rows[0].result.inserted,3);
+  }finally{await db.exec('ROLLBACK');}
+ });
+ await check('HTTP validator to service-only SQL RPC persists only authoritative valid events',async()=>{
+  await db.exec('BEGIN');
+  try{
+   await db.exec('SET ROLE service_role');
+   const config={enabled:true,origin:'https://example.org',rateSecret:'c'.repeat(64),trustedVercel:true};
+   const request=()=>new Request(config.origin+'/api/events',{method:'POST',headers:{origin:config.origin,'content-type':'application/json','x-vercel-forwarded-for':'203.0.113.1'},body:JSON.stringify([{...event,eventId:id(30)}])});
+   const response=await collectEvents(request(),config,{now:()=>new Date(),admit:()=>true,publication:async()=>({products:new Set([event.productSlug]),placements:[{routeSlug:event.routeSlug,productSlug:event.productSlug,position:1}]}),store:async(events,key)=>{const result=await db.query('SELECT software_discovery.ingest_discovery_events($1::jsonb,$2) result',[JSON.stringify(events),key]);assert.equal(result.rows[0].result.inserted,1);return 'ok';}});
+   assert.equal(response.status,204);await db.exec('RESET ROLE');assert.equal(await count('discovery_events'),2);
   }finally{await db.exec('ROLLBACK');}
  });
  await check('durable quota rejects excess requests; failed event inserts and quota changes roll back together',async()=>{

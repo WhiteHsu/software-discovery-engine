@@ -1,0 +1,59 @@
+{
+  "packet": "PR5.110",
+  "recordedAt": "2026-10-19",
+  "basis": "Owner executed PR5.109 storage migration and supplied complete10/10 true verification result plus SQL Editor screenshots.",
+  "head": "d1a38d853631b4f14fe1f0842e72dd162e81cc7c",
+  "verification": {
+    "path": "supabase/verification/PR5.109_VERIFY.sql",
+    "normalizedSha256": "94f76014086df697369b5bfdf470522b40c5cc5095f0082488ee78ce1d05477a",
+    "results": [
+      {
+        "check_name": "private_tables_and_rls",
+        "passed": true
+      },
+      {
+        "check_name": "no_direct_client_or_service_table_access",
+        "passed": true
+      },
+      {
+        "check_name": "no_public_event_policies",
+        "passed": true
+      },
+      {
+        "check_name": "service_only_rpc_execute",
+        "passed": true
+      },
+      {
+        "check_name": "no_public_rpc_grants",
+        "passed": true
+      },
+      {
+        "check_name": "fixed_definer_boundary",
+        "passed": true
+      },
+      {
+        "check_name": "schema_usage_without_create",
+        "passed": true
+      },
+      {
+        "check_name": "empty_before_producer_activation",
+        "passed": true
+      },
+      {
+        "check_name": "published_counts_preserved",
+        "passed": true
+      },
+      {
+        "check_name": "anon_private_evidence_boundary",
+        "passed": true
+      }
+    ]
+  },
+  "publishedProducts": 24,
+  "approvedRoutes": 10,
+  "storageAccepted": true,
+  "collectorCloudVerified": false,
+  "producerEnabled": false,
+  "maintenanceScheduled": false,
+  "experimentStarted": false
+}
