@@ -597,3 +597,10 @@ Owner f701679 / Production132;31 tests/typecheck/build accepted. Added dynamic l
 ## PR5.116 — Editorial Hidden Gems surface with live evidence guards
 
 Owner e9d4383 / Production133,38 tests/build and canonical sitemap35/metadata+alias noindex evidence accepted. Added homepage links and /hidden-gems with3 existing accepted scoped products (Joplin/Krita/PDF24 Creator); live source route qualification and evidence re-evaluation, exact scope/pricing/tradeoffs/source links, conditional index/sitemap36. No DB/grant/secret/publication/analytics activation changes. Dedicated collection telemetry, search and other launch gates remain; experiment not started. Owner UI/live QA pending. See HIDDEN_GEMS_REVIEW.md.
+
+
+## PR5.117 — Hidden Gems analytics proposal
+- Owner accepted PR5.116 UI/mobile/keyboard/links/sitemap/production and alias SEO; 24 products, 10 routes, 36 sitemap URLs.
+- Owner 2026-10-19 09:28:44 UTC database preflight: all nine checks true, captured ingest/purge hashes unchanged.
+- Added distinct hidden_gems impression/click surface, current editorial placement receiver checks and separate CTR metrics; prepared guarded SQL extension preserving existing events/quotas/ACL/purge job.
+- Author: 49 Node tests, TypeScript, targeted lint, webpack production build and seven synthetic PGlite scenario groups pass. Owner SQL/deployment/enabled browser acceptance pending; producer remains false, experiment not started.

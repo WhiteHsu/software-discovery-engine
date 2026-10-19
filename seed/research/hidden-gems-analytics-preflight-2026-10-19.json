@@ -1,0 +1,33 @@
+{
+  "packet": "PR5.117",
+  "baselineCommit": "8af755be118b2eaa00d2c804c29fbbe3d48f8757",
+  "source": "owner-provided Supabase preflight JSON",
+  "capturedAt": "2026-10-19T09:28:44.420444+00:00",
+  "database": "postgres",
+  "executor": "postgres",
+  "publishedProducts": 24,
+  "approvedPublishedRoutes": 10,
+  "checks": {
+    "no_public_rpc_grants": true,
+    "fixed_definer_boundary": true,
+    "private_tables_and_rls": true,
+    "no_public_event_policies": true,
+    "service_only_rpc_execute": true,
+    "published_counts_preserved": true,
+    "schema_usage_without_create": true,
+    "anon_private_evidence_boundary": true,
+    "no_direct_client_or_service_table_access": true
+  },
+  "functionDefinitionMd5": {
+    "software_discovery.ingest_discovery_events(jsonb,text)": "109b824edeaba7ce1c8b8653346d53bc",
+    "software_discovery.purge_discovery_events()": "853671b9a4d6484b164b337685297f2e"
+  },
+  "owner": "postgres",
+  "securityDefiner": true,
+  "configuration": [
+    "search_path=pg_catalog"
+  ],
+  "producerEnabled": false,
+  "experimentStarted": false,
+  "note": "Preflight metadata only, not SQL migration or live Hidden Gems capture acceptance."
+}
