@@ -553,3 +553,7 @@ Owner pushedaf554e6 / Production123. Homepage placeholder replaced with live app
 ## PR5.107 — Anonymous event and CTR contract
 
 Owner pushedb741dd2 / Production124 and accepted homepage tests/build/navigation. Added strict versioned payloads for route product exposure/click and product view/outbound plus executable CTR aggregation. Anonymous UUID context, query-free paths/hostname-only source, duplicate action/event handling and unmatched-action diagnostics tested.8 tests/typecheck passed. No endpoint, producer, storage, migration or live collection; current24/10/0 and experiment-not-started preserved. Next collector/storage boundary then browser visibility producers. See DISCOVERY_EVENT_CONTRACT.md.
+
+## PR5.108 — Ingestion boundary and analytics schema preflight
+
+Owner pushed3b69985 / Production125. Added strict batch validation (16KiB/20 events, timestamp window, trusted public products/qualified positions, retry deduplication) plus one SELECT-only analytics metadata/privilege/collision snapshot.11 tests/typecheck passed; no endpoint, storage, migration, credentials or live collection enabled. Await owner snapshot before concrete storage/collector proposal. Public24/10/0 and experiment-not-started unchanged. See ANALYTICS_INGESTION_PREFLIGHT.md.
