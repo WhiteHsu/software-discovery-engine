@@ -1,0 +1,112 @@
+{
+  "packet": "PR5.114",
+  "source": "Owner-supplied screenshots, identifiers and SQL results; not independently queried in production",
+  "app_commit": "b6bd041edb58fe7c41b1fd4a251315c5c62cfb6b",
+  "accepted_date": "2026-10-19",
+  "experiment_started": false,
+  "collector_probe": {
+    "session_id": "e20a7cc5-b115-46bc-bd7a-1e25f645bf20",
+    "accepted_event_id": "97f18f34-5fc4-4f44-9912-11edde1d1da7",
+    "http_results": [
+      {
+        "name": "accepted",
+        "status": 204
+      },
+      {
+        "name": "duplicate",
+        "status": 204
+      },
+      {
+        "name": "privacy",
+        "status": 204
+      },
+      {
+        "name": "invalid",
+        "status": 400
+      }
+    ],
+    "sql_checks": [
+      {
+        "check_name": "synthetic_probe_stored_once",
+        "passed": true
+      },
+      {
+        "check_name": "privacy_probe_not_stored",
+        "passed": true
+      },
+      {
+        "check_name": "invalid_probe_not_stored",
+        "passed": true
+      }
+    ]
+  },
+  "browser_journey": {
+    "session_id": "dd469548-acd9-4fa9-8cec-124353f237f1",
+    "route_slug": "offline-notion-alternatives",
+    "product_slug": "affine",
+    "observed_http_requests": 4,
+    "observed_http_statuses": [
+      204,
+      204,
+      204,
+      204
+    ],
+    "sql_checks": [
+      {
+        "check_name": "impression_stored",
+        "passed": true
+      },
+      {
+        "check_name": "product_click_stored",
+        "passed": true
+      },
+      {
+        "check_name": "product_view_stored",
+        "passed": true
+      },
+      {
+        "check_name": "outbound_click_stored",
+        "passed": true
+      },
+      {
+        "check_name": "click_matches_exposure",
+        "passed": true
+      },
+      {
+        "check_name": "outbound_matches_product_view",
+        "passed": true
+      }
+    ],
+    "scope": "Presence and matching for this tested journey; not exact-count/timing/negative privacy verification"
+  },
+  "producer_off_before_test": {
+    "owner_observed_no_requests_on": [
+      "/escape/offline-notion-alternatives",
+      "/software/affine"
+    ]
+  },
+  "rollback": {
+    "producer_enabled": false,
+    "production_ready_current_screenshot": true,
+    "deployment_prefix": "C2gT7RiX4",
+    "new_browser_no_requests_after_rollback": "pending owner check"
+  },
+  "pending": [
+    "Browser DNT/GPC negative behavior with producer gate enabled",
+    "Enabled mobile and keyboard/middle-button paths",
+    "Enabled visibility exit/hidden-tab and transport-loss cases",
+    "Fresh browser no automatic requests after rollback",
+    "Launch requirements and Issue11 complete before experiment Day0"
+  ],
+  "qa_exclusion": {
+    "session_ids": [
+      "e20a7cc5-b115-46bc-bd7a-1e25f645bf20",
+      "dd469548-acd9-4fa9-8cec-124353f237f1"
+    ],
+    "event_ids": [
+      "97f18f34-5fc4-4f44-9912-11edde1d1da7"
+    ],
+    "applies_to": "discoveryMetrics helper; direct SQL must explicitly apply same ledger plus an approved experiment window",
+    "raw_rows_deleted": false
+  }
+}

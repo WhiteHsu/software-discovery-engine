@@ -585,3 +585,7 @@ Owner rehearsal true; first-install migration refused existing cron state. New03
 ## PR5.113 — Maintenance accepted; isolated collector activation QA prepared
 
 Owner accepted configuration8/8 + storage10/10 and actual2026-10-19 Taipei11:17 scheduled success, expiredcounts0. Frozen receipt records evidence without claiming installation cause. Added independent default-OFF browser producer gate and explicit synthetic collector probe/ID-scoped SQL receipt to validate cloud persistence/dedup/privacy with browser producers still off. No credentials configured or real HTTP/DB commands run by this packet. Controlled cloud QA pending; experiment not started. See ANALYTICS_CONTROLLED_ACTIVATION.md.
+
+## PR5.114 — Cloud QA receipts and metric QA exclusion
+
+Owner b6bd041 collector HTTP4/4 + SQL3/3 accepted; enabled browser route→AFFiNE→official journey HTTP4/4 + SQL6/6 accepted. Producer restoredfalse and Ready/Current deployment observed; fresh disabled-context network check pending. Recorded2knownQA sessions and1event fallback; discoveryMetrics now excludes them after validation/dedup and reports excludedQaEvents. No DB changes/secrets accessed, no demand inference. Browser privacy/mobile/edge QA and broader launch requirements remain pending; experiment not started. See ANALYTICS_CLOUD_ACCEPTANCE.md.
