@@ -604,3 +604,9 @@ Owner e9d4383 / Production133,38 tests/build and canonical sitemap35/metadata+al
 - Owner 2026-10-19 09:28:44 UTC database preflight: all nine checks true, captured ingest/purge hashes unchanged.
 - Added distinct hidden_gems impression/click surface, current editorial placement receiver checks and separate CTR metrics; prepared guarded SQL extension preserving existing events/quotas/ACL/purge job.
 - Author: 49 Node tests, TypeScript, targeted lint, webpack production build and seven synthetic PGlite scenario groups pass. Owner SQL/deployment/enabled browser acceptance pending; producer remains false, experiment not started.
+
+
+## PR5.118 — Hidden Gems cloud QA receipt and exclusion
+- Owner committed PR5.117 SQL: eleven checks true; enabled Joplin journey: four HTTP 204 responses and seven scoped SQL checks true.
+- Owner reports producer=false, Ready redeployment and disabled repeat journey completed. Added accepted QA session exclusion and frozen receipt; experiment not started.
+- Author validation: 50 Node tests, TypeScript, targeted lint and production build pass. No new SQL or environment changes; public 24/10 unchanged. Enabled privacy/visibility/mobile/middle-click edge acceptance remains pending.

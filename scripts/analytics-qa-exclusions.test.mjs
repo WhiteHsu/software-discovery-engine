@@ -11,7 +11,7 @@ function journey(sessionId,offset=0){
 }
 test('known QA sessions cannot produce demand denominators, actions or unmatched diagnostics',()=>{
  const data=knownQaSessionIds.flatMap((s,i)=>journey(s,i*100));const r=discoveryMetrics(data);
- assert.equal(r.excludedQaEvents,8);assert.equal(r.productImpressions,0);assert.equal(r.productViews,0);
+ assert.equal(r.excludedQaEvents,knownQaSessionIds.length*4);assert.equal(r.productImpressions,0);assert.equal(r.productViews,0);
  assert.equal(r.clickedExposures,0);assert.equal(r.outboundProductViews,0);assert.equal(r.routeProductCtr,null);assert.equal(r.productOutboundCtr,null);
  assert.equal(r.unmatchedClicks,0);assert.equal(r.unmatchedOutbound,0);
 });
@@ -32,4 +32,14 @@ test('QA exclusion never bypasses payload validation or conflicting ID detection
  const e=journey(knownQaSessionIds[1],800)[0];
  assert.throws(()=>discoveryMetrics([{...e,email:'not-an-allowed-field'}]));
  assert.throws(()=>discoveryMetrics([e,{...e,position:2}]));
+});
+
+test('accepted Hidden Gems QA journey is excluded while an ordinary editorial journey remains measurable',()=>{
+ const qaId='7f244ce2-4ebe-497c-bc8c-4a4c8b015529';
+ const editorial=(session,offset)=>journey(session,offset).map(e=>e.surface==='escape'?{...e,productSlug:'joplin',surface:'hidden_gems',path:'/hidden-gems',routeSlug:undefined}: {...e,productSlug:'joplin',path:'/software/joplin'}).map(e=>{const clean={...e};delete clean.routeSlug;return clean;});
+ const qa=editorial(qaId.toUpperCase(),1000),ordinary=editorial(id(9900),1200);
+ const only=discoveryMetrics(qa);assert.equal(only.excludedQaEvents,4);assert.equal(only.hiddenGems.productCtr,null);assert.equal(only.productViews,0);assert.equal(only.productOutboundCtr,null);
+ const mixed=discoveryMetrics([...qa,...ordinary,qa[0]]);
+ assert.equal(mixed.excludedQaEvents,4);assert.equal(mixed.duplicateEvents,1);assert.equal(mixed.hiddenGems.productImpressions,1);assert.equal(mixed.hiddenGems.clickedExposures,1);assert.equal(mixed.hiddenGems.productCtr,1);assert.equal(mixed.productViews,1);assert.equal(mixed.productOutboundCtr,1);assert.equal(mixed.routeProductCtr,null);
+ assert.throws(()=>discoveryMetrics([qa[0],{...qa[0],position:2}]));
 });

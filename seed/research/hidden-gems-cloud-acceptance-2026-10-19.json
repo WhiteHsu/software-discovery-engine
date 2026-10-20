@@ -1,0 +1,45 @@
+{
+  "packet": "PR5.118",
+  "baselineCommit": "73d56cd7c46c02640500b9ccd563bdb4654b532b",
+  "evidenceSource": "owner supplied screenshots, SQL JSON and completion report on 2026-10-19",
+  "qaSessionId": "7f244ce2-4ebe-497c-bc8c-4a4c8b015529",
+  "productSlug": "joplin",
+  "deploymentCommit": "73d56cd",
+  "enabledDeploymentId": "4mNCqCHBLRUND8UDtKUPV7dDN2tz",
+  "httpResponses": {
+    "observedRequests": 4,
+    "statuses": [
+      204,
+      204,
+      204,
+      204
+    ],
+    "note": "Request count is not necessarily event count."
+  },
+  "sqlMigrationApplied": true,
+  "sqlVerificationChecksPassed": 11,
+  "journeyChecks": {
+    "editorial_impression_stored": true,
+    "editorial_product_click_stored": true,
+    "product_view_stored": true,
+    "outbound_click_stored": true,
+    "every_editorial_click_matches_exposure": true,
+    "every_outbound_matches_product_view": true,
+    "editorial_events_do_not_fabricate_route_context": true
+  },
+  "producerRollback": {
+    "enabled": false,
+    "redeployedReady": true,
+    "noNewEventRequestsOnRepeatJourney": true,
+    "evidence": "owner reported all closing steps completed; no additional screenshot supplied"
+  },
+  "experimentStarted": false,
+  "publishedProducts": 24,
+  "approvedPublishedRoutes": 10,
+  "limitations": [
+    "Presence and linkage verified for this owner Joplin journey, not exact counts or all observer edge cases.",
+    "No inference of full Hidden Gems to outbound conversion attribution.",
+    "Enabled DNT/GPC, quick click, visibility, mobile and middle-click edge acceptance remain pending.",
+    "Direct SQL reports must independently apply the QA exclusion ledger and approved experiment window."
+  ]
+}
