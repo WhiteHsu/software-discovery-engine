@@ -1,0 +1,38 @@
+{
+  "packet": "PR5.121",
+  "baselineCommit": "899ab13e121e1731903bbfbe307a87d03966785d",
+  "evidenceDate": "2026-10-20",
+  "qaSessionId": "0033efa0-5a71-48af-9a56-291a6b7f81b0",
+  "productSlug": "pdf24-creator",
+  "scenario": "Explore CTA clicked without qualifying product-name impression",
+  "evidenceSource": "owner screenshots and scoped SQL results",
+  "navigatorDoNotTrack": null,
+  "observedHttpResponses": [
+    204,
+    204,
+    204
+  ],
+  "requestCountIsNotEventCount": true,
+  "sqlChecks": {
+    "editorial_click_stored": true,
+    "no_pdf24_editorial_impression_in_session": true,
+    "all_clicks_have_no_matching_impression": true,
+    "product_view_stored": true,
+    "no_fabricated_route_context": true
+  },
+  "producerRollback": {
+    "enabled": false,
+    "ownerConfirmedComplete": true,
+    "readyScreenshot": true,
+    "deploymentId": "5QJPzGHnWD3tTtqFtXZ6gvbgVb4m"
+  },
+  "experimentStarted": false,
+  "publishedProducts": 24,
+  "approvedPublishedRoutes": 10,
+  "limits": [
+    "Confirms unexposed CTA scenario, not measured sub-second click timing.",
+    "No assertion of actual cloud discoveryMetrics report; SQL established event absence/presence and local tests verify metric semantics.",
+    "Visibility interruption/reset remains pending.",
+    "Direct SQL reports need independent QA filtering and approved experiment window."
+  ]
+}

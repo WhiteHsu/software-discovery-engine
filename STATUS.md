@@ -622,3 +622,9 @@ Owner e9d4383 / Production133,38 tests/build and canonical sitemap35/metadata+al
 - Owner phone Chrome PDF24 journey: scoped lookup showed four event types, one each; seven event/context/linkage SQL checks passed.
 - Added accepted session c52c9eed-061e-4618-bf9f-5dc2f44a85b3 to QA metric exclusions; previous sessions retained. Owner explicitly confirms producer=false and Ready redeployment.
 - Author: 52 Node tests, typecheck, targeted lint and production build pass. No SQL/environment changes. Device designation is owner reported; mobile transport failure/background cases unverified. Quick-click and visibility reset acceptance pending; public24/10 unchanged, experiment not started.
+
+
+## PR5.121 — unexposed CTA receipt and QA exclusion
+- Owner PDF24 Explore click without measured name exposure: five scoped SQL checks passed. Click/product view stored; no PDF24 editorial impression; clicks unmatched, no fabricated route context.
+- Added exact QA session 0033efa0-5a71-48af-9a56-291a6b7f81b0 to exclusions; prior ledger retained. Owner confirms producer=false with Ready screenshot.
+- Author: 53 Node tests, typecheck, targeted lint and production build pass. No SQL/environment changes; public24/10 unchanged; experiment not started. This verifies unexposed CTA, not precise quick-click timing or continuous-visibility reset.

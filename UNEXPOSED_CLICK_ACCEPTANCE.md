@@ -1,0 +1,9 @@
+# PR5.121 — unexposed CTA acceptance and QA exclusion
+
+Baseline 899ab13e121e1731903bbfbe307a87d03966785d. Owner Chrome DNT=null workflow jumped to Explore PDF24 Creator with the product-name title outside the shown viewport, then opened the product page. Three HTTP responses shown were 204; request counts are not event counts. Supplied session 0033efa0-5a71-48af-9a56-291a6b7f81b0 passed five scoped SQL checks: editorial click and product view present, no PDF24 editorial impression in the session, all relevant clicks unmatched, and no fabricated route context. This establishes unexposed CTA behavior, not precise sub-second timing or visibility-reset behavior.
+
+Owner confirmed producer=false and supplied Ready redeployment screenshot (5QJPzGHnWD3tTtqFtXZ6gvbgVb4m). This packet adds only that accepted session to knownQaSessionIds, retains all previous exclusions and saves the evidence. Local metrics tests verify ordinary unexposed clicks remain unmatched with null CTR denominator, while QA clicks do not inflate unmatched diagnostics. Validation and conflicting-ID detection precede exclusion. No claim is made that a cloud metrics report was executed.
+
+No SQL migration, row deletion, permission, cron, credential or environment changes. Keep ANALYTICS_PRODUCER_ENABLED=false. Direct SQL reports must apply the full QA ledger and approved experiment window independently. Public counts remain 24 products/10 approved routes; experiment not started. Author validation: 53 Node tests, TypeScript, targeted ESLint and webpack production build pass. Owner acceptance of this packet pending. Continuous visibility and hidden-document timer reset remain pending; do not mark them complete from this result.
+
+Use review-unexposed-click-acceptance.mjs; historical hash scripts remain pinned to their original packet bytes.

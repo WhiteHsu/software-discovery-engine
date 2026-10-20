@@ -70,3 +70,12 @@ test('accepted mobile PDF24 session is excluded while ordinary mobile-shaped eve
  const mixed=discoveryMetrics([...qa,...ordinary,qa[0]]);assert.equal(mixed.excludedQaEvents,4);assert.equal(mixed.duplicateEvents,1);assert.equal(mixed.hiddenGems.productImpressions,1);assert.equal(mixed.hiddenGems.clickedExposures,1);assert.equal(mixed.hiddenGems.productCtr,1);assert.equal(mixed.productViews,1);assert.equal(mixed.productOutboundCtr,1);assert.equal(mixed.routeProductCtr,null);
  assert.throws(()=>discoveryMetrics([qa[0],{...qa[0],position:2}]));assert.throws(()=>discoveryMetrics([{...qa[0],email:'forbidden'}]));
 });
+
+test('unexposed CTA QA does not inflate unmatched diagnostics; ordinary unexposed clicks stay unmatched',()=>{
+ const click={version:1,eventId:id(4001),sessionId:'0033EFA0-5A71-48AF-9A56-291A6B7F81B0',pageViewId:id(4002),occurredAt:'2026-10-20T09:30:00.000Z',name:'product_click',surface:'hidden_gems',path:'/hidden-gems',productSlug:'pdf24-creator',position:3,exposureId:id(4003)};
+ const view={version:1,eventId:id(4004),sessionId:click.sessionId,pageViewId:id(4005),occurredAt:click.occurredAt,name:'product_view',surface:'product',path:'/software/pdf24-creator',productSlug:'pdf24-creator'};
+ const only=discoveryMetrics([click,view]);assert.equal(only.excludedQaEvents,2);assert.equal(only.hiddenGems.unmatchedClicks,0);assert.equal(only.hiddenGems.productCtr,null);assert.equal(only.productViews,0);
+ const ordinary={...click,eventId:id(4010),sessionId:id(4011)};
+ const mixed=discoveryMetrics([click,view,ordinary,click]);assert.equal(mixed.excludedQaEvents,2);assert.equal(mixed.duplicateEvents,1);assert.equal(mixed.hiddenGems.unmatchedClicks,1);assert.equal(mixed.hiddenGems.productImpressions,0);assert.equal(mixed.hiddenGems.clickedExposures,0);assert.equal(mixed.hiddenGems.productCtr,null);assert.equal(mixed.routeProductCtr,null);
+ assert.throws(()=>discoveryMetrics([click,{...click,position:2}]));assert.throws(()=>discoveryMetrics([{...click,email:'forbidden'}]));
+});
