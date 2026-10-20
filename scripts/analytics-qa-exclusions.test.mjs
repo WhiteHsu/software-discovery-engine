@@ -43,3 +43,17 @@ test('accepted Hidden Gems QA journey is excluded while an ordinary editorial jo
  assert.equal(mixed.excludedQaEvents,4);assert.equal(mixed.duplicateEvents,1);assert.equal(mixed.hiddenGems.productImpressions,1);assert.equal(mixed.hiddenGems.clickedExposures,1);assert.equal(mixed.hiddenGems.productCtr,1);assert.equal(mixed.productViews,1);assert.equal(mixed.productOutboundCtr,1);assert.equal(mixed.routeProductCtr,null);
  assert.throws(()=>discoveryMetrics([qa[0],{...qa[0],position:2}]));
 });
+
+test('accepted keyboard and middle-click session excludes both products without masking conflicts or ordinary clicks',()=>{
+ const qaId='61baa262-19fc-44b9-8053-3c080498ea85';
+ const inputJourney=(session,offset)=>['joplin','krita'].flatMap((slug,i)=>{
+  const common={version:1,sessionId:session,occurredAt:'2026-10-20T06:53:38.735Z',productSlug:slug};
+  const exposure={...common,eventId:id(offset+i*20+1),pageViewId:id(offset+90),name:'product_impression',surface:'hidden_gems',path:'/hidden-gems',exposureId:id(offset+i*20+2),position:i+1};
+  const view={...common,eventId:id(offset+i*20+4),pageViewId:id(offset+i*20+5),name:'product_view',surface:'product',path:'/software/'+slug};
+  return [exposure,{...exposure,eventId:id(offset+i*20+3),name:'product_click'},view,{...view,eventId:id(offset+i*20+6),name:'outbound_click'}];
+ });
+ const qa=inputJourney(qaId.toUpperCase(),2000),ordinary=inputJourney(id(9999),2200);
+ const only=discoveryMetrics(qa);assert.equal(only.excludedQaEvents,8);assert.equal(only.hiddenGems.productCtr,null);assert.equal(only.productViews,0);assert.equal(only.unmatchedClicks,0);assert.equal(only.hiddenGems.unmatchedClicks,0);assert.equal(only.unmatchedOutbound,0);
+ const mixed=discoveryMetrics([...qa,...ordinary,qa[0]]);assert.equal(mixed.excludedQaEvents,8);assert.equal(mixed.duplicateEvents,1);assert.equal(mixed.hiddenGems.productImpressions,2);assert.equal(mixed.hiddenGems.clickedExposures,2);assert.equal(mixed.hiddenGems.productCtr,1);assert.equal(mixed.productViews,2);assert.equal(mixed.outboundProductViews,2);assert.equal(mixed.routeProductCtr,null);
+ assert.throws(()=>discoveryMetrics([qa[0],{...qa[0],position:2}]));assert.throws(()=>discoveryMetrics([{...qa[0],email:'forbidden'}]));
+});

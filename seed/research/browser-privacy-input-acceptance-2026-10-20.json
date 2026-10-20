@@ -1,0 +1,61 @@
+{
+  "packet": "PR5.119",
+  "baselineCommit": "b97a4065fa9674d54e87f1a3bc2470b409103b1c",
+  "evidenceDate": "2026-10-20",
+  "timezone": "Asia/Taipei",
+  "evidenceSource": "owner screenshots and explicit closing reports; not author live browser inspection",
+  "privacy": {
+    "dnt": {
+      "browser": "Chrome",
+      "navigatorDoNotTrack": "1",
+      "noEventRequestsInTestJourney": true,
+      "enabledReadyDuringTest": "explicitly confirmed by owner",
+      "producerFalseRedeployedAfterTest": "explicitly confirmed by owner"
+    },
+    "gpc": {
+      "browser": "Firefox",
+      "navigatorGlobalPrivacyControl": true,
+      "navigatorDoNotTrack": "unspecified",
+      "noEventRequestsInTestJourney": true,
+      "enabledReadyDuringTest": "owner followed controlled activation procedure; enabled deployment screenshot not supplied",
+      "producerFalseRedeployedAfterTest": "owner confirmed changed back and deployed"
+    }
+  },
+  "inputQa": {
+    "qaSessionId": "61baa262-19fc-44b9-8053-3c080498ea85",
+    "navigatorDoNotTrack": null,
+    "ownerActions": {
+      "joplin": "Tab then Enter after visible wait",
+      "krita": "middle click after visible wait"
+    },
+    "inputModalityEncodedInEvent": false,
+    "http204Observed": true,
+    "exactRequestCountAsserted": false,
+    "scopedSqlChecks": {
+      "joplin_impression_stored": true,
+      "joplin_click_stored": true,
+      "joplin_every_click_matches_exposure": true,
+      "krita_impression_stored": true,
+      "krita_click_stored": true,
+      "krita_every_click_matches_exposure": true
+    },
+    "producerFalseAndReadyAfterTest": "explicitly confirmed by owner",
+    "note": "Modality comes from owner workflow; SQL verifies event presence and placement linkage, not the physical input device."
+  },
+  "excludedFromMetricsByThisPacket": [
+    "61baa262-19fc-44b9-8053-3c080498ea85"
+  ],
+  "publishedProducts": 24,
+  "approvedPublishedRoutes": 10,
+  "experimentStarted": false,
+  "pending": [
+    "quick-click without measured exposure",
+    "continuous-visibility reset and hidden-tab behavior",
+    "enabled mobile capture/transport"
+  ],
+  "limits": [
+    "Privacy evidence is browser-side no-request observation; no extra SQL assertion of absent writes was made.",
+    "Only the supplied accepted session is added; unrelated sessions are not assumed to be QA.",
+    "Direct SQL reporting must separately apply QA exclusions and an approved experiment window."
+  ]
+}

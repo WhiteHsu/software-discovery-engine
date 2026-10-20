@@ -610,3 +610,9 @@ Owner e9d4383 / Production133,38 tests/build and canonical sitemap35/metadata+al
 - Owner committed PR5.117 SQL: eleven checks true; enabled Joplin journey: four HTTP 204 responses and seven scoped SQL checks true.
 - Owner reports producer=false, Ready redeployment and disabled repeat journey completed. Added accepted QA session exclusion and frozen receipt; experiment not started.
 - Author validation: 50 Node tests, TypeScript, targeted lint and production build pass. No new SQL or environment changes; public 24/10 unchanged. Enabled privacy/visibility/mobile/middle-click edge acceptance remains pending.
+
+
+## PR5.119 — browser privacy/input receipt and QA exclusion
+- Owner Chrome DNT=1 and Firefox GPC=true/DNT=unspecified journeys showed no event requests under the controlled activation workflow; owner reports disabled redeployment after each.
+- Repeated keyboard/middle-click test with DNT=null passed six scoped Joplin/Krita event presence and exposure-linkage checks. Added session 61baa262-19fc-44b9-8053-3c080498ea85 to metric QA exclusions; input modality is owner-reported, not encoded in events.
+- Owner confirms producer=false and Ready. Author: 51 Node tests, typecheck, targeted lint and production build pass. No SQL/environment changes; public24/10 unchanged; experiment not started. Quick-click, visibility-reset and enabled-mobile acceptance pending.
