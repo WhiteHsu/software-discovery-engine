@@ -1,0 +1,45 @@
+{
+  "packet": "PR5.120",
+  "baselineCommit": "f34fc5ef558462c28a35e75392ea1602d304e9a0",
+  "evidenceDate": "2026-10-20",
+  "timezone": "Asia/Taipei",
+  "evidenceSource": "owner Supabase JSON/screenshot and mobile browser/closing reports; not author device inspection",
+  "qaSessionId": "c52c9eed-061e-4618-bf9f-5dc2f44a85b3",
+  "ownerReportedBrowser": "Chrome on phone",
+  "deviceOs": "not supplied",
+  "productSlug": "pdf24-creator",
+  "displayedPosition": 3,
+  "observedWindowUtc": {
+    "first": "2026-10-20T07:30:06.607Z",
+    "last": "2026-10-20T07:30:20.305Z"
+  },
+  "ownerScopedCounts": {
+    "editorialImpressions": 1,
+    "editorialClicks": 1,
+    "productViews": 1,
+    "outboundClicks": 1
+  },
+  "scopedSqlChecks": {
+    "editorial_impression_stored": true,
+    "editorial_product_click_stored": true,
+    "product_view_stored": true,
+    "outbound_click_stored": true,
+    "every_editorial_click_matches_exposure": true,
+    "every_outbound_matches_product_view": true,
+    "editorial_events_do_not_fabricate_route_context": true
+  },
+  "producerFalseAndRedeployedReady": "explicitly confirmed by owner",
+  "experimentStarted": false,
+  "publishedProducts": 24,
+  "approvedPublishedRoutes": 10,
+  "limits": [
+    "Browser/device designation is owner reported; events deliberately do not store user-agent/device fingerprints.",
+    "Single successful mobile journey does not verify all mobile browsers, transport failures or background delivery.",
+    "SQL linkage does not establish complete Hidden Gems to outbound attribution.",
+    "Direct SQL reports must separately apply the QA ledger and approved experiment window."
+  ],
+  "pending": [
+    "quick click before qualifying impression",
+    "continuous visibility reset and document-hidden behavior"
+  ]
+}

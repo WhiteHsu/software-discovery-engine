@@ -57,3 +57,16 @@ test('accepted keyboard and middle-click session excludes both products without 
  const mixed=discoveryMetrics([...qa,...ordinary,qa[0]]);assert.equal(mixed.excludedQaEvents,8);assert.equal(mixed.duplicateEvents,1);assert.equal(mixed.hiddenGems.productImpressions,2);assert.equal(mixed.hiddenGems.clickedExposures,2);assert.equal(mixed.hiddenGems.productCtr,1);assert.equal(mixed.productViews,2);assert.equal(mixed.outboundProductViews,2);assert.equal(mixed.routeProductCtr,null);
  assert.throws(()=>discoveryMetrics([qa[0],{...qa[0],position:2}]));assert.throws(()=>discoveryMetrics([{...qa[0],email:'forbidden'}]));
 });
+
+test('accepted mobile PDF24 session is excluded while ordinary mobile-shaped events remain measurable',()=>{
+ const mobile=(session,offset)=>{
+  const common={version:1,sessionId:session,occurredAt:'2026-10-20T07:30:06.607Z',productSlug:'pdf24-creator'};
+  const impression={...common,eventId:id(offset+1),pageViewId:id(offset+2),exposureId:id(offset+3),position:3,name:'product_impression',surface:'hidden_gems',path:'/hidden-gems'};
+  const view={...common,eventId:id(offset+5),pageViewId:id(offset+6),name:'product_view',surface:'product',path:'/software/pdf24-creator'};
+  return [impression,{...impression,eventId:id(offset+4),name:'product_click'},view,{...view,eventId:id(offset+7),name:'outbound_click'}];
+ };
+ const qa=mobile('C52C9EED-061E-4618-BF9F-5DC2F44A85B3',3000),ordinary=mobile(id(9998),3200);
+ const only=discoveryMetrics(qa);assert.equal(only.excludedQaEvents,4);assert.equal(only.hiddenGems.productCtr,null);assert.equal(only.productViews,0);assert.equal(only.outboundProductViews,0);assert.equal(only.hiddenGems.unmatchedClicks,0);assert.equal(only.unmatchedOutbound,0);
+ const mixed=discoveryMetrics([...qa,...ordinary,qa[0]]);assert.equal(mixed.excludedQaEvents,4);assert.equal(mixed.duplicateEvents,1);assert.equal(mixed.hiddenGems.productImpressions,1);assert.equal(mixed.hiddenGems.clickedExposures,1);assert.equal(mixed.hiddenGems.productCtr,1);assert.equal(mixed.productViews,1);assert.equal(mixed.productOutboundCtr,1);assert.equal(mixed.routeProductCtr,null);
+ assert.throws(()=>discoveryMetrics([qa[0],{...qa[0],position:2}]));assert.throws(()=>discoveryMetrics([{...qa[0],email:'forbidden'}]));
+});

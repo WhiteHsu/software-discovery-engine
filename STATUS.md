@@ -616,3 +616,9 @@ Owner e9d4383 / Production133,38 tests/build and canonical sitemap35/metadata+al
 - Owner Chrome DNT=1 and Firefox GPC=true/DNT=unspecified journeys showed no event requests under the controlled activation workflow; owner reports disabled redeployment after each.
 - Repeated keyboard/middle-click test with DNT=null passed six scoped Joplin/Krita event presence and exposure-linkage checks. Added session 61baa262-19fc-44b9-8053-3c080498ea85 to metric QA exclusions; input modality is owner-reported, not encoded in events.
 - Owner confirms producer=false and Ready. Author: 51 Node tests, typecheck, targeted lint and production build pass. No SQL/environment changes; public24/10 unchanged; experiment not started. Quick-click, visibility-reset and enabled-mobile acceptance pending.
+
+
+## PR5.120 — mobile Chrome receipt and QA exclusion
+- Owner phone Chrome PDF24 journey: scoped lookup showed four event types, one each; seven event/context/linkage SQL checks passed.
+- Added accepted session c52c9eed-061e-4618-bf9f-5dc2f44a85b3 to QA metric exclusions; previous sessions retained. Owner explicitly confirms producer=false and Ready redeployment.
+- Author: 52 Node tests, typecheck, targeted lint and production build pass. No SQL/environment changes. Device designation is owner reported; mobile transport failure/background cases unverified. Quick-click and visibility reset acceptance pending; public24/10 unchanged, experiment not started.
