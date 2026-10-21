@@ -636,3 +636,10 @@ Owner e9d4383 / Production133,38 tests/build and canonical sitemap35/metadata+al
 - LAUNCH_READINESS.md records missing natural-language discovery and additional instrumentation; current four-event collector is not a complete measurement implementation. Full latest Issue6–9 bodies unavailable to author; requirements inventory uses frozen repository spec, not an assertion of issue closure.
 - Author validation:61 Node tests, build TypeScript, targeted ESLint and webpack production build pass. Local narrow-browser form/selection and four HTTP unavailable-state/canonical/noindex checks pass. No production database connection or owner deployment acceptance claimed.
 - No SQL, environment, dependency, producer, cron or publication changes. Producer remains false. Accepted publication baseline24 products/10 routes; formal experiment not started. See ISSUE5_CLOSEOUT.md for owner review.
+
+
+## Launch-02 — Issue6 clear-filter state correction
+- Baseline owner-pushed6dfdef0. Owner desktop/mobile screenshots show expected filtering and responsive layout, but Clear filters restores ten results while retaining previous select values.
+- Key the native GET form by normalized URL selection, including invalid/filtered flags. React remounts uncontrolled selects when navigation changes the selection; URL-based metadata, filtering, SQL and event gates are unchanged.
+- Author:five relevant navigation/catalog tests, targeted ESLint and production webpack build including TypeScript pass. Local browser confirms Todoist/offline -> Clear filters -> both defaults; Back restores Todoist/offline. Local backend unavailable, so live result counts are established by prior owner screenshots, not this local run.
+- Production desktop/mobile retest of clear/reset pending. Producer remains false; no SQL, secrets, dependencies or publication changes. Issue5 closed by owner; no claim Issue6 is complete.

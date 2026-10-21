@@ -27,7 +27,7 @@ export default async function Home({searchParams}:HomeProps){
   <section id="comparisons" aria-labelledby="comparisons-title" className={styles.directory}>
    <h2 id="comparisons-title">What would you like to change?</h2>
    <p className={styles.intro}>Compare reviewed alternatives, their pricing models and their limits. Each comparison covers a specific task or edition; check the scope before choosing.</p>
-   <form action="/#comparisons" method="get" className={styles.filters} aria-label="Find a reviewed comparison">
+   <form key={JSON.stringify([selection.anchor,selection.constraint,selection.invalid,selection.filtered])} action="/#comparisons" method="get" className={styles.filters} aria-label="Find a reviewed comparison">
     <div><label htmlFor="discovery-anchor">What do you use?</label><select id="discovery-anchor" name="anchor" defaultValue={selection.anchor}>
      <option value="">Any software or workflow</option>{anchorOptions.map(o=><option key={o.value} value={o.value}>{o.label}</option>)}
     </select></div>
