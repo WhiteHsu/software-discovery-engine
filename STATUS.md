@@ -650,3 +650,10 @@ Owner e9d4383 / Production133,38 tests/build and canonical sitemap35/metadata+al
 - Runtime uses approved directory and qualified public route only; optional local-first failures withhold entry. No invented no-AI/local-first/product scope or measured popularity claim.
 - Author:15 relevant tests, targeted lint and webpack production build/TypeScript pass. Owner deployment UI acceptance pending. See HOME_ENTRY_ACCEPTANCE.md.
 - Main homepage search input remains pending with Issue7 integration; do not declare6 closed. No SQL/environment/analytics activation; producer=false, experiment not started.
+
+
+## Search-01 — bounded natural-language input and graph search (Issues6/7)
+- Owner accepted Launch03/441f736 homepage entries, expected counts and Local First AFFiNE. Exact Issue7 criteria supplied; owner has no OpenAI setup yet.
+- Adds homepage input,/discover noindex page and default-OFF POST/api/discover; strict anchor/problem/constraint parsing, public qualified route retrieval, independent AND filtering/ranking, evidence-only AI explanations with fallback. Never invent model-selected products or loosen requirements for results.
+- Author75 Node tests, TypeScript, targeted ESLint and production webpack build pass; local default-off UI and metadata/HTTP verified. No paid model or live DB calls. Actual model configuration and desktop/mobile result acceptance pending.
+- See NATURAL_LANGUAGE_DISCOVERY.md. Instance-only admission is not a global spending cap. Keep search OFF until controlled setup/QA; producer=false. No SQL or experiment start; Issues6/7 not closed.

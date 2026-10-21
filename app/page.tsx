@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import DiscoverySearch from '@/components/DiscoverySearch';
 import {getPublishedRouteCards} from '@/lib/discovery/route-catalog-server';
 import type {RouteCard} from '@/lib/discovery/route-catalog';
 import {anchorOptions,constraintOptions,navigationSelection,filterRouteCards} from '@/lib/discovery/navigation';
@@ -27,6 +28,7 @@ export default async function Home({searchParams}:HomeProps){
    <p>Start with what you want to change: fewer subscriptions, offline access, simpler tools, or a specific local workflow.</p>
    <a className={styles.browse} href="#comparisons">Explore comparisons <span aria-hidden="true">↓</span></a>
    <Link className={styles.gemsLink} href="/hidden-gems">Explore Hidden Gems →</Link>
+   <DiscoverySearch />
   </section>
   {needs.length>0&&<section className={styles.entrySection} aria-labelledby="needs-title">
    <h2 id="needs-title">Start with what matters to you</h2>

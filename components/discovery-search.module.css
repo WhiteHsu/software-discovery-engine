@@ -1,0 +1,17 @@
+.search {margin: 32px 0 48px; max-width: 100%;}
+.search h2 {font-size: clamp(24px,4vw,32px); margin: 0 0 20px;}
+.search label {display: block; font-weight: 700; margin-bottom: 10px;}
+.controls {display: flex; flex-wrap: wrap; gap: 12px;}
+.controls input {flex: 1 1 340px; min-width: 0;}
+.controls input, .controls button {font: inherit; color: var(--foreground); background: var(--surface); border: 1px solid var(--foreground); padding: 14px; min-height: 48px; border-radius: 8px;}
+.controls button {font-weight: 700; cursor: pointer;}
+.controls button:disabled {opacity: .65; cursor: default;}
+.note {font-size: 14px; line-height: 1.7; color: var(--muted); max-width: 850px;}
+.search :is(input,button,a,summary):focus-visible {outline: 3px solid currentColor; outline-offset: 4px;}
+.search p {line-height: 1.7; overflow-wrap: anywhere;}
+.results {list-style: none; margin: 24px 0 0; padding: 0; display: grid; gap: 24px;}
+.results > li {border: 1px solid var(--border); border-radius: 12px; background: var(--surface); padding: 24px; overflow-wrap: anywhere; min-width: 0;}
+.results h3 {margin: 0 0 16px; font-size: 24px;}
+.results h4 {margin: 20px 0 12px;}
+.results li, .results details {line-height: 1.7;}
+@media(max-width:640px){.controls input{flex-basis:100%;}.controls button{width:100%;}.results > li{padding:18px;}}
