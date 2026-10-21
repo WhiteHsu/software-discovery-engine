@@ -628,3 +628,11 @@ Owner e9d4383 / Production133,38 tests/build and canonical sitemap35/metadata+al
 - Owner PDF24 Explore click without measured name exposure: five scoped SQL checks passed. Click/product view stored; no PDF24 editorial impression; clicks unmatched, no fabricated route context.
 - Added exact QA session 0033efa0-5a71-48af-9a56-291a6b7f81b0 to exclusions; prior ledger retained. Owner confirms producer=false with Ready screenshot.
 - Author: 53 Node tests, typecheck, targeted lint and production build pass. No SQL/environment changes; public24/10 unchanged; experiment not started. This verifies unexposed CTA, not precise quick-click timing or continuous-visibility reset.
+
+
+## Launch-01 — Issue6 navigation and launch-gap inventory
+- Baseline owner-pushed ff021d7. Separates Issue5 closeout from Issues6–9 and overall Issue11 experiment gates.
+- Homepage adds native server-rendered anchor/need intersection filters over approved route cards; unavailable/empty/no-match states remain distinct. Restores frozen core headline. Query filter pages noindex with homepage canonical; no generated comparison combinations or product claim changes.
+- LAUNCH_READINESS.md records missing natural-language discovery and additional instrumentation; current four-event collector is not a complete measurement implementation. Full latest Issue6–9 bodies unavailable to author; requirements inventory uses frozen repository spec, not an assertion of issue closure.
+- Author validation:61 Node tests, build TypeScript, targeted ESLint and webpack production build pass. Local narrow-browser form/selection and four HTTP unavailable-state/canonical/noindex checks pass. No production database connection or owner deployment acceptance claimed.
+- No SQL, environment, dependency, producer, cron or publication changes. Producer remains false. Accepted publication baseline24 products/10 routes; formal experiment not started. See ISSUE5_CLOSEOUT.md for owner review.
