@@ -5,6 +5,8 @@ import {anchorOptions,constraintOptions,navigationSelection,filterRouteCards} fr
 import {requestSeo} from '@/lib/discovery/seo-server';
 import type {Metadata} from 'next';
 import styles from './home.module.css';
+import {featuredRoutes,needEntries,localFirstEntry} from '@/lib/discovery/home-entries';
+import {getEscape} from '@/lib/discovery/escapes';
 type HomeProps={searchParams:Promise<{anchor?:string|string[];constraint?:string|string[]}>};
 export async function generateMetadata({searchParams}:HomeProps):Promise<Metadata>{
  const selection=navigationSelection(await searchParams),seo=await requestSeo();
@@ -16,6 +18,8 @@ export default async function Home({searchParams}:HomeProps){
  let unavailable=false;
  try{routes=await getPublishedRouteCards();}catch{unavailable=true;}
  const matches=filterRouteCards(routes,selection);
+ const featured=featuredRoutes(routes),needs=needEntries(routes);
+ try{const local=localFirstEntry(await getEscape('offline-notion-alternatives'));if(local)needs.push(local);}catch{/* Withhold this optional entry when live evidence is unavailable. */}
  return <div>
   <section className={styles.hero} aria-labelledby="discovery-title">
    <p className="eyebrow">Find a better fit</p>
@@ -24,6 +28,15 @@ export default async function Home({searchParams}:HomeProps){
    <a className={styles.browse} href="#comparisons">Explore comparisons <span aria-hidden="true">↓</span></a>
    <Link className={styles.gemsLink} href="/hidden-gems">Explore Hidden Gems →</Link>
   </section>
+  {needs.length>0&&<section className={styles.entrySection} aria-labelledby="needs-title">
+   <h2 id="needs-title">Start with what matters to you</h2>
+   <ul className={styles.needs}>{needs.map(need=><li key={need.label}><h3><Link href={need.href}>{need.label} →</Link></h3><p>{need.description}</p></li>)}</ul>
+  </section>}
+  {featured.length>0&&<section className={styles.entrySection} aria-labelledby="popular-title">
+   <h2 id="popular-title">Popular Escape Routes</h2>
+   <p className={styles.intro}>A starting selection chosen by our editors for launch. These are not ranked by measured visitor popularity.</p>
+   <ul className={styles.grid}>{featured.map(route=><li className={styles.card} key={route.slug}><h3><Link href={`/escape/${route.slug}`}>{route.name} →</Link></h3><p>{route.description}</p></li>)}</ul>
+  </section>}
   <section id="comparisons" aria-labelledby="comparisons-title" className={styles.directory}>
    <h2 id="comparisons-title">What would you like to change?</h2>
    <p className={styles.intro}>Compare reviewed alternatives, their pricing models and their limits. Each comparison covers a specific task or edition; check the scope before choosing.</p>

@@ -643,3 +643,10 @@ Owner e9d4383 / Production133,38 tests/build and canonical sitemap35/metadata+al
 - Key the native GET form by normalized URL selection, including invalid/filtered flags. React remounts uncontrolled selects when navigation changes the selection; URL-based metadata, filtering, SQL and event gates are unchanged.
 - Author:five relevant navigation/catalog tests, targeted ESLint and production webpack build including TypeScript pass. Local browser confirms Todoist/offline -> Clear filters -> both defaults; Back restores Todoist/offline. Local backend unavailable, so live result counts are established by prior owner screenshots, not this local run.
 - Production desktop/mobile retest of clear/reset pending. Producer remains false; no SQL, secrets, dependencies or publication changes. Issue5 closed by owner; no claim Issue6 is complete.
+
+
+## Launch-03 — Issue6 explicit needs and editorial route entries
+- Owner accepted114d7ef filter reset; exact Issue6 criteria now available. Added six named needs plus independently evidence-gated Local First and disclosed editorial Popular Escape Routes section. Full directory and reset fix retained.
+- Runtime uses approved directory and qualified public route only; optional local-first failures withhold entry. No invented no-AI/local-first/product scope or measured popularity claim.
+- Author:15 relevant tests, targeted lint and webpack production build/TypeScript pass. Owner deployment UI acceptance pending. See HOME_ENTRY_ACCEPTANCE.md.
+- Main homepage search input remains pending with Issue7 integration; do not declare6 closed. No SQL/environment/analytics activation; producer=false, experiment not started.
