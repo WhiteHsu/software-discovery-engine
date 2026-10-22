@@ -1,3 +1,5 @@
+import {getProduct} from './products';
+import {indexableProduct} from './structured-data';
 import 'server-only';
 import {headers} from 'next/headers';
 import {createClient} from '@/lib/supabase/server';
@@ -17,9 +19,8 @@ export async function liveSitemapPaths(){
    return data;
   },
   product:async slug=>{
-   const {data,error}=await client.rpc('product_discovery_page',{product_slug:slug});
-   if(error)throw Error('Published product page unavailable');
-   return data;
+   const page=await getProduct(slug);
+   return page&&indexableProduct(page)?page:null;
   },
   // getEscape includes editorial approval, published status and runtime qualification.
   routes:()=>Promise.all(escapeDefinitions.map(d=>getEscape(d.slug))),

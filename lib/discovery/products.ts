@@ -19,6 +19,6 @@ export const getProduct = cache(async (slug: string): Promise<ProductPage | null
   if (error) throw new Error("Product data is temporarily unavailable.");
   const page = data as ProductPage | null;
   if(page?.status !== "published")return null;
-  const available=await Promise.all(page.routes.map(async r=>(await getEscape(r.slug))?r:null));
+  const available=await Promise.all(page.routes.map(async r=>(await getEscape(r.slug))?.candidates.some(c=>c.eligible&&c.product.slug===page.slug)?r:null));
   return {...page,routes:available.filter((r):r is ProductPage["routes"][number]=>r!==null)};
 });

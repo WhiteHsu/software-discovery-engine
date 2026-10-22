@@ -1,3 +1,5 @@
+import DiscoveryBreadcrumb from "@/components/DiscoveryBreadcrumb";
+import {indexableProduct,productData,jsonLd,isoDate} from "@/lib/discovery/structured-data";
 import {requestSeo} from "@/lib/discovery/seo-server";
 import DiscoveryTracker from '@/components/DiscoveryTracker';
 import {pageTrackingEnabled} from '@/lib/analytics/page-tracking';
@@ -18,12 +20,12 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
   return {title:p?.name ?? "Product not found",description:p?.description ?? undefined,
     metadataBase:new URL(seo.origin),
     alternates:{canonical:`/software/${slug}`},
-    robots:{index:seo.indexable && !!p && !localPreview(),follow:seo.indexable && !!p && !localPreview()}};
+    robots:{index:seo.indexable && !!p && indexableProduct(p) && !localPreview(),follow:seo.indexable && !!p && indexableProduct(p) && !localPreview()}};
 }
 function date(d:string|null) { return d && Number.isFinite(Date.parse(d)) ? new Date(d).toISOString().slice(0,10) : "Unknown"; }
 function Evidence({claim}:{claim:Claim}) {
   const state=supported(claim)?claim.verificationStatus:"unknown";
-  return <div className={styles.evidence}><span className={styles.badge}>{state}</span><span>{state==="unknown"?"Verification date unknown":`Checked ${date(claim.lastVerifiedAt)}`}</span>
+  return <div className={styles.evidence}><span className={styles.badge}>{state}</span><span>{state==="unknown"?"Verification date unknown":<>Checked <time dateTime={isoDate(claim.lastVerifiedAt)??undefined}>{date(claim.lastVerifiedAt)}</time></>}</span>
     {claim.sources.map((s,i)=>safeUrl(s.url)?<a key={i} href={safeUrl(s.url)!} target="_blank" rel="noopener noreferrer">{s.title} ↗</a>:null)}
   </div>;
 }
@@ -32,6 +34,7 @@ function Claims({items,empty}:{items:Claim[];empty:string}) {
 }
 export default async function Product({params}:Props) {
   const {slug}=await params; const p=await getProduct(slug); if(!p)notFound();
+  const seo=await requestSeo();
   const preview=localPreview(); const url=safeUrl(p.websiteUrl);
   const attribute=(slug:string)=>p.attributes.find(c=>c.slug===slug);
   const pricing=attribute("pricing-model"),platforms=attribute("supported-platforms"),tradeoffs=attribute("trade-off-summary");
@@ -40,10 +43,12 @@ export default async function Product({params}:Props) {
   const positive=facts.filter(c=>c.slug!=="privacy-friendly"&&supported(c)&&c.verificationStatus==="verified"&&c.value===true);
   const audiences=p.audiences.filter(supported),problems=p.problems.filter(supported),anchors=p.anchors.filter(supported);
   return <article className={styles.page}>
+    <DiscoveryBreadcrumb name={p.name}/>
+    {seo.indexable&&!preview&&indexableProduct(p)&&<script type="application/ld+json" dangerouslySetInnerHTML={{__html:jsonLd(productData(seo.origin,p))}}/>}
     <DiscoveryTracker enabled={!preview&&p.status==="published"&&pageTrackingEnabled()} surface="product" slug={slug} officialUrl={url} />
     {preview&&<aside className={styles.preview}>Local draft preview · Publication has not been approved.</aside>}
     <header className={styles.hero}><p className="eyebrow">Software worth a closer look</p><h1>{p.name}</h1><p className={styles.positioning}>{p.description??"Product positioning has not been reviewed yet."}</p>
-      <div className={styles.actions}>{url?<a className={styles.cta} href={url} data-discovery-outbound target="_blank" rel="noopener noreferrer">Visit {p.name} ↗</a>:<span>Official website unknown</span>}<span className={styles.muted}>Latest claim check: {date(latestVerification(p))}</span></div>
+      <div className={styles.actions}>{url?<a className={styles.cta} href={url} data-discovery-outbound target="_blank" rel="noopener noreferrer">Visit {p.name} ↗</a>:<span>Official website unknown</span>}<span className={styles.muted}>Latest claim check: <time dateTime={isoDate(latestVerification(p))??undefined}>{date(latestVerification(p))}</time></span></div>
     </header>
     <section className={styles.section}><h2>Why it’s worth discovering</h2><p>Start with the supported features below, then compare the limits with your workflow.</p><Claims items={positive} empty="No positive verified feature claims are available yet."/></section>
     <div className={styles.columns}><section className={styles.section}><h2>Best for</h2><p className={styles.muted}>Audience fits are editorial judgments. “Likely” describes a potential fit.</p><Claims items={audiences} empty="Suitable audiences have not been established."/></section>
