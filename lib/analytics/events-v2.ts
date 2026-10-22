@@ -60,7 +60,7 @@ export function parseEventV2(input:unknown):EventV2{
   if(e.surface!=='escape')throw Error('Escape surface required');
  }else if(e.name==='anchor_selected'||e.name==='constraint_selected'){
   if(e.surface!=='home'||!Object.hasOwn(e,'selection'))throw Error('Home selection required');
-  const options=e.name==='anchor_selected'?new Set<string>(searchAnchors):new Set<string>(constraintOptions.map(c=>c.value));
+  const options=e.name==='anchor_selected'?new Set<string>(searchAnchors):constraints;
   if(e.selection!==null&&!options.has(e.selection!))throw Error('Unknown selection');
  }else if(e.name!=='page_viewed')throw Error('Unknown event');
  if(e.productSlug!==undefined)product(e.productSlug);

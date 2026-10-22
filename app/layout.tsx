@@ -1,6 +1,9 @@
 import {requestSeo} from "@/lib/discovery/seo-server";
 import type { Metadata } from "next";
 import Link from "next/link";
+import {Suspense} from 'react';
+import AnalyticsV2 from '@/components/AnalyticsV2';
+import {collectorConfigV2} from '@/lib/analytics/http-v2';
 import "./globals.css";
 
 export async function generateMetadata():Promise<Metadata>{
@@ -26,6 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Suspense fallback={null}><AnalyticsV2 enabled={collectorConfigV2(process.env).enabled&&process.env.ANALYTICS_PRODUCER_ENABLED==='true'&&process.env.VERCEL==='1'&&process.env.VERCEL_ENV==='production'} /></Suspense>
         <div className="app-shell">
           <header className="site-header">
             <div className="site-header__inner">

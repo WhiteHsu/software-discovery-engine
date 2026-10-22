@@ -32,7 +32,7 @@ export default async function Home({searchParams}:HomeProps){
   </section>
   {needs.length>0&&<section className={styles.entrySection} aria-labelledby="needs-title">
    <h2 id="needs-title">Start with what matters to you</h2>
-   <ul className={styles.needs}>{needs.map(need=><li key={need.label}><h3><Link href={need.href}>{need.label} →</Link></h3><p>{need.description}</p></li>)}</ul>
+   <ul className={styles.needs}>{needs.map(need=><li key={need.label}><h3><Link data-analytics-filter data-analytics-constraint={need.label==='Local First'?'local-first':undefined} href={need.href}>{need.label} →</Link></h3><p>{need.description}</p></li>)}</ul>
   </section>}
   {featured.length>0&&<section className={styles.entrySection} aria-labelledby="popular-title">
    <h2 id="popular-title">Popular Escape Routes</h2>
@@ -50,7 +50,7 @@ export default async function Home({searchParams}:HomeProps){
      <option value="">Any reviewed need</option>{constraintOptions.map(o=><option key={o.value} value={o.value}>{o.label}</option>)}
     </select></div>
     <button type="submit">Find comparisons</button>
-    {selection.filtered&&<Link href="/#comparisons">Clear filters</Link>}
+    {selection.filtered&&<Link data-analytics-clear href="/#comparisons">Clear filters</Link>}
    </form>
    <p className={styles.scopeNote}>Choose either option or both. Results cover existing reviewed comparisons; each page explains the supported scope and limits.</p>
    {unavailable?<p role="status">Comparisons are temporarily unavailable. Please try again shortly.</p>:selection.invalid?<p role="status">That filter is not available. Choose from the options above or clear the filters.</p>:routes.length===0?<p>No comparisons are available yet. Please check back soon.</p>:matches.length===0?<p role="status">No reviewed comparison matches both choices yet. Try a different need or clear the filters to browse all comparisons.</p>:<>
