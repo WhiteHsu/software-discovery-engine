@@ -13,11 +13,11 @@ export async function generateMetadata():Promise<Metadata>{
   alternates:{canonical:"/"},
   robots:{index:seo.indexable,follow:seo.indexable},
   title: {
-    default: "Software Discovery Engine",
-    template: "%s | Software Discovery Engine",
+    default: "ToolElse",
+    template: "%s | ToolElse",
   },
   description:
-    "A constraint-aware discovery engine for finding great software beyond the big names.",
+    "Find software the algorithms missed. Compare curated alternatives for fewer subscriptions, offline access, and simpler workflows.",
 };
 }
 
@@ -33,7 +33,7 @@ export default function RootLayout({
         <div className="app-shell">
           <header className="site-header">
             <div className="site-header__inner">
-              <Link href="/" className="wordmark">Software Discovery Engine</Link>
+              <Link href="/" className="wordmark">ToolElse</Link>
             </div>
           </header>
           <main className="site-main">{children}</main>

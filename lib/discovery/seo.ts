@@ -1,5 +1,5 @@
 import {escapeDefinitions} from './escape-model.ts';
-const fallbackOrigin='https://software-discovery-engine.vercel.app';
+const fallbackOrigin='https://toolelse.com';
 const slug=/^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 export type SeoContext={origin:string;indexable:boolean};
 export function canonicalOrigin(env:Record<string,string|undefined>){
