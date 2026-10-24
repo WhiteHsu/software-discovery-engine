@@ -1,0 +1,35 @@
+{
+  "status": "scheduled_pending_owner_apply_and_issue11_close",
+  "start_taipei": "2026-10-25T00:00:00+08:00",
+  "start_utc": "2026-10-24T16:00:00Z",
+  "end_exclusive_taipei": "2026-11-24T00:00:00+08:00",
+  "end_exclusive_utc": "2026-11-23T16:00:00Z",
+  "duration_days": 30,
+  "products": 30,
+  "approved_routes": 10,
+  "sitemap_urls": 42,
+  "prelaunch_snapshot_utc": "2026-10-24T08:33:30.198231Z",
+  "prelaunch_raw_events": 114,
+  "prelaunch_included_events": 36,
+  "prelaunch_not_unique_visitors": true,
+  "gsc": {
+    "property": "toolelse.com",
+    "search_type": "Web",
+    "selected_range": "3 months",
+    "clicks": 0,
+    "impressions": 0,
+    "date_bounds": "not shown in screenshot",
+    "average_position": null
+  },
+  "flags": {
+    "ANALYTICS_ENABLED": true,
+    "ANALYTICS_PRODUCER_ENABLED": true,
+    "ANALYTICS_V2_ENABLED": true,
+    "ANALYTICS_MAINTENANCE_READY": true,
+    "ANALYTICS_PURGE_ENABLED": false,
+    "DISCOVERY_SEARCH_ENABLED": true
+  },
+  "purge": "Supabase daily cron active; HTTP purge disabled intentionally",
+  "qa_exclusion": "Inherited six accepted QA sessions and one QA event from production report SQL",
+  "issue11_closed": false
+}
