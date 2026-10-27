@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import {languageAlternates} from '@/lib/i18n/pilot';
 import DiscoverySearch from '@/components/DiscoverySearch';
 import {getPublishedRouteCards} from '@/lib/discovery/route-catalog-server';
 import type {RouteCard} from '@/lib/discovery/route-catalog';
@@ -11,7 +12,7 @@ import {getEscape} from '@/lib/discovery/escapes';
 type HomeProps={searchParams:Promise<{anchor?:string|string[];constraint?:string|string[]}>};
 export async function generateMetadata({searchParams}:HomeProps):Promise<Metadata>{
  const selection=navigationSelection(await searchParams),seo=await requestSeo();
- return {alternates:{canonical:'/'},robots:{index:seo.indexable&&!selection.filtered,follow:seo.indexable}};
+ return {alternates:{canonical:'/',languages:languageAlternates('/')},robots:{index:seo.indexable&&!selection.filtered,follow:seo.indexable}};
 }
 export default async function Home({searchParams}:HomeProps){
  const selection=navigationSelection(await searchParams);

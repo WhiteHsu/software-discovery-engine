@@ -1,3 +1,5 @@
+import {getChineseEscape} from '@/lib/i18n/server';
+import {pilotSlugs,zhHome} from '@/lib/i18n/pilot';
 import {getProduct} from './products';
 import {indexableProduct} from './structured-data';
 import 'server-only';
@@ -25,5 +27,6 @@ export async function liveSitemapPaths(){
   // getEscape includes editorial approval, published status and runtime qualification.
   routes:()=>Promise.all(escapeDefinitions.map(d=>getEscape(d.slug))),
  }),getHiddenGems()]);
- return [...paths,...(indexableGemCollection(gems)?['/hidden-gems']:[])].sort();
+ const translated=await Promise.all(pilotSlugs.map(getChineseEscape));
+ return [...paths,zhHome,...translated.flatMap(p=>p?[zhHome+'/escape/'+p.slug]:[]),...(indexableGemCollection(gems)?['/hidden-gems']:[])].sort();
 }

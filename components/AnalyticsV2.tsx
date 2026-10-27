@@ -1,4 +1,5 @@
 'use client';
+import {englishPath} from '@/lib/i18n/pilot';
 import {useEffect,useRef} from 'react';
 import {usePathname,useSearchParams} from 'next/navigation';
 import {escapeDefinitions} from '@/lib/discovery/escape-model';
@@ -9,9 +10,9 @@ export default function AnalyticsV2({enabled}:{enabled:boolean}){
  const saved=useRef<{key:string;context:PageContextV2;sent:boolean}|null>(null);
  useEffect(()=>{
   configureClientV2(enabled);if(!enabled||optedOut()||!globalThis.crypto?.randomUUID)return;
-  const def=escapeDefinitions.find(d=>path==='/escape/'+d.slug);
+  const normalized=englishPath(path),def=escapeDefinitions.find(d=>normalized==='/escape/'+d.slug);
   const product=path.match(/^\/software\/([a-z0-9-]+)$/)?.[1];
-  if(!['/','/discover','/hidden-gems'].includes(path)&&!def&&!product)return;
+  if(!['/','/discover','/hidden-gems'].includes(normalized)&&!def&&!product)return;
   const key=JSON.stringify([path,anchor,constraint]);
   if(!saved.current||saved.current.key!==key){const c=makePageV2(path,def?'escape':product?'product':path==='/hidden-gems'?'hidden_gems':path==='/discover'?'search':'home');
    if(def)Object.assign(c,{routeSlug:def.slug,anchor:def.anchor,constraints:[...def.constraints]});

@@ -1,3 +1,5 @@
+import {getChineseEscape} from "@/lib/i18n/server";
+import {languageAlternates} from "@/lib/i18n/pilot";
 import DiscoveryBreadcrumb from "@/components/DiscoveryBreadcrumb";
 import {routeData,jsonLd,isoDate} from "@/lib/discovery/structured-data";
 import {requestSeo} from "@/lib/discovery/seo-server";
@@ -15,7 +17,7 @@ export const dynamic="force-dynamic";
 export async function generateMetadata({params}:Props):Promise<Metadata>{
   const {slug}=await params,p=await getEscape(slug);
   const seo=await requestSeo();
-  return {title:p?.name??"Escape Route not available",description:p?.description??undefined,metadataBase:new URL(seo.origin),alternates:{canonical:`/escape/${slug}`},robots:{index:seo.indexable&&!!p&&!escapePreview(),follow:seo.indexable&&!!p&&!escapePreview()}};
+  return {title:p?.name??"Escape Route not available",description:p?.description??undefined,metadataBase:new URL(seo.origin),alternates:{canonical:`/escape/${slug}`,...(await getChineseEscape(slug)?{languages:languageAlternates(`/escape/${slug}`)}:{})},robots:{index:seo.indexable&&!!p&&!escapePreview(),follow:seo.indexable&&!!p&&!escapePreview()}};
 }
 const date=(value:string|null)=>value&&Number.isFinite(Date.parse(value))?new Date(value).toISOString().slice(0,10):"Unknown";
 export default async function Escape({params}:Props){

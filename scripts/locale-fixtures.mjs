@@ -1,0 +1,22 @@
+// Synthetic integration fixtures, not a production catalog or source verification.
+import {zhHantText} from '../lib/i18n/zh-hant-content.ts';
+const keys=Object.keys(zhHantText),find=prefix=>{const x=keys.find(s=>s.startsWith(prefix));if(!x)throw Error(prefix);return x;};
+const descs=['An open-source, local-first','A local-first, offline-first','An open-source Notion alternative','A paid desktop PDF','Windows PDF editing','Windows PDF tools','PDF editing, annotation','A PDF toolkit; this review covers occasional','A PDF toolkit; this review covers free'];
+const scopes=['Personal offline note and object organization only. Native','Personal offline note and object organization only. Anytype','Personal offline note and object organization only. Locally','Windows personal PDF page organization in the purchased','Licensed Windows page organization only.','Compare desktop page sorting','Compare native page organization','Windows personal PDF page organization within','Windows personal PDF page organization in the free'];
+const prices=['Free local editor','A Free tier','Free Personal Cloud','A paid one-time perpetual','Licensed standard Editor V11','Free Windows desktop Creator','Current free Windows desktop offer','Free Desktop use is limited','The Free individual editor'];
+const limits=['Native desktop local content','Scope is personal notes','Compare locally available notes','Upfront purchase is required','Licensed Windows page organization only.','Compare desktop page sorting','Compare native page organization','Occasional Windows Desktop','The Windows desktop app'];
+const names=['AFFiNE','Anytype','AppFlowy','Foxit PDF Editor','PDF-XChange Editor','PDF24 Creator','PDFgear','Sejda','Stirling PDF'];
+const slugs=['affine','anytype','appflowy','foxit-pdf-editor','pdf-xchange-editor','pdf24-creator','pdfgear','sejda','stirling-pdf'];
+const evidence=[{title:'Synthetic source for integration testing',url:'https://example.org/evidence',retrievedAt:'2026-10-08T00:00:00Z'}];
+const claim=(slug,name,value,extra={})=>({slug,name,value,verificationStatus:'verified',confidence:.9,lastVerifiedAt:'2026-10-08T00:00:00Z',sources:evidence,...extra});
+export const products=slugs.map((slug,i)=>({slug,name:names[i],description:find(descs[i]),websiteUrl:'https://example.org/'+slug,status:'published',attributes:[claim(i<3?'works-offline':'no-subscription',i<3?'Works Offline':'No Subscription',true),claim('pricing-model','Pricing Model',find(prices[i])),claim('trade-off-summary','Trade-Off Summary',find(limits[i]))],anchors:[claim(i<3?'notion':'adobe-pdf',i<3?'Notion':'Adobe / PDF',undefined,{relationshipType:'alternative',scope:i<3?'personal-offline-note-object-organization':'windows-personal-pdf-page-organization',description:find(scopes[i])})],audiences:[],problems:[],routes:[{slug:i<3?'offline-notion-alternatives':'pdf-editors-without-a-subscription',name:'Fixture',description:null}]}));
+export const routes=[{id:'offline',slug:'offline-notion-alternatives',name:'Offline Notion Alternatives',description:find('Personal offline notes and locally'),status:'published',editorially_approved:true,last_verified_at:'2026-10-08T00:00:00Z'},{id:'pdf',slug:'pdf-editors-without-a-subscription',name:'PDF Editors Without a Subscription',description:find('Compare Windows personal PDF'),status:'published',editorially_approved:true,last_verified_at:'2026-10-13T00:00:00Z'}];
+export function mockSupabase(req,res){
+ const u=new URL(req.url,'http://localhost');let result=[];
+ if(u.pathname.endsWith('/rpc/product_discovery_page')){let body='';req.on('data',c=>body+=c);req.on('end',()=>{const input=JSON.parse(body||'{}');send(products.find(p=>p.slug===input.product_slug)??null);});return;}
+ if(u.pathname.endsWith('/escape_routes')){result=routes;if(u.searchParams.has('slug'))result=result.filter(r=>'eq.'+r.slug===u.searchParams.get('slug'));if((req.headers.accept??'').includes('vnd.pgrst.object'))result=result[0]??null;}
+ else if(u.pathname.endsWith('/escape_route_products')){const key=u.searchParams.get('escape_route_id');result=products.filter((p,i)=>key==='eq.offline'?i<3:key==='eq.pdf'?i>=3:false).map(p=>({product_id:p.slug,novelty_score:0}));}
+ else if(u.pathname.endsWith('/products')){result=products.map(p=>({id:p.slug,slug:p.slug,status:p.status}));const ids=u.searchParams.get('id');if(ids?.startsWith('in.'))result=result.filter(p=>ids.includes(p.id));}
+ send(result);
+ function send(value){res.writeHead(200,{'content-type':'application/json'});res.end(JSON.stringify(value));}
+}

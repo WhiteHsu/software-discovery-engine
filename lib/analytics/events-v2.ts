@@ -1,3 +1,4 @@
+import {englishPath} from '../i18n/pilot.ts';
 import {parseDiscoveryEvent,type DiscoveryEvent} from './events.ts';
 import {parseSearchIntent,type SearchIntent,searchAnchors,searchAttributes} from '../discovery/search-intent.ts';
 import {escapeDefinitions} from '../discovery/escape-model.ts';
@@ -25,8 +26,9 @@ export function parseEventV2(input:unknown):EventV2{
  if(Object.keys(e).some(k=>!fields.includes(k))||e.version!==2||!eventNamesV2.includes(e.name))throw Error('Unknown event');
  for(const id of [e.eventId,e.sessionId,e.pageViewId])requireId(id);
  if(typeof e.occurredAt!=='string'||!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/.test(e.occurredAt)||!Number.isFinite(Date.parse(e.occurredAt))||new Date(e.occurredAt).toISOString()!==e.occurredAt)throw Error('Invalid time');
- const route=escapeDefinitions.find(d=>'/escape/'+d.slug===e.path);
- if(!((e.surface==='home'&&e.path==='/')||(e.surface==='search'&&(e.path==='/'||e.path==='/discover'))||(e.surface==='hidden_gems'&&e.path==='/hidden-gems')||(e.surface==='escape'&&route&&e.routeSlug===route.slug)||(e.surface==='product'&&typeof e.productSlug==='string'&&e.path==='/software/'+e.productSlug)))throw Error('Invalid surface/path');
+ const normalized=englishPath(e.path);
+ const route=escapeDefinitions.find(d=>'/escape/'+d.slug===normalized);
+ if(!((e.surface==='home'&&normalized==='/')||(e.surface==='search'&&(e.path==='/'||e.path==='/discover'))||(e.surface==='hidden_gems'&&e.path==='/hidden-gems')||(e.surface==='escape'&&route&&e.routeSlug===route.slug)||(e.surface==='product'&&typeof e.productSlug==='string'&&e.path==='/software/'+e.productSlug)))throw Error('Invalid surface/path');
  if(e.surface!=='escape'&&e.routeSlug!==undefined)throw Error('Unexpected route');
  if(e.anchor!==undefined&&!searchAnchors.includes(e.anchor as typeof searchAnchors[number]))throw Error('Unknown anchor');
  const constraints=new Set<string>([...searchAttributes,...constraintOptions.map(c=>c.value)]);

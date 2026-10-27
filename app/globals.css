@@ -60,6 +60,8 @@ a {
   min-height: 64px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 24px;
 }
 
 .wordmark {
