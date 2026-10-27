@@ -1,4 +1,5 @@
 'use client';
+import {escapeContextV2} from '@/lib/analytics/escape-context-v2';
 import {englishPath} from '@/lib/i18n/pilot';
 import {useEffect,useRef} from 'react';
 import {usePathname,useSearchParams} from 'next/navigation';
@@ -15,7 +16,7 @@ export default function AnalyticsV2({enabled}:{enabled:boolean}){
   if(!['/','/discover','/hidden-gems'].includes(normalized)&&!def&&!product)return;
   const key=JSON.stringify([path,anchor,constraint]);
   if(!saved.current||saved.current.key!==key){const c=makePageV2(path,def?'escape':product?'product':path==='/hidden-gems'?'hidden_gems':path==='/discover'?'search':'home');
-   if(def)Object.assign(c,{routeSlug:def.slug,anchor:def.anchor,constraints:[...def.constraints]});
+   if(def)Object.assign(c,escapeContextV2(def));
    if(product)c.productSlug=product;
    if(path==='/'){const selection=navigationSelection({anchor:anchor||undefined,constraint:constraint||undefined});if(!selection.invalid)Object.assign(c,{...(selection.anchor?{anchor:selection.anchor}:{}),constraints:selection.constraint?[selection.constraint]:[]});}
    saved.current={key,context:c,sent:false};

@@ -13,7 +13,7 @@ export async function publicationV2(events:EventV2[]){
   const page=await getEscape(routeSlug);if(!page?.published)throw Error('Unpublished route');
   placements=page.candidates.filter(c=>c.eligible&&c.product.status==='published').map((c,i)=>({slug:c.product.slug,position:i+1}));
   const def=escapeDefinitions.find(d=>d.slug===routeSlug)!;
-  for(const e of events)if(e.surface==='escape'&&(e.anchor!==def.anchor||JSON.stringify([...(e.constraints??[])].sort())!==JSON.stringify([...def.constraints].sort())))throw Error('Wrong route context');
+  for(const e of events)if(e.surface==='escape'&&(e.anchor!==(def.anchor??undefined)||JSON.stringify([...(e.constraints??[])].sort())!==JSON.stringify([...def.constraints].sort())))throw Error('Wrong route context');
  }
  if(first.surface==='hidden_gems'||first.originSurface==='hidden_gems')placements=(await getHiddenGems()).map((c,i)=>({slug:c.slug,position:i+1}));
  for(const e of events){

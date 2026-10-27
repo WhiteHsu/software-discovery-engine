@@ -6,7 +6,7 @@ WITH bounds AS (
  SELECT payload AS e FROM software_discovery.discovery_events_v2, bounds
  WHERE received_at >= start_at AND received_at < end_at
  AND lower(payload->>'sessionId') NOT IN (
- 'c59194d0-2f93-4e79-b489-e001273abc29','e20a7cc5-b115-46bc-bd7a-1e25f645bf20','dd469548-acd9-4fa9-8cec-124353f237f1',
+ 'b4e6515b-b308-4905-869f-323da4139ab1','c59194d0-2f93-4e79-b489-e001273abc29','e20a7cc5-b115-46bc-bd7a-1e25f645bf20','dd469548-acd9-4fa9-8cec-124353f237f1',
  '7f244ce2-4ebe-497c-bc8c-4a4c8b015529','61baa262-19fc-44b9-8053-3c080498ea85',
  'c52c9eed-061e-4618-bf9f-5dc2f44a85b3','0033efa0-5a71-48af-9a56-291a6b7f81b0')
  AND lower(payload->>'eventId') <> '97f18f34-5fc4-4f44-9912-11edde1d1da7'
