@@ -15,14 +15,14 @@ const route='offline-notion-alternatives';
 test('only actual pilot paths have language equivalents',()=>{
  assert.equal(chinesePath('/zh-hant'),true);assert.equal(chinesePath('/zh-hant/privacy'),true);
  assert.equal(englishPath('/zh-hant/escape/'+route),'/escape/'+route);
- for(const p of ['/zh-hant/escape/simple-notion-alternatives','/zh-hant/software/appflowy','/zh-hant/discover','/zh-hant/?secret=x'])assert.equal(chinesePath(p),false);
+ for(const p of ['/zh-hant/escape/made-up','/zh-hant/software/appflowy','/zh-hant/discover','/zh-hant/?secret=x'])assert.equal(chinesePath(p),false);
  assert.deepEqual(languageAlternates('/'),{en:'/','zh-Hant':'/zh-hant'});
 });
 test('events preserve Chinese path and reject forged or unsupported locale contexts',()=>{
  assert.equal(parseEventV2(base).path,'/zh-hant');
  const e={...base,name:'product_impression',surface:'escape',path:'/zh-hant/escape/'+route,routeSlug:route,productSlug:'affine',position:1,exposureId:id(4)};
  assert.equal(parseEventV2(e).path,e.path);
- for(const patch of [{surface:'search'},{path:'/zh-hant/escape/simple-notion-alternatives',routeSlug:'simple-notion-alternatives'},{path:e.path+'?secret=x'},{routeSlug:'pdf-editors-without-a-subscription'}])assert.throws(()=>parseEventV2({...e,...patch}));
+ for(const patch of [{surface:'search'},{path:'/zh-hant/escape/made-up',routeSlug:'simple-notion-alternatives'},{path:e.path+'?secret=x'},{routeSlug:'pdf-editors-without-a-subscription'}])assert.throws(()=>parseEventV2({...e,...patch}));
  assert.equal(parseEventV2({...base,path:'/'}).path,'/');
  assert.throws(()=>parseEventV2({...base,surface:'search',name:'search_performed',searchId:id(4)}));
 });

@@ -17,5 +17,5 @@ test('comparison, product, privacy and unsupported routes get appropriate curren
  assert.equal(localeNavigation('/zh-hant/privacy',pilotSlugs).alternate,'/privacy');
  assert.equal(localeNavigation('/privacy',pilotSlugs).alternate,'/zh-hant/privacy');
  assert.equal(localeNavigation('/escape/'+slug,[]).alternate,null);
- assert.equal(localeNavigation('/escape/simple-notion-alternatives',pilotSlugs).alternate,null);
+ assert.equal(localeNavigation('/escape/made-up',pilotSlugs).alternate,null);
 });

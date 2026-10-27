@@ -1,0 +1,1252 @@
+[
+  {
+    "slug": "offline-notion-alternatives",
+    "name": "Offline Notion Alternatives",
+    "description": "Personal offline notes and locally available organized content in installed native workspaces. Compare AFFiNE desktop documents and whiteboards, Anytype local objects, and AppFlowy native offline mode. Notion also supports prepared offline pages in desktop/mobile apps. Cloud sync, hosted imports, remote attachments and collaboration have separate requirements. This does not guarantee complete Notion parity or full cloud-content availability offline.",
+    "date": "2026-10-08",
+    "cards": [
+      {
+        "slug": "affine",
+        "name": "AFFiNE",
+        "description": "An open-source, local-first workspace combining documents, databases, whiteboards, and optional cloud and AI services.",
+        "claims": [
+          {
+            "name": "Notion",
+            "description": "Personal offline note and object organization only. Native desktop local documents, databases and whiteboards after installation. Cloud synchronization needs connectivity; mobile and browser parity are not established. No guarantee of full Notion feature, team or migration parity.",
+            "value": "alternative",
+            "date": "2026-10-08"
+          },
+          {
+            "name": "Works Offline",
+            "description": null,
+            "value": "Yes",
+            "date": "2026-10-08"
+          },
+          {
+            "name": "Pricing Model",
+            "description": null,
+            "value": "Free local editor and Cloud Basic; paid Cloud plans, an AI add-on and a one-time Believer offer have separate terms. The editor is MIT-licensed; the EE backend has separate authorization requirements for modification, compilation or redistribution. Check current plan prices and limits.",
+            "date": "2026-10-08"
+          },
+          {
+            "name": "Trade-Off Summary",
+            "description": null,
+            "value": "Native desktop local content is the offline comparison scope. Desktop and mobile feature coverage differs; Cloud sync and collaboration require connectivity. Notion HTML/Markdown import is supported but not all features map one-to-one; review converted content. Editor and EE backend licensing differ.",
+            "date": "2026-10-08"
+          }
+        ]
+      },
+      {
+        "slug": "anytype",
+        "name": "Anytype",
+        "description": "A local-first, offline-first workspace built around device-owned data and peer-to-peer sync.",
+        "claims": [
+          {
+            "name": "Notion",
+            "description": "Personal offline note and object organization only. Anytype local-first personal spaces after initial setup; synchronization and Notion import need connectivity. No guarantee of full Notion feature, team or migration parity. Local-only is a separate experimental mode with manual backup responsibility.",
+            "value": "alternative",
+            "date": "2026-10-08"
+          },
+          {
+            "name": "Works Offline",
+            "description": null,
+            "value": "Yes",
+            "date": "2026-10-08"
+          },
+          {
+            "name": "Pricing Model",
+            "description": null,
+            "value": "A Free tier and paid membership plans are available. Paid plans expand remote storage, shared-channel and ANY ID entitlements. Check current plan prices and limits; self-hosted configurations and renewals have separate terms.",
+            "date": "2026-10-08"
+          },
+          {
+            "name": "Trade-Off Summary",
+            "description": null,
+            "value": "Scope is personal notes and objects stored on the device, not full Notion parity. Normal local-first mode works offline and syncs when connected. Optional local-only mode is experimental and requires manual backups, with multi-device sync limited to the local network. Notion imports can lose feature semantics, links or files and need review.",
+            "date": "2026-10-08"
+          }
+        ]
+      },
+      {
+        "slug": "appflowy",
+        "name": "AppFlowy",
+        "description": "An open-source Notion alternative with local desktop use, offline mode, and self-hostable cloud infrastructure.",
+        "claims": [
+          {
+            "name": "Notion",
+            "description": "Personal offline note and object organization only. Locally available content in the installed native workspace after setup. Cloud synchronization and the documented hosted Notion import need connectivity; complete offline caching of Cloud pages and attachments is not established. No guarantee of full Notion feature, team or migration parity.",
+            "value": "alternative",
+            "date": "2026-10-08"
+          },
+          {
+            "name": "Works Offline",
+            "description": null,
+            "value": "Yes",
+            "date": "2026-10-08"
+          },
+          {
+            "name": "Pricing Model",
+            "description": null,
+            "value": "Free Personal Cloud plan with storage, upload and history limits; Pro is a renewing subscription billed per workspace member. Cloud plans and self-hosted terms need separate review; do not equate Cloud allowances with local workspace limits.",
+            "date": "2026-10-08"
+          },
+          {
+            "name": "Trade-Off Summary",
+            "description": null,
+            "value": "Compare locally available notes and organized content in the installed native workspace. Complete offline availability of all Cloud pages and attachments is not established by this review. Hosted Notion zip import needs connectivity and post-import review; advanced ecosystem integrations and view parity are not guaranteed. Personal Cloud has storage/upload/history limits; Pro is per workspace member.",
+            "date": "2026-10-08"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "notion-alternatives-without-ai",
+    "name": "Notion Alternatives Without AI",
+    "description": "Personal offline notes and locally available organized content in installed native apps, without activating optional AI tools. AFFiNE, AppFlowy and Anytype offer overlapping personal workflows; this is not full Notion parity, an AI-free interface promise, or a privacy/processing guarantee. Optional AI and agent integrations have separate setup and data-handling terms.",
+    "date": "2026-10-12",
+    "cards": [
+      {
+        "slug": "affine",
+        "name": "AFFiNE",
+        "description": "An open-source, local-first workspace combining documents, databases, whiteboards, and optional cloud and AI services.",
+        "claims": [
+          {
+            "name": "Notion",
+            "description": "Personal offline note and object organization only. Native desktop local documents, databases and whiteboards after installation. Cloud synchronization needs connectivity; mobile and browser parity are not established. No guarantee of full Notion feature, team or migration parity.",
+            "value": "alternative",
+            "date": "2026-10-08"
+          },
+          {
+            "name": "AI Optional",
+            "description": null,
+            "value": "Yes",
+            "date": "2026-10-12"
+          },
+          {
+            "name": "Pricing Model",
+            "description": null,
+            "value": "Free local editor and Cloud Basic; paid Cloud plans, an AI add-on and a one-time Believer offer have separate terms. The editor is MIT-licensed; the EE backend has separate authorization requirements for modification, compilation or redistribution. Check current plan prices and limits.",
+            "date": "2026-10-08"
+          },
+          {
+            "name": "Trade-Off Summary",
+            "description": null,
+            "value": "Native desktop local content is the offline comparison scope. Desktop and mobile feature coverage differs; Cloud sync and collaboration require connectivity. Notion HTML/Markdown import is supported but not all features map one-to-one; review converted content. Editor and EE backend licensing differ.",
+            "date": "2026-10-08"
+          }
+        ]
+      },
+      {
+        "slug": "anytype",
+        "name": "Anytype",
+        "description": "A local-first, offline-first workspace built around device-owned data and peer-to-peer sync.",
+        "claims": [
+          {
+            "name": "Notion",
+            "description": "Personal offline note and object organization only. Anytype local-first personal spaces after initial setup; synchronization and Notion import need connectivity. No guarantee of full Notion feature, team or migration parity. Local-only is a separate experimental mode with manual backup responsibility.",
+            "value": "alternative",
+            "date": "2026-10-08"
+          },
+          {
+            "name": "AI Optional",
+            "description": null,
+            "value": "Yes",
+            "date": "2026-10-12"
+          },
+          {
+            "name": "Pricing Model",
+            "description": null,
+            "value": "A Free tier and paid membership plans are available. Paid plans expand remote storage, shared-channel and ANY ID entitlements. Check current plan prices and limits; self-hosted configurations and renewals have separate terms.",
+            "date": "2026-10-08"
+          },
+          {
+            "name": "Trade-Off Summary",
+            "description": null,
+            "value": "Scope is personal notes and objects stored on the device, not full Notion parity. Normal local-first mode works offline and syncs when connected. Optional local-only mode is experimental and requires manual backups, with multi-device sync limited to the local network. Notion imports can lose feature semantics, links or files and need review.",
+            "date": "2026-10-08"
+          }
+        ]
+      },
+      {
+        "slug": "appflowy",
+        "name": "AppFlowy",
+        "description": "An open-source Notion alternative with local desktop use, offline mode, and self-hostable cloud infrastructure.",
+        "claims": [
+          {
+            "name": "Notion",
+            "description": "Personal offline note and object organization only. Locally available content in the installed native workspace after setup. Cloud synchronization and the documented hosted Notion import need connectivity; complete offline caching of Cloud pages and attachments is not established. No guarantee of full Notion feature, team or migration parity.",
+            "value": "alternative",
+            "date": "2026-10-08"
+          },
+          {
+            "name": "AI Optional",
+            "description": null,
+            "value": "Yes",
+            "date": "2026-10-12"
+          },
+          {
+            "name": "Pricing Model",
+            "description": null,
+            "value": "Free Personal Cloud plan with storage, upload and history limits; Pro is a renewing subscription billed per workspace member. Cloud plans and self-hosted terms need separate review; do not equate Cloud allowances with local workspace limits.",
+            "date": "2026-10-08"
+          },
+          {
+            "name": "Trade-Off Summary",
+            "description": null,
+            "value": "Compare locally available notes and organized content in the installed native workspace. Complete offline availability of all Cloud pages and attachments is not established by this review. Hosted Notion zip import needs connectivity and post-import review; advanced ecosystem integrations and view parity are not guaranteed. Personal Cloud has storage/upload/history limits; Pro is per workspace member.",
+            "date": "2026-10-08"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "simple-notion-alternatives",
+    "name": "Simple Notion Alternatives",
+    "description": "Compare basic personal note capture, editing and organization in Joplin, Obsidian and Simplenote without configuring structured databases or plugins. Notion itself also supports ordinary pages; simplicity is a workflow fit, not a measured speed advantage or complete feature replacement. Local notebooks, Markdown vaults and account-based sync have different setup and data-handling limits.",
+    "date": "2026-10-13",
+    "cards": [
+      {
+        "slug": "joplin",
+        "name": "Joplin",
+        "description": "A free, open-source, offline-first note-taking and to-do application with Markdown and optional sync services.",
+        "claims": [
+          {
+            "name": "Notion",
+            "description": "Native desktop personal notebook and note capture/editing. No custom database, plugin or server is needed for this documented local flow. Markdown and optional sync require separate learning/setup; this is not Notion database, team-workspace or migration parity.",
+            "value": "alternative",
+            "date": "2026-10-13"
+          },
+          {
+            "name": "Focused Note Taking",
+            "description": null,
+            "value": "Yes",
+            "date": "2026-10-13"
+          },
+          {
+            "name": "No Database Required",
+            "description": null,
+            "value": "Yes",
+            "date": "2026-10-13"
+          },
+          {
+            "name": "Minimal Setup",
+            "description": null,
+            "value": "Yes",
+            "date": "2026-10-13"
+          },
+          {
+            "name": "Pricing Model",
+            "description": null,
+            "value": "Free core desktop notes; optional paid Joplin Cloud synchronization and sharing plans have separate limits.",
+            "date": "2026-10-13"
+          },
+          {
+            "name": "Trade-Off Summary",
+            "description": null,
+            "value": "Compare personal notebook/Markdown notes. Migration and multi-device synchronization need separate setup; paid Cloud services have plan limits. No complete Notion database or team-workspace parity is established.",
+            "date": "2026-10-13"
+          }
+        ]
+      },
+      {
+        "slug": "obsidian",
+        "name": "Obsidian",
+        "description": "A local Markdown-based knowledge app with optional paid sync and publishing services.",
+        "claims": [
+          {
+            "name": "Notion",
+            "description": "Native desktop personal text notes in a named local vault, without community plugins or custom database configuration. Vault/Markdown concepts need learning; optional extensions, Sync and Publish add separate complexity or cost. No full Notion parity or tested migration is implied.",
+            "value": "alternative",
+            "date": "2026-10-13"
+          },
+          {
+            "name": "Focused Note Taking",
+            "description": null,
+            "value": "Yes",
+            "date": "2026-10-13"
+          },
+          {
+            "name": "No Database Required",
+            "description": null,
+            "value": "Yes",
+            "date": "2026-10-13"
+          },
+          {
+            "name": "Minimal Setup",
+            "description": null,
+            "value": "Yes",
+            "date": "2026-10-13"
+          },
+          {
+            "name": "Pricing Model",
+            "description": null,
+            "value": "Free core application with no sign-up; Sync and Publish are optional paid services.",
+            "date": "2026-10-13"
+          },
+          {
+            "name": "Trade-Off Summary",
+            "description": null,
+            "value": "Local vault and Markdown note concepts require learning. Optional Sync and Publish are paid services; community extensions may add complexity. This compares basic personal notes, not full Notion databases or tested migration.",
+            "date": "2026-10-13"
+          }
+        ]
+      },
+      {
+        "slug": "simplenote",
+        "name": "Simplenote",
+        "description": "Text notes with tags and automatic account-based synchronization; no file attachments.",
+        "claims": [
+          {
+            "name": "Notion",
+            "description": "Personal text-note editing and tag organization in the official desktop app after account signup. No custom database, plugin or server deployment is required for this documented flow. Signup/email verification and service connectivity are setup prerequisites; this does not promise local-only operation or Notion parity.",
+            "value": "alternative",
+            "date": "2026-10-13"
+          },
+          {
+            "name": "Focused Note Taking",
+            "description": null,
+            "value": "Yes",
+            "date": "2026-10-13"
+          },
+          {
+            "name": "No Database Required",
+            "description": null,
+            "value": "Yes",
+            "date": "2026-10-13"
+          },
+          {
+            "name": "Minimal Setup",
+            "description": null,
+            "value": "Yes",
+            "date": "2026-10-13"
+          },
+          {
+            "name": "Pricing Model",
+            "description": null,
+            "value": "Free note application and synchronization service.",
+            "date": "2026-10-13"
+          },
+          {
+            "name": "Trade-Off Summary",
+            "description": null,
+            "value": "Account and email verification required. Notes sync to the service and are not encrypted at rest; attachments are unsupported. Offline editing requires prior sign-in/download. No full Notion parity.",
+            "date": "2026-10-13"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "todoist-alternatives-with-a-one-time-purchase",
+    "name": "Todoist Alternatives With a One-Time Purchase",
+    "description": "Personal task capture and project organization with paid native editions that can be bought once. Compare Things 3 platform purchases, OmniFocus 4 native perpetual licenses and the 2Do Mac direct-purchase license. Platforms, mobile purchases, optional Web subscriptions and future update entitlements differ. This is a bounded personal-workflow comparison; it does not guarantee team, platform or complete Todoist parity.",
+    "date": "2026-10-07",
+    "cards": [
+      {
+        "slug": "2do",
+        "name": "2Do",
+        "description": "A task and project planner with a perpetual direct-purchase Mac edition; mobile applications and future updates have separate purchase terms.",
+        "claims": [
+          {
+            "name": "Todoist",
+            "description": "Personal task capture and project organization only. Edition: 2Do Mac direct-purchase license. Mobile purchases and future update entitlement are separate; Todoist sync is not proof of independent replacement. No guarantee of team, platform or complete Todoist parity.",
+            "value": "alternative",
+            "date": "2026-10-07"
+          },
+          {
+            "name": "One-Time Purchase",
+            "description": null,
+            "value": "Yes",
+            "date": "2026-10-13"
+          },
+          {
+            "name": "Pricing Model",
+            "description": null,
+            "value": "Direct-store 2Do Mac perpetual license includes 18 months of updates from purchase; optional renewal adds update eligibility.",
+            "date": "2026-10-13"
+          },
+          {
+            "name": "Trade-Off Summary",
+            "description": null,
+            "value": "Mac App Store and Setapp editions use subscriptions. Keep the last eligible direct version without renewal; future macOS/sync compatibility is not guaranteed. iPhone/iPad are separate purchases; Android is outside this Mac workflow review.",
+            "date": "2026-10-13"
+          }
+        ]
+      },
+      {
+        "slug": "omnifocus",
+        "name": "OmniFocus",
+        "description": "Personal task management with perspectives and project reviews.",
+        "claims": [
+          {
+            "name": "Todoist",
+            "description": "Personal task capture and project organization only. Edition: OmniFocus 4 native Standard/Pro perpetual license. Native Apple edition only; Web subscription and future major upgrades are separate. No guarantee of team, platform or complete Todoist parity.",
+            "value": "alternative",
+            "date": "2026-10-07"
+          },
+          {
+            "name": "One-Time Purchase",
+            "description": null,
+            "value": "Yes",
+            "date": "2026-10-13"
+          },
+          {
+            "name": "Pricing Model",
+            "description": null,
+            "value": "Native OmniFocus 4 Standard or Pro perpetual license includes 4.x updates and the supported Apple platforms.",
+            "date": "2026-10-13"
+          },
+          {
+            "name": "Trade-Off Summary",
+            "description": null,
+            "value": "Web access and all-access plans are recurring subscriptions. Future major upgrades are separate; Pro-only features are excluded from Standard workflow comparisons.",
+            "date": "2026-10-13"
+          }
+        ]
+      },
+      {
+        "slug": "things",
+        "name": "Things",
+        "description": "Personal tasks and project planning for Apple devices.",
+        "claims": [
+          {
+            "name": "Todoist",
+            "description": "Personal task capture and project organization only. Edition: Things 3 platform purchases. Apple-only applications; platforms sold separately; real-time shared lists unsupported. No guarantee of team, platform or complete Todoist parity.",
+            "value": "alternative",
+            "date": "2026-10-07"
+          },
+          {
+            "name": "One-Time Purchase",
+            "description": null,
+            "value": "Yes",
+            "date": "2026-10-13"
+          },
+          {
+            "name": "Pricing Model",
+            "description": null,
+            "value": "Things 3: separate one-time Apple-platform purchases; Things Cloud sync has no extra charge.",
+            "date": "2026-10-13"
+          },
+          {
+            "name": "Trade-Off Summary",
+            "description": null,
+            "value": "Apple platforms only; no real-time shared lists. Separate platform purchases; future major upgrades are not guaranteed free.",
+            "date": "2026-10-13"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "privacy-friendly-grammarly-alternatives",
+    "name": "Privacy-Friendly Grammarly Alternatives",
+    "description": "Technical local alternatives for personal English passive-construction review, manual revision and recheck only. Fixed CLI/library editions require setup and explicit local conditions. Not full Grammarly replacements or vendor-wide privacy guarantees; read each Reviewed Local Operation and output/retention limits.",
+    "date": "2026-10-17",
+    "cards": [
+      {
+        "slug": "languagetool-local-cli-6-6",
+        "name": "LanguageTool — reviewed local profile",
+        "description": "Technical direct CLI workflow for reviewing English passive constructions, manually editing and rechecking under explicitly local settings. Research probe is not the product.",
+        "claims": [
+          {
+            "name": "Grammarly",
+            "description": "Technical direct CLI workflow for reviewing English passive constructions, manually editing and rechecking under explicitly local settings. Research probe is not the product.",
+            "value": "alternative",
+            "date": "2026-10-17"
+          },
+          {
+            "name": "Privacy-Friendly",
+            "description": null,
+            "value": "Verified only for the reviewed local operation",
+            "date": "2026-10-17"
+          },
+          {
+            "name": "Pricing Model",
+            "description": null,
+            "value": "Local open-source6.6 distribution under LGPL with separately licensed bundled components; hosted Premium and support services excluded. No service subscription used for reviewed local operation.",
+            "date": "2026-10-17"
+          },
+          {
+            "name": "Trade-Off Summary",
+            "description": null,
+            "value": "Requires portable Java/CLI and explicit local rule/config management. JSON/errors may contain prose; caller must manage output and files. Naive style coverage, no automatic rewrite or hosted Premium parity. Fixed-case research probe is not a daily editor.",
+            "date": "2026-10-17"
+          },
+          {
+            "name": "Reviewed Local Operation",
+            "description": null,
+            "value": "LanguageTool — reviewed local profile. Conditional selected-use statement for fixed LanguageTool6.6 direct CLI: local rules process English stdin with no server/client or selected remote-rule resources. Require fixed distribution, explicit settings and no injected JVM options. Text-bearing JSON, diagnostic/error snippets and caller copies remain local-operation outputs to manage; no no-retention, network-block or whole-host guarantee.",
+            "date": "2026-10-17"
+          }
+        ]
+      },
+      {
+        "slug": "vale-local-passive-3-24-0",
+        "name": "Vale — reviewed local profile",
+        "description": "A configurable local command-line workflow for identifying likely passive constructions in plain English text, manually editing and rechecking. Suggestion threshold must be enabled for the chosen rule.",
+        "claims": [
+          {
+            "name": "Grammarly",
+            "description": "A configurable local command-line workflow for identifying likely passive constructions in plain English text, manually editing and rechecking. Suggestion threshold must be enabled for the chosen rule.",
+            "value": "alternative",
+            "date": "2026-10-17"
+          },
+          {
+            "name": "Privacy-Friendly",
+            "description": null,
+            "value": "Verified only for the reviewed local operation",
+            "date": "2026-10-17"
+          },
+          {
+            "name": "Pricing Model",
+            "description": null,
+            "value": "Local Vale CLI under MIT; fixed Microsoft rule set MIT separately. Hosted CMS and paid services excluded.",
+            "date": "2026-10-17"
+          },
+          {
+            "name": "Trade-Off Summary",
+            "description": null,
+            "value": "CLI and local configuration required; limited regex-based detection, no automatic rewrite. Not a hosted CMS or a browser integration.",
+            "date": "2026-10-17"
+          },
+          {
+            "name": "Reviewed Local Operation",
+            "description": null,
+            "value": "Vale — reviewed local profile. For fixed Vale3.24.0 plain-stdin invocation with only the fixed local Microsoft.Passive rule, explicit local config/no-global, no pipeline sources, empty NLP endpoint and excluded profiling variables: selected rule checks locally and returns text-bearing JSON. Caller logs/files, host diagnostics, extensions and optional remote NLP are outside this statement; no zero-retention or whole-product guarantee.",
+            "date": "2026-10-17"
+          }
+        ]
+      },
+      {
+        "slug": "write-good-local-library-1-0-8",
+        "name": "write-good — reviewed local profile",
+        "description": "A developer-oriented local function for highlighting likely passive English constructions, manually revising and rechecking. It requires a caller and does not supply a Grammarly-like editor.",
+        "claims": [
+          {
+            "name": "Grammarly",
+            "description": "A developer-oriented local function for highlighting likely passive English constructions, manually revising and rechecking. It requires a caller and does not supply a Grammarly-like editor.",
+            "value": "alternative",
+            "date": "2026-10-17"
+          },
+          {
+            "name": "Privacy-Friendly",
+            "description": null,
+            "value": "Verified only for the reviewed local operation",
+            "date": "2026-10-17"
+          },
+          {
+            "name": "Pricing Model",
+            "description": null,
+            "value": "Pinned local npm1.0.8 package and seven dependency metadata records declare MIT; no paid service used. Caller integration costs excluded.",
+            "date": "2026-10-17"
+          },
+          {
+            "name": "Trade-Off Summary",
+            "description": null,
+            "value": "Node integration required; heuristic detector, no automatic rewrite; caller owns presentation and retention.",
+            "date": "2026-10-17"
+          },
+          {
+            "name": "Reviewed Local Operation",
+            "description": null,
+            "value": "write-good — reviewed local profile. For the fixed direct local function profile only: inspected loaded source performs in-memory matching and returns text-bearing suggestions, without direct network or persistence calls. Caller storage, integrations, runtime/OS diagnostics and memory deletion are outside this claim. Requires technical integration; not a vendor-wide privacy guarantee.",
+            "date": "2026-10-17"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "grammarly-alternatives-without-a-subscription",
+    "name": "Grammarly Alternatives Without a Subscription",
+    "description": "Options for reviewing English passive constructions without a mandatory recurring software payment for the reviewed access path. Compare the bounded task of inspecting feedback, manually revising and rechecking against Grammarly Pro capability. Not a complete Grammarly or automatic rewrite replacement; account, usage limits and service conditions apply.",
+    "date": "2026-10-15",
+    "cards": [
+      {
+        "slug": "grazie-free-browser",
+        "name": "Grazie — Free Browser Extension",
+        "description": "Browser writing feedback with configurable English passive-construction checks.",
+        "claims": [
+          {
+            "name": "Grammarly",
+            "description": "A bounded alternative to reviewing personal English passive constructions with Grammarly Pro: inspect feedback, choose a manual revision and recheck. Not an equivalent automatic rewrite or full grammar replacement. Owner Grammarly access was a limited Pro sample, not a paid Pro session.",
+            "value": "alternative",
+            "date": "2026-10-15"
+          },
+          {
+            "name": "No Subscription",
+            "description": null,
+            "value": "Yes",
+            "date": "2026-10-15"
+          },
+          {
+            "name": "Pricing Model",
+            "description": null,
+            "value": "Default Free plan with browser/account requirements. Paid AI plans and their allowances are separate; exact proofreading metering is not established.",
+            "date": "2026-10-15"
+          },
+          {
+            "name": "Trade-Off Summary",
+            "description": null,
+            "value": "Reviewed in Chrome 1.15.1/Gmail with English active-voice style enabled. Prior load failures and unknown root cause retained. No claim of unlimited checks, universal integrations, automatic rewrite parity or private/offline processing.",
+            "date": "2026-10-15"
+          }
+        ]
+      },
+      {
+        "slug": "hemingway-classic",
+        "name": "Hemingway Editor Classic",
+        "description": "A paid Classic desktop prose editor; this review covers passive-voice highlighting and manual revision, separate from the free Web edition.",
+        "claims": [
+          {
+            "name": "Grammarly",
+            "description": "Personal English passive-construction review in the purchased Classic Editor3 desktop edition: inspect passive-voice highlights, manually rewrite and inspect the edited text again. Rechecking is a bounded editorial workflow inference from documented editing/highlighting, not an observed desktop result. Paired with Grammarly Pro passive-voice suggestions. No guaranteed detection, metric accuracy or comprehensive Grammarly parity; distinct from the free Web edition.",
+            "value": "alternative",
+            "date": "2026-10-24"
+          },
+          {
+            "name": "No Subscription",
+            "description": null,
+            "value": "Yes",
+            "date": "2026-10-24"
+          },
+          {
+            "name": "Pricing Model",
+            "description": null,
+            "value": "Paid Classic Editor3 desktop licenses are offered for Windows and Mac separately from the free Web editor and newer AI offers. This recommendation concerns the purchased Classic edition without a recurring subscription.",
+            "date": "2026-10-24"
+          },
+          {
+            "name": "Trade-Off Summary",
+            "description": null,
+            "value": "Classic highlights prose for manual revision; it is not a complete Grammarly grammar-correction substitute. Desktop detection accuracy, highlight updates after edits and current operating-system compatibility have not been independently tested. Do not transfer free-Web benchmark results to Classic. New AI features are excluded from this purchase.",
+            "date": "2026-10-24"
+          }
+        ]
+      },
+      {
+        "slug": "hemingway-free-web",
+        "name": "Hemingway Editor — Free Web",
+        "description": "Browser-based English readability and passive-construction highlights for manual editing.",
+        "claims": [
+          {
+            "name": "Grammarly",
+            "description": "A bounded alternative to reviewing personal English passive constructions with Grammarly Pro: inspect feedback, choose a manual revision and recheck. Not an equivalent automatic rewrite or full grammar replacement. Owner Grammarly access was a limited Pro sample, not a paid Pro session.",
+            "value": "alternative",
+            "date": "2026-10-15"
+          },
+          {
+            "name": "No Subscription",
+            "description": null,
+            "value": "Yes",
+            "date": "2026-10-15"
+          },
+          {
+            "name": "Pricing Model",
+            "description": null,
+            "value": "Free browser editor for the reviewed highlighting/manual-edit workflow. Plus AI rewriting and paid Classic desktop are separate editions; no permanent availability guarantee.",
+            "date": "2026-10-15"
+          },
+          {
+            "name": "Trade-Off Summary",
+            "description": null,
+            "value": "Passive highlights support manual review; no automatic rewrite, complete grammar, accuracy, offline or privacy parity. Existing dated before/after observations apply only to free web.",
+            "date": "2026-10-15"
+          }
+        ]
+      },
+      {
+        "slug": "prowritingaid",
+        "name": "ProWritingAid",
+        "description": "A Web writing assistant; this review covers free Style Report passive-verb review and manual rechecking of short English passages within daily limits.",
+        "claims": [
+          {
+            "name": "Grammarly",
+            "description": "Personal English passive-construction review in the free Web Style Report: inspect passive-verb flags, manually rewrite the passage and rerun Style within the two-runs-per-day, 500-word quota. Paired with documented Grammarly Pro passive-voice suggestions. This is a bounded documentary editorial alternative, not an observed account test, measured accuracy comparison or full Grammarly replacement.",
+            "value": "alternative",
+            "date": "2026-10-24"
+          },
+          {
+            "name": "No Subscription",
+            "description": null,
+            "value": "Yes",
+            "date": "2026-10-24"
+          },
+          {
+            "name": "Pricing Model",
+            "description": null,
+            "value": "Free Web account: each line-editing report can run twice per day on up to 500 words. Paid plans and separately charged story analyses are optional and outside this reviewed workflow.",
+            "date": "2026-10-24"
+          },
+          {
+            "name": "Trade-Off Summary",
+            "description": null,
+            "value": "The free report quota permits an initial Style Report and one rerun on a short passage when both daily runs remain. Manual rewriting is required; a rerun can flag remaining issues but does not prove their absence. Account and online access are required. Detection accuracy and browser behavior have not been independently tested. Not full Grammarly Pro parity; passive index is not a general accuracy score.",
+            "date": "2026-10-24"
+          }
+        ]
+      },
+      {
+        "slug": "real-write-passive-checker",
+        "name": "Real Write — Passive Voice Checker",
+        "description": "A browser tool that highlights likely English passive constructions for manual review.",
+        "claims": [
+          {
+            "name": "Grammarly",
+            "description": "A bounded alternative to reviewing personal English passive constructions with Grammarly Pro: inspect feedback, choose a manual revision and recheck. Not an equivalent automatic rewrite or full grammar replacement. Owner Grammarly access was a limited Pro sample, not a paid Pro session.",
+            "value": "alternative",
+            "date": "2026-10-15"
+          },
+          {
+            "name": "No Subscription",
+            "description": null,
+            "value": "Yes",
+            "date": "2026-10-15"
+          },
+          {
+            "name": "Pricing Model",
+            "description": null,
+            "value": "Free anonymous access to the dedicated browser passive detector. Rendered tool FAQ specifies no daily cap and rendered pricing distinguishes local analysis from paid/credit-limited AI generation. The observed editor allows up to 3,000 words per input; feature availability and usage limits may change. No paid-suite entitlement or permanent free-access guarantee.",
+            "date": "2026-10-15"
+          },
+          {
+            "name": "Trade-Off Summary",
+            "description": null,
+            "value": "Two relevant construction highlights cleared after manual active revision in one sample. Heuristic misses/false positives and inconsistent 200% Mostly Active summary remain. Ignore the percentage as sentence-share accuracy; no automatic rewrite or privacy claim. Vendor can change or discontinue features and limits. Browser-local description is not an audited privacy guarantee. Mobile and web billing text differ and are outside this free-tool review.",
+            "date": "2026-10-15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "photoshop-alternatives-without-a-subscription",
+    "name": "Photoshop Alternatives Without a Subscription",
+    "description": "Desktop raster layers, painting and basic image adjustment without a required software subscription. Compare free official GIMP and Krita desktop releases and Paint.NET Classic; optional paid store distributions have separate terms. PSD exchange, camera RAW processing, print workflows and complete Photoshop feature parity are not guaranteed.",
+    "date": "2026-10-12",
+    "cards": [
+      {
+        "slug": "gimp",
+        "name": "GIMP",
+        "description": "A free desktop image editor for photo retouching and composition, with workflow and interchange limits to check before replacing an existing tool.",
+        "claims": [
+          {
+            "name": "Adobe Photoshop",
+            "description": "Desktop raster layers, painting and basic image adjustment only. GIMP is reviewed for retouching and layered composition; RAW processing uses external plug-ins and native CMYK editing is outside the reviewed scope. No guarantee of full Photoshop, PSD, print-production, automation, AI or team-workflow parity.",
+            "value": "alternative",
+            "date": "2026-10-12"
+          },
+          {
+            "name": "No Subscription",
+            "description": null,
+            "value": "Yes",
+            "date": "2026-10-12"
+          },
+          {
+            "name": "Pricing Model",
+            "description": null,
+            "value": "Free official desktop application under GNU GPL; no recurring software fee is required. This is free software, not evidence of a paid perpetual license.",
+            "date": "2026-10-12"
+          },
+          {
+            "name": "Trade-Off Summary",
+            "description": null,
+            "value": "GIMP supports photo retouching and layered composition. Camera RAW processing uses external plug-ins. CMYK import/export uses RGB storage; a native CMYK editing workflow is not established by this review. PSD fidelity and Photoshop feature parity are not guaranteed.",
+            "date": "2026-10-12"
+          }
+        ]
+      },
+      {
+        "slug": "krita",
+        "name": "Krita",
+        "description": "A free digital painting application for illustration and related art workflows, with specific Photoshop interchange differences.",
+        "claims": [
+          {
+            "name": "Adobe Photoshop",
+            "description": "Desktop raster layers, painting and basic image adjustment only. Krita is reviewed primarily for illustration and digital painting, not comprehensive photographic retouching. PSD and text/layer semantics need review. No guarantee of full Photoshop, print-production, automation, AI or team-workflow parity.",
+            "value": "alternative",
+            "date": "2026-10-12"
+          },
+          {
+            "name": "No Subscription",
+            "description": null,
+            "value": "Yes",
+            "date": "2026-10-12"
+          },
+          {
+            "name": "Pricing Model",
+            "description": null,
+            "value": "Free official GPL desktop application without a recurring software fee. Optional paid store distributions support development and automatic updates; store terms are separate.",
+            "date": "2026-10-12"
+          },
+          {
+            "name": "Trade-Off Summary",
+            "description": null,
+            "value": "Krita specializes in digital painting rather than complete Photoshop image manipulation. Layer compositing, text and filters can differ. Its manual documents PSD loading/saving with supported elements but warns against assuming complete compatibility; review exchanged files.",
+            "date": "2026-10-12"
+          }
+        ]
+      },
+      {
+        "slug": "paint-net",
+        "name": "Paint.NET",
+        "description": "A Windows image editor with layers, adjustments and effects; the free Classic release and paid Store release use a proprietary license.",
+        "claims": [
+          {
+            "name": "Adobe Photoshop",
+            "description": "Desktop raster layers, painting and basic image adjustment only. Paint.NET is reviewed for Windows layers, selections, drawing and color adjustments. PDN is its native layered format; plugin formats do not prove PSD compatibility. No guarantee of full Photoshop, print-production, RAW, automation, AI or team-workflow parity.",
+            "value": "alternative",
+            "date": "2026-10-12"
+          },
+          {
+            "name": "No Subscription",
+            "description": null,
+            "value": "Yes",
+            "date": "2026-10-12"
+          },
+          {
+            "name": "Pricing Model",
+            "description": null,
+            "value": "Free Classic desktop release with no recurring software fee. The Microsoft Store release is paid; the official license describes the same functionality except automatic updating. This is proprietary freeware, not open source.",
+            "date": "2026-10-12"
+          },
+          {
+            "name": "Trade-Off Summary",
+            "description": null,
+            "value": "Windows-only desktop editor with layers, drawing, selections, effects and color adjustments. PDN is its native layered format; extra file formats may require plugins. This review does not establish native PSD round-trip or professional print/RAW parity. Check current CPU/GPU requirements.",
+            "date": "2026-10-12"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "pdf-editors-without-a-subscription",
+    "name": "PDF Editors Without a Subscription",
+    "description": "Compare Windows personal PDF page reordering, permanent rotation, removal and extraction, with PDF output, in licensed PDF-XChange Editor, PDF24 Creator and the current free PDFgear offer. This covers page organization, not complete Acrobat text editing, signatures or secure redaction. Edition, maintenance and AI/cloud limits differ.",
+    "date": "2026-10-13",
+    "cards": [
+      {
+        "slug": "foxit-pdf-editor",
+        "name": "Foxit PDF Editor",
+        "description": "A paid desktop PDF editor; this review covers page organization in the purchased perpetual Windows edition.",
+        "claims": [
+          {
+            "name": "Adobe / PDF",
+            "description": "Windows personal PDF page organization in the purchased perpetual desktop edition: move, rotate, delete and extract pages into a new PDF. The Windows manual covers perpetual and subscription releases and distinguishes page rotation from temporary Rotate View. Paired with documented Acrobat desktop extraction. Bounded documentary editorial alternative only; not full Acrobat equivalence or tested output fidelity.",
+            "value": "alternative",
+            "date": "2026-10-24"
+          },
+          {
+            "name": "No Subscription",
+            "description": null,
+            "value": "Yes",
+            "date": "2026-10-24"
+          },
+          {
+            "name": "Pricing Model",
+            "description": null,
+            "value": "A paid one-time perpetual Windows desktop license is offered separately from subscriptions. This recommendation covers personal PDF page organization in that purchased edition; it is not a free license or a promise of all future upgrades.",
+            "date": "2026-10-24"
+          },
+          {
+            "name": "Trade-Off Summary",
+            "description": null,
+            "value": "Upfront purchase is required. Cloud, AI, mobile and integrated services have separate subscription boundaries; perpetual licensing does not promise indefinite updates or support. Check the purchased release and current sales terms. Native output fidelity and behavior have not been independently tested; no full Acrobat, privacy or offline guarantee.",
+            "date": "2026-10-24"
+          }
+        ]
+      },
+      {
+        "slug": "pdf-xchange-editor",
+        "name": "PDF-XChange Editor",
+        "description": "Windows PDF editing with annotation and optional advanced features.",
+        "claims": [
+          {
+            "name": "Adobe / PDF",
+            "description": "Licensed Windows page organization only. Plus-only features and unlicensed demo output are excluded. Updates and prior-installer access have maintenance/version limits; no complete Acrobat parity or export fidelity test.",
+            "value": "alternative",
+            "date": "2026-10-13"
+          },
+          {
+            "name": "No Subscription",
+            "description": null,
+            "value": "Yes",
+            "date": "2026-10-13"
+          },
+          {
+            "name": "Pricing Model",
+            "description": null,
+            "value": "Licensed standard Editor V11; perpetual license for covered versions, with optional maintenance.",
+            "date": "2026-10-13"
+          },
+          {
+            "name": "Trade-Off Summary",
+            "description": null,
+            "value": "Licensed Windows page organization only. Plus-only features and unlicensed demo output are excluded. Updates and prior-installer access have maintenance/version limits; no complete Acrobat parity or export fidelity test.",
+            "date": "2026-10-13"
+          }
+        ]
+      },
+      {
+        "slug": "pdf24-creator",
+        "name": "PDF24 Creator",
+        "description": "Windows PDF tools and a virtual PDF printer that process files locally.",
+        "claims": [
+          {
+            "name": "Adobe / PDF",
+            "description": "Compare desktop page sorting, rotation, deletion and extraction. Existing-text editing parity is unverified; no full Acrobat, signature, redaction or export-fidelity guarantee.",
+            "value": "alternative",
+            "date": "2026-10-13"
+          },
+          {
+            "name": "No Subscription",
+            "description": null,
+            "value": "Yes",
+            "date": "2026-10-13"
+          },
+          {
+            "name": "Pricing Model",
+            "description": null,
+            "value": "Free Windows desktop Creator for private and commercial use.",
+            "date": "2026-10-13"
+          },
+          {
+            "name": "Trade-Off Summary",
+            "description": null,
+            "value": "Compare desktop page sorting, rotation, deletion and extraction. Existing-text editing parity is unverified; no full Acrobat, signature, redaction or export-fidelity guarantee.",
+            "date": "2026-10-13"
+          }
+        ]
+      },
+      {
+        "slug": "pdfgear",
+        "name": "PDFgear",
+        "description": "PDF editing, annotation, conversion, and OCR tools across desktop and mobile.",
+        "claims": [
+          {
+            "name": "Adobe / PDF",
+            "description": "Compare native page organization and PDF extraction. Reordering is documented as not undoable. AI/cloud privacy is separate; no full Acrobat or tested export-fidelity guarantee.",
+            "value": "alternative",
+            "date": "2026-10-13"
+          },
+          {
+            "name": "No Subscription",
+            "description": null,
+            "value": "Yes",
+            "date": "2026-10-13"
+          },
+          {
+            "name": "Pricing Model",
+            "description": null,
+            "value": "Current free Windows desktop offer; future pricing is not guaranteed.",
+            "date": "2026-10-13"
+          },
+          {
+            "name": "Trade-Off Summary",
+            "description": null,
+            "value": "Compare native page organization and PDF extraction. Reordering is documented as not undoable. AI/cloud privacy is separate; no full Acrobat or tested export-fidelity guarantee.",
+            "date": "2026-10-13"
+          }
+        ]
+      },
+      {
+        "slug": "sejda",
+        "name": "Sejda",
+        "description": "A PDF toolkit; this review covers occasional page organization in the limited free Windows Desktop edition.",
+        "claims": [
+          {
+            "name": "Adobe / PDF",
+            "description": "Windows personal PDF page organization within the limited free Desktop edition: reorder, rotate and save pages, delete pages, and extract selected pages into a separate document. Desktop documentation supplies reorder/delete/extract; the rotation guide explicitly identifies Desktop as having the same features. Paired with Acrobat desktop extraction. Bounded documentary editorial inference, not native output testing or complete Acrobat equivalence.",
+            "value": "alternative",
+            "date": "2026-10-24"
+          },
+          {
+            "name": "No Subscription",
+            "description": null,
+            "value": "Yes",
+            "date": "2026-10-24"
+          },
+          {
+            "name": "Pricing Model",
+            "description": null,
+            "value": "Free Desktop use is limited to 3 tasks per day, documents up to 50MB and 200 pages, and combining up to 30 files and 50 pages. Optional paid access includes a seven-day pass and recurring annual access; the pass is not a perpetual license.",
+            "date": "2026-10-24"
+          },
+          {
+            "name": "Trade-Off Summary",
+            "description": null,
+            "value": "Occasional Windows Desktop page organization must stay within the free daily and document limits; a workflow using several tools may consume several tasks. Desktop processes files on the computer according to the vendor, while Web uploads them. Native output fidelity, free-build behavior and privacy have not been independently tested. Not full Acrobat parity or a guarantee that every feature is free.",
+            "date": "2026-10-24"
+          }
+        ]
+      },
+      {
+        "slug": "stirling-pdf",
+        "name": "Stirling PDF",
+        "description": "A PDF toolkit; this review covers free individual manual page organization on Windows, with tool execution dependent on connection mode.",
+        "claims": [
+          {
+            "name": "Adobe / PDF",
+            "description": "Windows personal PDF page organization in the free individual editor: manually reorder, rotate and remove pages, and extract selected pages into a new PDF; Page Editor applies edits with Save changes to all files. Paired with documented Acrobat desktop page extraction. Processing depends on the selected connection mode and tool availability. Documentary editorial alternative only, not native output testing or full Acrobat parity.",
+            "value": "alternative",
+            "date": "2026-10-24"
+          },
+          {
+            "name": "No Subscription",
+            "description": null,
+            "value": "Yes",
+            "date": "2026-10-24"
+          },
+          {
+            "name": "Pricing Model",
+            "description": null,
+            "value": "The Free individual editor includes manual PDF tools on desktop, Web and self-hosted deployments. Paid team administration and metered automation are separate. This recommendation covers manual page organization, not AI or automated processing.",
+            "date": "2026-10-24"
+          },
+          {
+            "name": "Trade-Off Summary",
+            "description": null,
+            "value": "The Windows desktop app supports different connection modes. Built-in tools can run locally; tools marked with a cloud badge may require Cloud sign-in or a server. In Cloud mode manual tools do not use credits, while AI, processing folders and pipelines do. Verify the mode before processing sensitive files. Output fidelity and native Windows behavior have not been independently tested; no full Acrobat, offline or privacy guarantee.",
+            "date": "2026-10-24"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "meditation-apps-without-a-subscription",
+    "name": "Meditation Apps Without a Subscription",
+    "description": "Alternatives for selecting and playing personal adult guided meditations without mandatory recurring software payment. Reviewed public editions only; accounts and service limits apply. Calm also has limited free access. No clinical, offline or full-catalog equivalence.",
+    "date": "2026-10-15",
+    "cards": [
+      {
+        "slug": "healthy-minds-program",
+        "name": "Healthy Minds Program",
+        "description": "Meditation practices and lessons organized into a wellbeing learning path.",
+        "claims": [
+          {
+            "name": "Calm / Meditation",
+            "description": "For personal adult guided meditation, the Healthy Minds public program lets you choose and play a guided practice, as observed with Intro To Sitting Meditation. This substitutes for Calm guided-session selection and playback within a structured learning program, not for every Calm content category.",
+            "value": "alternative",
+            "date": "2026-10-15"
+          },
+          {
+            "name": "No Subscription",
+            "description": null,
+            "value": "Yes",
+            "date": "2026-10-15"
+          },
+          {
+            "name": "Pricing Model",
+            "description": null,
+            "value": "Free donor-funded public access with registration; donations are optional. Separate paid courses, workplace or research agreements are outside this edition.",
+            "date": "2026-10-15"
+          },
+          {
+            "name": "Trade-Off Summary",
+            "description": null,
+            "value": "A structured Awareness, Connection, Insight and Purpose program rather than the complete Calm catalog. Registration is required. Older offline instructions and conflicting documented iOS requirements remain limitations; the Android sample does not resolve them.",
+            "date": "2026-10-15"
+          }
+        ]
+      },
+      {
+        "slug": "insight-timer",
+        "name": "Insight Timer",
+        "description": "A free online guided-meditation library with optional Member Plus benefits; this review covers choosing and playing free guided sessions.",
+        "claims": [
+          {
+            "name": "Calm / Meditation",
+            "description": "Personal adult guided meditation selection and online playback from the free library. A bounded editorial alternative to Calm for choosing and listening to guided sessions; account and connectivity requirements apply. Not complete Calm feature, curriculum or outcome equivalence. Primary-document review, not a hands-on playback test.",
+            "value": "alternative",
+            "date": "2026-10-24"
+          },
+          {
+            "name": "No Subscription",
+            "description": null,
+            "value": "Yes",
+            "date": "2026-10-24"
+          },
+          {
+            "name": "Pricing Model",
+            "description": null,
+            "value": "Free core guided-meditation library with optional monthly or annual Member Plus subscription. This recommendation covers free online listening, not premium downloads or every course.",
+            "date": "2026-10-24"
+          },
+          {
+            "name": "Trade-Off Summary",
+            "description": null,
+            "value": "Free online listening requires selecting free content; the documented browser workflow uses an account. Ad-free listening, offline downloads and selected premium content are Member Plus benefits. Library and teacher choice differ from Calm; no curriculum equivalence or clinical outcome is established.",
+            "date": "2026-10-24"
+          }
+        ]
+      },
+      {
+        "slug": "medito",
+        "name": "Medito",
+        "description": "Free guided meditations, breathing exercises, sleep content, and a timer.",
+        "claims": [
+          {
+            "name": "Calm / Meditation",
+            "description": "For personal adult guided meditation, Medito lets you choose a session from its courses and play guided audio, as observed with Learning to sit. This substitutes for selecting and playing a Calm guided meditation; it does not establish equivalent catalog, sleep stories or health outcomes.",
+            "value": "alternative",
+            "date": "2026-10-15"
+          },
+          {
+            "name": "No Subscription",
+            "description": null,
+            "value": "Yes",
+            "date": "2026-10-15"
+          },
+          {
+            "name": "Pricing Model",
+            "description": null,
+            "value": "Free public app and meditation content, supported by donations; no paid perpetual license is implied.",
+            "date": "2026-10-15"
+          },
+          {
+            "name": "Trade-Off Summary",
+            "description": null,
+            "value": "A course-based meditation alternative rather than the complete Calm catalog. Core no-account access is vendor-documented but the owner tested signed in. App code licensing does not grant unrestricted reuse of original or partner audio.",
+            "date": "2026-10-15"
+          }
+        ]
+      },
+      {
+        "slug": "smiling-mind",
+        "name": "Smiling Mind",
+        "description": "Meditations and mental-fitness learning pathways for adults and children.",
+        "claims": [
+          {
+            "name": "Calm / Meditation",
+            "description": "For personal adult guided meditation, Smiling Mind lets you select an adult session and play guided audio, as observed with Exploring the Breath. This substitutes for the corresponding Calm selection/playback activity, without implying parity with Calm sleep stories, music or its entire catalog.",
+            "value": "alternative",
+            "date": "2026-10-15"
+          },
+          {
+            "name": "No Subscription",
+            "description": null,
+            "value": "Yes",
+            "date": "2026-10-15"
+          },
+          {
+            "name": "Pricing Model",
+            "description": null,
+            "value": "Currently free individual access supported by the nonprofit; a registered account is required. This is not a perpetual-access guarantee.",
+            "date": "2026-10-15"
+          },
+          {
+            "name": "Trade-Off Summary",
+            "description": null,
+            "value": "A broader mental-fitness app with adult, family and other sections; the comparison covers adult guided sessions only. Account registration is required. Download features are documented but offline playback was not tested.",
+            "date": "2026-10-15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "productivity-apps-you-can-buy-once",
+    "name": "Productivity Apps You Can Buy Once",
+    "description": "Compare personal task capture, project organization and scheduling in Things 3, native OmniFocus 4 perpetual editions and direct-purchase 2Do Mac. Apple platforms and purchase channels differ; optional Web access, future upgrades and update eligibility have separate costs.",
+    "date": "2026-10-13",
+    "cards": [
+      {
+        "slug": "2do",
+        "name": "2Do",
+        "description": "A task and project planner with a perpetual direct-purchase Mac edition; mobile applications and future updates have separate purchase terms.",
+        "claims": [
+          {
+            "name": "Personal Task Workflow Scope",
+            "description": null,
+            "value": "personal-task-capture-project-organization-and-scheduling",
+            "date": "2026-10-13"
+          },
+          {
+            "name": "One-Time Purchase",
+            "description": null,
+            "value": "Yes",
+            "date": "2026-10-13"
+          },
+          {
+            "name": "Pricing Model",
+            "description": null,
+            "value": "Direct-store 2Do Mac perpetual license includes 18 months of updates from purchase; optional renewal adds update eligibility.",
+            "date": "2026-10-13"
+          },
+          {
+            "name": "Trade-Off Summary",
+            "description": null,
+            "value": "Mac App Store and Setapp editions use subscriptions. Keep the last eligible direct version without renewal; future macOS/sync compatibility is not guaranteed. iPhone/iPad are separate purchases; Android is outside this Mac workflow review.",
+            "date": "2026-10-13"
+          }
+        ]
+      },
+      {
+        "slug": "omnifocus",
+        "name": "OmniFocus",
+        "description": "Personal task management with perspectives and project reviews.",
+        "claims": [
+          {
+            "name": "Personal Task Workflow Scope",
+            "description": null,
+            "value": "personal-task-capture-project-organization-and-scheduling",
+            "date": "2026-10-13"
+          },
+          {
+            "name": "One-Time Purchase",
+            "description": null,
+            "value": "Yes",
+            "date": "2026-10-13"
+          },
+          {
+            "name": "Pricing Model",
+            "description": null,
+            "value": "Native OmniFocus 4 Standard or Pro perpetual license includes 4.x updates and the supported Apple platforms.",
+            "date": "2026-10-13"
+          },
+          {
+            "name": "Trade-Off Summary",
+            "description": null,
+            "value": "Web access and all-access plans are recurring subscriptions. Future major upgrades are separate; Pro-only features are excluded from Standard workflow comparisons.",
+            "date": "2026-10-13"
+          }
+        ]
+      },
+      {
+        "slug": "things",
+        "name": "Things",
+        "description": "Personal tasks and project planning for Apple devices.",
+        "claims": [
+          {
+            "name": "Personal Task Workflow Scope",
+            "description": null,
+            "value": "personal-task-capture-project-organization-and-scheduling",
+            "date": "2026-10-13"
+          },
+          {
+            "name": "One-Time Purchase",
+            "description": null,
+            "value": "Yes",
+            "date": "2026-10-13"
+          },
+          {
+            "name": "Pricing Model",
+            "description": null,
+            "value": "Things 3: separate one-time Apple-platform purchases; Things Cloud sync has no extra charge.",
+            "date": "2026-10-13"
+          },
+          {
+            "name": "Trade-Off Summary",
+            "description": null,
+            "value": "Apple platforms only; no real-time shared lists. Separate platform purchases; future major upgrades are not guaranteed free.",
+            "date": "2026-10-13"
+          }
+        ]
+      }
+    ]
+  }
+]
