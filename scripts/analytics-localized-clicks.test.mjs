@@ -32,6 +32,16 @@ test('real placement click handler preserves English and Chinese product attribu
    listeners.get('click')({type:'click',button:0,target:Object.assign(new ElementStub(),{pathname,origin,dataset:{discoveryProduct:product}})});
    assert.equal(batches.length,0);assert.equal(storage.size,0);
   }
+  storage.clear();batches.length=0;
+  const hidden={...c,surface:'hidden_gems',path:'/zh-hant/hidden-gems',routeSlug:undefined};setCurrentPageV2(hidden);
+  const stopHidden=observePlacementsV2(root,hidden,[{slug:'joplin',position:1}]);
+  try{
+   listeners.get('click')({type:'click',button:0,target:Object.assign(new ElementStub(),{pathname:'/zh-hant/software/joplin',origin:location.origin,dataset:{discoveryProduct:'joplin',discoveryPosition:'1'}})});
+   assert.equal(batches[0].events[0].name,'product_clicked');assert.equal(batches[0].events[0].path,hidden.path);
+   const origin=originV2('joplin');assert.equal(origin.fields.originSurface,'hidden_gems');assert.equal(origin.fields.originPageViewId,hidden.pageViewId);assert.equal(Object.hasOwn(origin.fields,'originRouteSlug'),false);
+   for(const name of ['page_viewed','outbound_clicked'])emitV2({...hidden,surface:'product',path:'/zh-hant/software/joplin',productSlug:'joplin'},name,origin.fields);
+   flushV2();for(const event of batches[1].events){assert.equal(event.originSurface,'hidden_gems');assert.equal(event.originPageViewId,hidden.pageViewId);}
+  }finally{stopHidden();}
  }finally{
   dispose();configureClientV2(false);
   for(const [key,descriptor] of descriptors){if(descriptor)Object.defineProperty(globalThis,key,descriptor);else delete globalThis[key];}

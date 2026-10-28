@@ -8,10 +8,10 @@ import {collectV2,collectorConfigV2} from '../lib/analytics/http-v2.ts';
 // Exercise the actual publication validator with bounded synthetic data, without network or credentials.
 const mocks={
  'server-only':'export {};',
- '@/lib/i18n/server':`export async function getChineseProduct(slug){return slug==='omnifocus'?{status:'published'}:null;}`,
+ '@/lib/i18n/server':`export async function getChineseProduct(slug){return ['omnifocus','joplin'].includes(slug)?{status:'published'}:null;} export async function getChineseHiddenGems(){return globalThis.__localizedGemsReady?[{slug:'joplin'}]:[];}`,
  '@/lib/discovery/escapes':`export const escapePreview=()=>false;export async function getEscape(slug){return {published:true,candidates:[{eligible:true,product:{slug:'omnifocus',status:'published'}}]};}`,
  '@/lib/discovery/products':`export const localPreview=()=>false;export async function getProduct(){return {status:'published'};}`,
- '@/lib/discovery/hidden-gems-server':`export async function getHiddenGems(){return [];}`,
+ '@/lib/discovery/hidden-gems-server':`export async function getHiddenGems(){return [{slug:'joplin'}];}`,
 };
 const hooks=registerHooks({resolve(specifier,context,next){if(Object.hasOwn(mocks,specifier))return {url:'data:text/javascript,'+encodeURIComponent(mocks[specifier]),shortCircuit:true};if(specifier==='@/lib/discovery/escape-model')return {url:new URL('../lib/discovery/escape-model.ts',import.meta.url).href,shortCircuit:true};return next(specifier,context);}});
 const {publicationV2}=await import('../lib/analytics/publication-v2.ts');
@@ -49,4 +49,16 @@ test('Chinese product page and outbound events pass the real collector only when
   const r=await collect([e]);assert.equal(r.status,204);assert.equal(r.stored[0].path,e.path);
   assert.equal((await collect([{...e,eventId:id(),path:'/zh-hant/software/affine',productSlug:'affine'}])).status,400);
  }
+});
+
+test('Chinese editorial events pass actual publication checks only when the collection is available',async()=>{
+ const page={version:2,eventId:id(),sessionId:id(),pageViewId:id(),occurredAt:now.toISOString(),name:'page_viewed',surface:'hidden_gems',path:'/zh-hant/hidden-gems'};
+ try{
+  globalThis.__localizedGemsReady=true;
+  const placement={...page,eventId:id(),name:'product_impression',productSlug:'joplin',position:1,exposureId:id()};
+  assert.equal((await collect([page,placement,{...placement,eventId:id(),name:'product_clicked'}])).status,204);
+  for(const name of ['page_viewed','outbound_clicked'])assert.equal((await collect([{...page,eventId:id(),pageViewId:id(),name,surface:'product',path:'/zh-hant/software/joplin',productSlug:'joplin',originSurface:'hidden_gems',originPageViewId:page.pageViewId,originExposureId:placement.exposureId,originPosition:1}])).status,204);
+  globalThis.__localizedGemsReady=false;assert.equal((await collect([page])).status,400);
+  assert.equal((await collect([{...page,path:'/hidden-gems'}])).status,204);
+ }finally{delete globalThis.__localizedGemsReady;}
 });

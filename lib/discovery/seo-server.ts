@@ -1,4 +1,4 @@
-import {getChineseEscape,getChineseProduct} from '@/lib/i18n/server';
+import {getChineseEscape,getChineseProduct,getChineseHiddenGems} from '@/lib/i18n/server';
 import {pilotSlugs,zhHome} from '@/lib/i18n/pilot';
 import {getProduct} from './products';
 import {indexableProduct} from './structured-data';
@@ -30,5 +30,5 @@ export async function liveSitemapPaths(){
  const translated=await Promise.all(pilotSlugs.map(getChineseEscape));
  const translatedProducts=[];const productPaths=paths.filter(p=>p.startsWith('/software/'));
  for(let i=0;i<productPaths.length;i+=6){translatedProducts.push(...(await Promise.all(productPaths.slice(i,i+6).map(async path=>await getChineseProduct(path.slice(10))?zhHome+path:null))).filter((p):p is string=>p!==null));}
- return [...paths,...translatedProducts,zhHome,...translated.flatMap(p=>p?[zhHome+'/escape/'+p.slug]:[]),...(indexableGemCollection(gems)?['/hidden-gems']:[])].sort();
+ return [...paths,...translatedProducts,zhHome,...translated.flatMap(p=>p?[zhHome+'/escape/'+p.slug]:[]),...(indexableGemCollection(gems)?['/hidden-gems']:[]),...((await getChineseHiddenGems()).length?[zhHome+'/hidden-gems']:[])].sort();
 }

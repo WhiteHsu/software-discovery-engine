@@ -1,4 +1,4 @@
-import {getChineseProduct} from '@/lib/i18n/server';
+import {getChineseProduct,getChineseHiddenGems} from '@/lib/i18n/server';
 import 'server-only';
 import {getEscape,escapePreview} from '@/lib/discovery/escapes';
 import {getProduct,localPreview} from '@/lib/discovery/products';
@@ -8,6 +8,7 @@ import type {EventV2} from './events-v2';
 export async function publicationV2(events:EventV2[]){
  if(escapePreview()||localPreview())throw Error('Preview analytics disabled');
  const first=events[0];
+ if(first.path==='/zh-hant/hidden-gems'&&!(await getChineseHiddenGems()).length)throw Error('Untranslated collection');
  const routeSlug=first.surface==='escape'?first.routeSlug:first.originSurface==='escape'?first.originRouteSlug:undefined;
  let placements:{slug:string;position:number}[]=[];
  if(routeSlug){

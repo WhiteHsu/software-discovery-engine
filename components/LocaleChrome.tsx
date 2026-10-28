@@ -4,8 +4,8 @@ import {usePathname} from 'next/navigation';
 import {useEffect} from 'react';
 import {localeNavigation} from '@/lib/i18n/pilot';
 
-export function LocaleHeader({availableSlugs,availableProducts=[]}:{availableSlugs:readonly string[];availableProducts?:readonly string[]}){
- const path=usePathname(),nav=localeNavigation(path,availableSlugs,availableProducts);
+export function LocaleHeader({availableSlugs,availableProducts=[],hiddenGemsAvailable=false}:{availableSlugs:readonly string[];availableProducts?:readonly string[];hiddenGemsAvailable?:boolean}){
+ const path=usePathname(),nav=localeNavigation(path,availableSlugs,availableProducts,hiddenGemsAvailable);
  // App Router preserves root layouts during client navigation. Keep the document
  // language and shared navigation in sync with the actual current URL.
  useEffect(()=>{document.documentElement.lang=nav.language;},[nav.language]);

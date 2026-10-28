@@ -5,12 +5,14 @@ import {indexableGemCollection} from '@/lib/discovery/hidden-gems';
 import {requestSeo} from '@/lib/discovery/seo-server';
 import DiscoveryTracker from '@/components/DiscoveryTracker';
 import {pageTrackingEnabled} from '@/lib/analytics/page-tracking';
+import {getChineseHiddenGems} from '@/lib/i18n/server';
+import {languageAlternates} from '@/lib/i18n/pilot';
 import styles from './hidden-gems.module.css';
 export const dynamic='force-dynamic';
 export async function generateMetadata():Promise<Metadata>{
- const [seo,cards]=await Promise.all([requestSeo(),getHiddenGems()]);
+ const [seo,cards,chinese]=await Promise.all([requestSeo(),getHiddenGems(),getChineseHiddenGems()]);
  const index=seo.indexable&&indexableGemCollection(cards);
- return {title:'Hidden Gems',description:'Editorial software picks for personal notebooks, digital painting and Windows PDF page organization, with reviewed scope and limits.',metadataBase:new URL(seo.origin),alternates:{canonical:'/hidden-gems'},robots:{index,follow:index}};
+ return {title:'Hidden Gems',description:'Editorial software picks for personal notebooks, digital painting and Windows PDF page organization, with reviewed scope and limits.',metadataBase:new URL(seo.origin),alternates:{canonical:'/hidden-gems',...(chinese.length?{languages:languageAlternates('/hidden-gems')}:{})},robots:{index,follow:index}};
 }
 export default async function HiddenGems(){
  const cards=await getHiddenGems();

@@ -28,7 +28,7 @@ export function parseEventV2(input:unknown):EventV2{
  if(typeof e.occurredAt!=='string'||!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/.test(e.occurredAt)||!Number.isFinite(Date.parse(e.occurredAt))||new Date(e.occurredAt).toISOString()!==e.occurredAt)throw Error('Invalid time');
  const normalized=englishPath(e.path);
  const route=escapeDefinitions.find(d=>'/escape/'+d.slug===normalized);
- if(!((e.surface==='home'&&normalized==='/')||(e.surface==='search'&&(e.path==='/'||e.path==='/discover'))||(e.surface==='hidden_gems'&&e.path==='/hidden-gems')||(e.surface==='escape'&&route&&e.routeSlug===route.slug)||(e.surface==='product'&&typeof e.productSlug==='string'&&normalized==='/software/'+e.productSlug)))throw Error('Invalid surface/path');
+ if(!((e.surface==='home'&&normalized==='/')||(e.surface==='search'&&(e.path==='/'||e.path==='/discover'))||(e.surface==='hidden_gems'&&normalized==='/hidden-gems')||(e.surface==='escape'&&route&&e.routeSlug===route.slug)||(e.surface==='product'&&typeof e.productSlug==='string'&&normalized==='/software/'+e.productSlug)))throw Error('Invalid surface/path');
  if(e.surface!=='escape'&&e.routeSlug!==undefined)throw Error('Unexpected route');
  if(e.anchor!==undefined&&!searchAnchors.includes(e.anchor as typeof searchAnchors[number]))throw Error('Unknown anchor');
  const constraints=new Set<string>([...searchAttributes,...constraintOptions.map(c=>c.value)]);
