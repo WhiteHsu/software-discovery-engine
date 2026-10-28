@@ -1,13 +1,13 @@
 import {createHmac,timingSafeEqual} from 'node:crypto';
 import {parseSearchIntent,type SearchIntent} from '../discovery/search-intent.ts';
 import type {EventV2} from './events-v2.ts';
-export type SearchContextV2={version:1;path:'/'|'/discover';sessionId:string;pageViewId:string;searchId:string;resultSetId:string;issuedAt:number;expiresAt:number;intent:SearchIntent;outcome:'results'|'no_results'|'clarify'|'unsupported';products:string[]};
+export type SearchContextV2={version:1;path:'/'|'/discover'|'/zh-hant'|'/zh-hant/discover';sessionId:string;pageViewId:string;searchId:string;resultSetId:string;issuedAt:number;expiresAt:number;intent:SearchIntent;outcome:'results'|'no_results'|'clarify'|'unsupported';products:string[]};
 const uuid=/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/;
 const keys=['version','path','sessionId','pageViewId','searchId','resultSetId','issuedAt','expiresAt','intent','outcome','products'];
 function context(value:unknown):SearchContextV2{
  if(!value||typeof value!=='object'||Array.isArray(value))throw Error('Invalid context');
  const c=value as SearchContextV2;
- if(Object.keys(c).length!==keys.length||Object.keys(c).some(k=>!keys.includes(k))||c.version!==1||!['/','/discover'].includes(c.path))throw Error('Invalid context');
+ if(Object.keys(c).length!==keys.length||Object.keys(c).some(k=>!keys.includes(k))||c.version!==1||!['/','/discover','/zh-hant','/zh-hant/discover'].includes(c.path))throw Error('Invalid context');
  for(const key of ['sessionId','pageViewId','searchId','resultSetId'] as const)if(typeof c[key]!=='string'||!uuid.test(c[key]))throw Error('Invalid context identity');
  parseSearchIntent(c.intent);
  if(!Number.isSafeInteger(c.issuedAt)||!Number.isSafeInteger(c.expiresAt)||c.expiresAt-c.issuedAt!==1800000)throw Error('Invalid lifetime');

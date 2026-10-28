@@ -1,6 +1,6 @@
 'use client';
 import {exposureGate} from './exposure.ts';
-import {chineseProduct} from '../i18n/pilot.ts';
+import {chineseProduct,englishPath} from '../i18n/pilot.ts';
 import {redactSearchQuery,type EventV2, type SurfaceV2} from './events-v2.ts';
 export type PageContextV2={sessionId:string;pageViewId:string;path:string;surface:SurfaceV2;anchor?:string;constraints?:string[];routeSlug?:string;productSlug?:string;source?:EventV2['source'];referrerHost?:string};
 export type SearchTrackingV2={searchId:string;resultSetId:string;receipt:string};
@@ -33,7 +33,7 @@ export function flushV2(unloading=false){
  for(const group of groups.values()){let batch:EventV2[]=[];const receipt=group[0].receipt;for(const item of group){if(batch.length===20||new TextEncoder().encode(JSON.stringify({events:[...batch,item.event],receipt})).length>32768){send(batch,receipt);batch=[];}batch.push(item.event);}send(batch,receipt);}
 }
 export function beginSearchV2(query:string){
- if(!enabled||optedOut()||!current||!['/','/discover'].includes(current.path))return undefined;
+ if(!enabled||optedOut()||!current||!['/','/discover'].includes(englishPath(current.path)))return undefined;
  const c={...current,surface:'search' as const},searchId=crypto.randomUUID();
  emitV2(c,'search_performed',{searchId,query:redactSearchQuery(query)});return {context:c,searchId,header:JSON.stringify({sessionId:c.sessionId,pageViewId:c.pageViewId,searchId,path:c.path})};
 }

@@ -14,7 +14,7 @@ test('all ten public comparisons have complete translations without changing qua
 });
 test('every released route maps reciprocally and preserves localized analytics paths',()=>{
  for(const slug of pilotSlugs){const path='/zh-hant/escape/'+slug;assert.equal(chinesePath(path),true);assert.equal(englishPath(path),'/escape/'+slug);assert.equal(localeNavigation('/escape/'+slug,pilotSlugs).alternate,path);assert.equal(localeNavigation(path,pilotSlugs).alternate,'/escape/'+slug);assert.equal(localeNavigation(path,[]).alternate,null);assert.equal(cleanVercelUrl('https://toolelse.com'+path+'?private=x#secret'),'https://toolelse.com'+path);const e={version:2,eventId:crypto.randomUUID(),sessionId:crypto.randomUUID(),pageViewId:crypto.randomUUID(),occurredAt:new Date().toISOString(),name:'escape_route_viewed',surface:'escape',path,routeSlug:slug};assert.equal(parseEventV2(e).path,path);assert.throws(()=>parseEventV2({...e,routeSlug:'made-up'}));}
- for(const path of ['/zh-hant/escape/made-up','/zh-hant/software/untranslated-product','/zh-hant/discover'])assert.equal(chinesePath(path),false);
+ for(const path of ['/zh-hant/escape/made-up','/zh-hant/software/untranslated-product','/zh-hant/discover/'])assert.equal(chinesePath(path),false);
  assert.equal(safeVercelContext('c59194d0-2f93-4e79-b489-e001273abc29',null,''),false);
 });
 test('changed source wording and insufficient or draft evidence still withhold localized pages',()=>{

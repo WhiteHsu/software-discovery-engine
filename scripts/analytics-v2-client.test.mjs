@@ -33,3 +33,12 @@ test('search receipt integration is opt-in, server-signed and disabled for priva
  assert.equal(searchReceipt(new Request(request,{headers:{'x-discovery-context':a.header,dnt:'1'}}),result,env,1000),undefined);
  assert.equal(searchReceipt(new Request('https://site.example/api/discover',{headers:{'x-discovery-context':'malformed'}}),result,env,1000),undefined);
 });
+
+test('Chinese home and discover attempts preserve their paths and share redaction and opt-out behavior',()=>{
+ for(const path of ['/zh-hant','/zh-hant/discover']){
+  flushV2();sent.length=0;configureClientV2(true);setCurrentPageV2(makePageV2(path,path==='/zh-hant'?'home':'search'));
+  const attempt=beginSearchV2('找 Notion alice@example.com');assert.ok(attempt);assert.equal(JSON.parse(attempt.header).path,path);flushV2();assert.equal(sent[0].events[0].path,path);assert.equal(sent[0].events[0].query,'找 Notion [email]');
+  navigator.globalPrivacyControl=true;assert.equal(beginSearchV2('Notion'),undefined);navigator.globalPrivacyControl=false;
+ }
+ setCurrentPageV2(makePageV2('/zh-hant/hidden-gems','hidden_gems'));assert.equal(beginSearchV2('Notion'),undefined);
+});

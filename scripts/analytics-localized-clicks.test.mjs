@@ -42,6 +42,17 @@ test('real placement click handler preserves English and Chinese product attribu
    for(const name of ['page_viewed','outbound_clicked'])emitV2({...hidden,surface:'product',path:'/zh-hant/software/joplin',productSlug:'joplin'},name,origin.fields);
    flushV2();for(const event of batches[1].events){assert.equal(event.originSurface,'hidden_gems');assert.equal(event.originPageViewId,hidden.pageViewId);}
   }finally{stopHidden();}
+  storage.clear();batches.length=0;
+  const search={...c,surface:'search',path:'/zh-hant/discover',routeSlug:undefined};setCurrentPageV2(search);
+  const searchIds={searchId:crypto.randomUUID(),resultSetId:crypto.randomUUID()};
+  const stopSearch=observePlacementsV2(root,search,[{slug:'joplin',position:1}],'signed-search-receipt',searchIds);
+  try{
+   listeners.get('click')({type:'click',button:0,target:Object.assign(new ElementStub(),{pathname:'/zh-hant/software/joplin',origin:location.origin,dataset:{searchProduct:'joplin',discoveryPosition:'1'}})});
+   const clicked=batches[0].events[0];assert.equal(clicked.searchId,searchIds.searchId);assert.equal(clicked.resultSetId,searchIds.resultSetId);assert.equal(clicked.path,search.path);
+   const origin=originV2('joplin');assert.equal(origin.fields.originSurface,'search');assert.equal(origin.fields.originSearchId,searchIds.searchId);assert.equal(origin.fields.originPageViewId,search.pageViewId);assert.equal(origin.receipt,'signed-search-receipt');
+   for(const name of ['page_viewed','outbound_clicked'])emitV2({...search,surface:'product',path:'/zh-hant/software/joplin',productSlug:'joplin'},name,origin.fields,origin.receipt);
+   flushV2();assert.equal(batches[1].receipt,'signed-search-receipt');for(const event of batches[1].events){assert.equal(event.originSurface,'search');assert.equal(event.originSearchId,searchIds.searchId);}
+  }finally{stopSearch();}
  }finally{
   dispose();configureClientV2(false);
   for(const [key,descriptor] of descriptors){if(descriptor)Object.defineProperty(globalThis,key,descriptor);else delete globalThis[key];}

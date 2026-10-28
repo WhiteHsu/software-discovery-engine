@@ -12,7 +12,7 @@ export async function prepareLocaleBuild(mockUrl){
   // Dependencies are an actual disposable copy, never a junction to the owner repo.
   await rm(target,{recursive:true,force:true});
  };
- const env={...process.env,NEXT_PUBLIC_SUPABASE_URL:mockUrl,NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY:'fixture-only-not-a-real-key',NEXT_PUBLIC_SITE_URL:'https://toolelse.com',VERCEL:'1',VERCEL_ENV:'production',VERCEL_WEB_ANALYTICS_ENABLED:'false',ANALYTICS_ENABLED:'false',ANALYTICS_V2_ENABLED:'false',ANALYTICS_PRODUCER_ENABLED:'false',NEXT_TELEMETRY_DISABLED:'1'};
+ const env={...process.env,NEXT_PUBLIC_SUPABASE_URL:mockUrl,NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY:'fixture-only-not-a-real-key',NEXT_PUBLIC_SITE_URL:'https://toolelse.com',VERCEL:'1',VERCEL_ENV:'production',VERCEL_WEB_ANALYTICS_ENABLED:'false',ANALYTICS_ENABLED:'false',ANALYTICS_V2_ENABLED:'false',ANALYTICS_PRODUCER_ENABLED:'false',DISCOVERY_SEARCH_ENABLED:'false',NEXT_TELEMETRY_DISABLED:'1'};
  try{
   for(const name of ['app','components','lib','public','package.json','package-lock.json','next.config.ts','tsconfig.json','next-env.d.ts','proxy.ts']){
    try{await access(join(repo,name));}catch(e){if(e.code==='ENOENT'&&name==='public')continue;throw e;}

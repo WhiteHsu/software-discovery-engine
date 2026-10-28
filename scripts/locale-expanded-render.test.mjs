@@ -17,18 +17,21 @@ const pause=ms=>new Promise(r=>setTimeout(r,ms));let checks=0;
 const get=(path,headers={})=>new Promise((resolve,reject)=>{const req=httpRequest(origin+path,{headers:{host:'toolelse.com',...headers}},response=>{let html='';response.on('data',c=>html+=c);response.on('end',()=>resolve({response:{status:response.statusCode},html}));});req.on('error',reject);req.end();});
 try{
  let ready=false;for(let i=0;i<100;i++){try{const r=await fetch(origin+'/privacy');if(r.status===200){ready=true;break;}}catch{}await pause(300);}assert.ok(ready,output);
- for(const path of ['/zh-hant',...pilotSlugs.map(s=>'/zh-hant/escape/'+s),'/zh-hant/privacy','/zh-hant/hidden-gems']){
+ for(const path of ['/zh-hant',...pilotSlugs.map(s=>'/zh-hant/escape/'+s),'/zh-hant/privacy','/zh-hant/hidden-gems','/zh-hant/discover']){
   const {response,html}=await get(path);assert.equal(response.status,200,path);assert.match(html,/<html[^>]*lang="zh-Hant"/);assert.equal((html.match(/<html\b/g)||[]).length,1);assert.match(html,/href="\/zh-hant"/);assert.match(html,/rel="canonical" href="https:\/\/toolelse.com/);
   if(path.includes('/escape/'))assert.match(html,/Synthetic integration fixture; not verification evidence/,'Mock data required; refusing to test another data source');
   if(path.includes('/escape/')){const en=await get(path.slice(8));assert.equal(en.response.status,200);const placements=h=>[...h.matchAll(/data-discovery-product="([^"]+)" data-discovery-position="([^"]+)"/g)].map(m=>m[1]+':'+m[2]);assert.deepEqual(placements(html),placements(en.html),path);assert.match(html,/hrefLang="en"|hreflang="en"/);assert.match(html,/hrefLang="en"|hrefLang="en"|hreflang="en"/);assert.match(html,/href="\/zh-hant\/software\//);assert.doesNotMatch(html,/>Unknown</);}
   if(path.includes('privacy-friendly-grammarly')){assert.match(html,/僅限已查核的本機操作/);assert.match(html,/不保證零保留/);assert.doesNotMatch(html,/>是 · 查核日期/);}
-  if(path==='/zh-hant'){assert.doesNotMatch(html,/<form/);assert.match(html,/繁中搜尋功能尚未提供/);}
+  if(path==='/zh-hant'||path==='/zh-hant/discover'){assert.match(html,/<form/);assert.match(html,/你的需求會傳送至 OpenAI/);assert.doesNotMatch(html,/繁中搜尋功能尚未提供/);}
+  if(path==='/zh-hant/discover'){assert.match(html,/noindex/);assert.match(html,/href="\/discover"/);}
   if(path.endsWith('/privacy'))assert.match(html,/noindex/);
   writeFileSync(join(isolated.cwd,'render-'+path.replaceAll('/','_')+'.html'),html);checks++;
  }
 
  for(const p of products){const path='/zh-hant/software/'+p.slug;const {response,html}=await get(path);assert.equal(response.status,200,path);assert.match(html,/<html[^>]*lang="zh-Hant"/);assert.ok(html.includes('rel="canonical" href="https://toolelse.com'+path+'"'));assert.match(html,/值得探索的原因/);assert.doesNotMatch(html,/>Unknown</);const en=await get('/software/'+p.slug);assert.equal(en.response.status,200);assert.match(en.html,/hrefLang="zh-Hant"|hreflang="zh-Hant"/);checks++;}
  assert.equal((await get('/zh-hant/software/untranslated-product')).response.status,404);checks++;
+ for(const chinese of [false,true]){const response=await fetch(origin+'/api/discover',{method:'POST',headers:{'content-type':'application/json',...(chinese?{'x-discovery-locale':'zh-Hant'}:{})},body:JSON.stringify({query:'Notion 離線'})});assert.equal(response.status,503);const body=await response.json();assert.match(body.error,chinese?/搜尋暫時無法使用/:/Search is temporarily unavailable/);checks++;}
+ assert.match((await get('/discover')).html,/href="\/zh-hant\/discover"/);checks++;
  for(const path of ['/','/escape/offline-notion-alternatives']){const {response,html}=await get(path,{'x-toolelse-language':'zh-Hant','x-toolelse-path':'/zh-hant'});assert.equal(response.status,200);assert.match(html,/<html[^>]*lang="en"/);assert.match(html,/hrefLang="zh-Hant"|hreflang="zh-Hant"/);checks++;}
  const {html:xml,response:sitemapResponse}=await get('/sitemap.xml');assert.equal(sitemapResponse.status,200);assert.equal((xml.match(/<loc>/g)||[]).length,2*products.length+2*pilotSlugs.length+4);assert.match(xml,/hreflang="zh-Hant"/);assert.doesNotMatch(xml,/<loc>https:\/\/toolelse.com\/(?:zh-hant\/)?privacy<\/loc>/);checks++;
  const gems=await get('/zh-hant/hidden-gems');
