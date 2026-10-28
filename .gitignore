@@ -33,3 +33,5 @@ yarn-error.log*
 
 # generated seed import plans
 .seed-output/
+# local render diagnostics
+/render-*.html
