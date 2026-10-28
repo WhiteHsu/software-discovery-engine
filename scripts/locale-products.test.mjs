@@ -21,3 +21,8 @@ test('all product equivalents preserve language and analytics paths; unsupported
  for(const path of ['/zh-hant/software/invented','/zh-hant/software/affine/','/zh-hant/software/affine?secret=x','/zh-hant/discover'])assert.equal(chinesePath(path),false);
  const xml=sitemapXml('https://toolelse.com',['/software/affine','/zh-hant/software/affine']);assert.equal((xml.match(/hreflang="zh-Hant"/g)||[]).length,2);assert.doesNotMatch(sitemapXml('https://toolelse.com',['/software/affine']),/hreflang/);
 });
+
+test('unrendered dedicated-section metadata cannot hide otherwise complete product pages',()=>{
+ for(const product of products){const p=structuredClone(product);for(const c of p.attributes)if(['pricing-model','supported-platforms','trade-off-summary'].includes(c.slug)){c.name='Internal taxonomy heading';c.description='Internal taxonomy explanation not rendered by product sections';}assert.ok(localizedProductReady(p),p.slug);
+ const price=p.attributes.find(c=>c.slug==='pricing-model');if(price){price.value='Changed unreviewed pricing claim';price.verificationStatus='verified';price.sources=[{title:'Synthetic',url:'https://example.org',retrievedAt:null}];assert.equal(localizedProductReady(p),false,p.slug);}}
+});

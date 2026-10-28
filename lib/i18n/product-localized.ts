@@ -2,10 +2,12 @@ import type {ProductPage,Claim} from '../discovery/model.ts';
 import {supported,claimValue} from '../discovery/model.ts';
 import {translatedProductSlugs} from './product-slugs.ts';
 import {zh} from './localized.ts';
+// Dedicated sections render translated fixed headings and claim values, not taxonomy metadata.
+const dedicated=new Set(['pricing-model','supported-platforms','trade-off-summary']);
 const meaningReady=(c:Claim)=>!c.description||!!zh(c.description);
 export function localizedProductReady(p:ProductPage|null):p is ProductPage{
  if(!p||p.status!=='published'||!translatedProductSlugs.some(s=>s===p.slug)||!p.description||!zh(p.description))return false;
- if(!p.attributes.every(c=>!!zh(c.name)&&meaningReady(c)&&(!supported(c)||typeof c.value!=='string'||!!zh(claimValue(c)))))return false;
+ if(!p.attributes.every(c=>(dedicated.has(c.slug)||(!!zh(c.name)&&meaningReady(c)))&&(!supported(c)||typeof c.value!=='string'||!!zh(claimValue(c)))))return false;
  return [...p.audiences,...p.problems].filter(supported).every(c=>!!zh(c.name)&&meaningReady(c)&&(!c.relationshipType||!!zh(c.relationshipType)))&&p.anchors.filter(supported).every(c=>meaningReady(c)&&(!c.relationshipType||!!zh(c.relationshipType)));
 }
 // Only display copies are translated. Shared facts, evidence, dates, status and order stay intact.
