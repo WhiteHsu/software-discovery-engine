@@ -1,5 +1,6 @@
 'use client';
 import {exposureGate} from './exposure.ts';
+import {chineseProduct} from '../i18n/pilot.ts';
 import {redactSearchQuery,type EventV2, type SurfaceV2} from './events-v2.ts';
 export type PageContextV2={sessionId:string;pageViewId:string;path:string;surface:SurfaceV2;anchor?:string;constraints?:string[];routeSlug?:string;productSlug?:string;source?:EventV2['source'];referrerHost?:string};
 export type SearchTrackingV2={searchId:string;resultSetId:string;receipt:string};
@@ -52,7 +53,7 @@ export function observePlacementsV2(root:HTMLElement,c:PageContextV2,products:{s
  const click=(e:MouseEvent)=>{
   if(e.type==='click'&&e.button!==0||e.type==='auxclick'&&e.button!==1||!(e.target instanceof Element)||optedOut())return;
   const a=e.target.closest<HTMLAnchorElement>(selector);if(!a||!root.contains(a))return;
-  const slug=a.dataset.searchProduct??a.dataset.discoveryProduct;if(!slug||!positions.has(slug)||a.origin!==location.origin||a.pathname!=='/software/'+slug)return;
+  const slug=a.dataset.searchProduct??a.dataset.discoveryProduct;if(!slug||!positions.has(slug)||a.origin!==location.origin||(a.pathname!=='/software/'+slug&&chineseProduct(a.pathname)!==slug))return;
   emitV2(c,'product_clicked',extra(slug),receipt);
   try{sessionStorage.setItem('sd-origin-v2',JSON.stringify({sessionId:c.sessionId,productSlug:slug,expiresAt:Date.now()+1800000,receipt,fields:{originSurface:c.surface,originPageViewId:c.pageViewId,originExposureId:exposures.get(slug),originPosition:positions.get(slug),...(c.surface==='escape'?{originRouteSlug:c.routeSlug}:{}),...(search?{originSearchId:search.searchId}:{})}}));}catch{}
   flushV2();
