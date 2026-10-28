@@ -1,4 +1,4 @@
-import {chineseRoute,zhHome,languageAlternates} from '../i18n/pilot.ts';
+import {chineseRoute,chineseProduct,englishPath,zhHome,languageAlternates} from '../i18n/pilot.ts';
 import {escapeDefinitions} from './escape-model.ts';
 const fallbackOrigin='https://toolelse.com';
 const slug=/^[a-z0-9]+(?:-[a-z0-9]+)*$/;
@@ -47,8 +47,8 @@ export async function publishedSitemapPaths(deps:{identities:()=>Promise<unknown
 export function sitemapXml(origin:string,paths:string[]){
  if(canonicalOrigin({NEXT_PUBLIC_SITE_URL:origin})!==origin)throw Error('Noncanonical sitemap origin');
  const escape=(s:string)=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&apos;');
- for(const p of paths)if(p!=='/'&&p!=='/hidden-gems'&&p!==zhHome&&!chineseRoute(p)&&!/^\/(?:software|escape)\/[a-z0-9]+(?:-[a-z0-9]+)*$/.test(p))throw Error('Invalid sitemap path');
- return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'+paths.map(p=>{const en=p===zhHome?'/':chineseRoute(p)?p.slice(8):p,alts=languageAlternates(en),pair=Object.values(alts).every(v=>paths.includes(v));return `  <url><loc>${escape(origin+p)}</loc>${pair?Object.entries(alts).map(([lang,url])=>`<xhtml:link rel="alternate" hreflang="${lang}" href="${escape(origin+url)}"/>`).join(''):''}</url>`;}).join('\n')+'\n</urlset>\n';
+ for(const p of paths)if(p!=='/'&&p!=='/hidden-gems'&&p!==zhHome&&!chineseRoute(p)&&!chineseProduct(p)&&!/^\/(?:software|escape)\/[a-z0-9]+(?:-[a-z0-9]+)*$/.test(p))throw Error('Invalid sitemap path');
+ return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'+paths.map(p=>{const en=englishPath(p),alts=languageAlternates(en),pair=Object.values(alts).every(v=>paths.includes(v));return `  <url><loc>${escape(origin+p)}</loc>${pair?Object.entries(alts).map(([lang,url])=>`<xhtml:link rel="alternate" hreflang="${lang}" href="${escape(origin+url)}"/>`).join(''):''}</url>`;}).join('\n')+'\n</urlset>\n';
 }
 export async function sitemapResponse(context:SeoContext,load:()=>Promise<string[]>){
  const headers={'Content-Type':'application/xml; charset=utf-8','Cache-Control':'no-store','X-Robots-Tag':'noindex'};

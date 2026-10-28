@@ -1,3 +1,4 @@
+import {getChineseProduct} from '@/lib/i18n/server';
 import 'server-only';
 import {getEscape,escapePreview} from '@/lib/discovery/escapes';
 import {getProduct,localPreview} from '@/lib/discovery/products';
@@ -22,6 +23,7 @@ export async function publicationV2(events:EventV2[]){
    if(e.originRouteSlug!==first.originRouteSlug||e.originSurface!==first.originSurface||!placements.some(p=>p.slug===e.productSlug&&p.position===e.originPosition))throw Error('Wrong origin placement');
   }
  }
+ for(const e of events)if(e.path.startsWith('/zh-hant/software/')&&(!e.productSlug||!await getChineseProduct(e.productSlug)))throw Error('Untranslated product');
  const products=[...new Set(events.map(e=>e.productSlug).filter((s):s is string=>!!s))];
  if(products.length>6)throw Error('Publication fanout exceeded');
  for(let i=0;i<products.length;i+=2){const pages=await Promise.all(products.slice(i,i+2).map(getProduct));if(pages.some(p=>p?.status!=='published'))throw Error('Unpublished product');}

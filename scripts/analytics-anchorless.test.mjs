@@ -8,6 +8,7 @@ import {collectV2,collectorConfigV2} from '../lib/analytics/http-v2.ts';
 // Exercise the actual publication validator with bounded synthetic data, without network or credentials.
 const mocks={
  'server-only':'export {};',
+ '@/lib/i18n/server':`export async function getChineseProduct(slug){return slug==='omnifocus'?{status:'published'}:null;}`,
  '@/lib/discovery/escapes':`export const escapePreview=()=>false;export async function getEscape(slug){return {published:true,candidates:[{eligible:true,product:{slug:'omnifocus',status:'published'}}]};}`,
  '@/lib/discovery/products':`export const localPreview=()=>false;export async function getProduct(){return {status:'published'};}`,
  '@/lib/discovery/hidden-gems-server':`export async function getHiddenGems(){return [];}`,
@@ -40,4 +41,12 @@ test('anchored routes keep their required anchor and reject missing or altered c
  const page={...base,...escapeContextV2(anchored),path:'/zh-hant/escape/'+anchored.slug};
  assert.equal(parseEventV2(page).anchor,'notion');assert.equal((await collect([page])).status,204);
  for(const anchor of [undefined,'todoist',null])assert.equal((await collect([{...page,anchor}])).status,400);
+});
+
+test('Chinese product page and outbound events pass the real collector only when a localized product is available',async()=>{
+ for(const name of ['page_viewed','outbound_clicked']){
+  const e={version:2,eventId:id(),sessionId:id(),pageViewId:id(),occurredAt:now.toISOString(),name,surface:'product',path:'/zh-hant/software/omnifocus',productSlug:'omnifocus'};
+  const r=await collect([e]);assert.equal(r.status,204);assert.equal(r.stored[0].path,e.path);
+  assert.equal((await collect([{...e,eventId:id(),path:'/zh-hant/software/affine',productSlug:'affine'}])).status,400);
+ }
 });

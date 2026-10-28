@@ -15,7 +15,7 @@ const route='offline-notion-alternatives';
 test('only actual pilot paths have language equivalents',()=>{
  assert.equal(chinesePath('/zh-hant'),true);assert.equal(chinesePath('/zh-hant/privacy'),true);
  assert.equal(englishPath('/zh-hant/escape/'+route),'/escape/'+route);
- for(const p of ['/zh-hant/escape/made-up','/zh-hant/software/appflowy','/zh-hant/discover','/zh-hant/?secret=x'])assert.equal(chinesePath(p),false);
+ for(const p of ['/zh-hant/escape/made-up','/zh-hant/software/untranslated-product','/zh-hant/discover','/zh-hant/?secret=x'])assert.equal(chinesePath(p),false);
  assert.deepEqual(languageAlternates('/'),{en:'/','zh-Hant':'/zh-hant'});
 });
 test('events preserve Chinese path and reject forged or unsupported locale contexts',()=>{

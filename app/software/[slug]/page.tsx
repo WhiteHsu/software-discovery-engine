@@ -1,3 +1,5 @@
+import {getChineseProduct} from '@/lib/i18n/server';
+import {languageAlternates} from '@/lib/i18n/pilot';
 import DiscoveryBreadcrumb from "@/components/DiscoveryBreadcrumb";
 import {indexableProduct,productData,jsonLd,isoDate} from "@/lib/discovery/structured-data";
 import {requestSeo} from "@/lib/discovery/seo-server";
@@ -19,7 +21,7 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
   const seo=await requestSeo();
   return {title:p?.name ?? "Product not found",description:p?.description ?? undefined,
     metadataBase:new URL(seo.origin),
-    alternates:{canonical:`/software/${slug}`},
+    alternates:{canonical:`/software/${slug}`,...(await getChineseProduct(slug)?{languages:languageAlternates(`/software/${slug}`)}:{})},
     robots:{index:seo.indexable && !!p && indexableProduct(p) && !localPreview(),follow:seo.indexable && !!p && indexableProduct(p) && !localPreview()}};
 }
 function date(d:string|null) { return d && Number.isFinite(Date.parse(d)) ? new Date(d).toISOString().slice(0,10) : "Unknown"; }

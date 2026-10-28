@@ -1,9 +1,10 @@
+import {zhHantProductText} from './zh-hant-products.ts';
 import type {EscapePage} from '../discovery/escape-model.ts';
 import {publishable} from '../discovery/escape-model.ts';
 import {claimValue} from '../discovery/model.ts';
 import {pilotSlugs} from './pilot.ts';
 import {zhHantText} from './zh-hant-content.ts';
-export function zh(value:string|null|undefined){return value?zhHantText[value]:undefined;}
+export function zh(value:string|null|undefined){return value?zhHantText[value]??zhHantProductText[value]:undefined;}
 export function zhValue(claim:Parameters<typeof claimValue>[0]){const v=claimValue(claim);return v==='Unknown'?'未知':v==='Yes'?'是':v==='No'?'否':zh(v);}
 // Never silently publish stale translations or remove a qualified candidate to fit a dictionary.
 export function localizedReady(page:EscapePage|null):page is EscapePage{

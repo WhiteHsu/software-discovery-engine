@@ -12,7 +12,7 @@ export default function AnalyticsV2({enabled}:{enabled:boolean}){
  useEffect(()=>{
   configureClientV2(enabled);if(!enabled||optedOut()||!globalThis.crypto?.randomUUID)return;
   const normalized=englishPath(path),def=escapeDefinitions.find(d=>normalized==='/escape/'+d.slug);
-  const product=path.match(/^\/software\/([a-z0-9-]+)$/)?.[1];
+  const product=normalized.match(/^\/software\/([a-z0-9-]+)$/)?.[1];
   if(!['/','/discover','/hidden-gems'].includes(normalized)&&!def&&!product)return;
   const key=JSON.stringify([path,anchor,constraint]);
   if(!saved.current||saved.current.key!==key){const c=makePageV2(path,def?'escape':product?'product':path==='/hidden-gems'?'hidden_gems':path==='/discover'?'search':'home');
