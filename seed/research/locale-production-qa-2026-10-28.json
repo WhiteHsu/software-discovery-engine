@@ -1,0 +1,40 @@
+{
+  "purpose": "Known owner QA sessions for reporting exclusions; no ordinary visitors are identified. Raw events remain unchanged.",
+  "evidenceDate": "2026-10-28",
+  "priorExclusionsAligned": [
+    "b4e6515b-b308-4905-869f-323da4139ab1",
+    "c59194d0-2f93-4e79-b489-e001273abc29"
+  ],
+  "sessions": [
+    {
+      "sessionId": "b14b674e-bcba-4458-b15f-b7cf0ca57341",
+      "scenario": "Direct localized Vale view and outbound",
+      "evidence": "Owner-supplied session screenshot and two SQL rows, 02:56 UTC."
+    },
+    {
+      "sessionId": "4cc150fb-9cc8-4c66-baf1-aaf81ee23b07",
+      "scenario": "Localized comparison to Vale before click fix",
+      "evidence": "Owner-supplied session screenshot and seven SQL rows, 03:18 UTC."
+    },
+    {
+      "sessionId": "78cca68c-f935-4468-889b-efac3996b62d",
+      "scenario": "Localized comparison to Vale after click fix",
+      "evidence": "Owner-supplied session screenshot and eight SQL rows, 06:01 UTC."
+    },
+    {
+      "sessionId": "f062fe13-899b-436e-bb41-8e2e89446a6b",
+      "scenario": "Localized Hidden Gems to Joplin",
+      "evidence": "Owner-supplied session screenshot and six SQL rows, 06:35\u201306:36 UTC."
+    },
+    {
+      "sessionId": "9fe51376-c388-4bb3-8300-a6881d112ff0",
+      "scenario": "Localized search to AppFlowy",
+      "evidence": "Owner-supplied session screenshot and nine SQL rows, 07:06\u201307:07 UTC."
+    }
+  ],
+  "limitations": [
+    "The agent-run final clarification test session was not captured; it is not silently added or claimed excluded.",
+    "Vercel exclusions affect future eligible browser sends only; previously stored Vercel data cannot be retroactively removed by this change.",
+    "This ledger does not identify every owner or invited-test session. Unknown traffic is not automatically organic."
+  ]
+}
