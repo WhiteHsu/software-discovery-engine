@@ -1,3 +1,4 @@
+import {historicalInputMatches} from './historical-review-input.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
@@ -15,7 +16,7 @@ export function writingInputs(){
 export function buildWritingWorkflow(input,review){
  if(hash(JSON.stringify(review))!=='e6209062e3751f581a54b8680da354e570026f61900bc2d880badf954635d7a2'||hash(JSON.stringify(input))!==review.inputSha256||review.publicationApproved!==false||review.scope!==writingScope)throw Error('Writing input/review drift');
  for(const x of review.sourcePins)if(hash(fs.readFileSync(path.join(root,x.path),'utf8').replace(/\r\n/g,'\n'))!==x.sha256)throw Error('Writing historical evidence drift');
- if(hash(fs.readFileSync(path.join(root,review.engineTransition.path),'utf8').replace(/\r\n/g,'\n'))!==review.engineTransition.newNormalizedSha256)throw Error('Writing scoped engine drift');
+ if(!historicalInputMatches(root,review.engineTransition.path,review.engineTransition.newNormalizedSha256))throw Error('Writing scoped engine drift');
  if(input.products.some(p=>p.status!=='draft')||input.escapeRoutes.some(r=>r.status!=='draft'||r.editoriallyApproved))throw Error('Only unapproved draft fixtures supported');
  const bundle=structuredClone(input),keys={};
  for(const s of review.sources){const key='writing67-'+s.id.toLowerCase().replace(/[^a-z0-9]+/g,'-')+'-2026-10-15';if(bundle.sources.some(x=>x.key===key)||Object.values(keys).includes(key))throw Error('Writing source collision');keys[s.id]=key;bundle.sources.push({key,title:s.title,url:s.url,publisher:s.publisher,sourceType:s.sourceType,retrievedAt:s.retrievedAt});}

@@ -7,7 +7,7 @@ import {writeFileSync} from 'node:fs';
 import {join} from 'node:path';
 import assert from 'node:assert/strict';
 import {pilotSlugs} from '../lib/i18n/pilot.ts';
-import {mockSupabase,products} from './locale-products-fixtures.mjs';
+import {mockSupabase,products,routes} from './locale-products-fixtures.mjs';
 const mock=createServer(mockSupabase);mock.listen(0,'127.0.0.1');await once(mock,'listening');
 const port=Number(process.env.LOCALE_TEST_PORT??3189),origin=`http://127.0.0.1:${port}`;
 let isolated;try{isolated=await prepareLocaleBuild(`http://127.0.0.1:${mock.address().port}`);}catch(e){mock.close();throw e;}
@@ -33,7 +33,7 @@ try{
  for(const chinese of [false,true]){const response=await fetch(origin+'/api/discover',{method:'POST',headers:{'content-type':'application/json',...(chinese?{'x-discovery-locale':'zh-Hant'}:{})},body:JSON.stringify({query:'Notion 離線'})});assert.equal(response.status,503);const body=await response.json();assert.match(body.error,chinese?/搜尋暫時無法使用/:/Search is temporarily unavailable/);checks++;}
  assert.match((await get('/discover')).html,/href="\/zh-hant\/discover"/);checks++;
  for(const path of ['/','/escape/offline-notion-alternatives']){const {response,html}=await get(path,{'x-toolelse-language':'zh-Hant','x-toolelse-path':'/zh-hant'});assert.equal(response.status,200);assert.match(html,/<html[^>]*lang="en"/);assert.match(html,/hrefLang="zh-Hant"|hreflang="zh-Hant"/);checks++;}
- const {html:xml,response:sitemapResponse}=await get('/sitemap.xml');assert.equal(sitemapResponse.status,200);assert.equal((xml.match(/<loc>/g)||[]).length,2*products.length+2*pilotSlugs.length+4);assert.match(xml,/hreflang="zh-Hant"/);assert.doesNotMatch(xml,/<loc>https:\/\/toolelse.com\/(?:zh-hant\/)?privacy<\/loc>/);checks++;
+ const {html:xml,response:sitemapResponse}=await get('/sitemap.xml');assert.equal(sitemapResponse.status,200);assert.equal((xml.match(/<loc>/g)||[]).length,2*products.length+2*routes.length+4);assert.match(xml,/hreflang="zh-Hant"/);assert.doesNotMatch(xml,/<loc>https:\/\/toolelse.com\/(?:zh-hant\/)?privacy<\/loc>/);checks++;
  const gems=await get('/zh-hant/hidden-gems');
  for(const [i,slug] of ['joplin','krita','pdf24-creator'].entries())assert.ok(gems.html.includes(`data-discovery-product="${slug}" data-discovery-position="${i+1}" href="/zh-hant/software/${slug}"`));
  assert.match(gems.html,/已查核的工作流程/);assert.match(gems.html,/適用範圍與限制的資料來源/);assert.doesNotMatch(gems.html,/Reviewed workflow|Trade-offs to consider/);assert.match(gems.html,/href="\/hidden-gems"/);

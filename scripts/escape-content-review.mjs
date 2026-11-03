@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {escapeDefinitions,rankCandidates} from '../lib/discovery/escape-model.ts';
+import {legacyEscapeDefinitions as escapeDefinitions,rankCandidates} from '../lib/discovery/escape-model.ts';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=name=>JSON.parse(fs.readFileSync(path.join(root,name),'utf8'));

@@ -1,0 +1,865 @@
+{
+  "reviewType": "documentary-editorial-proposal",
+  "publicationApproved": false,
+  "handsOnTested": false,
+  "products": [
+    {
+      "slug": "obsidian",
+      "name": "Obsidian",
+      "description": "Personal notes stored as Markdown files in a local desktop vault. No app account is required for the core local workflow.",
+      "websiteUrl": "https://obsidian.md/",
+      "status": "draft",
+      "attributes": [
+        {
+          "slug": "no-account-required",
+          "name": "No Account Required",
+          "value": true,
+          "description": null,
+          "verificationStatus": "verified",
+          "confidence": 0.9,
+          "lastVerifiedAt": "2026-11-02T00:00:00Z",
+          "sources": [
+            {
+              "title": "Official documentation",
+              "url": "https://obsidian.md/security",
+              "retrievedAt": "2026-11-02T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "slug": "account-free-note-workflow-scope",
+          "name": "Account-Free Personal Note Workflow Scope",
+          "value": "personal-desktop-local-note-creation-editing-retention-without-app-account",
+          "description": null,
+          "verificationStatus": "verified",
+          "confidence": 0.9,
+          "lastVerifiedAt": "2026-11-02T00:00:00Z",
+          "sources": [
+            {
+              "title": "Official documentation",
+              "url": "https://obsidian.md/security",
+              "retrievedAt": "2026-11-02T00:00:00Z"
+            },
+            {
+              "title": "Official documentation",
+              "url": "https://obsidian.md/help/data-storage",
+              "retrievedAt": "2026-11-02T00:00:00Z"
+            },
+            {
+              "title": "Official documentation",
+              "url": "https://obsidian.md/pricing",
+              "retrievedAt": "2026-11-02T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "slug": "pricing-model",
+          "name": "Pricing Model",
+          "value": "The core app is free without signup. Sync and Publish are optional paid services; check current terms.",
+          "description": null,
+          "verificationStatus": "verified",
+          "confidence": 0.9,
+          "lastVerifiedAt": "2026-11-02T00:00:00Z",
+          "sources": [
+            {
+              "title": "Official documentation",
+              "url": "https://obsidian.md/pricing",
+              "retrievedAt": "2026-11-02T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "slug": "trade-off-summary",
+          "name": "Trade-Off Summary",
+          "value": "Multi-device sync needs separate setup. Sync encryption does not establish automatic encryption of local files. Plugins and external services have separate requirements; keep your own backup.",
+          "description": null,
+          "verificationStatus": "verified",
+          "confidence": 0.9,
+          "lastVerifiedAt": "2026-11-02T00:00:00Z",
+          "sources": [
+            {
+              "title": "Official documentation",
+              "url": "https://obsidian.md/security",
+              "retrievedAt": "2026-11-02T00:00:00Z"
+            },
+            {
+              "title": "Official documentation",
+              "url": "https://obsidian.md/help/data-storage",
+              "retrievedAt": "2026-11-02T00:00:00Z"
+            },
+            {
+              "title": "Official documentation",
+              "url": "https://obsidian.md/pricing",
+              "retrievedAt": "2026-11-02T00:00:00Z"
+            }
+          ]
+        }
+      ],
+      "anchors": [],
+      "audiences": [],
+      "problems": [],
+      "routes": [
+        {
+          "slug": "account-free-note-taking-apps",
+          "name": "Account-Free Personal Note-Taking Apps",
+          "description": "Compare creating, editing and retaining personal notes locally in installed desktop apps without registering an app account. Downloads, operating-system accounts, sync, sharing and paid services have separate requirements. Official-document review, not hands-on testing or full Notion replacement."
+        }
+      ]
+    },
+    {
+      "slug": "affine",
+      "name": "AFFiNE",
+      "description": "Personal docs and whiteboards in a local desktop workspace without an app account. Self-hosting a server is not required for this local flow.",
+      "websiteUrl": "https://affine.pro/",
+      "status": "draft",
+      "attributes": [
+        {
+          "slug": "no-account-required",
+          "name": "No Account Required",
+          "value": true,
+          "description": null,
+          "verificationStatus": "verified",
+          "confidence": 0.9,
+          "lastVerifiedAt": "2026-11-02T00:00:00Z",
+          "sources": [
+            {
+              "title": "Official documentation",
+              "url": "https://affine.pro/blog/getting-started-with-affine",
+              "retrievedAt": "2026-11-02T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "slug": "account-free-note-workflow-scope",
+          "name": "Account-Free Personal Note Workflow Scope",
+          "value": "personal-desktop-local-note-creation-editing-retention-without-app-account",
+          "description": null,
+          "verificationStatus": "verified",
+          "confidence": 0.9,
+          "lastVerifiedAt": "2026-11-02T00:00:00Z",
+          "sources": [
+            {
+              "title": "Official documentation",
+              "url": "https://affine.pro/blog/getting-started-with-affine",
+              "retrievedAt": "2026-11-02T00:00:00Z"
+            },
+            {
+              "title": "Official documentation",
+              "url": "https://affine.pro/pricing",
+              "retrievedAt": "2026-11-02T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "slug": "pricing-model",
+          "name": "Pricing Model",
+          "value": "Local Doc and Edgeless editing is free. Cloud plans and AI add-ons have separate prices and terms.",
+          "description": null,
+          "verificationStatus": "verified",
+          "confidence": 0.9,
+          "lastVerifiedAt": "2026-11-02T00:00:00Z",
+          "sources": [
+            {
+              "title": "Official documentation",
+              "url": "https://affine.pro/pricing",
+              "retrievedAt": "2026-11-02T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "slug": "trade-off-summary",
+          "name": "Trade-Off Summary",
+          "value": "Local work does not automatically appear on another device. AFFiNE Cloud sync requires sign-in. Keep a separate export or backup. The official workflow guide references 0.27.4; this review did not install that version or establish mobile parity.",
+          "description": null,
+          "verificationStatus": "verified",
+          "confidence": 0.9,
+          "lastVerifiedAt": "2026-11-02T00:00:00Z",
+          "sources": [
+            {
+              "title": "Official documentation",
+              "url": "https://affine.pro/blog/getting-started-with-affine",
+              "retrievedAt": "2026-11-02T00:00:00Z"
+            },
+            {
+              "title": "Official documentation",
+              "url": "https://affine.pro/pricing",
+              "retrievedAt": "2026-11-02T00:00:00Z"
+            }
+          ]
+        }
+      ],
+      "anchors": [],
+      "audiences": [],
+      "problems": [],
+      "routes": [
+        {
+          "slug": "account-free-note-taking-apps",
+          "name": "Account-Free Personal Note-Taking Apps",
+          "description": "Compare creating, editing and retaining personal notes locally in installed desktop apps without registering an app account. Downloads, operating-system accounts, sync, sharing and paid services have separate requirements. Official-document review, not hands-on testing or full Notion replacement."
+        }
+      ]
+    },
+    {
+      "slug": "standard-notes",
+      "name": "Standard Notes",
+      "description": "Personal local note-taking without an account or an internet connection, as documented by the vendor. Free core scope here is plain-text notes.",
+      "websiteUrl": "https://standardnotes.com/",
+      "status": "draft",
+      "attributes": [
+        {
+          "slug": "no-account-required",
+          "name": "No Account Required",
+          "value": true,
+          "description": null,
+          "verificationStatus": "verified",
+          "confidence": 0.9,
+          "lastVerifiedAt": "2026-11-02T00:00:00Z",
+          "sources": [
+            {
+              "title": "Official documentation",
+              "url": "https://standardnotes.com/help/59/can-i-use-standard-notes-totally-offline",
+              "retrievedAt": "2026-11-02T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "slug": "account-free-note-workflow-scope",
+          "name": "Account-Free Personal Note Workflow Scope",
+          "value": "personal-desktop-local-note-creation-editing-retention-without-app-account",
+          "description": null,
+          "verificationStatus": "verified",
+          "confidence": 0.9,
+          "lastVerifiedAt": "2026-11-02T00:00:00Z",
+          "sources": [
+            {
+              "title": "Official documentation",
+              "url": "https://standardnotes.com/help/59/can-i-use-standard-notes-totally-offline",
+              "retrievedAt": "2026-11-02T00:00:00Z"
+            },
+            {
+              "title": "Official documentation",
+              "url": "https://standardnotes.com/plans",
+              "retrievedAt": "2026-11-02T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "slug": "pricing-model",
+          "name": "Pricing Model",
+          "value": "Standard is free and includes plain-text notes. Advanced editors and other features have subscription tiers; paid offline activation has a separate process.",
+          "description": null,
+          "verificationStatus": "verified",
+          "confidence": 0.9,
+          "lastVerifiedAt": "2026-11-02T00:00:00Z",
+          "sources": [
+            {
+              "title": "Official documentation",
+              "url": "https://standardnotes.com/plans",
+              "retrievedAt": "2026-11-02T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "slug": "trade-off-summary",
+          "name": "Trade-Off Summary",
+          "value": "Account-free notes are not synced. Set an Application Passcode to enable encryption in this mode; do not assume it is already enabled. Backups are your responsibility. Paid-feature activation and cloud services have separate conditions.",
+          "description": null,
+          "verificationStatus": "verified",
+          "confidence": 0.9,
+          "lastVerifiedAt": "2026-11-02T00:00:00Z",
+          "sources": [
+            {
+              "title": "Official documentation",
+              "url": "https://standardnotes.com/help/59/can-i-use-standard-notes-totally-offline",
+              "retrievedAt": "2026-11-02T00:00:00Z"
+            },
+            {
+              "title": "Official documentation",
+              "url": "https://standardnotes.com/plans",
+              "retrievedAt": "2026-11-02T00:00:00Z"
+            }
+          ]
+        }
+      ],
+      "anchors": [],
+      "audiences": [],
+      "problems": [],
+      "routes": [
+        {
+          "slug": "account-free-note-taking-apps",
+          "name": "Account-Free Personal Note-Taking Apps",
+          "description": "Compare creating, editing and retaining personal notes locally in installed desktop apps without registering an app account. Downloads, operating-system accounts, sync, sharing and paid services have separate requirements. Official-document review, not hands-on testing or full Notion replacement."
+        }
+      ]
+    }
+  ],
+  "page": {
+    "slug": "account-free-note-taking-apps",
+    "name": "Account-Free Personal Note-Taking Apps",
+    "description": "Compare creating, editing and retaining personal notes locally in installed desktop apps without registering an app account. Downloads, operating-system accounts, sync, sharing and paid services have separate requirements. Official-document review, not hands-on testing or full Notion replacement.",
+    "lastVerifiedAt": "2026-11-02T00:00:00Z",
+    "published": false,
+    "candidates": [
+      {
+        "product": {
+          "slug": "affine",
+          "name": "AFFiNE",
+          "description": "Personal docs and whiteboards in a local desktop workspace without an app account. Self-hosting a server is not required for this local flow.",
+          "websiteUrl": "https://affine.pro/",
+          "status": "draft",
+          "attributes": [
+            {
+              "slug": "no-account-required",
+              "name": "No Account Required",
+              "value": true,
+              "description": null,
+              "verificationStatus": "verified",
+              "confidence": 0.9,
+              "lastVerifiedAt": "2026-11-02T00:00:00Z",
+              "sources": [
+                {
+                  "title": "Official documentation",
+                  "url": "https://affine.pro/blog/getting-started-with-affine",
+                  "retrievedAt": "2026-11-02T00:00:00Z"
+                }
+              ]
+            },
+            {
+              "slug": "account-free-note-workflow-scope",
+              "name": "Account-Free Personal Note Workflow Scope",
+              "value": "personal-desktop-local-note-creation-editing-retention-without-app-account",
+              "description": null,
+              "verificationStatus": "verified",
+              "confidence": 0.9,
+              "lastVerifiedAt": "2026-11-02T00:00:00Z",
+              "sources": [
+                {
+                  "title": "Official documentation",
+                  "url": "https://affine.pro/blog/getting-started-with-affine",
+                  "retrievedAt": "2026-11-02T00:00:00Z"
+                },
+                {
+                  "title": "Official documentation",
+                  "url": "https://affine.pro/pricing",
+                  "retrievedAt": "2026-11-02T00:00:00Z"
+                }
+              ]
+            },
+            {
+              "slug": "pricing-model",
+              "name": "Pricing Model",
+              "value": "Local Doc and Edgeless editing is free. Cloud plans and AI add-ons have separate prices and terms.",
+              "description": null,
+              "verificationStatus": "verified",
+              "confidence": 0.9,
+              "lastVerifiedAt": "2026-11-02T00:00:00Z",
+              "sources": [
+                {
+                  "title": "Official documentation",
+                  "url": "https://affine.pro/pricing",
+                  "retrievedAt": "2026-11-02T00:00:00Z"
+                }
+              ]
+            },
+            {
+              "slug": "trade-off-summary",
+              "name": "Trade-Off Summary",
+              "value": "Local work does not automatically appear on another device. AFFiNE Cloud sync requires sign-in. Keep a separate export or backup. The official workflow guide references 0.27.4; this review did not install that version or establish mobile parity.",
+              "description": null,
+              "verificationStatus": "verified",
+              "confidence": 0.9,
+              "lastVerifiedAt": "2026-11-02T00:00:00Z",
+              "sources": [
+                {
+                  "title": "Official documentation",
+                  "url": "https://affine.pro/blog/getting-started-with-affine",
+                  "retrievedAt": "2026-11-02T00:00:00Z"
+                },
+                {
+                  "title": "Official documentation",
+                  "url": "https://affine.pro/pricing",
+                  "retrievedAt": "2026-11-02T00:00:00Z"
+                }
+              ]
+            }
+          ],
+          "anchors": [],
+          "audiences": [],
+          "problems": [],
+          "routes": [
+            {
+              "slug": "account-free-note-taking-apps",
+              "name": "Account-Free Personal Note-Taking Apps",
+              "description": "Compare creating, editing and retaining personal notes locally in installed desktop apps without registering an app account. Downloads, operating-system accounts, sync, sharing and paid services have separate requirements. Official-document review, not hands-on testing or full Notion replacement."
+            }
+          ]
+        },
+        "noveltyScore": 0,
+        "eligible": true,
+        "blockers": [],
+        "fit": [
+          {
+            "slug": "account-free-note-workflow-scope",
+            "name": "Account-Free Personal Note Workflow Scope",
+            "value": "personal-desktop-local-note-creation-editing-retention-without-app-account",
+            "description": null,
+            "verificationStatus": "verified",
+            "confidence": 0.9,
+            "lastVerifiedAt": "2026-11-02T00:00:00Z",
+            "sources": [
+              {
+                "title": "Official documentation",
+                "url": "https://affine.pro/blog/getting-started-with-affine",
+                "retrievedAt": "2026-11-02T00:00:00Z"
+              },
+              {
+                "title": "Official documentation",
+                "url": "https://affine.pro/pricing",
+                "retrievedAt": "2026-11-02T00:00:00Z"
+              }
+            ]
+          },
+          {
+            "slug": "no-account-required",
+            "name": "No Account Required",
+            "value": true,
+            "description": null,
+            "verificationStatus": "verified",
+            "confidence": 0.9,
+            "lastVerifiedAt": "2026-11-02T00:00:00Z",
+            "sources": [
+              {
+                "title": "Official documentation",
+                "url": "https://affine.pro/blog/getting-started-with-affine",
+                "retrievedAt": "2026-11-02T00:00:00Z"
+              }
+            ]
+          },
+          {
+            "slug": "pricing-model",
+            "name": "Pricing Model",
+            "value": "Local Doc and Edgeless editing is free. Cloud plans and AI add-ons have separate prices and terms.",
+            "description": null,
+            "verificationStatus": "verified",
+            "confidence": 0.9,
+            "lastVerifiedAt": "2026-11-02T00:00:00Z",
+            "sources": [
+              {
+                "title": "Official documentation",
+                "url": "https://affine.pro/pricing",
+                "retrievedAt": "2026-11-02T00:00:00Z"
+              }
+            ]
+          },
+          {
+            "slug": "trade-off-summary",
+            "name": "Trade-Off Summary",
+            "value": "Local work does not automatically appear on another device. AFFiNE Cloud sync requires sign-in. Keep a separate export or backup. The official workflow guide references 0.27.4; this review did not install that version or establish mobile parity.",
+            "description": null,
+            "verificationStatus": "verified",
+            "confidence": 0.9,
+            "lastVerifiedAt": "2026-11-02T00:00:00Z",
+            "sources": [
+              {
+                "title": "Official documentation",
+                "url": "https://affine.pro/blog/getting-started-with-affine",
+                "retrievedAt": "2026-11-02T00:00:00Z"
+              },
+              {
+                "title": "Official documentation",
+                "url": "https://affine.pro/pricing",
+                "retrievedAt": "2026-11-02T00:00:00Z"
+              }
+            ]
+          }
+        ],
+        "quality": 0.9,
+        "score": 0.9,
+        "reasons": [
+          "Verified fit for Account-Free Personal Note-Taking Apps.",
+          "Pricing and trade-offs have dated source evidence."
+        ]
+      },
+      {
+        "product": {
+          "slug": "obsidian",
+          "name": "Obsidian",
+          "description": "Personal notes stored as Markdown files in a local desktop vault. No app account is required for the core local workflow.",
+          "websiteUrl": "https://obsidian.md/",
+          "status": "draft",
+          "attributes": [
+            {
+              "slug": "no-account-required",
+              "name": "No Account Required",
+              "value": true,
+              "description": null,
+              "verificationStatus": "verified",
+              "confidence": 0.9,
+              "lastVerifiedAt": "2026-11-02T00:00:00Z",
+              "sources": [
+                {
+                  "title": "Official documentation",
+                  "url": "https://obsidian.md/security",
+                  "retrievedAt": "2026-11-02T00:00:00Z"
+                }
+              ]
+            },
+            {
+              "slug": "account-free-note-workflow-scope",
+              "name": "Account-Free Personal Note Workflow Scope",
+              "value": "personal-desktop-local-note-creation-editing-retention-without-app-account",
+              "description": null,
+              "verificationStatus": "verified",
+              "confidence": 0.9,
+              "lastVerifiedAt": "2026-11-02T00:00:00Z",
+              "sources": [
+                {
+                  "title": "Official documentation",
+                  "url": "https://obsidian.md/security",
+                  "retrievedAt": "2026-11-02T00:00:00Z"
+                },
+                {
+                  "title": "Official documentation",
+                  "url": "https://obsidian.md/help/data-storage",
+                  "retrievedAt": "2026-11-02T00:00:00Z"
+                },
+                {
+                  "title": "Official documentation",
+                  "url": "https://obsidian.md/pricing",
+                  "retrievedAt": "2026-11-02T00:00:00Z"
+                }
+              ]
+            },
+            {
+              "slug": "pricing-model",
+              "name": "Pricing Model",
+              "value": "The core app is free without signup. Sync and Publish are optional paid services; check current terms.",
+              "description": null,
+              "verificationStatus": "verified",
+              "confidence": 0.9,
+              "lastVerifiedAt": "2026-11-02T00:00:00Z",
+              "sources": [
+                {
+                  "title": "Official documentation",
+                  "url": "https://obsidian.md/pricing",
+                  "retrievedAt": "2026-11-02T00:00:00Z"
+                }
+              ]
+            },
+            {
+              "slug": "trade-off-summary",
+              "name": "Trade-Off Summary",
+              "value": "Multi-device sync needs separate setup. Sync encryption does not establish automatic encryption of local files. Plugins and external services have separate requirements; keep your own backup.",
+              "description": null,
+              "verificationStatus": "verified",
+              "confidence": 0.9,
+              "lastVerifiedAt": "2026-11-02T00:00:00Z",
+              "sources": [
+                {
+                  "title": "Official documentation",
+                  "url": "https://obsidian.md/security",
+                  "retrievedAt": "2026-11-02T00:00:00Z"
+                },
+                {
+                  "title": "Official documentation",
+                  "url": "https://obsidian.md/help/data-storage",
+                  "retrievedAt": "2026-11-02T00:00:00Z"
+                },
+                {
+                  "title": "Official documentation",
+                  "url": "https://obsidian.md/pricing",
+                  "retrievedAt": "2026-11-02T00:00:00Z"
+                }
+              ]
+            }
+          ],
+          "anchors": [],
+          "audiences": [],
+          "problems": [],
+          "routes": [
+            {
+              "slug": "account-free-note-taking-apps",
+              "name": "Account-Free Personal Note-Taking Apps",
+              "description": "Compare creating, editing and retaining personal notes locally in installed desktop apps without registering an app account. Downloads, operating-system accounts, sync, sharing and paid services have separate requirements. Official-document review, not hands-on testing or full Notion replacement."
+            }
+          ]
+        },
+        "noveltyScore": 0,
+        "eligible": true,
+        "blockers": [],
+        "fit": [
+          {
+            "slug": "account-free-note-workflow-scope",
+            "name": "Account-Free Personal Note Workflow Scope",
+            "value": "personal-desktop-local-note-creation-editing-retention-without-app-account",
+            "description": null,
+            "verificationStatus": "verified",
+            "confidence": 0.9,
+            "lastVerifiedAt": "2026-11-02T00:00:00Z",
+            "sources": [
+              {
+                "title": "Official documentation",
+                "url": "https://obsidian.md/security",
+                "retrievedAt": "2026-11-02T00:00:00Z"
+              },
+              {
+                "title": "Official documentation",
+                "url": "https://obsidian.md/help/data-storage",
+                "retrievedAt": "2026-11-02T00:00:00Z"
+              },
+              {
+                "title": "Official documentation",
+                "url": "https://obsidian.md/pricing",
+                "retrievedAt": "2026-11-02T00:00:00Z"
+              }
+            ]
+          },
+          {
+            "slug": "no-account-required",
+            "name": "No Account Required",
+            "value": true,
+            "description": null,
+            "verificationStatus": "verified",
+            "confidence": 0.9,
+            "lastVerifiedAt": "2026-11-02T00:00:00Z",
+            "sources": [
+              {
+                "title": "Official documentation",
+                "url": "https://obsidian.md/security",
+                "retrievedAt": "2026-11-02T00:00:00Z"
+              }
+            ]
+          },
+          {
+            "slug": "pricing-model",
+            "name": "Pricing Model",
+            "value": "The core app is free without signup. Sync and Publish are optional paid services; check current terms.",
+            "description": null,
+            "verificationStatus": "verified",
+            "confidence": 0.9,
+            "lastVerifiedAt": "2026-11-02T00:00:00Z",
+            "sources": [
+              {
+                "title": "Official documentation",
+                "url": "https://obsidian.md/pricing",
+                "retrievedAt": "2026-11-02T00:00:00Z"
+              }
+            ]
+          },
+          {
+            "slug": "trade-off-summary",
+            "name": "Trade-Off Summary",
+            "value": "Multi-device sync needs separate setup. Sync encryption does not establish automatic encryption of local files. Plugins and external services have separate requirements; keep your own backup.",
+            "description": null,
+            "verificationStatus": "verified",
+            "confidence": 0.9,
+            "lastVerifiedAt": "2026-11-02T00:00:00Z",
+            "sources": [
+              {
+                "title": "Official documentation",
+                "url": "https://obsidian.md/security",
+                "retrievedAt": "2026-11-02T00:00:00Z"
+              },
+              {
+                "title": "Official documentation",
+                "url": "https://obsidian.md/help/data-storage",
+                "retrievedAt": "2026-11-02T00:00:00Z"
+              },
+              {
+                "title": "Official documentation",
+                "url": "https://obsidian.md/pricing",
+                "retrievedAt": "2026-11-02T00:00:00Z"
+              }
+            ]
+          }
+        ],
+        "quality": 0.9,
+        "score": 0.9,
+        "reasons": [
+          "Verified fit for Account-Free Personal Note-Taking Apps.",
+          "Pricing and trade-offs have dated source evidence."
+        ]
+      },
+      {
+        "product": {
+          "slug": "standard-notes",
+          "name": "Standard Notes",
+          "description": "Personal local note-taking without an account or an internet connection, as documented by the vendor. Free core scope here is plain-text notes.",
+          "websiteUrl": "https://standardnotes.com/",
+          "status": "draft",
+          "attributes": [
+            {
+              "slug": "no-account-required",
+              "name": "No Account Required",
+              "value": true,
+              "description": null,
+              "verificationStatus": "verified",
+              "confidence": 0.9,
+              "lastVerifiedAt": "2026-11-02T00:00:00Z",
+              "sources": [
+                {
+                  "title": "Official documentation",
+                  "url": "https://standardnotes.com/help/59/can-i-use-standard-notes-totally-offline",
+                  "retrievedAt": "2026-11-02T00:00:00Z"
+                }
+              ]
+            },
+            {
+              "slug": "account-free-note-workflow-scope",
+              "name": "Account-Free Personal Note Workflow Scope",
+              "value": "personal-desktop-local-note-creation-editing-retention-without-app-account",
+              "description": null,
+              "verificationStatus": "verified",
+              "confidence": 0.9,
+              "lastVerifiedAt": "2026-11-02T00:00:00Z",
+              "sources": [
+                {
+                  "title": "Official documentation",
+                  "url": "https://standardnotes.com/help/59/can-i-use-standard-notes-totally-offline",
+                  "retrievedAt": "2026-11-02T00:00:00Z"
+                },
+                {
+                  "title": "Official documentation",
+                  "url": "https://standardnotes.com/plans",
+                  "retrievedAt": "2026-11-02T00:00:00Z"
+                }
+              ]
+            },
+            {
+              "slug": "pricing-model",
+              "name": "Pricing Model",
+              "value": "Standard is free and includes plain-text notes. Advanced editors and other features have subscription tiers; paid offline activation has a separate process.",
+              "description": null,
+              "verificationStatus": "verified",
+              "confidence": 0.9,
+              "lastVerifiedAt": "2026-11-02T00:00:00Z",
+              "sources": [
+                {
+                  "title": "Official documentation",
+                  "url": "https://standardnotes.com/plans",
+                  "retrievedAt": "2026-11-02T00:00:00Z"
+                }
+              ]
+            },
+            {
+              "slug": "trade-off-summary",
+              "name": "Trade-Off Summary",
+              "value": "Account-free notes are not synced. Set an Application Passcode to enable encryption in this mode; do not assume it is already enabled. Backups are your responsibility. Paid-feature activation and cloud services have separate conditions.",
+              "description": null,
+              "verificationStatus": "verified",
+              "confidence": 0.9,
+              "lastVerifiedAt": "2026-11-02T00:00:00Z",
+              "sources": [
+                {
+                  "title": "Official documentation",
+                  "url": "https://standardnotes.com/help/59/can-i-use-standard-notes-totally-offline",
+                  "retrievedAt": "2026-11-02T00:00:00Z"
+                },
+                {
+                  "title": "Official documentation",
+                  "url": "https://standardnotes.com/plans",
+                  "retrievedAt": "2026-11-02T00:00:00Z"
+                }
+              ]
+            }
+          ],
+          "anchors": [],
+          "audiences": [],
+          "problems": [],
+          "routes": [
+            {
+              "slug": "account-free-note-taking-apps",
+              "name": "Account-Free Personal Note-Taking Apps",
+              "description": "Compare creating, editing and retaining personal notes locally in installed desktop apps without registering an app account. Downloads, operating-system accounts, sync, sharing and paid services have separate requirements. Official-document review, not hands-on testing or full Notion replacement."
+            }
+          ]
+        },
+        "noveltyScore": 0,
+        "eligible": true,
+        "blockers": [],
+        "fit": [
+          {
+            "slug": "account-free-note-workflow-scope",
+            "name": "Account-Free Personal Note Workflow Scope",
+            "value": "personal-desktop-local-note-creation-editing-retention-without-app-account",
+            "description": null,
+            "verificationStatus": "verified",
+            "confidence": 0.9,
+            "lastVerifiedAt": "2026-11-02T00:00:00Z",
+            "sources": [
+              {
+                "title": "Official documentation",
+                "url": "https://standardnotes.com/help/59/can-i-use-standard-notes-totally-offline",
+                "retrievedAt": "2026-11-02T00:00:00Z"
+              },
+              {
+                "title": "Official documentation",
+                "url": "https://standardnotes.com/plans",
+                "retrievedAt": "2026-11-02T00:00:00Z"
+              }
+            ]
+          },
+          {
+            "slug": "no-account-required",
+            "name": "No Account Required",
+            "value": true,
+            "description": null,
+            "verificationStatus": "verified",
+            "confidence": 0.9,
+            "lastVerifiedAt": "2026-11-02T00:00:00Z",
+            "sources": [
+              {
+                "title": "Official documentation",
+                "url": "https://standardnotes.com/help/59/can-i-use-standard-notes-totally-offline",
+                "retrievedAt": "2026-11-02T00:00:00Z"
+              }
+            ]
+          },
+          {
+            "slug": "pricing-model",
+            "name": "Pricing Model",
+            "value": "Standard is free and includes plain-text notes. Advanced editors and other features have subscription tiers; paid offline activation has a separate process.",
+            "description": null,
+            "verificationStatus": "verified",
+            "confidence": 0.9,
+            "lastVerifiedAt": "2026-11-02T00:00:00Z",
+            "sources": [
+              {
+                "title": "Official documentation",
+                "url": "https://standardnotes.com/plans",
+                "retrievedAt": "2026-11-02T00:00:00Z"
+              }
+            ]
+          },
+          {
+            "slug": "trade-off-summary",
+            "name": "Trade-Off Summary",
+            "value": "Account-free notes are not synced. Set an Application Passcode to enable encryption in this mode; do not assume it is already enabled. Backups are your responsibility. Paid-feature activation and cloud services have separate conditions.",
+            "description": null,
+            "verificationStatus": "verified",
+            "confidence": 0.9,
+            "lastVerifiedAt": "2026-11-02T00:00:00Z",
+            "sources": [
+              {
+                "title": "Official documentation",
+                "url": "https://standardnotes.com/help/59/can-i-use-standard-notes-totally-offline",
+                "retrievedAt": "2026-11-02T00:00:00Z"
+              },
+              {
+                "title": "Official documentation",
+                "url": "https://standardnotes.com/plans",
+                "retrievedAt": "2026-11-02T00:00:00Z"
+              }
+            ]
+          }
+        ],
+        "quality": 0.9,
+        "score": 0.9,
+        "reasons": [
+          "Verified fit for Account-Free Personal Note-Taking Apps.",
+          "Pricing and trade-offs have dated source evidence."
+        ]
+      }
+    ]
+  }
+}

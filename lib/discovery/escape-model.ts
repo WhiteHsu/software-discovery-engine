@@ -1,6 +1,6 @@
 import { supported, safeUrl, type Claim, type ProductPage } from "./model.ts";
 
-export const escapeDefinitions = [
+export const legacyEscapeDefinitions = [
   {slug:"offline-notion-alternatives",name:"Offline Notion Alternatives",anchor:"notion",relationshipScope:"personal-offline-note-object-organization",constraints:["works-offline"]},
   {slug:"notion-alternatives-without-ai",name:"Notion Alternatives Without AI",anchor:"notion",relationshipScope:"personal-offline-note-object-organization",constraints:["ai-optional"]},
   {slug:"simple-notion-alternatives",name:"Simple Notion Alternatives",anchor:"notion",relationshipScope:"personal-basic-note-capture-edit-organization",constraints:["focused-note-taking","no-database-required","minimal-setup"]},
@@ -12,6 +12,9 @@ export const escapeDefinitions = [
   {slug:"meditation-apps-without-a-subscription",name:"Meditation Apps Without a Subscription",anchor:"calm",relationshipScope:"personal-adult-guided-meditation-selection-playback",constraints:["no-subscription"]},
   {slug:"productivity-apps-you-can-buy-once",name:"Productivity Apps You Can Buy Once",anchor:null,constraints:["one-time-purchase"],workflowScope:"personal-task-capture-project-organization-and-scheduling"},
 ] as const;
+// The initial ten definitions remain frozen for historical seed reconstructions.
+export const accountFreeDefinition = {slug:"account-free-note-taking-apps",name:"Account-Free Personal Note-Taking Apps",anchor:null,constraints:["no-account-required"],workflowScope:"personal-desktop-local-note-creation-editing-retention-without-app-account",scopeAttribute:"account-free-note-workflow-scope"} as const;
+export const escapeDefinitions = [...legacyEscapeDefinitions,accountFreeDefinition] as const;
 export type EscapeDefinition = typeof escapeDefinitions[number];
 export type Candidate = {product:ProductPage; noveltyScore?:number|null};
 export type Evaluation = Candidate & {eligible:boolean; reasons:string[]; blockers:string[]; quality:number; score:number; fit:Claim[]};
@@ -30,7 +33,7 @@ export function evaluateCandidate(def:EscapeDefinition,candidate:Candidate):Eval
     else if("relationshipScope" in def && (a.scope!==def.relationshipScope || ((def.relationshipScope==="personal-offline-note-object-organization" || def.relationshipScope==="desktop-raster-layers-painting-basic-adjustment") && (typeof a.description!=="string" || !a.description.trim()))))blockers.push(def.relationshipScope==="personal-offline-note-object-organization" ? "The alternative relationship must be reviewed for personal offline note and object organization." : def.relationshipScope==="desktop-raster-layers-painting-basic-adjustment" ? "The alternative relationship must be reviewed for desktop raster layers, painting and basic image adjustment." : "The alternative relationship must be reviewed for personal task and project organization.");
     else if("relationshipScope" in def && def.relationshipScope==="personal-basic-note-capture-edit-organization" && (typeof a.description!=="string" || !a.description.trim()))blockers.push("The alternative relationship needs a description of basic personal note capture, editing and organization.");
     else fit.push(a);}
-  if("workflowScope" in def){const c=p.attributes.find(c=>c.slug==="personal-task-workflow-scope");if(!verified(c)||c.value!==def.workflowScope)blockers.push("Dated evidence for the exact personal task capture, project organization and scheduling scope is required.");else fit.push(c);}
+  if("workflowScope" in def){const c=p.attributes.find(c=>c.slug===("scopeAttribute" in def?def.scopeAttribute:"personal-task-workflow-scope"));if(!verified(c)||c.value!==def.workflowScope)blockers.push("scopeAttribute" in def?"Dated evidence for local desktop personal notes without an app account is required.":"Dated evidence for the exact personal task capture, project organization and scheduling scope is required.");else fit.push(c);}
   for(const slug of def.constraints){const c=p.attributes.find(c=>c.slug===slug);if(!verified(c)||c.value!==true)blockers.push(`${slug}: verified positive evidence is required.`);else fit.push(c);}
   for(const slug of ["pricing-model","trade-off-summary"]){const c=p.attributes.find(c=>c.slug===slug);if(!verified(c)||typeof c.value!=="string"||!c.value.trim())blockers.push(`${slug}: meaningful sourced information is required.`);else fit.push(c);}
   const quality=fit.length && fit.every(c=>bounded(c.confidence))?Math.min(...fit.map(c=>c.confidence!)):0;

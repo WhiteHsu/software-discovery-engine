@@ -1,5 +1,5 @@
 import {translatedProductSlugs} from './product-slugs.ts';
-export const pilotSlugs=["offline-notion-alternatives", "notion-alternatives-without-ai", "simple-notion-alternatives", "todoist-alternatives-with-a-one-time-purchase", "privacy-friendly-grammarly-alternatives", "grammarly-alternatives-without-a-subscription", "photoshop-alternatives-without-a-subscription", "pdf-editors-without-a-subscription", "meditation-apps-without-a-subscription", "productivity-apps-you-can-buy-once"] as const;
+export const pilotSlugs=["account-free-note-taking-apps", "offline-notion-alternatives", "notion-alternatives-without-ai", "simple-notion-alternatives", "todoist-alternatives-with-a-one-time-purchase", "privacy-friendly-grammarly-alternatives", "grammarly-alternatives-without-a-subscription", "photoshop-alternatives-without-a-subscription", "pdf-editors-without-a-subscription", "meditation-apps-without-a-subscription", "productivity-apps-you-can-buy-once"] as const;
 export const zhHome='/zh-hant';
 export const zhHiddenGems=zhHome+'/hidden-gems';
 export function chineseRoute(path:string){return pilotSlugs.find(s=>path==='/zh-hant/escape/'+s);}

@@ -27,7 +27,8 @@ export function searchGraph(intentInput:SearchIntent,pages:readonly (EscapePage|
    if(intent.anchor){const c=candidate.fit.find(c=>c.relationshipType==='alternative'&&c.slug===intent.anchor);if(!verified(c))continue;required.unshift(fact('anchor:'+intent.anchor,c));}
    const pricing=candidate.fit.find(c=>c.slug==='pricing-model')!,tradeOff=candidate.fit.find(c=>c.slug==='trade-off-summary')!;
    const scope=candidate.fit.find(c=>c.relationshipType==='alternative');
-   const facts=[...required,fact('pricing',pricing),fact('trade-off',tradeOff)];
+   const accountScope=def.slug==='account-free-note-taking-apps'?candidate.fit.find(c=>c.slug==='account-free-note-workflow-scope'):null;
+   const facts=[...required,...(accountScope?[fact('workflow-scope',accountScope)]:[]),fact('pricing',pricing),fact('trade-off',tradeOff)];
    const quality=Math.min(...confidences);
    const score=quality+Math.min(.05,Math.max(0,candidate.score-candidate.quality));
    const entry:SearchMatch={slug:p.slug,name:p.name,description:p.description??'',score,facts,routeSlug:page.slug,scope:scope?.description??page.description??'',pricing:String(pricing.value),tradeOff:String(tradeOff.value),checkedAt:facts.map(f=>f.checkedAt).sort((a,b)=>Date.parse(a)-Date.parse(b))[0]};

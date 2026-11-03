@@ -9,7 +9,7 @@ import {parseEventV2} from '../lib/analytics/events-v2.ts';
 import {cleanVercelUrl,safeVercelContext} from '../lib/analytics/vercel-policy.ts';
 export const pages=routes.map(r=>({...r,published:true,lastVerifiedAt:r.last_verified_at,candidates:rankEscapeCandidates(escapeDefinitions.find(d=>d.slug===r.slug),membership.get(r.slug).map(slug=>({product:products.find(p=>p.slug===slug),noveltyScore:0})))}));
 test('all ten public comparisons have complete translations without changing qualification or order',()=>{
- assert.equal(pages.length,10);assert.equal(pilotSlugs.length,10);
+ assert.equal(pages.length,10);assert.equal(pilotSlugs.length,11);
  for(const p of pages){assert.ok(publishable(p),p.slug);assert.ok(localizedReady(p),p.slug);assert.ok(zh(p.name));assert.ok(zh(p.description));const before=p.candidates.map(c=>c.product.slug);assert.ok(localizedReady(p));assert.deepEqual(p.candidates.map(c=>c.product.slug),before);for(const c of p.candidates.filter(c=>c.eligible)){for(const f of c.fit){assert.ok(zh(f.name),f.name);if(f.relationshipType)assert.ok(zh(f.description),f.description);else assert.ok(zhValue(f),String(f.value));}}}
 });
 test('every released route maps reciprocally and preserves localized analytics paths',()=>{

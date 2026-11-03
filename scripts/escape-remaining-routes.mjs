@@ -5,7 +5,7 @@ import {createHash} from 'node:crypto';
 import {writingInputs,buildWritingWorkflow} from './seed/build-writing-passive-workflow.mjs';
 import {meditationInputs,buildMeditationWorkflow} from './seed/build-meditation-workflow.mjs';
 import {productivityInputs,buildProductivityWorkflow} from './seed/build-productivity-workflow.mjs';
-import {escapeDefinitions,rankCandidates} from '../lib/discovery/escape-model.ts';
+import {legacyEscapeDefinitions as escapeDefinitions,rankCandidates} from '../lib/discovery/escape-model.ts';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8').replace(/^\uFEFF/,''));
 export function auditRemainingRoutes(bundle,pages,checkpoint,shortlists){

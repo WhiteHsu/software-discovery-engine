@@ -1,6 +1,8 @@
+import {accountFreeReview} from '../discovery/account-free-review.ts';
 // Presentation translations from public comparison content captured 2026-10-27.
 // Evidence, dates, eligibility and editorial ordering remain in the shared graph.
 export const zhHantText:Record<string,string> = {
+  ...accountFreeReview.translations,
   "Personal offline notes and locally available organized content in installed native workspaces. Compare AFFiNE desktop documents and whiteboards, Anytype local objects, and AppFlowy native offline mode. Notion also supports prepared offline pages in desktop/mobile apps. Cloud sync, hosted imports, remote attachments and collaboration have separate requirements. This does not guarantee complete Notion parity or full cloud-content availability offline.": "在已安裝的原生工作空間中，比較個人離線筆記與本機可用內容的整理方式：AFFiNE 桌面文件與白板、Anytype 本機物件，以及 AppFlowy 原生離線模式。Notion 桌面與行動版也支援事先準備的離線頁面。雲端同步、託管匯入、遠端附件與協作各有使用條件；這不保證完整取代 Notion，或所有雲端內容皆能離線使用。",
   "Free local editor and Cloud Basic; paid Cloud plans, an AI add-on and a one-time Believer offer have separate terms. The editor is MIT-licensed; the EE backend has separate authorization requirements for modification, compilation or redistribution. Check current plan prices and limits.": "提供免費本機編輯器與 Cloud Basic；付費雲端方案、AI 加購及一次性 Believer 方案各有條款。編輯器採 MIT 授權；EE 後端的修改、編譯或再散布有另外的授權要求。請確認目前價格與限制。",
   "Native desktop local content is the offline comparison scope. Desktop and mobile feature coverage differs; Cloud sync and collaboration require connectivity. Notion HTML/Markdown import is supported but not all features map one-to-one; review converted content. Editor and EE backend licensing differ.": "離線比較僅涵蓋原生桌面版的本機內容。桌面與行動版功能不同；雲端同步與協作需要連線。支援 Notion HTML／Markdown 匯入，但功能並非一對一對應，匯入後須檢查內容。編輯器與 EE 後端的授權不同。",

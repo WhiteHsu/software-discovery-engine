@@ -9,7 +9,7 @@ import {cleanVercelUrl} from '../lib/analytics/vercel-policy.ts';
 import {sitemapXml} from '../lib/discovery/seo.ts';
 import {latestVerification} from '../lib/discovery/model.ts';
 test('all 30 full product display snapshots are translated without altering evidence, values or dates',()=>{
- assert.equal(products.length,30);assert.equal(translatedProductSlugs.length,30);
+ assert.equal(products.length,30);assert.equal(translatedProductSlugs.length,31);
  for(const p of products){assert.ok(localizedProductReady(p),p.slug);const original=structuredClone(p),zh=translateProduct(p);assert.deepEqual(p,original);assert.equal(zh.name,p.name);assert.equal(zh.websiteUrl,p.websiteUrl);assert.equal(latestVerification(zh),latestVerification(p));for(const field of ['attributes','anchors','audiences','problems']){assert.deepEqual(zh[field].map(c=>c.slug),p[field].map(c=>c.slug));for(const [i,c] of zh[field].entries()){const old=p[field][i];assert.deepEqual(c.sources,old.sources);assert.equal(c.verificationStatus,old.verificationStatus);assert.equal(c.lastVerifiedAt,old.lastVerifiedAt);if(typeof old.value!=='string')assert.equal(c.value,old.value);}}}
 });
 test('incomplete, stale, draft or unregistered products fail closed',()=>{
