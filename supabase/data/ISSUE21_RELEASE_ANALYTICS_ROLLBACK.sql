@@ -6,12 +6,12 @@ DO $patch$
 DECLARE current_body text; definition text; acl_before aclitem[]; owner_before oid;
 BEGIN
  IF current_user<>'postgres' THEN RAISE EXCEPTION 'Run as postgres'; END IF;
- IF EXISTS(SELECT FROM software_discovery.products WHERE slug='standard-notes' AND status='published') OR EXISTS(SELECT FROM software_discovery.escape_routes WHERE slug='account-free-note-taking-apps' AND status='published') THEN RAISE EXCEPTION 'Issue21 hide the release before rolling back analytics'; END IF;
+IF EXISTS(SELECT FROM software_discovery.products WHERE slug='standard-notes' AND status='published') OR EXISTS(SELECT FROM software_discovery.escape_routes WHERE slug='account-free-note-taking-apps' AND status='published') THEN RAISE EXCEPTION 'Issue21 hide the release before rolling back analytics'; END IF;
  SELECT prosrc,proacl,proowner INTO current_body,acl_before,owner_before FROM pg_proc WHERE oid=to_regprocedure('software_discovery.ingest_discovery_events_v2(jsonb,text)') AND prosecdef AND proconfig=ARRAY['search_path=pg_catalog']::text[];
- IF current_body IS NULL OR md5(replace(current_body,E'','')) NOT IN ('b93b7d7cfab49a2a033b808b62b3fb26','4b15cea1d28e73081fa1cee88c76ac7d') THEN RAISE EXCEPTION 'Issue21 collector definition drift'; END IF;
+ IF current_body IS NULL OR md5(replace(current_body,E'\r','')) NOT IN ('b93b7d7cfab49a2a033b808b62b3fb26','4b15cea1d28e73081fa1cee88c76ac7d') THEN RAISE EXCEPTION 'Issue21 collector definition drift'; END IF;
  IF has_function_privilege('anon','software_discovery.ingest_discovery_events_v2(jsonb,text)','EXECUTE') OR has_function_privilege('authenticated','software_discovery.ingest_discovery_events_v2(jsonb,text)','EXECUTE') OR NOT has_function_privilege('service_role','software_discovery.ingest_discovery_events_v2(jsonb,text)','EXECUTE') THEN RAISE EXCEPTION 'Issue21 collector access drift'; END IF;
  IF NOT (SELECT count(*)=2 AND bool_and(relrowsecurity AND relforcerowsecurity) FROM pg_class WHERE oid IN ('software_discovery.discovery_events_v2'::regclass,'software_discovery.discovery_queries_v2'::regclass)) THEN RAISE EXCEPTION 'Issue21 private storage drift'; END IF;
- IF md5(replace(current_body,E'',''))='b93b7d7cfab49a2a033b808b62b3fb26' THEN
+ IF md5(replace(current_body,E'\r',''))='b93b7d7cfab49a2a033b808b62b3fb26' THEN
   definition='CREATE OR REPLACE FUNCTION software_discovery.ingest_discovery_events_v2(batch jsonb,rate_key text) RETURNS jsonb LANGUAGE plpgsql SECURITY DEFINER SET search_path=pg_catalog AS $body$'||$expected$
 DECLARE e jsonb; clean jsonb; prior jsonb; q text; prior_q text; k text; t timestamptz; n integer; used integer; added integer=0;
  now_at timestamptz=statement_timestamp(); minute_at timestamptz=date_trunc('minute',statement_timestamp());
@@ -66,6 +66,6 @@ BEGIN
 END $expected$||'$body$;';
   EXECUTE definition;
  END IF;
- IF NOT EXISTS(SELECT FROM pg_proc WHERE oid=to_regprocedure('software_discovery.ingest_discovery_events_v2(jsonb,text)') AND md5(replace(prosrc,E'',''))='4b15cea1d28e73081fa1cee88c76ac7d' AND proacl IS NOT DISTINCT FROM acl_before AND proowner=owner_before AND prosecdef AND proconfig=ARRAY['search_path=pg_catalog']::text[]) THEN RAISE EXCEPTION 'Issue21 collector postcondition mismatch'; END IF;
+ IF NOT EXISTS(SELECT FROM pg_proc WHERE oid=to_regprocedure('software_discovery.ingest_discovery_events_v2(jsonb,text)') AND md5(replace(prosrc,E'\r',''))='4b15cea1d28e73081fa1cee88c76ac7d' AND proacl IS NOT DISTINCT FROM acl_before AND proowner=owner_before AND prosecdef AND proconfig=ARRAY['search_path=pg_catalog']::text[]) THEN RAISE EXCEPTION 'Issue21 collector postcondition mismatch'; END IF;
 END $patch$;
 COMMIT;

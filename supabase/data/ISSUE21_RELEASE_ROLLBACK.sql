@@ -5,11 +5,11 @@ BEGIN
  PERFORM set_config('lock_timeout','5s',true);
  PERFORM pg_advisory_xact_lock(hashtext('software_discovery.issue21.account_free_draft'));
  LOCK TABLE software_discovery.products,software_discovery.attributes,software_discovery.product_attributes,software_discovery.escape_routes,software_discovery.escape_route_products,software_discovery.evidence_sources,software_discovery.claim_evidence,software_discovery.product_attribute_evidence IN SHARE ROW EXCLUSIVE MODE;
- IF NOT EXISTS(SELECT FROM pg_proc WHERE oid=to_regprocedure('software_discovery.ingest_discovery_events_v2(jsonb,text)') AND md5(replace(prosrc,E'',''))='b93b7d7cfab49a2a033b808b62b3fb26') THEN RAISE EXCEPTION 'Issue21 analytics patch must be applied first'; END IF;
+ IF NOT EXISTS(SELECT FROM pg_proc WHERE oid=to_regprocedure('software_discovery.ingest_discovery_events_v2(jsonb,text)') AND md5(replace(prosrc,E'\r',''))='b93b7d7cfab49a2a033b808b62b3fb26') THEN RAISE EXCEPTION 'Issue21 analytics patch must be applied first'; END IF;
  SELECT status INTO sn_status FROM software_discovery.products WHERE id=(data->>'snId')::uuid;
  SELECT status,editorially_approved INTO route_status,approved FROM software_discovery.escape_routes WHERE id=(data->>'routeId')::uuid;
  IF NOT ((sn_status='draft' AND route_status='draft' AND NOT approved) OR (sn_status='published' AND route_status='published' AND approved)) THEN RAISE EXCEPTION 'Issue21 inconsistent publication state'; END IF;
- IF sn_status<>'published' THEN RAISE EXCEPTION 'Issue21 rollback requires intact published state'; END IF;
+IF sn_status<>'published' THEN RAISE EXCEPTION 'Issue21 rollback requires intact published state'; END IF;
  FOR expected IN SELECT value FROM jsonb_array_elements(data->'guardProducts') LOOP
   SELECT to_jsonb(p)-'created_at'-'updated_at' INTO actual FROM software_discovery.products p WHERE p.id=(expected->>'id')::uuid;
   IF actual IS DISTINCT FROM expected THEN RAISE EXCEPTION 'Issue21 original product metadata drift'; END IF;
@@ -49,8 +49,8 @@ BEGIN
   IF t='evidence_sources' AND EXISTS(SELECT 1 FROM software_discovery.claim_evidence WHERE evidence_source_id=(expected->>'id')::uuid) THEN RAISE EXCEPTION 'Issue21 source gained references'; END IF;
   EXECUTE format('DELETE FROM software_discovery.%I target USING jsonb_populate_record(NULL::software_discovery.%I,$1) source WHERE %s',t,t,keys_sql) USING expected;
  END LOOP;
- UPDATE software_discovery.products SET status='draft' WHERE id=(data->>'snId')::uuid;
+UPDATE software_discovery.products SET status='draft' WHERE id=(data->>'snId')::uuid;
  UPDATE software_discovery.escape_routes SET status='draft',editorially_approved=false WHERE id=(data->>'routeId')::uuid;
- RAISE NOTICE 'Issue21 rollback complete';
+RAISE NOTICE 'Issue21 rollback complete';
 
 END $release$;

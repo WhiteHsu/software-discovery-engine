@@ -4,7 +4,7 @@ import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {buildAccountFreeImport} from './build-account-free-import.mjs';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
-const read=p=>fs.readFileSync(path.join(root,p),'utf8').replace(/^\uFEFF/,'');
+const read=p=>fs.readFileSync(path.join(root,p),'utf8').replace(/^\uFEFF/,'').replace(/\r\n/g,'\n');
 const json=p=>JSON.parse(read(p));
 const hash=x=>createHash('md5').update(x.replace(/\r/g,'')).digest('hex');
 const uuid=key=>{const s=createHash('sha256').update('issue21-publication-v1:'+key).digest('hex');return `${s.slice(0,8)}-${s.slice(8,12)}-5${s.slice(13,16)}-a${s.slice(17,20)}-${s.slice(20,32)}`;};
@@ -38,16 +38,16 @@ DO $patch$
 DECLARE current_body text; definition text; acl_before aclitem[]; owner_before oid;
 BEGIN
  IF current_user<>'postgres' THEN RAISE EXCEPTION 'Run as postgres'; END IF;
- ${rollback?"IF EXISTS(SELECT FROM software_discovery.products WHERE slug='standard-notes' AND status='published') OR EXISTS(SELECT FROM software_discovery.escape_routes WHERE slug='account-free-note-taking-apps' AND status='published') THEN RAISE EXCEPTION 'Issue21 hide the release before rolling back analytics'; END IF;":''}
+${rollback?"IF EXISTS(SELECT FROM software_discovery.products WHERE slug='standard-notes' AND status='published') OR EXISTS(SELECT FROM software_discovery.escape_routes WHERE slug='account-free-note-taking-apps' AND status='published') THEN RAISE EXCEPTION 'Issue21 hide the release before rolling back analytics'; END IF;":''}
  SELECT prosrc,proacl,proowner INTO current_body,acl_before,owner_before FROM pg_proc WHERE oid=to_regprocedure('software_discovery.ingest_discovery_events_v2(jsonb,text)') AND prosecdef AND proconfig=ARRAY['search_path=pg_catalog']::text[];
- IF current_body IS NULL OR md5(replace(current_body,E'\r','')) NOT IN ('${hash(before)}','${hash(after)}') THEN RAISE EXCEPTION 'Issue21 collector definition drift'; END IF;
+ IF current_body IS NULL OR md5(replace(current_body,E'\\r','')) NOT IN ('${hash(before)}','${hash(after)}') THEN RAISE EXCEPTION 'Issue21 collector definition drift'; END IF;
  IF has_function_privilege('anon','software_discovery.ingest_discovery_events_v2(jsonb,text)','EXECUTE') OR has_function_privilege('authenticated','software_discovery.ingest_discovery_events_v2(jsonb,text)','EXECUTE') OR NOT has_function_privilege('service_role','software_discovery.ingest_discovery_events_v2(jsonb,text)','EXECUTE') THEN RAISE EXCEPTION 'Issue21 collector access drift'; END IF;
  IF NOT (SELECT count(*)=2 AND bool_and(relrowsecurity AND relforcerowsecurity) FROM pg_class WHERE oid IN ('software_discovery.discovery_events_v2'::regclass,'software_discovery.discovery_queries_v2'::regclass)) THEN RAISE EXCEPTION 'Issue21 private storage drift'; END IF;
- IF md5(replace(current_body,E'\r',''))='${hash(before)}' THEN
+ IF md5(replace(current_body,E'\\r',''))='${hash(before)}' THEN
   definition='CREATE OR REPLACE FUNCTION software_discovery.ingest_discovery_events_v2(batch jsonb,rate_key text) RETURNS jsonb LANGUAGE plpgsql SECURITY DEFINER SET search_path=pg_catalog AS $body$'||$expected$${after}$expected$||'$body$;';
   EXECUTE definition;
  END IF;
- IF NOT EXISTS(SELECT FROM pg_proc WHERE oid=to_regprocedure('software_discovery.ingest_discovery_events_v2(jsonb,text)') AND md5(replace(prosrc,E'\r',''))='${hash(after)}' AND proacl IS NOT DISTINCT FROM acl_before AND proowner=owner_before AND prosecdef AND proconfig=ARRAY['search_path=pg_catalog']::text[]) THEN RAISE EXCEPTION 'Issue21 collector postcondition mismatch'; END IF;
+ IF NOT EXISTS(SELECT FROM pg_proc WHERE oid=to_regprocedure('software_discovery.ingest_discovery_events_v2(jsonb,text)') AND md5(replace(prosrc,E'\\r',''))='${hash(after)}' AND proacl IS NOT DISTINCT FROM acl_before AND proowner=owner_before AND prosecdef AND proconfig=ARRAY['search_path=pg_catalog']::text[]) THEN RAISE EXCEPTION 'Issue21 collector postcondition mismatch'; END IF;
 END $patch$;
 COMMIT;
 `;
@@ -60,11 +60,11 @@ BEGIN
  PERFORM set_config('lock_timeout','5s',true);
  PERFORM pg_advisory_xact_lock(hashtext('software_discovery.issue21.account_free_draft'));
  LOCK TABLE software_discovery.products,software_discovery.attributes,software_discovery.product_attributes,software_discovery.escape_routes,software_discovery.escape_route_products,software_discovery.evidence_sources,software_discovery.claim_evidence,software_discovery.product_attribute_evidence IN SHARE ROW EXCLUSIVE MODE;
- IF NOT EXISTS(SELECT FROM pg_proc WHERE oid=to_regprocedure('software_discovery.ingest_discovery_events_v2(jsonb,text)') AND md5(replace(prosrc,E'\r',''))='${collectorHash}') THEN RAISE EXCEPTION 'Issue21 analytics patch must be applied first'; END IF;
+ IF NOT EXISTS(SELECT FROM pg_proc WHERE oid=to_regprocedure('software_discovery.ingest_discovery_events_v2(jsonb,text)') AND md5(replace(prosrc,E'\\r',''))='${collectorHash}') THEN RAISE EXCEPTION 'Issue21 analytics patch must be applied first'; END IF;
  SELECT status INTO sn_status FROM software_discovery.products WHERE id=(data->>'snId')::uuid;
  SELECT status,editorially_approved INTO route_status,approved FROM software_discovery.escape_routes WHERE id=(data->>'routeId')::uuid;
  IF NOT ((sn_status='draft' AND route_status='draft' AND NOT approved) OR (sn_status='published' AND route_status='published' AND approved)) THEN RAISE EXCEPTION 'Issue21 inconsistent publication state'; END IF;
- ${mode==='rollback'?"IF sn_status<>'published' THEN RAISE EXCEPTION 'Issue21 rollback requires intact published state'; END IF;":''}
+${mode==='rollback'?"IF sn_status<>'published' THEN RAISE EXCEPTION 'Issue21 rollback requires intact published state'; END IF;":''}
  FOR expected IN SELECT value FROM jsonb_array_elements(data->'guardProducts') LOOP
   SELECT to_jsonb(p)-'created_at'-'updated_at' INTO actual FROM software_discovery.products p WHERE p.id=(expected->>'id')::uuid;
   IF actual IS DISTINCT FROM expected THEN RAISE EXCEPTION 'Issue21 original product metadata drift'; END IF;
@@ -104,13 +104,13 @@ BEGIN
   IF t='evidence_sources' AND EXISTS(SELECT 1 FROM software_discovery.claim_evidence WHERE evidence_source_id=(expected->>'id')::uuid) THEN RAISE EXCEPTION 'Issue21 source gained references'; END IF;
   EXECUTE format('DELETE FROM software_discovery.%I target USING jsonb_populate_record(NULL::software_discovery.%I,$1) source WHERE %s',t,t,keys_sql) USING expected;`:`IF NOT found THEN EXECUTE format('INSERT INTO software_discovery.%I (%s) SELECT %s FROM jsonb_populate_record(NULL::software_discovery.%I,$1)',t,cols,cols,t) USING expected; END IF;`}
  END LOOP;
- ${mode==='rollback'?`UPDATE software_discovery.products SET status='draft' WHERE id=(data->>'snId')::uuid;
+${mode==='rollback'?`UPDATE software_discovery.products SET status='draft' WHERE id=(data->>'snId')::uuid;
  UPDATE software_discovery.escape_routes SET status='draft',editorially_approved=false WHERE id=(data->>'routeId')::uuid;`:`IF sn_status='draft' THEN
   UPDATE software_discovery.products SET status='published' WHERE id=(data->>'snId')::uuid;
   UPDATE software_discovery.escape_routes SET status='published',editorially_approved=true WHERE id=(data->>'routeId')::uuid;
  END IF;
  IF (${qualified(data)})<>3 THEN RAISE EXCEPTION 'Issue21 needs three source-backed qualified published products'; END IF;`}
- ${mode==='rehearse'?"RAISE EXCEPTION USING ERRCODE='P2122',MESSAGE='Issue21 release rehearsal complete';":"RAISE NOTICE 'Issue21 "+mode+" complete';"}
+${mode==='rehearse'?"RAISE EXCEPTION USING ERRCODE='P2122',MESSAGE='Issue21 release rehearsal complete';":"RAISE NOTICE 'Issue21 "+mode+" complete';"}
 ${mode==='rehearse'?"EXCEPTION WHEN SQLSTATE 'P2122' THEN RAISE NOTICE 'Issue21 release rehearsal rolled back; publication unchanged.';":''}
 END $release$;
 `;
@@ -124,7 +124,7 @@ UNION ALL SELECT 'three_qualified_candidates',(${qualified(data)})=3
 UNION ALL SELECT 'original_products_preserved',${data.guardProducts.map(p=>matches('products',p)).join(' AND ')}
 UNION ALL SELECT 'original_claims_preserved',${data.guardAttributes.map(p=>matches('product_attributes',p)).join(' AND ')}
 UNION ALL SELECT 'standard_notes_public',software_discovery.product_discovery_page('standard-notes')->>'status'='published'
-UNION ALL SELECT 'collector_definition_ready',EXISTS(SELECT FROM pg_proc WHERE oid=to_regprocedure('software_discovery.ingest_discovery_events_v2(jsonb,text)') AND md5(replace(prosrc,E'\r',''))='${hash}' AND prosecdef AND proconfig=ARRAY['search_path=pg_catalog']::text[])
+UNION ALL SELECT 'collector_definition_ready',EXISTS(SELECT FROM pg_proc WHERE oid=to_regprocedure('software_discovery.ingest_discovery_events_v2(jsonb,text)') AND md5(replace(prosrc,E'\\r',''))='${hash}' AND prosecdef AND proconfig=ARRAY['search_path=pg_catalog']::text[])
 UNION ALL SELECT 'collector_remains_service_only',NOT has_function_privilege('anon','software_discovery.ingest_discovery_events_v2(jsonb,text)','EXECUTE') AND NOT has_function_privilege('authenticated','software_discovery.ingest_discovery_events_v2(jsonb,text)','EXECUTE') AND has_function_privilege('service_role','software_discovery.ingest_discovery_events_v2(jsonb,text)','EXECUTE')
 UNION ALL SELECT 'analytics_rls_still_forced',(SELECT count(*)=2 AND bool_and(relrowsecurity AND relforcerowsecurity) FROM pg_class WHERE oid IN ('software_discovery.discovery_events_v2'::regclass,'software_discovery.discovery_queries_v2'::regclass));
 `;

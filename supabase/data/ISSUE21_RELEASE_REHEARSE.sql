@@ -5,11 +5,11 @@ BEGIN
  PERFORM set_config('lock_timeout','5s',true);
  PERFORM pg_advisory_xact_lock(hashtext('software_discovery.issue21.account_free_draft'));
  LOCK TABLE software_discovery.products,software_discovery.attributes,software_discovery.product_attributes,software_discovery.escape_routes,software_discovery.escape_route_products,software_discovery.evidence_sources,software_discovery.claim_evidence,software_discovery.product_attribute_evidence IN SHARE ROW EXCLUSIVE MODE;
- IF NOT EXISTS(SELECT FROM pg_proc WHERE oid=to_regprocedure('software_discovery.ingest_discovery_events_v2(jsonb,text)') AND md5(replace(prosrc,E'',''))='b93b7d7cfab49a2a033b808b62b3fb26') THEN RAISE EXCEPTION 'Issue21 analytics patch must be applied first'; END IF;
+ IF NOT EXISTS(SELECT FROM pg_proc WHERE oid=to_regprocedure('software_discovery.ingest_discovery_events_v2(jsonb,text)') AND md5(replace(prosrc,E'\r',''))='b93b7d7cfab49a2a033b808b62b3fb26') THEN RAISE EXCEPTION 'Issue21 analytics patch must be applied first'; END IF;
  SELECT status INTO sn_status FROM software_discovery.products WHERE id=(data->>'snId')::uuid;
  SELECT status,editorially_approved INTO route_status,approved FROM software_discovery.escape_routes WHERE id=(data->>'routeId')::uuid;
  IF NOT ((sn_status='draft' AND route_status='draft' AND NOT approved) OR (sn_status='published' AND route_status='published' AND approved)) THEN RAISE EXCEPTION 'Issue21 inconsistent publication state'; END IF;
- 
+
  FOR expected IN SELECT value FROM jsonb_array_elements(data->'guardProducts') LOOP
   SELECT to_jsonb(p)-'created_at'-'updated_at' INTO actual FROM software_discovery.products p WHERE p.id=(expected->>'id')::uuid;
   IF actual IS DISTINCT FROM expected THEN RAISE EXCEPTION 'Issue21 original product metadata drift'; END IF;
@@ -46,11 +46,11 @@ BEGIN
   IF found AND NOT same OR sn_status='published' AND NOT found THEN RAISE EXCEPTION 'Issue21 scope/provenance drift in %',t; END IF;
   IF NOT found THEN EXECUTE format('INSERT INTO software_discovery.%I (%s) SELECT %s FROM jsonb_populate_record(NULL::software_discovery.%I,$1)',t,cols,cols,t) USING expected; END IF;
  END LOOP;
- IF sn_status='draft' THEN
+IF sn_status='draft' THEN
   UPDATE software_discovery.products SET status='published' WHERE id=(data->>'snId')::uuid;
   UPDATE software_discovery.escape_routes SET status='published',editorially_approved=true WHERE id=(data->>'routeId')::uuid;
  END IF;
  IF (SELECT count(*) FROM software_discovery.products p JOIN software_discovery.escape_route_products m ON m.product_id=p.id WHERE m.escape_route_id='c0e7b137-a279-56b0-ac1d-8b2ffdb42c8a' AND p.status='published' AND NOT EXISTS(SELECT FROM (VALUES ('no-account-required'),('account-free-note-workflow-scope'),('pricing-model'),('trade-off-summary')) required(slug) WHERE NOT EXISTS(SELECT FROM software_discovery.product_attributes c JOIN software_discovery.attributes a ON a.id=c.attribute_id WHERE c.product_id=p.id AND a.slug=required.slug AND c.verification_status='verified' AND c.confidence BETWEEN .8 AND 1 AND c.last_verified_at IS NOT NULL AND (CASE a.slug WHEN 'no-account-required' THEN c.value_boolean IS TRUE WHEN 'account-free-note-workflow-scope' THEN c.value_text='personal-desktop-local-note-creation-editing-retention-without-app-account' ELSE length(trim(c.value_text))>0 END) AND EXISTS(SELECT FROM software_discovery.product_attribute_evidence l JOIN software_discovery.claim_evidence e ON e.id=l.claim_evidence_id JOIN software_discovery.evidence_sources s ON s.id=e.evidence_source_id WHERE l.product_id=c.product_id AND l.attribute_id=c.attribute_id AND s.url ~ '^https?://[^/?#@:]+(:[0-9]+)?([/?#]|$)'))))<>3 THEN RAISE EXCEPTION 'Issue21 needs three source-backed qualified published products'; END IF;
- RAISE EXCEPTION USING ERRCODE='P2122',MESSAGE='Issue21 release rehearsal complete';
+RAISE EXCEPTION USING ERRCODE='P2122',MESSAGE='Issue21 release rehearsal complete';
 EXCEPTION WHEN SQLSTATE 'P2122' THEN RAISE NOTICE 'Issue21 release rehearsal rolled back; publication unchanged.';
 END $release$;
