@@ -13,6 +13,7 @@ export function searchGraph(intentInput:SearchIntent,pages:readonly (EscapePage|
  for(const page of pages){
   if(!page?.published)continue;
   const def=escapeDefinitions.find(d=>d.slug===page.slug);if(!def||intent.anchor&&def.anchor!==intent.anchor)continue;
+  if(intent.workflow==='personal-notes'&&def.anchor!=='notion'&&def.slug!=='account-free-note-taking-apps')continue;
   const ranked=rankEscapeCandidates(def,page.candidates);if(!publishable({...page,candidates:ranked}))continue;
   for(const candidate of ranked){
    const p=candidate.product;if(!candidate.eligible||p.status!=='published'||!p.name.trim())continue;

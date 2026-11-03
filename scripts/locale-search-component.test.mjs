@@ -34,3 +34,10 @@ test('Chinese idle, loading, error, clarification, unsupported and no-results me
  assert.match(render(),/你想找什麼/);assert.match(render(null,{busy:true}),/正在核對/);assert.match(render(null,{error:'搜尋暫時無法使用'}),/role="alert"/);
  for(const [state,pattern] of [['clarify',/我們沒有移除你的其他要求/],['unsupported',/目前無法表示或查核的需求/],['no_results',/未放寬任何條件/]])assert.match(render({...english,state,matches:[]}),pattern);
 });
+
+test('workflow context is displayed separately from feature requirements in both languages',()=>{
+ const result={...english,intent:{...intent,workflow:'personal-notes'}};
+ assert.match(render(localizeSearchResult(result)),/解析出的需求： 個人筆記/);
+ assert.match(render(result,{chinese:false}),/Interpreted needs:\s+personal notes/);
+ assert.deepEqual(result.intent.attributes,intent.attributes);
+});
