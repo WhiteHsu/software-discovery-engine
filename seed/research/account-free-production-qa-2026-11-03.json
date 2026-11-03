@@ -1,0 +1,37 @@
+{
+  "issue": 21,
+  "date": "2026-11-03",
+  "evidence": "Owner-supplied session IDs and read-only event exports in chat. QA only; no ordinary visitor matching by timestamp or product.",
+  "sessions": [
+    {
+      "sessionId": "1fffb7ec-fd46-4143-9c6e-f3ec84edfe48",
+      "purpose": "pre-fix search page",
+      "searchId": "14193f48-cfc7-4e80-8d49-0c97700c983d"
+    },
+    {
+      "sessionId": "693c1b1c-119c-4ba9-82bb-bf2dff1d8050",
+      "purpose": "pre-fix new-tab product and outbound; origin absent"
+    },
+    {
+      "sessionId": "681f2666-df08-4c66-8ab3-719d4df7ba69",
+      "purpose": "post-fix acceptance including failed attempt and successful search-to-outbound",
+      "successfulSearchId": "2dd44001-8be5-4f72-9b2f-2a1f3632aa04",
+      "originPageViewId": "d79d4dc2-2bc3-40fc-aa9c-97c663252dab",
+      "productPageViewId": "248ddaee-aae5-461c-ad5a-8a804eada81a",
+      "product": "affine",
+      "originSurface": "search"
+    }
+  ],
+  "acceptance": {
+    "zhSearchThreeResults": true,
+    "productAndOutboundCarryExactSearchOrigin": true,
+    "productHasDistinctPageView": true,
+    "allBrowserGestureVariantsIndependentlyVerified": false,
+    "intermittentSearchFailureResolved": false
+  },
+  "limitations": [
+    "Other assistant-created browser test sessions have not been identified and are not claimed to be excluded.",
+    "Raw events are preserved; query reports filter accepted QA.",
+    "Historical Vercel statistics cannot be retroactively removed by this patch."
+  ]
+}

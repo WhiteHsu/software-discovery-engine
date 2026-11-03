@@ -21,8 +21,8 @@ try{
  const o=(await db.query(outbound)).rows.find(r=>r.origin==='hidden_gems');assert.equal(o.product_views,1);assert.equal(o.outbound_product_views,1);assert.equal(Number(o.outbound_ctr),1);
  const inventory=read('supabase/verification/LOCALE_04_METRICS.sql').replace('NULL::timestamptz AS start_at, NULL::timestamptz AS end_at',"statement_timestamp()-interval '1 day' AS start_at, statement_timestamp()+interval '1 day' AS end_at");
  assert.equal((await db.query(inventory)).rows.reduce((n,r)=>n+Number(r.events),0),4);
- assert.equal((await db.query('SELECT count(*) n FROM software_discovery.discovery_events_v2')).rows[0].n,56);
+ assert.equal((await db.query('SELECT count(*) n FROM software_discovery.discovery_events_v2')).rows[0].n,(knownQaSessionIds.length+1)*4);
  await db.query("DELETE FROM software_discovery.discovery_events_v2 WHERE payload->>'sessionId'=$1",[ordinary]);
  assert.equal((await db.query(placement)).rows.find(r=>r.surface==='hidden_gems').ctr,null);assert.equal((await db.query(outbound)).rows.find(r=>r.origin==='hidden_gems').outbound_ctr,null);
- console.log('PASS: actual SQL reports exclude 13 QA sessions, retain ordinary activity and raw QA, preserve NULL denominators.');
+ console.log('PASS: actual SQL reports exclude all accepted QA sessions, retain ordinary activity and raw QA, preserve NULL denominators.');
 }finally{await db.close();}

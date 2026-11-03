@@ -1,6 +1,7 @@
 // Accepted QA identifiers only. These do not identify ordinary visitors.
 // Evidence: accepted analytics QA receipts in seed/research/, including unexposed-click-acceptance.
 // Locale QA provenance: seed/research/locale-production-qa-2026-10-28.json
+// Account-free QA provenance: seed/research/account-free-production-qa-2026-11-03.json
 export const knownQaSessionIds:readonly string[]=Object.freeze([
  'e20a7cc5-b115-46bc-bd7a-1e25f645bf20',
  'dd469548-acd9-4fa9-8cec-124353f237f1',
@@ -15,6 +16,9 @@ export const knownQaSessionIds:readonly string[]=Object.freeze([
  '78cca68c-f935-4468-889b-efac3996b62d',
  'f062fe13-899b-436e-bb41-8e2e89446a6b',
  '9fe51376-c388-4bb3-8300-a6881d112ff0',
+ '1fffb7ec-fd46-4143-9c6e-f3ec84edfe48',
+ '693c1b1c-119c-4ba9-82bb-bf2dff1d8050',
+ '681f2666-df08-4c66-8ab3-719d4df7ba69',
 ]);
 export const knownQaEventIds:readonly string[]=Object.freeze([
  '97f18f34-5fc4-4f44-9912-11edde1d1da7',
