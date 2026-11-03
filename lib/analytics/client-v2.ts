@@ -1,4 +1,5 @@
 'use client';
+import {storeOriginHandoff,readOriginHandoff} from './origin-handoff.ts';
 import {exposureGate} from './exposure.ts';
 import {chineseProduct,englishPath} from '../i18n/pilot.ts';
 import {redactSearchQuery,type EventV2, type SurfaceV2} from './events-v2.ts';
@@ -10,6 +11,12 @@ export function optedOut(){return navigator.doNotTrack==='1'||(window as Window&
 export function configureClientV2(value:boolean){enabled=value;if(!value)pending=[];}
 export function setCurrentPageV2(c:PageContextV2){current=c;}
 export function makePageV2(path:string,surface:SurfaceV2):PageContextV2{
+ // A tracked navigation joins the originating anonymous analytics session, as a
+ // same-tab navigation does. No session matching or receipt validation is relaxed.
+ if(enabled&&!optedOut())try{
+  const value=readOriginHandoff(localStorage,location.hash,path);
+  if(value){sessionStorage.setItem('sd-session-v1',value.sessionId);sessionStorage.setItem('sd-origin-v2',JSON.stringify(value));history.replaceState(history.state,'',location.pathname+location.search);}
+ }catch{}
  let sessionId:string;
  try{const old=sessionStorage.getItem('sd-session-v1');sessionId=old&&/^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/i.test(old)?old.toLowerCase():crypto.randomUUID();sessionStorage.setItem('sd-session-v1',sessionId);}catch{sessionId=fallback??=crypto.randomUUID();}
  let referrerHost:string|undefined;try{const u=new URL(document.referrer);if(['http:','https:'].includes(u.protocol))referrerHost=u.hostname.toLowerCase();}catch{}
@@ -48,6 +55,16 @@ export function observePlacementsV2(root:HTMLElement,c:PageContextV2,products:{s
  const links=[...root.querySelectorAll<HTMLAnchorElement>(selector)].filter(a=>positions.get(a.dataset.searchProduct??a.dataset.discoveryProduct??'')===Number(a.dataset.discoveryPosition)&&(c.surface!=='hidden_gems'||a.hasAttribute('data-discovery-exposure')));
  const ids=new Map(links.map((a,i)=>[a,String(i)]));
  const observer=typeof IntersectionObserver!=='undefined'?new IntersectionObserver(changes=>{for(const change of changes){const a=change.target as HTMLAnchorElement;gate.visibility(a.dataset.searchProduct??a.dataset.discoveryProduct!,ids.get(a)!,change.isIntersecting?change.intersectionRatio:0);}},{threshold:[0,.5,1]}):undefined;
+ // Decorate before interaction, so context-menu and modifier/new-tab opens work.
+ // No product_clicked is emitted here: rendering a link is not a click.
+ const decorated:{link:HTMLAnchorElement;original:string;tracked:string}[]=[];
+ if(enabled&&!optedOut()&&c.surface==='search'&&receipt&&search)for(const a of links){
+  const slug=a.dataset.searchProduct!;
+  if(a.origin!==location.origin||a.hash||(a.pathname!=='/software/'+slug&&chineseProduct(a.pathname)!==slug))continue;
+  try{const key=storeOriginHandoff(localStorage,{sessionId:c.sessionId,productSlug:slug,expiresAt:Date.now()+1800000,receipt,fields:{originSurface:'search',originPageViewId:c.pageViewId,originSearchId:search.searchId,originExposureId:exposures.get(slug)!,originPosition:positions.get(slug)!}});
+   if(key){const original=a.getAttribute('href')!,tracked=original+'#sd-origin='+key;a.setAttribute('href',tracked);decorated.push({link:a,original,tracked});}
+  }catch{}
+ }
  links.forEach(a=>observer?.observe(a));
  const visibility=()=>gate.active(document.visibilityState==='visible');
  const click=(e:MouseEvent)=>{
@@ -60,5 +77,5 @@ export function observePlacementsV2(root:HTMLElement,c:PageContextV2,products:{s
  };
  root.addEventListener('click',click);root.addEventListener('auxclick',click);document.addEventListener('visibilitychange',visibility);visibility();
  const hide=()=>gate.active(false);window.addEventListener('pagehide',hide);window.addEventListener('pageshow',visibility);
- return ()=>{gate.dispose();observer?.disconnect();root.removeEventListener('click',click);root.removeEventListener('auxclick',click);document.removeEventListener('visibilitychange',visibility);window.removeEventListener('pagehide',hide);window.removeEventListener('pageshow',visibility);};
+ return ()=>{for(const {link,original,tracked} of decorated)if(link.getAttribute('href')===tracked)link.setAttribute('href',original);gate.dispose();observer?.disconnect();root.removeEventListener('click',click);root.removeEventListener('auxclick',click);document.removeEventListener('visibilitychange',visibility);window.removeEventListener('pagehide',hide);window.removeEventListener('pageshow',visibility);};
 }
