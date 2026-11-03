@@ -1,11 +1,11 @@
 import {escapeDefinitions,publishable,type EscapePage} from './escape-model.ts';
 import {rankEscapeCandidates} from './privacy-route.ts';
-import {safeUrl,type Claim} from './model.ts';
+import {safeUrl,claimValue,type Claim} from './model.ts';
 import {parseSearchIntent,type SearchIntent} from './search-intent.ts';
 export type SearchFact={id:string;label:string;value:string;checkedAt:string;sources:{title:string;url:string}[]};
 export type SearchMatch={slug:string;name:string;description:string;score:number;facts:SearchFact[];routeSlug:string;scope:string;pricing:string;tradeOff:string;checkedAt:string};
 const verified=(c:Claim|undefined):c is Claim=>!!c&&c.verificationStatus==='verified'&&typeof c.confidence==='number'&&c.confidence>=.8&&c.confidence<=1&&!!c.lastVerifiedAt&&Number.isFinite(Date.parse(c.lastVerifiedAt))&&c.sources.some(s=>safeUrl(s.url));
-const fact=(id:string,c:Claim):SearchFact=>({id,label:c.name,value:typeof c.value==='boolean'?(c.value?'Yes':'No'):typeof c.value==='string'?c.value:c.description??'Verified relationship',checkedAt:c.lastVerifiedAt!,sources:c.sources.flatMap(s=>{const url=safeUrl(s.url);return url?[{title:s.title,url}]:[];})});
+const fact=(id:string,c:Claim):SearchFact=>({id,label:c.name,value:c.slug==='account-free-note-workflow-scope'?claimValue(c):typeof c.value==='boolean'?(c.value?'Yes':'No'):typeof c.value==='string'?c.value:c.description??'Verified relationship',checkedAt:c.lastVerifiedAt!,sources:c.sources.flatMap(s=>{const url=safeUrl(s.url);return url?[{title:s.title,url}]:[];})});
 export function searchGraph(intentInput:SearchIntent,pages:readonly (EscapePage|null)[]):SearchMatch[]{
  const intent=parseSearchIntent(intentInput);if(intent.status!=='ready')return [];
  if(pages.length>escapeDefinitions.length)throw Error('Search graph exceeds bound');

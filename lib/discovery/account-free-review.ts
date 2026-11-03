@@ -31,3 +31,5 @@ Object.assign(accountFreeReview.translations,{
 });
 
 Object.assign(accountFreeReview.translations,{"Documented local creation, editing and retention of personal notes in an installed desktop app without an app account. Sync, paid activation and external services are separate.":"已安裝桌面程式中的個人本機筆記建立、編輯與保留，不需應用程式帳號。同步、付費功能啟用與外部服務另有條件。"});
+
+Object.assign(accountFreeReview.translations,{"Local desktop personal note creation, editing and retention without an app account.":"不需應用程式帳號的個人桌面本機筆記建立、編輯與保留。"});

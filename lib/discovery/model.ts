@@ -9,6 +9,7 @@ export function supported(c: Claim) {
 }
 export function claimValue(c: Claim) {
   if (!supported(c) || c.value === null || c.value === undefined) return "Unknown";
+  if(c.slug==="account-free-note-workflow-scope"&&c.value==="personal-desktop-local-note-creation-editing-retention-without-app-account")return "Local desktop personal note creation, editing and retention without an app account.";
   return c.value === true ? "Yes" : c.value === false ? "No" : String(c.value);
 }
 export function latestVerification(p: ProductPage) {
