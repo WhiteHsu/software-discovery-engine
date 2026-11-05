@@ -1,0 +1,25 @@
+# 筆記搬家時，哪些內容帶得走？
+
+選筆記工具前，先確認匯出的文字能否在別的工具編輯，再檢查附件、筆記連結和資料夾能否一起搬走。以下是 2026 年 11 月 4 日的 Windows 桌面版小樣本測試。
+
+| 工具 | 文字與格式 | 附件、連結與結構 |
+|---|---|---|
+| Obsidian 1.15.0 | 直接開啟原始 Markdown 資料夾，可讀取中英文字、清單和表格。 | 在 Obsidian 內可開啟樣本的兩個筆記連結與文字檔。搬到其他工具的結果仍待驗證。 |
+| Joplin 3.7.22 | 匯出的 Markdown 可用 Obsidian 1.15.0 開啟。樣本有一個標題緊接在附件連結後，補上空白行後正常顯示。 | 在 Joplin 內直接加入的 `.txt` 隨匯出另存為資源檔，匯出連結指向該檔。原先跟著資料夾匯入的文字檔則成了另一篇筆記。 |
+| Standard Notes 3.202.11 | 未登入即可下載本次備份 ZIP。兩篇 `.txt` 的內容與測試輸入逐位元組相同。 | 保留了連結語法，但樣本 ZIP 未帶出這些連結指向的檔案及資料夾。應用程式原生附件仍待驗證。 |
+| AFFiNE 0.27.4 | 未登入時逐篇匯出 Markdown，保留標題、勾選狀態和表格。 | 本次輸出只有兩個 `.md`，沒有帶出在 AFFiNE 加入的 `.txt` 附件。相對連結仍指向原測試路徑。原生頁面連結與批次匯出仍待驗證。 |
+
+實際搬家前，先挑兩篇互相連結的筆記和一個附件，用目標工具開啟匯出資料，確認雙向連結、附件與格式。保留原始備份，直到目標端驗收完成。
+
+# What can you take with you when you switch note apps?
+
+Before choosing a note app, check whether you can edit the exported text elsewhere and whether files, links, and folders move with it. This comparison uses a small Windows desktop sample tested on November 4, 2026.
+
+| App | Text and formatting | Attachments, links, and folders |
+|---|---|---|
+| Obsidian 1.15.0 | Opened the original Markdown folder with bilingual text, checklists, and a table. | Both sample note links and the text file opened within Obsidian. Transfer to another app remains unverified. |
+| Joplin 3.7.22 | The Markdown export opened in Obsidian 1.15.0. One heading rendered correctly after adding a blank line after an attachment link. | A `.txt` attached in Joplin exported as a separate resource, and the exported link pointed to it. A text file imported with the source folder became a separate note. |
+| Standard Notes 3.202.11 | The backup ZIP downloaded while signed out. Both exported `.txt` notes matched the test inputs byte for byte. | Link syntax survived, but the referenced files and folders were absent from the sample ZIP. Native attachments remain untested. |
+| AFFiNE 0.27.4 | Individual Markdown exports while signed out preserved headings, task states, and the table. | The sample output contained two `.md` files and omitted the `.txt` attached in AFFiNE. Relative links still pointed to the original fixture paths. Native page links and batch export remain untested. |
+
+Before moving your notes, export two linked notes and an attachment. Open them in the destination app and check links in both directions, attachments, and formatting. Keep your original backup until the destination checks pass.

@@ -1,0 +1,339 @@
+{
+  "publicationApproved": false,
+  "ops": [
+    {
+      "table": "attributes",
+      "keys": [
+        "slug"
+      ],
+      "row": {
+        "id": "b15aed3f-d21a-545a-84f2-9d5fe00ef64e",
+        "slug": "personal-note-portability-scope",
+        "name": "Personal Note Portability Scope",
+        "description": "Editable text portability in a versioned Windows desktop sample. Attachments, links and folder structure are reported separately.",
+        "category": "workflow",
+        "value_type": "text"
+      }
+    },
+    {
+      "table": "escape_routes",
+      "keys": [
+        "slug"
+      ],
+      "row": {
+        "id": "945a59f0-d3ef-527f-9bb7-27802c0193af",
+        "slug": "portable-personal-notes",
+        "name": "Portable Personal Notes",
+        "description": "Compare editable text, attachments, links and folders using a small Windows desktop sample.",
+        "anchor_id": null,
+        "status": "draft",
+        "editorially_approved": false,
+        "last_verified_at": "2026-11-04T00:00:00Z"
+      }
+    },
+    {
+      "table": "evidence_sources",
+      "keys": [
+        "seed_key"
+      ],
+      "row": {
+        "id": "8afa33d1-b872-508f-9052-e3a1857ccb38",
+        "seed_key": "issue22-portability-source:obsidian",
+        "source_type": "documentation",
+        "title": "Obsidian documentation for note portability",
+        "url": "https://help.obsidian.md/Files+and+folders/How+Obsidian+stores+data",
+        "publisher": "Obsidian",
+        "retrieved_at": "2026-11-03T00:00:00Z"
+      }
+    },
+    {
+      "table": "claim_evidence",
+      "keys": [
+        "seed_key"
+      ],
+      "row": {
+        "id": "93fa70e1-08ce-5c4f-916e-86c444c480b0",
+        "seed_key": "issue22-portability-claim:obsidian",
+        "evidence_source_id": "8afa33d1-b872-508f-9052-e3a1857ccb38",
+        "excerpt": null,
+        "notes": "Vendor documentation is background. Test observations are from the owner Windows sample dated 2026-11-04."
+      }
+    },
+    {
+      "table": "product_attributes",
+      "keys": [
+        "product_id",
+        "attribute_id"
+      ],
+      "row": {
+        "product_id": "46d1c057-ff54-4843-a96e-fb1748f0ac49",
+        "attribute_id": "b15aed3f-d21a-545a-84f2-9d5fe00ef64e",
+        "value_text": "Windows desktop 1.15.0. Opened the original Markdown sample as a vault. Both sample note links and the text file opened within Obsidian. Transfer to another app remains unverified.",
+        "value_boolean": null,
+        "value_number": null,
+        "value_enum": null,
+        "confidence": 0.9,
+        "verification_status": "verified",
+        "last_verified_at": "2026-11-04T00:00:00Z"
+      }
+    },
+    {
+      "table": "product_attribute_evidence",
+      "keys": [
+        "product_id",
+        "attribute_id",
+        "claim_evidence_id"
+      ],
+      "row": {
+        "product_id": "46d1c057-ff54-4843-a96e-fb1748f0ac49",
+        "attribute_id": "b15aed3f-d21a-545a-84f2-9d5fe00ef64e",
+        "claim_evidence_id": "93fa70e1-08ce-5c4f-916e-86c444c480b0"
+      }
+    },
+    {
+      "table": "escape_route_products",
+      "keys": [
+        "escape_route_id",
+        "product_id"
+      ],
+      "row": {
+        "escape_route_id": "945a59f0-d3ef-527f-9bb7-27802c0193af",
+        "product_id": "46d1c057-ff54-4843-a96e-fb1748f0ac49",
+        "position": 1,
+        "relevance_score": null,
+        "constraint_fit_score": null,
+        "quality_score": null,
+        "novelty_score": 0,
+        "editorial_note": "Research membership only. Position is for draft display."
+      }
+    },
+    {
+      "table": "evidence_sources",
+      "keys": [
+        "seed_key"
+      ],
+      "row": {
+        "id": "b1e36ecf-144a-535b-9abc-c4f331273435",
+        "seed_key": "issue22-portability-source:joplin",
+        "source_type": "documentation",
+        "title": "Joplin documentation for note portability",
+        "url": "https://joplinapp.org/help/apps/import_export/",
+        "publisher": "Joplin",
+        "retrieved_at": "2026-11-03T00:00:00Z"
+      }
+    },
+    {
+      "table": "claim_evidence",
+      "keys": [
+        "seed_key"
+      ],
+      "row": {
+        "id": "acf99802-df2b-5a42-a8c5-9e4622f28bac",
+        "seed_key": "issue22-portability-claim:joplin",
+        "evidence_source_id": "b1e36ecf-144a-535b-9abc-c4f331273435",
+        "excerpt": null,
+        "notes": "Vendor documentation is background. Test observations are from the owner Windows sample dated 2026-11-04."
+      }
+    },
+    {
+      "table": "product_attributes",
+      "keys": [
+        "product_id",
+        "attribute_id"
+      ],
+      "row": {
+        "product_id": "6bd166ee-888f-44cb-9633-b7d1038edaa0",
+        "attribute_id": "b15aed3f-d21a-545a-84f2-9d5fe00ef64e",
+        "value_text": "Windows desktop 3.7.22. Markdown export opened in Obsidian 1.15.0. A native text attachment exported separately. One heading needed a blank line.",
+        "value_boolean": null,
+        "value_number": null,
+        "value_enum": null,
+        "confidence": 0.9,
+        "verification_status": "verified",
+        "last_verified_at": "2026-11-04T00:00:00Z"
+      }
+    },
+    {
+      "table": "product_attribute_evidence",
+      "keys": [
+        "product_id",
+        "attribute_id",
+        "claim_evidence_id"
+      ],
+      "row": {
+        "product_id": "6bd166ee-888f-44cb-9633-b7d1038edaa0",
+        "attribute_id": "b15aed3f-d21a-545a-84f2-9d5fe00ef64e",
+        "claim_evidence_id": "acf99802-df2b-5a42-a8c5-9e4622f28bac"
+      }
+    },
+    {
+      "table": "escape_route_products",
+      "keys": [
+        "escape_route_id",
+        "product_id"
+      ],
+      "row": {
+        "escape_route_id": "945a59f0-d3ef-527f-9bb7-27802c0193af",
+        "product_id": "6bd166ee-888f-44cb-9633-b7d1038edaa0",
+        "position": 2,
+        "relevance_score": null,
+        "constraint_fit_score": null,
+        "quality_score": null,
+        "novelty_score": 0,
+        "editorial_note": "Research membership only. Position is for draft display."
+      }
+    },
+    {
+      "table": "evidence_sources",
+      "keys": [
+        "seed_key"
+      ],
+      "row": {
+        "id": "dd896dfe-570f-574a-a719-57dea18cecf8",
+        "seed_key": "issue22-portability-source:standard-notes",
+        "source_type": "documentation",
+        "title": "Standard Notes documentation for note portability",
+        "url": "https://standardnotes.com/help/14/how-do-i-create-and-import-backups-of-my-standard-notes-data",
+        "publisher": "Standard Notes",
+        "retrieved_at": "2026-11-03T00:00:00Z"
+      }
+    },
+    {
+      "table": "claim_evidence",
+      "keys": [
+        "seed_key"
+      ],
+      "row": {
+        "id": "92ebc271-1ec7-52f2-92a2-10b2d8010423",
+        "seed_key": "issue22-portability-claim:standard-notes",
+        "evidence_source_id": "dd896dfe-570f-574a-a719-57dea18cecf8",
+        "excerpt": null,
+        "notes": "Vendor documentation is background. Test observations are from the owner Windows sample dated 2026-11-04."
+      }
+    },
+    {
+      "table": "product_attributes",
+      "keys": [
+        "product_id",
+        "attribute_id"
+      ],
+      "row": {
+        "product_id": "a36b8ca8-628d-5fb9-a149-d5d8d38c69cb",
+        "attribute_id": "b15aed3f-d21a-545a-84f2-9d5fe00ef64e",
+        "value_text": "Windows desktop 3.202.11. Signed-out backup ZIP contained two matching editable text files. Referenced files and folders were absent. Native attachments remain untested.",
+        "value_boolean": null,
+        "value_number": null,
+        "value_enum": null,
+        "confidence": 0.9,
+        "verification_status": "verified",
+        "last_verified_at": "2026-11-04T00:00:00Z"
+      }
+    },
+    {
+      "table": "product_attribute_evidence",
+      "keys": [
+        "product_id",
+        "attribute_id",
+        "claim_evidence_id"
+      ],
+      "row": {
+        "product_id": "a36b8ca8-628d-5fb9-a149-d5d8d38c69cb",
+        "attribute_id": "b15aed3f-d21a-545a-84f2-9d5fe00ef64e",
+        "claim_evidence_id": "92ebc271-1ec7-52f2-92a2-10b2d8010423"
+      }
+    },
+    {
+      "table": "escape_route_products",
+      "keys": [
+        "escape_route_id",
+        "product_id"
+      ],
+      "row": {
+        "escape_route_id": "945a59f0-d3ef-527f-9bb7-27802c0193af",
+        "product_id": "a36b8ca8-628d-5fb9-a149-d5d8d38c69cb",
+        "position": 3,
+        "relevance_score": null,
+        "constraint_fit_score": null,
+        "quality_score": null,
+        "novelty_score": 0,
+        "editorial_note": "Research membership only. Position is for draft display."
+      }
+    },
+    {
+      "table": "evidence_sources",
+      "keys": [
+        "seed_key"
+      ],
+      "row": {
+        "id": "836501c4-1979-5a5a-9294-3bb8fa0b7a06",
+        "seed_key": "issue22-portability-source:affine",
+        "source_type": "documentation",
+        "title": "AFFiNE documentation for note portability",
+        "url": "https://affine.pro/blog/getting-started-with-affine",
+        "publisher": "AFFiNE",
+        "retrieved_at": "2026-11-03T00:00:00Z"
+      }
+    },
+    {
+      "table": "claim_evidence",
+      "keys": [
+        "seed_key"
+      ],
+      "row": {
+        "id": "b8952bc7-4ceb-5c39-b12c-84ed6b16b0d7",
+        "seed_key": "issue22-portability-claim:affine",
+        "evidence_source_id": "836501c4-1979-5a5a-9294-3bb8fa0b7a06",
+        "excerpt": null,
+        "notes": "Vendor documentation is background. Test observations are from the owner Windows sample dated 2026-11-04."
+      }
+    },
+    {
+      "table": "product_attributes",
+      "keys": [
+        "product_id",
+        "attribute_id"
+      ],
+      "row": {
+        "product_id": "188f3374-5440-47ba-81ad-ed0a5a74f9b5",
+        "attribute_id": "b15aed3f-d21a-545a-84f2-9d5fe00ef64e",
+        "value_text": "Windows desktop 0.27.4. Signed-out per-page Markdown retained headings, task states and a table. Native text attachment was absent and relative links kept fixture paths. Batch export and native page links remain untested.",
+        "value_boolean": null,
+        "value_number": null,
+        "value_enum": null,
+        "confidence": 0.9,
+        "verification_status": "verified",
+        "last_verified_at": "2026-11-04T00:00:00Z"
+      }
+    },
+    {
+      "table": "product_attribute_evidence",
+      "keys": [
+        "product_id",
+        "attribute_id",
+        "claim_evidence_id"
+      ],
+      "row": {
+        "product_id": "188f3374-5440-47ba-81ad-ed0a5a74f9b5",
+        "attribute_id": "b15aed3f-d21a-545a-84f2-9d5fe00ef64e",
+        "claim_evidence_id": "b8952bc7-4ceb-5c39-b12c-84ed6b16b0d7"
+      }
+    },
+    {
+      "table": "escape_route_products",
+      "keys": [
+        "escape_route_id",
+        "product_id"
+      ],
+      "row": {
+        "escape_route_id": "945a59f0-d3ef-527f-9bb7-27802c0193af",
+        "product_id": "188f3374-5440-47ba-81ad-ed0a5a74f9b5",
+        "position": 4,
+        "relevance_score": null,
+        "constraint_fit_score": null,
+        "quality_score": null,
+        "novelty_score": 0,
+        "editorial_note": "Research membership only. Position is for draft display."
+      }
+    }
+  ]
+}

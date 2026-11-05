@@ -1,0 +1,190 @@
+{
+  "version": 1,
+  "checkedAt": "2026-11-03",
+  "status": "research-only",
+  "publicationApproved": false,
+  "handsOnTested": true,
+  "proposedSlug": "portable-personal-notes",
+  "sources": [
+    {
+      "id": "obs-storage",
+      "url": "https://help.obsidian.md/Files+and+folders/How+Obsidian+stores+data",
+      "checkedAt": "2026-11-03",
+      "supports": "Local vault is a folder containing Markdown plain-text notes; notes may be edited outside Obsidian."
+    },
+    {
+      "id": "obs-links",
+      "url": "https://obsidian.md/help/links",
+      "checkedAt": "2026-11-03",
+      "supports": "Supports Wikilinks and Markdown links; vendor recommends Markdown links for interoperability."
+    },
+    {
+      "id": "obs-attachments",
+      "url": "https://obsidian.md/help/attachments",
+      "checkedAt": "2026-11-03",
+      "supports": "Vault attachments are ordinary filesystem files; location is configurable."
+    },
+    {
+      "id": "jop-export",
+      "url": "https://joplinapp.org/help/apps/import_export/",
+      "checkedAt": "2026-11-03",
+      "supports": "JEX preserves notes and metadata for Joplin reimport; raw export stores items individually; HTML/PDF exports can cover notes, notebooks or all notes."
+    },
+    {
+      "id": "sn-backup",
+      "url": "https://standardnotes.com/help/14/how-do-i-create-and-import-backups-of-my-standard-notes-data",
+      "checkedAt": "2026-11-03",
+      "supports": "Desktop/web decrypted backup ZIP includes a restorable backup and separate plain-text note files; encrypted backup needs decryption for restoration."
+    },
+    {
+      "id": "affine-export",
+      "url": "https://affine.pro/blog/getting-started-with-affine",
+      "checkedAt": "2026-11-03",
+      "sourceUpdatedAt": "2026-10-08",
+      "sourceVersionReference": "0.27.4; not installed or tested",
+      "supports": "Guide offers Markdown/HTML for text reuse, Snapshot where offered for AFFiNE reimport; text export does not promise spatial-canvas fidelity."
+    },
+    {
+      "id": "sn-files",
+      "url": "https://standardnotes.com/help/36/how-do-i-attach-encrypted-files-to-my-notes",
+      "checkedAt": "2026-11-04",
+      "supports": "Vendor documents encrypted note attachments via Files on the Professional plan; this does not establish export coverage."
+    }
+  ],
+  "candidates": [
+    {
+      "slug": "obsidian",
+      "decision": "research-candidate",
+      "documented": [
+        "Direct access to Markdown text and filesystem attachments",
+        "Markdown-link option for interoperability"
+      ],
+      "sourceIds": [
+        "obs-storage",
+        "obs-links",
+        "obs-attachments"
+      ],
+      "unverified": [
+        "Target app link resolution",
+        "Plugin data, queries, Canvas and Bases conversion",
+        "Complete metadata/history retention",
+        "Version-specific round-trip"
+      ]
+    },
+    {
+      "slug": "joplin",
+      "decision": "research-candidate",
+      "documented": [
+        "JEX/raw backup for Joplin restore",
+        "HTML/PDF outputs at multiple scopes"
+      ],
+      "sourceIds": [
+        "jop-export"
+      ],
+      "unverified": [
+        "Markdown export exact current behavior and attachment packaging",
+        "Cross-app internal links and notebook/tag mapping",
+        "Revision history retention",
+        "Portability into a named target app"
+      ],
+      "interpretation": "Vendor lossless description is about JEX and its stated data scope; not a cross-app zero-loss claim."
+    },
+    {
+      "slug": "standard-notes",
+      "decision": "research-candidate-text-scope",
+      "documented": [
+        "Decrypted backup with separate plain-text notes",
+        "Original-app restoration path",
+        "Files attachments are documented for Professional; plain-text backup alone does not establish attachment export."
+      ],
+      "sourceIds": [
+        "sn-backup",
+        "sn-files"
+      ],
+      "unverified": [
+        "Attachments included in note backup versus separate file backup",
+        "Rich/Super note format fidelity",
+        "Tags and note links in a target application",
+        "Account-free versus signed-in export parity"
+      ],
+      "interpretation": "Do not extrapolate a plain-text export to all editor types or paid-file portability."
+    },
+    {
+      "slug": "affine",
+      "decision": "research-candidate-needs-scope-review",
+      "documented": [
+        "Text-oriented Markdown/HTML export",
+        "Snapshot reimport where available",
+        "Canvas fidelity is not promised by text export"
+      ],
+      "sourceIds": [
+        "affine-export"
+      ],
+      "unverified": [
+        "Bulk workspace export versus per-document controls",
+        "Attachment packaging",
+        "Cross-document links and database structure",
+        "Current platform/edition/version parity"
+      ]
+    }
+  ],
+  "rules": [
+    "Unknown is not unsupported.",
+    "Backup/restore and cross-app migration are separate findings.",
+    "No all-products ranking until exact comparable scope and evidence gates are satisfied.",
+    "Do not inherit no-account qualification; it is a separate user constraint.",
+    "No production data/code changes in this packet."
+  ],
+  "issue": 22,
+  "sampleTest": {
+    "date": "2026-11-04",
+    "os": "Windows",
+    "obsidian": "1.15.0",
+    "joplin": "3.7.22",
+    "source": "Owner-reported results and version screenshots",
+    "markdownImportAndReopen": "passed for sample",
+    "independentAttachmentPreservation": "separate file present in second archive",
+    "archiveInspection": {
+      "file": "Test.zip",
+      "resources": "empty",
+      "textFileOutput": "attachment.md",
+      "textEqualAfterNewlineNormalization": true,
+      "reciprocalLinkTargetsExist": true
+    },
+    "nativeAttachmentExport": {
+      "file": "Export.zip",
+      "resource": "Export/_resources/attachment.txt",
+      "linkTargetExists": true,
+      "sha256": "8f36ad0109b452956aee5f6b3e1e65a61d2477ff17b43350eb870eecbee439a8",
+      "textMatchesFixture": true,
+      "preAttachmentByteIdentity": "unverified",
+      "obsidianClick": "opening action not visible",
+      "externalEditorRead": "confirmed by screenshot",
+      "headingRender": "original inline; blank-line comparison copy renders heading"
+    }
+  },
+  "standardNotesSample": {
+    "date": "2026-11-04",
+    "platform": "Windows",
+    "version": "3.202.11",
+    "signedIn": false,
+    "plainTextFiles": 2,
+    "byteIdenticalToJoplinTestInputs": true,
+    "linkSyntaxPreserved": true,
+    "referencedFilesIncluded": false,
+    "nativeAttachmentTested": false
+  },
+  "affineSample": {
+    "date": "2026-11-04",
+    "platform": "Windows",
+    "version": "0.27.4",
+    "signedIn": false,
+    "exportScope": "individual pages observed",
+    "files": 2,
+    "nativeTextAttachmentInOutput": false,
+    "copiedRelativeLinksResolveWithinOutput": false,
+    "nativePageLinksTested": false,
+    "batchExportTested": false,
+    "editorVersion": "0.27.4"
+  }
+}
