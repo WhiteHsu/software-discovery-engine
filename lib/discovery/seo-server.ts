@@ -1,3 +1,4 @@
+import { withSitemapReads } from './sitemap-reads';
 import { portabilityPath, publishedPortability } from './portability-publication';
 import {getChineseEscape,getChineseProduct,getChineseHiddenGems} from '@/lib/i18n/server';
 import {pilotSlugs,zhHome} from '@/lib/i18n/pilot';
@@ -13,7 +14,8 @@ import {getHiddenGems} from './hidden-gems-server';
 import {indexableGemCollection} from './hidden-gems';
 
 export async function requestSeo(){return seoContext(process.env,(await headers()).get('host'));}
-export async function liveSitemapPaths(){
+export function liveSitemapPaths(){return withSitemapReads(loadSitemapPaths);}
+async function loadSitemapPaths(){
  const client=await createClient();
  const [paths,gems,portability]=await Promise.all([publishedSitemapPaths({
   identities:async()=>{

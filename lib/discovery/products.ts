@@ -1,3 +1,4 @@
+import { sitemapRead } from "./sitemap-reads";
 import "server-only";
 import { cache } from "react";
 import fs from "node:fs/promises";
@@ -15,7 +16,7 @@ export const getProduct = cache(async (slug: string): Promise<ProductPage | null
     return pages.find(p => p.slug === slug) ?? null;
   }
   const client = await createClient();
-  const {data, error} = await client.rpc("product_discovery_page", {product_slug: slug});
+  const {data, error} = await sitemapRead("product",slug,async()=>await client.rpc("product_discovery_page", {product_slug: slug}));
   if (error) throw new Error("Product data is temporarily unavailable.");
   const page = data as ProductPage | null;
   if(page?.status !== "published")return null;
