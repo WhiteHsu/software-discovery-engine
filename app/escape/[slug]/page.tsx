@@ -1,3 +1,4 @@
+import { portabilityPath, portabilityRelatedSlugs, publishedPortability } from '@/lib/discovery/portability-publication';
 import {getChineseEscape} from "@/lib/i18n/server";
 import {languageAlternates} from "@/lib/i18n/pilot";
 import DiscoveryBreadcrumb from "@/components/DiscoveryBreadcrumb";
@@ -41,5 +42,6 @@ export default async function Escape({params}:Props){
       {c.fit.map(f=><div key={f.slug}><strong>{f.name}</strong>{f.relationshipType&&f.description&&<p>{f.description}</p>}<p>{f.slug==="privacy-friendly"?(reviewedPrivacyOperation(c.product)?"Verified only for the reviewed local operation":"Not verified for a reviewed local operation."):f.value===undefined?f.relationshipType:claimValue(f)} · Checked <time dateTime={isoDate(f.lastVerifiedAt)??undefined}>{date(f.lastVerifiedAt)}</time></p>{f.sources.map((s,i)=>safeUrl(s.url)?<a key={i} href={safeUrl(s.url)!} target="_blank" rel="noopener noreferrer">{s.title} ↗ </a>:null)}</div>)}
     </section>)}{!p.candidates.length&&<p>No curated candidates are available. Missing evidence is not treated as a passing constraint.</p>}</section>
     <footer>Source checks describe individual claims, not hands-on testing or complete replacement guarantees.</footer>
-  </article>;
+  {portabilityRelatedSlugs.has(slug) && await publishedPortability().catch(() => false) && <p><Link href={portabilityPath}>What can you take with you when you switch note apps?</Link></p>}
+</article>;
 }
