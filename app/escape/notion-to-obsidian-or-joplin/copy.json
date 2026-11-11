@@ -1,0 +1,84 @@
+{
+  "en": {
+    "title": "Notion to Obsidian or Joplin: What carries over?",
+    "description": "See what happened to note links, subpages, checklists, images, and TXT attachments when we moved a Notion sample to Obsidian and Joplin.",
+    "intro": "In our three-page Notion test, both Obsidian and Joplin kept the notes editable and their internal links working. The TXT attachment behaved differently. Obsidian’s Notion ZIP importer kept the file byte for byte, while Joplin’s Markdown directory importer opened its contents as a note. The table below shows how each route handled subpages, checklists, and images.",
+    "headers": [
+      "What we checked",
+      "Obsidian · Notion → File import",
+      "Joplin · Markdown directory import"
+    ],
+    "rows": [
+      [
+        "Editable text",
+        "A copied imported note retained a text edit after reopening. The edit was also present on disk.",
+        "A copied imported note retained a text edit after switching away and back."
+      ],
+      [
+        "Checklist and table",
+        "Both rendered, including the checked and unchecked items.",
+        "Both rendered, including the checked and unchecked items."
+      ],
+      [
+        "Image and TXT",
+        "The image rendered inline. The TXT opened in Notepad++ from the note. Both files matched their source ZIP entries byte for byte.",
+        "The image rendered and its JEX resource matched the source PNG byte for byte. The TXT link opened a readable note. The JEX contained no separate TXT resource."
+      ],
+      [
+        "Internal links",
+        "On the November 11 rerun, the parent opened A and B, and A and B opened each other.",
+        "The parent opened A and B, and A and B opened each other."
+      ],
+      [
+        "Page hierarchy",
+        "A and B were grouped in the folder corresponding to the parent. The parent note sat alongside that folder.",
+        "The source export was already flat because subpage folders were disabled. The parent and children appeared as peer notes in one notebook, with links connecting them."
+      ]
+    ],
+    "details": [
+      "The test used a synthetic parent page, two linked child pages, a checklist, a table, a PNG, and a TXT on Windows. On November 10–11, 2026, we tested Obsidian 1.15.0 with Importer 3.1.16 and Joplin 3.7.22 with sync disabled. For the Obsidian rerun, we exported HTML with subpages and subpage folders, inspected the ZIP, and imported it into a fresh vault with Notion → File import. For Joplin, we inspected the Markdown & CSV export, extracted the ZIP, and used MD–Markdown (Directory). Neither reported link result required manual repair. The edit tests used copies.",
+      "The first Notion ZIP run used an older HTML export that already lacked B’s return link to A. The November 11 export contained that link, and it worked after import. The reason it was absent from the earlier export remains unknown. In a separate test using Obsidian’s generic HTML importer, the parent links opened empty notes and the TXT link produced an empty note. The generic Markdown importer passed the link checks but converted the TXT to a Markdown note. These observations apply to the tested sample. Databases, complex workspaces, and lossless migration are outside scope."
+    ]
+  },
+  "zh-Hant": {
+    "title": "Notion 搬到 Obsidian 或 Joplin：連結、附件與子頁實測",
+    "description": "實測 Notion 筆記搬到 Obsidian 或 Joplin 後，內部連結能否跳轉、子頁如何排列，以及圖片、勾選清單和 TXT 附件是否保留。",
+    "intro": "這次用三頁 Notion 筆記實測。搬到 Obsidian 或 Joplin 後，兩邊的筆記都能編輯，內部連結也能跳轉。差異在 TXT 附件：Obsidian 的 Notion ZIP 匯入保留了逐位元組相同的檔案，Joplin 的 Markdown 資料夾匯入則把文字存成可讀的筆記。下表也列出兩邊如何處理子頁、勾選清單與圖片。",
+    "headers": [
+      "驗證項目",
+      "Obsidian · Notion → File import",
+      "Joplin · Markdown 資料夾匯入"
+    ],
+    "rows": [
+      [
+        "文字可編輯",
+        "編輯匯入筆記的副本後，重新開啟仍有測試文字，磁碟上的檔案也包含這段文字。",
+        "編輯匯入筆記的副本後，切到另一篇再切回，測試文字仍在。"
+      ],
+      [
+        "勾選清單與表格",
+        "清單與表格正常顯示，已勾選與未勾選的狀態都可見。",
+        "清單與表格正常顯示，已勾選與未勾選的狀態都可見。"
+      ],
+      [
+        "圖片與 TXT",
+        "圖片顯示在內文中，TXT 可從筆記開到 Notepad++。兩個檔案都與來源 ZIP 逐位元組相同。",
+        "圖片正常顯示，JEX 裡的圖片與來源 PNG 逐位元組相同。TXT 連結開啟可讀的筆記，JEX 中未見獨立 TXT 資源。"
+      ],
+      [
+        "內部連結",
+        "11 月 11 日複測中，父頁可開啟 A／B，A 與 B 也可互相跳轉。",
+        "父頁可開啟 A／B，A 與 B 也可互相跳轉。"
+      ],
+      [
+        "頁面階層",
+        "A／B 同在父頁對應的資料夾中，父頁筆記與該資料夾並列。",
+        "匯出時關閉了子頁資料夾，所以來源已是平面結構。父頁與子頁在同一本筆記本中並列，仍可透過連結導覽。"
+      ]
+    ],
+    "details": [
+      "樣本在 Windows 上測試，包含一個父頁、兩個互連子頁、勾選清單、表格、PNG 和 TXT。2026 年 11 月 10 至 11 日使用 Obsidian 1.15.0 與 Importer 3.1.16，以及同步目標設為 None 的 Joplin 3.7.22。Obsidian 複測使用包含子頁及子頁資料夾的 HTML 匯出，先檢查 ZIP，再以 Notion → File import 匯入空白 vault。Joplin 使用檢查後解壓縮的 Markdown & CSV 匯出，以 MD–Markdown (Directory) 匯入。表中的連結結果均未經手動修復，編輯測試使用副本。",
+      "第一次 Notion ZIP 測試使用的舊 HTML 匯出包已缺少 B → A。11 月 11 日的新匯出包含有這條連結，匯入後可正常跳轉。舊包缺少連結的原因仍未確定。另一次使用 Obsidian 通用 HTML 匯入器的測試中，父頁連結開出空白筆記，TXT 連結也產生空白筆記。通用 Markdown 匯入的連結可用，TXT 則轉為 Markdown 筆記。以上結果限於這份樣本，資料庫、複雜工作區與無損搬家不在本次測試範圍。"
+    ]
+  }
+}

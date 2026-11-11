@@ -1,0 +1,14 @@
+.page { max-width: 1120px; margin: 64px auto; padding: 0 28px 80px; line-height: 1.8; }
+.page h1 { max-width: 940px; font-size: clamp(1.9rem, 3vw, 2.8rem); line-height: 1.35; margin: 24px 0; letter-spacing: -.025em; }
+.page p { max-width: 860px; margin: 24px 0; }
+.languages { display: flex; gap: 20px; font-size: .95rem; }
+.languages a { text-decoration: underline; text-underline-offset: 4px; }
+.tableWrap { overflow-x: auto; margin: 36px 0 44px; border: 1px solid #454545; border-radius: 10px; }
+.table { width: 100%; min-width: 720px; border-collapse: collapse; table-layout: fixed; font-size: .96rem; line-height: 1.75; }
+.table th, .table td { padding: 20px 24px; text-align: left; vertical-align: top; border-bottom: 1px solid #454545; overflow-wrap: anywhere; }
+.table thead th { background: #222; color: #fff; font-weight: 650; }
+.table th:first-child { width: 18%; }
+.table tbody th { font-weight: 650; }
+.table tr:last-child > * { border-bottom: 0; }
+.table tr > * + * { border-left: 1px solid #454545; }
+@media (max-width: 640px) { .page { margin: 32px auto; padding: 0 20px 48px; } .table th, .table td { padding: 16px; } }

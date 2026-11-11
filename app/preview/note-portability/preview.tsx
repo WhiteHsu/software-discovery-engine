@@ -53,6 +53,11 @@ export function PortabilityPreview({ traditionalChinese = false, localPreview = 
         </table>
       </div>
       <p>{copy.closing}</p>
+      <p>
+        <Link href={(traditionalChinese ? '/zh-hant' : '') + '/escape/notion-to-obsidian-or-joplin'}>
+          {traditionalChinese ? 'Notion 搬到 Obsidian 或 Joplin 的實測結果' : 'Notion to Obsidian or Joplin: tested migration results'}
+        </Link>
+      </p>
     </main>
   );
 }
