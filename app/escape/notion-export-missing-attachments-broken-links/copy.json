@@ -1,0 +1,72 @@
+{
+  "zh-Hant": {
+    "title": "Notion 匯出後附件不見、連結失效？搬家排查指南",
+    "description": "檢查 Notion 匯出 ZIP、子頁連結及 TXT 附件，找出匯入 Obsidian 或 Joplin 後內容缺少的原因。",
+    "intro": "先從 Notion 匯出 ZIP 找出問題發生在哪一步。以筆記 B 連回筆記 A 為例，請在 ZIP 裡確認兩篇筆記都在，而且 B 的內文真的有指向 A 的連結。只有找到 A 的檔案，還不足以確認連結已匯出。",
+    "sections": [
+      {
+        "title": "ZIP 裡找不到附件或連結",
+        "paragraphs": [
+          "從原本的 Notion 父頁確認子頁、附件和返回連結是否存在。確認匯出包含子頁，再另存一份 ZIP 比對。檢查連結時，可先解壓縮到測試資料夾，再用文字編輯器檢查來源筆記裡的連結與目標檔案。",
+          "在 #24 的三頁樣本中，第一份 HTML ZIP 的 Note B 沒有返回 A 的連結。重新匯出的 ZIP 裡出現了這條連結，匯入後也能跳轉。第一份 ZIP 為何缺少連結仍未確定。"
+        ]
+      },
+      {
+        "title": "ZIP 裡有附件，匯入後卻開不了",
+        "paragraphs": [
+          "記下實際選用的匯入方式，然後從筆記內點開附件。若開出空白筆記，先保留現況，再到匯入資料夾查找原始檔名與副檔名。重試時可用空白 vault 或獨立筆記本，以免混入上一次的結果。",
+          "在 #24，Obsidian 的通用 HTML 匯入曾讓 TXT 連結開出空白筆記。另一輪使用 Notion → File import，TXT 則能開啟，並與該輪來源 ZIP 的檔案逐位元組相同。"
+        ]
+      },
+      {
+        "title": "附件能讀，但變成筆記了",
+        "paragraphs": [
+          "若你的需求是讀取文字，確認轉成的筆記有完整內容，並能從原筆記點開。若還要保留原始附件，請確認有獨立的 TXT，並與 ZIP 中的原檔比對。#24 的 Joplin Markdown 資料夾匯入把 TXT 內容存成可讀筆記，JEX 裡未見獨立 TXT 資源。"
+        ]
+      }
+    ],
+    "checklistTitle": "匯入後依序確認",
+    "checklist": [
+      "父頁能開啟每個子頁，子頁的返回連結也可用。",
+      "筆記內的圖片能顯示，勾選狀態與來源一致。",
+      "從筆記點開附件，確認是原始檔、可讀筆記，還是空白頁。",
+      "如果需要原檔，保留匯出 ZIP，並比對匯入後的附件內容。"
+    ],
+    "comparisonLabel": "查看 Notion 搬到 Obsidian 或 Joplin 的完整實測"
+  },
+  "en": {
+    "title": "Missing Notion export attachments or broken links? A migration troubleshooting guide",
+    "description": "Check your Notion export ZIP and imported notes to troubleshoot missing attachments and broken links in Obsidian or Joplin.",
+    "intro": "Start with the Notion export ZIP to see where the problem occurred. For a link from Note B back to Note A, check that both note files exist and that B actually contains a link to A. The presence of A alone does not establish that the link was exported.",
+    "sections": [
+      {
+        "title": "The attachment or link is missing from the ZIP",
+        "paragraphs": [
+          "Open the original parent page in Notion and check its child pages, attachments, and return links. Confirm that the export includes subpages, then save a fresh ZIP and compare it with the first one. To check a link, extract the ZIP to a test folder and inspect the source note and target file in a text editor.",
+          "In #24’s three-page sample, the first HTML export of Note B lacked its return link to A. The new ZIP contained the link, and it worked after import. The cause of the earlier omission remains unknown."
+        ]
+      },
+      {
+        "title": "The attachment is in the ZIP but fails after import",
+        "paragraphs": [
+          "Record the import option you used and open the attachment from the imported note. If it opens an empty note, preserve that result and look for the original filename and extension in the import folder. Use an empty vault or a separate notebook for a rerun so you can identify what that import creates.",
+          "In #24, Obsidian’s generic HTML import produced an empty note when the TXT link was opened. In a separate run using Notion → File import, the TXT opened successfully and matched the file in that run’s source ZIP byte for byte."
+        ]
+      },
+      {
+        "title": "The attachment is readable as a note",
+        "paragraphs": [
+          "If you need the text, check that the converted note contains the full content and opens from the source note. If you need the original attachment, look for a separate TXT and compare it with the original in the ZIP. In #24, Joplin’s Markdown directory import made the text readable as a note, and the JEX contained no separate TXT resource."
+        ]
+      }
+    ],
+    "checklistTitle": "After importing, check that",
+    "checklist": [
+      "The parent opens each child page, and return links work.",
+      "Images render in the note and checklist states match the source.",
+      "Opening the attachment leads to an original file, a readable note, or an empty page. Record which you find.",
+      "If you need original files, keep the export ZIP and compare the imported attachments with it."
+    ],
+    "comparisonLabel": "See the full Notion-to-Obsidian and Joplin comparison"
+  }
+}
