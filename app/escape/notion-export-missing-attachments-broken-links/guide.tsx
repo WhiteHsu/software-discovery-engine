@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import { notionExportFormatsPath } from '@/lib/discovery/notion-export-formats-path';
 import { requestSeo } from '@/lib/discovery/seo-server';
 import { notionMigrationPath } from '@/lib/discovery/notion-migration-path';
 import { languageAlternates } from '@/lib/i18n/pilot';
@@ -43,6 +44,11 @@ export function Guide({ locale }: { locale: Locale }) {
           <ol>{guide.checklist.map(item => <li key={item}>{item}</li>)}</ol>
         </section>
         <p><Link href={(locale === 'en' ? '' : '/zh-hant') + notionMigrationPath}>{guide.comparisonLabel}</Link></p>
+        <p>
+          <Link href={(locale === 'en' ? '' : '/zh-hant') + notionExportFormatsPath}>
+            {locale === 'en' ? 'Choose a Notion export format' : '選擇 Notion 匯出格式'}
+          </Link>
+        </p>
       </article>
     </main>
   );

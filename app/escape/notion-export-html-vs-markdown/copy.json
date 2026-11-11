@@ -1,0 +1,62 @@
+{
+  "en": {
+    "title": "Notion export formats: HTML or Markdown & CSV?",
+    "description": "Choose a Notion export format for Obsidian or Joplin and check subpages, links, and attachments in the ZIP before importing.",
+    "intro": "Choose the format for your import workflow, then inspect the ZIP for child pages, links, and attachments.",
+    "choiceHeaders": ["What you want to do", "Format to choose"],
+    "choices": [
+      ["Use Obsidian Importer’s Notion → File import", "Choose HTML and keep the ZIP Notion produces."],
+      ["Use Joplin’s MD–Markdown (Directory) import", "Choose Markdown & CSV, extract the ZIP, and select the folder containing the notes and attachments."],
+      ["Keep notes you can open in a plain-text editor", "Choose Markdown & CSV and check the ZIP for .md files and the attachments you need."]
+    ],
+    "layoutTitle": "How do subpage folders change the ZIP?",
+    "sample": "We inspected three exports of the same Notion sample with a parent page, two cross-linked child pages, a PNG, and a TXT file.",
+    "layoutHeaders": ["Export format", "Include subpages", "Create folders for subpages", "ZIP layout"],
+    "layouts": [
+      ["HTML re-export", "On", "On", "The parent .html is at the root. A and B share a subfolder, and the attachments are in a folder for A."],
+      ["Markdown & CSV re-export", "On", "On", "The parent .md is at the root. A and B share a subfolder, and the attachments are in a folder for A."],
+      ["Earlier Markdown & CSV export", "On", "Off", "All three .md files, the PNG, and the TXT are at the root."]
+    ],
+    "evidence": "The PNG and TXT each had the same SHA-256 hash across all three ZIPs. Both Markdown & CSV exports contained three .md files. This sample produced no .csv files.",
+    "checklistTitle": "Before you import",
+    "checklist": [
+      "Extract the ZIP into a separate folder. Keep the original ZIP and preserve the extracted folder structure.",
+      "Locate the parent page and both child pages. Open HTML in a browser or inspect Markdown in a text editor.",
+      "Check the links from the parent to A and B and in both directions between A and B. Verify that each target exists in the extracted folder.",
+      "Open the PNG and TXT to check the image and text. After importing, open them again from the note to see how the destination app handles them."
+    ],
+    "missingLink": "The first HTML export lacked the return link from B to A. A fresh export of the sample contained both the link and its target file. If a link is missing, check the original Notion page, then export again and inspect the ZIP.",
+    "comparison": "Notion to Obsidian or Joplin migration comparison",
+    "troubleshooting": "Troubleshoot missing attachments and broken links"
+  },
+  "zh-Hant": {
+    "title": "Notion 匯出選 HTML 還是 Markdown & CSV？",
+    "description": "比較 Notion 的 HTML 與 Markdown & CSV 匯出，選擇適合 Obsidian 或 Joplin 的格式，並在匯入前檢查子頁、連結和附件。",
+    "intro": "準備把 Notion 筆記搬到 Obsidian 或 Joplin 時，可以先依照要使用的匯入方式選擇格式，再打開 ZIP 確認子頁、連結和附件。",
+    "choiceHeaders": ["你要做什麼", "先選哪種格式"],
+    "choices": [
+      ["在 Obsidian 使用 Importer 的 Notion → File import", "選 HTML，保留 Notion 產出的 ZIP。"],
+      ["在 Joplin 使用 MD–Markdown (Directory)", "選 Markdown & CSV，解壓縮後選取包含筆記和附件的資料夾。"],
+      ["保留可用純文字編輯器開啟的筆記", "選 Markdown & CSV，確認 ZIP 內有 .md 檔與所需附件。"]
+    ],
+    "layoutTitle": "子頁資料夾會怎麼影響 ZIP？",
+    "sample": "我們檢查了同一個 Notion 測試頁的三份匯出。樣本有一個父頁、兩個互相連結的子頁、一張 PNG 和一份 TXT。",
+    "layoutHeaders": ["匯出格式", "包含子頁", "建立子頁資料夾", "ZIP 內的結構"],
+    "layouts": [
+      ["HTML 複測", "開啟", "開啟", "父頁 .html 在根目錄，A 和 B 在子資料夾，附件在 A 對應的資料夾。"],
+      ["Markdown & CSV 複測", "開啟", "開啟", "父頁 .md 在根目錄，A 和 B 在子資料夾，附件在 A 對應的資料夾。"],
+      ["先前的 Markdown & CSV 匯出", "開啟", "關閉", "三篇 .md、PNG 和 TXT 都在根目錄。"]
+    ],
+    "evidence": "三份 ZIP 的 PNG 和 TXT 各自具有相同的 SHA-256。兩份 Markdown & CSV 匯出都包含三個 .md，樣本中沒有 .csv。",
+    "checklistTitle": "匯入前檢查清單",
+    "checklist": [
+      "把 ZIP 解壓到獨立資料夾，保留原始 ZIP 與解壓後的目錄結構。",
+      "找到父頁和兩個子頁。用瀏覽器開啟 HTML，或用文字編輯器查看 Markdown。",
+      "核對父頁通往 A、B 的連結，以及 A、B 互相往返的連結。確認各連結的目標檔案都存在。",
+      "開啟 PNG 和 TXT，確認圖片可讀、文字正確。匯入後再從筆記內開一次，確認目標 App 如何處理附件。"
+    ],
+    "missingLink": "第一次 HTML 匯出就缺少 B 回到 A 的連結。同一個樣本重新匯出後，該連結和目標檔案都在 ZIP 裡。若你也遇到連結缺失，可以先回原頁確認連結，再重新匯出並檢查 ZIP。",
+    "comparison": "Notion 搬到 Obsidian 或 Joplin 實測",
+    "troubleshooting": "附件遺失與連結失效排查指南"
+  }
+}

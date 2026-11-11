@@ -3,6 +3,7 @@ import styles from './article.module.css';
 import type { Metadata } from 'next';
 import { notionMigrationPath } from '@/lib/discovery/notion-migration-path';
 import { notionTroubleshootingPath } from '@/lib/discovery/notion-troubleshooting-path';
+import { notionExportFormatsPath } from '@/lib/discovery/notion-export-formats-path';
 import { requestSeo } from '@/lib/discovery/seo-server';
 import copy from './copy.json';
 
@@ -54,6 +55,11 @@ export function MigrationArticle({ locale }: { locale: Locale }) {
         <p>
           <Link href={(locale === 'en' ? '' : '/zh-hant') + notionTroubleshootingPath}>
             {locale === 'en' ? 'Troubleshoot missing Notion attachments and broken links' : '排查 Notion 匯出後遺失的附件與失效連結'}
+          </Link>
+        </p>
+        <p>
+          <Link href={(locale === 'en' ? '' : '/zh-hant') + notionExportFormatsPath}>
+            {locale === 'en' ? 'Choose a Notion export format' : '選擇 Notion 匯出格式'}
           </Link>
         </p>
       </article>

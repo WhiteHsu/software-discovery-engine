@@ -1,5 +1,6 @@
 import { notionMigrationPath } from './notion-migration-path';
 import { notionTroubleshootingPath } from './notion-troubleshooting-path';
+import { notionExportFormatsPath } from './notion-export-formats-path';
 import { withSitemapReads } from './sitemap-reads';
 import { portabilityPath, publishedPortability } from './portability-publication';
 import {getChineseEscape,getChineseProduct,getChineseHiddenGems} from '@/lib/i18n/server';
@@ -35,5 +36,5 @@ async function loadSitemapPaths(){
  const translated=await Promise.all(pilotSlugs.map(getChineseEscape));
  const translatedProducts=[];const productPaths=paths.filter(p=>p.startsWith('/software/'));
  for(let i=0;i<productPaths.length;i+=6){translatedProducts.push(...(await Promise.all(productPaths.slice(i,i+6).map(async path=>await getChineseProduct(path.slice(10))?zhHome+path:null))).filter((p):p is string=>p!==null));}
- return [...paths,notionMigrationPath,zhHome+notionMigrationPath,notionTroubleshootingPath,zhHome+notionTroubleshootingPath,...(portability?[portabilityPath,zhHome+portabilityPath]:[]),...translatedProducts,zhHome,...translated.flatMap(p=>p?[zhHome+'/escape/'+p.slug]:[]),...(indexableGemCollection(gems)?['/hidden-gems']:[]),...((await getChineseHiddenGems()).length?[zhHome+'/hidden-gems']:[])].sort();
+ return [...paths,notionMigrationPath,zhHome+notionMigrationPath,notionTroubleshootingPath,zhHome+notionTroubleshootingPath,notionExportFormatsPath,zhHome+notionExportFormatsPath,...(portability?[portabilityPath,zhHome+portabilityPath]:[]),...translatedProducts,zhHome,...translated.flatMap(p=>p?[zhHome+'/escape/'+p.slug]:[]),...(indexableGemCollection(gems)?['/hidden-gems']:[]),...((await getChineseHiddenGems()).length?[zhHome+'/hidden-gems']:[])].sort();
 }
