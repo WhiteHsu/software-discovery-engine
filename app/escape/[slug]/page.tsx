@@ -1,3 +1,4 @@
+import {notionAiComparison} from '@/lib/discovery/notion-ai-comparison';
 import { portabilityPath, portabilityRelatedSlugs, publishedPortability } from '@/lib/discovery/portability-publication';
 import {getChineseEscape} from "@/lib/i18n/server";
 import {languageAlternates} from "@/lib/i18n/pilot";
@@ -25,6 +26,7 @@ export default async function Escape({params}:Props){
   const {slug}=await params,p=await getEscape(slug);if(!p)notFound();
   const seo=await requestSeo();
   const preview=escapePreview(),qualified=p.candidates.filter(c=>c.eligible);
+ const showAiComparison = qualified.some(c => notionAiComparison(slug, c.product.slug));
   return <article className={styles.page}>
     <DiscoveryBreadcrumb name={p.name}/>
     {seo.indexable&&!preview&&<script type="application/ld+json" dangerouslySetInnerHTML={{__html:jsonLd(routeData(seo.origin,p,qualified.map(c=>c.product)))}}/>}
@@ -32,9 +34,9 @@ export default async function Escape({params}:Props){
     {preview&&<aside className={styles.notice}>Local draft preview · This route and its candidates have not been approved for publication.</aside>}
     <header><p className="eyebrow">Find a better fit</p><h1>{p.name}</h1><p>{p.description}</p><p>Route reviewed: <time dateTime={isoDate(p.lastVerifiedAt)??undefined}>{date(p.lastVerifiedAt)}</time></p></header>
     <section><h2>Compare the candidates</h2><p>Only candidates with verified constraint fit and sufficient evidence confidence qualify. A small novelty advantage can reorder qualified candidates; popularity does not determine the order.</p><p>Not listed in this comparison does not necessarily mean unsupported. Evidence may be missing, insufficient or outside the reviewed scope.</p>
-      {qualified.length?<div className={styles.tableWrap}><table><caption>Qualified candidates and documented limits</caption><thead><tr><th>Product</th><th>Constraint fit</th><th>Pricing</th><th>Trade-offs</th><th>Latest claim check</th></tr></thead><tbody>{qualified.map(c=>{
+      {qualified.length?<div className={styles.tableWrap}><table><caption>Qualified candidates and documented limits</caption><thead><tr><th>Product</th><th>Constraint fit</th><th>{showAiComparison ? 'What you can do without AI' : 'Pricing'}</th><th>{showAiComparison ? 'If you want to use AI' : 'Trade-offs'}</th><th>Latest claim check</th></tr></thead><tbody>{qualified.map(c=>{
         const attr=(slug:string)=>c.product.attributes.find(a=>a.slug===slug);
-        return <tr key={c.product.slug}><th scope="row"><Link href={`/software/${c.product.slug}`} data-discovery-product={c.product.slug} data-discovery-position={qualified.findIndex(q=>q.product.slug===c.product.slug)+1}>{c.product.name}</Link></th><td>{reviewedPrivacyOperation(c.product)?<>For the reviewed local operation only<p>{reviewedPrivacyOperation(c.product)}</p></>:c.fit.filter(f=>typeof f.value==="boolean").map(f=>f.name).join(", ")}</td><td>{claimValue(attr("pricing-model")!)}</td><td>{claimValue(attr("trade-off-summary")!)}</td><td><time dateTime={isoDate(latestVerification(c.product))??undefined}>{date(latestVerification(c.product))}</time></td></tr>;
+        return <tr key={c.product.slug}><th scope="row"><Link href={`/software/${c.product.slug}`} data-discovery-product={c.product.slug} data-discovery-position={qualified.findIndex(q=>q.product.slug===c.product.slug)+1}>{c.product.name}</Link></th><td>{reviewedPrivacyOperation(c.product)?<>For the reviewed local operation only<p>{reviewedPrivacyOperation(c.product)}</p></>:c.fit.filter(f=>typeof f.value==="boolean").map(f=>f.name).join(", ")}</td>{showAiComparison ? (() => { const comparison = notionAiComparison(slug, c.product.slug); return comparison ? <><td>{comparison.en[0]}</td><td>{comparison.en[1]}<ul>{comparison.links.map(source => <li key={source[2]}><a href={source[2]}>{source[0]}</a></li>)}</ul></td></> : <><td>—</td><td>—</td></>; })() : <><td>{claimValue(attr("pricing-model")!)}</td><td>{claimValue(attr("trade-off-summary")!)}</td></>}<td><time dateTime={isoDate(latestVerification(c.product))??undefined}>{date(latestVerification(c.product))}</time></td></tr>;
       })}</tbody></table></div>:<p>No candidates currently meet the evidence requirements.</p>}
     </section>
     {preview&&(!p.published||qualified.filter(c=>c.product.status==="published").length<3)&&<aside className={styles.notice}>Publication blocked: editorial approval and at least three qualified, published products are required.</aside>}
