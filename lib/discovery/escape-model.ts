@@ -10,7 +10,7 @@ export const legacyEscapeDefinitions = [
   {slug:"photoshop-alternatives-without-a-subscription",name:"Photoshop Alternatives Without a Subscription",anchor:"photoshop",relationshipScope:"desktop-raster-layers-painting-basic-adjustment",constraints:["no-subscription"]},
   {slug:"pdf-editors-without-a-subscription",name:"PDF Editors Without a Subscription",anchor:"adobe-pdf",relationshipScope:"windows-personal-pdf-page-organization",constraints:["no-subscription"]},
   {slug:"meditation-apps-without-a-subscription",name:"Meditation Apps Without a Subscription",anchor:"calm",relationshipScope:"personal-adult-guided-meditation-selection-playback",constraints:["no-subscription"]},
-  {slug:"productivity-apps-you-can-buy-once",name:"Productivity Apps You Can Buy Once",anchor:null,constraints:["one-time-purchase"],workflowScope:"personal-task-capture-project-organization-and-scheduling"},
+  {slug:"productivity-apps-you-can-buy-once",name:"Personal Task Apps You Can Buy Once",anchor:null,constraints:["one-time-purchase"],workflowScope:"personal-task-capture-project-organization-and-scheduling"},
 ] as const;
 // The initial ten definitions remain frozen for historical seed reconstructions.
 export const accountFreeDefinition = {slug:"account-free-note-taking-apps",name:"Account-Free Personal Note-Taking Apps",anchor:null,constraints:["no-account-required"],workflowScope:"personal-desktop-local-note-creation-editing-retention-without-app-account",scopeAttribute:"account-free-note-workflow-scope"} as const;
