@@ -1,3 +1,4 @@
+import {noteWorkspaceCopy} from "@/lib/discovery/note-workspace-copy";
 import {getChineseProduct} from '@/lib/i18n/server';
 import {languageAlternates} from '@/lib/i18n/pilot';
 import DiscoveryBreadcrumb from "@/components/DiscoveryBreadcrumb";
@@ -51,6 +52,7 @@ export default async function Product({params}:Props) {
   const {slug}=await params; const p=await getProduct(slug); if(!p)notFound();
   const seo=await requestSeo();
   const preview=localPreview(); const url=safeUrl(p.websiteUrl);
+  const workspaceCopy = !preview && p.status === "published" ? noteWorkspaceCopy(slug, "en") : undefined;
   const attribute=(slug:string)=>p.attributes.find(c=>c.slug===slug);
   const noteCopy = !preview && (slug === "affine" || slug === "obsidian") ? noteProductCopy[slug] : undefined;
   const portability = noteCopy ? attribute("personal-note-portability-scope") : undefined;
@@ -65,9 +67,14 @@ export default async function Product({params}:Props) {
     {seo.indexable&&!preview&&indexableProduct(p)&&<script type="application/ld+json" dangerouslySetInnerHTML={{__html:jsonLd(productData(seo.origin,p))}}/>}
     <DiscoveryTracker enabled={!preview&&p.status==="published"&&pageTrackingEnabled()} surface="product" slug={slug} officialUrl={url} />
     {preview&&<aside className={styles.preview}>Local draft preview · Publication has not been approved.</aside>}
-    <header className={styles.hero}><p className="eyebrow">Software worth a closer look</p><h1>{p.name}</h1><p className={styles.positioning}>{noteCopy?.description??p.description??"Product positioning has not been reviewed yet."}</p>
+    <header className={styles.hero}><p className="eyebrow">Software worth a closer look</p><h1>{p.name}</h1><p className={styles.positioning}>{workspaceCopy?.description??noteCopy?.description??p.description??"Product positioning has not been reviewed yet."}</p>
       <div className={styles.actions}>{url?<a className={styles.cta} href={url} data-discovery-outbound target="_blank" rel="noopener noreferrer">Visit {p.name} ↗</a>:<span>Official website unknown</span>}<span className={styles.muted}>Latest claim check: <time dateTime={isoDate(latestVerification(p))??undefined}>{date(latestVerification(p))}</time></span></div>
     </header>
+    {workspaceCopy && <section className={styles.section}>
+      <h2>{workspaceCopy.heading}</h2>
+      <p>{workspaceCopy.guidance}</p>
+      {tradeoffs && supported(tradeoffs) && <><p>{claimValue(tradeoffs)}</p><Evidence claim={tradeoffs}/></>}
+    </section>}
     {noteCopy && <section className={styles.section}>
       <h2>{noteCopy.heading}</h2>
       <p>{noteCopy.guidance}</p>
@@ -77,7 +84,7 @@ export default async function Product({params}:Props) {
         <Evidence claim={reviewedPortability}/>
       </>}
     </section>}
-    <section className={styles.section}><h2>Why it’s worth discovering</h2>{!noteCopy&&<p>Start with the supported features below, then compare the limits with your workflow.</p>}<Claims items={positive} empty="No positive verified feature claims are available yet." showDescriptions={!noteCopy}/></section>
+    <section className={styles.section}><h2>Why it’s worth discovering</h2>{!noteCopy&&!workspaceCopy&&<p>Start with the supported features below, then compare the limits with your workflow.</p>}<Claims items={positive} empty="No positive verified feature claims are available yet." showDescriptions={!noteCopy&&!workspaceCopy}/></section>
     <div className={styles.columns}><section className={styles.section}><h2>Best for</h2><p className={styles.muted}>Audience fits are editorial judgments. “Likely” describes a potential fit.</p><Claims items={audiences} empty="Suitable audiences have not been established."/></section>
     <section className={styles.section}><h2>Consider it if…</h2><p className={styles.muted}>These are problems worth comparing against your needs, not guaranteed outcomes.</p><Claims items={problems} empty="No evidence-backed problem fits have been established."/></section></div>
     <div className={styles.columns}>{[["Platforms",platforms],["Pricing",pricing]].map(([title,c])=>{
@@ -85,10 +92,10 @@ export default async function Product({params}:Props) {
       const usable=claim&&supported(claim)&&(title!=="Pricing"||claim.verificationStatus==="verified");
       return <section className={styles.section} key={title as string}><h2>{title as string}</h2><p>{usable?claimValue(claim):"Unknown — not verified."}</p>{claim&&<Evidence claim={claim}/>}<p className={styles.muted}>{title==="Pricing"?"Check the official source for current regional prices and plan limits.":"Platform availability does not imply feature parity."}</p></section>;
     })}</div>
-    <section className={styles.section}><h2>Skip it if… / Trade-offs</h2><p>Compare these limits before deciding:</p><p>{tradeoffs?claimValue(tradeoffs):"Unknown — meaningful trade-offs have not been documented."}</p>{tradeoffs&&<Evidence claim={tradeoffs}/>}</section>
-    <section className={styles.section}><h2>Attribute details</h2><p className={styles.muted}>Unknown means unconfirmed. “No” appears only for a supported explicit negative claim.</p><div className={styles.facts}>{facts.map(c=><div className={styles.fact} key={c.slug}><h3>{c.name}</h3><p>{c.slug==="privacy-friendly"?(privacyOperation?"Verified only for the reviewed local operation":"Not verified for a reviewed local operation."):claimValue(c)}</p>{c.slug==="privacy-friendly"&&privacyOperation&&<p>{privacyOperation}</p>}{c.description&&(!noteCopy||typeof c.value!=="boolean")&&<p className={styles.muted}>Attribute meaning: {c.description}</p>}<Evidence claim={privacyClaimForDisplay(p,c)}/></div>)}</div></section>
+    {(!workspaceCopy || !tradeoffs || !supported(tradeoffs)) && <section className={styles.section}><h2>Skip it if… / Trade-offs</h2><p>Compare these limits before deciding:</p><p>{tradeoffs?claimValue(tradeoffs):"Unknown — meaningful trade-offs have not been documented."}</p>{tradeoffs&&<Evidence claim={tradeoffs}/>}</section>}
+    <section className={styles.section}><h2>Attribute details</h2><p className={styles.muted}>Unknown means unconfirmed. “No” appears only for a supported explicit negative claim.</p><div className={styles.facts}>{facts.map(c=><div className={styles.fact} key={c.slug}><h3>{c.name}</h3><p>{c.slug==="privacy-friendly"?(privacyOperation?"Verified only for the reviewed local operation":"Not verified for a reviewed local operation."):claimValue(c)}</p>{c.slug==="privacy-friendly"&&privacyOperation&&<p>{privacyOperation}</p>}{c.description&&((!noteCopy&&!workspaceCopy)||typeof c.value!=="boolean")&&<p className={styles.muted}>Attribute meaning: {c.description}</p>}<Evidence claim={privacyClaimForDisplay(p,c)}/></div>)}</div></section>
     <section className={styles.section}><h2>Mainstream software to compare</h2><p className={styles.muted}>These graph relationships describe alternatives or complements, not full replacement guarantees.</p><Claims items={anchors} empty="No supported mainstream comparison is available."/></section>
-    <section className={styles.section}><h2>Related Escape Routes</h2>{p.routes.length?<ul className={styles.claims}>{p.routes.map(r=><li key={r.slug}><strong><Link href={`/escape/${r.slug}`}>{r.name}</Link></strong>{!noteCopy&&<p className={styles.muted}>{preview?"Draft route · not approved for publication.":r.description}</p>}</li>)}</ul>:<p className={styles.muted}>No approved related Escape Routes are available.</p>}</section>
+    <section className={styles.section}><h2>Related Escape Routes</h2>{p.routes.length?<ul className={styles.claims}>{p.routes.map(r=><li key={r.slug}><strong><Link href={`/escape/${r.slug}`}>{r.name}</Link></strong>{!noteCopy&&!workspaceCopy&&<p className={styles.muted}>{preview?"Draft route · not approved for publication.":r.description}</p>}</li>)}</ul>:<p className={styles.muted}>No approved related Escape Routes are available.</p>}</section>
     <footer className={styles.footer}>Source checks are scoped to individual claims. They do not imply hands-on testing of every feature.{url&&<a href={url} data-discovery-outbound target="_blank" rel="noopener noreferrer">Explore {p.name} on its official website ↗</a>}</footer>
   </article>;
 }
