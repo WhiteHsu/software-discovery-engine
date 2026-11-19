@@ -30,6 +30,7 @@ export default async function Escape({params}:Props){
  const comparisonFor = (productSlug: string) => notionAiComparison(slug, productSlug) ?? todoistMigrationComparison(slug, productSlug);
  const showCustomComparison = qualified.some(c => comparisonFor(c.product.slug));
  const isTodoistMigration = slug === todoistMigrationSlug;
+ const hasNotionAiDetails = qualified.length === 3 && qualified.every(c => notionAiComparison(slug, c.product.slug));
   return <article className={styles.page}>
     <DiscoveryBreadcrumb name={p.name}/>
     {seo.indexable&&!preview&&<script type="application/ld+json" dangerouslySetInnerHTML={{__html:jsonLd(routeData(seo.origin,p,qualified.map(c=>c.product)))}}/>}
@@ -43,9 +44,18 @@ export default async function Escape({params}:Props){
       })}</tbody></table></div>:<p>No candidates currently meet the evidence requirements.</p>}
     </section>
     {preview&&(!p.published||qualified.filter(c=>c.product.status==="published").length<3)&&<aside className={styles.notice}>Publication blocked: editorial approval and at least three qualified, published products are required.</aside>}
-    <section><h2>Why these products fit</h2>{(preview?p.candidates:qualified).map(c=><section className={styles.card} key={c.product.slug}><h3><Link href={`/software/${c.product.slug}`} data-discovery-product={c.product.slug} data-discovery-position={qualified.findIndex(q=>q.product.slug===c.product.slug)+1}>{c.product.name}</Link></h3><p>{c.product.description}</p>{c.eligible?<ul>{c.reasons.map(r=><li key={r}>{r}</li>)}</ul>:<><p>Not qualified for this route:</p><ul>{c.blockers.map(b=><li key={b}>{b}</li>)}</ul></>}
+    {!preview && hasNotionAiDetails ? <section>
+      <h2>Try your daily workflow without AI</h2>
+      <p>Use a sample note and a few tasks to check the steps you would repeat every day.</p>
+      <ul>
+        <li><strong>AFFiNE:</strong> Stay signed out of the local desktop workspace. Edit a document, add a task, and arrange material on an Edgeless whiteboard.</li>
+        <li><strong>Anytype:</strong> Leave the external assistant unconfigured. Add a note and a task to a Collection, then sort or filter them in Anytype.</li>
+        <li><strong>AppFlowy:</strong> Leave the Ollama plugin unconfigured. Edit a document manually and move a task between columns on a Kanban board.</li>
+      </ul>
+      <p>If you also need to work without an internet connection, check the <Link href="/escape/offline-notion-alternatives">offline Notion alternatives guide</Link> for sync and import limits.</p>
+    </section> : <section><h2>Why these products fit</h2>{(preview?p.candidates:qualified).map(c=><section className={styles.card} key={c.product.slug}><h3><Link href={`/software/${c.product.slug}`} data-discovery-product={c.product.slug} data-discovery-position={qualified.findIndex(q=>q.product.slug===c.product.slug)+1}>{c.product.name}</Link></h3><p>{c.product.description}</p>{c.eligible?<ul>{c.reasons.map(r=><li key={r}>{r}</li>)}</ul>:<><p>Not qualified for this route:</p><ul>{c.blockers.map(b=><li key={b}>{b}</li>)}</ul></>}
       {c.fit.map(f=><div key={f.slug}><strong>{f.name}</strong>{f.relationshipType&&f.description&&<p>{f.description}</p>}<p>{f.slug==="privacy-friendly"?(reviewedPrivacyOperation(c.product)?"Verified only for the reviewed local operation":"Not verified for a reviewed local operation."):f.value===undefined?f.relationshipType:claimValue(f)} · Checked <time dateTime={isoDate(f.lastVerifiedAt)??undefined}>{date(f.lastVerifiedAt)}</time></p>{f.sources.map((s,i)=>safeUrl(s.url)?<a key={i} href={safeUrl(s.url)!} target="_blank" rel="noopener noreferrer">{s.title} ↗ </a>:null)}</div>)}
-    </section>)}{!p.candidates.length&&<p>No curated candidates are available. Missing evidence is not treated as a passing constraint.</p>}</section>
+    </section>)}{!p.candidates.length&&<p>No curated candidates are available. Missing evidence is not treated as a passing constraint.</p>}</section>}
     <footer>Source checks describe individual claims, not hands-on testing or complete replacement guarantees.</footer>
   {portabilityRelatedSlugs.has(slug) && await publishedPortability().catch(() => false) && <p><Link href={portabilityPath}>What can you take with you when you switch note apps?</Link></p>}
 </article>;
