@@ -13,6 +13,19 @@ import { claimValue, latestVerification, safeUrl, supported, type Claim } from "
 import {reviewedPrivacyOperation,privacyClaimForDisplay} from "@/lib/discovery/privacy-route";
 import styles from "./product.module.css";
 
+const noteProductCopy = {
+  affine: {
+    description: "A desktop workspace for building documents, databases, and whiteboards together. Use a local workspace for personal work, and plan how to export it before relying on attachments or links.",
+    heading: "Check your export before moving an AFFiNE workspace",
+    guidance: "Export a sample page that uses the blocks and files you rely on. Open the Markdown and check its task states, tables, attachments, and relative links before moving a larger workspace.",
+  },
+  obsidian: {
+    description: "A local Markdown vault for keeping notes as files you can inspect and edit. Start with a folder of notes and check how its links and attachments behave before changing editors.",
+    heading: "Try your Markdown folder as an Obsidian vault",
+    guidance: "Open a small folder as a vault. Follow a note-to-note link and open an attached file. If you plan to move on from Obsidian later, repeat those checks in the destination app.",
+  },
+};
+
 type Props = { params: Promise<{ slug: string }> };
 export const dynamic = "force-dynamic";
 export async function generateMetadata({params}: Props): Promise<Metadata> {
@@ -31,16 +44,19 @@ function Evidence({claim}:{claim:Claim}) {
     {claim.sources.map((s,i)=>safeUrl(s.url)?<a key={i} href={safeUrl(s.url)!} target="_blank" rel="noopener noreferrer">{s.title} ↗</a>:null)}
   </div>;
 }
-function Claims({items,empty}:{items:Claim[];empty:string}) {
-  return items.length?<ul className={styles.claims}>{items.map(c=><li key={c.slug+(c.relationshipType??"")}><strong>{c.name}</strong>{c.relationshipType&&<p>Relationship: {c.relationshipType}</p>}{c.description&&<p>{c.description}</p>}<Evidence claim={c}/></li>)}</ul>:<p className={styles.muted}>{empty}</p>;
+function Claims({items,empty,showDescriptions=true}:{items:Claim[];empty:string;showDescriptions?:boolean}) {
+  return items.length?<ul className={styles.claims}>{items.map(c=><li key={c.slug+(c.relationshipType??"")}><strong>{c.name}</strong>{c.relationshipType&&<p>Relationship: {c.relationshipType}</p>}{showDescriptions&&c.description&&<p>{c.description}</p>}<Evidence claim={c}/></li>)}</ul>:<p className={styles.muted}>{empty}</p>;
 }
 export default async function Product({params}:Props) {
   const {slug}=await params; const p=await getProduct(slug); if(!p)notFound();
   const seo=await requestSeo();
   const preview=localPreview(); const url=safeUrl(p.websiteUrl);
   const attribute=(slug:string)=>p.attributes.find(c=>c.slug===slug);
+  const noteCopy = !preview && (slug === "affine" || slug === "obsidian") ? noteProductCopy[slug] : undefined;
+  const portability = noteCopy ? attribute("personal-note-portability-scope") : undefined;
+  const reviewedPortability = portability?.verificationStatus === "verified" && supported(portability) ? portability : undefined;
   const pricing=attribute("pricing-model"),platforms=attribute("supported-platforms"),tradeoffs=attribute("trade-off-summary");
-  const facts=p.attributes.filter(c=>!["pricing-model","supported-platforms","trade-off-summary"].includes(c.slug));
+  const facts=p.attributes.filter(c=>c !== reviewedPortability && !["pricing-model","supported-platforms","trade-off-summary"].includes(c.slug));
   const privacyOperation=reviewedPrivacyOperation(p);
   const positive=facts.filter(c=>c.slug!=="privacy-friendly"&&supported(c)&&c.verificationStatus==="verified"&&c.value===true);
   const audiences=p.audiences.filter(supported),problems=p.problems.filter(supported),anchors=p.anchors.filter(supported);
@@ -49,10 +65,19 @@ export default async function Product({params}:Props) {
     {seo.indexable&&!preview&&indexableProduct(p)&&<script type="application/ld+json" dangerouslySetInnerHTML={{__html:jsonLd(productData(seo.origin,p))}}/>}
     <DiscoveryTracker enabled={!preview&&p.status==="published"&&pageTrackingEnabled()} surface="product" slug={slug} officialUrl={url} />
     {preview&&<aside className={styles.preview}>Local draft preview · Publication has not been approved.</aside>}
-    <header className={styles.hero}><p className="eyebrow">Software worth a closer look</p><h1>{p.name}</h1><p className={styles.positioning}>{p.description??"Product positioning has not been reviewed yet."}</p>
+    <header className={styles.hero}><p className="eyebrow">Software worth a closer look</p><h1>{p.name}</h1><p className={styles.positioning}>{noteCopy?.description??p.description??"Product positioning has not been reviewed yet."}</p>
       <div className={styles.actions}>{url?<a className={styles.cta} href={url} data-discovery-outbound target="_blank" rel="noopener noreferrer">Visit {p.name} ↗</a>:<span>Official website unknown</span>}<span className={styles.muted}>Latest claim check: <time dateTime={isoDate(latestVerification(p))??undefined}>{date(latestVerification(p))}</time></span></div>
     </header>
-    <section className={styles.section}><h2>Why it’s worth discovering</h2><p>Start with the supported features below, then compare the limits with your workflow.</p><Claims items={positive} empty="No positive verified feature claims are available yet."/></section>
+    {noteCopy && <section className={styles.section}>
+      <h2>{noteCopy.heading}</h2>
+      <p>{noteCopy.guidance}</p>
+      {reviewedPortability && <>
+        <h3>What the Windows sample showed</h3>
+        <p>{claimValue(reviewedPortability)}</p>
+        <Evidence claim={reviewedPortability}/>
+      </>}
+    </section>}
+    <section className={styles.section}><h2>Why it’s worth discovering</h2>{!noteCopy&&<p>Start with the supported features below, then compare the limits with your workflow.</p>}<Claims items={positive} empty="No positive verified feature claims are available yet." showDescriptions={!noteCopy}/></section>
     <div className={styles.columns}><section className={styles.section}><h2>Best for</h2><p className={styles.muted}>Audience fits are editorial judgments. “Likely” describes a potential fit.</p><Claims items={audiences} empty="Suitable audiences have not been established."/></section>
     <section className={styles.section}><h2>Consider it if…</h2><p className={styles.muted}>These are problems worth comparing against your needs, not guaranteed outcomes.</p><Claims items={problems} empty="No evidence-backed problem fits have been established."/></section></div>
     <div className={styles.columns}>{[["Platforms",platforms],["Pricing",pricing]].map(([title,c])=>{
@@ -61,9 +86,9 @@ export default async function Product({params}:Props) {
       return <section className={styles.section} key={title as string}><h2>{title as string}</h2><p>{usable?claimValue(claim):"Unknown — not verified."}</p>{claim&&<Evidence claim={claim}/>}<p className={styles.muted}>{title==="Pricing"?"Check the official source for current regional prices and plan limits.":"Platform availability does not imply feature parity."}</p></section>;
     })}</div>
     <section className={styles.section}><h2>Skip it if… / Trade-offs</h2><p>Compare these limits before deciding:</p><p>{tradeoffs?claimValue(tradeoffs):"Unknown — meaningful trade-offs have not been documented."}</p>{tradeoffs&&<Evidence claim={tradeoffs}/>}</section>
-    <section className={styles.section}><h2>Attribute details</h2><p className={styles.muted}>Unknown means unconfirmed. “No” appears only for a supported explicit negative claim.</p><div className={styles.facts}>{facts.map(c=><div className={styles.fact} key={c.slug}><h3>{c.name}</h3><p>{c.slug==="privacy-friendly"?(privacyOperation?"Verified only for the reviewed local operation":"Not verified for a reviewed local operation."):claimValue(c)}</p>{c.slug==="privacy-friendly"&&privacyOperation&&<p>{privacyOperation}</p>}{c.description&&<p className={styles.muted}>Attribute meaning: {c.description}</p>}<Evidence claim={privacyClaimForDisplay(p,c)}/></div>)}</div></section>
+    <section className={styles.section}><h2>Attribute details</h2><p className={styles.muted}>Unknown means unconfirmed. “No” appears only for a supported explicit negative claim.</p><div className={styles.facts}>{facts.map(c=><div className={styles.fact} key={c.slug}><h3>{c.name}</h3><p>{c.slug==="privacy-friendly"?(privacyOperation?"Verified only for the reviewed local operation":"Not verified for a reviewed local operation."):claimValue(c)}</p>{c.slug==="privacy-friendly"&&privacyOperation&&<p>{privacyOperation}</p>}{c.description&&(!noteCopy||typeof c.value!=="boolean")&&<p className={styles.muted}>Attribute meaning: {c.description}</p>}<Evidence claim={privacyClaimForDisplay(p,c)}/></div>)}</div></section>
     <section className={styles.section}><h2>Mainstream software to compare</h2><p className={styles.muted}>These graph relationships describe alternatives or complements, not full replacement guarantees.</p><Claims items={anchors} empty="No supported mainstream comparison is available."/></section>
-    <section className={styles.section}><h2>Related Escape Routes</h2>{p.routes.length?<ul className={styles.claims}>{p.routes.map(r=><li key={r.slug}><strong><Link href={`/escape/${r.slug}`}>{r.name}</Link></strong><p className={styles.muted}>{preview?"Draft route · not approved for publication.":r.description}</p></li>)}</ul>:<p className={styles.muted}>No approved related Escape Routes are available.</p>}</section>
+    <section className={styles.section}><h2>Related Escape Routes</h2>{p.routes.length?<ul className={styles.claims}>{p.routes.map(r=><li key={r.slug}><strong><Link href={`/escape/${r.slug}`}>{r.name}</Link></strong>{!noteCopy&&<p className={styles.muted}>{preview?"Draft route · not approved for publication.":r.description}</p>}</li>)}</ul>:<p className={styles.muted}>No approved related Escape Routes are available.</p>}</section>
     <footer className={styles.footer}>Source checks are scoped to individual claims. They do not imply hands-on testing of every feature.{url&&<a href={url} data-discovery-outbound target="_blank" rel="noopener noreferrer">Explore {p.name} on its official website ↗</a>}</footer>
   </article>;
 }
