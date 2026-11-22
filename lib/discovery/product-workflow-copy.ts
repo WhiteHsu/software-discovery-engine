@@ -1,4 +1,16 @@
 const copy = {
+  simplenote: {
+    en: {
+      description: "Simplenote keeps text notes organized with tags and syncs them through an account. It suits notes you can keep as text, since you cannot attach files.",
+      heading: "Set up sync and check offline access before you rely on it",
+      guidance: "Create an account and verify your email. Write a short note, tag it, and open it on the device you plan to take offline while you still have a connection. Disconnect and check whether that note is available to edit.",
+    },
+    zh: {
+      description: "Simplenote 用標籤整理文字筆記，並透過帳號同步。適合只需要記文字的人，筆記無法附加檔案。",
+      heading: "先設定同步，再確認筆記能否離線編輯",
+      guidance: "先註冊帳號並驗證電子郵件。建立一則短筆記並加上標籤，趁有網路時在預計離線使用的裝置上開啟。斷網後再確認能否編輯同一則筆記。",
+    },
+  },
   anytype: {
     en: {
       description: "Organize notes and tasks as objects in a personal space. If you plan to keep everything on your own devices, decide how you will sync and back up that space.",
