@@ -1,3 +1,4 @@
+import {meditationGuideComparison} from "@/lib/discovery/meditation-guide-comparison";
 import {writingGuideComparison} from "@/lib/discovery/writing-guide-comparison";
 import {noteGuideComparison} from "@/lib/discovery/note-guide-comparison";
 import {todoistMigrationComparison, todoistMigrationSlug} from '@/lib/discovery/todoist-migration-comparison';
@@ -32,7 +33,9 @@ export default async function Escape({params}:Props){
  const comparisonFor = (productSlug: string) => notionAiComparison(slug, productSlug) ?? todoistMigrationComparison(slug, productSlug);
  const noteGuide = preview ? undefined : noteGuideComparison(slug, qualified.map(c => c.product.slug), "en");
  const writingGuide = preview ? undefined : writingGuideComparison(slug, qualified.map(c => c.product.slug), "en");
- const guide = noteGuide ?? writingGuide;
+ const meditationGuide = preview ? undefined : meditationGuideComparison(slug, qualified.map(c => c.product.slug), "en");
+ const workflowGuide = writingGuide ?? meditationGuide;
+ const guide = noteGuide ?? workflowGuide;
  const showCustomComparison = qualified.some(c => comparisonFor(c.product.slug));
  const isTodoistMigration = slug === todoistMigrationSlug;
  const hasNotionAiDetails = qualified.length === 3 && qualified.every(c => notionAiComparison(slug, c.product.slug));
@@ -59,8 +62,8 @@ export default async function Escape({params}:Props){
         <li><strong>AppFlowy:</strong> Leave the Ollama plugin unconfigured. Edit a document manually and move a task between columns on a Kanban board.</li>
       </ul>
       <p>If you also need to work without an internet connection, check the <Link href="/escape/offline-notion-alternatives">offline Notion alternatives guide</Link> for sync and import limits.</p>
-    </section> : <section><h2>Why these products fit</h2>{(preview?p.candidates:qualified).map(c=><section className={styles.card} key={c.product.slug}><h3><Link href={`/software/${c.product.slug}`} data-discovery-product={c.product.slug} data-discovery-position={qualified.findIndex(q=>q.product.slug===c.product.slug)+1}>{c.product.name}</Link></h3>{writingGuide && <p>{writingGuide.workflow(c.product.slug)}</p>}{!guide&&<p>{c.product.description}</p>}{c.eligible?(!guide&&<ul>{c.reasons.map(r=><li key={r}>{r}</li>)}</ul>):<><p>Not qualified for this route:</p><ul>{c.blockers.map(b=><li key={b}>{b}</li>)}</ul></>}
-      {c.fit.filter(f=>!noteGuide || !["pricing-model","trade-off-summary"].includes(f.slug)).map(f=><div key={f.slug}><strong>{f.name}</strong>{!writingGuide && <>{f.relationshipType&&f.description&&<p>{f.description}</p>}<p>{f.slug==="privacy-friendly"?(reviewedPrivacyOperation(c.product)?"Verified only for the reviewed local operation":"Not verified for a reviewed local operation."):f.value===undefined?f.relationshipType:claimValue(f)} · Checked <time dateTime={isoDate(f.lastVerifiedAt)??undefined}>{date(f.lastVerifiedAt)}</time></p></>}{writingGuide && <p>Checked <time dateTime={isoDate(f.lastVerifiedAt)??undefined}>{date(f.lastVerifiedAt)}</time></p>}{f.sources.map((s,i)=>safeUrl(s.url)?<a key={i} href={safeUrl(s.url)!} target="_blank" rel="noopener noreferrer">{s.title} ↗ </a>:null)}</div>)}
+    </section> : <section><h2>Why these products fit</h2>{(preview?p.candidates:qualified).map(c=><section className={styles.card} key={c.product.slug}><h3><Link href={`/software/${c.product.slug}`} data-discovery-product={c.product.slug} data-discovery-position={qualified.findIndex(q=>q.product.slug===c.product.slug)+1}>{c.product.name}</Link></h3>{workflowGuide && <p>{workflowGuide.workflow(c.product.slug)}</p>}{!guide&&<p>{c.product.description}</p>}{c.eligible?(!guide&&<ul>{c.reasons.map(r=><li key={r}>{r}</li>)}</ul>):<><p>Not qualified for this route:</p><ul>{c.blockers.map(b=><li key={b}>{b}</li>)}</ul></>}
+      {c.fit.filter(f=>!noteGuide || !["pricing-model","trade-off-summary"].includes(f.slug)).map(f=><div key={f.slug}><strong>{f.name}</strong>{!workflowGuide && <>{f.relationshipType&&f.description&&<p>{f.description}</p>}<p>{f.slug==="privacy-friendly"?(reviewedPrivacyOperation(c.product)?"Verified only for the reviewed local operation":"Not verified for a reviewed local operation."):f.value===undefined?f.relationshipType:claimValue(f)} · Checked <time dateTime={isoDate(f.lastVerifiedAt)??undefined}>{date(f.lastVerifiedAt)}</time></p></>}{workflowGuide && <p>Checked <time dateTime={isoDate(f.lastVerifiedAt)??undefined}>{date(f.lastVerifiedAt)}</time></p>}{f.sources.map((s,i)=>safeUrl(s.url)?<a key={i} href={safeUrl(s.url)!} target="_blank" rel="noopener noreferrer">{s.title} ↗ </a>:null)}</div>)}
     </section>)}{!p.candidates.length&&<p>No curated candidates are available. Missing evidence is not treated as a passing constraint.</p>}</section>}
     <footer>Source checks describe individual claims, not hands-on testing or complete replacement guarantees.</footer>
   {portabilityRelatedSlugs.has(slug) && await publishedPortability().catch(() => false) && <p><Link href={portabilityPath}>What can you take with you when you switch note apps?</Link></p>}
