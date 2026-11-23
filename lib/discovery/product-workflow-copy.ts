@@ -1,4 +1,25 @@
 const copy = {
+  "healthy-minds-program": {
+    zh: {
+      description: "Healthy Minds Program 需要註冊。免費公開課程按覺察、連結、洞察與目的四個主題安排，適合想跟著學習路徑練習的人。",
+      heading: "從一堂坐姿冥想開始",
+      guidance: "註冊後，先找 Intro To Sitting Meditation。本站在 Android 抽測時可播放、暫停及續播，過程中未出現付款提示。試完後再按需求選主題，例如想練習留意當下的感受，可以從覺察開始。",
+    },
+  },
+  medito: {
+    zh: {
+      description: "Medito 提供免費的語音引導課程，可沿著同一門課逐堂練習。官方說明核心內容可免帳號使用。",
+      heading: "用 Learning to sit 試播第一堂課",
+      guidance: "打開課程列表，選 Learning to sit 並播放。本站已在登入的 Android 環境確認這堂課可播放且未出現付款提示。如果你想免註冊使用，請在自己的裝置先略過登入，再確認同一堂課能否開啟和播放。",
+    },
+  },
+  "smiling-mind": {
+    zh: {
+      description: "Smiling Mind 需要註冊，內容分為成人、家庭等類別。想試成人引導冥想，可以先找一堂呼吸練習。",
+      heading: "在成人專區試播 Exploring the Breath",
+      guidance: "登入後，從成人內容選擇 Exploring the Breath。本站在 Android 抽測時可播放、暫停及續播，過程中未出現付費或試用提示。若需要通勤時離線收聽，先在連線時下載，再開飛航模式試播同一堂課。",
+    },
+  },
   simplenote: {
     en: {
       description: "Simplenote keeps text notes organized with tags and syncs them through an account. It suits notes you can keep as text, since you cannot attach files.",
