@@ -1,4 +1,18 @@
 const copy = {
+  "hemingway-free-web": {
+    zh: {
+      description: "Hemingway 免費網頁版會標示英文草稿中較難讀的句子與可能的被動語態。你可以直接在瀏覽器裡修改，再看標示怎麼變化。",
+      heading: "貼上一段草稿，先改一個難讀的句子",
+      guidance: "以一段英文草稿試用。先挑一句較難讀的句子，試著拆成兩句；若句子因被動語態被標示，先判斷是否需要交代動作者。改完後再看標示，並讀一遍確認原意。本站既有的修改前後觀察限於免費網頁版。",
+    },
+  },
+  "hemingway-classic": {
+    zh: {
+      description: "Classic Editor 3 是 Windows 與 Mac 的付費桌面版，購買後使用該版本無需持續訂閱。新版 AI 功能另屬其他方案。",
+      heading: "購買桌面版前，先核對系統相容性",
+      guidance: "先確認你的 Windows 或 macOS 版本符合官網的系統需求。若你的用途是在桌面上修英文稿，可依文件所述流程開啟草稿、檢視被動語態標示，再手動修句。本站尚未獨立驗證桌面版修改後的標示更新，也未驗證現行系統的相容性。",
+    },
+  },
   "healthy-minds-program": {
     zh: {
       description: "Healthy Minds Program 需要註冊。免費公開課程按覺察、連結、洞察與目的四個主題安排，適合想跟著學習路徑練習的人。",
