@@ -1,4 +1,30 @@
 const copy = {
+  "write-good-local-library-1-0-8": {
+    en: {
+      description: "write-good 1.0.8 is a Node library for adding English prose suggestions to a script or app. The reviewed call takes a string and returns suggestions in memory.",
+      heading: "Pass a sample sentence to the Node library",
+      guidance: "Load the pinned package and pass a string such as “The report was written by Mira.” with your fixed options object. Inspect the returned suggestions in memory and use the feedback to decide whether to try “Mira wrote the report.” The reviewed call can return suggestions containing input text. Check whether your own integration logs or stores them.",
+    },
+    zh: {
+      description: "write-good 1.0.8 是可整合進 Node 程式的英文寫作函式庫。已查核的呼叫方式接收文字字串，並在記憶體中回傳建議。",
+      heading: "把一句範例交給 Node 函式庫",
+      guidance: "載入固定版本，將「The report was written by Mira.」這類字串連同固定選項物件傳給函式庫。先在記憶體查看回傳建議，再判斷是否要手動改成「Mira wrote the report.」。建議可能包含輸入原文，請確認你的整合程式是否會記錄或儲存回傳內容。",
+    },
+  },
+  "vale-local-passive-3-24-0": {
+    zh: {
+      description: "Vale 3.24.0 適合把固定的文體規則放進本機檢查流程。本站查核的設定只啟用 Microsoft.Passive 規則。",
+      heading: "用固定設定檢查一句被動語態",
+      guidance: "準備明確的本機設定，指定固定版本的 Microsoft.Passive 規則，停用全域設定，並維持查核所用的條件：不啟用管線來源、NLP 端點留空。從標準輸入送入「The parcel was sent by Leon.」，查看 JSON 的規則名稱與標示片段。輸出可能含原文，請確認呼叫端會把結果存在哪裡。",
+    },
+  },
+  "languagetool-local-cli-6-6": {
+    zh: {
+      description: "LanguageTool 6.6 可透過 Java 直接在命令列查核英文文字。本站查核的是固定版 CLI 從標準輸入讀取資料的本機流程。",
+      heading: "從標準輸入送出範例，再檢查 JSON",
+      guidance: "使用固定的 6.6 發行套件及明確的英文設定，確認沒有注入額外 JVM 選項，且未啟用伺服器、用戶端或遠端規則資源。先從標準輸入送一段非敏感英文，例如「The report was written by Mira.」。檢查 JSON 回傳的標示與文字片段，也查看標準錯誤是否包含原文。這個範例用來確認輸出內容，實際標示依規則而定。",
+    },
+  },
   "hemingway-free-web": {
     zh: {
       description: "Hemingway 免費網頁版會標示英文草稿中較難讀的句子與可能的被動語態。你可以直接在瀏覽器裡修改，再看標示怎麼變化。",
