@@ -3,6 +3,18 @@ type Language = "en" | "zh";
 type Entry = Record<Language, readonly [access: string, offline: string, workflow: string]>;
 
 const rows: Record<string, Entry> = {
+  "insight-timer": {
+    en: [
+      "The reviewed browser workflow uses an account. Choose a free guided session from the core library.",
+      "Offline downloads are a Member Plus benefit. The free workflow covers online playback.",
+      "Choose a free session by length and teacher, then play it in the browser to see whether browsing a library suits your routine.",
+    ],
+    zh: [
+      "已查核的瀏覽器流程需使用帳號。從核心內容庫選一堂免費引導課程即可線上播放。",
+      "離線下載屬於 Member Plus 權益。免費流程涵蓋線上播放。",
+      "依課程長度和老師挑一堂免費課程，在瀏覽器試播，看看從內容庫自由選課是否符合你的習慣。",
+    ],
+  },
   medito: {
     en: [
       "Free public courses. Medito documents no-account access for core sessions; our Android sample was signed in.",
@@ -46,13 +58,13 @@ const copy = {
     firstColumn: "Account and free sessions",
     secondColumn: "Downloads and offline playback",
     heading: "Choose a first session",
-    guidance: "The playback samples cover adult guided sessions on Android. If offline access matters, try the same session before you travel: load it while connected, then switch on airplane mode and try to play it again.",
+    guidance: "Our Android samples covered adult guided sessions. Insight Timer is covered by a documented browser workflow. If offline access matters, try the same session before you travel: load it while connected, then switch on airplane mode and try to play it again.",
   },
   zh: {
     firstColumn: "帳號與免費課程",
     secondColumn: "下載與離線播放",
     heading: "挑一堂課試播",
-    guidance: "本站抽測範圍是 Android 上的成人引導課程。若你需要離線收聽，出門前先連網載入想聽的課程，再開飛航模式試播同一堂課。",
+    guidance: "本站的 Android 抽測範圍是成人引導課程。Insight Timer 則依文件查核瀏覽器流程。若你需要離線收聽，出門前先連網載入想聽的課程，再開飛航模式試播同一堂課。",
   },
 };
 
