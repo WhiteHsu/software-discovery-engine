@@ -1,3 +1,4 @@
+import {meditationGuideComparison} from "@/lib/discovery/meditation-guide-comparison";
 import {writingGuideComparison} from "@/lib/discovery/writing-guide-comparison";
 import {noteGuideComparison} from "@/lib/discovery/note-guide-comparison";
 import {todoistMigrationComparison, todoistMigrationSlug} from '@/lib/discovery/todoist-migration-comparison';
@@ -25,7 +26,9 @@ export default async function ChineseEscape({params}:Props){
  const comparisonFor = (productSlug: string) => notionAiComparison(slug, productSlug) ?? todoistMigrationComparison(slug, productSlug);
  const noteGuide = noteGuideComparison(slug, qualified.map(c => c.product.slug), "zh");
  const writingGuide = writingGuideComparison(slug, qualified.map(c => c.product.slug), "zh");
- const guide = noteGuide ?? writingGuide;
+ const meditationGuide = meditationGuideComparison(slug, qualified.map(c => c.product.slug), "zh");
+ const workflowGuide = writingGuide ?? meditationGuide;
+ const guide = noteGuide ?? workflowGuide;
  const showCustomComparison = qualified.some(c => comparisonFor(c.product.slug));
  const isTodoistMigration = slug === todoistMigrationSlug;
  const hasNotionAiDetails = qualified.length === 3 && qualified.every(c => notionAiComparison(slug, c.product.slug));
@@ -45,7 +48,7 @@ export default async function ChineseEscape({params}:Props){
      <li><strong>AppFlowy：</strong>略過 Ollama 外掛的設定。手動編輯文件，再將一項待辦移到 Kanban 看板的另一欄。</li>
    </ul>
    <p>若你也需要斷網工作，可查閱<Link href="/zh-hant/escape/offline-notion-alternatives">離線 Notion 替代工具指南</Link>，確認同步及匯入的限制。</p>
- </section> : <section><h2>為什麼這些產品符合條件？</h2>{qualified.map((c,i)=><section className={styles.card} key={c.product.slug}><h3><Link href={(translatedProducts.has(c.product.slug)?zhHome:'')+'/software/'+c.product.slug} data-discovery-product={c.product.slug} data-discovery-position={i+1}>{c.product.name}{!translatedProducts.has(c.product.slug)&&'（英文產品詳情）'}</Link></h3>{writingGuide && <p>{writingGuide.workflow(c.product.slug)}</p>}{!guide&&<><p>{zh(c.product.description)}</p><p>符合本比較的條件已查核；價格與取捨均附有註明日期的來源證據。</p></>}{c.fit.filter(f=>!noteGuide || !["pricing-model","trade-off-summary"].includes(f.slug)).map(f=><div key={f.slug}><h4>{zh(f.name)}</h4>{!writingGuide && <>{f.relationshipType&&f.description&&<p>{zh(f.description)}</p>}<p>{f.slug==='privacy-friendly'?'僅針對已查核的本機操作驗證':f.value===undefined?'替代關係':zhValue(f)} · 查核日期：<time dateTime={isoDate(f.lastVerifiedAt)??undefined}>{date(f.lastVerifiedAt)}</time></p></>}{writingGuide && <p>查核日期 <time dateTime={isoDate(f.lastVerifiedAt)??undefined}>{date(f.lastVerifiedAt)}</time></p>}<ul aria-label="查核來源（保留原文標題）">{f.sources.map((source,n)=>safeUrl(source.url)?<li key={n}><a href={safeUrl(source.url)!} target="_blank" rel="noopener noreferrer">來源原文：{source.title} ↗</a></li>:null)}</ul></div>)}</section>)}</section>}
+ </section> : <section><h2>為什麼這些產品符合條件？</h2>{qualified.map((c,i)=><section className={styles.card} key={c.product.slug}><h3><Link href={(translatedProducts.has(c.product.slug)?zhHome:'')+'/software/'+c.product.slug} data-discovery-product={c.product.slug} data-discovery-position={i+1}>{c.product.name}{!translatedProducts.has(c.product.slug)&&'（英文產品詳情）'}</Link></h3>{workflowGuide && <p>{workflowGuide.workflow(c.product.slug)}</p>}{!guide&&<><p>{zh(c.product.description)}</p><p>符合本比較的條件已查核；價格與取捨均附有註明日期的來源證據。</p></>}{c.fit.filter(f=>!noteGuide || !["pricing-model","trade-off-summary"].includes(f.slug)).map(f=><div key={f.slug}><h4>{zh(f.name)}</h4>{!workflowGuide && <>{f.relationshipType&&f.description&&<p>{zh(f.description)}</p>}<p>{f.slug==='privacy-friendly'?'僅針對已查核的本機操作驗證':f.value===undefined?'替代關係':zhValue(f)} · 查核日期：<time dateTime={isoDate(f.lastVerifiedAt)??undefined}>{date(f.lastVerifiedAt)}</time></p></>}{workflowGuide && <p>查核日期 <time dateTime={isoDate(f.lastVerifiedAt)??undefined}>{date(f.lastVerifiedAt)}</time></p>}<ul aria-label="查核來源（保留原文標題）">{f.sources.map((source,n)=>safeUrl(source.url)?<li key={n}><a href={safeUrl(source.url)!} target="_blank" rel="noopener noreferrer">來源原文：{source.title} ↗</a></li>:null)}</ul></div>)}</section>)}</section>}
  <footer>來源查核針對個別主張，不代表實機測試或完整替代保證。翻譯不會更新來源查核日期；產品是否支援中文須另行確認。</footer>{portabilityRelatedSlugs.has(slug) && await publishedPortability().catch(() => false) && <p><Link href={'/zh-hant' + portabilityPath}>筆記搬家時，哪些內容帶得走？</Link></p>}
 </article>;
 }
