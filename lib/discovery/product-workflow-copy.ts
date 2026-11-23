@@ -1,4 +1,30 @@
 const copy = {
+  "stirling-pdf": {
+    zh: {
+      description: "選擇 Stirling PDF 前，先決定要在自己的電腦執行、連到自行管理的伺服器，還是使用託管服務。自架在遠端伺服器時，檔案仍會送到該伺服器。",
+      heading: "先確認 PDF 會送到哪裡處理",
+      guidance: "先核對瀏覽器開啟的是本機、自架伺服器或託管服務的網址。用一份不含敏感資料的多頁 PDF 擷取其中一頁，下載後另開確認頁數及方向。若需要在自己的電腦處理，請確認這次操作使用的是該電腦上的部署，再處理正式文件。",
+    },
+  },
+  "foxit-pdf-editor": {
+    en: {
+      description: "For a one-time purchase, check the Windows perpetual edition of Foxit PDF Editor and the version covered by the license. Check the terms for future upgrades and online features separately.",
+      heading: "Check what the license covers, then test a copy",
+      guidance: "Before buying, confirm that the quoted Windows edition covers the page tools you need. In an available licensed copy, reorder or rotate pages in a representative PDF and save under a new name. Reopen it to check page order and orientation. If your documents rely on bookmarks, forms or annotations, check those in the saved copy too. These are checks to run on your own files.",
+    },
+    zh: {
+      description: "若要一次買斷 Foxit PDF Editor，先核對 Windows 永久授權適用的版本。後續升級與線上功能的條件請分開確認。",
+      heading: "先核對授權，再用副本檢查輸出",
+      guidance: "購買前確認報價所列的 Windows 版本涵蓋你需要的頁面工具。若已有授權版，用一份代表性 PDF 的副本重新排序或旋轉頁面，另存後重新開啟，核對順序及方向。如果工作文件會用到書籤、表單或註解，也請在另存的檔案中逐一確認。",
+    },
+  },
+  "pdf-xchange-editor": {
+    zh: {
+      description: "PDF-XChange Editor 的免費使用範圍和付費授權功能有別。拿來整理 PDF 頁面前，先確認目前安裝的 Windows 版本及授權涵蓋哪些操作。",
+      heading: "存正式文件前，先查功能是否需要授權",
+      guidance: "先用不含敏感資料的副本試做你要的操作，例如擷取指定頁面。留意工具的授權標示與儲存提示。若操作需要付費授權，先核對適用版本，再決定是否購買。另存後重新開啟，核對頁數、順序與是否出現試用浮水印，再決定能否交付。",
+    },
+  },
   "write-good-local-library-1-0-8": {
     en: {
       description: "write-good 1.0.8 is a Node library for adding English prose suggestions to a script or app. The reviewed call takes a string and returns suggestions in memory.",
