@@ -1,4 +1,25 @@
 const copy = {
+  gimp: {
+    zh: {
+      description: "GIMP 適合在桌面上修照片與合成圖層。若原稿是相機 RAW，先確認相容的外部 RAW 工具與匯入方式。若要送印，先向印刷廠確認交付格式與色彩描述檔。",
+      heading: "先用一張照片跑完修圖與輸出",
+      guidance: "以一張 JPEG 試做：複製底圖圖層，在副本上調整亮度和對比，再切換圖層可見性確認差異。匯出另一份檔案並重新開啟，檢查尺寸和色彩。若要交付 CMYK，請核對印刷廠要求。既有查核顯示 GIMP 的 CMYK 匯入與匯出流程仍以 RGB 儲存，原生 CMYK 編輯未經驗證。",
+    },
+  },
+  krita: {
+    en: {
+      description: "Krita is a digital painting tool for building illustrations in layers. Keep a native project for revisions and check a separate PSD when a collaborator needs that format.",
+      heading: "Keep a Krita master and check the PSD handoff",
+      guidance: "Build a small illustration with separate sketch, color and caption layers, then save the editable master as a .kra file. Save a copy as PSD and reopen it in the app that will receive it. Check layer order, blend modes and text editability. If you used masks or filters, check those too. The manual documents supported PSD elements, and results can vary with the file and the receiving app.",
+    },
+  },
+  "paint-net": {
+    zh: {
+      description: "Paint.NET 適合在 Windows 上做圖層編輯與基本色彩調整。用 PDN 保存可回頭修改的原稿，再依用途匯出交付檔。",
+      heading: "用 PDN 保留圖層，再匯出交付檔",
+      guidance: "以有透明背景的產品圖為例，把底圖與修飾內容分開放在兩層，先存成 .pdn。需要保留透明背景時，另存 PNG，再重新開啟核對尺寸、邊緣與透明區域。之後要分層修改時，回到 PDN 原稿。",
+    },
+  },
   "stirling-pdf": {
     zh: {
       description: "選擇 Stirling PDF 前，先決定要在自己的電腦執行、連到自行管理的伺服器，還是使用託管服務。自架在遠端伺服器時，檔案仍會送到該伺服器。",
