@@ -64,15 +64,15 @@ export function ExportGuide({ locale }: { locale: Locale }) {
         <p>{guide.intro}</p>
         <ComparisonTable label={guide.choiceHeaders[1]} headers={guide.choiceHeaders} rows={guide.choices} />
         <section>
+          <h2>{guide.checklistTitle}</h2>
+          <ol>{guide.checklist.map(item => <li key={item}>{item}</li>)}</ol>
+          <p>{guide.missingLink}</p>
+        </section>
+        <section>
           <h2>{guide.layoutTitle}</h2>
           <p>{guide.sample}</p>
           <ComparisonTable label={guide.layoutTitle} headers={guide.layoutHeaders} rows={guide.layouts} />
           <p>{guide.evidence}</p>
-        </section>
-        <section>
-          <h2>{guide.checklistTitle}</h2>
-          <ol>{guide.checklist.map(item => <li key={item}>{item}</li>)}</ol>
-          <p>{guide.missingLink}</p>
         </section>
         <ul>
           <li><Link href={prefix + notionMigrationPath}>{guide.comparison}</Link></li>
