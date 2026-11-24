@@ -2,7 +2,7 @@
   "en": {
     "title": "Notion export formats: HTML or Markdown & CSV?",
     "description": "Choose a Notion export format for Obsidian or Joplin and check subpages, links, and attachments in the ZIP before importing.",
-    "intro": "Choose the format for your import workflow, then inspect the ZIP for child pages, links, and attachments.",
+    "intro": "Choose HTML for the Notion ZIP import in Obsidian or Markdown & CSV for the Markdown directory import in Joplin. Start with one parent page, enable Include subpages, and check the ZIP before moving the rest of your notes.",
     "choiceHeaders": ["What you want to do", "Format to choose"],
     "choices": [
       ["Use Obsidian Importer’s Notion → File import", "Choose HTML and keep the ZIP Notion produces."],
@@ -22,8 +22,8 @@
     "checklist": [
       "Extract the ZIP into a separate folder. Keep the original ZIP and preserve the extracted folder structure.",
       "Locate the parent page and both child pages. Open HTML in a browser or inspect Markdown in a text editor.",
-      "Check the links from the parent to A and B and in both directions between A and B. Verify that each target exists in the extracted folder.",
-      "Open the PNG and TXT to check the image and text. After importing, open them again from the note to see how the destination app handles them."
+      "Check two things separately: whether the exported page contains the link and whether its target file is in the ZIP. For our sample, check the parent’s links to A and B, then open both child pages and check the links in both directions.",
+      "Follow each attachment path from the exported page to the extracted file. For a PNG or TXT like those in our sample, open it in an image viewer or text editor."
     ],
     "missingLink": "The first HTML export lacked the return link from B to A. A fresh export of the sample contained both the link and its target file. If a link is missing, check the original Notion page, then export again and inspect the ZIP.",
     "comparison": "Notion to Obsidian or Joplin migration comparison",
@@ -32,7 +32,7 @@
   "zh-Hant": {
     "title": "Notion 匯出選 HTML 還是 Markdown & CSV？",
     "description": "比較 Notion 的 HTML 與 Markdown & CSV 匯出，選擇適合 Obsidian 或 Joplin 的格式，並在匯入前檢查子頁、連結和附件。",
-    "intro": "準備把 Notion 筆記搬到 Obsidian 或 Joplin 時，可以先依照要使用的匯入方式選擇格式，再打開 ZIP 確認子頁、連結和附件。",
+    "intro": "要把 Notion ZIP 直接匯入 Obsidian，可選 HTML；要用 Joplin 匯入 Markdown 資料夾，可選 Markdown & CSV。先挑一個父頁試匯出，開啟「包含子頁」，檢查 ZIP 裡的內容後再搬其餘筆記。",
     "choiceHeaders": ["你要做什麼", "先選哪種格式"],
     "choices": [
       ["在 Obsidian 使用 Importer 的 Notion → File import", "選 HTML，保留 Notion 產出的 ZIP。"],
@@ -52,8 +52,8 @@
     "checklist": [
       "把 ZIP 解壓到獨立資料夾，保留原始 ZIP 與解壓後的目錄結構。",
       "找到父頁和兩個子頁。用瀏覽器開啟 HTML，或用文字編輯器查看 Markdown。",
-      "核對父頁通往 A、B 的連結，以及 A、B 互相往返的連結。確認各連結的目標檔案都存在。",
-      "開啟 PNG 和 TXT，確認圖片可讀、文字正確。匯入後再從筆記內開一次，確認目標 App 如何處理附件。"
+      "分開確認兩件事：匯出的筆記裡有沒有連結，以及連結指向的檔案是否在 ZIP 裡。以這次樣本為例，先查父頁是否連到 A 和 B，再分別打開 A、B 核對往返連結。",
+      "從匯出的筆記沿著附件路徑找到解壓後的檔案。像這次樣本的 PNG 和 TXT，可以分別用圖片檢視器和文字編輯器開啟。"
     ],
     "missingLink": "第一次 HTML 匯出就缺少 B 回到 A 的連結。同一個樣本重新匯出後，該連結和目標檔案都在 ZIP 裡。若你也遇到連結缺失，可以先回原頁確認連結，再重新匯出並檢查 ZIP。",
     "comparison": "Notion 搬到 Obsidian 或 Joplin 實測",
