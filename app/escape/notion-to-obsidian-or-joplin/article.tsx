@@ -23,7 +23,7 @@ export async function migrationMetadata(locale: Locale): Promise<Metadata> {
 }
 
 export function MigrationArticle({ locale }: { locale: Locale }) {
-  const { title, intro, headers, rows, details } = copy[locale];
+  const { title, intro, checklistTitle, checklist, zipLead, zipLink, resultsTitle, headers, rows, details } = copy[locale];
   return (
     <main lang={locale} className={styles.page}>
       <article>
@@ -37,8 +37,17 @@ export function MigrationArticle({ locale }: { locale: Locale }) {
         </nav>
         <h1>{title}</h1>
         <p>{intro}</p>
+        <section>
+          <h2>{checklistTitle}</h2>
+          <ol>{checklist.map(item => <li key={item}>{item}</li>)}</ol>
+          <p>
+            {zipLead}{' '}
+            <Link href={(locale === 'en' ? '' : '/zh-hant') + notionExportFormatsPath}>{zipLink}</Link>
+          </p>
+        </section>
+        <h2>{resultsTitle}</h2>
         <div className={styles.tableWrap}>
-          <table className={styles.table} aria-label={title}>
+          <table className={styles.table} aria-label={resultsTitle}>
             <thead><tr>{headers.map(header => <th key={header} scope="col">{header}</th>)}</tr></thead>
             <tbody>
               {rows.map(([label, obsidian, joplin]) => (
@@ -55,11 +64,6 @@ export function MigrationArticle({ locale }: { locale: Locale }) {
         <p>
           <Link href={(locale === 'en' ? '' : '/zh-hant') + notionTroubleshootingPath}>
             {locale === 'en' ? 'Troubleshoot missing Notion attachments and broken links' : '排查 Notion 匯出後遺失的附件與失效連結'}
-          </Link>
-        </p>
-        <p>
-          <Link href={(locale === 'en' ? '' : '/zh-hant') + notionExportFormatsPath}>
-            {locale === 'en' ? 'Choose a Notion export format' : '選擇 Notion 匯出格式'}
           </Link>
         </p>
       </article>

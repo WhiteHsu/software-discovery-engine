@@ -38,7 +38,16 @@
     "details": [
       "The test used a synthetic parent page, two linked child pages, a checklist, a table, a PNG, and a TXT on Windows. On November 10–11, 2026, we tested Obsidian 1.15.0 with Importer 3.1.16 and Joplin 3.7.22 with sync disabled. For the Obsidian rerun, we exported HTML with subpages and subpage folders, inspected the ZIP, and imported it into a fresh vault with Notion → File import. For Joplin, we inspected the Markdown & CSV export, extracted the ZIP, and used MD–Markdown (Directory). Neither reported link result required manual repair. The edit tests used copies.",
       "The first Notion ZIP run used an older HTML export that already lacked B’s return link to A. The November 11 export contained that link, and it worked after import. The reason it was absent from the earlier export remains unknown. In a separate test using Obsidian’s generic HTML importer, the parent links opened empty notes and the TXT link produced an empty note. The generic Markdown importer passed the link checks but converted the TXT to a Markdown note. These observations apply to the tested sample. Databases, complex workspaces, and lossless migration are outside scope."
-    ]
+    ],
+    "checklistTitle": "What to check after importing",
+    "checklist": [
+      "Open the parent note and every child note. If folder structure matters, check where the children landed before moving the rest of your notes.",
+      "Follow links from the parent to each child and in both directions between linked notes. Check the destination note’s content as well. A link can open an empty note.",
+      "Check that images display. Open any TXT attachment from its note and verify whether you can retrieve it as a separate file. Keep the source ZIP if you need the original file."
+    ],
+    "zipLead": "If a link or attachment is missing, first check whether it was present in the source ZIP.",
+    "zipLink": "Check the exported ZIP",
+    "resultsTitle": "What our Windows test found"
   },
   "zh-Hant": {
     "title": "Notion 搬到 Obsidian 或 Joplin：連結、附件與子頁實測",
@@ -79,6 +88,15 @@
     "details": [
       "樣本在 Windows 上測試，包含一個父頁、兩個互連子頁、勾選清單、表格、PNG 和 TXT。2026 年 11 月 10 至 11 日使用 Obsidian 1.15.0 與 Importer 3.1.16，以及同步目標設為 None 的 Joplin 3.7.22。Obsidian 複測使用包含子頁及子頁資料夾的 HTML 匯出，先檢查 ZIP，再以 Notion → File import 匯入空白 vault。Joplin 使用檢查後解壓縮的 Markdown & CSV 匯出，以 MD–Markdown (Directory) 匯入。表中的連結結果均未經手動修復，編輯測試使用副本。",
       "第一次 Notion ZIP 測試使用的舊 HTML 匯出包已缺少 B → A。11 月 11 日的新匯出包含有這條連結，匯入後可正常跳轉。舊包缺少連結的原因仍未確定。另一次使用 Obsidian 通用 HTML 匯入器的測試中，父頁連結開出空白筆記，TXT 連結也產生空白筆記。通用 Markdown 匯入的連結可用，TXT 則轉為 Markdown 筆記。以上結果限於這份樣本，資料庫、複雜工作區與無損搬家不在本次測試範圍。"
-    ]
+    ],
+    "checklistTitle": "匯入後怎麼驗收？",
+    "checklist": [
+      "開啟父頁和每個子頁。如果你需要保留資料夾階層，先確認子頁被放在哪裡，再搬其餘筆記。",
+      "從父頁點進各個子頁，再測試互連筆記能否往返。也要確認目標筆記的內容有搬過來，因為連結可能開到空白筆記。",
+      "確認圖片能在筆記內顯示。從筆記開啟 TXT 附件後，確認能否取回獨立檔案。如果需要原檔，請保留來源 ZIP。"
+    ],
+    "zipLead": "如果匯入後發現連結或附件遺失，先確認它是否存在於來源 ZIP。",
+    "zipLink": "查看 ZIP 檢查步驟",
+    "resultsTitle": "Windows 實測結果"
   }
 }
