@@ -33,6 +33,25 @@ export function Guide({ locale }: { locale: Locale }) {
         </nav>
         <h1>{guide.title}</h1>
         <p>{guide.intro}</p>
+        <section aria-labelledby="troubleshooting-triage">
+          <h2 id="troubleshooting-triage">{guide.triageTitle}</h2>
+          <div className={styles.tableWrap} role="region" aria-labelledby="troubleshooting-triage" tabIndex={0}>
+            <table className={styles.table}>
+              <thead>
+                <tr>{guide.triageHeaders.map(header => <th key={header} scope="col">{header}</th>)}</tr>
+              </thead>
+              <tbody>
+                {guide.triageRows.map(([symptom, check, next]) => (
+                  <tr key={symptom}>
+                    <th scope="row">{symptom}</th>
+                    <td>{check}</td>
+                    <td>{next}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
         {guide.sections.map(section => (
           <section key={section.title}>
             <h2>{section.title}</h2>

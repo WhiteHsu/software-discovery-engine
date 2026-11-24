@@ -1,5 +1,28 @@
 {
   "zh-Hant": {
+    "triageTitle": "先判斷問題出在匯出還是匯入",
+    "triageHeaders": [
+      "症狀",
+      "先查哪裡",
+      "下一步"
+    ],
+    "triageRows": [
+      [
+        "ZIP 裡少了檔案或連結",
+        "解壓後打開來源筆記，確認連結及目標檔案是否都在。",
+        "回 Notion 核對原始頁面，勾選包含子頁後重新匯出。"
+      ],
+      [
+        "ZIP 有檔案，但匯入後點不開",
+        "從匯入的筆記點開連結，再到目標 App 的匯入結果中找原檔名。",
+        "找得到檔案就核對連結路徑。找不到時，先用空白 vault 或獨立筆記本重試。"
+      ],
+      [
+        "文字能讀，但找不到原始 TXT",
+        "確認匯入工具是否把附件轉成了筆記。",
+        "本站用 Joplin 匯入 Markdown 資料夾時，結果是一則可讀筆記。若還需要 TXT 原檔，請保留原始 ZIP。"
+      ]
+    ],
     "title": "Notion 匯出後附件不見、連結失效？搬家排查指南",
     "description": "檢查 Notion 匯出 ZIP、子頁連結及 TXT 附件，找出匯入 Obsidian 或 Joplin 後內容缺少的原因。",
     "intro": "先從 Notion 匯出 ZIP 找出問題發生在哪一步。以筆記 B 連回筆記 A 為例，請在 ZIP 裡確認兩篇筆記都在，而且 B 的內文真的有指向 A 的連結。只有找到 A 的檔案，還不足以確認連結已匯出。",
@@ -35,6 +58,29 @@
     "comparisonLabel": "查看 Notion 搬到 Obsidian 或 Joplin 的完整實測"
   },
   "en": {
+    "triageTitle": "Find where the export or import went wrong",
+    "triageHeaders": [
+      "Symptom",
+      "Check first",
+      "Next step"
+    ],
+    "triageRows": [
+      [
+        "A file or link is missing from the ZIP",
+        "Open the extracted source note and check for both the link and its target file.",
+        "Check the original Notion page, then export again with subpages included."
+      ],
+      [
+        "The ZIP has the file, but the imported link fails",
+        "Open the link from the imported note and look for the original filename in the destination.",
+        "If the target is present, check the link path. If absent, retry the import in a clean vault or notebook."
+      ],
+      [
+        "The text is readable, but the original TXT is missing",
+        "Check whether the importer created a note from the attachment.",
+        "Our Joplin Markdown folder test produced a readable note. Keep the original ZIP if you also need the TXT file."
+      ]
+    ],
     "title": "Missing Notion export attachments or broken links? A migration troubleshooting guide",
     "description": "Check your Notion export ZIP and imported notes to troubleshoot missing attachments and broken links in Obsidian or Joplin.",
     "intro": "Start with the Notion export ZIP to see where the problem occurred. For a link from Note B back to Note A, check that both note files exist and that B actually contains a link to A. The presence of A alone does not establish that the link was exported.",
