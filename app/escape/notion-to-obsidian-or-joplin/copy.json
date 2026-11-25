@@ -41,13 +41,32 @@
     ],
     "checklistTitle": "What to check after importing",
     "checklist": [
-      "Open the parent note and every child note. If folder structure matters, check where the children landed before moving the rest of your notes.",
-      "Follow links from the parent to each child and in both directions between linked notes. Check the destination note’s content as well. A link can open an empty note.",
-      "Check that images display. Open any TXT attachment from its note and verify whether you can retrieve it as a separate file. Keep the source ZIP if you need the original file."
+      [
+        "Pages and folders",
+        "Open the parent and each child note. Compare their titles and folder locations with your source.",
+        "Every expected note opens with its content. If you need the original hierarchy, confirm the folder layout before importing the rest."
+      ],
+      [
+        "Links in both directions",
+        "Follow the parent’s links to each child, then follow links between child notes in both directions.",
+        "Every link opens the intended note with its content. Check for empty notes even when the link opens."
+      ],
+      [
+        "Inline images",
+        "Open notes with images and compare each displayed image with the source.",
+        "Every expected image displays in the correct note."
+      ],
+      [
+        "Original TXT files",
+        "Open the TXT link from the imported note. If you need the original file, retrieve it separately and compare it with the TXT in the source ZIP.",
+        "For readable text, check that the full text is present. For file preservation, confirm a separate TXT can be retrieved and matches the original. Keep the ZIP until this check passes."
+      ]
     ],
     "zipLead": "If a link or attachment is missing, first check whether it was present in the source ZIP.",
     "zipLink": "Check the exported ZIP",
-    "resultsTitle": "What our Windows test found"
+    "resultsTitle": "What our Windows test found",
+    "download": "Download the checklist (Markdown)",
+    "passLabel": "Pass when"
   },
   "zh-Hant": {
     "title": "Notion 搬到 Obsidian 或 Joplin：連結、附件與子頁實測",
@@ -91,12 +110,31 @@
     ],
     "checklistTitle": "匯入後怎麼驗收？",
     "checklist": [
-      "開啟父頁和每個子頁。如果你需要保留資料夾階層，先確認子頁被放在哪裡，再搬其餘筆記。",
-      "從父頁點進各個子頁，再測試互連筆記能否往返。也要確認目標筆記的內容有搬過來，因為連結可能開到空白筆記。",
-      "確認圖片能在筆記內顯示。從筆記開啟 TXT 附件後，確認能否取回獨立檔案。如果需要原檔，請保留來源 ZIP。"
+      [
+        "頁面與資料夾",
+        "打開父頁和每個子頁，對照原本的標題與資料夾位置。",
+        "每篇預期的筆記都能開啟並看到內容。若需要保留階層，先確認資料夾位置再匯入其餘筆記。"
+      ],
+      [
+        "雙向連結",
+        "從父頁點進各個子頁，再測試子頁之間的連結能否來回跳轉。",
+        "每條連結都能開啟正確且有內容的筆記。即使連結點得開，也要確認有沒有開到空白筆記。"
+      ],
+      [
+        "內嵌圖片",
+        "打開含圖片的筆記，將每張顯示的圖片與來源比對。",
+        "每張預期的圖片都出現在正確的筆記裡。"
+      ],
+      [
+        "TXT 原檔",
+        "從匯入後的筆記開啟 TXT 連結。如果需要原檔，試著取回獨立檔案，與來源 ZIP 裡的 TXT 比對。",
+        "若只需閱讀，確認文字完整。若需要保留原檔，確認能取回獨立且與來源一致的 TXT，通過前先保留 ZIP。"
+      ]
     ],
     "zipLead": "如果匯入後發現連結或附件遺失，先確認它是否存在於來源 ZIP。",
     "zipLink": "查看 ZIP 檢查步驟",
-    "resultsTitle": "Windows 實測結果"
+    "resultsTitle": "Windows 實測結果",
+    "download": "下載驗收清單（Markdown）",
+    "passLabel": "通過條件"
   }
 }
