@@ -23,7 +23,7 @@ export async function migrationMetadata(locale: Locale): Promise<Metadata> {
 }
 
 export function MigrationArticle({ locale }: { locale: Locale }) {
-  const { title, intro, checklistTitle, checklist, zipLead, zipLink, resultsTitle, headers, rows, details } = copy[locale];
+  const { title, intro, checklistTitle, checklist, passLabel, download, zipLead, zipLink, resultsTitle, headers, rows, details } = copy[locale];
   return (
     <main lang={locale} className={styles.page}>
       <article>
@@ -39,7 +39,16 @@ export function MigrationArticle({ locale }: { locale: Locale }) {
         <p>{intro}</p>
         <section>
           <h2>{checklistTitle}</h2>
-          <ol>{checklist.map(item => <li key={item}>{item}</li>)}</ol>
+          <ol>
+            {checklist.map(([label, check, pass]) => (
+              <li key={label}>
+                <strong>{label}</strong>
+                <p>{check}</p>
+                <p><strong>{passLabel}</strong> {pass}</p>
+              </li>
+            ))}
+          </ol>
+          <p><a href={notionMigrationPath + `/checklist?lang=${locale}`} download>{download}</a></p>
           <p>
             {zipLead}{' '}
             <Link href={(locale === 'en' ? '' : '/zh-hant') + notionExportFormatsPath}>{zipLink}</Link>
